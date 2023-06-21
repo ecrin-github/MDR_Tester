@@ -57,7 +57,7 @@ class ExpectedBuilder
                     _studyBuilder.create_table_study_iec_by_years();
                 }
             }
-            _loggingHelper.LogLine("Rebuilt AD study tables");
+            _loggingHelper.LogLine("Rebuilt Expected study tables");
         }
 
         // object tables - these common to all databases
@@ -85,6 +85,6 @@ class ExpectedBuilder
             _objectBuilder.create_table_journal_details();
         }
 
-        _loggingHelper.LogLine("Rebuilt AD object tables");
+        _loggingHelper.LogLine("Rebuilt Expected object tables");
     }
 }

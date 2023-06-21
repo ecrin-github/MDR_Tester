@@ -22,8 +22,8 @@ public class ObjectTableBuilders
 
     public void create_table_data_objects()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.data_objects;
-        CREATE TABLE ad.data_objects(
+        string sql_string = @"DROP TABLE IF EXISTS te.data_objects;
+        CREATE TABLE te.data_objects(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR         NOT NULL
           , sd_sid                 VARCHAR         NULL
@@ -50,8 +50,8 @@ public class ObjectTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL   
         );    
-        CREATE INDEX data_objects_oid ON ad.data_objects(sd_oid);
-        CREATE INDEX data_objects_sid ON ad.data_objects(sd_sid);";
+        CREATE INDEX data_objects_oid ON te.data_objects(sd_oid);
+        CREATE INDEX data_objects_sid ON te.data_objects(sd_sid);";
 
         Execute_SQL(sql_string);
     }
@@ -59,8 +59,8 @@ public class ObjectTableBuilders
 
     public void create_table_object_datasets()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_datasets;
-        CREATE TABLE ad.object_datasets(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_datasets;
+        CREATE TABLE te.object_datasets(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR         NULL
           , record_keys_type_id    INT             NULL 
@@ -82,7 +82,7 @@ public class ObjectTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
 
-        CREATE INDEX object_datasets_oid ON ad.object_datasets(sd_oid);";
+        CREATE INDEX object_datasets_oid ON te.object_datasets(sd_oid);";
 
         Execute_SQL(sql_string);
     }
@@ -90,8 +90,8 @@ public class ObjectTableBuilders
 
     public void create_table_object_dates()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_dates;
-        CREATE TABLE ad.object_dates(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_dates;
+        CREATE TABLE te.object_dates(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR        NULL
           , date_type_id           INT             NULL
@@ -106,7 +106,7 @@ public class ObjectTableBuilders
           , details                VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX object_dates_oid ON ad.object_dates(sd_oid);";
+        CREATE INDEX object_dates_oid ON te.object_dates(sd_oid);";
 
         Execute_SQL(sql_string);
     }
@@ -114,8 +114,8 @@ public class ObjectTableBuilders
 
     public void create_table_object_instances()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_instances;
-        CREATE TABLE ad.object_instances(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_instances;
+        CREATE TABLE te.object_instances(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR         NULL
           , system_id              INT             NULL
@@ -130,7 +130,7 @@ public class ObjectTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL   
         );
-        CREATE INDEX object_instances_oid ON ad.object_instances(sd_oid);";
+        CREATE INDEX object_instances_oid ON te.object_instances(sd_oid);";
 
         Execute_SQL(sql_string);
     }
@@ -138,8 +138,8 @@ public class ObjectTableBuilders
 
     public void create_table_object_titles()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_titles;
-        CREATE TABLE ad.object_titles(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_titles;
+        CREATE TABLE te.object_titles(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR        NULL
           , title_type_id          INT             NULL
@@ -150,7 +150,7 @@ public class ObjectTableBuilders
           , comments               VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX object_titles_oid ON ad.object_titles(sd_oid);";
+        CREATE INDEX object_titles_oid ON te.object_titles(sd_oid);";
 
         Execute_SQL(sql_string);
     }
@@ -158,8 +158,8 @@ public class ObjectTableBuilders
 
     public void create_table_object_people()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_people;
-        CREATE TABLE ad.object_people(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_people;
+        CREATE TABLE te.object_people(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR        NULL
           , contrib_type_id        INT             NULL
@@ -174,7 +174,7 @@ public class ObjectTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL   
         );
-        CREATE INDEX object_people_oid ON ad.object_people(sd_oid);";
+        CREATE INDEX object_people_oid ON te.object_people(sd_oid);";
 
         Execute_SQL(sql_string);
     }
@@ -182,8 +182,8 @@ public class ObjectTableBuilders
     
     public void create_table_object_organisations()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_organisations;
-        CREATE TABLE ad.object_organisations(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_organisations;
+        CREATE TABLE te.object_organisations(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR        NULL
           , contrib_type_id        INT             NULL
@@ -193,7 +193,7 @@ public class ObjectTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL   
         );
-        CREATE INDEX object_organisations_oid ON ad.object_organisations(sd_oid);";
+        CREATE INDEX object_organisations_oid ON te.object_organisations(sd_oid);";
 
         Execute_SQL(sql_string);
     }
@@ -201,8 +201,8 @@ public class ObjectTableBuilders
 
     public void create_table_object_topics()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_topics;
-        CREATE TABLE ad.object_topics(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_topics;
+        CREATE TABLE te.object_topics(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR        NULL
           , topic_type_id          INT             NULL
@@ -214,7 +214,7 @@ public class ObjectTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL   
         );
-        CREATE INDEX object_topics_oid ON ad.object_topics(sd_oid);";
+        CREATE INDEX object_topics_oid ON te.object_topics(sd_oid);";
 
         Execute_SQL(sql_string);
     }
@@ -222,8 +222,8 @@ public class ObjectTableBuilders
 
     public void create_table_object_comments()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_comments;
-        CREATE TABLE ad.object_comments(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_comments;
+        CREATE TABLE te.object_comments(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR        NULL
           , ref_type               VARCHAR         NULL 
@@ -233,7 +233,7 @@ public class ObjectTableBuilders
           , notes                  VARCHAR         NULL 
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX object_comments_oid ON ad.object_comments(sd_oid);";
+        CREATE INDEX object_comments_oid ON te.object_comments(sd_oid);";
 
         Execute_SQL(sql_string); 
     }
@@ -241,8 +241,8 @@ public class ObjectTableBuilders
 
     public void create_table_object_descriptions()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_descriptions;
-        CREATE TABLE ad.object_descriptions(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_descriptions;
+        CREATE TABLE te.object_descriptions(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR        NULL
           , description_type_id    INT             NULL
@@ -251,15 +251,15 @@ public class ObjectTableBuilders
           , lang_code              VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX object_descriptions_oid ON ad.object_descriptions(sd_oid);";
+        CREATE INDEX object_descriptions_oid ON te.object_descriptions(sd_oid);";
 
         Execute_SQL(sql_string);
     }
 
     public void create_table_object_identifiers()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_identifiers;
-            CREATE TABLE ad.object_identifiers(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_identifiers;
+            CREATE TABLE te.object_identifiers(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR        NULL
           , identifier_value       VARCHAR         NULL
@@ -271,7 +271,7 @@ public class ObjectTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL   
         );
-        CREATE INDEX object_identifiers_oid ON ad.object_identifiers(sd_oid);";
+        CREATE INDEX object_identifiers_oid ON te.object_identifiers(sd_oid);";
 
         Execute_SQL(sql_string);
     }
@@ -279,8 +279,8 @@ public class ObjectTableBuilders
 
     public void create_table_object_db_links()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_db_links;
-        CREATE TABLE ad.object_db_links(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_db_links;
+        CREATE TABLE te.object_db_links(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR         NULL
           , db_sequence            INT             NULL
@@ -288,7 +288,7 @@ public class ObjectTableBuilders
           , id_in_db               VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX object_db_links_oid ON ad.object_db_links(sd_oid);";
+        CREATE INDEX object_db_links_oid ON te.object_db_links(sd_oid);";
 
         Execute_SQL(sql_string);
     }
@@ -296,14 +296,14 @@ public class ObjectTableBuilders
 
     public void create_table_object_publication_types()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_publication_types;
-        CREATE TABLE ad.object_publication_types(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_publication_types;
+        CREATE TABLE te.object_publication_types(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR        NULL
           , type_name              VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX object_publication_types_oid ON ad.object_publication_types(sd_oid);";
+        CREATE INDEX object_publication_types_oid ON te.object_publication_types(sd_oid);";
 
         Execute_SQL(sql_string);
     }
@@ -311,8 +311,8 @@ public class ObjectTableBuilders
 
     public void create_table_object_rights()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_rights;
-        CREATE TABLE ad.object_rights(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_rights;
+        CREATE TABLE te.object_rights(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR        NULL
           , rights_name            VARCHAR         NULL
@@ -320,7 +320,7 @@ public class ObjectTableBuilders
           , comments               VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX object_rights_oid ON ad.object_rights(sd_oid);";
+        CREATE INDEX object_rights_oid ON te.object_rights(sd_oid);";
 
         Execute_SQL(sql_string);
     }
@@ -328,24 +328,24 @@ public class ObjectTableBuilders
 
     public void create_table_object_relationships()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.object_relationships;
-        CREATE TABLE ad.object_relationships(
+        string sql_string = @"DROP TABLE IF EXISTS te.object_relationships;
+        CREATE TABLE te.object_relationships(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR        NULL
           , relationship_type_id   INT             NULL
           , target_sd_oid          VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX object_relationships_oid ON ad.object_relationships(sd_oid);
-        CREATE INDEX object_relationships_target_oid ON ad.object_relationships(target_sd_oid);";
+        CREATE INDEX object_relationships_oid ON te.object_relationships(sd_oid);
+        CREATE INDEX object_relationships_target_oid ON te.object_relationships(target_sd_oid);";
         Execute_SQL(sql_string);
     }
     
     
     public void create_table_journal_details()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.journal_details;
-        CREATE TABLE ad.journal_details(
+        string sql_string = @"DROP TABLE IF EXISTS te.journal_details;
+        CREATE TABLE te.journal_details(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR         NOT NULL
           , journal_title          VARCHAR         NULL
@@ -358,7 +358,7 @@ public class ObjectTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL   
         );
-        CREATE INDEX journal_details_oid ON ad.journal_details(sd_oid);";
+        CREATE INDEX journal_details_oid ON te.journal_details(sd_oid);";
 
         Execute_SQL(sql_string);
     }

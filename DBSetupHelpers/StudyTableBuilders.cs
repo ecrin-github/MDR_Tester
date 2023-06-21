@@ -20,15 +20,15 @@ public class StudyTableBuilders
 
     public void create_ad_schema()
     {
-        string sql_string = @"CREATE SCHEMA IF NOT EXISTS ad;";
+        string sql_string = @"CREATE SCHEMA IF NOT EXISTS te;";
 
         Execute_SQL(sql_string);
     }
 
     public void create_table_studies()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.studies;
-        CREATE TABLE ad.studies(
+        string sql_string = @"DROP TABLE IF EXISTS te.studies;
+        CREATE TABLE te.studies(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , display_title          VARCHAR         NULL
@@ -49,7 +49,7 @@ public class StudyTableBuilders
           , datetime_of_data_fetch TIMESTAMPTZ     NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX studies_sid ON ad.studies(sd_sid);";
+        CREATE INDEX studies_sid ON te.studies(sd_sid);";
 
         Execute_SQL(sql_string);
     }
@@ -57,8 +57,8 @@ public class StudyTableBuilders
 
     public void create_table_study_identifiers()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_identifiers;
-        CREATE TABLE ad.study_identifiers(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_identifiers;
+        CREATE TABLE te.study_identifiers(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , identifier_value       VARCHAR         NULL
@@ -71,23 +71,23 @@ public class StudyTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL                                     
         );
-        CREATE INDEX study_identifiers_sid ON ad.study_identifiers(sd_sid);";
+        CREATE INDEX study_identifiers_sid ON te.study_identifiers(sd_sid);";
 
         Execute_SQL(sql_string);
     }
 
     public void create_table_study_relationships()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_relationships;
-        CREATE TABLE ad.study_relationships(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_relationships;
+        CREATE TABLE te.study_relationships(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , relationship_type_id   INT             NULL
           , target_sd_sid          VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX study_relationships_sid ON ad.study_relationships(sd_sid);
-        CREATE INDEX study_relationships_target_sid ON ad.study_relationships(target_sd_sid);";
+        CREATE INDEX study_relationships_sid ON te.study_relationships(sd_sid);
+        CREATE INDEX study_relationships_target_sid ON te.study_relationships(target_sd_sid);";
 
         Execute_SQL(sql_string);
     }
@@ -95,8 +95,8 @@ public class StudyTableBuilders
 
     public void create_table_study_references()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_references;
-        CREATE TABLE ad.study_references(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_references;
+        CREATE TABLE te.study_references(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , pmid                   VARCHAR         NULL
@@ -106,7 +106,7 @@ public class StudyTableBuilders
           , comments               VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX study_references_sid ON ad.study_references(sd_sid);";
+        CREATE INDEX study_references_sid ON te.study_references(sd_sid);";
 
         Execute_SQL(sql_string);
     }
@@ -114,8 +114,8 @@ public class StudyTableBuilders
 
     public void create_table_study_titles()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_titles;
-        CREATE TABLE ad.study_titles(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_titles;
+        CREATE TABLE te.study_titles(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , title_type_id          INT             NULL
@@ -126,7 +126,7 @@ public class StudyTableBuilders
           , comments               VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX study_titles_sid ON ad.study_titles(sd_sid);";
+        CREATE INDEX study_titles_sid ON te.study_titles(sd_sid);";
 
         Execute_SQL(sql_string);
     }
@@ -134,8 +134,8 @@ public class StudyTableBuilders
 
     public void create_table_study_people()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_people;
-        CREATE TABLE ad.study_people(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_people;
+        CREATE TABLE te.study_people(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , contrib_type_id        INT             NULL
@@ -150,7 +150,7 @@ public class StudyTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL
         );
-        CREATE INDEX study_people_sid ON ad.study_people(sd_sid);";
+        CREATE INDEX study_people_sid ON te.study_people(sd_sid);";
 
         Execute_SQL(sql_string);
     }
@@ -158,8 +158,8 @@ public class StudyTableBuilders
     
     public void create_table_study_organisations()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_organisations;
-        CREATE TABLE ad.study_organisations(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_organisations;
+        CREATE TABLE te.study_organisations(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , contrib_type_id        INT             NULL
@@ -169,7 +169,7 @@ public class StudyTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL
         );
-        CREATE INDEX study_organisations_sid ON ad.study_organisations(sd_sid);";
+        CREATE INDEX study_organisations_sid ON te.study_organisations(sd_sid);";
 
         Execute_SQL(sql_string);
     }
@@ -177,8 +177,8 @@ public class StudyTableBuilders
 
     public void create_table_study_topics()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_topics;
-        CREATE TABLE ad.study_topics(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_topics;
+        CREATE TABLE te.study_topics(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , topic_type_id          INT             NULL
@@ -190,15 +190,15 @@ public class StudyTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL
         );
-        CREATE INDEX study_topics_sid ON ad.study_topics(sd_sid);";
+        CREATE INDEX study_topics_sid ON te.study_topics(sd_sid);";
 
         Execute_SQL(sql_string);
     }
 
     public void create_table_study_conditions()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_conditions;
-        CREATE TABLE ad.study_conditions(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_conditions;
+        CREATE TABLE te.study_conditions(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , original_value         VARCHAR         NULL
@@ -209,15 +209,15 @@ public class StudyTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL
         );
-        CREATE INDEX study_conditions_sid ON ad.study_conditions(sd_sid);";
+        CREATE INDEX study_conditions_sid ON te.study_conditions(sd_sid);";
 
         Execute_SQL(sql_string);
     }
 
     public void create_table_study_features()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_features;
-        CREATE TABLE ad.study_features(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_features;
+        CREATE TABLE te.study_features(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , feature_type_id        INT             NULL
@@ -225,7 +225,7 @@ public class StudyTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
 
         );
-        CREATE INDEX study_features_sid ON ad.study_features(sd_sid);";
+        CREATE INDEX study_features_sid ON te.study_features(sd_sid);";
 
         Execute_SQL(sql_string);
     }
@@ -233,15 +233,15 @@ public class StudyTableBuilders
 
     public void create_table_study_links()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_links;
-        CREATE TABLE ad.study_links(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_links;
+        CREATE TABLE te.study_links(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , link_label             VARCHAR         NULL
           , link_url               VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX study_links_sid ON ad.study_links(sd_sid);";
+        CREATE INDEX study_links_sid ON te.study_links(sd_sid);";
 
         Execute_SQL(sql_string);
     }
@@ -249,8 +249,8 @@ public class StudyTableBuilders
 
     public void create_table_study_locations()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_locations;
-        CREATE TABLE ad.study_locations(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_locations;
+        CREATE TABLE te.study_locations(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , facility_org_id        INT             NULL
@@ -264,7 +264,7 @@ public class StudyTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL          
         );
-        CREATE INDEX study_locations_sid ON ad.study_locations(sd_sid);";
+        CREATE INDEX study_locations_sid ON te.study_locations(sd_sid);";
 
         Execute_SQL(sql_string);
     }
@@ -272,8 +272,8 @@ public class StudyTableBuilders
 
     public void create_table_study_countries()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_countries;
-        CREATE TABLE ad.study_countries(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_countries;
+        CREATE TABLE te.study_countries(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , country_id             INT             NULL
@@ -282,7 +282,7 @@ public class StudyTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL                                         
         );
-        CREATE INDEX study_countries_sid ON ad.study_countries(sd_sid);";
+        CREATE INDEX study_countries_sid ON te.study_countries(sd_sid);";
 
         Execute_SQL(sql_string);
     }
@@ -290,8 +290,8 @@ public class StudyTableBuilders
 
     public void create_table_ipd_available()
     {
-        string sql_string = @"DROP TABLE IF EXISTS ad.study_ipd_available;
-        CREATE TABLE ad.study_ipd_available(
+        string sql_string = @"DROP TABLE IF EXISTS te.study_ipd_available;
+        CREATE TABLE te.study_ipd_available(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , ipd_id                 VARCHAR         NULL
@@ -300,15 +300,15 @@ public class StudyTableBuilders
           , ipd_comment            VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
-        CREATE INDEX study_ipd_available_sid ON ad.study_ipd_available(sd_sid);";
+        CREATE INDEX study_ipd_available_sid ON te.study_ipd_available(sd_sid);";
 
         Execute_SQL(sql_string);
     }
     
     private void create_iec_table(string table_name)
     {
-        string sql_string = $@"DROP TABLE IF EXISTS ad.{table_name};
-        CREATE TABLE ad.{table_name}(
+        string sql_string = $@"DROP TABLE IF EXISTS te.{table_name};
+        CREATE TABLE te.{table_name}(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_sid                 VARCHAR         NOT NULL
           , seq_num                INT             NULL
@@ -324,7 +324,7 @@ public class StudyTableBuilders
           , added_on               TIMESTAMPTZ     NOT NULL default now()
           , coded_on               TIMESTAMPTZ     NULL                                                      
         );
-        CREATE INDEX {table_name}_sid ON ad.{table_name}(sd_sid);";
+        CREATE INDEX {table_name}_sid ON te.{table_name}(sd_sid);";
 
         Execute_SQL(sql_string);
     }
