@@ -33,6 +33,14 @@ public class MonDataLayer : IMonDataLayer
         return conn.Get<Source>(sourceId);
     }
 
+    public IEnumerable<int>? FetchTestDBList()
+    {
+        string sqlString = "Select id from sf.source_parameters where is_current_agg_source = true;";
+        using NpgsqlConnection conn = new(monConnString);
+        return conn.Query<int>(sqlString);
+    }
+
+    /*
     public int GetNextImportEventId()
     {
         using NpgsqlConnection conn = new(monConnString);
@@ -47,4 +55,6 @@ public class MonDataLayer : IMonDataLayer
         using NpgsqlConnection conn = new(monConnString);
         return (int)conn.Insert(import);
     }
+    */
+    
 }

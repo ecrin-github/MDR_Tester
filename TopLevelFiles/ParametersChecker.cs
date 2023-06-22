@@ -39,17 +39,24 @@ internal class ParameterChecker
         {
             // Some sources must identified, and they all have to be valid.
             
-            if (opts.SourceIds?.Any() is not true)
+            if (opts.TestAll is true)
             {
-                throw new ArgumentException("No source id provided");
+                opts.SourceIds = _monDataLayer.FetchTestDBList();
             }
-
-            foreach (int sourceId in opts.SourceIds)
+            else
             {
-                if (!_monDataLayer.SourceIdPresent(sourceId))
+                if (opts.SourceIds?.Any() is not true)
                 {
-                    throw new ArgumentException("Source argument " + sourceId +
-                                                " does not correspond to a known source");
+                    throw new ArgumentException("No source id provided");
+                }
+
+                foreach (int sourceId in opts.SourceIds)
+                {
+                    if (!_monDataLayer.SourceIdPresent(sourceId))
+                    {
+                        throw new ArgumentException("Source argument " + sourceId +
+                                                    " does not correspond to a known source");
+                    }
                 }
             }
 
@@ -64,7 +71,7 @@ internal class ParameterChecker
             _loggingHelper.OpenNoSourceLogFile();
             _loggingHelper.LogHeader("INVALID PARAMETERS");
             _loggingHelper.LogCommandLineParameters(opts);
-            _loggingHelper.LogCodeError("Importer application aborted", e.Message, e.StackTrace);
+            _loggingHelper.LogCodeError("Tester application aborted", e.Message, e.StackTrace);
             _loggingHelper.CloseLog();
             return new ParamsCheckResult(false, true, null);
         }
@@ -97,7 +104,7 @@ internal class ParameterChecker
                 _loggingHelper.LogParseError("Error {n}: Wrongly formatted option was {MissingOption}", n.ToString(), ((BadFormatConversionError)e).NameInfo.NameText);
             }
         }
-        _loggingHelper.LogLine("MDR_Downloader application aborted");
+        _loggingHelper.LogLine("MDR_Tester application aborted");
         _loggingHelper.CloseLog();
     }
 
@@ -109,9 +116,9 @@ public class Options
 
     [Option('s', "source_ids", Required = false, Separator = ',', HelpText = "Comma separated list of Integer ids of data sources.")]
     public IEnumerable<int>? SourceIds { get; set; }
-
-    [Option('T', "build tables", Required = false, HelpText = "If present, forces the (re)creation of a new set of ad tables")]
-    public bool RebuildAdTables { get; set; }
+    
+    [Option('A', "test_all", Required = false, HelpText = "Flag that if present indicates that all relevant sources should be tested.")]
+    public bool? TestAll { get; set; }
 }
 
 

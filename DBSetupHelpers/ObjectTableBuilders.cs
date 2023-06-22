@@ -331,7 +331,7 @@ public class ObjectTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.object_relationships;
         CREATE TABLE te.object_relationships(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_oid                 VARCHAR        NULL
+          , sd_oid                 VARCHAR         NULL
           , relationship_type_id   INT             NULL
           , target_sd_oid          VARCHAR         NULL
           , added_on               TIMESTAMPTZ     NOT NULL default now()

@@ -132,8 +132,6 @@ public class LoggingHelper : ILoggingHelper
                 LogLine("Source_ids are " + string.Join(",", sourceIds));
             }
         }
-
-        LogLine("Rebuild AD tables is: " + opts.RebuildAdTables);
         LogLine("");
     }
 

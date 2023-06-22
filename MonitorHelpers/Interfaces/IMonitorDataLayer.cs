@@ -7,7 +7,10 @@ public interface IMonDataLayer
     bool SourceIdPresent(int? source_id);
     string GetConnectionString(string database_name);
     Source? FetchSourceParameters(int? source_id);
-    int GetNextImportEventId();
-    int StoreImportEvent(ImportEvent import);
+    IEnumerable<int>? FetchTestDBList();
+
+
+    //int GetNextImportEventId();
+    //int StoreImportEvent(ImportEvent import);
 }
 

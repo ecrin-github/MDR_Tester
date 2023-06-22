@@ -61,10 +61,7 @@ if (paramsCheck.ParseError || paramsCheck.ValidityError)
 }
 
 // Should be able to proceed - opts and source(s) are known to be non-null.
-// For a normal run, create an Importer class and run the import process.
-// For a test run, create a test importer, which uses exactly the same code
-// but which needs to establish a framework for the test data first, and then
-// compare it with expected data afterwards.
+// Create a Tester class and run the test processes.
 
 try
 {
@@ -72,7 +69,6 @@ try
     Tester tester = new(monDataLayer, loggingHelper);
     tester.Run(opts);
 
-    
     return 0;
 }
 catch (Exception e)
@@ -81,7 +77,7 @@ catch (Exception e)
     // A file should normally have been created (but just in case...).
 
     loggingHelper.LogHeader("UNHANDLED EXCEPTION");
-    loggingHelper.LogCodeError("MDR_Importer application aborted", e.Message, e.StackTrace);
+    loggingHelper.LogCodeError("MDR_Tester application aborted", e.Message, e.StackTrace);
     loggingHelper.CloseLog();
     return -1;
 }
