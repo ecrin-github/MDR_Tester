@@ -18,7 +18,10 @@ public class FullDataObject
     public List<ObjectComment>? object_comments { get; set; }
     public List<ObjectDBLink>? object_db_ids { get; set; }
     public JournalDetails? journal_details { get; set; }
-
+    
+    public FullDataObject()
+    { }
+    
     public FullDataObject(DataObject? dataObject, ObjectDataset? _object_dataset,
                           List<ObjectInstance>? objectInstances, List<ObjectTitle>? objectTitles, 
                           List<ObjectDate>? objectDates, 
@@ -50,20 +53,23 @@ public class FullDataObject
 public class StudyDataObject
 {
     public DataObject? data_object { get; set; }
-    public ObjectDataset? object_dataset  { get; set; }
+    public ObjectDataset? dataset_details  { get; set; }
     public List<ObjectInstance>? object_instances { get; set; }    
     public List<ObjectTitle>? object_titles { get; set; }
     public List<ObjectDate>? object_dates { get; set; }
 
+    public StudyDataObject()
+    { }
+        
     public StudyDataObject(DataObject? dataObject, ObjectDataset? _object_dataset, 
-                          List<ObjectInstance>? objectInstances, 
-                          List<ObjectDate>? objectDates, List<ObjectTitle>? objectTitles)
+          List<ObjectTitle>? objectTitles, List<ObjectInstance>? objectInstances, 
+                          List<ObjectDate>? objectDates)
     {
         data_object = dataObject;
-        object_dataset = _object_dataset;
+        dataset_details = _object_dataset;
+        object_titles = objectTitles;       
+        object_instances = objectInstances;        
         object_dates = objectDates;
-        object_titles = objectTitles;
-        object_instances = objectInstances;
     }
 }
 
@@ -265,6 +271,23 @@ public class ObjectDate
         end_day = _end_day;
         details = _details;
     }
+    
+    public ObjectDate(string? _sd_oid, int? _date_type_id, string? _date_as_string, 
+        int? _start_year, int? _start_month, int? _start_day)
+    {
+        sd_oid = _sd_oid;
+        date_type_id = _date_type_id;
+        date_is_range = false;    
+        date_as_string = _date_as_string;
+        start_year = _start_year;
+        start_month = _start_month;
+        start_day = _start_day;
+        end_year = null;
+        end_month = null;
+        end_day = null;
+        details = null;
+    }
+    
 }
 
 
@@ -397,6 +420,7 @@ public class ObjectPerson
         organisation_name = _organisation_name;
         organisation_ror_id = _organisation_ror_id;    
     }
+
 }
 
 public class ObjectOrganisation

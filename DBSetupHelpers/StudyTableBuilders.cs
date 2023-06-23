@@ -18,7 +18,7 @@ public class StudyTableBuilders
         conn.Execute(sql_string);
     }
 
-    public void create_ad_schema()
+    public void create_te_schema()
     {
         string sql_string = @"CREATE SCHEMA IF NOT EXISTS te;";
 
@@ -46,8 +46,6 @@ public class StudyTableBuilders
           , max_age                INT             NULL
           , max_age_units_id       INT             NULL
           , iec_level              INT             NULL
-          , datetime_of_data_fetch TIMESTAMPTZ     NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX studies_sid ON te.studies(sd_sid);";
 
@@ -68,8 +66,7 @@ public class StudyTableBuilders
           , source_ror_id          VARCHAR         NULL
           , identifier_date        VARCHAR         NULL
           , identifier_link        VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL                                     
+                                  
         );
         CREATE INDEX study_identifiers_sid ON te.study_identifiers(sd_sid);";
 
@@ -84,7 +81,6 @@ public class StudyTableBuilders
           , sd_sid                 VARCHAR         NOT NULL
           , relationship_type_id   INT             NULL
           , target_sd_sid          VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX study_relationships_sid ON te.study_relationships(sd_sid);
         CREATE INDEX study_relationships_target_sid ON te.study_relationships(target_sd_sid);";
@@ -104,7 +100,6 @@ public class StudyTableBuilders
           , doi                    VARCHAR         NULL	
           , type_id                INT             NULL
           , comments               VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX study_references_sid ON te.study_references(sd_sid);";
 
@@ -124,7 +119,6 @@ public class StudyTableBuilders
           , lang_usage_id          INT             NOT NULL default 11
           , is_default             BOOLEAN         NULL
           , comments               VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX study_titles_sid ON te.study_titles(sd_sid);";
 
@@ -147,8 +141,6 @@ public class StudyTableBuilders
           , organisation_id        INT             NULL
           , organisation_name      VARCHAR         NULL
           , organisation_ror_id    VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL
         );
         CREATE INDEX study_people_sid ON te.study_people(sd_sid);";
 
@@ -166,8 +158,6 @@ public class StudyTableBuilders
           , organisation_id        INT             NULL
           , organisation_name      VARCHAR         NULL
           , organisation_ror_id    VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL
         );
         CREATE INDEX study_organisations_sid ON te.study_organisations(sd_sid);";
 
@@ -187,8 +177,6 @@ public class StudyTableBuilders
           , original_ct_code       VARCHAR         NULL 
           , mesh_code              VARCHAR         NULL
           , mesh_value             VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL
         );
         CREATE INDEX study_topics_sid ON te.study_topics(sd_sid);";
 
@@ -206,8 +194,6 @@ public class StudyTableBuilders
           , original_ct_code       VARCHAR         NULL                 
           , icd_code               VARCHAR         NULL
           , icd_name               VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL
         );
         CREATE INDEX study_conditions_sid ON te.study_conditions(sd_sid);";
 
@@ -222,7 +208,6 @@ public class StudyTableBuilders
           , sd_sid                 VARCHAR         NOT NULL
           , feature_type_id        INT             NULL
           , feature_value_id       INT             NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
 
         );
         CREATE INDEX study_features_sid ON te.study_features(sd_sid);";
@@ -239,7 +224,6 @@ public class StudyTableBuilders
           , sd_sid                 VARCHAR         NOT NULL
           , link_label             VARCHAR         NULL
           , link_url               VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX study_links_sid ON te.study_links(sd_sid);";
 
@@ -261,8 +245,6 @@ public class StudyTableBuilders
           , country_id             INT             NULL
           , country_name           VARCHAR         NULL
           , status_id              INT             NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL          
         );
         CREATE INDEX study_locations_sid ON te.study_locations(sd_sid);";
 
@@ -279,8 +261,6 @@ public class StudyTableBuilders
           , country_id             INT             NULL
           , country_name           VARCHAR         NULL
           , status_id              INT             NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL                                         
         );
         CREATE INDEX study_countries_sid ON te.study_countries(sd_sid);";
 
@@ -298,7 +278,6 @@ public class StudyTableBuilders
           , ipd_type               VARCHAR         NULL
           , ipd_url                VARCHAR         NULL
           , ipd_comment            VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX study_ipd_available_sid ON te.study_ipd_available(sd_sid);";
 
@@ -321,8 +300,6 @@ public class StudyTableBuilders
           , iec_class_id           INT             NULL
           , iec_class              VARCHAR         NULL
           , iec_parsed_text        VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL                                                      
         );
         CREATE INDEX {table_name}_sid ON te.{table_name}(sd_sid);";
 

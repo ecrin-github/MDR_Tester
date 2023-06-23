@@ -2,7 +2,7 @@
 
 public class TestData_101901 : TestData_Base
 {
-    public FullStudy? FetchData(string sd_sid)
+    public override FullStudy? FetchStudyData(string sd_sid)
     {
         if (sd_sid == "")
         {

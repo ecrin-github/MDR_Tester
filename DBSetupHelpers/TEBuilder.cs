@@ -25,7 +25,7 @@ class ExpectedBuilder
         {
             // these common to all databases
 
-            _studyBuilder.create_ad_schema();
+            _studyBuilder.create_te_schema();
             _studyBuilder.create_table_studies();
             _studyBuilder.create_table_study_identifiers();
             _studyBuilder.create_table_study_titles();

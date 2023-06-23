@@ -17,16 +17,19 @@ public class FullStudy
     public List<StudyCountry>? countries { get; set; }
     public List<StudyLink>? studylinks { get; set; }
     public List<AvailableIPD>? ipd_info { get; set; }
-    public List<FullDataObject>? data_objects { get; set; }
+    public List<StudyDataObject>? data_objects { get; set; }
 
-    public FullStudy(Study? study, List<StudyIdentifier>? identifiers, List<StudyTitle>? titles, 
-                              List<StudyPerson>? people, List<StudyOrganisation>? organisations, 
-                              List<StudyReference>? references, List<StudyTopic>? topics, 
-                              List<StudyFeature>? features, List<StudyCondition>? conditions, 
-                              List<StudyIEC>? iec, List<StudyRelationship>? relationships, 
-                              List<StudyLocation>? sites, List<StudyCountry>? countries, 
-                              List<StudyLink>? studylinks, List<AvailableIPD>? ipdInfo, 
-                              List<FullDataObject>? dataObjects)
+    public FullStudy()
+    {}
+        
+    public FullStudy(Study study, List<StudyIdentifier> identifiers, List<StudyTitle> titles, 
+                              List<StudyPerson> people, List<StudyOrganisation> organisations, 
+                              List<StudyReference> references, List<StudyTopic> topics, 
+                              List<StudyFeature> features, List<StudyCondition> conditions, 
+                              List<StudyIEC> iec, List<StudyRelationship> relationships, 
+                              List<StudyLocation> sites, List<StudyCountry> countries, 
+                              List<StudyLink> studylinks, List<AvailableIPD> ipdInfo, 
+                              List<StudyDataObject> dataObjects)
     {
         this.study = study;
         this.identifiers = identifiers;
@@ -146,6 +149,20 @@ public class StudyPerson
         organisation_name = _organisation_name;
         organisation_ror_id = _organisation_ror_id;
     }
+    
+    public StudyPerson(string? _sd_sid, int? _contrib_type_id, 
+        string? _person_full_name, 
+        string? _person_affiliation, int? _organisation_id, 
+        string? _organisation_name, string? _organisation_ror_id)
+    {
+        sd_sid = _sd_sid;
+        contrib_type_id = _contrib_type_id;
+        person_full_name = _person_full_name;
+        person_affiliation = _person_affiliation;
+        organisation_id = _organisation_id;
+        organisation_name = _organisation_name;
+        organisation_ror_id = _organisation_ror_id;
+    }
 }
     
 
@@ -244,9 +261,6 @@ public class StudyTopic
     public string? mesh_code { get; set; }
     public string? mesh_value { get; set; }
 
-
-    // used for a mesh coded topic (no qualifiers for study topic codes)
-
     public StudyTopic(string? _sd_sid, int? _topic_type_id, string? _original_value,
                       int? _original_ct_type_id, string? _original_ct_code, 
                       string? _mesh_code, string? _mesh_value)
@@ -266,22 +280,29 @@ public class StudyCondition
     public string? sd_sid { get; set; }
     public string? original_value { get; set; }
     public int? original_ct_type_id { get; set; }
-    public string? original_ct_type { get; set; }
     public string? original_ct_code { get; set; }
     public string? icd_code { get; set; }
     public string? icd_name { get; set; }
 
     public StudyCondition(string? _sd_sid, string? _original_value, int? _original_ct_type_id, 
-        string? _original_ct_type, string? _original_ct_code, 
-        string? _icd_code, string? _icd_name)
+        string? _original_ct_code, string? _icd_code, string? _icd_name)
     {
         sd_sid = _sd_sid;
         original_value = _original_value;
         original_ct_type_id = _original_ct_type_id;
-        original_ct_type = _original_ct_type;
         original_ct_code = _original_ct_code;
         icd_code = _icd_code;
         icd_name = _icd_name;
+    }
+    
+    public StudyCondition(string? _sd_sid, string? _original_value)
+    {
+        sd_sid = _sd_sid;
+        original_value = _original_value;
+        original_ct_type_id = null;
+        original_ct_code = null;
+        icd_code = null;
+        icd_name = null;
     }
 }
 

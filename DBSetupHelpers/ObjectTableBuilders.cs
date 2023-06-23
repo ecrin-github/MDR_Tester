@@ -42,13 +42,9 @@ public class ObjectTableBuilders
           , access_type_id         INT             NULL
           , access_details         VARCHAR         NULL
           , access_details_url     VARCHAR         NULL
-          , url_last_checked       DATE            NULL
           , eosc_category          INT             NULL
           , add_study_contribs     BOOLEAN         NULL
           , add_study_topics       BOOLEAN         NULL
-          , datetime_of_data_fetch TIMESTAMPTZ     NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL   
         );    
         CREATE INDEX data_objects_oid ON te.data_objects(sd_oid);
         CREATE INDEX data_objects_sid ON te.data_objects(sd_sid);";
@@ -79,7 +75,6 @@ public class ObjectTableBuilders
           , consent_genetic_only   BOOLEAN         NULL
           , consent_no_methods     BOOLEAN         NULL
           , consent_details        VARCHAR         NULL 
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
 
         CREATE INDEX object_datasets_oid ON te.object_datasets(sd_oid);";
@@ -104,7 +99,6 @@ public class ObjectTableBuilders
           , end_month              INT             NULL
           , end_day                INT             NULL
           , details                VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX object_dates_oid ON te.object_dates(sd_oid);";
 
@@ -122,13 +116,10 @@ public class ObjectTableBuilders
           , system                 VARCHAR         NULL
           , url                    VARCHAR         NULL
           , url_accessible         BOOLEAN         NULL
-          , url_last_checked       DATE            NULL
           , resource_type_id       INT             NULL
           , resource_size          VARCHAR         NULL
           , resource_size_units    VARCHAR         NULL
           , resource_comments      VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL   
         );
         CREATE INDEX object_instances_oid ON te.object_instances(sd_oid);";
 
@@ -148,7 +139,6 @@ public class ObjectTableBuilders
           , lang_usage_id          INT             NOT NULL default 11
           , is_default             BOOLEAN         NULL
           , comments               VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX object_titles_oid ON te.object_titles(sd_oid);";
 
@@ -171,8 +161,6 @@ public class ObjectTableBuilders
           , organisation_id        INT             NULL
           , organisation_name      VARCHAR         NULL
           , organisation_ror_id    VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL   
         );
         CREATE INDEX object_people_oid ON te.object_people(sd_oid);";
 
@@ -190,8 +178,6 @@ public class ObjectTableBuilders
           , organisation_id        INT             NULL
           , organisation_name      VARCHAR         NULL
           , organisation_ror_id    VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL   
         );
         CREATE INDEX object_organisations_oid ON te.object_organisations(sd_oid);";
 
@@ -211,8 +197,6 @@ public class ObjectTableBuilders
           , original_ct_code       VARCHAR         NULL
           , mesh_code              VARCHAR         NULL
           , mesh_value             VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL   
         );
         CREATE INDEX object_topics_oid ON te.object_topics(sd_oid);";
 
@@ -231,7 +215,6 @@ public class ObjectTableBuilders
           , pmid                   VARCHAR         NULL 
           , pmid_version           VARCHAR         NULL 
           , notes                  VARCHAR         NULL 
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX object_comments_oid ON te.object_comments(sd_oid);";
 
@@ -244,12 +227,11 @@ public class ObjectTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.object_descriptions;
         CREATE TABLE te.object_descriptions(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_oid                 VARCHAR        NULL
+          , sd_oid                 VARCHAR         NULL
           , description_type_id    INT             NULL
           , label                  VARCHAR         NULL
           , description_text       VARCHAR         NULL
           , lang_code              VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX object_descriptions_oid ON te.object_descriptions(sd_oid);";
 
@@ -261,15 +243,13 @@ public class ObjectTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.object_identifiers;
             CREATE TABLE te.object_identifiers(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_oid                 VARCHAR        NULL
+          , sd_oid                 VARCHAR         NULL
           , identifier_value       VARCHAR         NULL
           , identifier_type_id     INT             NULL
           , source_id              INT             NULL
           , source                 VARCHAR         NULL
           , source_ror_id          VARCHAR         NULL
           , identifier_date        VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL   
         );
         CREATE INDEX object_identifiers_oid ON te.object_identifiers(sd_oid);";
 
@@ -286,7 +266,6 @@ public class ObjectTableBuilders
           , db_sequence            INT             NULL
           , db_name                VARCHAR         NULL
           , id_in_db               VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX object_db_links_oid ON te.object_db_links(sd_oid);";
 
@@ -301,7 +280,6 @@ public class ObjectTableBuilders
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
           , sd_oid                 VARCHAR        NULL
           , type_name              VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX object_publication_types_oid ON te.object_publication_types(sd_oid);";
 
@@ -314,11 +292,10 @@ public class ObjectTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.object_rights;
         CREATE TABLE te.object_rights(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_oid                 VARCHAR        NULL
+          , sd_oid                 VARCHAR         NULL
           , rights_name            VARCHAR         NULL
           , rights_uri             VARCHAR         NULL
           , comments               VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX object_rights_oid ON te.object_rights(sd_oid);";
 
@@ -334,7 +311,6 @@ public class ObjectTableBuilders
           , sd_oid                 VARCHAR         NULL
           , relationship_type_id   INT             NULL
           , target_sd_oid          VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
         );
         CREATE INDEX object_relationships_oid ON te.object_relationships(sd_oid);
         CREATE INDEX object_relationships_target_oid ON te.object_relationships(target_sd_oid);";
@@ -355,8 +331,6 @@ public class ObjectTableBuilders
           , journal_iso_abbrev     VARCHAR         NULL
           , publisher_id           INT             NULL
           , publisher              VARCHAR         NULL
-          , added_on               TIMESTAMPTZ     NOT NULL default now()
-          , coded_on               TIMESTAMPTZ     NULL   
         );
         CREATE INDEX journal_details_oid ON te.journal_details(sd_oid);";
 

@@ -64,11 +64,12 @@ public class Tester
         {
             foreach (string s in test_sids)
             {
-                bool res = testdl.LoadData(source.id, s);
+                bool res = testdl.LoadData(source.source_type!, source.id, s);
                 string feedback = res
                     ? $"Expected Data loaded for {s}"
                     : $"!!! No source data found for {s} !!!";
                 _loggingHelper.LogLine(feedback);
+                _loggingHelper.LogLine("");
             }
 
             // Then compare loaded 'expected' data with the actual data in the ad tables.
