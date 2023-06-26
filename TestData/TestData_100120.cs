@@ -517,50 +517,62 @@ public class TestData_100120 : TestData_Base
 	        fs.features!.Add(new (sd_sid, 30, 600));  // 
 	        fs.features.Add(new (sd_sid, 31, 700));   // 
 	        
-            /*
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "COVID-19", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Emergency General Surgery", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Emergencies", 14, "D000004630", null, null));
 
+	        fs.ipd_info!.Add(new AvailableIPD(sd_sid, "285260", "Individual Participant Data Set", 
+		                                      "https://www.myresearchproject.org.uk/", 
+		        "Data collection template available on IRAS (Integrated Research Application System) registration"));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, "285260", "Statistical Analysis Plan", 
+		                                      "https://www.myresearchproject.org.uk/", 
+		        "Statistical analysis plan as part of protocol available on IRAS (Integrated Research Application System) registration"));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, "285260", "Study Protocol", 
+		                                      "https://www.myresearchproject.org.uk/", 
+		        "Protocol available on IRAS (Integrated Research Application System) registration")); 
+	         
+	        fs.studylinks!.Add(new StudyLink(sd_sid, "CovidSurg Cohort Study. Globalsurg", 
+		                        "https://globalsurg.org/covidsurgcohortstudy"));
+
+	        // countries
+            
+	        // iec
 	        
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'COVID-19');
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Emergency General Surgery');
-call expected.insert_mesh_study_topic(sid =>_sid, typeid => 13, mcode => 'D000004630', mvalue => 'Emergencies');
+	        // Data Objects
+	        
+	        // 1) Trial registry entry
 
-call expected.insert_study_ipd_available(sid => _sid, ipd_id => '285260', ipd_type => 'Individual Participant Data Set',
-			ipd_url => 'https://www.myresearchproject.org.uk/',
-			ipd_comment => 'Data collection template available on IRAS (Integrated Research Application System) registration');
-call expected.insert_study_ipd_available(sid => _sid, ipd_id => '285260', ipd_type => 'Statistical Analysis Plan',
-			ipd_url => 'https://www.myresearchproject.org.uk/',
-			ipd_comment => 'Statistical analysis plan as part of protocol available on IRAS (Integrated Research Application System) registration');
-call expected.insert_study_ipd_available(sid => _sid, ipd_id => '285260', ipd_type => 'Study Protocol',
-			ipd_url => 'https://www.myresearchproject.org.uk/',
-			ipd_comment => 'Protocol available on IRAS (Integrated Research Application System) registration');
-
-fs.studylinks!.Add(new StudyLink(sd_sid, "CovidSurg Cohort Study. Globalsurg", "https://globalsurg.org/covidsurgcohortstudy"));
-
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
-
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'Outcomes in Emergency Laparotomies During COVID-19 Pandemic',
-										pubyear => 2020);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2020 Jun 5', syear => 2020, smonth => 6, sday => 5);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2020 Jul 23', syear => 2020, smonth => 7, sday => 23);
-
-_oid = _sid ||' :: 74 :: Study Protocol and Statistical Analysis Plan';
-
-call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
-                                 title => 'Outcomes in Emergency Laparotomies During COVID-19 Pandemic :: Study Protocol and Statistical Analysis Plan', 
-								 pubyear => 2020, obclassid => 23, obtypeid => 74, managingorgid => 100120, managingorgname => 'ClinicalTrials.gov', acctypeid => 11, eosccat => 0);
-
-call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'Outcomes in Emergency Laparotomies During COVID-19 Pandemic :: Study Protocol and Statistical Analysis Plan', isdefault => true);
-
-call expected.insert_object_instance(sd_oid => _oid, reporgid => 100120, reporgname => 'ClinicalTrials.gov', 
-purl => 'https://clinicaltrials.gov/ProvidedDocs/71/NCT04419571/Prot_SAP_000.pdf', restypeid => 11);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 15, datestring => '2020 Jun 4', syear => 2020, smonth => 6, sday => 4);
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2020 Jun 4', syear => 2020, smonth => 6, sday => 4);
-
-             */            
+	        string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+	        string ob_title = display_title + " :: CTG registry entry";
+	        StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+		        null, 9, 2020, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+		        "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2020 Jun 5", 2020, 6, 5, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2020 Jul 23", 2020, 7, 23, null, null, null, null));
+	       
+	        fs.data_objects!.Add(sdo);
+	        
+	        // 2) Study Protocol and Statistical Analysis Plan
+	        
+	        sd_oid = sd_sid + " :: 74 :: Study Protocol and Statistical Analysis Plan";
+	        ob_title = display_title + " :: Study Protocol and Statistical Analysis Plan";
+	        sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol and Statistical Analysis Plan", null, ob_title,
+		        null, 9, 2020, 23, 74, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+		        "https://clinicaltrials.gov/ProvidedDocs/71/NCT04419571/Prot_SAP_000.pdf", true, 11, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2020 Jun 5", 2020, 6, 4, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2020 Jul 23", 2020, 6, 4, null, null, null, null));
+	        fs.data_objects!.Add(sdo);
+	        
+	        return fs;	        
         }
         
         if (sd_sid == "NCT04406714")
@@ -570,22 +582,41 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '20
 	        // Study 
 	        
 	        string display_title = "Scaling CRC Screening Through Outreach, Referral, and Engagement (SCORE)";
-	        StringBuilder sb = new StringBuilder("");
+	        StringBuilder sb = new StringBuilder("Colorectal cancer (CRC) is a leading cause of cancer death in the United States. In North Carolina, as in many parts of the ");
+	        sb.Append("CRC screening is substantially underused in vulnerable and marginalized populations. Uninsured, underinsured, and medically underserved populations rely "); 
+	        sb.Append("on federally qualified health centers (FQHCs) for their healthcare and thus patients served by North Carolina’s FQHCs are particularly likely to benefit "); 
+	        sb.Append("from efforts and resources to improve CRC screening. The United States Preventive Services Task Force recommends several tests to screen for CRC, "); 
+	        sb.Append("including annual screening with a fecal immunochemical test (FIT), for patients ages 50-75 years. Programs that include mailing FITs to patients have "); 
+	        sb.Append("shown promise as an effective means of increasing CRC screening, including for vulnerable populations.\n\n"); 
+	        sb.Append("This randomized controlled trial is designed to assess the effectiveness, feasibility, acceptability, and cost-effectiveness of mailing FITs "); 
+	        sb.Append("from a central location to patients served by FQHCs. This study also assesses the effectiveness, feasibility, acceptability, and costs of ");
+	        sb.Append("delivering patient navigation from a central location to facilitate follow-up colonoscopy for patients with a positive (abnormal) FIT result. "); 
+	        sb.Append("To assess adherence to the United States Preventive Services Task Force recommendations for annual screening with FIT, we will mail eligible "); 	        
+	        sb.Append("participants one FIT per year for up to two years."); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("(As of May 2021): As outlined in the Notice of Award, each study site must make its Limited Data Set ");
+	        sb.Append("(LDS) accessible to other sites in the ACCSIS consortium. Information Management Services (IMS) will serve as the "); 
+	        sb.Append("repository and have responsibility for creating a Limited Consolidated Data Set (LCDS) for analytic use of researchers "); 
+	        sb.Append("both within and external to the ACCSIS consortium. Dataset Items in the LDS are defined by the Common Data Elements. ");
+	        sb.Append("There also will be a \"public use data set\" that consists of the Common Data Elements, available to external researchers. "); 
+	        sb.Append("IMS will use a systematic process to remove identifiers. In addition, all data that underlie results in publications "); 
+	        sb.Append("will be available per Cancer Moonshot Notice of Award.\n"); 
+	        sb.Append("Time frame: The IPD sharing time frame has not been defined at this time.\n"); 
+	        sb.Append("Access Criteria: There are 2 classes of dataset requests: public use and special. Requests are submitted via the IMS website. "); 
+	        sb.Append("Requestors electronically sign and submit necessary forms, including an agreement to acknowledge ACCSIS in publications and presentations. "); 
+	        sb.Append("A public use dataset containing common data elements is made available to external researchers by application. IMS responds to public use "); 
+	        sb.Append("dataset applications by sending the requestor one-time access to a data download link. External researchers may also request a more "); 
+	        sb.Append("customized data set. Requestors must submit a brief concept form or ancillary studies form, for preliminary review by the ACCSIS "); 
+	        sb.Append("Steering Committee (SC), before invitation to submit a full proposal. Full proposals receive administrative review by NCI and RTI before "); 
+	        sb.Append("being sent to the SC for review and approval. Requestors report every 6 months and published articles or conference presentations "); 
+	        sb.Append("to RTI. Requestors are encouraged to make articles available through PubMed Central.\n");
+	        sb.Append("Information available: Study Protocol"); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2020, 7, 11, 14, "4000", 900, 
+		        50, 17, 75, 17, 10);
 	        
 	        /*
-call expected.insert_study_names(sid => _sid, 
-						title =>'Scaling CRC Screening Through Outreach, Referral, and Engagement (SCORE)', 
-						brief_desc =>'Colorectal cancer (CRC) is a leading cause of cancer death in the United States. In North Carolina, as in many parts of the United States, CRC screening is substantially underused in vulnerable and marginalized populations. Uninsured, underinsured, and medically underserved populations rely on federally qualified health centers (FQHCs) for their healthcare and thus patients served by North Carolina’s FQHCs are particularly likely to benefit from efforts and resources to improve CRC screening. The United States Preventive Services Task Force recommends several tests to screen for CRC, including annual screening with a fecal immunochemical test (FIT), for patients ages 50-75 years. Programs that include mailing FITs to patients have shown promise as an effective means of increasing CRC screening, including for vulnerable populations.
-
-This randomized controlled trial is designed to assess the effectiveness, feasibility, acceptability, and cost-effectiveness of mailing FITs from a central location to patients served by FQHCs. This study also assesses the effectiveness, feasibility, acceptability, and costs of delivering patient navigation from a central location to facilitate follow-up colonoscopy for patients with a positive (abnormal) FIT result. To assess adherence to the United States Preventive Services Task Force recommendations for annual screening with FIT, we will mail eligible participants one FIT per year for up to two years.',
-						dss => '(As of May 2021): As outlined in the Notice of Award, each study site must make its Limited Data Set (LDS) accessible to other sites in the ACCSIS consortium. Information Management Services (IMS) will serve as the repository and have responsibility for creating a Limited Consolidated Data Set (LCDS) for analytic use of researchers both within and external to the ACCSIS consortium. Dataset Items in the LDS are defined by the Common Data Elements. There also will be a "public use data set" that consists of the Common Data Elements, available to external researchers. IMS will use a systematic process to remove identifiers. In addition, all data that underlie results in publications will be available per Cancer Moonshot Notice of Award.
-Time frame: The IPD sharing time frame has not been defined at this time.
-Access Criteria: There are 2 classes of dataset requests: public use and special. Requests are submitted via the IMS website. Requestors electronically sign and submit necessary forms, including an agreement to acknowledge ACCSIS in publications and presentations. A public use dataset containing common data elements is made available to external researchers by application. IMS responds to public use dataset applications by sending the requestor one-time access to a data download link. External researchers may also request a more customized data set. Requestors must submit a brief concept form or ancillary studies form, for preliminary review by the ACCSIS Steering Committee (SC), before invitation to submit a full proposal. Full proposals receive administrative review by NCI and RTI before being sent to the SC for review and approval. Requestors report every 6 months and published articles or conference presentations to RTI. Requestors are encouraged to make articles available through PubMed Central.
-Information available: Study Protocol'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2020, smonth => 7, typeid => 11, statusid => 14);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '4000', eligid => 900, minage => 50, minageu => 17, maxage => 75, maxageu => 17);
 
 call expected.insert_study_title(sid => _sid, typeid => 15, 
 	                     title => 'Scaling CRC Screening Through Outreach, Referral, and Engagement (SCORE)', isdefault => true, comms => 'From Clinicaltrials.gov');
@@ -621,18 +652,31 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 
 fs.studylinks!.Add(new StudyLink(sd_sid, "UNC Lineberger Comprehensive Cancer Center Clinical Trials", "https://unclineberger.org/patientcare/clinical-trials"));
 
+ */
+	        // countries
+            
+	        // iec
+	        
+	        // Data Objects
+	        
+	        // 1) Trial registry entry
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+	        string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+	        string ob_title = display_title + " :: CTG registry entry";
+	        StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+		        null, 9, 2020, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+		        "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2020 May 28", 2020, 5, 28, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2021 May 12", 2021, 5, 12, null, null, null, null));
+	       
+	        fs.data_objects!.Add(sdo);
 
-call expected.insert_ctg_registry_entry(sid => _sid,  
-										title => 'Scaling CRC Screening Through Outreach, Referral, and Engagement (SCORE)',
-										pubyear => 2020);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2020 May 28', syear => 2020, smonth => 5, sday => 28);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2021 May 12', syear => 2021, smonth => 5, sday => 12);
-
-	         */
+	        return fs;
         }
         
         if (sd_sid == "NCT03631199")
@@ -642,20 +686,21 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        // Study 
 	        
 	        string display_title = "Study of Efficacy and Safety of Pembrolizumab Plus Platinum-based Doublet Chemotherapy With or Without Canakinumab in Previously Untreated Locally Advanced or Metastatic Non-squamous and Squamous NSCLC Subjects";
-	        StringBuilder sb = new StringBuilder("");
+	        StringBuilder sb = new StringBuilder("This is a phase III study of pembrolizumab plus platinum-based doublet chemotherapy with or without canakinumab in previously ");
+	        sb.Append("untreated locally advanced or metastatic non-squamous and squamous NSCLC subjects\n\n"); 
+	        sb.Append("The study will assess primarily the safety and tolerability (safety run-in part) of pembrolizumab plus platinum-based doublet chemotherapy with canakinumab "); 
+	        sb.Append("and then the efficacy (double-blind, randomized, placebo controlled part) of pembrolizumab plus platinum-based doublet chemotherapy with or without canakinumab."); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("(As of April 2022): Novartis is committed to sharing with qualified external researchers, access to patient-level ");
+	        sb.Append("data and supporting clinical documents from eligible studies. These requests are reviewed and approved by an independent expert panel "); 
+	        sb.Append("on the basis of scientific merit. All data provided is anonymized to respect the privacy of patients who have "); 
+	        sb.Append("participated in the trial in line with applicable laws and regulations.\n\n"); 
+	        sb.Append("This trial data is currently available according to the process described on www.clinicalstudydatarequest.com."); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2018, 12, 11, 15, "673", 900,
+		        18, 17, null, null, 10);
             /*
-call expected.insert_study_names(sid => _sid, 
-						title =>'Study of Efficacy and Safety of Pembrolizumab Plus Platinum-based Doublet Chemotherapy With or Without Canakinumab in Previously Untreated Locally Advanced or Metastatic Non-squamous and Squamous NSCLC Subjects', 
-						brief_desc =>'This is a phase III study of pembrolizumab plus platinum-based doublet chemotherapy with or without canakinumab in previously untreated locally advanced or metastatic non-squamous and squamous NSCLC subjects.
-
-The study will assess primarily the safety and tolerability (safety run-in part) of pembrolizumab plus platinum-based doublet chemotherapy with canakinumab and then the efficacy (double-blind, randomized, placebo controlled part) of pembrolizumab plus platinum-based doublet chemotherapy with or without canakinumab.',
-						dss => '(As of April 2022): Novartis is committed to sharing with qualified external researchers, access to patient-level data and supporting clinical documents from eligible studies. These requests are reviewed and approved by an independent expert panel on the basis of scientific merit. All data provided is anonymized to respect the privacy of patients who have participated in the trial in line with applicable laws and regulations.
-
-This trial data is currently available according to the process described on www.clinicalstudydatarequest.com.'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2018, smonth => 12, typeid => 11, statusid => 15);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '673', eligid => 900, minage => 18, minageu => 17, maxage => null, maxageu => null);
 
 call expected.insert_study_title(sid => _sid, typeid => 15, 
                          title => 'Study of Efficacy and Safety of Pembrolizumab Plus Platinum-based Doublet Chemotherapy With or Without Canakinumab in Previously Untreated Locally Advanced or Metastatic Non-squamous and Squamous NSCLC Subjects', isdefault => true, comms => 'From Clinicaltrials.gov');
@@ -678,7 +723,6 @@ call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'Nova
 
             fs.topics!.Add(new StudyTopic(sd_sid, 11, "ACZ885", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "canakinumab", null, null, null, null));
-	        
 	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "cisplatin", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "nab-paclitaxel", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "squamous", null, null, null, null));
@@ -701,18 +745,31 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D0000
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000000911', mvalue => 'Antibodies, Monoclonal');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000008175', mvalue => 'Lung Neoplasms');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002289', mvalue => 'Carcinoma, Non-Small-Cell Lung');
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2018, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2018 Aug 15", 2018, 8, 15, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 May 2 (est.)", 2022, 5, 2, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'Study of Efficacy and Safety of Pembrolizumab Plus Platinum-based Doublet Chemotherapy With or Without Canakinumab in Previously Untreated Locally Advanced or Metastatic Non-squamous and Squamous NSCLC Subjects',
-										pubyear => 2018);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2018 Aug 15', syear => 2018, smonth => 8, sday => 15);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2022 May 2 (est.)', syear => 2022, smonth => 5, sday => 2);
- 
-             */            
+            return fs;
         }
         
         if (sd_sid == "NCT03226236")
@@ -723,25 +780,26 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        
 	        string display_title = "Vaccination With Dendritic Cells Pulsed With Autologous Tumor Homogenate in Combination With HD-IL2 and Immunomodulating Radiotherapy in Metastatic RCC";
 	        StringBuilder sb = new StringBuilder("");
+	        sb.Append("Single center, open-label Proof of Principle phase II trial to assess objective response (ORR).\n\n"); 
+	        sb.Append("Three daily doses boost radiotherapy (XRT) at 6-12 Gy to at least 1, and up to a maximum of 5, metastatic fields, will be administrated on days "); 
+	        sb.Append("-4 -3 -2 or -3 -2 -1 before the first and the third cycle of vaccine+IL-2. The first day of administration of vaccine is day +1 and of IL-2 is day +2.\n\n"); 
+	        sb.Append("Treatment vaccine plus IL-2 (dose 18 MIU/m2/day in 500cc by continuous IV infusion for 72 hours) will be administered every 3 weeks up to 6 cycles.\n\n"); 
+	        sb.Append("Total duration of the trial: 36 months\n\n"); 
+	        sb.Append("Enrolment period: 24 months\n"); 
+	        sb.Append("Treatment: maximum of 6 cycles (5 months) per patient\n"); 
+	        sb.Append("Follow-up every three months until patient died (follow-up until PD and only survival contacts and subsequent therapy for metastatic disease after PD)."); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append("");
+	        string brief_desc = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2016, 3, 11, 11, "0", 900,
+		       19, 17, null, null, 10);
+	        
             /*
-
-call expected.insert_study_names(sid => _sid, 
-						title =>'Vaccination With Dendritic Cells Pulsed With Autologous Tumor Homogenate in Combination With HD-IL2 and Immunomodulating Radiotherapy in Metastatic RCC', 
-						brief_desc =>'Single center, open-label Proof of Principle phase II trial to assess objective response (ORR).
-
-Three daily doses boost radiotherapy (XRT) at 6-12 Gy to at least 1, and up to a maximum of 5, metastatic fields, will be administrated on days -4 -3 -2 or -3 -2 -1 before the first and the third cycle of vaccine+IL-2. The first day of administration of vaccine is day +1 and of IL-2 is day +2.
-
-Treatment vaccine plus IL-2 (dose 18 MIU/m2/day in 500cc by continuous IV infusion for 72 hours) will be administered every 3 weeks up to 6 cycles.
-
-Total duration of the trial: 36 months
-
-Enrolment period: 24 months
-Treatment: maximum of 6 cycles (5 months) per patient
-Follow-up every three months until patient died (follow-up until PD and only survival contacts and subsequent therapy for metastatic disease after PD).'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2016, smonth => 3, typeid => 11, statusid => 11);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '0', eligid => 900, minage => 19, minageu => 17, maxage => null, maxageu => null);
 
 call expected.insert_study_title(sid => _sid, typeid => 15, 
                          title => 'Vaccination With Dendritic Cells Pulsed With Autologous Tumor Homogenate in Combination With HD-IL2 and Immunomodulating Radiotherapy in Metastatic RCC', isdefault => true, comms => 'From Clinicaltrials.gov');
@@ -775,18 +833,32 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D0000
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000014612', mvalue => 'Vaccines');
 
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002292', mvalue => 'Carcinoma, Renal Cell');
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2017 Jul 21", 2017, 7, 21, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2018 Nov 13", 2018, 11, 13, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'Vaccination With Dendritic Cells Pulsed With Autologous Tumor Homogenate in Combination With HD-IL2 and Immunomodulating Radiotherapy in Metastatic RCC',
-										pubyear => 2017);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2017 Jul 21', syear => 2017, smonth => 7, sday => 21);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2018 Nov 13', syear => 2018, smonth => 11, sday => 13);
-
-             */            
+            return fs;
+              
         }
        
         if (sd_sid == "NCT03167125")
@@ -796,22 +868,21 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        // Study 
 	        
 	        string display_title = "Participatory Research to Advance Colon Cancer Prevention";
-	        StringBuilder sb = new StringBuilder("");
+	        StringBuilder sb = new StringBuilder("The overall goal of this study is to test strategies to raise rates of colorectal cancer screening among the Latino ");
+	        sb.Append("opulation in a federally qualified health center that operates multiple clinics. "); 
+	        sb.Append("This intervention study will test automated and live prompts to a direct-mail fecal testing program in two phases.\n\n"); 
+	        sb.Append("In Phase I (Years 01 - 02), the investigators will tailor and define intervention components using a community-based participatory research approach called boot camp translation (BCT). "); 
+	        sb.Append("The ultimate design of the intervention will be defined by patient and provider feedback from BCT. The investigators will then conduct a three-arm patient-randomized "); 
+	        sb.Append("comparative effectiveness trial in two pilot clinics to compare 1) automated prompts (i.e., automated phone calls, text messages) to alert and remind patients "); 
+	        sb.Append("to complete screening, 2) live prompts (i.e., live phone calls), and 3) a combination approach of automated plus live prompts.\n\n"); 
+	        sb.Append("In Phase II (Years 03 - 05), the investigators will spread and test the spread of the adapted intervention to additional clinics within "); 
+	        sb.Append("the partnering health center using a two-arm main trial.\n\n"); 
+	        sb.Append("Both phases will be guided by an advisory group of clinicians, researchers, policy makers, and patients."); 
+	        string brief_desc = sb.ToString();
+
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2017, 9, 11, 21, "27580", 900,
+		        50, 17, 75, 17, 10);
             /*
-
-call expected.insert_study_names(sid => _sid, 
-						title =>'Participatory Research to Advance Colon Cancer Prevention', 
-						brief_desc =>'The overall goal of this study is to test strategies to raise rates of colorectal cancer screening among the Latino population in a federally qualified health center that operates multiple clinics. This intervention study will test automated and live prompts to a direct-mail fecal testing program in two phases.
-
-In Phase I (Years 01 - 02), the investigators will tailor and define intervention components using a community-based participatory research approach called boot camp translation (BCT). The ultimate design of the intervention will be defined by patient and provider feedback from BCT. The investigators will then conduct a three-arm patient-randomized comparative effectiveness trial in two pilot clinics to compare 1) automated prompts (i.e., automated phone calls, text messages) to alert and remind patients to complete screening, 2) live prompts (i.e., live phone calls), and 3) a combination approach of automated plus live prompts.
-
-In Phase II (Years 03 - 05), the investigators will spread and test the spread of the adapted intervention to additional clinics within the partnering health center using a two-arm main trial.
-
-Both phases will be guided by an advisory group of clinicians, researchers, policy makers, and patients.'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2017, smonth => 9, typeid => 11, statusid => 21);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '27580', eligid => 900, minage => 50, minageu => 17, maxage => 75, maxageu => 17);
 
 call expected.insert_study_title(sid => _sid, typeid => 15, 
                          title => 'Participatory Research to Advance Colon Cancer Prevention', isdefault => true, comms => 'From Clinicaltrials.gov');
@@ -854,18 +925,32 @@ sb = new StringBuilder("Thompson JH, Davis MM, Leo MC, Schneider JL, Smith DH, P
 sb.Append("Participatory Research to Advance Colon Cancer Prevention (PROMPT): Study protocol for a pragmatic trial. ");
 sb.Append("Contemp Clin Trials. 2018 Apr;67:11-15. doi: 10.1016/j.cct.2018.02.001. Epub 2018 Feb 9.");
 fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29408304", null, null, null));
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2017 May 25", 2017, 5, 25, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Apr 5", 2022, 4, 5, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'Participatory Research to Advance Colon Cancer Prevention',
-										pubyear => 2017);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2017 May 25', syear => 2017, smonth => 5, sday => 25);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2022 Apr 5', syear => 2022, smonth => 4, sday => 5);
-
-             */            
+            return fs;
+            
         }
         
         if (sd_sid == "NCT03076619")
@@ -875,21 +960,29 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        // Study 
 	        
 	        string display_title = "A Clinical Study of Fundus Findings in Toxaemia of Pregnanc";
-	        StringBuilder sb = new StringBuilder("");
+	        StringBuilder sb = new StringBuilder("Toxemia of pregnancy is a recognized entity for over 2000 years with its known complications ");
+	        sb.Append("and fatality. Nowadays, a most accepted terminology for the following defined syndrome is \"hypertensive disorders "); 
+	        sb.Append("in pregnancy\" given by American College of Obstetrics and Gynecology. It is an important cause of maternal and "); 
+	        sb.Append("fetal morbidity and mortality. Pregnancy induced hypertension (PIH) was classified as gestational hypertension, "); 
+	        sb.Append("preeclampsia, severe preeclampsia and eclampsia. PIH is a hypertensive disorder in pregnancy that occurs after 20 weeks "); 
+	        sb.Append("of pregnancy in the absence of other causes of elevated blood pressure (BP) (BP >140/90 mmHg measured two times with "); 
+	        sb.Append("at least of 4 hour interval) in combination with generalized edema and/or proteinuria (>300 mg per 24 hrs). When there "); 
+	        sb.Append("is significant proteinuria it is termed as preeclampsia; seizure or coma as a consequence of PIH is "); 
+	        sb.Append("termed as eclampsia. Preeclampsia was classified into mild and severe preeclampsia.\n\n"); 
+	        sb.Append("mild eclampsia—BP >140/90 mmHg, proteinuria+, and/or mild edema of legs, Severe preeclampsia—BP >160/110 mmHg,proteinuria++ or ++++, "); 
+	        sb.Append("headache, cerebral or visual disturbances, epigastric pain, impaired liver function tests and increase in serum creatinine.\n\n"); 
+	        sb.Append("roteinuria was tested using dipstick method as +=0.3 gm/L, ++=1 gm/L, and +++=3 gm/L.\n\n"); 
+	        sb.Append("The pathological changes of this disease appear to be related to vascular endothelial dysfunction and its consequences (generalized vasospasm and "); 
+	        sb.Append("capillary leak). Ocular involvement is common in PIH.Common symptoms are blurring of vision, photopsia, scotomas and diplopia. Visual symptoms may "); 
+	        sb.Append("be the precursor of seizures.Progression of retinal changes correlates with progression of PIH and also with the fetal mortality due to similar vascular "); 
+	        sb.Append("ischemic changes in placenta.Vasospastic manifestations are reversible and the retinal vessels rapidly return to normal after delivery. Ophthalmoscope "); 
+	        sb.Append("should be rated next to the sphygmomanometer as an instrument of diagnostic importance in cases of PIH. Ophthalmoscopy does not only helps in "); 
+	        sb.Append("diagnosing the disease but repeated observations assist in assessing the severity, progress of disease, response to treatment if any and ultimate outcome or prognosis."); 
+	        string brief_desc = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2003, 11, 12, 21, "300", 905,
+		        18, 17, 42, 17, 10);
             /*
-call expected.insert_study_names(sid => _sid, 
-						title =>'A Clinical Study of Fundus Findings in Toxaemia of Pregnancy', 
-						brief_desc =>'Toxemia of pregnancy is a recognized entity for over 2000 years with its known complications and fatality. Nowadays, a most accepted terminology for the following defined syndrome is "hypertensive disorders in pregnancy" given by American College of Obstetrics and Gynecology. It is an important cause of maternal and fetal morbidity and mortality. Pregnancy induced hypertension (PIH) was classified as gestational hypertension, preeclampsia, severe preeclampsia and eclampsia. PIH is a hypertensive disorder in pregnancy that occurs after 20 weeks of pregnancy in the absence of other causes of elevated blood pressure (BP) (BP >140/90 mmHg measured two times with at least of 4 hour interval) in combination with generalized edema and/or proteinuria (>300 mg per 24 hrs). When there is significant proteinuria it is termed as preeclampsia; seizure or coma as a consequence of PIH is termed as eclampsia. Preeclampsia was classified into mild and severe preeclampsia.
-
-Mild eclampsia—BP >140/90 mmHg, proteinuria+, and/or mild edema of legs, Severe preeclampsia—BP >160/110 mmHg,proteinuria++ or ++++, headache, cerebral or visual disturbances, epigastric pain, impaired liver function tests and increase in serum creatinine.
-
-Proteinuria was tested using dipstick method as +=0.3 gm/L, ++=1 gm/L, and +++=3 gm/L.
-
-The pathological changes of this disease appear to be related to vascular endothelial dysfunction and its consequences (generalized vasospasm and capillary leak). Ocular involvement is common in PIH.Common symptoms are blurring of vision, photopsia, scotomas and diplopia. Visual symptoms may be the precursor of seizures.Progression of retinal changes correlates with progression of PIH and also with the fetal mortality due to similar vascular ischemic changes in placenta.Vasospastic manifestations are reversible and the retinal vessels rapidly return to normal after delivery. Ophthalmoscope should be rated next to the sphygmomanometer as an instrument of diagnostic importance in cases of PIH. Ophthalmoscopy does not only helps in diagnosing the disease but repeated observations assist in assessing the severity, progress of disease, response to treatment if any and ultimate outcome or prognosis.'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2003, smonth => 11, typeid => 12, statusid => 21);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '300', eligid => 905, minage => 18, minageu => 17, maxage => 42, maxageu => 17);
 
 call expected.insert_study_title(sid => _sid, typeid => 15, 
                          title => 'A Clinical Study of Fundus Findings in Toxaemia of Pregnancy', isdefault => true, comms => 'From Clinicaltrials.gov');
@@ -929,18 +1022,32 @@ fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "27843854", null, nu
 fs.studylinks!.Add(new StudyLink(sd_sid, "Published article", 
               "http://www.jfmpc.com/article.asp?issn=2249-4863;year=2016;volume=5;issue=2;spage=424;epage=429;aulast=Bakhda"));
 
-			
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
-
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'A Clinical Study of Fundus Findings in Toxaemia of Pregnancy',
-										pubyear => 2017);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2017 Mar 10', syear => 2017, smonth => 3, sday => 10);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2017 Mar 13', syear => 2017, smonth => 3, sday => 13);
- 
-            */           
+			 */
+                    // countries
+                    
+                    // iec
+                    
+                    // Data Objects
+                    
+                    // 1) Trial registry entry
+        
+                    string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+                    string ob_title = display_title + " :: CTG registry entry";
+                    StudyDataObject sdo = CreateEmptyStudyDataObject();
+                    
+                    sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+            	        null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+                   
+                    sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+                    sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+            	        "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+                    sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2017 Mar 10", 2017, 3, 10, null, null, null, null));
+                    sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2017 Mar 13", 2017, 3, 13, null, null, null, null));
+                   
+                    fs.data_objects!.Add(sdo);
+        
+                    return fs;
+        
         }
         
         if (sd_sid == "NCT02798978")
@@ -950,22 +1057,32 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        // Study 
 	        
 	        string display_title = "A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects";
-	        StringBuilder sb = new StringBuilder("");
+	        StringBuilder sb = new StringBuilder("This study is an ascending dose first-time-in-human study to determine the safety, tolerability, pharmacodynamic (PD), and ");
+	        sb.Append("pharmacokinetics (PK) profile of GSK1795091 in healthy subjects. The results will support the design of future clinical trials "); 
+	        sb.Append("of GSK1795091 administered to subjects with advanced malignancies in combination with immune system modulators.\n\n"); 
+	        sb.Append("Part 1 will be a randomized, double-blind (sponsor-unblinded), placebo-controlled, single center, single dose escalation, sequential group evaluation of "); 
+	        sb.Append("intravenously administered GSK1795091 to evaluate the safety and tolerability in healthy subjects. Part 2 will be an open-label, parallel group evaluation "); 
+	        sb.Append("of 2 doses of GSK1795091 administered, either 1 week apart (Part 2, Cohort 1) or 2 weeks apart (Part 2, Cohort 2). In Part 2, on Day 1, subjects will "); 
+	        sb.Append("receive intravenous GSK1795091 at a dose determined by results from Part 1. The total duration of this study is approximately 10 weeks from screening to the last study visit."); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("(As of November 2020): IPD for this study is available via the Clinical Study Data Request site.\n");
+	        sb.Append("Time frame: IPD is available via the Clinical Study Data Request site (copy the URL below to your browser)"); 
+	        sb.Append("Access Criteria: Access is provided after a research proposal is submitted and has received approval from the Independent Review "); 
+	        sb.Append("Panel and after a Data Sharing Agreement is in place. Access is provided for an initial period of 12 months but an "); 
+	        sb.Append("extension can be granted, when justified, for up to another 12 months.\n"); 
+	        sb.Append("URL: https://www.clinicalstudydatarequest.com/Posting.aspx?ID=20725\n"); 
+	        sb.Append("Information available: Study Protocol, Statistical Analysis Plan (SAP), Informed Consent Form (ICF), Clinical Study Report (CSR)"); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2017, 1, 11, 21, "42", 900,
+		        18, 17, 50, 17, 10);
             /*
-call expected.insert_study_names(sid => _sid, 
-						title =>'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects', 
-						brief_desc =>'This study is an ascending dose first-time-in-human study to determine the safety, tolerability, pharmacodynamic (PD), and pharmacokinetics (PK) profile of GSK1795091 in healthy subjects. The results will support the design of future clinical trials of GSK1795091 administered to subjects with advanced malignancies in combination with immune system modulators.
-
-Part 1 will be a randomized, double-blind (sponsor-unblinded), placebo-controlled, single center, single dose escalation, sequential group evaluation of intravenously administered GSK1795091 to evaluate the safety and tolerability in healthy subjects. Part 2 will be an open-label, parallel group evaluation of 2 doses of GSK1795091 administered, either 1 week apart (Part 2, Cohort 1) or 2 weeks apart (Part 2, Cohort 2). In Part 2, on Day 1, subjects will receive intravenous GSK1795091 at a dose determined by results from Part 1. The total duration of this study is approximately 10 weeks from screening to the last study visit.',
-						dss => '(As of November 2020): IPD for this study is available via the Clinical Study Data Request site.
-Time frame: IPD is available via the Clinical Study Data Request site (copy the URL below to your browser)
-Access Criteria: Access is provided after a research proposal is submitted and has received approval from the Independent Review Panel and after a Data Sharing Agreement is in place. Access is provided for an initial period of 12 months but an extension can be granted, when justified, for up to another 12 months.
-URL: https://www.clinicalstudydatarequest.com/Posting.aspx?ID=20725
-Information available: Study Protocol, Statistical Analysis Plan (SAP), Informed Consent Form (ICF), Clinical Study Report (CSR)'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2017, smonth => 1, typeid => 11, statusid => 21);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '42', eligid => 900, minage => 18, minageu => 17, maxage => 50, maxageu => 17);
 
 call expected.insert_study_title(sid => _sid, typeid => 15, 
                          title => 'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects', isdefault => true, comms => 'From Clinicaltrials.gov');
@@ -997,33 +1114,57 @@ sb = new StringBuilder("Hug BA, Matheny CJ, Burns O, Struemper H, Wang X, Washbu
 sb.Append("Safety, Pharmacokinetics, and Pharmacodynamics of the TLR4 Agonist GSK1795091 in Healthy Individuals: Results from a Randomized, Double-blind, Placebo-controlled, Ascending Dose Study. ");
 sb.Append("Clin Ther. 2020 Aug;42(8):1519-1534.e33. doi: 10.1016/j.clinthera.2020.05.022. Epub 2020 Jul 30.");
 fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "32739049", null, null, null));
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2016, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2016 Jun 14 (est.)", 2016, 6, 14, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2020 Nov 27", 2020, 11, 27, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+			
+            sd_oid = sd_sid + " :: 28 :: CTG results entry";
+            ob_title = display_title + " :: CTG results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
+	            null, 9, 2019, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2019 Jun 10", 2019, 6, 10, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2020 Nov 27", 2020, 11, 27, null, null, null, null));
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects',
-										pubyear => 2016);
+            fs.data_objects!.Add(sdo);
+            
+            return fs;
 
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2016 Jun 14 (est.)', syear => 2016, smonth => 6, sday => 14);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2020 Nov 27', syear => 2020, smonth => 11, sday => 27);
-
--- trial results entry
-_oid = _sid ||' :: 28 :: CTG results entry';
-
-call expected.insert_ctg_results_entry(sid => _sid, 
-									    title => 'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects',
-										pubyear => 2019);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2019 Jun 10', syear => 2019, smonth => 6, sday => 10);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2020 Nov 27', syear => 2020, smonth => 11, sday => 27);
+            /*
 
 -- other objects
 _oid = _sid ||' :: 11 :: Study Protocol';
 
 call expected.insert_data_object(sd_oid =>  _oid, sid => _sid, 
                                  title => 'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects :: Study Protocol', 
-								 pubyear => 2018, obclassid => 23, obtypeid => 11, managingorgid => 100120, managingorgname => 'Clinicaltrials.gov', acctypeid => 11, eosccat => 0);
+							     pubyear => 2018, obclassid => 23, obtypeid => 11, managingorgid => 100120, managingorgname => 'Clinicaltrials.gov', acctypeid => 11, eosccat => 0);
 
 call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects :: Study Protocol', isdefault => true);
 
@@ -1037,7 +1178,7 @@ _oid = _sid ||' :: 22 :: Statistical Analysis Plan';
 
 call expected.insert_data_object(sd_oid =>  _oid, sid => _sid, 
                                  title => 'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects :: Statistical Analysis Plan', 
-								 pubyear => 2018, obclassid => 23, obtypeid => 22, managingorgid => 100120, managingorgname => 'Clinicaltrials.gov', acctypeid => 11, eosccat => 0);
+							     pubyear => 2018, obclassid => 23, obtypeid => 22, managingorgid => 100120, managingorgname => 'Clinicaltrials.gov', acctypeid => 11, eosccat => 0);
 
 call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects :: Statistical Analysis Plan', isdefault => true);
 
@@ -1057,18 +1198,18 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '20
 	        // Study 
 	        
 	        string display_title = "Fecal Microbiota Transplantation (FMT): PRIM-DJ2727";
-	        StringBuilder sb = new StringBuilder("");
+	        StringBuilder sb = new StringBuilder("The Fecal Microbiota Transplantation (FMT) product PRIM-DJ2727 is prepared from human stool from a healthy, screened donor.\n\n");
+	        sb.Append("Requestors will contact the study team about the product (PRIM-DJ2727) by email, visit, or phone call. A screening list for donors "); 
+	        sb.Append("will be provided to make sure that the list fits the requestor’s requirements. A basic fee will be requested to recover the cost of "); 
+	        sb.Append("making the product. After an agreement is made, a contract will be signed between the 2 parties. A week before the treatment, requestors "); 
+	        sb.Append("will contact the study team for possible FMT product delivery. Delivery method will be confirmed for delivery by personnel (within 10 "); 
+	        sb.Append("minutes driving distance) or by using FedEx services. Each delivered product will have an approved delivery form signed "); 
+	        sb.Append("and dated by both the person who prepared the delivery and the person who received the package."); 
+	        string brief_desc = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, null, null, 14, 12, null, 915,
+		        null, null, null, null, 7);
             /*
-           
-call expected.insert_study_names(sid => _sid, 
-						title =>'Fecal Microbiota Transplantation (FMT): PRIM-DJ2727', 
-						brief_desc =>'The Fecal Microbiota Transplantation (FMT) product PRIM-DJ2727 is prepared from human stool from a healthy, screened donor.
-
-Requestors will contact the study team about the product (PRIM-DJ2727) by email, visit, or phone call. A screening list for donors will be provided to make sure that the list fits the requestor’s requirements. A basic fee will be requested to recover the cost of making the product. After an agreement is made, a contract will be signed between the 2 parties. A week before the treatment, requestors will contact the study team for possible FMT product delivery. Delivery method will be confirmed for delivery by personnel (within 10 minutes driving distance) or by using FedEx services. Each delivered product will have an approved delivery form signed and dated by both the person who prepared the delivery and the person who received the package.'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => null, smonth => null, typeid => 14, statusid => 12);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => null, eligid => 915, minage => null, minageu => null, maxage => null, maxageu => null);
 
 call expected.insert_study_title(sid => _sid, typeid => 15, 
                          title => 'Fecal Microbiota Transplantation (FMT): PRIM-DJ2727', isdefault => true, comms => 'From Clinicaltrials.gov');
@@ -1090,18 +1231,32 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 
 call expected.insert_study_relationship(sid => _sid, typeid => 24, targetsid => 'NCT02449174');
 call expected.insert_study_relationship(sid => _sid, typeid => 24, targetsid => 'NCT02318992');
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2018, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2018 Dec 26", 2018, 12, 26, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2021 Jan 22 (est.)", 2021, 1, 22, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'Fecal Microbiota Transplantation (FMT): PRIM-DJ2727',
-										pubyear => 2018);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2018 Dec 26', syear => 2018, smonth => 12, sday => 26);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2021 Jan 22 (est.)', syear => 2021, smonth => 1, sday => 22);
- 
-            */           
+            return fs;
+            
         }
         
         if (sd_sid == "NCT02562716")
@@ -1111,17 +1266,19 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        // Study 
 	        
 	        string display_title = "S1505: Combination Chemotherapy or Gemcitabine Hydrochloride and Paclitaxel Albumin-Stabilized Nanoparticle Formulation Before Surgery in Treating Patients With Pancreatic Cancer That Can Be Removed by Surgery";
-	        StringBuilder sb = new StringBuilder("");
+	        StringBuilder sb = new StringBuilder("This randomized phase II trial studies how well fluorouracil, irinotecan hydrochloride, and ");
+	        sb.Append("oxaliplatin (combination chemotherapy) works and compares to gemcitabine hydrochloride and paclitaxel albumin-stabilized nanoparticle formulation "); 
+	        sb.Append("before surgery in treating patients with pancreatic cancer that can be removed by surgery. Drugs used in chemotherapy, such as fluorouracil, "); 
+	        sb.Append("irinotecan hydrochloride, oxaliplatin, gemcitabine hydrochloride, and paclitaxel albumin-stabilized nanoparticle formulation, work in "); 
+	        sb.Append("different ways to stop the growth of tumor cells, either by killing the cells, by stopping them from dividing, or by stopping them from "); 
+	        sb.Append("spreading. Giving more than one drug (combination chemotherapy) may kill more tumor cells. It is not yet known whether combination "); 
+	        sb.Append("chemotherapy is more effective than gemcitabine hydrochloride and paclitaxel albumin-stabilized nanoparticle formulation before surgery in treating pancreatic cancer."); 
+	        string brief_desc = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2016, 1, 11, 15, "147", 900,
+		        18, 17, 75, 17, 10);
 	        
             /*
-             
-call expected.insert_study_names(sid => _sid, 
-						title =>'S1505: Combination Chemotherapy or Gemcitabine Hydrochloride and Paclitaxel Albumin-Stabilized Nanoparticle Formulation Before Surgery in Treating Patients With Pancreatic Cancer That Can Be Removed by Surgery', 
-						brief_desc =>'This randomized phase II trial studies how well fluorouracil, irinotecan hydrochloride, and oxaliplatin (combination chemotherapy) works and compares to gemcitabine hydrochloride and paclitaxel albumin-stabilized nanoparticle formulation before surgery in treating patients with pancreatic cancer that can be removed by surgery. Drugs used in chemotherapy, such as fluorouracil, irinotecan hydrochloride, oxaliplatin, gemcitabine hydrochloride, and paclitaxel albumin-stabilized nanoparticle formulation, work in different ways to stop the growth of tumor cells, either by killing the cells, by stopping them from dividing, or by stopping them from spreading. Giving more than one drug (combination chemotherapy) may kill more tumor cells. It is not yet known whether combination chemotherapy is more effective than gemcitabine hydrochloride and paclitaxel albumin-stabilized nanoparticle formulation before surgery in treating pancreatic cancer.'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2016, smonth => 1, typeid => 11, statusid => 15);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '147', eligid => 900, minage => 18, minageu => 17, maxage => 75, maxageu => 17);
 
 call expected.insert_study_title(sid => _sid, typeid => 15, 
                          title => 'S1505: Combination Chemotherapy or Gemcitabine Hydrochloride and Paclitaxel Albumin-Stabilized Nanoparticle Formulation Before Surgery in Treating Patients With Pancreatic Cancer That Can Be Removed by Surgery', isdefault => true, comms => 'From Clinicaltrials.gov');
@@ -1168,36 +1325,59 @@ sb = new StringBuilder("Ahmad SA, Duong M, Sohal DPS, Gandhi NS, Beg MS, Wang-Gi
 sb.Append("Surgical Outcome Results From SWOG S1505: A Randomized Clinical Trial of mFOLFIRINOX Versus Gemcitabine/Nab-paclitaxel for Perioperative Treatment of Resectable Pancreatic Ductal Adenocarcinoma. ");
 sb.Append("Ann Surg. 2020 Sep 1;272(3):481-486. doi: 10.1097/SLA.0000000000004155.");
 fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "32740235", null, null, null));
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2015 Sep 29 (est.)", 2015, 9, 29, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2021 Dec 2", 2021, 12, 2, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+			
+            sd_oid = sd_sid + " :: 28 :: CTG results entry";
+            ob_title = display_title + " :: CTG results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
+	            null, 9, 2021, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2021 Jul 23", 2021, 7, 2, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2021 Dec 2", 2021, 12, 2, null, null, null, null));
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'S1505: Combination Chemotherapy or Gemcitabine Hydrochloride and Paclitaxel Albumin-Stabilized Nanoparticle Formulation Before Surgery in Treating Patients With Pancreatic Cancer That Can Be Removed by Surgery',
-										pubyear => 2015);
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2015 Sep 29 (est.)', syear => 2015, smonth => 9, sday => 29);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2021 Dec 2', syear => 2021, smonth => 12, sday => 2);
-
--- trial results entry
-_oid = _sid ||' :: 28 :: CTG results entry';
-
-call expected.insert_ctg_results_entry(sid => _sid, 
-									    title => 'S1505: Combination Chemotherapy or Gemcitabine Hydrochloride and Paclitaxel Albumin-Stabilized Nanoparticle Formulation Before Surgery in Treating Patients With Pancreatic Cancer That Can Be Removed by Surgery',
-										pubyear => 2021);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2021 Jul 23', syear => 2021, smonth => 7, sday => 23);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2021 Dec 2', syear => 2021, smonth => 12, sday => 2);
+            return fs;
+            /*
 
 -- Prot_SAP_ICF
 _oid = _sid ||' :: 76 :: Study Protocol, Statistical Analysis Plan, and Informed Consent Form';
 
 call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
                                  title => 'S1505: Combination Chemotherapy or Gemcitabine Hydrochloride and Paclitaxel Albumin-Stabilized Nanoparticle Formulation Before Surgery in Treating Patients With Pancreatic Cancer That Can Be Removed by Surgery :: Study Protocol, Statistical Analysis Plan, and Informed Consent Form', 
-								 pubyear => 2021, obclassid => 23, obtypeid => 76, managingorgid => 100120, managingorgname => 'ClinicalTrials.gov', acctypeid => 11, eosccat => 0);
+							     pubyear => 2021, obclassid => 23, obtypeid => 76, managingorgid => 100120, managingorgname => 'ClinicalTrials.gov', acctypeid => 11, eosccat => 0);
 
 call expected.insert_object_title(sd_oid => _oid, typeid => 21, 
-		title => 'S1505: Combination Chemotherapy or Gemcitabine Hydrochloride and Paclitaxel Albumin-Stabilized Nanoparticle Formulation Before Surgery in Treating Patients With Pancreatic Cancer That Can Be Removed by Surgery :: Study Protocol, Statistical Analysis Plan, and Informed Consent Form', isdefault => true);
+	    title => 'S1505: Combination Chemotherapy or Gemcitabine Hydrochloride and Paclitaxel Albumin-Stabilized Nanoparticle Formulation Before Surgery in Treating Patients With Pancreatic Cancer That Can Be Removed by Surgery :: Study Protocol, Statistical Analysis Plan, and Informed Consent Form', isdefault => true);
 
 call expected.insert_object_instance(sd_oid => _oid, reporgid => 100120, reporgname => 'ClinicalTrials.gov', 
 purl => 'https://clinicaltrials.gov/ProvidedDocs/16/NCT02562716/Prot_SAP_ICF_000.pdf', restypeid => 11);
@@ -1215,24 +1395,32 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '20
 	        // Study 
 	        
 	        string display_title = "Fecal Microbiota Transplantation to Treat Recurrent C. Difficile Associated Diarrhea Via Retention Enema or Oral Route";
-	        StringBuilder sb = new StringBuilder("");
+	        StringBuilder sb = new StringBuilder("The objective of the study is to investigate the safety of a frozen or lyophilized inoculum administered, ");
+	        sb.Append("respectively, by retention enema or capsules in patients with recurrent C. difficile associated diarrhea (RCDAD).\n\n"); 
+	        sb.Append("This is a single center, randomized, parallel assignment, open label safety study conducted in subjects with RCDAD. Fifty "); 
+	        sb.Append("subjects will be enrolled in the study and randomized at 1:1 ratio to receive frozen filtered intestinal bacteria via retention "); 
+	        sb.Append("or lyophilized donor intestinal bacteria. All subjects will be followed for a total of 3 years after study completion.\n\n"); 
+	        sb.Append("Donors will be enrolled and screened at the laboratory in the Center for Infectious Diseases at University of Texas School of "); 
+	        sb.Append("Public Health (UT-SPH). The donors will come from a variety of places, including the UT-SPH. "); 
+	        sb.Append("At least 20 donors will be screened to recruit at least 15 qualified donors.\n\n"); 
+	        sb.Append("Recipients may self-refer but must have a physician who agrees to accept care of the patient following fecal microbiota transplantation (FMT). "); 
+	        sb.Append("Subjects consenting to treatment at Baylor St. Luke’s Medical Center (BSLMC) and the UT-SPH must be willing to self-pay for the FMT in the "); 
+	        sb.Append("amount of $1,500. There will be no insurance accepted. Subjects undergoing retention enema will be treated as outpatients at either at BSLMC, "); 
+	        sb.Append("Kelsey-Seybold Clinic, or at the Memorial Hermann in the Texas Medical Center. All subjects taking capsules with lyophilized intestinal bacteria "); 
+	        sb.Append("will be seen at UT-SPH. Once the procedure is completed, the recipient’s care will be returned to their physician. "); 
+	        sb.Append("At least 75 recipients will be screened to recruit 50 qualified recipients.\n\n"); 
+	        sb.Append("The primary endpoint is to evaluate the safety of FMT by rectal or oral routes with secondary endpoint related to efficacy prevention of RCDAD. "); 
+	        sb.Append("In order to monitor any health effects for safety, participants will be contacted pre- and 7, 14, 30 days, then monthly basis for the first 90 ");
+	        sb.Append("days after FMT and quarterly till 3 years after FMT. The following procedures will be completed: review recipient diary with the recipient to ");
+	        sb.Append("ensure that the following information is recorded correctly and a fresh stool sample will be collected from recipient, tested for C. difficile ");
+	        sb.Append("toxins and an aliquot (2mL) stored at -80C for microbiome analysis. Recipients will be contacted by phone for their diarrhea status on ");
+	        sb.Append("monthly basis till 90 days after FMT, then on quarterly basis till 3 years after FMT."); 
+	        string brief_desc = sb.ToString();	        
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2015, 3, 11, 21, "69", 900,
+		        18, 17, null, null, 10);
 	        
             /*
-call expected.insert_study_names(sid => _sid, 
-						title =>'Fecal Microbiota Transplantation to Treat Recurrent C. Difficile Associated Diarrhea Via Retention Enema or Oral Route', 
-						brief_desc =>'The objective of the study is to investigate the safety of a frozen or lyophilized inoculum administered, respectively, by retention enema or capsules in patients with recurrent C. difficile associated diarrhea (RCDAD).
-
-This is a single center, randomized, parallel assignment, open label safety study conducted in subjects with RCDAD. Fifty subjects will be enrolled in the study and randomized at 1:1 ratio to receive frozen filtered intestinal bacteria via retention enema or lyophilized donor intestinal bacteria. All subjects will be followed for a total of 3 years after study completion.
-
-Donors will be enrolled and screened at the laboratory in the Center for Infectious Diseases at University of Texas School of Public Health (UT-SPH). The donors will come from a variety of places, including the UT-SPH. At least 20 donors will be screened to recruit at least 15 qualified donors.
-
-Recipients may self-refer but must have a physician who agrees to accept care of the patient following fecal microbiota transplantation (FMT). Subjects consenting to treatment at Baylor St. Luke’s Medical Center (BSLMC) and the UT-SPH must be willing to self-pay for the FMT in the amount of $1,500. There will be no insurance accepted. Subjects undergoing retention enema will be treated as outpatients at either at BSLMC, Kelsey-Seybold Clinic, or at the Memorial Hermann in the Texas Medical Center. All subjects taking capsules with lyophilized intestinal bacteria will be seen at UT-SPH. Once the procedure is completed, the recipient’s care will be returned to their physician. At least 75 recipients will be screened to recruit 50 qualified recipients.
-
-The primary endpoint is to evaluate the safety of FMT by rectal or oral routes with secondary endpoint related to efficacy prevention of RCDAD. In order to monitor any health effects for safety, participants will be contacted pre- and 7, 14, 30 days, then monthly basis for the first 90 days after FMT and quarterly till 3 years after FMT. The following procedures will be completed: review recipient diary with the recipient to ensure that the following information is recorded correctly and a fresh stool sample will be collected from recipient, tested for C. difficile toxins and an aliquot (2mL) stored at -80C for microbiome analysis. Recipients will be contacted by phone for their diarrhea status on monthly basis till 90 days after FMT, then on quarterly basis till 3 years after FMT.'
-								);
-
-call expected.insert_study_details(sid => _sid, syear => 2015, smonth => 3, typeid => 11, statusid => 21);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '69', eligid => 900, minage => 18, minageu => 17, maxage => null, maxageu => null);
 
 call expected.insert_study_title(sid => _sid, typeid => 15, 
                          title => 'Fecal Microbiota Transplantation to Treat Recurrent C. Difficile Associated Diarrhea Via Retention Enema or Oral Route', isdefault => true, comms => 'From Clinicaltrials.gov');
@@ -1276,33 +1464,57 @@ sb = new StringBuilder("iang ZD, Jenq RR, Ajami NJ, Petrosino JF, Alexander AA, 
 sb.Append("Safety and preliminary efficacy of orally administered lyophilized fecal microbiota product compared with frozen product given by enema for recurrent Clostridium difficile infection: A randomized clinical trial. ");
 sb.Append("PLoS One. 2018 Nov 2;13(11):e0205064. doi: 10.1371/journal.pone.0205064. eCollection 2018.");
 fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30388112", null, null, null));
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2015 May 20 (est.)", 2015, 5, 20, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2019 Mar 25", 2019, 3, 25, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+			
+            sd_oid = sd_sid + " :: 28 :: CTG results entry";
+            ob_title = display_title + " :: CTG results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
+	            null, 9, 2019, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2019 Mar 25", 2019, 3, 25, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2019 Mar 25", 2019, 3, 25, null, null, null, null));
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'Fecal Microbiota Transplantation to Treat Recurrent C. Difficile Associated Diarrhea Via Retention Enema or Oral Route',
-										pubyear => 2015);
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2015 May 20 (est.)', syear => 2015, smonth => 5, sday => 20);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2019 Mar 25', syear => 2019, smonth => 3, sday => 25);
-
--- trial results entry
-_oid = _sid ||' :: 28 :: CTG results entry';
-
-call expected.insert_ctg_results_entry(sid => _sid,
-									    title => 'Fecal Microbiota Transplantation to Treat Recurrent C. Difficile Associated Diarrhea Via Retention Enema or Oral Route',
-										pubyear => 2019);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2019 Mar 25', syear => 2019, smonth => 3, sday => 25);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2019 Mar 25', syear => 2019, smonth => 3, sday => 25);
+            return fs;
+            
+            /*
 
 -- other objects
 _oid = _sid ||' :: 74 :: Study Protocol and Statistical Analysis Plan';
 call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
                                  title => 'Fecal Microbiota Transplantation to Treat Recurrent C. Difficile Associated Diarrhea Via Retention Enema or Oral Route :: Study Protocol and Statistical Analysis Plan', 
-								 pubyear => 2019, obclassid => 23, obtypeid => 74, managingorgid => 100120, managingorgname => 'ClinicalTrials.gov', 
-								 acctypeid => 11, eosccat => 0);
+							     pubyear => 2019, obclassid => 23, obtypeid => 74, managingorgid => 100120, managingorgname => 'ClinicalTrials.gov', 
+							     acctypeid => 11, eosccat => 0);
 
 call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'Fecal Microbiota Transplantation to Treat Recurrent C. Difficile Associated Diarrhea Via Retention Enema or Oral Route :: Study Protocol and Statistical Analysis Plan', isdefault => true);
 
@@ -1323,6 +1535,22 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '20
 	        
 	        string display_title = "Combination Therapy in Pulmonary Arterial Hypertension";
 	        StringBuilder sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
+		        , , null, null, 10);
             /*
 call expected.insert_study_names(sid => _sid, 
 						title =>'Combination Therapy in Pulmonary Arterial Hypertension', 
@@ -1367,27 +1595,48 @@ sb = new StringBuilder("Benza RL, Raina A, Gupta H, Murali S, Burden A, Zastrow 
 sb.Append("Bosentan-based, treat-to-target therapy in patients with pulmonary arterial hypertension: results from the COMPASS-3 study. ");
 sb.Append("Pulm Circ. 2018 Jan-Mar;8(1):2045893217741480. doi: 10.1177/2045893217741480. Epub 2017 Oct 24.");
 fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29064349", null, null, null));
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2007, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2007 Feb 9 (est.)", 2007, 2, 9, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2013 Jun 5 (est.)", 2013, 6, 5, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+			
+            sd_oid = sd_sid + " :: 28 :: CTG results entry";
+            ob_title = display_title + " :: CTG results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
+	            null, 9, 2013, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2013 May 17 (est.)", 2013, 5, 17, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2013 Jun 5 (est.)", 2013, 6, 5, null, null, null, null));
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'Combination Therapy in Pulmonary Arterial Hypertension',
-										pubyear => 2007);
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2007 Feb 9 (est.)', syear => 2007, smonth => 2, sday => 9);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2013 Jun 5 (est.)', syear => 2013, smonth => 6, sday => 5);
-
-_oid = _sid ||' :: 28 :: CTG results entry';
-
-call expected.insert_ctg_results_entry(sid => _sid, 
-									    title => 'Combination Therapy in Pulmonary Arterial Hypertension',
-										pubyear => 2013);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2013 May 17 (est.)', syear => 2013, smonth => 5, sday => 17);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2013 Jun 5 (est.)', syear => 2013, smonth => 6, sday => 5);
-
-            */           
+            return fs;
         }
         
         if (sd_sid == "NCT02922075")
@@ -1398,6 +1647,22 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        
 	        string display_title = "Impact of Soft Tissue Grafts on Tissue Alterations After Immediate Tooth Replacement";
 	        StringBuilder sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
+		        , , null, null, 10);
             /*
 
 call expected.insert_study_names(sid => _sid, 
@@ -1464,18 +1729,32 @@ call expected.insert_study_ipd_available(sid => _sid, ipd_type => 'Analytic Code
 
 call  expected.insert_study_link (sid => _sid, label => 'All data can be downloaded from the website, if there are any questions please feel free to contact us', 
 			url => 'http://aplicacao.saude.gov.br/plataformabrasil/login.jsf');
-			
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+			 */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'Impact of Soft Tissue Grafts on Tissue Alterations After Immediate Tooth Replacement',
-										pubyear => 2016);
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2016, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2016 Oct 3 (est.)", 2016, 10, 3, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2016 Oct 3 (est.)", 2016, 10, 3, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2016 Oct 3 (est.)', syear => 2016, smonth => 10, sday => 3);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2016 Oct 3 (est.)', syear => 2016, smonth => 10, sday => 3);
- 
-            */           
+            return fs;
+             
         }
         
         
@@ -1487,6 +1766,22 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        
 	        string display_title = "Asthma Clinical Research Network (ACRN) Trial - Long-Acting Beta Agonist Response by Genotype (LARGE)";
 	        StringBuilder sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
+		        , , null, null, 10);
             /*
            
 call expected.insert_study_names(sid => _sid, 
@@ -1545,26 +1840,48 @@ fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "19932356", null, nu
 
 call  expected.insert_study_link (sid => _sid, label => 'Asthma Clinical Research Network (ACRN) Website', 
 			url => 'http://www.acrn.org');
+			 */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
+
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2005, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2005 Sep 20 (est.)", 2005, 9, 20, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2018 Jan 23", 2018, 1, 23, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
 			
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            sd_oid = sd_sid + " :: 28 :: CTG results entry";
+            ob_title = display_title + " :: CTG results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
+	            null, 9, 2009, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2009 Jun 2 (est.)", 2009, 6, 2, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2018 Jan 23", 2018, 1, 23, null, null, null, null));
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'Asthma Clinical Research Network (ACRN) Trial - Long-Acting Beta Agonist Response by Genotype (LARGE)',
-										pubyear => 2005);
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2005 Sep 20 (est.)', syear => 2005, smonth => 9, sday => 20);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2018 Jan 23', syear => 2018, smonth => 1, sday => 23);
-
-_oid = _sid ||' :: 28 :: CTG results entry';
-call expected.insert_ctg_results_entry(sid => _sid, 
-									    title => 'Asthma Clinical Research Network (ACRN) Trial - Long-Acting Beta Agonist Response by Genotype (LARGE)',
-										pubyear => 2009);
-										
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2009 Jun 2 (est.)', syear => 2009, smonth => 6, sday => 2);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2018 Jan 23', syear => 2018, smonth => 1, sday => 23);
- 
-             */            
+            return fs;
         }
 
         if (sd_sid == "NCT03050593")
@@ -1575,6 +1892,22 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        
 	        string display_title = "Developing Imaging And plasMa biOmarkers iN Describing Heart Failure With Preserved Ejection Fraction (DIAMONDHFpEF)";
 	        StringBuilder sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
+		        , , null, null, 10);
             /*
            
 call expected.insert_study_names(sid => _sid, 
@@ -1624,18 +1957,31 @@ sb = new StringBuilder("Kanagala P, Cheng ASH, Singh A, McAdam J, Marsh AM, Arno
 sb.Append("Diagnostic and prognostic utility of cardiovascular magnetic resonance imaging in heart failure with preserved ejection fraction - implications for clinical trials. ");
 sb.Append("J Cardiovasc Magn Reson. 2018 Jan 11;20(1):4. doi: 10.1186/s12968-017-0424-9.");
 fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29321034", null, null, null));
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2017 Feb 13", 2017, 2, 13, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2017 Feb 13", 2017, 2, 13, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'Developing Imaging And plasMa biOmarkers iN Describing Heart Failure With Preserved Ejection Fraction (DIAMONDHFpEF)',
-										pubyear => 2017);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2017 Feb 13', syear => 2017, smonth => 2, sday => 13);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2017 Feb 13', syear => 2017, smonth => 2, sday => 13);
-
-             */            
+            return fs;
         }
         
         if (sd_sid == "NCT00002516")
@@ -1646,6 +1992,22 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        
 	        string display_title = "Combination Chemotherapy Plus Surgery and Radiation Therapy in Treating Patients With Ewing’s Sarcoma";
 	        StringBuilder sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
+		        , , null, null, 10);
             /*
             
 call expected.insert_study_names(sid =>_sid, 
@@ -1718,18 +2080,32 @@ sb = new StringBuilder("Paulussen M, Craft AW, Lewis I, et al.: ");
 sb.Append("Ewing tumor of bone - updated report of the European Intergroup Cooperative Ewing’s Sarcoma Study EICESS 92. [Abstract] ");
 sb.Append("Proceedings of the American Society of Clinical Oncology 21: A-1568, 2002.");
 fs.references.Add(new StudyReference(sd_sid, sb.ToString(), null, null, null, null));
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-call expected.insert_ctg_registry_entry(sid =>  _sid,
-									    title => 'Combination Chemotherapy Plus Surgery and Radiation Therapy in Treating Patients With Ewing’s Sarcoma',
-    									pubyear => 2004);
-                                        
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2004, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2004 May 5 (est.)", 2004, 5, 5, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2013 Sep 17 (est.)", 2013, 9, 17, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2004 May 5 (est.)', syear => 2004, smonth => 5, sday => 5);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2013 Sep 17 (est.)', syear => 2013, smonth => 9, sday => 17);
+            return fs;
  
-             */            
         }
         
         if (sd_sid == "NCT00023244")
@@ -1740,6 +2116,22 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        
 	        string display_title = "Steroid Withdrawal in Pediatric Kidney Transplant Recipients";
 	        StringBuilder sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
+		        , , null, null, 10);
             /*
             
 call expected.insert_study_names(sid => _sid, 
@@ -1797,24 +2189,40 @@ fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "18416737", null, nu
 
 fs.studylinks!.Add(new StudyLink(sd_sid, "National Institute of Allergy and Infectious Diseases (NIAID)", "https://www.niaid.nih.gov"));
 fs.studylinks.Add(new StudyLink(sd_sid, "Division of Allergy, Immunology, and Transplantation (DAIT)", "https://www.niaid.nih.gov/about/dait"));
-			
--- trial registry entry
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients',
-										pubyear => 2001);
+			 */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2001, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2001 Aug 31 (est.)", 2001, 8, 31, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2016 Oct 21 (est.)", 2016, 10, 21, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2001 Aug 31 (est.)', syear => 2001, smonth => 8, sday => 31);
-call expected.insert_object_date(sd_oid => _oid,  typeid => 18, datestring => '2016 Oct 21 (est.)', syear => 2016, smonth => 10, sday => 21);
+            return fs;
+            /*
 
 -- form IPD available - referencing IMMPORT
 -- IPD
 _oid = _sid ||' :: 80 :: Individual Participant Data Set (SDY133)';
 
 call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
-								 title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Individual Participant Data Set (SDY133)',
-								 obclassid => 14, obtypeid => 80, managingorgname => 'National Institute of Allergy and Infectious Diseases (NIAID)', acctypeid => 11, eosccat => 3);
+							     title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Individual Participant Data Set (SDY133)',
+							     obclassid => 14, obtypeid => 80, managingorgname => 'National Institute of Allergy and Infectious Diseases (NIAID)', acctypeid => 11, eosccat => 3);
 call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Individual Participant Data Set (SDY133)',
 isdefault => true);
 call expected.insert_object_instance(sd_oid => _oid, reporgname => 'Immport', purl => 'http://www.immport.org/immport-open/public/study/study/displayStudyDetail/SDY133', restypeid => 0);
@@ -1825,8 +2233,8 @@ call expected.insert_object_dataset (sd_oid => _oid);
 _oid = _sid ||' :: 11 :: Study Protocol (SDY133)';
 
 call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
-								 title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Study Protocol (SDY133)',
-								 obclassid => 23, obtypeid => 11, managingorgname => 'National Institute of Allergy and Infectious Diseases (NIAID)', acctypeid => 11, eosccat => 0);
+							     title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Study Protocol (SDY133)',
+							     obclassid => 23, obtypeid => 11, managingorgname => 'National Institute of Allergy and Infectious Diseases (NIAID)', acctypeid => 11, eosccat => 0);
 call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Study Protocol (SDY133)',
 isdefault => true);
 call expected.insert_object_instance(sd_oid => _oid, reporgname => 'Immport', purl => 'http://www.immport.org/immport-open/public/study/study/displayStudyDetail/SDY133', restypeid => 11);
@@ -1835,8 +2243,8 @@ call expected.insert_object_instance(sd_oid => _oid, reporgname => 'Immport', pu
 _oid = _sid ||' :: 38 :: Study summary, -design,-demographics, -files et al. (SDY133)';
 
 call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
-								 title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Study summary, -design,-demographics, -files et al. (SDY133)',
-								 obclassid => 23, obtypeid => 38, managingorgname => 'National Institute of Allergy and Infectious Diseases (NIAID)', acctypeid => 11, eosccat => 0);
+							     title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Study summary, -design,-demographics, -files et al. (SDY133)',
+							     obclassid => 23, obtypeid => 38, managingorgname => 'National Institute of Allergy and Infectious Diseases (NIAID)', acctypeid => 11, eosccat => 0);
 call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Study summary, -design,-demographics, -files et al. (SDY133)',
 isdefault => true);
 call expected.insert_object_instance(sd_oid => _oid, reporgname => 'Immport', purl => 'http://www.immport.org/immport-open/public/study/study/displayStudyDetail/SDY133', restypeid => 0);
@@ -1852,6 +2260,22 @@ call expected.insert_object_instance(sd_oid => _oid, reporgname => 'Immport', pu
 	        
 	        string display_title = "A Test on a New Experimental Mouth Rinse for Relieving Tooth Sensitivity";
 	        StringBuilder sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
+		        , , null, null, 10);
 	        
             /*
              
@@ -1891,27 +2315,48 @@ call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'John
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000005459', mvalue => 'Fluorides');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000003807', mvalue => 'Dentin Sensitivity');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006967', mvalue => 'Hypersensitivity');
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2012, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2012 Nov 15 (est.)", 2012, 11, 15, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2015 Jun 10 (est.)", 2015, 6, 10, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+			
+            sd_oid = sd_sid + " :: 28 :: CTG results entry";
+            ob_title = display_title + " :: CTG results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
+	            null, 9, 2015, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2015 Jun 10 (est.)", 2015, 6, 10, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2015 Jun 10 (est.)", 2015, 6, 10, null, null, null, null));
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'A Test on a New Experimental Mouth Rinse for Relieving Tooth Sensitivity',
-										pubyear => 2012);
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2012 Nov 15 (est.)', syear => 2012, smonth => 11, sday => 15);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2015 Jun 10 (est.)', syear => 2015, smonth => 6, sday => 10);
-
-_oid = _sid ||' :: 28 :: CTG results entry';
-
-call expected.insert_ctg_results_entry(sid => _sid, 
-									    title => 'A Test on a New Experimental Mouth Rinse for Relieving Tooth Sensitivity',
-										pubyear => 2015);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2015 Jun 10 (est.)', syear => 2015, smonth => 6, sday => 10);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2015 Jun 10 (est.)', syear => 2015, smonth => 6, sday => 10);
- 
-             */            
+            return fs;
         }
         
         if (sd_sid == "NCT02318992")
@@ -1922,6 +2367,22 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        
 	        string display_title = "Fresh, Frozen or Lyophilized Fecal Microbiota Transplantation for Multiple Recurrent C. Difficile Associated Diarrhea";
 	        StringBuilder sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
+		        , , null, null, 10);
 	        
             /*
 call expected.insert_study_names(sid => _sid, 
@@ -1962,24 +2423,49 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 
 call expected.insert_study_relationship(sid => _sid, typeid => 23, targetsid => 'NCT03786900');
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
-call expected.insert_ctg_registry_entry(sid => _sid,  
-									    title => 'Fresh, Frozen or Lyophilized Fecal Microbiota Transplantation for Multiple Recurrent C. Difficile Associated Diarrhea',
-										pubyear => 2014);
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2014, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2014 Dec 18 (est.)", 2014, 12, 18, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2019 May 13", 2019, 5, 13, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+			
+            sd_oid = sd_sid + " :: 28 :: CTG results entry";
+            ob_title = display_title + " :: CTG results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
+	            null, 9, 2019, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2019 May 13", 2019, 5, 13, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2019 May 13", 2019, 5, 13, null, null, null, null));
 
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2014 Dec 18 (est.)', syear => 2014, smonth => 12, sday => 18);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2019 May 13', syear => 2019, smonth => 5, sday => 13);
+            fs.data_objects!.Add(sdo);
 
--- trial results entry
-_oid = _sid ||' :: 28 :: CTG results entry';
-
-call expected.insert_ctg_results_entry(sid => _sid, 
-									    title => 'Fresh, Frozen or Lyophilized Fecal Microbiota Transplantation for Multiple Recurrent C. Difficile Associated Diarrhea',
-										pubyear => 2019);
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2019 May 13', syear => 2019, smonth => 5, sday => 13);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2019 May 13', syear => 2019, smonth => 5, sday => 13);
+            return fs;
+            /*
 
 -- other objects
 _oid = _sid ||' :: 74 :: Study Protocol and Statistical Analysis Plan';
@@ -2007,6 +2493,22 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '20
 	        
 	        string display_title = "Aldosterone Antagonist Therapy for Adults With Heart Failure and Preserved Systolic Function";
 	        StringBuilder sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
+		        , , null, null, 10);
 	        
             /*
 
@@ -2048,8 +2550,6 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006331', mvalue => 'Heart Diseases');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002318', mvalue => 'Cardiovascular Diseases');
 
---insert into study_relationships()
---values('', )
 
 sb = new StringBuilder("Shah SJ, Heitner JF, Sweitzer NK, Anand IS, Kim HY, Harty B, Boineau R, Clausell N, Desai AS, Diaz R, Fleg JL, Gordeev I, Lewis EF, Markov V, O’Meara E, Kobulia B, Shaburishvili T, Solomon SD, Pitt B, Pfeffer MA, Li R. B");
 sb.Append("Baseline characteristics of patients in the treatment of preserved cardiac function heart failure with an aldosterone antagonist trial. ");
@@ -2228,26 +2728,48 @@ fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #24716680 publication
 fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #25122186 publication in Circulation: Heart Failure", "http://circheartfailure.ahajournals.org/content/7/5/740.long"));
 fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #25406305 publication in Circulation", "http://circ.ahajournals.org/content/early/2014/11/18/CIRCULATIONAHA.114.013255.long"));
 
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'Aldosterone Antagonist Therapy for Adults With Heart Failure and Preserved Systolic Function',
-										pubyear => 2004);
-                                       
-                                        
-call expected.insert_ctg_results_entry(sid => _sid, 
-									    title => 'Aldosterone Antagonist Therapy for Adults With Heart Failure and Preserved Systolic Function',
-										pubyear => 2015);
-                                        
-_oid = _sid ||' :: 13 :: CTG registry entry';
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2004 Oct 15 (est.)', syear => 2004, smonth => 10, sday => 15);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2015 Mar 2 (est.)', syear => 2015, smonth => 3, sday => 2);
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2004, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2004 Oct 15 (est.)", 2004, 10, 15, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2015 Mar 2 (est.)", 2015, 3, 2, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+			
+            sd_oid = sd_sid + " :: 28 :: CTG results entry";
+            ob_title = display_title + " :: CTG results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
+	            null, 9, 2015 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2015 Mar 2 (est.)", 2015, 3, 2, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2015 Mar 2 (est.)", 2015, 3, 2, null, null, null, null));
 
-_oid = _sid ||' :: 28 :: CTG results entry';
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2015 Mar 2 (est.)', syear => 2015, smonth => 3, sday => 2);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2015 Mar 2 (est.)', syear => 2015, smonth => 3, sday => 2);
- 
-             */            
+            fs.data_objects!.Add(sdo);
+
+            return fs;
         }
         
         if (sd_sid == "NCT02441309")
@@ -2258,6 +2780,22 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        
 	        string display_title = "A Eurosarc Study of Mifamurtide in Advanced Osteosarcoma (MEMOS)";
 	        StringBuilder sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
+		        , , null, null, 10);
 	        
             /*
 
@@ -2298,27 +2836,48 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'C0000
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'C000037144', mvalue => 'Mifamurtide');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000000119', mvalue => 'Acetylmuramyl-Alanyl-Isoglutamine');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000012516', mvalue => 'Osteosarcoma');
+ */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2015 May 12 (est.)", 2015, 5, 12, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2019 Sep 13", 2019, 9, 13, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+			
+            sd_oid = sd_sid + " :: 28 :: CTG results entry";
+            ob_title = display_title + " :: CTG results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
+	            null, 9, 2019, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2019 Sep 13", 2019, 9, 13, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2019 Sep 13", 2019, 9, 13, null, null, null, null));
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'A Eurosarc Study of Mifamurtide in Advanced Osteosarcoma (MEMOS)',
-										pubyear => 2015);
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2015 May 12 (est.)', syear => 2015, smonth => 5, sday => 12);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2019 Sep 13', syear => 2019, smonth => 9, sday => 13);
-
-_oid = _sid ||' :: 28 :: CTG results entry';
-
-call expected.insert_ctg_results_entry(sid => _sid, 
-									    title => 'A Eurosarc Study of Mifamurtide in Advanced Osteosarcoma (MEMOS)',
-										pubyear => 2019);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2019 Sep 13', syear => 2019, smonth => 9, sday => 13);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2019 Sep 13', syear => 2019, smonth => 9, sday => 13);
- 
-            */           
+            return fs;
         }
         
         if (sd_sid == "NCT02609386")
@@ -2329,6 +2888,23 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '20
 	        
 	        string display_title = "IRX-2 Regimen in Patients With Newly Diagnosed Stage II, III, or IVA Squamous Cell Carcinoma of the Oral Cavity";
 	        StringBuilder sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("");
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        sb.Append(""); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
+		        , , null, null, 10);
+	        
             /*
 call expected.insert_study_names(sid => _sid, 
 						title =>'IRX-2 Regimen in Patients With Newly Diagnosed Stage II, III, or IVA Squamous Cell Carcinoma of the Oral Cavity', 
@@ -2382,19 +2958,31 @@ call  expected.insert_study_link (sid => _sid, label => 'INSPIRE Trial website',
 			
 call  expected.insert_study_link (sid => _sid, label => 'Sponsor’s website', 
 			url => 'http://irxtherapeutics.com');
-			
--- trial registry entry
-_oid = _sid ||' :: 13 :: CTG registry entry';
+			 */
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
-call expected.insert_ctg_registry_entry(sid => _sid, 
-									    title => 'IRX-2 Regimen in Patients With Newly Diagnosed Stage II, III, or IVA Squamous Cell Carcinoma of the Oral Cavity',
-										pubyear => 2015);
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2015 Nov 20 (est.)", 2015, 11, 20, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2020 Aug 12", 2020, 8, 12, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2015 Nov 20 (est.)', syear => 2015, smonth => 11, sday => 20);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2020 Aug 12', syear => 2020, smonth => 8, sday => 12);
-
-            */           
-        }
+            return fs;
 
         return null;
     }
