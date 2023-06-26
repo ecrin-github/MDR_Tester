@@ -142,26 +142,26 @@ public class TestData_100116 : TestData_Base
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "Seres Therapeutics, Inc", null));
 	        
 	        fs.features!.Add(new (sd_sid, 20, 110));  // Phase 1
-	        fs.features!.Add(new (sd_sid, 21, 400));  // Treatment
+	        fs.features.Add(new (sd_sid, 21, 400));  // Treatment
 	        fs.features.Add(new (sd_sid, 22, 205));  //  Randomised
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Ulcerative Colitis", null, null, null, null));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Oral and Gastrointestinal - Other diseases of the mouth, teeth, oesophagus, digestive system including liver and colon", null, null, null, null));
 	        
 	        fs.countries!.Add(new StudyCountry(sd_sid, 2077456, "Australia", null));
-	        fs.countries!.Add(new StudyCountry(sd_sid, 2186224, "New Zealand", null));
+	        fs.countries.Add(new StudyCountry(sd_sid, 2186224, "New Zealand", null));
 
 	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "assumed cr", "@", 1, "n.1", "Documented diagnosis of UC prior to screening endoscopy"));	       
-	        fs.iec!.Add(new StudyIEC(sd_sid, 2, 1, "assumed cr", "@", 1, "n.2", "Active mild-to-moderate UC as determined by a 3-Component Modified Mayo Score"));	    
-	        fs.iec!.Add(new StudyIEC(sd_sid, 3, 1, "assumed cr", "@", 1, "n.3", "Minimum disease extent of 15 cm from the anal verge, confirmed at the screening endoscopy"));	    
-	        fs.iec!.Add(new StudyIEC(sd_sid, 4, 1, "assumed cr", "@", 1, "n.4", "Naïve to UC treatment or with an inadequate response to, loss of response to, or intolerance of, at least one of the following conventional therapies: 5-ASA compounds, corticosteroids or immunomodulators (e.g., 6-MP, AZA, methotrexate)"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "assumed cr", "@", 1, "n.2", "Active mild-to-moderate UC as determined by a 3-Component Modified Mayo Score"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "assumed cr", "@", 1, "n.3", "Minimum disease extent of 15 cm from the anal verge, confirmed at the screening endoscopy"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "assumed cr", "@", 1, "n.4", "Naïve to UC treatment or with an inadequate response to, loss of response to, or intolerance of, at least one of the following conventional therapies: 5-ASA compounds, corticosteroids or immunomodulators (e.g., 6-MP, AZA, methotrexate)"));
 	        
-	        fs.iec!.Add(new StudyIEC(sd_sid, 5, 2, "assumed cr", "@", 1, "e.1", "Known history of Crohn’s disease"));	       
-	        fs.iec!.Add(new StudyIEC(sd_sid, 6, 2, "assumed cr", "@", 1, "e.2", "On steroid medication who are unable to have steroids tapered, and be completely off steroids at least 2 weeks prior to screening"));	    
-	        fs.iec!.Add(new StudyIEC(sd_sid, 7, 2, "assumed cr", "@", 1, "e.3", "Unable to stop steroid enemas or suppositories, or 5-ASA enemas or suppositories, at least 2 weeks prior to screening"));	    
-	        fs.iec!.Add(new StudyIEC(sd_sid, 8, 2, "assumed cr", "@", 1, "e.4", "Previously received any investigational or approved biologic therapy"));	  
-	        fs.iec!.Add(new StudyIEC(sd_sid, 9, 2, "assumed cr", "@", 1, "e.5", "Previously received any investigational or approved non-biologic therapy, except for those specifically listed in the Permitted Concomitant Medications (e.g., stable dose of 6-MP, AZA, methotrexate)"));	       
-	        fs.iec!.Add(new StudyIEC(sd_sid, 10, 2, "assumed cr", "@", 1, "e.6", "Major gastrointestinal surgery (not including appendectomy or cholecystectomy) within 2 months prior to screening"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "assumed cr", "@", 1, "e.1", "Known history of Crohn’s disease"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "assumed cr", "@", 1, "e.2", "On steroid medication who are unable to have steroids tapered, and be completely off steroids at least 2 weeks prior to screening"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "assumed cr", "@", 1, "e.3", "Unable to stop steroid enemas or suppositories, or 5-ASA enemas or suppositories, at least 2 weeks prior to screening"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "assumed cr", "@", 1, "e.4", "Previously received any investigational or approved biologic therapy"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "assumed cr", "@", 1, "e.5", "Previously received any investigational or approved non-biologic therapy, except for those specifically listed in the Permitted Concomitant Medications (e.g., stable dose of 6-MP, AZA, methotrexate)"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "assumed cr", "@", 1, "e.6", "Major gastrointestinal surgery (not including appendectomy or cholecystectomy) within 2 months prior to screening"));	 
 		        
 	        // Data Objects
 	        
