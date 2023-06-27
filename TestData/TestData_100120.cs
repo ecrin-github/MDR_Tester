@@ -35,18 +35,18 @@ public class TestData_100120 : TestData_Base
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100190, "Johns Hopkins University", "https://ror.org/00za53h95"));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100167, "National Heart, Lung, and Blood Institute (NHLBI)", "https://ror.org/012pb6c26"));
 	        
-	        fs.features!.Add(new (sd_sid, 20, 100));  // 
-	        fs.features.Add(new (sd_sid, 21, 405));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 310));   // 
-	        fs.features.Add(new (sd_sid, 24, 505));   // 
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 100));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 405));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 310));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 505));   // 
 	        
 	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Nutrients", 14, "D000078622", "D000078622", "Nutrients"));
 	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Hypertension", null, null, null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Heart Diseases", null, null, null, null));
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Hypertension", null, null, "BA00", "Essential hypertension"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Heart Diseases", null, null, "11", "Diseases of the circulatory system"));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Atherosclerosis", null, null, "BD40", "Atherosclerotic chronic arterial occlusive disease"));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Cardiovascular Diseases", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Cardiovascular Diseases", null, null, "11", "Diseases of the circulatory system"));
 
 	        sb = new StringBuilder("Mueller NT, Zhang M, Juraschek SP, Miller ER, Appel LJ. ");
 	        sb.Append("Effects of high-fiber diets enriched with carbohydrate, protein, or unsaturated fat on circulating short chain fatty acids: results from the OmniHeart randomized trial. ");
@@ -151,11 +151,11 @@ public class TestData_100120 : TestData_Base
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "SOLTI Breast Cancer Research Group", null));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100189, "Novartis", "https://ror.org/02f9zrr09"));
 	        
-	        fs.features!.Add(new (sd_sid, 20, 120));  // 
-            fs.features.Add(new (sd_sid, 21, 400));   // 
-            fs.features.Add(new (sd_sid, 22, 210));   // 
-            fs.features.Add(new (sd_sid, 23, 305));   // 
-            fs.features.Add(new (sd_sid, 24, 500));   // 
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // 
+            fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+            fs.features.Add(new StudyFeature(sd_sid, 22, 210));   // 
+            fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+            fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
                        
             fs.topics!.Add(new StudyTopic(sd_sid, 11, "Human Epidermal Growth Factor Receptor 2", null, null, null, null));
             fs.topics.Add(new StudyTopic(sd_sid, 11, "HER2", null, null, null, null));
@@ -169,7 +169,7 @@ public class TestData_100120 : TestData_Base
             fs.topics.Add(new StudyTopic(sd_sid, 12, "Letrozole", 14, "D000077289", "D000077289", "Letrozole"));
             fs.topics.Add(new StudyTopic(sd_sid, 12, "Lapatinib", 14, "D000077341", "D000077341", "Lapatinib"));
             
-            fs.conditions!.Add(new StudyCondition(sd_sid, "Breast Neoplasms", 14, "D000001943", null, null));
+            fs.conditions!.Add(new StudyCondition(sd_sid, "Breast Neoplasms", 14, "D000001943", "B3-2C6", "Malignant neoplasms of breast"));
             
             sb = new StringBuilder("Nuciforo P, Pascual T, Cortés J, Llombart-Cussac A, Fasani R, Paré L, Oliveira M, Galvan P, Martínez N, Bermejo B, Vidal M, Pernas S, López R, Muñoz M, Garau I, Manso L, Alarcón J, Martínez E, Rodrik-Outmezguine V, Brase JC, Villagrasa P, Prat A, Holgado E. ");
             sb.Append("A predictive model of pathologic response based on tumor cellularity and tumor-infiltrating lymphocytes (CelTIL) in HER2-positive breast cancer treated with chemo-free dual HER2 blockade. ");
@@ -242,11 +242,11 @@ public class TestData_100120 : TestData_Base
             fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "HealthCore-NERI", null));
             fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100167, "National Heart, Lung, and Blood Institute (NHLBI)", "https://ror.org/012pb6c26"));
 
-            fs.features!.Add(new (sd_sid, 20, 130));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 305));   // 
-	        fs.features.Add(new (sd_sid, 24, 515));   // 
+            fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 515));   // 
 	        
 	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Diastolic Heart Failure", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Preserved Ejection Fraction", null, null, null, null));
@@ -255,9 +255,9 @@ public class TestData_100120 : TestData_Base
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Mineralocorticoid Receptor Antagonists", 14, "D000013148", 
 		                           "D000013148", "Mineralocorticoid Receptor Antagonists"));
 	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Heart Failure", 14, "D000006333", null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Heart Diseases", 14, "D000006331", null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Cardiovascular Diseases", 14, "D000002318", null, null));
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Heart Failure", 14, "D000006333", "B1-BD1", "Heart failure"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Heart Diseases", 14, "D000006331", "11", "Diseases of the circulatory system"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Cardiovascular Diseases", 14, "D000002318", "11", "Diseases of the circulatory system"));
      
 			sb = new StringBuilder("Shah AM, Shah SJ, Anand IS, Sweitzer NK, O’Meara E, Heitner JF, Sopko G, Li G, Assmann SF, McKinlay SM, Pitt B, Pfeffer MA, Solomon SD; TOPCAT Investigators. ");
 			sb.Append("Cardiac structure and function in heart failure with preserved ejection fraction: baseline findings from the echocardiographic study of the Treatment of Preserved Cardiac Function Heart Failure with an Aldosterone Antagonist trial. ");
@@ -508,16 +508,15 @@ public class TestData_100120 : TestData_Base
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
 	        fs.titles.Add(new StudyTitle(sd_sid, "Emergency Laparotomies and Outcomes During the COVID-19 Pandemic - a Retrospective Cohort Study", 16, "en", 11, false, "From Clinicaltrials.gov"));
 	        
-	        
 	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Nader Habib Bedwani", "Barking, Havering and Redbridge University Hospitals NHS Trust", 
 		        null, "Barking, Havering and Redbridge University Hospitals NHS Trust", null));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Barking, Havering and Redbridge University Hospitals NHS Trust", null));
 	        
-	        fs.features!.Add(new (sd_sid, 30, 600));  // 
-	        fs.features.Add(new (sd_sid, 31, 700));   // 
+	        fs.features!.Add(new StudyFeature(sd_sid, 30, 600));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 31, 700));   //  
 	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "COVID-19", null, null, null, null));
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "COVID-19", null, null, "RA01", "COVID-19"));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Emergency General Surgery", null, null, null, null));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Emergencies", 14, "D000004630", null, null));
 
@@ -567,9 +566,11 @@ public class TestData_100120 : TestData_Base
 		        null, 9, 2020, 23, 74, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-		        "https://clinicaltrials.gov/ProvidedDocs/71/NCT04419571/Prot_SAP_000.pdf", true, 11, null, null, null));
+		        "https://storage.googleapis.com/ctgov2-large-docs/71/NCT04419571/Prot_SAP_000.pdf", 
+		        true, 11, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2020 Jun 5", 2020, 6, 4, null, null, null, null));
 	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2020 Jul 23", 2020, 6, 4, null, null, null, null));
+	        
 	        fs.data_objects!.Add(sdo);
 	        
 	        return fs;	        
@@ -616,43 +617,43 @@ public class TestData_100120 : TestData_Base
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2020, 7, 11, 14, "4000", 900, 
 		        50, 17, 75, 17, 10);
 	        
-	        /*
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2020 May 22", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "LCCC2056", 14, null, 
+		        "UNC Lineberger Comprehensive Cancer Center", null, null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "4UH3CA233251-02", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88" , null,
+		        "https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=4UH3CA233251-02&Fy=all"));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, 
+		        "Scaling Colorectal Cancer Screening Through Outreach, Referral, and Engagement (SCORE): A State-Level Program to Reduce Colorectal Cancer Burden in Vulnerable Populations", 
+		        16, "en", 11, false, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "SCORE", 14, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Daniel S Reuland", "University of North Carolina, Chapel Hill", 
+		        100209, "University of North Carolina, Chapel Hill", "https://ror.org/0130frc33"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "UNC Lineberger Comprehensive Cancer Center", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "National Cancer Institute (NCI)", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "East Carolina University", null));
 
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-	                     title => 'Scaling CRC Screening Through Outreach, Referral, and Engagement (SCORE)', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-	                     title => 'Scaling Colorectal Cancer Screening Through Outreach, Referral, and Engagement (SCORE): A State-Level Program to Reduce Colorectal Cancer Burden in Vulnerable Populations', isdefault => false, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 14, 
-	                     title => 'SCORE', isdefault => false, comms => 'From Clinicaltrials.gov');		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2020 May 22');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'LCCC2056', idorgname => 'UNC Lineberger Comprehensive Cancer Center');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => '4UH3CA233251-02', idorgid => 100134, idorgname => 'National Institutes of Health', idlink => 'https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=4UH3CA233251-02&Fy=all');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Daniel S Reuland', affiliation => 'University of North Carolina, Chapel Hill', 
-									   orgname => 'University of North Carolina' );
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'UNC Lineberger Comprehensive Cancer Center');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'National Cancer Institute (NCI)');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'East Carolina University');
-
-		    fs.features!.Add(new (sd_sid, 20, 100));  // 
-		    fs.features.Add(new (sd_sid, 21, 420));   // 
-		    fs.features.Add(new (sd_sid, 22, 205));   // 
-		    fs.features.Add(new (sd_sid, 23, 305));   // 
-		    fs.features.Add(new (sd_sid, 24, 505));   // 
+		    fs.features!.Add(new StudyFeature(sd_sid, 20, 100));  // 
+		    fs.features.Add(new StudyFeature(sd_sid, 21, 420));   // 
+		    fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+		    fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+		    fs.features.Add(new StudyFeature(sd_sid, 24, 505));   // 
 
 	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Cancer Screening", null, null, null, null));
 		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Colonoscopy", null, null, null, null));
 		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Community Health Centers", null, null, null, null));
-		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Implementation Science, null, null, null, null));
+		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Implementation Science", null, null, null, null));
 		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Patient Navigation", null, null, null, null));
 		   
+		    fs.conditions!.Add(new StudyCondition(sd_sid, "Colorectal Neoplasms", 14, "D000015179", "B5-2B9", "Malignant neoplasms of large intestine"));
 
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000015179', mvalue => 'Colorectal Neoplasms');
+            fs.studylinks!.Add(new StudyLink(sd_sid, "UNC Lineberger Comprehensive Cancer Center Clinical Trials", "https://unclineberger.org/patientcare/clinical-trials"));
 
-fs.studylinks!.Add(new StudyLink(sd_sid, "UNC Lineberger Comprehensive Cancer Center Clinical Trials", "https://unclineberger.org/patientcare/clinical-trials"));
-
- */
 	        // countries
             
 	        // iec
@@ -700,30 +701,32 @@ fs.studylinks!.Add(new StudyLink(sd_sid, "UNC Lineberger Comprehensive Cancer Ce
 	        
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2018, 12, 11, 15, "673", 900,
 		        18, 17, null, null, 10);
-            /*
-
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Study of Efficacy and Safety of Pembrolizumab Plus Platinum-based Doublet Chemotherapy With or Without Canakinumab in Previously Untreated Locally Advanced or Metastatic Non-squamous and Squamous NSCLC Subjects', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'A Randomized, Double-blind, Placebo-controlled, Phase III Study Evaluating the Efficacy and Safety of Pembrolizumab Plus Platinum-based Doublet Chemotherapy With or Without Canakinumab as First Line Therapy for Locally Advanced or Metastatic Non-squamous and Squamous Non-small Cell Lung Cancer Subjects (CANOPY-1)', isdefault => false, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 14, 
-                         title => 'CANOPY-1', isdefault => false, comms => 'From Clinicaltrials.gov');		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2018 Aug 6');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'CACZ885U2301', idorgname => 'Novartis');
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => '2018-001547-32', idorgid => 100123, idorgname => 'EU Clinical Trials Register');
-
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'Novartis Pharmaceuticals');
-
-	        fs.features!.Add(new (sd_sid, 20, 130));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 305));   // 
-	        fs.features.Add(new (sd_sid, 24, 500));   // 
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2018 Aug 6", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "CACZ885U2301", 14, 100189, 
+		        "Novartis", "https://ror.org/02f9zrr09", null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "2018-001547-32", 11, 100123, 
+		        "EU Clinical Trials Register", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        string title =
+		        "A Randomized, Double-blind, Placebo-controlled, Phase III Study Evaluating the Efficacy and Safety of Pembrolizumab Plus Platinum-based Doublet Chemotherapy ";
+	        title += "With or Without Canakinumab as First Line Therapy for Locally Advanced or Metastatic Non-squamous and Squamous Non-small Cell Lung Cancer Subjects (CANOPY-1)";
+	        fs.titles.Add(new StudyTitle(sd_sid, title, 16, "en", 11, false, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "CANOPY-1", 14, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100189, "Novartis Pharmaceuticals", "https://ror.org/02f9zrr09"));
+	        
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 
             fs.topics!.Add(new StudyTopic(sd_sid, 11, "ACZ885", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "canakinumab", null, null, null, null));
-	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "cisplatin", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "cisplatin", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "nab-paclitaxel", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "squamous", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "non-squamous", null, null, null, null));
@@ -736,16 +739,17 @@ call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'Nova
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "first line therapy", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "locally advanced", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "metastatic", null, null, null, null));
-	
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000017239', mvalue => 'Paclitaxel');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000068196', mvalue => 'Albumin-Bound Paclitaxel');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000016190', mvalue => 'Carboplatin');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'C000582435', mvalue => 'Pembrolizumab');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000068437', mvalue => 'Pemetrexed');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000000911', mvalue => 'Antibodies, Monoclonal');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000008175', mvalue => 'Lung Neoplasms');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002289', mvalue => 'Carcinoma, Non-Small-Cell Lung');
- */
+	        
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Paclitaxel", 14, "D000017239", "D000017239", "Paclitaxel"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Albumin-Bound Paclitaxel", 14, "D000068196", "D000068196", "Albumin-Bound Paclitaxel"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Carboplatin", 14, "D000016190", "D000016190", "Carboplatin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Pembrolizumab", 14, "C000582435", "C000582435", "Pembrolizumab"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Pemetrexed", 14, "D000068437", "D000068437", "Pemetrexed"));	 	        
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Antibodies, Monoclonal", 14, "D000000911", "D000000911", "Antibodies, Monoclonal"));
+       
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Lung Neoplasms", 14, "D000008175", "2C25", "Malignant neoplasms of bronchus or lung"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma, Non-Small-Cell Lung", 14, "D000002289", "2C25", "Malignant neoplasms of bronchus or lung"));
+
             // countries
             
             // iec
@@ -788,39 +792,33 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 	        sb.Append("Enrolment period: 24 months\n"); 
 	        sb.Append("Treatment: maximum of 6 cycles (5 months) per patient\n"); 
 	        sb.Append("Follow-up every three months until patient died (follow-up until PD and only survival contacts and subsequent therapy for metastatic disease after PD)."); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append("");
 	        string brief_desc = sb.ToString();
 	        
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2016, 3, 11, 11, "0", 900,
 		       19, 17, null, null, 10);
 	        
-            /*
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2016 Sep 28", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "IRST189.03", 14, null, 
+		        "Istituto Scientifico Romagnolo per lo Studio e la cura dei Tumori'", null, null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "2015-000556-14", 11, 100123, 
+		        "EU Clinical Trials Register", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "Vaccination With Dendritic Cells Pulsed With Autologous Tumor Homogenate in Combination With HD-IL2 and Immunomodulating Radiotherapy in Metastatic RCC: a Phase II Trial (RENALVax-2)",
+		        16, "en", 11, false, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "RENALVax-2", 14, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Laura Ridolfi", "UO Immunoterapia e Laboratorio TCS, Istituto Scientifico Romagnolo per lo Studio e la Cura dei Tumori (IRST) Srl IRCCS", 
+		        null, "Istituto Scientifico Romagnolo per lo Studio e la cura dei Tumori", null));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Istituto Scientifico Romagnolo per lo Studio e la cura dei Tumori", null));
 
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Vaccination With Dendritic Cells Pulsed With Autologous Tumor Homogenate in Combination With HD-IL2 and Immunomodulating Radiotherapy in Metastatic RCC', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'Vaccination With Dendritic Cells Pulsed With Autologous Tumor Homogenate in Combination With HD-IL2 and Immunomodulating Radiotherapy in Metastatic RCC: a Phase II Trial (RENALVax-2)', isdefault => false, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 14, 
-                         title => 'RENALVax-2', isdefault => false, comms => 'From Clinicaltrials.gov');		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2016 Sep 28');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'IRST189.03', idorgname => 'Istituto Scientifico Romagnolo per lo Studio e la cura dei Tumori');
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => '2015-000556-14', idorgid => 100123, idorgname => 'EU Clinical Trials Register');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Laura Ridolfi', affiliation => 'UO Immunoterapia e Laboratorio TCS, Istituto Scientifico Romagnolo per lo Studio e la Cura dei Tumori (IRST) Srl IRCCS', 
-									   orgname => 'Istituto Scientifico Romagnolo per lo Studio e la cura dei Tumori');
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'Istituto Scientifico Romagnolo per lo Studio e la cura dei Tumori');
-
-	        fs.features!.Add(new (sd_sid, 20, 120));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 215));   // 
-	        fs.features.Add(new (sd_sid, 23, 300));   // 
-	        fs.features.Add(new (sd_sid, 24, 500));   // 
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 215));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 300));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 
             fs.topics!.Add(new StudyTopic(sd_sid, 11, "dendritic cells", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "autologous tumor homogenate", null, null, null, null));
@@ -828,12 +826,12 @@ call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'Isti
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "immunomodulating radiotherapy", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Vaccination", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Secondary", null, null, null, null));
+	        
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Interleukin-2", 14, "D000007376", "D000007376", "Interleukin-2"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Vaccines", 14, "D000014612", "D000014612", "Vaccines"));
 
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000007376', mvalue => 'Interleukin-2');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000014612', mvalue => 'Vaccines');
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Carcinoma, Renal Cell", 14, "D000002292", "2C90", "Malignant neoplasms of kidney, except renal pelvis"));
 
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002292', mvalue => 'Carcinoma, Renal Cell');
- */
             // countries
             
             // iec
@@ -869,7 +867,7 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 	        
 	        string display_title = "Participatory Research to Advance Colon Cancer Prevention";
 	        StringBuilder sb = new StringBuilder("The overall goal of this study is to test strategies to raise rates of colorectal cancer screening among the Latino ");
-	        sb.Append("opulation in a federally qualified health center that operates multiple clinics. "); 
+	        sb.Append("population in a federally qualified health center that operates multiple clinics. "); 
 	        sb.Append("This intervention study will test automated and live prompts to a direct-mail fecal testing program in two phases.\n\n"); 
 	        sb.Append("In Phase I (Years 01 - 02), the investigators will tailor and define intervention components using a community-based participatory research approach called boot camp translation (BCT). "); 
 	        sb.Append("The ultimate design of the intervention will be defined by patient and provider feedback from BCT. The investigators will then conduct a three-arm patient-randomized "); 
@@ -882,51 +880,52 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2017, 9, 11, 21, "27580", 900,
 		        50, 17, 75, 17, 10);
-            /*
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2017 May 24", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "1U01MD010665-01", 14, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88", null,
+		        "https://reporter.nih.gov/quickSearch/1U01MD010665-01"));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "PROMPT", 14, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Gloria Coronado", "Kaiser Permanente", 
+		        100335, "Kaiser Permanente", "https://ror.org/00t60zh31"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100335, "Kaiser Permanente", "https://ror.org/00t60zh31"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100257, "Oregon Health and Science University", "https://ror.org/009avj582"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "AltaMed Health Services", null));
 
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Participatory Research to Advance Colon Cancer Prevention', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 14, 
-                         title => 'PROMPT', isdefault => false, comms => 'From Clinicaltrials.gov');
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2017 May 24');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => '1U01MD010665-01', idorgid => 100134, idorgname => 'National Institutes of Health', idlink => 'https://reporter.nih.gov/quickSearch/1U01MD010665-01');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Gloria Coronado', affiliation => 'Kaiser Permanente' , orgname => 'Kaiser Permanente');
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'Kaiser Permanente');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'Oregon Health and Science University');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'AltaMed Health Services');
-
-	        fs.features!.Add(new (sd_sid, 20, 100));  // 
-	        fs.features.Add(new (sd_sid, 21, 420));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 310));   // 
-	        fs.features.Add(new (sd_sid, 24, 500));   // 
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 100));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 420));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 310));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
             
             fs.topics!.Add(new StudyTopic(sd_sid, 11, "colorectal cancer screening", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "cancer screening", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "pragmatic trial", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "boot camp translation", null, null, null, null));
 	        
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000015179', mvalue => 'Colorectal Neoplasms');
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Colorectal Neoplasms", 14, "D000015179", "B5-2B9", "Malignant neoplasms of large intestine"));
 
-sb = new StringBuilder("Coronado GD, Nyongesa DB, Petrik AF, Thompson JH, Escaron AL, Younger B, Harbison S, Leo MC. ");
-sb.Append("Randomized Controlled Trial of Advance Notification Phone Calls vs Text Messages Prior to Mailed Fecal Test Outreach. ");
-sb.Append("Clin Gastroenterol Hepatol. 2021 Nov;19(11):2353-2360.e2. doi: 10.1016/j.cgh.2020.07.053. Epub 2020 Jul 30.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "32739569", null, null, null));
+			sb = new StringBuilder("Coronado GD, Nyongesa DB, Petrik AF, Thompson JH, Escaron AL, Younger B, Harbison S, Leo MC. ");
+			sb.Append("Randomized Controlled Trial of Advance Notification Phone Calls vs Text Messages Prior to Mailed Fecal Test Outreach. ");
+			sb.Append("Clin Gastroenterol Hepatol. 2021 Nov;19(11):2353-2360.e2. doi: 10.1016/j.cgh.2020.07.053. Epub 2020 Jul 30.");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "32739569", null, null, null));
 
-sb = new StringBuilder("Coronado GD, Thompson JH, Petrik AF, Nyongesa DB, Leo MC, Castillo M, Younger B, Escaron A, Chen A. ");
-sb.Append("Patient-Refined Messaging for a Mailed Colorectal Cancer Screening Program: Findings from the PROMPT Study. ");
-sb.Append("J Am Board Fam Med. 2019 May-Jun;32(3):318-328. doi: 10.3122/jabfm.2019.03.180275.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31068396", null, null, null));
+			sb = new StringBuilder("Coronado GD, Thompson JH, Petrik AF, Nyongesa DB, Leo MC, Castillo M, Younger B, Escaron A, Chen A. ");
+			sb.Append("Patient-Refined Messaging for a Mailed Colorectal Cancer Screening Program: Findings from the PROMPT Study. ");
+			sb.Append("J Am Board Fam Med. 2019 May-Jun;32(3):318-328. doi: 10.3122/jabfm.2019.03.180275.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31068396", null, null, null));
 
-sb = new StringBuilder("Thompson JH, Davis MM, Leo MC, Schneider JL, Smith DH, Petrik AF, Castillo M, Younger B, Coronado GD. ");
-sb.Append("Participatory Research to Advance Colon Cancer Prevention (PROMPT): Study protocol for a pragmatic trial. ");
-sb.Append("Contemp Clin Trials. 2018 Apr;67:11-15. doi: 10.1016/j.cct.2018.02.001. Epub 2018 Feb 9.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29408304", null, null, null));
- */
-            // countries
+			sb = new StringBuilder("Thompson JH, Davis MM, Leo MC, Schneider JL, Smith DH, Petrik AF, Castillo M, Younger B, Coronado GD. ");
+			sb.Append("Participatory Research to Advance Colon Cancer Prevention (PROMPT): Study protocol for a pragmatic trial. ");
+			sb.Append("Contemp Clin Trials. 2018 Apr;67:11-15. doi: 10.1016/j.cct.2018.02.001. Epub 2018 Feb 9.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29408304", null, null, null));
+ 
+			// countries
             
             // iec
 	        
@@ -959,7 +958,7 @@ fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29408304", null, nu
  
 	        // Study 
 	        
-	        string display_title = "A Clinical Study of Fundus Findings in Toxaemia of Pregnanc";
+	        string display_title = "A Clinical Study of Fundus Findings in Toxaemia of Pregnancy";
 	        StringBuilder sb = new StringBuilder("Toxemia of pregnancy is a recognized entity for over 2000 years with its known complications ");
 	        sb.Append("and fatality. Nowadays, a most accepted terminology for the following defined syndrome is \"hypertensive disorders "); 
 	        sb.Append("in pregnancy\" given by American College of Obstetrics and Gynecology. It is an important cause of maternal and "); 
@@ -982,71 +981,70 @@ fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29408304", null, nu
 	        
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2003, 11, 12, 21, "300", 905,
 		        18, 17, 42, 17, 10);
-            /*
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2016 Oct 30", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "Postgraduation Thesis'", 14, null, 
+		        "B J Medical College, Ahmedabad", null, null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "DRKS00011324", 11, 100124, "Deutschen Register Klinischer Studien", null, null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "ChiCTR-OOC-16010171", 11, 100118, "Chinese Clinical Trial Register", null, null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "UMIN000024722", 11, 100156, "University Hospital Medical Information Network CTR", null, null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "U1111-1189-6165", 11, 100115, "International Clinical Trials Registry Platform", null, null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "TCTR20161221005", 11, 100131, "Thai Clinical Trials Register", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "A Clinical Study of Fundus Findings in Toxaemia of Pregnancy (Pregnancy Induced Hypertension)", 16, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Rahul Bakhda", "Ex-Resident,M and J Western Regional Institute of Ophthalmology, BJMedical College and Civil Hospital Campus, Ahmedabad-380016Gujarat 07922680360 07922680314 Fax:07922680360", 
+		        null, "BJMedical College and Civil Hospital Campus", null));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Rahul Navinchandra Bakhda", "B J Medical College, Ahmedabad", 
+		        null, "B J Medical College, Ahmedabad", null));
 
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'A Clinical Study of Fundus Findings in Toxaemia of Pregnancy', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'A Clinical Study of Fundus Findings in Toxaemia of Pregnancy (Pregnancy Induced Hypertension)', isdefault => false, comms => 'From Clinicaltrials.gov');
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2016 Oct 30');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'Postgraduation Thesis', idorgname => 'B J Medical College, Ahmedabad');
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => 'DRKS00011324', idorgid => 100124, idorgname => 'Deutschen Register Klinischer Studien');
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => 'ChiCTR-OOC-16010171', idorgid => 100118, idorgname => 'Chinese Clinical Trial Register');
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => 'UMIN000024722', idorgid => 100156, idorgname => 'University Hospital Medical Information Network CTR');
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => 'U1111-1189-6165', idorgid => 100115, idorgname => 'International Clinical Trials Registry Platform');
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => 'TCTR20161221005', idorgid => 100131, idorgname => 'Thai Clinical Trials Register');
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "B J Medical College, Ahmedabad", null));
+            fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "M and J Western Regional Institute of Ophthalmology,Ahmedabad", null));
 
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Rahul Bakhda', affiliation => 'Ex-Resident,M and J Western Regional Institute of Ophthalmology, BJMedical College and Civil Hospital Campus, Ahmedabad-380016Gujarat 07922680360 07922680314 Fax:07922680360',
-									   orgname => 'BJMedical College and Civil Hospital Campus' );
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Rahul Navinchandra Bakhda', affiliation => 'B J Medical College, Ahmedabad', orgname => 'B J Medical College, Ahmedabad');
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'B J Medical College, Ahmedabad');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'M and J Western Regional Institute of Ophthalmology,Ahmedabad');
-
-call expected.insert_study_feature(sid => _sid, typeid => 30, valueid  => 630);
-call expected.insert_study_feature(sid => _sid, typeid => 31, valueid  => 715);
+	        fs.features!.Add(new StudyFeature(sd_sid, 30, 630));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 31, 715));   //  
 
             fs.topics!.Add(new StudyTopic(sd_sid, 11, "ophthalmoscopy", null, null, null, null));
-	        
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000014115', mvalue => 'Toxemia');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000046110', mvalue => 'Hypertension, Pregnancy-Induced');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000011225', mvalue => 'Pre-Eclampsia');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006973', mvalue => 'Hypertension');
+            
+            fs.conditions!.Add(new StudyCondition(sd_sid, "Toxemia", 14, "D000014115", null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, "Hypertension, Pregnancy-Induced", 14, "D000046110", null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, "Pre-Eclampsia", 14, "D000011225", "JA24", "Pre-eclampsia"));
+            fs.conditions.Add(new StudyCondition(sd_sid, "Hypertension", 14, "D000006973", "BA00", "Essential hypertension"));
+            
+			 sb = new StringBuilder("Bakhda RN. ");
+			 sb.Append("Clinical study of fundus findings in pregnancy induced hypertension. ");
+			 sb.Append("J Family Med Prim Care. 2016 Apr-Jun;5(2):424-429.");
+			 fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "27843854", null, null, null));
 
-sb = new StringBuilder("Bakhda RN. ");
-sb.Append("Clinical study of fundus findings in pregnancy induced hypertension. ");
-sb.Append("J Family Med Prim Care. 2016 Apr-Jun;5(2):424-429.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "27843854", null, null, null));
+             fs.studylinks!.Add(new StudyLink(sd_sid, "Published article", 
+                   "http://www.jfmpc.com/article.asp?issn=2249-4863;year=2016;volume=5;issue=2;spage=424;epage=429;aulast=Bakhda"));
 
-fs.studylinks!.Add(new StudyLink(sd_sid, "Published article", 
-              "http://www.jfmpc.com/article.asp?issn=2249-4863;year=2016;volume=5;issue=2;spage=424;epage=429;aulast=Bakhda"));
+             // countries
+                
+             // iec
+                
+            // Data Objects
+                
+            // 1) Trial registry entry
+    
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+                null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+           
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+                "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2017 Mar 10", 2017, 3, 10, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2017 Mar 13", 2017, 3, 13, null, null, null, null));
+           
+            fs.data_objects!.Add(sdo);
 
-			 */
-                    // countries
-                    
-                    // iec
-                    
-                    // Data Objects
-                    
-                    // 1) Trial registry entry
-        
-                    string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
-                    string ob_title = display_title + " :: CTG registry entry";
-                    StudyDataObject sdo = CreateEmptyStudyDataObject();
-                    
-                    sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-            	        null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-                   
-                    sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-                    sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-            	        "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
-                    sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2017 Mar 10", 2017, 3, 10, null, null, null, null));
-                    sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2017 Mar 13", 2017, 3, 13, null, null, null, null));
-                   
-                    fs.data_objects!.Add(sdo);
-        
-                    return fs;
+            return fs;
         
         }
         
@@ -1072,49 +1070,42 @@ fs.studylinks!.Add(new StudyLink(sd_sid, "Published article",
 	        sb.Append("extension can be granted, when justified, for up to another 12 months.\n"); 
 	        sb.Append("URL: https://www.clinicalstudydatarequest.com/Posting.aspx?ID=20725\n"); 
 	        sb.Append("Information available: Study Protocol, Statistical Analysis Plan (SAP), Informed Consent Form (ICF), Clinical Study Report (CSR)"); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
 	        string dss = sb.ToString();
 	        
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2017, 1, 11, 21, "42", 900,
 		        18, 17, 50, 17, 10);
-            /*
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2016 Jun 9", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "204685", 14, 100163, 
+		        "GlaxoSmithKline", "https://ror.org/01xsqw823", null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "2016-000759-28'", 11, 100123, 
+		        "EU Clinical Trials Register", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "A 2-part Randomized, Double-blind (Sponsor-unblinded), Placebo-controlled, Ascending Dose and Parallel Group Study of TLR4 Agonist (GSK1795091) Administered to Healthy Subjects",
+		        16, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100163, "GlaxoSmithKline", "https://ror.org/01xsqw823"));
 
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'A 2-part Randomized, Double-blind (Sponsor-unblinded), Placebo-controlled, Ascending Dose and Parallel Group Study of TLR4 Agonist (GSK1795091) Administered to Healthy Subjects', isdefault => false, comms => 'From Clinicaltrials.gov');
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2016 Jun 9');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => '204685', idorgname => 'GlaxoSmithKline');
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => '2016-000759-28', idorgid => 100123, idorgname => 'EU Clinical Trials Register');
-
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'GlaxoSmithKline');
-
-	        fs.features!.Add(new (sd_sid, 20, 110));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 305));   // 
-	        fs.features.Add(new (sd_sid, 24, 510));   // 
-
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Cancer');
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 110));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 510));   // 
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Cancer", null, null, "2", "Neoplasms"));
 
             fs.topics!.Add(new StudyTopic(sd_sid, 11, "pharmacokinetics", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "safety", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "TLR4 agonist", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "GSK1795091", null, null, null, null));
     
+			sb = new StringBuilder("Hug BA, Matheny CJ, Burns O, Struemper H, Wang X, Washburn ML. ");
+			sb.Append("Safety, Pharmacokinetics, and Pharmacodynamics of the TLR4 Agonist GSK1795091 in Healthy Individuals: Results from a Randomized, Double-blind, Placebo-controlled, Ascending Dose Study. ");
+			sb.Append("Clin Ther. 2020 Aug;42(8):1519-1534.e33. doi: 10.1016/j.clinthera.2020.05.022. Epub 2020 Jul 30.");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "32739049", null, null, null));
 
-sb = new StringBuilder("Hug BA, Matheny CJ, Burns O, Struemper H, Wang X, Washburn ML. ");
-sb.Append("Safety, Pharmacokinetics, and Pharmacodynamics of the TLR4 Agonist GSK1795091 in Healthy Individuals: Results from a Randomized, Double-blind, Placebo-controlled, Ascending Dose Study. ");
-sb.Append("Clin Ther. 2020 Aug;42(8):1519-1534.e33. doi: 10.1016/j.clinthera.2020.05.022. Epub 2020 Jul 30.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "32739049", null, null, null));
- */
             // countries
             
             // iec
@@ -1155,40 +1146,44 @@ fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "32739049", null, nu
 
             fs.data_objects!.Add(sdo);
             
+            // 3) Study Protocol
+            
+            sd_oid = sd_sid + " :: 11 :: Study Protocol";
+            ob_title = display_title + " :: Study Protocol";
+            sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol", null, ob_title,
+	            null, 9, 2018, 23, 11, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://storage.googleapis.com/ctgov2-large-docs/78/NCT02798978/Prot_000.pdf", 
+	            true, 11, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2017 Apr 12", 2017, 4, 12, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 12, false, "2018 May 31", 2018, 5, 31, null, null, null, null));
+            
+            fs.data_objects!.Add(sdo);
+            
+            // 4) Statistical Analysis Plan
+            
+            sd_oid = sd_sid + " :: 22 :: Statistical Analysis Plan";
+            ob_title = display_title + " :: Statistical Analysis Plan";
+            sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical Analysis Plan", null, ob_title,
+	            null, 9, 2018, 23, 22, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://storage.googleapis.com/ctgov2-large-docs/78/NCT02798978/SAP_001.pdf", 
+	            true, 11, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2017 Nov 19", 2017, 11, 19, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 12, false, "2018 May 31", 2018, 5, 31, null, null, null, null));
+            
+            fs.data_objects!.Add(sdo);
+            
             return fs;
-
-            /*
-
--- other objects
-_oid = _sid ||' :: 11 :: Study Protocol';
-
-call expected.insert_data_object(sd_oid =>  _oid, sid => _sid, 
-                                 title => 'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects :: Study Protocol', 
-							     pubyear => 2018, obclassid => 23, obtypeid => 11, managingorgid => 100120, managingorgname => 'Clinicaltrials.gov', acctypeid => 11, eosccat => 0);
-
-call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects :: Study Protocol', isdefault => true);
-
-call expected.insert_object_instance(sd_oid => _oid, reporgid => 100120, reporgname => 'ClinicalTrials.gov', 
-purl => 'https://clinicaltrials.gov/ProvidedDocs/78/NCT02798978/Prot_000.pdf', restypeid => 11);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 15, datestring => '2017 Apr 12', syear => 2017, smonth => 4, sday => 12);
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2018 May 31', syear => 2018, smonth => 5, sday => 31);
-
-_oid = _sid ||' :: 22 :: Statistical Analysis Plan';
-
-call expected.insert_data_object(sd_oid =>  _oid, sid => _sid, 
-                                 title => 'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects :: Statistical Analysis Plan', 
-							     pubyear => 2018, obclassid => 23, obtypeid => 22, managingorgid => 100120, managingorgname => 'Clinicaltrials.gov', acctypeid => 11, eosccat => 0);
-
-call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects :: Statistical Analysis Plan', isdefault => true);
-
-call expected.insert_object_instance(sd_oid => _oid, reporgid => 100120, reporgname => 'ClinicalTrials.gov', 
-purl => 'https://clinicaltrials.gov/ProvidedDocs/78/NCT02798978/SAP_001.pdf', restypeid => 11);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 15, datestring => '2017 Nov 19', syear => 2017, smonth => 11, sday => 19);
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2018 May 31', syear => 2018, smonth => 5, sday => 31);
-
-            */           
+     
         }
         
         if (sd_sid == "NCT03786900")
@@ -1209,17 +1204,18 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '20
 	        
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, null, null, 14, 12, null, 915,
 		        null, null, null, null, 7);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2018 Dec 11", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HSC-SPH-15-0991", 14, null, 
+		        "The University of Texas Health Science Center, Houston", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 70, "Herbert DuPont", "he University of Texas Health Science Center, Houston'", 
+		        null, "he University of Texas Health Science Center, Houston'", null));
+
             /*
-
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Fecal Microbiota Transplantation (FMT): PRIM-DJ2727', isdefault => true, comms => 'From Clinicaltrials.gov');
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue =>  _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2018 Dec 11');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'HSC-SPH-15-0991', idorgname => 'The University of Texas Health Science Center, Houston');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 70, full_name => 'Herbert DuPont', affiliation => 'The University of Texas Health Science Center, Houston', 
-									   orgname => 'University of Texas Health Science Center' );
 
 call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Recurrent Clostridium Difficile Infection');
 call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Multidrug-resistant Klebsiella Pneumoniae Urinary Tract Infection');
@@ -1278,30 +1274,35 @@ call expected.insert_study_relationship(sid => _sid, typeid => 24, targetsid => 
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2016, 1, 11, 15, "147", 900,
 		        18, 17, 75, 17, 10);
 	        
-            /*
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2015 Sep 25", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "S1505", 14, 100358, 
+		        "Southwest Oncology Group", "https://ror.org/05n6zrm60", null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "NCI-2015-01236", 39, 100162, 
+		        "National Cancer Institute", "https://ror.org/040gcmg81", null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "U10CA180888", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88", null, 
+		        "https://reporter.nih.gov/quickSearch/U10CA180888"));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "A Randomized Phase II Study of Perioperative mFOLFIRINOX Versus Gemcitabine/Nab-Paclitaxel as Therapy for Resectable Pancreatic Adenocarcinoma", 16, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Davendra Sohal", "Southwest Oncology Group", 
+		        100358, "Southwest Oncology Group", "https://ror.org/05n6zrm60"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100358, "Southwest Oncology Group",
+		        "https://ror.org/05n6zrm60"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100162, 
+		        "National Cancer Institute", "https://ror.org/040gcmg81"));
 
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'S1505: Combination Chemotherapy or Gemcitabine Hydrochloride and Paclitaxel Albumin-Stabilized Nanoparticle Formulation Before Surgery in Treating Patients With Pancreatic Cancer That Can Be Removed by Surgery', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'A Randomized Phase II Study of Perioperative mFOLFIRINOX Versus Gemcitabine/Nab-Paclitaxel as Therapy for Resectable Pancreatic Adenocarcinoma', isdefault => false, comms => 'From Clinicaltrials.gov');
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2015 Sep 25');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'S1505', idorgname => 'Southwest Oncology Group');
-call expected.insert_study_identifier(sid => _sid, typeid => 39, idvalue => 'NCI-2015-01236', idorgid => 100162, idorgname => 'National Cancer Institute');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => 'U10CA180888', idorgid => 100134, idorgname => 'National Institutes of Health', idlink => 'https://reporter.nih.gov/quickSearch/U10CA180888');
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Davendra Sohal', affiliation => 'Southwest Oncology Group', orgname => 'Southwest Oncology Group' );
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'Southwest Oncology Group');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'National Cancer Institute (NCI)');
-
-	        fs.features!.Add(new (sd_sid, 20, 120));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 305));   // 
-	        fs.features.Add(new (sd_sid, 24, 500));   // 
-
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Pancreatic Adenocarcinoma');
+ /*
+ call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Pancreatic Adenocarcinoma');
 call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Resectable Pancreatic Carcinoma');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000000230', mvalue => 'Adenocarcinoma');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000010190', mvalue => 'Pancreatic Neoplasms');
@@ -1315,17 +1316,18 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D0000
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000077146', mvalue => 'Irinotecan');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000020799', mvalue => 'Pancrelipase');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000010194', mvalue => 'Pancreatin');
-
-sb = new StringBuilder("Sohal DPS, Duong M, Ahmad SA, Gandhi NS, Beg MS, Wang-Gillam A, Wade JL 3rd, Chiorean EG, Guthrie KA, Lowy AM, Philip PA, Hochster HS. ");
-sb.Append("Efficacy of Perioperative Chemotherapy for Resectable Pancreatic Adenocarcinoma: A Phase 2 Randomized Clinical Trial. ");
-sb.Append("JAMA Oncol. 2021 Mar 1;7(3):421-427. doi: 10.1001/jamaoncol.2020.7328. Erratum in: JAMA Oncol. 2021 Sep 23;:null.'");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "33475684", null, null, null));
-
-sb = new StringBuilder("Ahmad SA, Duong M, Sohal DPS, Gandhi NS, Beg MS, Wang-Gillam A, Wade JL 3rd, Chiorean EG, Guthrie KA, Lowy AM, Philip PA, Hochster HS. ");
-sb.Append("Surgical Outcome Results From SWOG S1505: A Randomized Clinical Trial of mFOLFIRINOX Versus Gemcitabine/Nab-paclitaxel for Perioperative Treatment of Resectable Pancreatic Ductal Adenocarcinoma. ");
-sb.Append("Ann Surg. 2020 Sep 1;272(3):481-486. doi: 10.1097/SLA.0000000000004155.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "32740235", null, null, null));
  */
+			            
+			sb = new StringBuilder("Sohal DPS, Duong M, Ahmad SA, Gandhi NS, Beg MS, Wang-Gillam A, Wade JL 3rd, Chiorean EG, Guthrie KA, Lowy AM, Philip PA, Hochster HS. ");
+			sb.Append("Efficacy of Perioperative Chemotherapy for Resectable Pancreatic Adenocarcinoma: A Phase 2 Randomized Clinical Trial. ");
+			sb.Append("JAMA Oncol. 2021 Mar 1;7(3):421-427. doi: 10.1001/jamaoncol.2020.7328. Erratum in: JAMA Oncol. 2021 Sep 23;:null.'");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "33475684", null, null, null));
+
+			sb = new StringBuilder("Ahmad SA, Duong M, Sohal DPS, Gandhi NS, Beg MS, Wang-Gillam A, Wade JL 3rd, Chiorean EG, Guthrie KA, Lowy AM, Philip PA, Hochster HS. ");
+			sb.Append("Surgical Outcome Results From SWOG S1505: A Randomized Clinical Trial of mFOLFIRINOX Versus Gemcitabine/Nab-paclitaxel for Perioperative Treatment of Resectable Pancreatic Ductal Adenocarcinoma. ");
+			sb.Append("Ann Surg. 2020 Sep 1;272(3):481-486. doi: 10.1097/SLA.0000000000004155.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "32740235", null, null, null));
+
             // countries
             
             // iec
@@ -1366,26 +1368,24 @@ fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "32740235", null, nu
 
             fs.data_objects!.Add(sdo);
 
+            // 3) Study Protocol, Statistical Analysis Plan, and Informed Consent Form
+	        
+            sd_oid = sd_sid + " :: 76 :: Study Protocol, Statistical Analysis Plan, and Informed Consent Form";
+            ob_title = display_title + " :: Study Protocol, Statistical Analysis Plan, and Informed Consent Form";
+            sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol, Statistical Analysis Plan, and Informed Consent Form", null, ob_title,
+	            null, 9, 2021, 23, 76, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://storage.googleapis.com/ctgov2-large-docs/16/NCT02562716/Prot_SAP_ICF_000.pdf", 
+	            true, 11, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2020 Sep 4", 2020, 9, 4, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 12, false, "2021 Jun 1", 2021, 6, 1, null, null, null, null));
+            fs.data_objects!.Add(sdo);
+            
             return fs;
-            /*
-
--- Prot_SAP_ICF
-_oid = _sid ||' :: 76 :: Study Protocol, Statistical Analysis Plan, and Informed Consent Form';
-
-call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
-                                 title => 'S1505: Combination Chemotherapy or Gemcitabine Hydrochloride and Paclitaxel Albumin-Stabilized Nanoparticle Formulation Before Surgery in Treating Patients With Pancreatic Cancer That Can Be Removed by Surgery :: Study Protocol, Statistical Analysis Plan, and Informed Consent Form', 
-							     pubyear => 2021, obclassid => 23, obtypeid => 76, managingorgid => 100120, managingorgname => 'ClinicalTrials.gov', acctypeid => 11, eosccat => 0);
-
-call expected.insert_object_title(sd_oid => _oid, typeid => 21, 
-	    title => 'S1505: Combination Chemotherapy or Gemcitabine Hydrochloride and Paclitaxel Albumin-Stabilized Nanoparticle Formulation Before Surgery in Treating Patients With Pancreatic Cancer That Can Be Removed by Surgery :: Study Protocol, Statistical Analysis Plan, and Informed Consent Form', isdefault => true);
-
-call expected.insert_object_instance(sd_oid => _oid, reporgid => 100120, reporgname => 'ClinicalTrials.gov', 
-purl => 'https://clinicaltrials.gov/ProvidedDocs/16/NCT02562716/Prot_SAP_ICF_000.pdf', restypeid => 11);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 15, datestring => '2020 Sep 4', syear => 2020, smonth => 9, sday => 4);
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2021 Jun 1', syear => 2021, smonth => 6, sday => 1);
-
-             */            
+                   
         }
         
         if (sd_sid == "NCT02449174")
@@ -1420,51 +1420,46 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '20
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2015, 3, 11, 21, "69", 900,
 		        18, 17, null, null, 10);
 	        
-            /*
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2014 Dec 17", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HSC-SPH-14-0020", 14, null, 
+		        "The University of Texas Health Science Center, Houston", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "A Study of Fecal Microbiota Transplantation (FMT) for the Treatment of Recurrent C. Difficile Associated Diarrhea (RCDAD) Via Retention Enema or Oral Route", 
+		        16, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Zhi-Dong Jiang", "The University of Texas Health Science Center, Houston", 
+		        null, "University of Texas School of Public Health", null));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Herbert l DuPont", "University of Texas School of Public Health", 
+		        null, "University of Texas School of Public Health", null));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "The University of Texas Health Science Center, Houston", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Roderick MacDonald Research Fund at Baylor St Luke’s", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Kelsey Research Foundation", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null , "Texas Gulf Coast Digestive Diseases Center", null));
 
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Fecal Microbiota Transplantation to Treat Recurrent C. Difficile Associated Diarrhea Via Retention Enema or Oral Route', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'A Study of Fecal Microbiota Transplantation (FMT) for the Treatment of Recurrent C. Difficile Associated Diarrhea (RCDAD) Via Retention Enema or Oral Route', isdefault => false, comms => 'From Clinicaltrials.gov');
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2014 Dec 17');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'HSC-SPH-14-0020', idorgname => 'The University of Texas Health Science Center, Houston');
-
-  
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Zhi-Dong Jiang', affiliation => 'The University of Texas Health Science Center, Houston', orgname => 'The University of Texas Health Science Center, Houston' );
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Herbert l DuPont', affiliation => 'University of Texas School of Public Health', orgname => 'University of Texas School of Public Health' );
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'The University of Texas Health Science Center, Houston');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'Roderick MacDonald Research Fund at Baylor St Luke’s');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'Kelsey Research Foundation');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'Texas Gulf Coast Digestive Diseases Center');
-
-call expected.insert_study_feature(sid => _sid, typeid => 20, valueid  => 110);
-call expected.insert_study_feature(sid => _sid, typeid => 20, valueid  => 120);
-call expected.insert_study_feature(sid => _sid, typeid => 21, valueid  => 400);
-call expected.insert_study_feature(sid => _sid, typeid => 22, valueid  => 205);
-call expected.insert_study_feature(sid => _sid, typeid => 23, valueid  => 305);
-call expected.insert_study_feature(sid => _sid, typeid => 24, valueid  => 505);
-
-	        fs.features!.Add(new (sd_sid, 20, 110));  // 
-	        fs.features.Add(new (sd_sid, 20, 120));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 305));   // 
-	        fs.features.Add(new (sd_sid, 24, 505));   // 
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 110));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 20, 120));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 505));   // 
 
             fs.topics!.Add(new StudyTopic(sd_sid, 11, "Fecal Microbiota transplantation", null, null, null, null));
-	        
+            
+            /*	        
 call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'C. Difficile');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000003967', mvalue => 'Diarrhea');
 
 call expected.insert_study_relationship(sid => _sid, typeid => 23, targetsid => 'NCT03786900');
-
-sb = new StringBuilder("iang ZD, Jenq RR, Ajami NJ, Petrosino JF, Alexander AA, Ke S, Iqbal T, DuPont AW, Muldrew K, Shi Y, Peterson C, Do KA, DuPont HL. ");
-sb.Append("Safety and preliminary efficacy of orally administered lyophilized fecal microbiota product compared with frozen product given by enema for recurrent Clostridium difficile infection: A randomized clinical trial. ");
-sb.Append("PLoS One. 2018 Nov 2;13(11):e0205064. doi: 10.1371/journal.pone.0205064. eCollection 2018.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30388112", null, null, null));
  */
+
+            sb = new StringBuilder("iang ZD, Jenq RR, Ajami NJ, Petrosino JF, Alexander AA, Ke S, Iqbal T, DuPont AW, Muldrew K, Shi Y, Peterson C, Do KA, DuPont HL. ");
+			sb.Append("Safety and preliminary efficacy of orally administered lyophilized fecal microbiota product compared with frozen product given by enema for recurrent Clostridium difficile infection: A randomized clinical trial. ");
+			sb.Append("PLoS One. 2018 Nov 2;13(11):e0205064. doi: 10.1371/journal.pone.0205064. eCollection 2018.");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "30388112", null, null, null));
+
             // countries
             
             // iec
@@ -1504,27 +1499,24 @@ fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30388112", null, nu
             sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2019 Mar 25", 2019, 3, 25, null, null, null, null));
 
             fs.data_objects!.Add(sdo);
-
-            return fs;
             
-            /*
-
--- other objects
-_oid = _sid ||' :: 74 :: Study Protocol and Statistical Analysis Plan';
-call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
-                                 title => 'Fecal Microbiota Transplantation to Treat Recurrent C. Difficile Associated Diarrhea Via Retention Enema or Oral Route :: Study Protocol and Statistical Analysis Plan', 
-							     pubyear => 2019, obclassid => 23, obtypeid => 74, managingorgid => 100120, managingorgname => 'ClinicalTrials.gov', 
-							     acctypeid => 11, eosccat => 0);
-
-call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'Fecal Microbiota Transplantation to Treat Recurrent C. Difficile Associated Diarrhea Via Retention Enema or Oral Route :: Study Protocol and Statistical Analysis Plan', isdefault => true);
-
-call expected.insert_object_instance(sd_oid => _oid, reporgid => 100120, reporgname => 'ClinicalTrials.gov', 
-purl => 'https://clinicaltrials.gov/ProvidedDocs/74/NCT02449174/Prot_SAP_000.pdf', restypeid => 11);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 15, datestring => '2017 Jul 13', syear => 2017, smonth => 7, sday => 13);
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2019 Mar 21', syear => 2019, smonth => 3, sday => 21);
- 
-             */           
+            // 3) Study Protocol and Statistical Analysis Plan
+	        
+            sd_oid = sd_sid + " :: 74 :: Study Protocol and Statistical Analysis Plan";
+            ob_title = display_title + " :: Study Protocol and Statistical Analysis Plan";
+            sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol and Statistical Analysis Plan", null, ob_title,
+	            null, 9, 2019, 23, 74, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://storage.googleapis.com/ctgov2-large-docs/74/NCT02449174/Prot_SAP_000.pdf", 
+	            true, 11, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2017 Jul 13", 2017, 7, 13, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 12, false, "2019 Mar 21", 2019, 3, 21, null, null, null, null));
+            fs.data_objects!.Add(sdo);
+            
+            return fs;
         }
         
         if (sd_sid == "NCT00433329")
@@ -1534,68 +1526,52 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '20
 	        // Study 
 	        
 	        string display_title = "Combination Therapy in Pulmonary Arterial Hypertension";
-	        StringBuilder sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
+	        StringBuilder sb = new StringBuilder("An open label, non-comparative study design is appropriate for this Phase 4 study designed to assess whether ");
+	        sb.Append("a core therapy of bosentan, either as monotherapy or with the addition of sildenafil, enables patients with pulmonary arterial "); 
+	        sb.Append("hypertension (PAH) to achieve a 6-minute walk distance (6 MWD) of ≥380 meters after 28 weeks of therapy This design is also "); 
+	        sb.Append("appropriate to pioneer the utility of cardiac MRI in assessing improved functional capacity in PAH and exploring its correlation with other parameters."); 
 	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        string dss = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
-		        , , null, null, 10);
-            /*
-call expected.insert_study_names(sid => _sid, 
-						title =>'Combination Therapy in Pulmonary Arterial Hypertension', 
-						brief_desc =>'An open label, non-comparative study design is appropriate for this Phase 4 study designed to assess whether a core therapy of bosentan, either as monotherapy or with the addition of sildenafil, enables patients with pulmonary arterial hypertension (PAH) to achieve a 6-minute walk distance (6 MWD) of ≥380 meters after 28 weeks of therapy This design is also appropriate to pioneer the utility of cardiac MRI in assessing improved functional capacity in PAH and exploring its correlation with other parameters.'
-					   );
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2007, 3, 11, 21, "100", 900,
+		       12, 17, null, null, 10);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2007 Feb 7", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "AC-052-419", 14, 100585, 
+		        "Actelion", "https://ror.org/001yedb91", null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        string title = "COMPASS 3: An Open-label, Multi-Center Study Employing a Targeted 6-Minute Walk Test (6-MWT) Distance Threshold Approach to Guide ";
+	        title += "Bosentan-Based Therapy and to Assess the Utility of Magnetic Resonance Imaging (MRI) on Cardiac Remodeling";
+	        fs.titles.Add(new StudyTitle(sd_sid, title, 16, "en", 11, false, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "COMPASS 3", 14, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100585, "Actelion", "https://ror.org/001yedb91"));
 
-call expected.insert_study_details(sid => _sid, syear => 2007, smonth => 3, typeid => 11, statusid => 21);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '100', eligid => 900, minage => 12, minageu => 17, maxage => null, maxageu => null);
-
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Combination Therapy in Pulmonary Arterial Hypertension', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'COMPASS 3: An Open-label, Multi-Center Study Employing a Targeted 6-Minute Walk Test (6-MWT) Distance Threshold Approach to Guide Bosentan-Based Therapy and to Assess the Utility of Magnetic Resonance Imaging (MRI) on Cardiac Remodeling', isdefault => false, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 14, 
-                         title => 'COMPASS 3', isdefault => false, comms => 'From Clinicaltrials.gov');
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2007 Feb 7');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'AC-052-419', idorgname => 'Actelion');
-
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'Actelion');
-
-	        fs.features!.Add(new (sd_sid, 20, 135));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 210));   // 
-	        fs.features.Add(new (sd_sid, 23, 300));   // 
-	        fs.features.Add(new (sd_sid, 24, 500));   // 
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 135));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 210));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 300));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 	        
             fs.topics!.Add(new StudyTopic(sd_sid, 11, "combination therapy", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Compass 3", null, null, null, null));
-
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Pulmonary Arterial Hypertension');
+	        
+            /*
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000077300', mvalue => 'Bosentan');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000068677', mvalue => 'Sildenafil Citrate');
+
+call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Pulmonary Arterial Hypertension');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000065627', mvalue => 'Familial Primary Pulmonary Hypertension');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006973', mvalue => 'Hypertension');
 
---insert into study_relationships()
---values('', )
-
-sb = new StringBuilder("Benza RL, Raina A, Gupta H, Murali S, Burden A, Zastrow MS, Park MH, Simon MA. ");
-sb.Append("Bosentan-based, treat-to-target therapy in patients with pulmonary arterial hypertension: results from the COMPASS-3 study. ");
-sb.Append("Pulm Circ. 2018 Jan-Mar;8(1):2045893217741480. doi: 10.1177/2045893217741480. Epub 2017 Oct 24.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29064349", null, null, null));
  */
+            
+			sb = new StringBuilder("Benza RL, Raina A, Gupta H, Murali S, Burden A, Zastrow MS, Park MH, Simon MA. ");
+			sb.Append("Bosentan-based, treat-to-target therapy in patients with pulmonary arterial hypertension: results from the COMPASS-3 study. ");
+			sb.Append("Pulm Circ. 2018 Jan-Mar;8(1):2045893217741480. doi: 10.1177/2045893217741480. Epub 2017 Oct 24.");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "29064349", null, null, null));
+
             // countries
             
             // iec
@@ -1646,58 +1622,40 @@ fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29064349", null, nu
 	        // Study 
 	        
 	        string display_title = "Impact of Soft Tissue Grafts on Tissue Alterations After Immediate Tooth Replacement";
-	        StringBuilder sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
+	        StringBuilder sb = new StringBuilder("This study evaluates the impact of soft tissue grafts on soft tissue recession following immediate implant, ");
+	        sb.Append("provisional and bone graft placement in compromised sockets. One third of the patients received a collagen matrix (CM group), "); 
+	        sb.Append("another third received a connective tissue graft removed from the palate (CTG group) and the final third did not receive any soft tissue graft (CTL group)."); 
 	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        string dss = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
-		        , , null, null, 10);
-            /*
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2013, 2, 11, 21, "24", 900,
+		        18, 17, 70, 17, 10);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2016 Sep 24", null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "Soft and Hard Tissue Stability After Immediate Tooth Replacement With Implant in Fresh Sockets Grafted With Different Soft Tissue Grafts",
+		        16, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Elcio Marcantonio Jr", null, null, null, null));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 101740, "São Paulo State University", "https://ror.org/00987cb86"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Fundação de Amparo à Pesquisa do Estado de São Paulo", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Conselho Nacional de Desenvolvimento Científico e Tecnológico", null));
 
-call expected.insert_study_names(sid => _sid, 
-						title =>'Impact of Soft Tissue Grafts on Tissue Alterations After Immediate Tooth Replacement', 
-						brief_desc =>'This study evaluates the impact of soft tissue grafts on soft tissue recession following immediate implant, provisional and bone graft placement in compromised sockets. One third of the patients received a collagen matrix (CM group), another third received a connective tissue graft removed from the palate (CTG group) and the final third did not receive any soft tissue graft (CTL group).'
-						);
-
-call expected.insert_study_details(sid => _sid, syear => 2013, smonth => 2, typeid => 11, statusid => 21);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '24', eligid => 900, minage => 18, minageu => 17, maxage => 70, maxageu => 17);
-
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Impact of Soft Tissue Grafts on Tissue Alterations After Immediate Tooth Replacement', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'Soft and Hard Tissue Stability After Immediate Tooth Replacement With Implant in Fresh Sockets Grafted With Different Soft Tissue Grafts', isdefault => false, comms => 'From Clinicaltrials.gov');
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2016 Sep 24');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Elcio Marcantonio Jr');
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'São Paulo State University');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'Fundação de Amparo à Pesquisa do Estado de São Paulo');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'Conselho Nacional de Desenvolvimento Científico e Tecnológico');
-
-	        fs.features!.Add(new (sd_sid, 20, 135));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 305));   // 
-	        fs.features.Add(new (sd_sid, 24, 500));   // 
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 135));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 	        
 	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "gingival recession", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "immediate implant and provisional placement", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "bone graft", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "connective tissue graft", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "collagen matrix", null, null, null, null));
-
+	        
+            /*
 call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Tooth Socket');
 call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Dental Implants');
 
@@ -1765,82 +1723,92 @@ call  expected.insert_study_link (sid => _sid, label => 'All data can be downloa
 	        // Study 
 	        
 	        string display_title = "Asthma Clinical Research Network (ACRN) Trial - Long-Acting Beta Agonist Response by Genotype (LARGE)";
-	        StringBuilder sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
+	        StringBuilder sb = new StringBuilder("The purpose of this trial is to determine whether regularly scheduled use of an inhaled long-acting ");
+	        sb.Append("beta agonist (salmeterol) in the setting of concomitant use of inhaled corticosteroids (beclomethasone hydroflouroalkane (HFA) "); 
+	        sb.Append("inhaler) will have a detrimental effect on asthma control in people who bear the B16-Arg/Arg genotype of the beta-2 "); 
+	        sb.Append("adrenergic receptor gene, as compared to people with asthma of similar severity who bear the B16-Gly/Gly genotype."); 
 	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        string dss = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
-		        , , null, null, 10);
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2004, 12, 11, 21, "87", 900,
+		        18, 17, 90, 17, 10);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2005 Sep 12", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "262", 14, 100375, 
+		        "Milton S Hershey Medical Center", "https://ror.org/01h22ap11", null, null));
+	        
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "5U10HL074231", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88", null, 
+		        "https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=5U10HL074231&Fy=all"));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "U10HL074073", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88", null, 
+		        "https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074073&Fy=all"));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "U10HL074204", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88", null, 
+		        "https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074204&Fy=all"));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "U10HL074208", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88", null, 
+		        "https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074208&Fy=all"));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "U10HL074212", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88", null, 
+		        "https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074212&Fy=all"));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "U10HL074218", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88", null, 
+		        "https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074218&Fy=all"));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "U10HL074225", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88", null, 
+		        "https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074225&Fy=all"));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "U10HL074227", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88", null, 
+		        "https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074227&Fy=all"));   
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "U10HL074231", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88", null, 
+		        "https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074231&Fy=all"));   
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Vernon M Chinchilli", "Milton S Hershey Medical Center", 
+		        100375, "Milton S Hershey Medical Center", "https://ror.org/01h22ap11"));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Homer Boushey", "University of California, San Francisco", 
+		        100182, "University of California, San Francisco", "https://ror.org/043mz5j54"));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Mario Castro", "Washington University School of Medicine", 
+		        100195, "Washington University School of Medicine", null));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Elliot Israel", "Brigham and Women’s Hospital", 
+		        100203, "Brigham and Women’s Hospital", "https://ror.org/04b6nzv94"));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Robert Lemanske", "University of Wisconsin, Madison", 
+		        100231, "University of Wisconsin, Madison", "https://ror.org/01y2jtd41"));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Richard Martin", "National Jewish Medical & Research Center", 
+		        null, "National Jewish Medical & Research Center", null));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Stephen Peters", "Wake Forest University Health Sciences", 
+		        null, "Wake Forest University Health Sciences", null));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Stephen Wasserman", "University of California, San Diego", 
+		        100238, "University of California, San Diego", "https://ror.org/0168r3w48"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100375, "Milton S Hershey Medical Center", "https://ror.org/01h22ap11"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100167, "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Asthma Clinical Research Network", null));
+
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 310));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 520));   // 
+	        
             /*
-           
-call expected.insert_study_names(sid => _sid, 
-						title =>'Asthma Clinical Research Network (ACRN) Trial - Long-Acting Beta Agonist Response by Genotype (LARGE)', 
-						brief_desc =>'The purpose of this trial is to determine whether regularly scheduled use of an inhaled long-acting beta agonist (salmeterol) in the setting of concomitant use of inhaled corticosteroids (beclomethasone hydroflouroalkane (HFA) inhaler) will have a detrimental effect on asthma control in people who bear the B16-Arg/Arg genotype of the beta-2 adrenergic receptor gene, as compared to people with asthma of similar severity who bear the B16-Gly/Gly genotype.'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2004, smonth => 12, typeid => 11, statusid => 21);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '87', eligid => 900, minage => 18, minageu => 17, maxage => 90, maxageu => 17);
-
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Asthma Clinical Research Network (ACRN) Trial - Long-Acting Beta Agonist Response by Genotype (LARGE)', isdefault => true, comms => 'From Clinicaltrials.gov');
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2005 Sep 12');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => '262', idorgname => 'Milton S Hershey Medical Center');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => '5U10HL074231', idorgid => 100134, idorgname => 'National Institutes of Health', idlink => 'https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=5U10HL074231&Fy=all');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => 'U10HL074073', idorgid => 100134, idorgname => 'National Institutes of Health', idlink => 'https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074073&Fy=all');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => 'U10HL074204', idorgid => 100134, idorgname => 'National Institutes of Health', idlink => 'https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074204&Fy=all');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => 'U10HL074208', idorgid => 100134, idorgname => 'National Institutes of Health', idlink => 'https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074208&Fy=all');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => 'U10HL074212', idorgid => 100134, idorgname => 'National Institutes of Health', idlink => 'https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074212&Fy=all');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => 'U10HL074218', idorgid => 100134, idorgname => 'National Institutes of Health', idlink => 'https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074218&Fy=all');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => 'U10HL074225', idorgid => 100134, idorgname => 'National Institutes of Health', idlink => 'https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074225&Fy=all');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => 'U10HL074227', idorgid => 100134, idorgname => 'National Institutes of Health', idlink => 'https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074227&Fy=all');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => 'U10HL074231', idorgid => 100134, idorgname => 'National Institutes of Health', idlink => 'https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=U10HL074231&Fy=all');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Vernon M Chinchilli', affiliation => 'Milton S Hershey Medical Center', orgname => 'Milton S Hershey Medical Center' );
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'Milton S Hershey Medical Center');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'National Heart, Lung, and Blood Institute (NHLBI)');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'Asthma Clinical Research Network');
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Homer Boushey', affiliation => 'University of California, San Francisco', orgname => 'University of California, San Francisco' );
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Mario Castro', affiliation => 'Washington University School of Medicine', orgname => 'Washington University School of Medicine' );
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Elliot Israel', affiliation => 'Brigham and Women’s Hospital', orgname => 'Brigham and Women’s Hospital' );
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Robert Lemanske', affiliation => 'University of Wisconsin, Madison', orgname => 'University of Wisconsin, Madison' );
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Richard Martin', affiliation => 'National Jewish Medical & Research Center', orgname => 'National Jewish Medical & Research Center' );
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Stephen Peters', affiliation => 'Wake Forest University Health Sciences', orgname => 'Wake Forest University Health Sciences' );
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Stephen Wasserman', affiliation => 'University of California, San Diego', orgname => 'University of California, San Diego' );
-
-	        fs.features!.Add(new (sd_sid, 20, 130));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 310));   // 
-	        fs.features.Add(new (sd_sid, 24, 520));   // 
-
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000001507', mvalue => 'Beclomethasone');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000068299', mvalue => 'Salmeterol Xinafoate');
+
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000001249', mvalue => 'Asthma');
-
---insert into study_relationships()
---values('', )
-
-sb = new StringBuilder("Wechsler ME, Kunselman SJ, Chinchilli VM, Bleecker E, Boushey HA, Calhoun WJ, Ameredes BT, Castro M, Craig TJ, Denlinger L, Fahy JV, Jarjour N, Kazani S, Kim S, Kraft M, Lazarus SC, Lemanske RF Jr, Markezich A, Martin RJ, Permaul P, Peters SP, Ramsdell J, Sorkness CA, Sutherland ER, Szefler SJ, Walter MJ, Wasserman SI, Israel E; National Heart, Lung and Blood Institute’s Asthma Clinical Research Network. ");
-sb.Append("Effect of beta2-adrenergic receptor polymorphism on response to longacting beta2 agonist in asthma (LARGE trial): a genotype-stratified, randomised, placebo-controlled, crossover trial. ");
-sb.Append("Lancet. 2009 Nov 21;374(9703):1754-64. doi: 10.1016/S0140-6736(09)61492-6.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "19932356", null, null, null));		
-
-call  expected.insert_study_link (sid => _sid, label => 'Asthma Clinical Research Network (ACRN) Website', 
-			url => 'http://www.acrn.org');
 			 */
+            
+			sb = new StringBuilder("Wechsler ME, Kunselman SJ, Chinchilli VM, Bleecker E, Boushey HA, Calhoun WJ, Ameredes BT, Castro M, Craig TJ, Denlinger L, Fahy JV, Jarjour N, Kazani S, Kim S, Kraft M, Lazarus SC, Lemanske RF Jr, Markezich A, Martin RJ, Permaul P, Peters SP, Ramsdell J, Sorkness CA, Sutherland ER, Szefler SJ, Walter MJ, Wasserman SI, Israel E; National Heart, Lung and Blood Institute’s Asthma Clinical Research Network. ");
+			sb.Append("Effect of beta2-adrenergic receptor polymorphism on response to longacting beta2 agonist in asthma (LARGE trial): a genotype-stratified, randomised, placebo-controlled, crossover trial. ");
+			sb.Append("Lancet. 2009 Nov 21;374(9703):1754-64. doi: 10.1016/S0140-6736(09)61492-6.");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "19932356", null, null, null));		
+
+			fs.studylinks!.Add(new StudyLink(sd_sid, "Asthma Clinical Research Network (ACRN) Website", 
+				"http://www.acrn.org"));
+
             // countries
             
             // iec
@@ -1891,73 +1859,55 @@ call  expected.insert_study_link (sid => _sid, label => 'Asthma Clinical Researc
 	        // Study 
 	        
 	        string display_title = "Developing Imaging And plasMa biOmarkers iN Describing Heart Failure With Preserved Ejection Fraction (DIAMONDHFpEF)";
-	        StringBuilder sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
+	        StringBuilder sb = new StringBuilder("The investigators wish to test a hypothesis that patients with HFpEF have different characteristics on echo, ");
+	        sb.Append("cardiac MRI and plasma protein & chemical profiles compared to HFrEF and healthy volunteers."); 
 	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        string dss = sb.ToString();
+
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2013, 2, 12, 21, "280", 900,
+		        18, 17, null, null, 10);
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
-		        , , null, null, 10);
-            /*
-           
-call expected.insert_study_names(sid => _sid, 
-						title =>'Developing Imaging And plasMa biOmarkers iN Describing Heart Failure With Preserved Ejection Fraction (DIAMONDHFpEF)', 
-						brief_desc =>'The investigators wish to test a hypothesis that patients with HFpEF have different characteristics on echo, cardiac MRI and plasma protein & chemical profiles compared to HFrEF and healthy volunteers.'
-					   );
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2017 Feb 6", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "0328", 14, 100837, 
+		        "University of Leicester", "https://ror.org/04h699437", null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "Prospective, Observational, Single-centre, Cohort Study Aimed at Developing Imaging and Plasma Biomarkers in Heart Failure With Preserved Ejection Fraction",
+		        16, "en", 11, false, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "DIAMONDHFpEF",
+		        14, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54,  100837, "niversity of Leicester", "https://ror.org/04h699437"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100442, "National Institute for Health Research", "https://ror.org/0187kwz08"));
 
-call expected.insert_study_details(sid => _sid, syear => 2013, smonth => 2, typeid => 12, statusid => 21);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '280', eligid => 900, minage => 18, minageu => 17, maxage => null, maxageu => null);
-
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Developing Imaging And plasMa biOmarkers iN Describing Heart Failure With Preserved Ejection Fraction (DIAMONDHFpEF)', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'Prospective, Observational, Single-centre, Cohort Study Aimed at Developing Imaging and Plasma Biomarkers in Heart Failure With Preserved Ejection Fraction', isdefault => false, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 14, 
-                         title => 'DIAMONDHFpEF', isdefault => false, comms => 'From Clinicaltrials.gov');		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2017 Feb 6');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => '0328', idorgname => 'University of Leicester');
-
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'University of Leicester');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'National Institute for Health Research, United Kingdom');
-
-call expected.insert_study_feature(sid => _sid, typeid => 30, valueid  => 600);
-call expected.insert_study_feature(sid => _sid, typeid => 31, valueid  => 705);
-call expected.insert_study_feature(sid => _sid, typeid => 32, valueid  => 805);
-
+	        fs.features!.Add(new StudyFeature(sd_sid, 30, 600));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 31, 705));   //  
+            fs.features.Add(new StudyFeature(sd_sid, 32, 805));   //
+            
 	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "HFpEF", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "HFrEF", null, null, null, null));
-
+	        
+            /*
 call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Patients With Heart Failure and Preserved Ejection Fraction - HFpEF');
 call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Patients With Heart Failure With Reduced Ejection Fraction - HFrEF');
 call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Healthy Controls Group - Age and Sex-matched');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006333', mvalue => 'Heart Failure');
-
-sb = new StringBuilder("Gulsin GS, Kanagala P, Chan DCS, Cheng ASH, Athithan L, Graham-Brown MPM, Singh A, Yang J, Li Z, Khunti K, Davies MJ, Arnold JR, Squire IB, Ng LL, McCann GP. ");
-sb.Append("Differential left ventricular and left atrial remodelling in heart failure with preserved ejection fraction patients with and without diabetes. ");
-sb.Append("Ther Adv Endocrinol Metab. 2019 Jul 5;10:2042018819861593. doi: 10.1177/2042018819861593. eCollection 2019.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31308926", null, null, null));
-
-sb = new StringBuilder("Kanagala P, Cheng ASH, Singh A, Khan JN, Gulsin GS, Patel P, Gupta P, Arnold JR, Squire IB, Ng LL, McCann GP. ");
-sb.Append("Relationship Between Focal and Diffuse Fibrosis Assessed by CMR and Clinical Outcomes in Heart Failure With Preserved Ejection Fraction. ");
-sb.Append("JACC Cardiovasc Imaging. 2019 Nov;12(11 Pt 2):2291-2301. doi: 10.1016/j.jcmg.2018.11.031. Epub 2019 Feb 13.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30772227", null, null, null));
-
-sb = new StringBuilder("Kanagala P, Cheng ASH, Singh A, McAdam J, Marsh AM, Arnold JR, Squire IB, Ng LL, McCann GP. ");
-sb.Append("Diagnostic and prognostic utility of cardiovascular magnetic resonance imaging in heart failure with preserved ejection fraction - implications for clinical trials. ");
-sb.Append("J Cardiovasc Magn Reson. 2018 Jan 11;20(1):4. doi: 10.1186/s12968-017-0424-9.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29321034", null, null, null));
  */
+			sb = new StringBuilder("Gulsin GS, Kanagala P, Chan DCS, Cheng ASH, Athithan L, Graham-Brown MPM, Singh A, Yang J, Li Z, Khunti K, Davies MJ, Arnold JR, Squire IB, Ng LL, McCann GP. ");
+			sb.Append("Differential left ventricular and left atrial remodelling in heart failure with preserved ejection fraction patients with and without diabetes. ");
+			sb.Append("Ther Adv Endocrinol Metab. 2019 Jul 5;10:2042018819861593. doi: 10.1177/2042018819861593. eCollection 2019.");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "31308926", null, null, null));
+
+			sb = new StringBuilder("Kanagala P, Cheng ASH, Singh A, Khan JN, Gulsin GS, Patel P, Gupta P, Arnold JR, Squire IB, Ng LL, McCann GP. ");
+			sb.Append("Relationship Between Focal and Diffuse Fibrosis Assessed by CMR and Clinical Outcomes in Heart Failure With Preserved Ejection Fraction. ");
+			sb.Append("JACC Cardiovasc Imaging. 2019 Nov;12(11 Pt 2):2291-2301. doi: 10.1016/j.jcmg.2018.11.031. Epub 2019 Feb 13.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30772227", null, null, null));
+
+			sb = new StringBuilder("Kanagala P, Cheng ASH, Singh A, McAdam J, Marsh AM, Arnold JR, Squire IB, Ng LL, McCann GP. ");
+			sb.Append("Diagnostic and prognostic utility of cardiovascular magnetic resonance imaging in heart failure with preserved ejection fraction - implications for clinical trials. ");
+			sb.Append("J Cardiovasc Magn Reson. 2018 Jan 11;20(1):4. doi: 10.1186/s12968-017-0424-9.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29321034", null, null, null));
+
             // countries
             
             // iec
@@ -1991,63 +1941,50 @@ fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29321034", null, nu
 	        // Study 
 	        
 	        string display_title = "Combination Chemotherapy Plus Surgery and Radiation Therapy in Treating Patients With Ewing’s Sarcoma";
-	        StringBuilder sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        string dss = sb.ToString();
+	        StringBuilder sb = new StringBuilder("RATIONALE: Drugs used in chemotherapy use different ways to stop tumor cells from dividing so they stop growing or die. ");
+	        sb.Append("Radiation therapy uses high-energy x-rays to damage tumor cells. Combining more than one drug with surgery and radiation therapy may kill "); 
+	        sb.Append("more tumor cells. It is not yet known which combination chemotherapy regimen is most effective in treating patients with Ewing’s sarcoma.\n\n"); 
+	        sb.Append("PURPOSE: Randomized phase III trial to compare various combination chemotherapy regimens plus surgery and radiation therapy in treating patients who have Ewing’s sarcoma."); 
+            string brief_desc = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
-		        , , null, null, 10);
-            /*
-            
-call expected.insert_study_names(sid =>_sid, 
-						title =>'Combination Chemotherapy Plus Surgery and Radiation Therapy in Treating Patients With Ewing’s Sarcoma', 
-						brief_desc =>'RATIONALE: Drugs used in chemotherapy use different ways to stop tumor cells from dividing so they stop growing or die. Radiation therapy uses high-energy x-rays to damage tumor cells. Combining more than one drug with surgery and radiation therapy may kill more tumor cells. It is not yet known which combination chemotherapy regimen is most effective in treating patients with Ewing’s sarcoma.
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 1992, 7, 11, 0, null, 980,
+		        null, null, 35, 17, 10);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "1999 Nov 1", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "CDR0000078196", 14, 100162, 
+		        "National Cancer Institute", "https://ror.org/040gcmg81", null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "GER-GPOH-EICESS-92", 1, 12, 
+		        "No organisation name provided in source data", null, null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "MRC-EICESS-92", 1, 12, 
+		        "No organisation name provided in source data", null, null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "EU-92030", 1, 12, 
+		        "No organisation name provided in source data", null, null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "EU-205116", 1, 12, 
+		        "No organisation name provided in source data", null, null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "UKCCSG-ET1993-02", 1, 12, 
+		        "No organisation name provided in source data", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "EUROPEAN INTERGROUP COOPERATIVE EWING’S SARCOMA STUDY [EICESS 92]", 16, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Heribert F Juergens", "University Hospital Muenster", 
+		        100649, "University Hospital Muenster", null));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Alan W Craft", "Newcastle-upon-Tyne Hospitals NHS Trust", 
+		        null, "Newcastle-upon-Tyne Hospitals NHS Trust", null));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100649, "University Hospital Muenster", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100456, "Medical Research Council", "https://ror.org/03x94j517"));
 
-PURPOSE: Randomized phase III trial to compare various combination chemotherapy regimens plus surgery and radiation therapy in treating patients who have Ewing’s sarcoma.'
-					   );
-
-call expected.insert_study_details(sid =>_sid, syear => 1992, smonth => 7, typeid => 11, statusid => 0);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => null, eligid => 900, minage => null, minageu => null, maxage => 35, maxageu => 17);
-
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Combination Chemotherapy Plus Surgery and Radiation Therapy in Treating Patients With Ewing’s Sarcoma', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'EUROPEAN INTERGROUP COOPERATIVE EWING’S SARCOMA STUDY [EICESS 92]', isdefault => false, comms => 'From Clinicaltrials.gov');
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '1999 Nov 1');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'CDR0000078196', idorgname => 'National Cancer Institute (NCI)');
-call expected.insert_study_identifier(sid => _sid, typeid => 1, idvalue => 'GER-GPOH-EICESS-92', idorgid => 12, idorgname => 'No organisation name provided in source data');
-call expected.insert_study_identifier(sid => _sid, typeid => 1, idvalue => 'MRC-EICESS-92', idorgid => 12, idorgname => 'No organisation name provided in source data');
-call expected.insert_study_identifier(sid => _sid, typeid => 1, idvalue => 'EU-92030', idorgid => 12, idorgname => 'No organisation name provided in source data');
-call expected.insert_study_identifier(sid => _sid, typeid => 1, idvalue => 'EU-205116', idorgid => 12, idorgname => 'No organisation name provided in source data');
-call expected.insert_study_identifier(sid => _sid, typeid => 1, idvalue => 'UKCCSG-ET1993-02', idorgid => 12, idorgname => 'No organisation name provided in source data');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Heribert F Juergens', affiliation => 'University Hospital Muenster', orgname => 'University Hospital Muenster' );
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Alan W Craft', affiliation =>  'Newcastle-upon-Tyne Hospitals NHS Trust', orgname => 'Newcastle-upon-Tyne Hospitals NHS Trust' );
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'University Hospital Muenster');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'Medical Research Council');
-
-	        fs.features!.Add(new (sd_sid, 20, 130));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 215));   // 
-	        fs.features.Add(new (sd_sid, 23, 325));   // 
-	        fs.features.Add(new (sd_sid, 24, 525));   // 
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 215));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 325));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 525));   // 
 	        
 	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "localized Ewing sarcoma/peripheral primitive neuroectodermal tumor", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "metastatic Ewing sarcoma/peripheral primitive neuroectodermal tumor", null, null, null, null));
-
+            /*
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000003609', mvalue => 'Dactinomycin');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000003520', mvalue => 'Cyclophosphamide');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000007069', mvalue => 'Ifosfamide');
@@ -2055,32 +1992,30 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D0000
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000005047', mvalue => 'Etoposide');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000014750', mvalue => 'Vincristine');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'C000506643', mvalue => 'Liposomal doxorubicin');
+
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000012509', mvalue => 'Sarcoma');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000012512', mvalue => 'Sarcoma, Ewing');
-
---insert into study_relationships()
---values()
-
-sb = new StringBuilder("Sari N, Toğral G, Cetindağ MF, Güngör BS, Ilhan IE. ");
-sb.Append("Treatment results of the Ewing sarcoma of bone and prognostic factors. ");
-sb.Append("Pediatr Blood Cancer. 2010 Jan;54(1):19-24. doi: 10.1002/pbc.22278.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "19760772", null, null, null));
-
-sb = new StringBuilder("Paulussen M, Craft AW, Lewis I, Hackshaw A, Douglas C, Dunst J, Schuck A, Winkelmann W, Köhler G, Poremba C, Zoubek A, Ladenstein R, van den Berg H, Hunold A, Cassoni A, Spooner D, Grimer R, Whelan J, McTiernan A, Jürgens H; European Intergroup Cooperative Ewing’s Sarcoma Study-92. ");
-sb.Append("Results of the EICESS-92 Study: two randomized trials of Ewing’s sarcoma treatment--cyclophosphamide compared with ifosfamide in standard-risk patients and assessment of benefit of etoposide added to standard treatment in high-risk patients. ");
-sb.Append("J Clin Oncol. 2008 Sep 20;26(27):4385-93. doi: 10.1200/JCO.2008.16.5720.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "18802150", null, null, null));
-							
-sb = new StringBuilder("Whelan J, McTiernan A, Weston C, et al.: ");
-sb.Append("Consequences of different approaches to local treatment of Ewing’s sarcoma within an international randomised controlled trial: analysis of EICESS-92. [Abstract] ");
-sb.Append("J Clin Oncol 24 (Suppl 18): A-9533, 528s, 2006.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), null, null, null, null));
-
-sb = new StringBuilder("Paulussen M, Craft AW, Lewis I, et al.: ");
-sb.Append("Ewing tumor of bone - updated report of the European Intergroup Cooperative Ewing’s Sarcoma Study EICESS 92. [Abstract] ");
-sb.Append("Proceedings of the American Society of Clinical Oncology 21: A-1568, 2002.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), null, null, null, null));
  */
+			sb = new StringBuilder("Sari N, Toğral G, Cetindağ MF, Güngör BS, Ilhan IE. ");
+			sb.Append("Treatment results of the Ewing sarcoma of bone and prognostic factors. ");
+			sb.Append("Pediatr Blood Cancer. 2010 Jan;54(1):19-24. doi: 10.1002/pbc.22278.");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "19760772", null, null, null));
+
+			sb = new StringBuilder("Paulussen M, Craft AW, Lewis I, Hackshaw A, Douglas C, Dunst J, Schuck A, Winkelmann W, Köhler G, Poremba C, Zoubek A, Ladenstein R, van den Berg H, Hunold A, Cassoni A, Spooner D, Grimer R, Whelan J, McTiernan A, Jürgens H; European Intergroup Cooperative Ewing’s Sarcoma Study-92. ");
+			sb.Append("Results of the EICESS-92 Study: two randomized trials of Ewing’s sarcoma treatment--cyclophosphamide compared with ifosfamide in standard-risk patients and assessment of benefit of etoposide added to standard treatment in high-risk patients. ");
+			sb.Append("J Clin Oncol. 2008 Sep 20;26(27):4385-93. doi: 10.1200/JCO.2008.16.5720.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "18802150", null, null, null));
+										
+			sb = new StringBuilder("Whelan J, McTiernan A, Weston C, et al.: ");
+			sb.Append("Consequences of different approaches to local treatment of Ewing’s sarcoma within an international randomised controlled trial: analysis of EICESS-92. [Abstract] ");
+			sb.Append("J Clin Oncol 24 (Suppl 18): A-9533, 528s, 2006.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), null, null, null, null));
+
+			sb = new StringBuilder("Paulussen M, Craft AW, Lewis I, et al.: ");
+			sb.Append("Ewing tumor of bone - updated report of the European Intergroup Cooperative Ewing’s Sarcoma Study EICESS 92. [Abstract] ");
+			sb.Append("Proceedings of the American Society of Clinical Oncology 21: A-1568, 2002.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), null, null, null, null));
+
             // countries
             
             // iec
@@ -2115,55 +2050,40 @@ fs.references.Add(new StudyReference(sd_sid, sb.ToString(), null, null, null, nu
 	        // Study 
 	        
 	        string display_title = "Steroid Withdrawal in Pediatric Kidney Transplant Recipients";
-	        StringBuilder sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
+	        StringBuilder sb = new StringBuilder("The purpose of this study is to examine the effects of withdrawing steroids on graft rejection and ");
+	        sb.Append("kidney functions in kidney transplant recipients between the ages of 0 and 20 years (prior to their 21st birthday).\n\n"); 
+	        sb.Append("Graft survival has improved in recent years in children with kidney transplants. One bad side effect of steroid maintenance therapy "); 
+	        sb.Append("has been growth retardation. Doctors believe steroids might be safely withdrawn in patients that are receiving other maintenance therapies. "); 
+	        sb.Append("If steroids are removed, children might catch up in their growth and also might have fewer side effects of other kinds. "); 
+	        sb.Append("This study evaluates whether steroid therapy can be withdrawn in a way that does not increase graft rejection."); 
 	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
+	        sb = new StringBuilder("(As of October 2016): Participant level data and additional relevant materials are available ");
+	        sb.Append("to the public in the Immunology Database and Analysis Portal (ImmPort). "); 
+	        sb.Append("ImmPort is a long-term archive of clinical and mechanistic data from DAIT-funded grants and contracts."); 
 	        string dss = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
-		        , , null, null, 10);
-            /*
-            
-call expected.insert_study_names(sid => _sid, 
-						title =>'Steroid Withdrawal in Pediatric Kidney Transplant Recipients', 
-						brief_desc =>'The purpose of this study is to examine the effects of withdrawing steroids on graft rejection and kidney functions in kidney transplant recipients between the ages of 0 and 20 years (prior to their 21st birthday).
-
-Graft survival has improved in recent years in children with kidney transplants. One bad side effect of steroid maintenance therapy has been growth retardation. Doctors believe steroids might be safely withdrawn in patients that are receiving other maintenance therapies. If steroids are removed, children might catch up in their growth and also might have fewer side effects of other kinds. This study evaluates whether steroid therapy can be withdrawn in a way that does not increase graft rejection.',
-						dss => '(As of October 2016): Participant level data and additional relevant materials are available to the public in the Immunology Database and Analysis Portal (ImmPort). ImmPort is a long-term archive of clinical and mechanistic data from DAIT-funded grants and contracts.'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2001, smonth => 1, typeid => 11, statusid => 22);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '274', eligid => 900, minage => null, minageu => null, maxage => 20, maxageu => 17);
-
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients', isdefault => true, comms => 'From Clinicaltrials.gov' );
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'A Double-Blind Randomized Trial of Steroid Withdrawal in Sirolimus- and Cyclosporine-Treated Primary Transplant Recipients', isdefault => false, comms =>'From Clinicaltrials.gov' );
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2001 Aug 29');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'DAIT SW01', idorgname => 'National Institute of Allergy and Infectious Diseases (NIAID)');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'William Harmon', affiliation => 'Boston Children’s Hospital', orgname => 'Boston Children’s Hospital' );
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'National Institute of Allergy and Infectious Diseases (NIAID)');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'Cooperative Clinical Trials in Pediatric Transplantation');
-
-	        fs.features!.Add(new (sd_sid, 20, 120));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 305));   // 
-	        fs.features.Add(new (sd_sid, 24, 510));   // 
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2001, 1, 11, 22, "274", 900,
+		        null, null, 20, 17, 10);
 	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2001 Aug 29", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "DAIT SW01", 14, 100168, 
+		        "National Institute of Allergy and Infectious Diseases", "https://ror.org/043z4tv69", null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "A Double-Blind Randomized Trial of Steroid Withdrawal in Sirolimus- and Cyclosporine-Treated Primary Transplant Recipients", 
+		        16, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100168, "National Institute of Allergy and Infectious Diseases", "https://ror.org/043z4tv69"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Cooperative Clinical Trials in Pediatric Transplantation", null));
+
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 510));   // 
+	        
+            /*	        
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000016572', mvalue => 'Cyclosporine');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000020123', mvalue => 'Sirolimus');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000013420', mvalue => 'Sulfamethoxazole');
@@ -2175,21 +2095,21 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D0000
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000003524', mvalue => 'Cyclosporins');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000077552', mvalue => 'Basiliximab');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000007676', mvalue => 'Kidney Failure, Chronic');
-
-
-sb = new StringBuilder("Benfield MR, Bartosh S, Ikle D, Warshaw B, Bridges N, Morrison Y, Harmon W. ");
-sb.Append("A randomized double-blind, placebo controlled trial of steroid withdrawal after pediatric renal transplantation. ");
-sb.Append("Am J Transplant. 2010 Jan;10(1):81-8. doi: 10.1111/j.1600-6143.2009.02767.x. Epub 2009 Jul 28.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "19663893", null, null, null));
-
-sb = new StringBuilder("McDonald RA, Smith JM, Ho M, Lindblad R, Ikle D, Grimm P, Wyatt R, Arar M, Liereman D, Bridges N, Harmon W; CCTPT Study Group. ");
-sb.Append("Incidence of PTLD in pediatric renal transplant recipients receiving basiliximab, calcineurin inhibitor, sirolimus and steroids. ");
-sb.Append("Am J Transplant. 2008 May;8(5):984-9. doi: 10.1111/j.1600-6143.2008.02167.x.'");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "18416737", null, null, null));
-
-fs.studylinks!.Add(new StudyLink(sd_sid, "National Institute of Allergy and Infectious Diseases (NIAID)", "https://www.niaid.nih.gov"));
-fs.studylinks.Add(new StudyLink(sd_sid, "Division of Allergy, Immunology, and Transplantation (DAIT)", "https://www.niaid.nih.gov/about/dait"));
 			 */
+
+			sb = new StringBuilder("Benfield MR, Bartosh S, Ikle D, Warshaw B, Bridges N, Morrison Y, Harmon W. ");
+			sb.Append("A randomized double-blind, placebo controlled trial of steroid withdrawal after pediatric renal transplantation. ");
+			sb.Append("Am J Transplant. 2010 Jan;10(1):81-8. doi: 10.1111/j.1600-6143.2009.02767.x. Epub 2009 Jul 28.");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "19663893", null, null, null));
+
+			sb = new StringBuilder("McDonald RA, Smith JM, Ho M, Lindblad R, Ikle D, Grimm P, Wyatt R, Arar M, Liereman D, Bridges N, Harmon W; CCTPT Study Group. ");
+			sb.Append("Incidence of PTLD in pediatric renal transplant recipients receiving basiliximab, calcineurin inhibitor, sirolimus and steroids. ");
+			sb.Append("Am J Transplant. 2008 May;8(5):984-9. doi: 10.1111/j.1600-6143.2008.02167.x.'");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "18416737", null, null, null));
+
+			fs.studylinks!.Add(new StudyLink(sd_sid, "National Institute of Allergy and Infectious Diseases (NIAID)", "https://www.niaid.nih.gov"));
+			fs.studylinks.Add(new StudyLink(sd_sid, "Division of Allergy, Immunology, and Transplantation (DAIT)", "https://www.niaid.nih.gov/about/dait"));
+
             // countries
             
             // iec
@@ -2212,44 +2132,63 @@ fs.studylinks.Add(new StudyLink(sd_sid, "Division of Allergy, Immunology, and Tr
             sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2016 Oct 21 (est.)", 2016, 10, 21, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
+            
+            // 2) IPD available - referencing IMMPORT
 
-            return fs;
-            /*
+            sd_oid = sd_sid + " :: 80 :: Individual Participant Data Set (SDY133)";
+            ob_title = display_title + " :: Individual Participant Data Set (SDY133)";
+            sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual Participant Data Set (SDY133)", 
+	            null, ob_title, null, 9, null, 14, 80, 100168, "National Institute of Allergy and Infectious Diseases", 
+	            "https://ror.org/043z4tv69", "en", 12, null, null, 3, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, null, "Immport", 
+	            "http://www.immport.org/immport-open/public/study/study/displayStudyDetail/SDY133", 
+	            true, 39, null, null, null));
 
--- form IPD available - referencing IMMPORT
--- IPD
-_oid = _sid ||' :: 80 :: Individual Participant Data Set (SDY133)';
+            sdo.dataset_details = new ObjectDataset(sd_oid, null, null, null, null, null, null,
+	            null, null, null, null, null, null, null, null, null, null);
 
-call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
-							     title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Individual Participant Data Set (SDY133)',
-							     obclassid => 14, obtypeid => 80, managingorgname => 'National Institute of Allergy and Infectious Diseases (NIAID)', acctypeid => 11, eosccat => 3);
-call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Individual Participant Data Set (SDY133)',
-isdefault => true);
-call expected.insert_object_instance(sd_oid => _oid, reporgname => 'Immport', purl => 'http://www.immport.org/immport-open/public/study/study/displayStudyDetail/SDY133', restypeid => 0);
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_object_dataset (sd_oid => _oid);
+            // 3) Study protocol
 
--- Study protocol
-_oid = _sid ||' :: 11 :: Study Protocol (SDY133)';
+            sd_oid = sd_sid + " :: 11 :: Study Protocol (SDY133)";
+            ob_title = display_title + " :: Study Protocol (SDY133)";
+            sdo = CreateEmptyStudyDataObject();
 
-call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
-							     title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Study Protocol (SDY133)',
-							     obclassid => 23, obtypeid => 11, managingorgname => 'National Institute of Allergy and Infectious Diseases (NIAID)', acctypeid => 11, eosccat => 0);
-call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Study Protocol (SDY133)',
-isdefault => true);
-call expected.insert_object_instance(sd_oid => _oid, reporgname => 'Immport', purl => 'http://www.immport.org/immport-open/public/study/study/displayStudyDetail/SDY133', restypeid => 11);
-
--- Study summary, -design,-demographics, -files et al.
-_oid = _sid ||' :: 38 :: Study summary, -design,-demographics, -files et al. (SDY133)';
-
-call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
-							     title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Study summary, -design,-demographics, -files et al. (SDY133)',
-							     obclassid => 23, obtypeid => 38, managingorgname => 'National Institute of Allergy and Infectious Diseases (NIAID)', acctypeid => 11, eosccat => 0);
-call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'Steroid Withdrawal in Pediatric Kidney Transplant Recipients :: Study summary, -design,-demographics, -files et al. (SDY133)',
-isdefault => true);
-call expected.insert_object_instance(sd_oid => _oid, reporgname => 'Immport', purl => 'http://www.immport.org/immport-open/public/study/study/displayStudyDetail/SDY133', restypeid => 0);
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol (SDY133)", null, ob_title,
+	            null, 9, null, 23, 11, 100168, "National Institute of Allergy and Infectious Diseases", 
+	            "https://ror.org/043z4tv69", "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, null, "Immport", 
+	            "'http://www.immport.org/immport-open/public/study/study/displayStudyDetail/SDY133", 
+	            true, 11, null, null, null));
  
-             */           
+	        fs.data_objects!.Add(sdo);
+            
+            // 4) Study summary, -design,-demographics, -files et al.
+
+            sd_oid = sd_sid + " :: 38 :: Study summary, -design,-demographics, -files et al. (SDY133)";
+            ob_title = display_title + " :: Study summary, -design,-demographics, -files et al. (SDY133)";
+            sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Study summary, -design,-demographics, -files et al. (SDY133)", 
+	            null, ob_title, null, 9, null, 23, 38, 100168, "National Institute of Allergy and Infectious Diseases", 
+	            "https://ror.org/043z4tv69", "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, null, "Immport", 
+	            "http://www.immport.org/immport-open/public/study/study/displayStudyDetail/SDY133", 
+	            true, 11, null, null, null));
+            
+            fs.data_objects!.Add(sdo);
+            
+            return fs;
+                 
         }
 
         if (sd_sid == "NCT01727258")
@@ -2259,59 +2198,40 @@ call expected.insert_object_instance(sd_oid => _oid, reporgname => 'Immport', pu
 	        // Study 
 	        
 	        string display_title = "A Test on a New Experimental Mouth Rinse for Relieving Tooth Sensitivity";
-	        StringBuilder sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
+	        StringBuilder sb = new StringBuilder("This study is for people with sensitive teeth and involves going to the dentist for 4 visits over 6 weeks. ");
+	        sb.Append("At each visit the dentist will look at the mouth, teeth, tongue and gums of subjects, and check for sensitive teeth.\n\n"); 
+	        sb.Append("During the first 2 weeks, participants will brush their teeth two times a day with the fluoride toothpaste provided.\n\n"); 
+	        sb.Append("Then, if they qualify to continue in the study, participants will be assigned to a treatment group. All the groups will "); 
+	        sb.Append("get toothpaste currently sold on the market, and one group will get a mouthwash with an experimental ingredient to use "); 
+	        sb.Append("as well. Subjects will have an equal chance of being assigned to any one of the three groups.\n\n"); 
+	        sb.Append("For the next 4 weeks, subjects will use their assigned products according to the directions provided. At Visit 1 subjects "); 
+	        sb.Append("ill be supervised while they brush their teeth to ensure they understand the directions. "); 
+	        sb.Append("They will also have supervised use of the product at Visit 2.\n\n"); 
+	        sb.Append("We will see if the mouthwash helps to reduce tooth sensitivity during the study.\n\n"); 
 	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        string dss = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
-		        , , null, null, 10);
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2012, 12, 11, 21, "153", 900,
+		        18, 17, null, null, 10);
 	        
-            /*
-             
-call expected.insert_study_names(sid => _sid, 
-						title =>'A Test on a New Experimental Mouth Rinse for Relieving Tooth Sensitivity', 
-						brief_desc =>'This study is for people with sensitive teeth and involves going to the dentist for 4 visits over 6 weeks. At each visit the dentist will look at the mouth, teeth, tongue and gums of subjects, and check for sensitive teeth.
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2012 Nov 12", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "KOXDHY0008", 14, null, 
+		        "Johnson & Johnson Consumer and Personal Products Worldwide", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "Evaluation of an Experimental Mouth Rinse Device for Relieving Dentinal Hypersensitivity", 16, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Michael Lynch", "Johnson & Johnson Consumer and Personal Products Worldwide", 
+		        null, "Johnson & Johnson Consumer and Personal Products Worldwide", null));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Johnson & Johnson Consumer and Personal Products Worldwide", null));
 
-During the first 2 weeks, participants will brush their teeth two times a day with the fluoride toothpaste provided.
-
-Then, if they qualify to continue in the study, participants will be assigned to a treatment group. All the groups will get toothpaste currently sold on the market, and one group will get a mouthwash with an experimental ingredient to use as well. Subjects will have an equal chance of being assigned to any one of the three groups.
-
-For the next 4 weeks, subjects will use their assigned products according to the directions provided. At Visit 1 subjects will be supervised while they brush their teeth to ensure they understand the directions. They will also have supervised use of the product at Visit 2.
-
-We will see if the mouthwash helps to reduce tooth sensitivity during the study.'   );
-
-call expected.insert_study_details(sid => _sid, syear => 2012, smonth => 12, typeid => 11, statusid => 21);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '153', eligid => 900, minage => 18, minageu => 17, maxage => null, maxageu => null);
-
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'A Test on a New Experimental Mouth Rinse for Relieving Tooth Sensitivity', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'Evaluation of an Experimental Mouth Rinse Device for Relieving Dentinal Hypersensitivity', isdefault => false, comms => 'From Clinicaltrials.gov');
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2012 Nov 12');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'KOXDHY0008', idorgname => 'Johnson & Johnson Consumer and Personal Products Worldwide');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Michael Lynch', affiliation => 'Johnson & Johnson Consumer and Personal Products Worldwide', orgname => 'Johnson & Johnson Consumer and Personal Products Worldwide');
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'Johnson & Johnson Consumer and Personal Products Worldwide');
-
-	        fs.features!.Add(new (sd_sid, 20, 100));  // 
-	        fs.features.Add(new (sd_sid, 21, 445));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 305));   // 
-	        fs.features.Add(new (sd_sid, 24, 505));   // 
-
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 100));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 445));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 505));   // 
+  /*
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000005459', mvalue => 'Fluorides');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000003807', mvalue => 'Dentin Sensitivity');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006967', mvalue => 'Hypersensitivity');
@@ -2366,58 +2286,38 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 	        // Study 
 	        
 	        string display_title = "Fresh, Frozen or Lyophilized Fecal Microbiota Transplantation for Multiple Recurrent C. Difficile Associated Diarrhea";
-	        StringBuilder sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
+	        StringBuilder sb = new StringBuilder("The objective of the study is to investigate the efficacy of fresh, frozen or lyophilized fecal ");
+	        sb.Append("microbiota transplantation (FMT) via colonoscopy in patients with recurrent C. difficile associated diarrhea (RCDAD). "); 
+	        sb.Append("Frozen, lyophilized or fresh fecal microbiota transplantation (FMT) inoculum will be generated from well-screened "); 
+	        sb.Append("healthy volunteer donors of ≥150 gram/sample. Delivery of FMT will be performed colonoscopically. Fecal samples from "); 
+	        sb.Append("donors and recipients will be saved for later metagenomic studies to characterize the microbiome of the gut in patients before and after FMT."); 
 	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        string dss = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
-		        , , null, null, 10);
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2013, 8, 11, 21, "79", 900,
+		        18, 17, null, null, 10);
 	        
-            /*
-call expected.insert_study_names(sid => _sid, 
-						title =>'Fresh, Frozen or Lyophilized Fecal Microbiota Transplantation for Multiple Recurrent C. Difficile Associated Diarrhea', 
-						brief_desc =>'The objective of the study is to investigate the efficacy of fresh, frozen or lyophilized fecal microbiota transplantation (FMT) via colonoscopy in patients with recurrent C. difficile associated diarrhea (RCDAD). Frozen, lyophilized or fresh fecal microbiota transplantation (FMT) inoculum will be generated from well-screened healthy volunteer donors of ≥150 gram/sample. Delivery of FMT will be performed colonoscopically. Fecal samples from donors and recipients will be saved for later metagenomic studies to characterize the microbiome of the gut in patients before and after FMT.'
-					   );
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2014 Dec 9", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HSC-SPH-13-0119", 14, null, 
+		        "The University of Texas Health Science Center, Houston", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Herbert L DuPont", "The University of Texas Health Science Center, Houston", 
+		        null, "The University of Texas Health Science Center, Houston", null));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Zhi-Dong Jiang", "The University of Texas Health Science Center, Houston", 
+		        null, "The University of Texas Health Science Center, Houston", null));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "The University of Texas Health Science Center, Houston", null));
 
-call expected.insert_study_details(sid => _sid, syear => 2013, smonth => 8, typeid => 11, statusid => 21);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '79', eligid => 900, minage => 18, minageu => 17, maxage => null, maxageu => null);
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 110));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 20, 120));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Fresh, Frozen or Lyophilized Fecal Microbiota Transplantation for Multiple Recurrent C. Difficile Associated Diarrhea', isdefault => true, comms => 'From Clinicaltrials.gov');
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2014 Dec 9');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'HSC-SPH-13-0119', idorgname => 'The University of Texas Health Science Center, Houston');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Herbert L DuPont', affiliation => 'The University of Texas Health Science Center, Houston', orgname => 'The University of Texas Health Science Center, Houston');
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Zhi-Dong Jiang', affiliation =>  'The University of Texas Health Science Center, Houston', orgname => 'The University of Texas Health Science Center, Houston');
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'The University of Texas Health Science Center, Houston');
-
-call expected.insert_study_feature(sid => _sid, typeid => 20, valueid  => 110);
-call expected.insert_study_feature(sid => _sid, typeid => 20, valueid  => 120);
-call expected.insert_study_feature(sid => _sid, typeid => 21, valueid  => 400);
-call expected.insert_study_feature(sid => _sid, typeid => 22, valueid  => 205);
-call expected.insert_study_feature(sid => _sid, typeid => 23, valueid  => 305);
-call expected.insert_study_feature(sid => _sid, typeid => 24, valueid  => 500);
-
-	        fs.features!.Add(new (sd_sid, 20, 110));  // 
-	        fs.features.Add(new (sd_sid, 20, 120));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 305));   // 
-	        fs.features.Add(new (sd_sid, 24, 500));   // 
-
+ /*
 call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Recurrent C. Difficile Associated Diarrhea');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000003967', mvalue => 'Diarrhea');
 
@@ -2463,26 +2363,25 @@ call expected.insert_study_relationship(sid => _sid, typeid => 23, targetsid => 
             sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2019 May 13", 2019, 5, 13, null, null, null, null));
 
             fs.data_objects!.Add(sdo);
-
+            
+            // 3) Study Protocol and Statistical Analysis Plan
+            
+            sd_oid = sd_sid + " :: 74 :: Study Protocol and Statistical Analysis Plan";
+            ob_title = display_title + " :: Study Protocol and Statistical Analysis Plan";
+            sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol and Statistical Analysis Plan", null, ob_title,
+	            null, 9, 2019, 23, 74, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://storage.googleapis.com/ctgov2-large-docs/92/NCT02318992/Prot_SAP_000.pdf", 
+	            true, 11, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2017 Mar 15", 2017, 3, 15, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2019 Mar 25", 2019, 3, 25, null, null, null, null));
+	            
+            fs.data_objects!.Add(sdo);
+            
             return fs;
-            /*
-
--- other objects
-_oid = _sid ||' :: 74 :: Study Protocol and Statistical Analysis Plan';
-
-call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
-                                 title => 'Fresh, Frozen or Lyophilized Fecal Microbiota Transplantation for Multiple Recurrent C. Difficile Associated Diarrhea :: Study Protocol and Statistical Analysis Plan', 
-								 pubyear => 2019, obclassid => 23, obtypeid => 74, managingorgid => 100120, managingorgname => 'ClinicalTrials.gov', acctypeid => 11, eosccat => 0);
-
-call expected.insert_object_title(sd_oid => _oid, typeid => 21, title => 'Fresh, Frozen or Lyophilized Fecal Microbiota Transplantation for Multiple Recurrent C. Difficile Associated Diarrhea :: Study Protocol and Statistical Analysis Plan', isdefault => true);
-
-call expected.insert_object_instance(sd_oid => _oid, reporgid => 100120, reporgname => 'ClinicalTrials.gov', 
-purl => 'https://clinicaltrials.gov/ProvidedDocs/92/NCT02318992/Prot_SAP_000.pdf', restypeid => 11);
-
-call expected.insert_object_date(sd_oid => _oid, typeid => 15, datestring => '2017 Mar 15', syear => 2017, smonth => 3, sday => 15);
-call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '2019 Mar 25', syear => 2019, smonth => 3, sday => 25);
- 
-             */            
         }
         
         if (sd_sid == "NCT02243202")
@@ -2492,243 +2391,223 @@ call expected.insert_object_date(sd_oid => _oid, typeid => 12, datestring => '20
 	        // Study 
 	        
 	        string display_title = "Aldosterone Antagonist Therapy for Adults With Heart Failure and Preserved Systolic Function";
-	        StringBuilder sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
+	        StringBuilder sb = new StringBuilder("The purpose of this study is to evaluate the effectiveness of aldosterone antagonist therapy in reducing cardiovascular ");
+	        sb.Append("mortality, aborted cardiac arrest, and heart failure hospitalization in patients who have heart failure with preserved systolic function."); 
 	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        string dss = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
-		        , , null, null, 10);
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2006, 8, 12, 21, "3445", 900,
+		        50, 17, null, null, 10);
 	        
-            /*
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2004 Oct 15", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "160", 14, null, 
+		        "HealthCore-NERI", null, null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HHSN268200425207C", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88", null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist (TOPCAT)", 16, "en", 11, false, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "TOPCAT", 14, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Sonja M McKinlay", "New England Research Institutes, Inc", 
+		        null, "New England Research Institutes", null));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "HealthCore-NERI", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100167, "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26"));
 
-call expected.insert_study_names(sid => _sid, 
-						title =>'Aldosterone Antagonist Therapy for Adults With Heart Failure and Preserved Systolic Function', 
-						brief_desc =>'The purpose of this study is to evaluate the effectiveness of aldosterone antagonist therapy in reducing cardiovascular mortality, aborted cardiac arrest, and heart failure hospitalization in patients who have heart failure with preserved systolic function.'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2006, smonth => 8, typeid => 11, statusid => 21);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '3445', eligid => 900, minage => 50, minageu => 17, maxage => null, maxageu => null);
-
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'Aldosterone Antagonist Therapy for Adults With Heart Failure and Preserved Systolic Function', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist (TOPCAT)', isdefault => false, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 14, 
-                         title => 'TOPCAT', isdefault => false, comms => 'From Clinicaltrials.gov');	
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2004 Oct 15');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => '160', idorgname => 'HealthCore-NERI');
-call expected.insert_study_identifier(sid => _sid, typeid => 13, idvalue => 'HHSN268200425207C', idorgname => 'NIH contract');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Sonja M McKinlay', affiliation => 'New England Research Institutes, Inc', orgname => 'New England Research Institutes' );
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'HealthCore-NERI');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'National Heart, Lung, and Blood Institute (NHLBI)');
-
-	        fs.features!.Add(new (sd_sid, 20, 130));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 305));   // 
-	        fs.features.Add(new (sd_sid, 24, 515));   // 
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 515));   // 
 
 	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Diastolic Heart Failure", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Preserved Ejection Fraction", null, null, null, null));
-
+ /*
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000013148', mvalue => 'Spironolactone');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000000451', mvalue => 'Mineralocorticoid Receptor Antagonists');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006333', mvalue => 'Heart Failure');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006331', mvalue => 'Heart Diseases');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002318', mvalue => 'Cardiovascular Diseases');
 
+*/
+			sb = new StringBuilder("Shah SJ, Heitner JF, Sweitzer NK, Anand IS, Kim HY, Harty B, Boineau R, Clausell N, Desai AS, Diaz R, Fleg JL, Gordeev I, Lewis EF, Markov V, O’Meara E, Kobulia B, Shaburishvili T, Solomon SD, Pitt B, Pfeffer MA, Li R. B");
+			sb.Append("Baseline characteristics of patients in the treatment of preserved cardiac function heart failure with an aldosterone antagonist trial. ");
+			sb.Append("Circ Heart Fail. 2013 Mar;6(2):184-92. doi: 10.1161/CIRCHEARTFAILURE.112.972794. Epub 2012 Dec 20.");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "23258572", null, null, null));
 
-sb = new StringBuilder("Shah SJ, Heitner JF, Sweitzer NK, Anand IS, Kim HY, Harty B, Boineau R, Clausell N, Desai AS, Diaz R, Fleg JL, Gordeev I, Lewis EF, Markov V, O’Meara E, Kobulia B, Shaburishvili T, Solomon SD, Pitt B, Pfeffer MA, Li R. B");
-sb.Append("Baseline characteristics of patients in the treatment of preserved cardiac function heart failure with an aldosterone antagonist trial. ");
-sb.Append("Circ Heart Fail. 2013 Mar;6(2):184-92. doi: 10.1161/CIRCHEARTFAILURE.112.972794. Epub 2012 Dec 20.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "23258572", null, null, null));
+			sb = new StringBuilder("Shah AM, Shah SJ, Anand IS, Sweitzer NK, O’Meara E, Heitner JF, Sopko G, Li G, Assmann SF, McKinlay SM, Pitt B, Pfeffer MA, Solomon SD; TOPCAT Investigators. ");
+			sb.Append("Cardiac structure and function in heart failure with preserved ejection fraction: baseline findings from the echocardiographic study of the Treatment of Preserved Cardiac Function Heart Failure with an Aldosterone Antagonist trial. ");
+			sb.Append("Circ Heart Fail. 2014 Jan;7(1):104-15. doi: 10.1161/CIRCHEARTFAILURE.113.000887. Epub 2013 Nov 18.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "24249049", null, null, null));
 
-sb = new StringBuilder("Shah AM, Shah SJ, Anand IS, Sweitzer NK, O’Meara E, Heitner JF, Sopko G, Li G, Assmann SF, McKinlay SM, Pitt B, Pfeffer MA, Solomon SD; TOPCAT Investigators. ");
-sb.Append("Cardiac structure and function in heart failure with preserved ejection fraction: baseline findings from the echocardiographic study of the Treatment of Preserved Cardiac Function Heart Failure with an Aldosterone Antagonist trial. ");
-sb.Append("Circ Heart Fail. 2014 Jan;7(1):104-15. doi: 10.1161/CIRCHEARTFAILURE.113.000887. Epub 2013 Nov 18.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "24249049", null, null, null));
+			sb = new StringBuilder("Pitt B, Pfeffer MA, Assmann SF, Boineau R, Anand IS, Claggett B, Clausell N, Desai AS, Diaz R, Fleg JL, Gordeev I, Harty B, Heitner JF, Kenwood CT, Lewis EF, O’Meara E, Probstfield JL, Shaburishvili T, Shah SJ, Solomon SD, Sweitzer NK, Yang S, McKinlay SM; TOPCAT Investigators. ");
+			sb.Append("Spironolactone for heart failure with preserved ejection fraction. ");
+			sb.Append("N Engl J Med. 2014 Apr 10;370(15):1383-92. doi: 10.1056/NEJMoa1313731.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "24716680", null, null, null));
 
-sb = new StringBuilder("Pitt B, Pfeffer MA, Assmann SF, Boineau R, Anand IS, Claggett B, Clausell N, Desai AS, Diaz R, Fleg JL, Gordeev I, Harty B, Heitner JF, Kenwood CT, Lewis EF, O’Meara E, Probstfield JL, Shaburishvili T, Shah SJ, Solomon SD, Sweitzer NK, Yang S, McKinlay SM; TOPCAT Investigators. ");
-sb.Append("Spironolactone for heart failure with preserved ejection fraction. ");
-sb.Append("N Engl J Med. 2014 Apr 10;370(15):1383-92. doi: 10.1056/NEJMoa1313731.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "24716680", null, null, null));
+			sb = new StringBuilder("Shah AM, Claggett B, Sweitzer NK, Shah SJ, Anand IS, O’Meara E, Desai AS, Heitner JF, Li G, Fang J, Rouleau J, Zile MR, Markov V, Ryabov V, Reis G, Assmann SF, McKinlay SM, Pitt B, Pfeffer MA, Solomon SD. ");
+			sb.Append("Cardiac structure and function and prognosis in heart failure with preserved ejection fraction: findings from the echocardiographic study of the Treatment of Preserved Cardiac Function Heart Failure with an Aldosterone Antagonist (TOPCAT) Trial. ");
+			sb.Append("Circ Heart Fail. 2014 Sep;7(5):740-51. doi: 10.1161/CIRCHEARTFAILURE.114.001583. Epub 2014 Aug 13.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "25122186", null, null, null));
 
-sb = new StringBuilder("Shah AM, Claggett B, Sweitzer NK, Shah SJ, Anand IS, O’Meara E, Desai AS, Heitner JF, Li G, Fang J, Rouleau J, Zile MR, Markov V, Ryabov V, Reis G, Assmann SF, McKinlay SM, Pitt B, Pfeffer MA, Solomon SD. ");
-sb.Append("Cardiac structure and function and prognosis in heart failure with preserved ejection fraction: findings from the echocardiographic study of the Treatment of Preserved Cardiac Function Heart Failure with an Aldosterone Antagonist (TOPCAT) Trial. ");
-sb.Append("Circ Heart Fail. 2014 Sep;7(5):740-51. doi: 10.1161/CIRCHEARTFAILURE.114.001583. Epub 2014 Aug 13.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "25122186", null, null, null));
+			sb = new StringBuilder("Pfeffer MA, Claggett B, Assmann SF, Boineau R, Anand IS, Clausell N, Desai AS, Diaz R, Fleg JL, Gordeev I, Heitner JF, Lewis EF, O’Meara E, Rouleau JL, Probstfield JL, Shaburishvili T, Shah SJ, Solomon SD, Sweitzer NK, McKinlay SM, Pitt B. ");
+			sb.Append("Regional variation in patients and outcomes in the Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist (TOPCAT) trial. ");
+			sb.Append("Circulation. 2015 Jan 6;131(1):34-42. doi: 10.1161/CIRCULATIONAHA.114.013255. Epub 2014 Nov 18.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "25406305", null, null, null));
 
-sb = new StringBuilder("Pfeffer MA, Claggett B, Assmann SF, Boineau R, Anand IS, Clausell N, Desai AS, Diaz R, Fleg JL, Gordeev I, Heitner JF, Lewis EF, O’Meara E, Rouleau JL, Probstfield JL, Shaburishvili T, Shah SJ, Solomon SD, Sweitzer NK, McKinlay SM, Pitt B. ");
-sb.Append("Regional variation in patients and outcomes in the Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist (TOPCAT) trial. ");
-sb.Append("Circulation. 2015 Jan 6;131(1):34-42. doi: 10.1161/CIRCULATIONAHA.114.013255. Epub 2014 Nov 18.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "25406305", null, null, null));
+			sb = new StringBuilder("Myhre PL, Vaduganathan M, O’Meara E, Claggett BL, de Denus S, Jarolim P, Anand IS, Pitt B, Rouleau JL, Solomon SD, Pfeffer MA, Desai AS. ");
+			sb.Append("Mechanistic Effects of Spironolactone on Cardiovascular and Renal Biomarkers in Heart Failure With Preserved Ejection Fraction: A TOPCAT Biorepository Study. ");
+			sb.Append("Circ Heart Fail. 2020 Jan;13(1):e006638. doi: 10.1161/CIRCHEARTFAILURE.119.006638. Epub 2020 Jan 20.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31957468", null, null, null));
 
-sb = new StringBuilder("Myhre PL, Vaduganathan M, O’Meara E, Claggett BL, de Denus S, Jarolim P, Anand IS, Pitt B, Rouleau JL, Solomon SD, Pfeffer MA, Desai AS. ");
-sb.Append("Mechanistic Effects of Spironolactone on Cardiovascular and Renal Biomarkers in Heart Failure With Preserved Ejection Fraction: A TOPCAT Biorepository Study. ");
-sb.Append("Circ Heart Fail. 2020 Jan;13(1):e006638. doi: 10.1161/CIRCHEARTFAILURE.119.006638. Epub 2020 Jan 20.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31957468", null, null, null));
+			sb = new StringBuilder("Vardeny O, Claggett B, Vaduganathan M, Beldhuis I, Rouleau J, O’Meara E, Anand IS, Shah SJ, Sweitzer NK, Fang JC, Desai AS, Lewis EF, Pitt B, Pfeffer MA, Solomon SD; TOPCAT Investigators. ");
+			sb.Append("Influence of Age on Efficacy and Safety of Spironolactone in Heart Failure. ");
+			sb.Append("JACC Heart Fail. 2019 Dec;7(12):1022-1028. doi: 10.1016/j.jchf.2019.08.019.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31779923", null, null, null));
 
-sb = new StringBuilder("Vardeny O, Claggett B, Vaduganathan M, Beldhuis I, Rouleau J, O’Meara E, Anand IS, Shah SJ, Sweitzer NK, Fang JC, Desai AS, Lewis EF, Pitt B, Pfeffer MA, Solomon SD; TOPCAT Investigators. ");
-sb.Append("Influence of Age on Efficacy and Safety of Spironolactone in Heart Failure. ");
-sb.Append("JACC Heart Fail. 2019 Dec;7(12):1022-1028. doi: 10.1016/j.jchf.2019.08.019.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31779923", null, null, null));
+			sb = new StringBuilder("Angraal S, Mortazavi BJ, Gupta A, Khera R, Ahmad T, Desai NR, Jacoby DL, Masoudi FA, Spertus JA, Krumholz HM. ");
+			sb.Append("Machine Learning Prediction of Mortality and Hospitalization in Heart Failure With Preserved Ejection Fraction. ");
+			sb.Append("JACC Heart Fail. 2020 Jan;8(1):12-21. doi: 10.1016/j.jchf.2019.06.013. Epub 2019 Oct 9.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31606361", null, null, null));
 
-sb = new StringBuilder("Angraal S, Mortazavi BJ, Gupta A, Khera R, Ahmad T, Desai NR, Jacoby DL, Masoudi FA, Spertus JA, Krumholz HM. ");
-sb.Append("Machine Learning Prediction of Mortality and Hospitalization in Heart Failure With Preserved Ejection Fraction. ");
-sb.Append("JACC Heart Fail. 2020 Jan;8(1):12-21. doi: 10.1016/j.jchf.2019.06.013. Epub 2019 Oct 9.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31606361", null, null, null));
+			sb = new StringBuilder("Beale AL, Nanayakkara S, Kaye DM. I");
+			sb.Append("Impact of Sex on Ventricular-Vascular Stiffness and Long-Term Outcomes in Heart Failure With Preserved Ejection Fraction: TOPCAT Trial Substudy. ");
+			sb.Append("J Am Heart Assoc. 2019 Jul 2;8(13):e012190. doi: 10.1161/JAHA.119.012190. Epub 2019 Jun 22.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31230508", null, null, null));
 
-sb = new StringBuilder("Beale AL, Nanayakkara S, Kaye DM. I");
-sb.Append("Impact of Sex on Ventricular-Vascular Stiffness and Long-Term Outcomes in Heart Failure With Preserved Ejection Fraction: TOPCAT Trial Substudy. ");
-sb.Append("J Am Heart Assoc. 2019 Jul 2;8(13):e012190. doi: 10.1161/JAHA.119.012190. Epub 2019 Jun 22.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31230508", null, null, null));
+			sb = new StringBuilder("Selvaraj S, Claggett B, Shah SJ, Anand IS, Rouleau JL, Desai AS, Lewis EF, Vaduganathan M, Wang SY, Pitt B, Sweitzer NK, Pfeffer MA, Solomon SD. ");
+			sb.Append("Utility of the Cardiovascular Physical Examination and Impact of Spironolactone in Heart Failure With Preserved Ejection Fraction. ");
+			sb.Append("Circ Heart Fail. 2019 Jul;12(7):e006125. doi: 10.1161/CIRCHEARTFAILURE.119.006125. Epub 2019 Jun 21.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31220936", null, null, null));
 
-sb = new StringBuilder("Selvaraj S, Claggett B, Shah SJ, Anand IS, Rouleau JL, Desai AS, Lewis EF, Vaduganathan M, Wang SY, Pitt B, Sweitzer NK, Pfeffer MA, Solomon SD. ");
-sb.Append("Utility of the Cardiovascular Physical Examination and Impact of Spironolactone in Heart Failure With Preserved Ejection Fraction. ");
-sb.Append("Circ Heart Fail. 2019 Jul;12(7):e006125. doi: 10.1161/CIRCHEARTFAILURE.119.006125. Epub 2019 Jun 21.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31220936", null, null, null));
+			sb = new StringBuilder("Neefs J, van den Berg NWE, Krul SPJ, Boekholdt SM, de Groot JR. ");
+			sb.Append("Effect of Spironolactone on Atrial Fibrillation in Patients with Heart Failure with Preserved Ejection Fraction: Post-Hoc Analysis of the Randomized, Placebo-Controlled TOPCAT Trial. ");
+			sb.Append("Am J Cardiovasc Drugs. 2020 Feb;20(1):73-80. doi: 10.1007/s40256-019-00353-5.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31214914", null, null, null));
 
-sb = new StringBuilder("Neefs J, van den Berg NWE, Krul SPJ, Boekholdt SM, de Groot JR. ");
-sb.Append("Effect of Spironolactone on Atrial Fibrillation in Patients with Heart Failure with Preserved Ejection Fraction: Post-Hoc Analysis of the Randomized, Placebo-Controlled TOPCAT Trial. ");
-sb.Append("Am J Cardiovasc Drugs. 2020 Feb;20(1):73-80. doi: 10.1007/s40256-019-00353-5.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31214914", null, null, null));
+			sb = new StringBuilder("Kristensen SL, Mogensen UM, Jhund PS, Rørth R, Anand IS, Carson PE, Desai AS, Pitt B, Pfeffer MA, Solomon SD, Zile MR, Køber L, McMurray JJV. ");
+			sb.Append("N-Terminal Pro-B-Type Natriuretic Peptide Levels for Risk Prediction in Patients With Heart Failure and Preserved Ejection Fraction According to Atrial Fibrillation Status. ");
+			sb.Append("Circ Heart Fail. 2019 Mar;12(3):e005766. doi: 10.1161/CIRCHEARTFAILURE.118.005766.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30871349", null, null, null));
 
-sb = new StringBuilder("Kristensen SL, Mogensen UM, Jhund PS, Rørth R, Anand IS, Carson PE, Desai AS, Pitt B, Pfeffer MA, Solomon SD, Zile MR, Køber L, McMurray JJV. ");
-sb.Append("N-Terminal Pro-B-Type Natriuretic Peptide Levels for Risk Prediction in Patients With Heart Failure and Preserved Ejection Fraction According to Atrial Fibrillation Status. ");
-sb.Append("Circ Heart Fail. 2019 Mar;12(3):e005766. doi: 10.1161/CIRCHEARTFAILURE.118.005766.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30871349", null, null, null));
+			sb = new StringBuilder("Merrill M, Sweitzer NK, Lindenfeld J, Kao DP. ");
+			sb.Append("Sex Differences in Outcomes and Responses to Spironolactone in Heart Failure With Preserved Ejection Fraction: A Secondary Analysis of TOPCAT Trial. ");
+			sb.Append("JACC Heart Fail. 2019 Mar;7(3):228-238. doi: 10.1016/j.jchf.2019.01.003.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30819379", null, null, null));
 
-sb = new StringBuilder("Merrill M, Sweitzer NK, Lindenfeld J, Kao DP. ");
-sb.Append("Sex Differences in Outcomes and Responses to Spironolactone in Heart Failure With Preserved Ejection Fraction: A Secondary Analysis of TOPCAT Trial. ");
-sb.Append("JACC Heart Fail. 2019 Mar;7(3):228-238. doi: 10.1016/j.jchf.2019.01.003.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30819379", null, null, null));
+			sb = new StringBuilder("Myhre PL, O’Meara E, Claggett BL, de Denus S, Jarolim P, Anand IS, Beldhuis IE, Fleg JL, Lewis E, Pitt B, Rouleau JL, Solomon SD, Pfeffer MA, Desai AS. ");
+			sb.Append("Cardiac Troponin I and Risk of Cardiac Events in Patients With Heart Failure and Preserved Ejection Fraction. ");
+			sb.Append("Circ Heart Fail. 2018 Nov;11(11):e005312. doi: 10.1161/CIRCHEARTFAILURE.118.005312.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30571192", null, null, null));
 
-sb = new StringBuilder("Myhre PL, O’Meara E, Claggett BL, de Denus S, Jarolim P, Anand IS, Beldhuis IE, Fleg JL, Lewis E, Pitt B, Rouleau JL, Solomon SD, Pfeffer MA, Desai AS. ");
-sb.Append("Cardiac Troponin I and Risk of Cardiac Events in Patients With Heart Failure and Preserved Ejection Fraction. ");
-sb.Append("Circ Heart Fail. 2018 Nov;11(11):e005312. doi: 10.1161/CIRCHEARTFAILURE.118.005312.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30571192", null, null, null));
+			sb = new StringBuilder("Selvaraj S, Claggett B, Shah SJ, Anand I, Rouleau JL, O’Meara E, Desai AS, Lewis EF, Pitt B, Sweitzer NK, Fang JC, Pfeffer MA, Solomon SD. ");
+			sb.Append("Prognostic Value of Albuminuria and Influence of Spironolactone in Heart Failure With Preserved Ejection Fraction. ");
+			sb.Append("Circ Heart Fail. 2018 Nov;11(11):e005288. doi: 10.1161/CIRCHEARTFAILURE.118.005288.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30571191", null, null, null));
 
-sb = new StringBuilder("Selvaraj S, Claggett B, Shah SJ, Anand I, Rouleau JL, O’Meara E, Desai AS, Lewis EF, Pitt B, Sweitzer NK, Fang JC, Pfeffer MA, Solomon SD. ");
-sb.Append("Prognostic Value of Albuminuria and Influence of Spironolactone in Heart Failure With Preserved Ejection Fraction. ");
-sb.Append("Circ Heart Fail. 2018 Nov;11(11):e005288. doi: 10.1161/CIRCHEARTFAILURE.118.005288.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30571191", null, null, null));
+			sb = new StringBuilder("Myhre PL, Vaduganathan M, Claggett BL, Anand IS, Sweitzer NK, Fang JC, O’Meara E, Shah SJ, Desai AS, Lewis EF, Rouleau J, Pitt B, Pfeffer MA, Solomon SD. ");
+			sb.Append("Association of Natriuretic Peptides With Cardiovascular Prognosis in Heart Failure With Preserved Ejection Fraction: Secondary Analysis of the TOPCAT Randomized Clinical Trial. ");
+			sb.Append("JAMA Cardiol. 2018 Oct 1;3(10):1000-1005. doi: 10.1001/jamacardio.2018.2568.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30140899", null, null, null));
 
-sb = new StringBuilder("Myhre PL, Vaduganathan M, Claggett BL, Anand IS, Sweitzer NK, Fang JC, O’Meara E, Shah SJ, Desai AS, Lewis EF, Rouleau J, Pitt B, Pfeffer MA, Solomon SD. ");
-sb.Append("Association of Natriuretic Peptides With Cardiovascular Prognosis in Heart Failure With Preserved Ejection Fraction: Secondary Analysis of the TOPCAT Randomized Clinical Trial. ");
-sb.Append("JAMA Cardiol. 2018 Oct 1;3(10):1000-1005. doi: 10.1001/jamacardio.2018.2568.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30140899", null, null, null));
+			sb = new StringBuilder("Cikes M, Claggett B, Shah AM, Desai AS, Lewis EF, Shah SJ, Anand IS, O’Meara E, Rouleau JL, Sweitzer NK, Fang JC, Saksena S, Pitt B, Pfeffer MA, Solomon SD. ");
+			sb.Append("Atrial Fibrillation in Heart Failure With Preserved Ejection Fraction: The TOPCAT Trial. ");
+			sb.Append("JACC Heart Fail. 2018 Aug;6(8):689-697. doi: 10.1016/j.jchf.2018.05.005. Epub 2018 Jul 11.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30007557", null, null, null));
 
-sb = new StringBuilder("Cikes M, Claggett B, Shah AM, Desai AS, Lewis EF, Shah SJ, Anand IS, O’Meara E, Rouleau JL, Sweitzer NK, Fang JC, Saksena S, Pitt B, Pfeffer MA, Solomon SD. ");
-sb.Append("Atrial Fibrillation in Heart Failure With Preserved Ejection Fraction: The TOPCAT Trial. ");
-sb.Append("JACC Heart Fail. 2018 Aug;6(8):689-697. doi: 10.1016/j.jchf.2018.05.005. Epub 2018 Jul 11.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30007557", null, null, null));
+			sb = new StringBuilder("Lewis EF, Claggett B, Shah AM, Liu J, Shah SJ, Anand I, O’Meara E, Sweitzer NK, Rouleau JL, Fang JC, Desai AS, Retta TM, Solomon SD, Heitner JF, Stamos TD, Boineau R, Pitt B, Pfeffer MA. ");
+			sb.Append("Racial Differences in Characteristics and Outcomes of Patients With Heart Failure and Preserved Ejection Fraction in the Treatment of Preserved Cardiac Function Heart Failure Trial. ");
+			sb.Append("Circ Heart Fail. 2018 Mar;11(3):e004457. doi: 10.1161/CIRCHEARTFAILURE.117.004457.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29664406", null, null, null));
 
-sb = new StringBuilder("Lewis EF, Claggett B, Shah AM, Liu J, Shah SJ, Anand I, O’Meara E, Sweitzer NK, Rouleau JL, Fang JC, Desai AS, Retta TM, Solomon SD, Heitner JF, Stamos TD, Boineau R, Pitt B, Pfeffer MA. ");
-sb.Append("Racial Differences in Characteristics and Outcomes of Patients With Heart Failure and Preserved Ejection Fraction in the Treatment of Preserved Cardiac Function Heart Failure Trial. ");
-sb.Append("Circ Heart Fail. 2018 Mar;11(3):e004457. doi: 10.1161/CIRCHEARTFAILURE.117.004457.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29664406", null, null, null));
+			sb = new StringBuilder("Vaduganathan M, Claggett BL, Chatterjee NA, Anand IS, Sweitzer NK, Fang JC, O’Meara E, Shah SJ, Hegde SM, Desai AS, Lewis EF, Rouleau J, Pitt B, Pfeffer MA, Solomon SD. ");
+			sb.Append("Sudden Death in Heart Failure With Preserved Ejection Fraction: A Competing Risks Analysis From the TOPCAT Trial. ");
+			sb.Append("JACC Heart Fail. 2018 Aug;6(8):653-661. doi: 10.1016/j.jchf.2018.02.014. Epub 2018 Mar 4.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29501806", null, null, null));
 
-sb = new StringBuilder("Vaduganathan M, Claggett BL, Chatterjee NA, Anand IS, Sweitzer NK, Fang JC, O’Meara E, Shah SJ, Hegde SM, Desai AS, Lewis EF, Rouleau J, Pitt B, Pfeffer MA, Solomon SD. ");
-sb.Append("Sudden Death in Heart Failure With Preserved Ejection Fraction: A Competing Risks Analysis From the TOPCAT Trial. ");
-sb.Append("JACC Heart Fail. 2018 Aug;6(8):653-661. doi: 10.1016/j.jchf.2018.02.014. Epub 2018 Mar 4.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29501806", null, null, null));
+			sb = new StringBuilder("Rossignol P, Claggett BL, Liu J, Vardeny O, Pitt B, Zannad F, Solomon S. ");
+			sb.Append("Spironolactone and Resistant Hypertension in Heart Failure With Preserved Ejection Fraction. ");
+			sb.Append("Am J Hypertens. 2018 Mar 10;31(4):407-414. doi: 10.1093/ajh/hpx210.'");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29228101", null, null, null));
 
-sb = new StringBuilder("Rossignol P, Claggett BL, Liu J, Vardeny O, Pitt B, Zannad F, Solomon S. ");
-sb.Append("Spironolactone and Resistant Hypertension in Heart Failure With Preserved Ejection Fraction. ");
-sb.Append("Am J Hypertens. 2018 Mar 10;31(4):407-414. doi: 10.1093/ajh/hpx210.'");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29228101", null, null, null));
+			sb = new StringBuilder("Selvaraj S, Claggett B, Shah SJ, Anand I, Rouleau JL, Desai AS, Lewis EF, Pitt B, Sweitzer NK, Pfeffer MA, Solomon SD. ");
+			sb.Append("Systolic blood pressure and cardiovascular outcomes in heart failure with preserved ejection fraction: an analysis of the TOPCAT trial. ");
+			sb.Append("Eur J Heart Fail. 2018 Mar;20(3):483-490. doi: 10.1002/ejhf.1060. Epub 2017 Nov 16.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29148144", null, null, null));
 
-sb = new StringBuilder("Selvaraj S, Claggett B, Shah SJ, Anand I, Rouleau JL, Desai AS, Lewis EF, Pitt B, Sweitzer NK, Pfeffer MA, Solomon SD. ");
-sb.Append("Systolic blood pressure and cardiovascular outcomes in heart failure with preserved ejection fraction: an analysis of the TOPCAT trial. ");
-sb.Append("Eur J Heart Fail. 2018 Mar;20(3):483-490. doi: 10.1002/ejhf.1060. Epub 2017 Nov 16.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29148144", null, null, null));
+			sb = new StringBuilder("Pokharel Y, Khariton Y, Tang Y, Nassif ME, Chan PS, Arnold SV, Jones PG, Spertus JA. ");
+			sb.Append("Association of Serial Kansas City Cardiomyopathy Questionnaire Assessments With Death and Hospitalization in Patients With Heart Failure With Preserved and Reduced Ejection Fraction: A Secondary Analysis of 2 Randomized Clinical Trials. ");
+			sb.Append("JAMA Cardiol. 2017 Dec 1;2(12):1315-1321. doi: 10.1001/jamacardio.2017.3983. Erratum in: JAMA Cardiol. 2018 Feb 1;3(2):181.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29094152", null, null, null));
 
-sb = new StringBuilder("Pokharel Y, Khariton Y, Tang Y, Nassif ME, Chan PS, Arnold SV, Jones PG, Spertus JA. ");
-sb.Append("Association of Serial Kansas City Cardiomyopathy Questionnaire Assessments With Death and Hospitalization in Patients With Heart Failure With Preserved and Reduced Ejection Fraction: A Secondary Analysis of 2 Randomized Clinical Trials. ");
-sb.Append("JAMA Cardiol. 2017 Dec 1;2(12):1315-1321. doi: 10.1001/jamacardio.2017.3983. Erratum in: JAMA Cardiol. 2018 Feb 1;3(2):181.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29094152", null, null, null));
+			sb = new StringBuilder("Hegde SM, Claggett B, Shah AM, Lewis EF, Anand I, Shah SJ, Sweitzer NK, Fang JC, Pitt B, Pfeffer MA, Solomon SD. ");
+			sb.Append("Physical Activity and Prognosis in the TOPCAT Trial (Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist). ");
+			sb.Append("Circulation. 2017 Sep 12;136(11):982-992. doi: 10.1161/CIRCULATIONAHA.117.028002. Epub 2017 Jun 21.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "28637881", null, null, null));
+				
+			sb = new StringBuilder("Anand IS, Claggett B, Liu J, Shah AM, Rector TS, Shah SJ, Desai AS, O’Meara E, Fleg JL, Pfeffer MA, Pitt B, Solomon SD. ");
+			sb.Append("Interaction Between Spironolactone and Natriuretic Peptides in Patients With Heart Failure and Preserved Ejection Fraction: From the TOPCAT Trial. ");
+			sb.Append("JACC Heart Fail. 2017 Apr;5(4):241-252. doi: 10.1016/j.jchf.2016.11.015.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "28359411", null, null, null));
 
-sb = new StringBuilder("Hegde SM, Claggett B, Shah AM, Lewis EF, Anand I, Shah SJ, Sweitzer NK, Fang JC, Pitt B, Pfeffer MA, Solomon SD. ");
-sb.Append("Physical Activity and Prognosis in the TOPCAT Trial (Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist). ");
-sb.Append("Circulation. 2017 Sep 12;136(11):982-992. doi: 10.1161/CIRCULATIONAHA.117.028002. Epub 2017 Jun 21.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "28637881", null, null, null));
-	
-sb = new StringBuilder("Anand IS, Claggett B, Liu J, Shah AM, Rector TS, Shah SJ, Desai AS, O’Meara E, Fleg JL, Pfeffer MA, Pitt B, Solomon SD. ");
-sb.Append("Interaction Between Spironolactone and Natriuretic Peptides in Patients With Heart Failure and Preserved Ejection Fraction: From the TOPCAT Trial. ");
-sb.Append("JACC Heart Fail. 2017 Apr;5(4):241-252. doi: 10.1016/j.jchf.2016.11.015.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "28359411", null, null, null));
+			sb = new StringBuilder("Biering-Sørensen T, Shah SJ, Anand I, Sweitzer N, Claggett B, Liu L, Pitt B, Pfeffer MA, Solomon SD, Shah AM. ");
+			sb.Append("Prognostic importance of left ventricular mechanical dyssynchrony in heart failure with preserved ejection fraction. ");
+			sb.Append("Eur J Heart Fail. 2017 Aug;19(8):1043-1052. doi: 10.1002/ejhf.789. Epub 2017 Mar 21.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "28322009", null, null, null));
 
-sb = new StringBuilder("Biering-Sørensen T, Shah SJ, Anand I, Sweitzer N, Claggett B, Liu L, Pitt B, Pfeffer MA, Solomon SD, Shah AM. ");
-sb.Append("Prognostic importance of left ventricular mechanical dyssynchrony in heart failure with preserved ejection fraction. ");
-sb.Append("Eur J Heart Fail. 2017 Aug;19(8):1043-1052. doi: 10.1002/ejhf.789. Epub 2017 Mar 21.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "28322009", null, null, null));
+			sb = new StringBuilder("Santos AB, Roca GQ, Claggett B, Sweitzer NK, Shah SJ, Anand IS, Fang JC, Zile MR, Pitt B, Solomon SD, Shah AM. ");
+			sb.Append("Prognostic Relevance of Left Atrial Dysfunction in Heart Failure With Preserved Ejection Fraction. ");
+			sb.Append("Circ Heart Fail. 2016 Apr;9(4):e002763. doi: 10.1161/CIRCHEARTFAILURE.115.002763.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "27056882", null, null, null));
 
-sb = new StringBuilder("Santos AB, Roca GQ, Claggett B, Sweitzer NK, Shah SJ, Anand IS, Fang JC, Zile MR, Pitt B, Solomon SD, Shah AM. ");
-sb.Append("Prognostic Relevance of Left Atrial Dysfunction in Heart Failure With Preserved Ejection Fraction. ");
-sb.Append("Circ Heart Fail. 2016 Apr;9(4):e002763. doi: 10.1161/CIRCHEARTFAILURE.115.002763.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "27056882", null, null, null));
+			sb = new StringBuilder("Joseph J, Claggett BC, Anand IS, Fleg JL, Huynh T, Desai AS, Solomon SD, O’Meara E, Mckinlay S, Pitt B, Pfeffer MA, Lewis EF. ");
+			sb.Append("QRS Duration Is a Predictor of Adverse Outcomes in Heart Failure With Preserved Ejection Fraction. ");
+			sb.Append("JACC Heart Fail. 2016 Jun;4(6):477-86. doi: 10.1016/j.jchf.2016.02.013. Epub 2016 Mar 30.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "27039126", null, null, null));
 
-sb = new StringBuilder("Joseph J, Claggett BC, Anand IS, Fleg JL, Huynh T, Desai AS, Solomon SD, O’Meara E, Mckinlay S, Pitt B, Pfeffer MA, Lewis EF. ");
-sb.Append("QRS Duration Is a Predictor of Adverse Outcomes in Heart Failure With Preserved Ejection Fraction. ");
-sb.Append("JACC Heart Fail. 2016 Jun;4(6):477-86. doi: 10.1016/j.jchf.2016.02.013. Epub 2016 Mar 30.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "27039126", null, null, null));
+			sb = new StringBuilder("Lewis EF, Kim HY, Claggett B, Spertus J, Heitner JF, Assmann SF, Kenwood CT, Solomon SD, Desai AS, Fang JC, McKinlay SA, Pitt BA, Pfeffer MA; TOPCAT Investigators. ");
+			sb.Append("Impact of Spironolactone on Longitudinal Changes in Health-Related Quality of Life in the Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist Trial. ");
+			sb.Append("Circ Heart Fail. 2016 Mar;9(3):e001937. doi: 10.1161/CIRCHEARTFAILURE.114.001937.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "26962133", null, null, null));
 
-sb = new StringBuilder("Lewis EF, Kim HY, Claggett B, Spertus J, Heitner JF, Assmann SF, Kenwood CT, Solomon SD, Desai AS, Fang JC, McKinlay SA, Pitt BA, Pfeffer MA; TOPCAT Investigators. ");
-sb.Append("Impact of Spironolactone on Longitudinal Changes in Health-Related Quality of Life in the Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist Trial. ");
-sb.Append("Circ Heart Fail. 2016 Mar;9(3):e001937. doi: 10.1161/CIRCHEARTFAILURE.114.001937.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "26962133", null, null, null));
+			sb = new StringBuilder("Shah AM, Claggett B, Sweitzer NK, Shah SJ, Deswal A, Anand IS, Fleg JL, Pitt B, Pfeffer MA, Solomon SD. ");
+			sb.Append("Prognostic Importance of Changes in Cardiac Structure and Function in Heart Failure With Preserved Ejection Fraction and the Impact of Spironolactone. ");
+			sb.Append("Circ Heart Fail. 2015 Nov;8(6):1052-8. doi: 10.1161/CIRCHEARTFAILURE.115.002249. Epub 2015 Oct 16.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "26475142", null, null, null));
 
-sb = new StringBuilder("Shah AM, Claggett B, Sweitzer NK, Shah SJ, Deswal A, Anand IS, Fleg JL, Pitt B, Pfeffer MA, Solomon SD. ");
-sb.Append("Prognostic Importance of Changes in Cardiac Structure and Function in Heart Failure With Preserved Ejection Fraction and the Impact of Spironolactone. ");
-sb.Append("Circ Heart Fail. 2015 Nov;8(6):1052-8. doi: 10.1161/CIRCHEARTFAILURE.115.002249. Epub 2015 Oct 16.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "26475142", null, null, null));
+			sb = new StringBuilder("Solomon SD, Claggett B, Lewis EF, Desai A, Anand I, Sweitzer NK, O’Meara E, Shah SJ, McKinlay S, Fleg JL, Sopko G, Pitt B, Pfeffer MA; TOPCAT Investigators. ");
+			sb.Append("Influence of ejection fraction on outcomes and efficacy of spironolactone in patients with heart failure with preserved ejection fraction. ");
+			sb.Append("Eur Heart J. 2016 Feb 1;37(5):455-62. doi: 10.1093/eurheartj/ehv464. Epub 2015 Sep 15.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "26374849", null, null, null));
 
-sb = new StringBuilder("Solomon SD, Claggett B, Lewis EF, Desai A, Anand I, Sweitzer NK, O’Meara E, Shah SJ, McKinlay S, Fleg JL, Sopko G, Pitt B, Pfeffer MA; TOPCAT Investigators. ");
-sb.Append("Influence of ejection fraction on outcomes and efficacy of spironolactone in patients with heart failure with preserved ejection fraction. ");
-sb.Append("Eur Heart J. 2016 Feb 1;37(5):455-62. doi: 10.1093/eurheartj/ehv464. Epub 2015 Sep 15.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "26374849", null, null, null));
+			sb = new StringBuilder("Shah AM, Claggett B, Sweitzer NK, Shah SJ, Anand IS, Liu L, Pitt B, Pfeffer MA, Solomon SD. ");
+			sb.Append("Prognostic Importance of Impaired Systolic Function in Heart Failure With Preserved Ejection Fraction and the Impact of Spironolactone. ");
+			sb.Append("Circulation. 2015 Aug 4;132(5):402-14. doi: 10.1161/CIRCULATIONAHA.115.015884. Epub 2015 Jun 30.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "26130119", null, null, null));
+				
+			sb = new StringBuilder("Borlaug BA, Lewis GD, McNulty SE, Semigran MJ, LeWinter M, Chen H, Lin G, Deswal A, Margulies KB, Redfield MM. ");
+			sb.Append("Effects of sildenafil on ventricular and vascular function in heart failure with preserved ejection fraction. ");
+			sb.Append("Circ Heart Fail. 2015 May;8(3):533-41. doi: 10.1161/CIRCHEARTFAILURE.114.001915. Epub 2015 Mar 17.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "25782985", null, null, null));
 
-sb = new StringBuilder("Shah AM, Claggett B, Sweitzer NK, Shah SJ, Anand IS, Liu L, Pitt B, Pfeffer MA, Solomon SD. ");
-sb.Append("Prognostic Importance of Impaired Systolic Function in Heart Failure With Preserved Ejection Fraction and the Impact of Spironolactone. ");
-sb.Append("Circulation. 2015 Aug 4;132(5):402-14. doi: 10.1161/CIRCULATIONAHA.115.015884. Epub 2015 Jun 30.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "26130119", null, null, null));
-	
-sb = new StringBuilder("Borlaug BA, Lewis GD, McNulty SE, Semigran MJ, LeWinter M, Chen H, Lin G, Deswal A, Margulies KB, Redfield MM. ");
-sb.Append("Effects of sildenafil on ventricular and vascular function in heart failure with preserved ejection fraction. ");
-sb.Append("Circ Heart Fail. 2015 May;8(3):533-41. doi: 10.1161/CIRCHEARTFAILURE.114.001915. Epub 2015 Mar 17.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "25782985", null, null, null));
+			sb = new StringBuilder("Hamo CE, Heitner JF, Pfeffer MA, Kim HY, Kenwood CT, Assmann SF, Solomon SD, Boineau R, Fleg JL, Spertus JA, Lewis EF. ");
+			sb.Append("Baseline distribution of participants with depression and impaired quality of life in the Treatment of Preserved Cardiac Function Heart Failure with an Aldosterone Antagonist Trial. ");
+			sb.Append("Circ Heart Fail. 2015 Mar;8(2):268-77. doi: 10.1161/CIRCHEARTFAILURE.114.001838. Epub 2015 Feb 3.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "25648577", null, null, null));
 
-sb = new StringBuilder("Hamo CE, Heitner JF, Pfeffer MA, Kim HY, Kenwood CT, Assmann SF, Solomon SD, Boineau R, Fleg JL, Spertus JA, Lewis EF. ");
-sb.Append("Baseline distribution of participants with depression and impaired quality of life in the Treatment of Preserved Cardiac Function Heart Failure with an Aldosterone Antagonist Trial. ");
-sb.Append("Circ Heart Fail. 2015 Mar;8(2):268-77. doi: 10.1161/CIRCHEARTFAILURE.114.001838. Epub 2015 Feb 3.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "25648577", null, null, null));
+			sb = new StringBuilder("Mak GJ, Ledwidge MT, Watson CJ, Phelan DM, Dawkins IR, Murphy NF, Patle AK, Baugh JA, McDonald KM. ");
+			sb.Append("Natural history of markers of collagen turnover in patients with early diastolic dysfunction and impact of eplerenone. ");
+			sb.Append("J Am Coll Cardiol. 2009 Oct 27;54(18):1674-82. doi: 10.1016/j.jacc.2009.08.021.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "19850207", null, null, null));
 
-sb = new StringBuilder("Mak GJ, Ledwidge MT, Watson CJ, Phelan DM, Dawkins IR, Murphy NF, Patle AK, Baugh JA, McDonald KM. ");
-sb.Append("Natural history of markers of collagen turnover in patients with early diastolic dysfunction and impact of eplerenone. ");
-sb.Append("J Am Coll Cardiol. 2009 Oct 27;54(18):1674-82. doi: 10.1016/j.jacc.2009.08.021.");
-fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "19850207", null, null, null));
+			fs.studylinks!.Add(new StudyLink(sd_sid, "Link to PubMed Identification (ID) #22137068 publication in the American Heart Journal", "http://www.ahjonline.com/article/S0002-8703%2811%2900688-0/abstract"));
+			fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #23258572 publication in Circulation: Heart Failure", "http://circheartfailure.ahajournals.org/content/6/2/184.long"));
+			fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #24249049 publication in Circulation: Heart Failure", "http://circheartfailure.ahajournals.org/content/7/1/104.long"));
+			fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #24716680 publication in the New England Journal of Medicine", "http://www.nejm.org/doi/full/10.1056/NEJMoa1313731"));
+			fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #25122186 publication in Circulation: Heart Failure", "http://circheartfailure.ahajournals.org/content/7/5/740.long"));
+            fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #25406305 publication in Circulation", "http://circ.ahajournals.org/content/early/2014/11/18/CIRCULATIONAHA.114.013255.long"));
 
-fs.studylinks!.Add(new StudyLink(sd_sid, "Link to PubMed Identification (ID) #22137068 publication in the American Heart Journal", "http://www.ahjonline.com/article/S0002-8703%2811%2900688-0/abstract"));
-fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #23258572 publication in Circulation: Heart Failure", "http://circheartfailure.ahajournals.org/content/6/2/184.long"));
-fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #24249049 publication in Circulation: Heart Failure", "http://circheartfailure.ahajournals.org/content/7/1/104.long"));
-fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #24716680 publication in the New England Journal of Medicine", "http://www.nejm.org/doi/full/10.1056/NEJMoa1313731"));
-fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #25122186 publication in Circulation: Heart Failure", "http://circheartfailure.ahajournals.org/content/7/5/740.long"));
-fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #25406305 publication in Circulation", "http://circ.ahajournals.org/content/early/2014/11/18/CIRCULATIONAHA.114.013255.long"));
-
- */
             // countries
             
             // iec
@@ -2759,7 +2638,7 @@ fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #25406305 publication
             sdo = CreateEmptyStudyDataObject();
 			
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
-	            null, 9, 2015 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	            null, 9, 2015, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
@@ -2779,58 +2658,45 @@ fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #25406305 publication
 	        // Study 
 	        
 	        string display_title = "A Eurosarc Study of Mifamurtide in Advanced Osteosarcoma (MEMOS)";
-	        StringBuilder sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
+	        StringBuilder sb = new StringBuilder("This is a Bayesian designed multi-arm, multi-centre, open label phase II study. The target sample ");
+	        sb.Append("size of 40 patients will be recruited from up to 8 EU countries, but this may be revised in light of the interim analysis. "); 
+	        sb.Append("Patients with relapsed or metastatic osteosarcoma will be divided into three treatment groups. They will all either have "); 
+	        sb.Append("surgery or a biopsy before and after six weeks exposure to either Mifamurtide alone, Ifosfamide alone, or Mifamurtide "); 
+	        sb.Append("combined with Ifosfamide. They will then receive further treatment to a maximum of 42 or 36 weeks in "); 
+	        sb.Append("total (depending on Arm), with all patients being able to receive 36 weeks of Mifamurtide treatment."); 
 	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        string dss = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
-		        , , null, null, 10);
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2014, 10, 11, 22, "8", 900,
+		        16, 17, 65, 17, 10);
 	        
-            /*
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2015 Mar 16", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "OCTO_039", 14, 100253, 
+		        "University of Oxford", "https://ror.org/052gg0110", null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "A Mechanistic Study Of Mifamurtide (MTP-PE) In Patients With Metastatic And/Or Recurrent Osteosarcoma",
+		        16, "en", 11, false, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "MEMOS", 14, "en", 11, false, "From Clinicaltrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Bass Hassan", "University of Oxford", 
+		        100253, "University of Oxford", "https://ror.org/052gg0110"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100253, "University of Oxford", "https://ror.org/052gg0110"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Millennium: The Takeda Oncology Company", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100442, "National Institute for Health Research", "https://ror.org/0187kwz08"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100707, "Oxford University Hospitals NHS Trust", "https://ror.org/03h2bh287"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100574, "European Commission", "https://ror.org/00k4n6c32"));
 
-call expected.insert_study_names(sid => _sid, 
-						title =>'A Eurosarc Study of Mifamurtide in Advanced Osteosarcoma (MEMOS)', 
-						brief_desc =>'This is a Bayesian designed multi-arm, multi-centre, open label phase II study. The target sample size of 40 patients will be recruited from up to 8 EU countries, but this may be revised in light of the interim analysis. Patients with relapsed or metastatic osteosarcoma will be divided into three treatment groups. They will all either have surgery or a biopsy before and after six weeks exposure to either Mifamurtide alone, Ifosfamide alone, or Mifamurtide combined with Ifosfamide. They will then receive further treatment to a maximum of 42 or 36 weeks in total (depending on Arm), with all patients being able to receive 36 weeks of Mifamurtide treatment.'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2014, smonth => 10, typeid => 11, statusid => 22);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '8', eligid => 900, minage => 16, minageu => 17, maxage => 65, maxageu => 17);
-
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'A Eurosarc Study of Mifamurtide in Advanced Osteosarcoma (MEMOS)', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'A Mechanistic Study Of Mifamurtide (MTP-PE) In Patients With Metastatic And/Or Recurrent Osteosarcoma', isdefault => false, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 14, title => 'MEMOS', isdefault => false, comms => 'From Clinicaltrials.gov');
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue =>  _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2015 Mar 16');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'OCTO_039', idorgname => 'University of Oxford');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Bass Hassan', affiliation => 'University of Oxford', orgname => 'University of Oxford');
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'University of Oxford');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'Millennium: The Takeda Oncology Company');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'National Institute for Health Research, United Kingdom');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'Oxford University Hospitals NHS Trust');
-call expected.insert_org_contributor(sid => _sid, typeid => 69, orgname => 'European Commission');
-
-	        fs.features!.Add(new (sd_sid, 20, 120));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 305));   // 
-	        fs.features.Add(new (sd_sid, 24, 500));   // 
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 
 	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Metastatic and/or Recurrent Osteosarcoma", null, null, null, null));
 	        
+	         /*
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000007069', mvalue => 'Ifosfamide');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'C000027061', mvalue => 'Isophosphamide mustard');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'C000037144', mvalue => 'Mifamurtide');
@@ -2879,69 +2745,55 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 
             return fs;
         }
-        
+
         if (sd_sid == "NCT02609386")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
- 
+
 	        // Study 
-	        
-	        string display_title = "IRX-2 Regimen in Patients With Newly Diagnosed Stage II, III, or IVA Squamous Cell Carcinoma of the Oral Cavity";
-	        StringBuilder sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
+
+	        string display_title =
+		        "IRX-2 Regimen in Patients With Newly Diagnosed Stage II, III, or IVA Squamous Cell Carcinoma of the Oral Cavity";
+	        StringBuilder sb =
+		        new StringBuilder(
+			        "The purpose of this study is to determine whether a pre-operative regimen of the study drug, ");
+	        sb.Append(
+		        "IRX-2, a human cell-derived biologic with multiple active cytokine components, plus a single dose of cyclophosphamide, ");
+	        sb.Append(
+		        "followed by 21 days of indomethacin, zinc-containing multivitamins, and omeprazole is active in treatment ");
+	        sb.Append(
+		        "of oral cavity cancer. The regimen is intended to stimulate an immune response against the cancer.");
 	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("");
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        sb.Append(""); 
-	        string dss = sb.ToString();
+
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2015, 12, 11, 15, "105", 900,
+		        18, 17, null, null, 10);
+
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "Clinicaltrials.gov", null, "2015 Sep 10", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "IRX-2 2015-A", 14, null, 
+		        "Brooklyn ImmunoTherapeutics, LLC", null, null, null));
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, , , , , "", ,
-		        , , null, null, 10);
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "A Randomized Phase 2 Trial of Neoadjuvant and Adjuvant Therapy With the IRX 2 Regimen in Patients With Newly Diagnosed Stage II, III, or IVA Squamous Cell Carcinoma of the Oral Cavity", 16, "en", 11, false, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "INSPIRE", 14, "en", 11, false, "From Clinicaltrials.gov"));
 	        
-            /*
-call expected.insert_study_names(sid => _sid, 
-						title =>'IRX-2 Regimen in Patients With Newly Diagnosed Stage II, III, or IVA Squamous Cell Carcinoma of the Oral Cavity', 
-						brief_desc =>'The purpose of this study is to determine whether a pre-operative regimen of the study drug, IRX-2, a human cell-derived biologic with multiple active cytokine components, plus a single dose of cyclophosphamide, followed by 21 days of indomethacin, zinc-containing multivitamins, and omeprazole is active in treatment of oral cavity cancer. The regimen is intended to stimulate an immune response against the cancer.'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2015, smonth => 12, typeid => 11, statusid => 15);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '105', eligid => 900, minage => 18, minageu => 17, maxage => null, maxageu => null);
-
-call expected.insert_study_title(sid => _sid, typeid => 15, 
-                         title => 'IRX-2 Regimen in Patients With Newly Diagnosed Stage II, III, or IVA Squamous Cell Carcinoma of the Oral Cavity', isdefault => true, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 16, 
-                         title => 'A Randomized Phase 2 Trial of Neoadjuvant and Adjuvant Therapy With the IRX 2 Regimen in Patients With Newly Diagnosed Stage II, III, or IVA Squamous Cell Carcinoma of the Oral Cavity', isdefault => false, comms => 'From Clinicaltrials.gov');
-call expected.insert_study_title(sid => _sid, typeid => 14, 
-                         title => 'INSPIRE', isdefault => false, comms => 'From Clinicaltrials.gov');	
-		
-		
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100120, idorgname => 'Clinicaltrials.gov', iddate => '2015 Sep 10');
-call expected.insert_study_identifier(sid => _sid, typeid => 14, idvalue => 'IRX-2 2015-A', idorgname => 'Brooklyn ImmunoTherapeutics, LLC');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Gregory T Wolf', affiliation => 'University of Michigan Hospitals', orgname => 'University of Michigan Hospitals');
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'Brooklyn ImmunoTherapeutics, LLC');
- 
-	        fs.features!.Add(new (sd_sid, 20, 120));  // 
-	        fs.features.Add(new (sd_sid, 21, 400));   // 
-	        fs.features.Add(new (sd_sid, 22, 205));   // 
-	        fs.features.Add(new (sd_sid, 23, 305));   // 
-	        fs.features.Add(new (sd_sid, 24, 500));   // 
-
-	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Head and Neck Neoplasms", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Immunotherapy", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Cancer", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Oral Cavity", null, null, null, null));
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Gregory T Wolf", "University of Michigan Hospitals", 
+		        null, "University of Michigan Hospitals", null));
 	        
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Squamous Cell Carcinoma of the Oral Cavity');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002277', mvalue => 'Carcinoma');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002294', mvalue => 'Carcinoma, Squamous Cell');
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Brooklyn ImmunoTherapeutics, LLC", null));
+
+		    fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // 
+		    fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+		    fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+		    fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+		    fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
+
+		    fs.topics!.Add(new StudyTopic(sd_sid, 11, "Head and Neck Neoplasms", null, null, null, null));
+		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Immunotherapy", null, null, null, null));
+		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Cancer", null, null, null, null));
+		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Oral Cavity", null, null, null, null));
+		    
+	        /*		    
 
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000015032', mvalue => 'Zinc');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000007213', mvalue => 'Indomethacin');
@@ -2949,40 +2801,46 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D0000
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000009853', mvalue => 'Omeprazole');
 call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000054328', mvalue => 'Proton Pump Inhibitors');
 
-call expected.insert_study_reference(sid => _sid, ppmid => '32738599', 
-		pcitation => 'Wolf GT, Liu S, Bellile E, Sartor M, Rozek L, Thomas D, Nguyen A, Zarins K, McHugh JB; INSPIRE Trial Clinical Investigators. Tumor infiltrating lymphocytes after neoadjuvant IRX-2 immunotherapy in oral squamous cell carcinoma: Interim findings from the INSPIRE trial. Oral Oncol. 2020 Jul 29;111:104928. doi: 10.1016/j.oraloncology.2020.104928. [Epub ahead of print]'
-		);
+call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Squamous Cell Carcinoma of the Oral Cavity');
+call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002277', mvalue => 'Carcinoma');
+call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002294', mvalue => 'Carcinoma, Squamous Cell');
 
-call  expected.insert_study_link (sid => _sid, label => 'INSPIRE Trial website', 
-			url => 'http://InspireHNC.com');
-			
-call  expected.insert_study_link (sid => _sid, label => 'Sponsor’s website', 
-			url => 'http://irxtherapeutics.com');
 			 */
-            // countries
-            
-            // iec
-	        
-            // Data Objects
-	        
-            // 1) Trial registry entry
 
-            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
-            string ob_title = display_title + " :: CTG registry entry";
-            StudyDataObject sdo = CreateEmptyStudyDataObject();
-	        
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-	            null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2015 Nov 20 (est.)", 2015, 11, 20, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2020 Aug 12", 2020, 8, 12, null, null, null, null));
-	       
-            fs.data_objects!.Add(sdo);
+            sb = new StringBuilder("Wolf GT, Liu S, Bellile E, Sartor M, Rozek L, Thomas D, Nguyen A, Zarins K, McHugh JB; ");
+			sb.Append("INSPIRE Trial Clinical Investigators. Tumor infiltrating lymphocytes after neoadjuvant IRX-2 immunotherapy in oral squamous cell carcinoma: Interim findings from the INSPIRE trial. ");
+			sb.Append("Oral Oncol. 2020 Jul 29;111:104928. doi: 10.1016/j.oraloncology.2020.104928. [Epub ahead of print]");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "32738599", null, null, null));
 
-            return fs;
+			fs.studylinks!.Add(new StudyLink(sd_sid, "INSPIRE Trial website", "http://InspireHNC.com"));
+			fs.studylinks.Add(new StudyLink(sd_sid, "Sponsor’s website", "http://irxtherapeutics.com"));
+
+	        // countries
+
+	        // iec
+
+	        // Data Objects
+
+	        // 1) Trial registry entry
+
+	        string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+	        string ob_title = display_title + " :: CTG registry entry";
+	        StudyDataObject sdo = CreateEmptyStudyDataObject();
+
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+		        null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov",
+		        "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2015 Nov 20 (est.)", 2015, 11, 20, null, null,
+		        null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2020 Aug 12", 2020, 8, 12, null, null, null, null));
+
+	        fs.data_objects!.Add(sdo);
+
+	        return fs;
+        }
 
         return null;
     }
