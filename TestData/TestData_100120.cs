@@ -1629,7 +1629,7 @@ public class TestData_100120 : TestData_Base
 	        fs.titles.Add(new StudyTitle(sd_sid, "Soft and Hard Tissue Stability After Immediate Tooth Replacement With Implant in Fresh Sockets Grafted With Different Soft Tissue Grafts",
 		        16, "en", 11, false, "From Clinicaltrials.gov"));
 	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Elcio Marcantonio Jr", null, null, null, null));
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "El cio Marcantonio Jr", null, null, null, null));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 101740, "São Paulo State University", "https://ror.org/00987cb86"));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Fundação de Amparo à Pesquisa do Estado de São Paulo", null));
@@ -1926,7 +1926,7 @@ public class TestData_100120 : TestData_Base
 	        sb.Append("PURPOSE: Randomized phase III trial to compare various combination chemotherapy regimens plus surgery and radiation therapy in treating patients who have Ewing’s sarcoma."); 
             string brief_desc = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 1992, 7, 11, 0, null, 980,
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 1992, 7, 11, 0, null, 900,
 		        null, null, 35, 17, 10);
 	        
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
