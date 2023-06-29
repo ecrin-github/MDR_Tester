@@ -970,7 +970,7 @@ public class TestData_100120 : TestData_Base
 	        sb.Append("termed as eclampsia. Preeclampsia was classified into mild and severe preeclampsia.\n\n"); 
 	        sb.Append("mild eclampsia—BP >140/90 mmHg, proteinuria+, and/or mild edema of legs, Severe preeclampsia—BP >160/110 mmHg,proteinuria++ or ++++, "); 
 	        sb.Append("headache, cerebral or visual disturbances, epigastric pain, impaired liver function tests and increase in serum creatinine.\n\n"); 
-	        sb.Append("roteinuria was tested using dipstick method as +=0.3 gm/L, ++=1 gm/L, and +++=3 gm/L.\n\n"); 
+	        sb.Append("Proteinuria was tested using dipstick method as +=0.3 gm/L, ++=1 gm/L, and +++=3 gm/L.\n\n"); 
 	        sb.Append("The pathological changes of this disease appear to be related to vascular endothelial dysfunction and its consequences (generalized vasospasm and "); 
 	        sb.Append("capillary leak). Ocular involvement is common in PIH.Common symptoms are blurring of vision, photopsia, scotomas and diplopia. Visual symptoms may "); 
 	        sb.Append("be the precursor of seizures.Progression of retinal changes correlates with progression of PIH and also with the fetal mortality due to similar vascular "); 
@@ -1215,19 +1215,17 @@ public class TestData_100120 : TestData_Base
 	        fs.people!.Add(new StudyPerson(sd_sid, 70, "Herbert DuPont", "he University of Texas Health Science Center, Houston'", 
 		        null, "he University of Texas Health Science Center, Houston'", null));
 
-            /*
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Recurrent Clostridium Difficile Infection", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Multidrug-resistant Klebsiella Pneumoniae Urinary Tract Infection", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Infection", 14, "D000007239",  "1", "Certain infectious or parasitic diseases"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Communicable Diseases", 14, "D000003141", "1", "Certain infectious or parasitic diseases"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Urinary Tract Infections", 14, "D000014552", "GC08", "Urinary tract infection, site not specified"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Clostridium Infections", 14, "D000003015", null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Pneumonia", 14, "D000011014", "CA40", "Pneumonia"));
 
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Recurrent Clostridium Difficile Infection');
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Multidrug-resistant Klebsiella Pneumoniae Urinary Tract Infection');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000007239', mvalue => 'Infection');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000003141', mvalue => 'Communicable Diseases');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000014552', mvalue => 'Urinary Tract Infections');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000003015', mvalue => 'Clostridium Infections');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000011014', mvalue => 'Pneumonia');
+	        fs.relationships!.Add(new StudyRelationship(sd_sid, 24, "NCT02449174"));
+	        fs.relationships!.Add(new StudyRelationship(sd_sid, 24, "NCT02318992"));
 
-call expected.insert_study_relationship(sid => _sid, typeid => 24, targetsid => 'NCT02449174');
-call expected.insert_study_relationship(sid => _sid, typeid => 24, targetsid => 'NCT02318992');
- */
             // countries
             
             // iec
@@ -1300,24 +1298,23 @@ call expected.insert_study_relationship(sid => _sid, typeid => 24, targetsid => 
 	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
+	        
+	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Gemcitabine-2", 14, "C000056507", "C000056507", "Gemcitabine"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Paclitaxel", 14, "D000017239", "D000017239", "Paclitaxel"));
 
- /*
- call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Pancreatic Adenocarcinoma');
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Resectable Pancreatic Carcinoma');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000000230', mvalue => 'Adenocarcinoma');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000010190', mvalue => 'Pancreatic Neoplasms');
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Camptothecin", 14, "D000002166", "D000002166", "Camptothecin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Albumin-Bound Paclitaxel", 14, "D000068196", "D000068196", "Albumin-Bound Paclitaxel"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Fluorouracil", 14, "D000005472", "D000005472", "Fluorouracil"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Oxaliplatin", 14, "D000077150", "D000077150", "Oxaliplatin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Irinotecan", 14, "D000077146", "D000077146", "Irinotecan"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Pancrelipase", 14, "D000020799", "D000020799", "Pancrelipase"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Pancreatin", 14, "D000010194", "D000010194", "Pancreatin"));
 
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'C000056507', mvalue => 'Gemcitabine');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000017239', mvalue => 'Paclitaxel');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000002166', mvalue => 'Camptothecin');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000068196', mvalue => 'Albumin-Bound Paclitaxel');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000005472', mvalue => 'Fluorouracil');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000077150', mvalue => 'Oxaliplatin');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000077146', mvalue => 'Irinotecan');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000020799', mvalue => 'Pancrelipase');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000010194', mvalue => 'Pancreatin');
- */
-			            
+            fs.conditions!.Add(new StudyCondition(sd_sid, "Pancreatic Adenocarcinoma", null, null, null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, "Resectable Pancreatic Carcinoma", null, null, null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, "Adenocarcinoma", 14, "D000000230", "2", "Neoplasms"));
+            fs.conditions.Add(new StudyCondition(sd_sid, "Pancreatic Neoplasms", 14, "D000010190", "2C10", "Malignant neoplasm of pancreas"));
+            
 			sb = new StringBuilder("Sohal DPS, Duong M, Ahmad SA, Gandhi NS, Beg MS, Wang-Gillam A, Wade JL 3rd, Chiorean EG, Guthrie KA, Lowy AM, Philip PA, Hochster HS. ");
 			sb.Append("Efficacy of Perioperative Chemotherapy for Resectable Pancreatic Adenocarcinoma: A Phase 2 Randomized Clinical Trial. ");
 			sb.Append("JAMA Oncol. 2021 Mar 1;7(3):421-427. doi: 10.1001/jamaoncol.2020.7328. Erratum in: JAMA Oncol. 2021 Sep 23;:null.'");
@@ -1448,14 +1445,12 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D0000
 
             fs.topics!.Add(new StudyTopic(sd_sid, 11, "Fecal Microbiota transplantation", null, null, null, null));
             
-            /*	        
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'C. Difficile');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000003967', mvalue => 'Diarrhea');
+            fs.conditions!.Add(new StudyCondition(sd_sid, "C. Difficile", null, null, null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, "Diarrhea", 14, "Diarrhea", null, null));
+            
+            fs.relationships!.Add(new StudyRelationship(sd_sid, 23, "NCT03786900"));
 
-call expected.insert_study_relationship(sid => _sid, typeid => 23, targetsid => 'NCT03786900');
- */
-
-            sb = new StringBuilder("iang ZD, Jenq RR, Ajami NJ, Petrosino JF, Alexander AA, Ke S, Iqbal T, DuPont AW, Muldrew K, Shi Y, Peterson C, Do KA, DuPont HL. ");
+            sb = new StringBuilder("Jiang ZD, Jenq RR, Ajami NJ, Petrosino JF, Alexander AA, Ke S, Iqbal T, DuPont AW, Muldrew K, Shi Y, Peterson C, Do KA, DuPont HL. ");
 			sb.Append("Safety and preliminary efficacy of orally administered lyophilized fecal microbiota product compared with frozen product given by enema for recurrent Clostridium difficile infection: A randomized clinical trial. ");
 			sb.Append("PLoS One. 2018 Nov 2;13(11):e0205064. doi: 10.1371/journal.pone.0205064. eCollection 2018.");
 			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "30388112", null, null, null));
@@ -1557,16 +1552,13 @@ call expected.insert_study_relationship(sid => _sid, typeid => 23, targetsid => 
             fs.topics!.Add(new StudyTopic(sd_sid, 11, "combination therapy", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Compass 3", null, null, null, null));
 	        
-            /*
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000077300', mvalue => 'Bosentan');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000068677', mvalue => 'Sildenafil Citrate');
-
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Pulmonary Arterial Hypertension');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000065627', mvalue => 'Familial Primary Pulmonary Hypertension');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006973', mvalue => 'Hypertension');
-
- */
-            
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Bosentan", 14, "D000077300", "D000077300", "Bosentan"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Sildenafil Citrate", 14, "D000068677", "D000068677", "Sildenafil Citrate"));
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Pulmonary Arterial Hypertension", null, null, "BB01", "Pulmonary hypertension"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Familial Primary Pulmonary Hypertension", 14, "D000065627", null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Hypertension", 14, "D000006973", "BA00", "Essential hypertension"));
+           
 			sb = new StringBuilder("Benza RL, Raina A, Gupta H, Murali S, Burden A, Zastrow MS, Park MH, Simon MA. ");
 			sb.Append("Bosentan-based, treat-to-target therapy in patients with pulmonary arterial hypertension: results from the COMPASS-3 study. ");
 			sb.Append("Pulm Circ. 2018 Jan-Mar;8(1):2045893217741480. doi: 10.1177/2045893217741480. Epub 2017 Oct 24.");
@@ -1655,39 +1647,29 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "connective tissue graft", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "collagen matrix", null, null, null, null));
 	        
-            /*
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Tooth Socket');
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Dental Implants');
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Acetaminophen", 14, "D000000082", "D000000082", "Acetaminophen"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Amoxicillin", 14, "D000000658", "D000000658", "Amoxicillin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Chlorhexidine", 14, "D000002710", "D000002710", "Chlorhexidine"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Chlorhexidine gluconate", 14, "C000010882", "C000010882", "Chlorhexidine gluconate"));
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Tooth Socket", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Dental Implants", null, null, null, null));
 
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000000082', mvalue => 'Acetaminophen');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000000658', mvalue => 'Amoxicillin');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000002710', mvalue => 'Chlorhexidine');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'C000010882', mvalue => 'Chlorhexidine gluconate');
+	        string c1 = "Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets.\n\n";
+	        c1 += "All data can be downloaded from the website, if there are any questions please feel free to contact us.";   
+	        string c2 = "Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets.";
+	        c2 += "All data can be downloaded from the website, if there are any questions please feel free to contact us.";  
+	        
+	        fs.ipd_info!.Add(new AvailableIPD(sd_sid, null, "Individual Participant Data Set", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c1));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Study Protocol", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Statistical Analysis Plan", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Informed Consent Form", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Clinical Study Report", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Analytic Code", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
+            
+	        fs.studylinks!.Add(new StudyLink(sd_sid, "All data can be downloaded from the website, if there are any questions please feel free to contact us",
+		                "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf" ));
 
-call expected.insert_study_ipd_available(sid => _sid, ipd_type => 'Individual Participant Data Set',
-			ipd_url => 'http://aplicacao.saude.gov.br/plataformabrasil/login.jsf',
-			ipd_comment => 'Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets.
-
-All data can be downloaded from the website, if there are any questions please feel free to contact us.');
-call expected.insert_study_ipd_available(sid => _sid, ipd_type => 'Study Protocol',
-			ipd_url => 'http://aplicacao.saude.gov.br/plataformabrasil/login.jsf',
-			ipd_comment => 'Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets. All data can be downloaded from the website, if there are any questions please feel free to contact us.');
-call expected.insert_study_ipd_available(sid => _sid, ipd_type => 'Statistical Analysis Plan',
-			ipd_url => 'http://aplicacao.saude.gov.br/plataformabrasil/login.jsf',
-			ipd_comment => 'Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets. All data can be downloaded from the website, if there are any questions please feel free to contact us.');
-call expected.insert_study_ipd_available(sid => _sid, ipd_type => 'Informed Consent Form',
-			ipd_url => 'http://aplicacao.saude.gov.br/plataformabrasil/login.jsf',
-			ipd_comment => 'Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets. All data can be downloaded from the website, if there are any questions please feel free to contact us.');
-call expected.insert_study_ipd_available(sid => _sid, ipd_type => 'Clinical Study Report',
-			ipd_url => 'http://aplicacao.saude.gov.br/plataformabrasil/login.jsf',
-			ipd_comment => 'Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets. All data can be downloaded from the website, if there are any questions please feel free to contact us.');
-call expected.insert_study_ipd_available(sid => _sid, ipd_type => 'Analytic Code',
-			ipd_url => 'http://aplicacao.saude.gov.br/plataformabrasil/login.jsf',
-			ipd_comment => 'Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets. All data can be downloaded from the website, if there are any questions please feel free to contact us.');
-
-call  expected.insert_study_link (sid => _sid, label => 'All data can be downloaded from the website, if there are any questions please feel free to contact us', 
-			url => 'http://aplicacao.saude.gov.br/plataformabrasil/login.jsf');
-			 */
             // countries
             
             // iec
@@ -1794,12 +1776,10 @@ call  expected.insert_study_link (sid => _sid, label => 'All data can be downloa
 	        fs.features.Add(new StudyFeature(sd_sid, 23, 310));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 520));   // 
 	        
-            /*
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000001507', mvalue => 'Beclomethasone');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000068299', mvalue => 'Salmeterol Xinafoate');
-
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000001249', mvalue => 'Asthma');
-			 */
+	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Beclomethasone", 14, "D000001507", "D000001507", "Beclomethasone"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Salmeterol Xinafoate", 14, "D000068299", "D000068299", "Salmeterol Xinafoate"));
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Asthma", 14, "D000001249", null, null));
             
 			sb = new StringBuilder("Wechsler ME, Kunselman SJ, Chinchilli VM, Bleecker E, Boushey HA, Calhoun WJ, Ameredes BT, Castro M, Craig TJ, Denlinger L, Fahy JV, Jarjour N, Kazani S, Kim S, Kraft M, Lazarus SC, Lemanske RF Jr, Markezich A, Martin RJ, Permaul P, Peters SP, Ramsdell J, Sorkness CA, Sutherland ER, Szefler SJ, Walter MJ, Wasserman SI, Israel E; National Heart, Lung and Blood Institute’s Asthma Clinical Research Network. ");
 			sb.Append("Effect of beta2-adrenergic receptor polymorphism on response to longacting beta2 agonist in asthma (LARGE trial): a genotype-stratified, randomised, placebo-controlled, crossover trial. ");
@@ -1877,7 +1857,7 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 	        fs.titles.Add(new StudyTitle(sd_sid, "DIAMONDHFpEF",
 		        14, "en", 11, false, "From Clinicaltrials.gov"));
 	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54,  100837, "niversity of Leicester", "https://ror.org/04h699437"));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54,  100837, "University of Leicester", "https://ror.org/04h699437"));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100442, "National Institute for Health Research", "https://ror.org/0187kwz08"));
 
 	        fs.features!.Add(new StudyFeature(sd_sid, 30, 600));  // 
@@ -1887,12 +1867,11 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "HFpEF", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "HFrEF", null, null, null, null));
 	        
-            /*
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Patients With Heart Failure and Preserved Ejection Fraction - HFpEF');
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Patients With Heart Failure With Reduced Ejection Fraction - HFrEF');
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Healthy Controls Group - Age and Sex-matched');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006333', mvalue => 'Heart Failure');
- */
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Patients With Heart Failure and Preserved Ejection Fraction - HFpEF", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Patients With Heart Failure With Reduced Ejection Fraction - HFrEF", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Healthy Controls Group - Age and Sex-matched", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Heart Failure", 14, "D000006333", "B1-BD1", "Heart failure"));
+
 			sb = new StringBuilder("Gulsin GS, Kanagala P, Chan DCS, Cheng ASH, Athithan L, Graham-Brown MPM, Singh A, Yang J, Li Z, Khunti K, Davies MJ, Arnold JR, Squire IB, Ng LL, McCann GP. ");
 			sb.Append("Differential left ventricular and left atrial remodelling in heart failure with preserved ejection fraction patients with and without diabetes. ");
 			sb.Append("Ther Adv Endocrinol Metab. 2019 Jul 5;10:2042018819861593. doi: 10.1177/2042018819861593. eCollection 2019.");
@@ -1984,18 +1963,18 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 	        
 	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "localized Ewing sarcoma/peripheral primitive neuroectodermal tumor", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "metastatic Ewing sarcoma/peripheral primitive neuroectodermal tumor", null, null, null, null));
-            /*
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000003609', mvalue => 'Dactinomycin');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000003520', mvalue => 'Cyclophosphamide');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000007069', mvalue => 'Ifosfamide');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000004317', mvalue => 'Doxorubicin');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000005047', mvalue => 'Etoposide');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000014750', mvalue => 'Vincristine');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'C000506643', mvalue => 'Liposomal doxorubicin');
-
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000012509', mvalue => 'Sarcoma');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000012512', mvalue => 'Sarcoma, Ewing');
- */
+	        
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Dactinomycin", 14, "D000003609", "D000003609", "Dactinomycin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Cyclophosphamide", 14, "D000003520", "D000003520", "Cyclophosphamide"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Ifosfamide", 14, "D000007069", "D000007069", "Ifosfamide"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Doxorubicin", 14, "D000004317", "D000004317", "Doxorubicin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Etoposide", 14, "D000005047", "D000005047", "Etoposide"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Vincristine", 14, "D000014750", "D000014750", "Vincristine"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Liposomal doxorubicin", 14, "C000506643", "C000506643", "Liposomal doxorubicin"));
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Sarcoma", 14, "D000012509", null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Sarcoma, Ewing", 14, "D000012512", null, null));
+            
 			sb = new StringBuilder("Sari N, Toğral G, Cetindağ MF, Güngör BS, Ilhan IE. ");
 			sb.Append("Treatment results of the Ewing sarcoma of bone and prognostic factors. ");
 			sb.Append("Pediatr Blood Cancer. 2010 Jan;54(1):19-24. doi: 10.1002/pbc.22278.");
@@ -2083,20 +2062,19 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 510));   // 
 	        
-            /*	        
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000016572', mvalue => 'Cyclosporine');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000020123', mvalue => 'Sirolimus');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000013420', mvalue => 'Sulfamethoxazole');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000015662', mvalue => 'Trimethoprim, Sulfamethoxazole Drug Combination');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000011241', mvalue => 'Prednisone');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000008775', mvalue => 'Methylprednisolone');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000068338', mvalue => 'Everolimus');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000016559', mvalue => 'Tacrolimus');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000003524', mvalue => 'Cyclosporins');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000077552', mvalue => 'Basiliximab');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000007676', mvalue => 'Kidney Failure, Chronic');
-			 */
-
+	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Cyclosporine", 14, "D000016572", "D000016572", "Cyclosporine"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Sirolimus", 14, "D000020123", "D000020123", "Sirolimus"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Sulfamethoxazole", 14, "D000013420", "D000013420", "Sulfamethoxazole"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Trimethoprim, Sulfamethoxazole Drug Combination", 14, "D000015662", "D000015662", "Trimethoprim, Sulfamethoxazole Drug Combination"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Prednisone", 14, "D000011241", "D000011241", "Prednisone"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Methylprednisolone", 14, "D000008775", "D000008775", "Methylprednisolone"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Everolimus", 14, "D000068338", "D000068338", "Everolimus"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Tacrolimus", 14, "D000016559", "D000016559", "Tacrolimus"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Cyclosporins", 14, "D000003524", "D000003524", "Cyclosporins"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Basiliximab", 14, "D000077552", "D000077552", "Basiliximab"));
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Kidney Failure, Chronic", 14, "D000007676", "GB61", "Chronic kidney disease"));
+           
 			sb = new StringBuilder("Benfield MR, Bartosh S, Ikle D, Warshaw B, Bridges N, Morrison Y, Harmon W. ");
 			sb.Append("A randomized double-blind, placebo controlled trial of steroid withdrawal after pediatric renal transplantation. ");
 			sb.Append("Am J Transplant. 2010 Jan;10(1):81-8. doi: 10.1111/j.1600-6143.2009.02767.x. Epub 2009 Jul 28.");
@@ -2231,11 +2209,11 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 505));   // 
-  /*
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000005459', mvalue => 'Fluorides');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000003807', mvalue => 'Dentin Sensitivity');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006967', mvalue => 'Hypersensitivity');
- */
+	        
+	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Fluorides", 14, "D000005459", "D000005459", "Fluorides"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Dentin Sensitivity", 14, "D000003807", "D000003807", "Dentin Sensitivity"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Hypersensitivity", 14, "D000006967", "D000006967", "Hypersensitivity"));
+
             // countries
             
             // iec
@@ -2311,19 +2289,17 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "The University of Texas Health Science Center, Houston", null));
 
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 110));  // 
-	        fs.features.Add(new StudyFeature(sd_sid, 20, 120));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 20, 120));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Recurrent C. Difficile Associated Diarrhea", null, null, "", ""));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Diarrhea", 14, "D000003967", null, null));
 
- /*
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Recurrent C. Difficile Associated Diarrhea');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000003967', mvalue => 'Diarrhea');
+	        fs.relationships!.Add(new StudyRelationship(sd_sid, 23, "NCT03786900"));
 
-call expected.insert_study_relationship(sid => _sid, typeid => 23, targetsid => 'NCT03786900');
-
- */
             // countries
             
             // iec
@@ -2423,14 +2399,14 @@ call expected.insert_study_relationship(sid => _sid, typeid => 23, targetsid => 
 
 	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Diastolic Heart Failure", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Preserved Ejection Fraction", null, null, null, null));
- /*
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000013148', mvalue => 'Spironolactone');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000000451', mvalue => 'Mineralocorticoid Receptor Antagonists');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006333', mvalue => 'Heart Failure');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000006331', mvalue => 'Heart Diseases');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002318', mvalue => 'Cardiovascular Diseases');
+	        
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Spironolactone", 14, "D000013148", "D000013148", "Spironolactone"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Mineralocorticoid Receptor Antagonists", 14, "D000000451", "D000000451", "Mineralocorticoid Receptor Antagonists"));
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Heart Failure", 14, "D000006333", "B1-BD1", "Heart failure"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Heart Diseases", 14, "D000006331", "11", "Diseases of the circulatory system"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Cardiovascular Diseases", 14, "D000002318", "11", "Diseases of the circulatory system"));
 
-*/
 			sb = new StringBuilder("Shah SJ, Heitner JF, Sweitzer NK, Anand IS, Kim HY, Harty B, Boineau R, Clausell N, Desai AS, Diaz R, Fleg JL, Gordeev I, Lewis EF, Markov V, O’Meara E, Kobulia B, Shaburishvili T, Solomon SD, Pitt B, Pfeffer MA, Li R. B");
 			sb.Append("Baseline characteristics of patients in the treatment of preserved cardiac function heart failure with an aldosterone antagonist trial. ");
 			sb.Append("Circ Heart Fail. 2013 Mar;6(2):184-92. doi: 10.1161/CIRCHEARTFAILURE.112.972794. Epub 2012 Dec 20.");
@@ -2696,13 +2672,13 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 
 	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Metastatic and/or Recurrent Osteosarcoma", null, null, null, null));
 	        
-	         /*
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000007069', mvalue => 'Ifosfamide');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'C000027061', mvalue => 'Isophosphamide mustard');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'C000037144', mvalue => 'Mifamurtide');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000000119', mvalue => 'Acetylmuramyl-Alanyl-Isoglutamine');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000012516', mvalue => 'Osteosarcoma');
- */
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Ifosfamide", 14, "D000007069", "D000007069", "Ifosfamide"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Isophosphamide mustard", 14, "C000027061", "C000027061", "Isophosphamide mustard"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Mifamurtide", 14, "C000037144", "C000037144", "Mifamurtide"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Acetylmuramyl-Alanyl-Isoglutamine", 14, "D000000119", "D000000119", "Acetylmuramyl-Alanyl-Isoglutamine"));
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Osteosarcoma", 14, "D000012516", "2B51", "Osteosarcoma, primary site"));
+
             // countries
             
             // iec
@@ -2793,20 +2769,16 @@ call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D0000
 		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Cancer", null, null, null, null));
 		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Oral Cavity", null, null, null, null));
 		    
-	        /*		    
-
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000015032', mvalue => 'Zinc');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000007213', mvalue => 'Indomethacin');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000003520', mvalue => 'Cyclophosphamide');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000009853', mvalue => 'Omeprazole');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 12, mcode => 'D000054328', mvalue => 'Proton Pump Inhibitors');
-
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Squamous Cell Carcinoma of the Oral Cavity');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002277', mvalue => 'Carcinoma');
-call expected.insert_mesh_study_topic(sid => _sid, typeid => 13, mcode => 'D000002294', mvalue => 'Carcinoma, Squamous Cell');
-
-			 */
-
+		    fs.topics.Add(new StudyTopic(sd_sid, 12, "Zinc", 14, "D000015032", "D000015032", "Zinc"));
+		    fs.topics.Add(new StudyTopic(sd_sid, 12, "Indomethacin", 14, "D000007213", "D000007213", "Indomethacin"));
+		    fs.topics.Add(new StudyTopic(sd_sid, 12, "Cyclophosphamide", 14, "D000003520", "D000003520", "Cyclophosphamide"));
+		    fs.topics.Add(new StudyTopic(sd_sid, 12, "Omeprazole", 14, "D000009853", "D000009853", "Omeprazole"));
+		    fs.topics.Add(new StudyTopic(sd_sid, 12, "Proton Pump Inhibitors", 14, "D000054328", "D000054328", "Proton Pump Inhibitors"));
+		    
+		    fs.conditions!.Add(new StudyCondition(sd_sid, "Squamous Cell Carcinoma of the Oral Cavity", null, null, "", ""));
+		    fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma", 14, "D000002277", null, null));
+		    fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma, Squamous Cell", 14, "D000002294", "2C31", "Squamous cell carcinoma of skin"));
+	        
             sb = new StringBuilder("Wolf GT, Liu S, Bellile E, Sartor M, Rozek L, Thomas D, Nguyen A, Zarins K, McHugh JB; ");
 			sb.Append("INSPIRE Trial Clinical Investigators. Tumor infiltrating lymphocytes after neoadjuvant IRX-2 immunotherapy in oral squamous cell carcinoma: Interim findings from the INSPIRE trial. ");
 			sb.Append("Oral Oncol. 2020 Jul 29;111:104928. doi: 10.1016/j.oraloncology.2020.104928. [Epub ahead of print]");
