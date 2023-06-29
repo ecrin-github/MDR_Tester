@@ -54,187 +54,218 @@ public class TestData_101900 : TestData_Base
 
 	        fs.references!.Add(new StudyReference(sd_sid, null, "21571150", 
 		        "https://www.ncbi.nlm.nih.gov/pubmed/2157115", null, "primary"));	
+            
+	        // Data Objects
+	        
+	        // 1) Trial registry entry
 
-            /*
- 
--- trial registry entry
-_oid = _sid ||' :: 38 :: NHLBI web page';
+	        string sd_oid = sd_sid + " :: 38 :: NHLBI web page";
+	        string ob_title = display_title + " :: NHLBI web page";
+	        StudyDataObject sdo = CreateEmptyStudyDataObject();
+            
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "NHLBI web page", null, ob_title,
+		        null, 9, null, 23, 38, 100167, "National Heart, Lung, and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 12, null, null, 0, true, true);
+	       
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+		        "https://biolincc.nhlbi.nih.gov/studies/baby_hug/", true, 35, null, null, null));
+	        
+	        fs.data_objects!.Add(sdo);
+	        
+	        // 2) Datasets
+	        
+	        sd_oid = sd_sid + " :: 80 :: Individual participant data";
+	        ob_title = display_title + " :: Individual participant data";
+	        sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
+		        null, 9, 2022, 14, 80, 100167, "National Heart, Lung, and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 17, asb.ToString(), 
+		        "https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15",
+		        3, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	        
+	        sdo.dataset_details = new ObjectDataset(sd_oid, null, null, 2, null, null, null, null, null,
+		        dsb.ToString(), 6, null, null, null, null, null, 
+		        "Restrictions reported on the use of data depending on the area of research. Use of data and/or specimens is limited to research on sickle cell anemia and related disorders.");
+	        
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 18, false, "2022 Feb 7", 2022, 2, 7, null, null, null, null));
+	        
+	        fs.data_objects!.Add(sdo);
+	        
+	        // 3) Data Dictionary
+	        
+	        sd_oid = sd_sid + " :: 31 :: Data Dictionary";
+	        ob_title = display_title + " :: Data Dictionary";
+	        sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Data Dictionary", null, ob_title,
+		        null, 9, null, 23, 31, 100167, "National Heart, Lung, and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+		        "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/data_dictionary/Baby_HUG_2021a.pdf",
+		        true, 11, "3.1", "MB", null));
+	        
+	        fs.data_objects!.Add(sdo);
+	        
+	        // 4) BABY HUG Follow-up Study II Annotated CRFs
+	        
+	        sd_oid = sd_sid + " :: 30 :: BABY HUG Follow-up Study II Annotated CRFs";
+	        ob_title = display_title + " :: BABY HUG Follow-up Study II Annotated CRFs";
+	        sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG Follow-up Study II Annotated CRFs", null, ob_title,
+		        null, 9, null, 23, 30, 100167, "National Heart, Lung, and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+		        "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_II_Annotated_CRFs.pdf",
+		        true, 11, "1.2", "MB", null));
+	        
+	        fs.data_objects!.Add(sdo);
+	        
+	        // 5) BABY HUG Follow-up Study II Manual of Operations
+	        
+	        sd_oid = sd_sid + " :: 35 :: BABY HUG Follow-up Study II Manual of Operations";
+	        ob_title = display_title + " :: BABY HUG Follow-up Study II Manual of Operations";
+	        sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG Follow-up Study II Manual of Operations", null, ob_title,
+		        null, 9, null, 23, 35, 100167, "National Heart, Lung, and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+		        "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_II_Manual_of_Operations.pdf",
+		        true, 11, "2.3", "MB", null));
+	        
+	        fs.data_objects!.Add(sdo);
 
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-	title => _title,
-	title_qualifier => 'NHLBI web page',
-	obclassid => 23, obtypeid => 38,
-	managingorgid => 100167, managingorgname=> 'National Heart, Lung, and Blood Institute (US)',
-	acctypeid => 12, title_typeid => 22);
+	        // 6) BABY HUG Follow-up Study II Protocol
+	        
+	        sd_oid = sd_sid + " :: 11 :: BABY HUG Follow-up Study II Protocol";
+	        ob_title = display_title + " :: BABY HUG Follow-up Study II Protocol";
+	        sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG Follow-up Study II Protocol", null, ob_title,
+		        null, 9, null, 23, 11, 100167, "National Heart, Lung, and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+		        "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_II_Protocol.pdf",
+		        true, 11, "568.5", "KB", null));
+	        
+	        fs.data_objects!.Add(sdo);
+	        
+	        // 7) BABY HUG Follow-up Study I Annotated CRFs
+            	        
+            sd_oid = sd_sid + " :: 30 :: BABY HUG Follow-up Study I Annotated CRFs";
+            ob_title = display_title + " :: BABY HUG Follow-up Study I Annotated CRFs";
+            sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG Follow-up Study I Annotated CRFs", null, ob_title,
+                null, 9, null, 23, 30, 100167, "National Heart, Lung, and Blood Institute", 
+                "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+                "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_I_Annotated_CRFs.pdf",
+                true, 11, "5.8", "MB", null));
+            
+            fs.data_objects!.Add(sdo);
+            
+            // 8) BABY HUG Follow-up Study I Manual of Operations
+            
+            sd_oid = sd_sid + " :: 35 :: BABY HUG Follow-up Study I Manual of Operations";
+            ob_title = display_title + " :: BABY HUG Follow-up Study I Manual of Operations";
+            sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG Follow-up Study I Manual of Operations", null, ob_title,
+                null, 9, null, 23, 35, 100167, "National Heart, Lung, and Blood Institute", 
+                "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+                "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_I_Manual_of_Operations.pdf",
+                true, 11, "2.8", "MB", null));
+            
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_object_instance(sd_oid => _oid, 
-    reporgid => 101900, reporgname => 'BioLINCC', 
-	purl => 'https://biolincc.nhlbi.nih.gov/studies/baby_hug/', 
-	restypeid => 35);
+            // 9) BABY HUG Follow-up Study I Protocol
+            
+            sd_oid = sd_sid + " :: 11 :: BABY HUG Follow-up Study I Protocol";
+            ob_title = display_title + " :: BABY HUG Follow-up Study I Protocol";
+            sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG Follow-up Study I Protocol", null, ob_title,
+                null, 9, null, 23, 11, 100167, "National Heart, Lung, and Blood Institute", 
+                "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+                "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_I_Protocol.pdf",
+                true, 11, "659.8", "KB", null));
+            
+            fs.data_objects!.Add(sdo);
+                    
+            
+	        // 10) BABY HUG RCT Annotated CRFs
+            	        
+            sd_oid = sd_sid + " :: 30 :: BABY HUG RCT Annotated CRFs";
+            ob_title = display_title + " :: BABY HUG RCT Annotated CRFs";
+            sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG RCT Annotated CRFs", null, ob_title,
+                null, 9, null, 23, 30, 100167, "National Heart, Lung, and Blood Institute", 
+                "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+                "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_RCT_Annotated_CRFs.pdf",
+                true, 11, "3.3", "MB", null));
+            
+            fs.data_objects!.Add(sdo);
+            
+            // 11) BABY HUG RCT Manual of Operations
+            
+            sd_oid = sd_sid + " :: 35 :: BABY HUG RCT Manual of Operations";
+            ob_title = display_title + " :: BABY HUG RCT Manual of Operations";
+            sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG RCT Manual of Operations", null, ob_title,
+                null, 9, null, 23, 35, 100167, "National Heart, Lung, and Blood Institute", 
+                "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+                "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_RCT_Manual_of_Operations.pdf",
+                true, 11, "2.7", "MB", null));
+            
+            fs.data_objects!.Add(sdo);
 
--- datasets
-_oid = _sid ||' :: 80 :: Individual participant data';
+            // 12) BABY HUG RCT Protocol
+            
+            sd_oid = sd_sid + " :: 11 :: BABY HUG RCT Protocol";
+            ob_title = display_title + " :: BABY HUG RCT Protocol";
+            sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG RCT Protocol", null, ob_title,
+                null, 9, null, 23, 11, 100167, "National Heart, Lung, and Blood Institute", 
+                "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+                "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_RCT_Protocol.pdf",
+                true, 11, "1.2", "MB", null));
+            
+            fs.data_objects!.Add(sdo);
 
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-	title => _title,
-	title_qualifier => 'Individual participant data',
-	pubyear => 2022, obclassid => 14, obtypeid => 80,
-	managingorgid => 100167, managingorgname=> 'National Heart, Lung, and Blood Institute (US)',
-	acctypeid => 17, accdetails => _access_details, 
-	accdetsurl => 'https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15',
-	urlchecked => '2021-07-23', eosccat => 3, title_typeid => 22);
-
-call expected.insert_object_dataset (sd_oid => _oid, 
-     deidenttypeid => 2, deidentdets => _de_identification
-     , consenttypeid => 6, consentdets => 'Restrictions reported on the use of data depending on the area of research. Use of data and/or specimens is limited to research on sickle cell anemia and related disorders.');
-
-call expected.insert_object_date(sd_oid => _oid, 
-    typeid => 18, datestring => '2022 Feb 7',
-	syear => 2022, smonth => 2, sday => 7);
-
--- other objects
-_oid = _sid ||' :: 31 :: Data Dictionary';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title,
-       title_qualifier => 'Data Dictionary',	    
-	   pubyear => null, obclassid => 23, obtypeid => 31, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/data_dictionary/Baby_HUG_2021a.pdf', 
-	   restypeid => 11, ressize => '3.1', ressizeu => 'MB');
-
-_oid = _sid ||' :: 30 :: BABY HUG Follow-up Study II Annotated CRFs';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title,
-       title_qualifier => 'BABY HUG Follow-up Study II Annotated CRFs',
-	   pubyear => null, obclassid => 23, obtypeid => 30, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_II_Annotated_CRFs.pdf', 
-	   restypeid => 11, ressize => '1.2', ressizeu => 'MB');
-       
-_oid = _sid ||' :: 35 :: BABY HUG Follow-up Study II Manual of Operations';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title,
-       title_qualifier => 'BABY HUG Follow-up Study II Manual of Operations',	   
-	   pubyear => null, obclassid => 23, obtypeid => 35, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_II_Manual_of_Operations.pdf', 
-	   restypeid => 11, ressize => '2.3', ressizeu => 'MB');
-
-_oid = _sid ||' :: 11 :: BABY HUG Follow-up Study II Protocol';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title,
-       title_qualifier => 'BABY HUG Follow-up Study II Protocol',	   
-	   pubyear => null, obclassid => 23, obtypeid => 11, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_II_Protocol.pdf', 
-	   restypeid => 11, ressize => '568.5', ressizeu => 'KB');
-
-_oid = _sid ||' :: 30 :: BABY HUG Follow-up Study I Annotated CRFs';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title,
-       title_qualifier => 'BABY HUG Follow-up Study I Annotated CRFs',	   
-	   pubyear => null, obclassid => 23, obtypeid => 30, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_I_Annotated_CRFs.pdf', 
-	   restypeid => 11, ressize => '5.8', ressizeu => 'MB');
-
-_oid = _sid ||' :: 35 :: BABY HUG Follow-up Study I Manual of Operations';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title,
-       title_qualifier => 'BABY HUG Follow-up Study I Manual of Operations',	   
-	   pubyear => null, obclassid => 23, obtypeid => 35, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_I_Manual_of_Operations.pdf', 
-	   restypeid => 11, ressize => '2.8', ressizeu => 'MB');
-
-_oid = _sid ||' :: 11 :: BABY HUG Follow-up Study I Protocol';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-       title => _title,
-       title_qualifier => 'BABY HUG Follow-up Study I Protocol',	   
-	   pubyear => null, obclassid => 23, obtypeid => 11, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_I_Protocol.pdf', 
-	   restypeid => 11, ressize => '659.8', ressizeu => 'KB');
-
-_oid = _sid ||' :: 30 :: BABY HUG RCT Annotated CRFs';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title,
-       title_qualifier => 'BABY HUG RCT Annotated CRFs',	   
-	   pubyear => null, obclassid => 23, obtypeid => 30, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_RCT_Annotated_CRFs.pdf', 
-	   restypeid => 11, ressize => '3.3', ressizeu => 'MB');
-
-_oid = _sid ||' :: 35 :: BABY HUG RCT Manual of Operations';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title,
-       title_qualifier => 'BABY HUG RCT Manual of Operations',	   
-	   pubyear => null, obclassid => 23, obtypeid => 35, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_RCT_Manual_of_Operations.pdf', 
-	   restypeid => 11, ressize => '2.7', ressizeu => 'MB');	   
-
-_oid = _sid ||' :: 11 :: BABY HUG RCT Protocol';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title, 
-       title_qualifier => 'BABY HUG RCT Protocol',	   
-	   pubyear => null, obclassid => 23, obtypeid => 11, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_RCT_Protocol.pdf', 
-	   restypeid => 11, ressize => '1.2', ressizeu => 'MB');	
-
-
-             */
+            return fs;
         }
         
         if (sd_sid == "ACRN-BAGS")
@@ -270,88 +301,99 @@ call expected.insert_object_instance(sd_oid => _oid,
 
 	        fs.references!.Add(new StudyReference(sd_sid, null, "19932356", 
 		        "https://www.ncbi.nlm.nih.gov/pubmed/19932356", null, "primary"));	
+	        
+            // Data Objects
+	        
+	        // 1) Trial registry entry
 
-            /*
+	        string sd_oid = sd_sid + " :: 38 :: NHLBI web page";
+	        string ob_title = display_title + " :: NHLBI web page";
+	        StudyDataObject sdo = CreateEmptyStudyDataObject();
+            
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "NHLBI web page", null, ob_title,
+		        null, 9, null, 23, 38, 100167, "National Heart, Lung, and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 12, null, null, 0, true, true);
+	       
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+		        "https://biolincc.nhlbi.nih.gov/studies/bags/", true, 35, null, null, null));
+	        
+	        fs.data_objects!.Add(sdo);
+	        
+	        // 2) Datasets
+	        
+	        sd_oid = sd_sid + " :: 80 :: Individual participant data";
+	        ob_title = display_title + " :: Individual participant data";
+	        sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
+		        null, 9, 2018, 14, 80, 100167, "National Heart, Lung, and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 17, asb.ToString(), 
+		        "https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15",
+		        3, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	        
+	        sdo.dataset_details = new ObjectDataset(sd_oid, null, null, 2, null, null, null, null, null,
+		        dsb.ToString(), null, null, null, null, null, null, null);
+	        
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 18, false, "2018 Jan 3", 2018, 1, 3, null, null, null, null));
+	        
+	        fs.data_objects!.Add(sdo);
+	        
+	        // 3) Data Dictionary
+	        
+	        sd_oid = sd_sid + " :: 31 :: Data Dictionary";
+	        ob_title = display_title + " :: Data Dictionary";
+	        sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Data Dictionary", null, ob_title,
+		        null, 9, null, 23, 31, 100167, "National Heart, Lung, and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+		        "https://biolincc.nhlbi.nih.gov/media/studies/bags/data_dictionary/ACRN_BAGS.pdf",
+		        true, 11, "240.2", "KB", null));
+	        
+	        fs.data_objects!.Add(sdo);
+	        
+	        // 4) Forms
+	        
+	        sd_oid = sd_sid + " :: 86 :: Forms";
+	        ob_title = display_title + " :: Forms";
+	        sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Forms", null, ob_title,
+		        null, 9, null, 23, 86, 100167, "National Heart, Lung, and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+		        "https://biolincc.nhlbi.nih.gov/studies/bags/Forms/",
+		        true, 35, null, null, null));
+	        
+	        fs.data_objects!.Add(sdo);
+			
+	        // 5) Manual of Operations
+	        
+	        sd_oid = sd_sid + " :: 36 :: Manual";
+	        ob_title = display_title + " :: Manual";
+	        sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Manual", null, ob_title,
+		        null, 9, null, 23, 36, 100167, "National Heart, Lung, and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+		        "https://biolincc.nhlbi.nih.gov/media/studies/bags/Manual.pdf",
+		        true, 11, "250.3", "KB", null));
+	        
+	        fs.data_objects!.Add(sdo);
 
--- trial registry entry
-_oid = _sid ||' :: 38 :: NHLBI web page';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-	title => _title,
-	title_qualifier => 'NHLBI web page',
-	pubyear => null, obclassid => 23, obtypeid => 38,
-	managingorgid => 100167, managingorgname=> 'National Heart, Lung, and Blood Institute (US)',
-	acctypeid => 12, title_typeid => 22);
-
-call expected.insert_object_instance(sd_oid => _oid, 
-    reporgid => 101900, reporgname => 'BioLINCC', 
-	purl => 'https://biolincc.nhlbi.nih.gov/studies/bags/', 
-	restypeid => 35);
-
--- datasets
-_oid = _sid ||' :: 80 :: Individual participant data';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-	title => _title,
-	title_qualifier => 'Individual participant data',
-	pubyear => 2018, obclassid => 14, obtypeid => 80,
-	managingorgid => 100167, managingorgname=> 'National Heart, Lung, and Blood Institute (US)',
-	acctypeid => 17, accdetails => _access_details, 
-	accdetsurl => 'https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15',
-	urlchecked => '2021-07-23', eosccat => 3, title_typeid => 22);
-
-call expected.insert_object_dataset (sd_oid => _oid, 
-    deidenttypeid => 2, deidentdets => _de_identification);
-
-call expected.insert_object_date(sd_oid => _oid, 
-    typeid => 18, datestring => '2018 Jan 3',
-	syear => 2018, smonth => 1, sday => 3);
-    
--- other objects
-_oid = _sid ||' :: 31 :: Data Dictionary';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title,
-       title_qualifier => 'Data Dictionary',	   
-	   pubyear => null, obclassid => 23, obtypeid => 31, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/bags/data_dictionary/ACRN_BAGS.pdf', 
-	   restypeid => 11, ressize => '240.2', ressizeu => 'KB');
-
-_oid = _sid ||' :: 36 :: Manual';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title,
-       title_qualifier => 'Manual',
-	   pubyear => null, obclassid => 23, obtypeid => 36, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/bags/Manual.pdf', 
-	   restypeid => 11, ressize => '250.3', ressizeu => 'KB');
-
-_oid = _sid ||' :: 86 :: Forms';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-       title => _title,
-       title_qualifier => 'Forms',	   
-	   pubyear => null, obclassid => 23, obtypeid => 86, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 12, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/studies/bags/Forms/', 
-	   restypeid => 35);
-
-            */           
+	        return fs;
         }
+        
 
         if (sd_sid == "TOPCAT")
         {
@@ -697,103 +739,121 @@ call expected.insert_object_instance(sd_oid => _oid,
 			sb.Append("Eur J Prev Cardiol 2022 Jan 7. Epub 2022 Jan 7.");
 			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "35015840", "58253719c16e4620bea2a69d14bb15ae", 
 			null, "associated"));	
+			
+			// Data Objects
+	        
+			// 1) Trial registry entry
 
-			/*	
--- trial registry entry
-_oid = _sid ||' :: 38 :: NHLBI web page';
+			string sd_oid = sd_sid + " :: 38 :: NHLBI web page";
+			string ob_title = display_title + " :: NHLBI web page";
+			StudyDataObject sdo = CreateEmptyStudyDataObject();
+            
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "NHLBI web page", null, ob_title,
+				null, 9, null, 23, 38, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 12, null, null, 0, true, true);
+	       
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/studies/topcat/", true, 35, null, null, null));
+	        
+			fs.data_objects!.Add(sdo);
+			
+			// 2) Datasets
+	        
+			sd_oid = sd_sid + " :: 80 :: Individual participant data";
+			ob_title = display_title + " :: Individual participant data";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
+				null, 9, 2019, 14, 80, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 17, asb.ToString(), 
+				"https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15",
+				3, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,  
-	title => _title,
-	title_qualifier => 'NHLBI web page',
-	pubyear => null, obclassid => 23, obtypeid => 38,
-	managingorgid => 100167, managingorgname=> 'National Heart, Lung, and Blood Institute (US)',
-	acctypeid => 12, title_typeid => 22);
+			string res_constraints = "Consent for the use of biospecimens in genetic research is tiered to (1) research related to heart disease, stroke, kidney diseases, ";
+			res_constraints += "other cardiovascular diseases, or risk factors associated with these diseases and (2) research related to any disease, health condition or risk factors. ";
+			res_constraints += "Use of biospecimens in non-genetic research is unrestricted.";
+			
+			sdo.dataset_details = new ObjectDataset(sd_oid, null, null, 2, null, null, null, null, null,
+				dsb.ToString(), 6, null, null, null, null, null, res_constraints);
+	        
+			sdo.object_dates!.Add(new ObjectDate(sd_oid, 18, false, "2019 Feb 2", 2019, 2, 20, null, null, null, null));
+	        
+			fs.data_objects!.Add(sdo);
+			
+			
+			// 3) Data Dictionary
+	        
+			sd_oid = sd_sid + " :: 31 :: Data Dictionary";
+			ob_title = display_title + " :: Data Dictionary";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "Data Dictionary", null, ob_title,
+				null, 9, null, 23, 31, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/media/studies/topcat/data_dictionary/TOPCAT_v2016b.pdf",
+				true, 11, "795.3", "KB", null));
+	        
+			fs.data_objects!.Add(sdo);
 
-call expected.insert_object_instance(sd_oid => _oid, 
-	reporgid => 101900, reporgname => 'BioLINCC', 
-	purl => 'https://biolincc.nhlbi.nih.gov/studies/topcat/', 
-	restypeid => 35);
-	
+			// 4) Protocols
+	        
+			sd_oid = sd_sid + " :: 11 :: Protocols";
+			ob_title = display_title + " :: Protocols";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "Protocols", null, ob_title,
+				null, 9, null, 23, 11, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/media/studies/topcat/Protocols.pdf",
+				true, 11, "1.8", "MB", null));
+	        
+			fs.data_objects!.Add(sdo);
+			
+			// 5) CRF Forms
+	        
+			sd_oid = sd_sid + " :: 21 :: Forms";
+			ob_title = display_title + " :: Forms";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "Forms", null, ob_title,
+				null, 9, null, 23, 36, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/media/studies/topcat/Forms.pdf",
+				true, 11, "5.3", "MB", null));
+	        
+			fs.data_objects!.Add(sdo);
+			
+			// 6) Manual of Operations
+	        
+			sd_oid = sd_sid + " :: 35 :: Manual of Operations";
+			ob_title = display_title + " :: Manual of Operations";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "Manual of Operations", null, ob_title,
+				null, 9, null, 23, 35, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/media/studies/omniheart/MOP.pdf",
+				true, 11, "1.8", "MB", null));
+	        
+			fs.data_objects!.Add(sdo);
 
--- datasets
-_oid = _sid ||' :: 80 :: Individual participant data';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-	title => _title,
-	title_qualifier => 'Individual participant data',
-	pubyear => 2019, obclassid => 14, obtypeid => 80,
-	managingorgid => 100167, managingorgname=> 'National Heart, Lung, and Blood Institute (US)',
-	acctypeid => 17, accdetails => _access_details, 
-	accdetsurl => 'https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15',
-	urlchecked => '2021-07-23', eosccat => 3, title_typeid => 22);
-
-call expected.insert_object_dataset (sd_oid => _oid, 
-	 deidenttypeid => 2, deidentdets => _de_identification
-   , consenttypeid => 6, consentdets => 'Consent for the use of biospecimens in genetic research is tiered to (1) research related to heart disease, stroke, kidney diseases, other cardiovascular diseases, or risk factors associated with these diseases and (2) research related to any disease, health condition or risk factors. Use of biospecimens in non-genetic research is unrestricted.');
-
-call expected.insert_object_date(sd_oid => _oid, 
-	typeid => 18, datestring => '2019 Feb 20',
-	syear => 2019, smonth => 2, sday => 20);
-	
--- other objects
-_oid = _sid ||' :: 31 :: Data Dictionary';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,  
-	   title => _title,
-	   title_qualifier => 'Data Dictionary',	   
-	   pubyear => null, obclassid => 23, obtypeid => 31, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-	   reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/topcat/data_dictionary/TOPCAT_v2016b.pdf', 
-	   restypeid => 11, ressize => '795.3', ressizeu => 'KB');
-
-_oid = _sid ||' :: 21 :: Forms';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-	   title => _title,
-	   title_qualifier => 'Forms',
-	   pubyear => null, obclassid => 23, obtypeid => 21, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-
-call expected.insert_object_instance(sd_oid => _oid, 
-	   reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/topcat/Forms.pdf', 
-	   restypeid => 11, ressize => '5.3', ressizeu => 'MB');
-
-_oid = _sid ||' :: 35 :: Manual of Operations';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-	   title => _title,
-	   title_qualifier => 'Manual of Operations',	   
-	   pubyear => null, obclassid => 23, obtypeid => 35, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-	   reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/topcat/Manual_of_Operations.pdf', 
-	   restypeid => 11, ressize => '1.8', ressizeu => 'MB');
-
-_oid = _sid ||' :: 11 :: Protocols';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-	   title => _title,
-	   title_qualifier => 'Protocols',	   
-	   pubyear => null, obclassid => 23, obtypeid => 11, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-	   reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/topcat/Protocols.pdf', 
-	   restypeid => 11, ressize => '1.8', ressizeu => 'MB');
-	
-			*/           
+			return fs;
         }
+        
         
         if (sd_sid == "ACRN-LARGE")
         {
@@ -827,89 +887,100 @@ call expected.insert_object_instance(sd_oid => _oid,
 			fs.references!.Add(new StudyReference(sd_sid, null, "19932356", 
 			     "https://www.ncbi.nlm.nih.gov/pubmed/19932356", null, "primary"));	
 			
-			     
-/*	     
--- trial registry entry
-_oid = _sid ||' :: 38 :: NHLBI web page';
+			
+			// Data Objects
+	        
+			// 1) Trial registry entry
 
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-	title => _title,
-	title_qualifier => 'NHLBI web page',
-	pubyear => null, obclassid => 23, obtypeid => 38,
-	managingorgid => 100167, managingorgname=> 'National Heart, Lung, and Blood Institute (US)',
-	acctypeid => 12, title_typeid => 22);
+			string sd_oid = sd_sid + " :: 38 :: NHLBI web page";
+			string ob_title = display_title + " :: NHLBI web page";
+			StudyDataObject sdo = CreateEmptyStudyDataObject();
+            
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "NHLBI web page", null, ob_title,
+				null, 9, null, 23, 38, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 12, null, null, 0, true, true);
+	       
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/studies/large/", true, 35, null, null, null));
+	        
+			fs.data_objects!.Add(sdo);
 
-call expected.insert_object_instance(sd_oid => _oid, 
-    reporgid => 101900, reporgname => 'BioLINCC', 
-	purl => 'https://biolincc.nhlbi.nih.gov/studies/large/', 
-	restypeid => 35);
-	
+			
+			// 2) Datasets
+	        
+			sd_oid = sd_sid + " :: 80 :: Individual participant data";
+			ob_title = display_title + " :: Individual participant data";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
+				null, 9, 2018, 14, 80, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 17, asb.ToString(), 
+				"https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15",
+				3, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+			
+			sdo.dataset_details = new ObjectDataset(sd_oid, null, null, 2, null, null, null, null, null,
+				dsb.ToString(), null, null, null, null, null, null, null);
+	        
+			sdo.object_dates!.Add(new ObjectDate(sd_oid, 18, false, "2018 Jan 3", 2018, 1, 3, null, null, null, null));
+	        
+			fs.data_objects!.Add(sdo);
+			
+			// 3) Data Dictionary
+	        
+			sd_oid = sd_sid + " :: 31 :: Data Dictionary";
+			ob_title = display_title + " :: Data Dictionary";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "Data Dictionary", null, ob_title,
+				null, 9, null, 23, 31, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/media/studies/large/data_dictionary/ACRN_LARGE_accessible.pdf",
+				true, 11, "508.2", "KB", null));
+	        
+			fs.data_objects!.Add(sdo);
+			
+			// 4) Protocol
+	        
+			sd_oid = sd_sid + " :: 11 :: Protocol";
+			ob_title = display_title + " :: Protocol";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "Protocol", null, ob_title,
+				null, 9, null, 23, 11, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/media/studies/large/Protocol.pdf",
+				true, 11, "631.0", "KB", null));
+	        
+			fs.data_objects!.Add(sdo);
+			
+			// 5) CRF Forms
+	        
+			sd_oid = sd_sid + " :: 21 :: Forms";
+			ob_title = display_title + " :: Forms";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "Forms", null, ob_title,
+				null, 9, null, 23, 36, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/media/studies/large/Forms.pdf",
+				true, 11, "3.3", "MB", null));
+	        
+			fs.data_objects!.Add(sdo);
 
--- datasets
-_oid = _sid ||' :: 80 :: Individual participant data';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-	title => _title,
-	title_qualifier => 'Individual participant data',
-	pubyear => 2018, obclassid => 14, obtypeid => 80,
-	managingorgid => 100167, managingorgname=> 'National Heart, Lung, and Blood Institute (US)',
-	acctypeid => 17, accdetails => _access_details, 
-	accdetsurl => 'https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15',
-	urlchecked => '2021-07-23', eosccat => 3, title_typeid => 22);
-
-call expected.insert_object_dataset (sd_oid => _oid, 
-     deidenttypeid => 2, deidentdets => _de_identification
-   );
-   
-call expected.insert_object_date(sd_oid => _oid, 
-    typeid => 18, datestring => '2018 Jan 3',
-	syear => 2018, smonth => 1, sday => 3);
-
--- other objects
-_oid = _sid ||' :: 31 :: Data Dictionary';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-       title => _title,
-       title_qualifier => 'Data Dictionary',	   
-	   pubyear => null, obclassid => 23, obtypeid => 31, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/large/data_dictionary/ACRN_LARGE_accessible.pdf', 
-	   restypeid => 11, ressize => '508.2', ressizeu => 'KB');
-
-_oid = _sid ||' :: 21 :: Forms';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,  
-       title => _title,
-       title_qualifier => 'Forms',
-	   pubyear => null, obclassid => 23, obtypeid => 21, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/large/Forms.pdf', 
-	   restypeid => 11, ressize => '3.3', ressizeu => 'MB');
-	   
-_oid = _sid ||' :: 11 :: Protocol';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title,
-       title_qualifier => 'Protocol',	   
-	   pubyear => null, obclassid => 23, obtypeid => 11, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/large/Protocol.pdf', 
-	   restypeid => 11, ressize => '631.0', ressizeu => 'KB');
-
-             */           
+			return fs;
         }
+        
         
         if (sd_sid == "OMNI Heart")
         {
@@ -992,84 +1063,99 @@ call expected.insert_object_instance(sd_oid => _oid,
 			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "24773160", "41a5c5c2140c40309fc7e00a3f79f201", 
 			null, "associated"));	
 						 
-/*
--- trial registry entry
-_oid = _sid ||' :: 38 :: NHLBI web page';
+			// Data Objects
+	        
+			// 1) Trial registry entry
 
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-	title => _title,
-	title_qualifier => 'NHLBI web page',
-	pubyear => null, obclassid => 23, obtypeid => 38,
-	managingorgid => 100167, managingorgname=> 'National Heart, Lung, and Blood Institute (US)',
-	acctypeid => 12, title_typeid => 22);
+			string sd_oid = sd_sid + " :: 38 :: NHLBI web page";
+			string ob_title = display_title + " :: NHLBI web page";
+			StudyDataObject sdo = CreateEmptyStudyDataObject();
+            
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "NHLBI web page", null, ob_title,
+				null, 9, null, 23, 38, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 12, null, null, 0, true, true);
+	       
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/studies/omniheart/", true, 35, null, null, null));
+	        
+			fs.data_objects!.Add(sdo);
 
-call expected.insert_object_instance(sd_oid => _oid, 
-    reporgid => 101900, reporgname => 'BioLINCC', 
-	purl => 'https://biolincc.nhlbi.nih.gov/studies/omniheart/', 
-	restypeid => 35);
-		
+			// 2) Datasets
+	        
+			sd_oid = sd_sid + " :: 80 :: Individual participant data";
+			ob_title = display_title + " :: Individual participant data";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
+				null, 9, 2019, 14, 80, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 17, asb.ToString(), 
+				"https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15",
+				3, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+			
+			sdo.dataset_details = new ObjectDataset(sd_oid, null, null, 2, null, null, null, null, null,
+				dsb.ToString(), 6, null, null, null, null, null, 
+				"Consent restricts use of biospecimens to non-genetic research related to CVD or nutrition.");
+	        
+			sdo.object_dates!.Add(new ObjectDate(sd_oid, 18, false, "2019 Jan 24", 2019, 1, 24, null, null, null, null));
+	        
+			fs.data_objects!.Add(sdo);
+			
+			
+			// 3) Data Dictionary
+	        
+			sd_oid = sd_sid + " :: 31 :: Data Dictionary";
+			ob_title = display_title + " :: Data Dictionary";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "Data Dictionary", null, ob_title,
+				null, 9, null, 23, 31, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/media/studies/omniheart/data_dictionary/OMNI_Heart_2019a.pdf",
+				true, 11, "296.7", "KB", null));
+	        
+			fs.data_objects!.Add(sdo);
+			
+			// 4) Protocol
+	        
+			sd_oid = sd_sid + " :: 11 :: Protocol";
+			ob_title = display_title + " :: Protocol";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "Protocol", null, ob_title,
+				null, 9, null, 23, 11, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/media/studies/omniheart/Protocol.pdf",
+				true, 11, "987.0", "KB", null));
+	        
+			fs.data_objects!.Add(sdo);
+			
+			// 5) Manual of Procedures
+	        
+			sd_oid = sd_sid + " :: 36 :: MOP";
+			ob_title = display_title + " :: MOP";
+			sdo = CreateEmptyStudyDataObject();
+	        
+			sdo.data_object = new DataObject(sd_oid, sd_sid, "MOP", null, ob_title,
+				null, 9, null, 23, 36, 100167, "National Heart, Lung, and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        
+			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
+				"https://biolincc.nhlbi.nih.gov/media/studies/omniheart/MOP.pdf",
+				true, 11, "1.1", "MB", null));
+	        
+			fs.data_objects!.Add(sdo);
 
--- datasets
-_oid = _sid ||' :: 80 :: Individual participant data';
+			return fs;
 
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-	title => _title,
-	title_qualifier => 'Individual participant data',
-	pubyear => 2019, obclassid => 14, obtypeid => 80,
-	managingorgid => 100167, managingorgname=> 'National Heart, Lung, and Blood Institute (US)',
-	acctypeid => 17, accdetails => _access_details, 
-	accdetsurl => 'https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15',
-	urlchecked => '2021-07-23', eosccat => 3, title_typeid => 22);
-
-call expected.insert_object_dataset (sd_oid => _oid, 
-     deidenttypeid => 2, deidentdets => _de_identification
-   , consenttypeid => 6, consentdets => 'Consent restricts use of biospecimens to non-genetic research related to CVD or nutrition.');
-
-call expected.insert_object_date(sd_oid => _oid, 
-    typeid => 18, datestring => '2019 Jan 24',
-	syear => 2019, smonth => 1, sday => 24);
-    
--- other objects
-_oid = _sid ||' :: 31 :: Data Dictionary';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid,
-       title => _title, title_qualifier => 'Data Dictionary',	   
-	   pubyear => null, obclassid => 23, obtypeid => 31, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/omniheart/data_dictionary/OMNI_Heart_2019a.pdf', 
-	   restypeid => 11, ressize => '296.7', ressizeu => 'KB');
-
-_oid = _sid ||' :: 36 :: MOP';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-       title => _title, title_qualifier => 'MOP',
-	   pubyear => null, obclassid => 23, obtypeid => 36, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/omniheart/MOP.pdf', 
-	   restypeid => 11, ressize => '1.1', ressizeu => 'MB');
-
-_oid = _sid ||' :: 11 :: Protocol';
-
-call expected.insert_simple_object(sd_oid => _oid, sid => _sid, 
-       title => _title, title_qualifier => 'Protocol',	   
-	   pubyear => null, obclassid => 23, obtypeid => 11, 
-	   managingorgid => 100167, managingorgname => 'National Heart, Lung, and Blood Institute (US)', 
-	   acctypeid => 11, eosccat => 0, title_typeid => 21);
-	   
-call expected.insert_object_instance(sd_oid => _oid, 
-       reporgid => 101900, reporgname => 'BioLINCC', 
-	   purl => 'https://biolincc.nhlbi.nih.gov/media/studies/omniheart/Protocol.pdf', 
-	   restypeid => 11, ressize => '987.0', ressizeu => 'KB');
-
-             */            
         }
         
         return null;
