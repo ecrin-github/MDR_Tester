@@ -1633,7 +1633,7 @@ public class TestData_100120 : TestData_Base
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 101740, "São Paulo State University", "https://ror.org/00987cb86"));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Fundação de Amparo à Pesquisa do Estado de São Paulo", null));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Conselho Nacional de Desenvolvimento Científico e Tecnológico", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Conselho Nacional de Desenvolvimento Científico e Tecnológi co", null));
 
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 135));  // 
 	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
