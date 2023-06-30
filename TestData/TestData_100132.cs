@@ -1,170 +1,137 @@
-﻿namespace MDR_Tester;
+﻿using System.Text;
+
+namespace MDR_Tester;
 
 public class TestData_100132 : TestData_Base
 {
     public override FullStudy? FetchStudyData(string sd_sid)
     {
-        if (sd_sid == "NTR1437")
+        if (sd_sid == "NL1376")
         {
-            /*
-             -- PROCEDURE: expected.study_ntr1437()
+	        FullStudy fs = CreateEmptyFullStudy();
+             
+            // Study 
+            
+            string display_title = "The effects of orally and intraduodenally administered pea protein on satiety parameters in vivo in lean and obese subjects";
+            StringBuilder sb = new StringBuilder("Interventions: This study is a randomized, placebo controlled cross-over study with 2 groups of volunteers. ");
+            sb.Append("One group will consist of healthy lean male subjects. The other group will consist of obese male subjects. All subjects will "); 
+            sb.Append("receive both the test protein and the placebo, administered either orally or intraduodenally, depending on the test day. "); 
+            sb.Append("Delievery of the protein and placebo into the duodenum will be through a feeding tube.\n\n"); 
+            sb.Append("- Oral ingestion placebo\n- Duodenal administration placebo\n- Duodenal administration protein\n"); 
+            sb.Append("All conditions are randomized over 4 test days\n- Gastroscopy on the 5h test day\n"); 
+            sb.Append("Primary outcome(s): The effects of orally- and intraduodenally administered intact protein on systemic satiety hormone levels "); 
+            sb.Append("(CCK, GLP-1, and PYY) and feelings of hunger and satiety\n"); 
+            sb.Append("Study Design: Randomized: No, \n"); 
+            sb.Append("                        Masking: Single, \n                        Control: Placebo,\n  "); 
+            sb.Append("                        Group: undefined,\n                        Type: 2 or more arms, randomized"); 
+            string brief_desc = sb.ToString();
+            
+            fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2008, 11, 11, 16, "24", 915,
+	            null, null, null, null, 10);
 
--- DROP PROCEDURE IF EXISTS expected.study_ntr1437();
+            fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100132, 
+                "The Netherlands National Trial Register", null, "2008 Sep 9", null));
+            fs.identifiers.Add(new StudyIdentifier(sd_sid, "NTR1437", 45, 100132, 
+	            "The Netherlands National Trial Register", null, null, null));
+            
+            fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From the Netherlands National Trial Register"));
 
-CREATE OR REPLACE PROCEDURE expected.study_ntr1437(
-	)
-LANGUAGE 'plpgsql'
-AS $BODY$
-DECLARE _sid VARCHAR := 'NTR1437';
-_title VARCHAR;
-_oid VARCHAR;
+            fs.people!.Add(new StudyPerson(sd_sid, 51, "MCP Geraedts", null, null, null, null));
+            
+            fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Transnational University Limburg", null));
+           
+	        fs.features!.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 505));   // 
 
-begin
--- delete any existing values
-call expected.clear_study_data(_sid);
+            fs.conditions!.Add(new StudyCondition(sd_sid, 
+	            "Obesity, dietary proteins, oral administration, duodenal administration, satiety", null, null, null, null));
+            
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- manual update of values using visual inspection of trial registry
+            string sd_oid = sd_sid + " :: 13 :: Dutch registry web page";
+            string ob_title = display_title + " :: Dutch registry web page";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Dutch registry web page", null, ob_title,
+	            null, 9, 2008, 23, 13, 100132, "Netherlands National Trial Register", 
+	            null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid,  100132, "Netherlands National Trial Register", 
+	            "https://www.onderzoekmetmensen.nl/en/trial/28061", true, 35, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2008 Sep 9", 2008, 9, 9, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Mar 28", 2022, 3, 28, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
 
-_title = 'The effects of orally and intraduodenally administered pea protein on satiety parameters in vivo in lean and obese subjects';
+            return fs;
 
-call expected.insert_study_names(sid => _sid, 
-						title =>_title, 
-						brief_desc =>'Interventions: This study is a randomized, placebo controlled cross-over study with 2 groups of volunteers. One group will consist of healthy lean male subjects. The other group will consist of obese male subjects. All subjects will receive both the test protein and the placebo, administered either orally or intraduodenally, depending on the test day. Delievery of the protein and placebo into the duodenum will be through a feeding tube.
-
-- Oral ingestion placebo
-- Oral ingestion protein
-- Duodenal administration placebo
-- Duodenal administration protein
-All conditions are randomized over 4 test days
-- Gastroscopy on the 5h test day
-Primary outcome(s): The effects of orally- and intraduodenally administered intact protein on systemic satiety hormone levels (CCK, GLP-1, and PYY) and feelings of hunger and satiety
-Study Design: Randomized: No, 
-                        Masking: Single, 
-                        Control: Placebo, 
-                        Group: undefined, 
-                        Type: 2 or more arms, randomized'
-);
-
-call expected.insert_study_details(sid => _sid, syear => 2008, smonth => 11, typeid => 11, statusid => 16);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '24', eligid => 915, minage => null, minageu => null, maxage => null, maxageu => null);
-
-call expected.insert_study_title(sid => _sid, typeid => 15, title => _title, isdefault => true, comms => 'From the Netherlands National Trial Register');
-	
-	
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100132, idorgname => 'The Netherlands National Trial Register', iddate => '2008 Sep 9');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'MCP Geraedts');
-call expected.insert_org_contributor(sid => _sid, typeid => 54, orgname => 'Transnational University Limburg');
-
-call expected.insert_study_feature(sid => _sid, typeid => 22, valueid  => 205);
-Call expected.insert_study_feature(sid => _sid, typeid => 24, valueid  => 505);
-
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Obesity, dietary proteins, oral administration, duodenal administration, satiety');
-
--- trial registry entry
-_oid = _sid ||' :: 13 :: Dutch registry web page';
-
-call expected.insert_data_object(sd_oid => _oid, sid => _sid,  
-	title => _title || ' :: Dutch registry web page',
-	pubyear => 2008, obclassid => 23, obtypeid => 13,
-	managingorgid => 100132, managingorgname=> 'Netherlands National Trial Register',
-	acctypeid => 12);
-
-call expected.insert_object_title(sd_oid => _oid, 
-	typeid => 22, title => _title || ' :: Dutch registry web page', isdefault => true);
-	
-call expected.insert_object_instance(sd_oid => _oid, 
-    reporgid => 100132, reporgname => 'Netherlands National Trial Register', 
-	purl => 'https://trialregister.nl/trial/1376',  
-	restypeid => 35);
-	
-	
-call expected.insert_object_date(sd_oid => _oid, typeid => 15, datestring => '2008 Sep 9', syear => 2008, smonth => 9, sday => 9);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2022 Mar 28', syear => 2022, smonth => 3, sday => 28);
-
-end;
-$BODY$;
-ALTER PROCEDURE expected.study_ntr1437()
-    OWNER TO postgres;
- 
-             */
         }
         
         if (sd_sid == "NL8683")
         {
-            /*
-            -- PROCEDURE: expected.study_nl8683()
+	        FullStudy fs = CreateEmptyFullStudy();
+             
+            // Study 
+            
+            string display_title = "EXpansion of stents after Intravascular lithoTripsy versus conventional predilatation in CALCified coronary arteries";
+            StringBuilder sb = new StringBuilder("Interventions: Intravascular lithotripsy or balloon dilatation, followed by stenting with DES in all patients\n");
+            sb.Append("Primary outcome(s): Stent expansion measured by OCT\n"); 
+            sb.Append("Study Design: Randomized: No, \n "); 
+            sb.Append("                        Masking: None, \n"); 
+            sb.Append("                        Control: Active, \n"); 
+            sb.Append("                        Group: undefined, \n"); 
+            sb.Append("                        Type: 2 or more arms, randomized"); 
+            string brief_desc = sb.ToString();
+            
+            fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2020, 5, 11, 16, "40", 915,
+	            null, null, null, null, 10);
 
--- DROP PROCEDURE IF EXISTS expected.study_nl8683();
+            fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100132, 
+                "The Netherlands National Trial Register", null, "2020 May 26", null));
+            
+            fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From the Netherlands National Trial Register"));
 
-CREATE OR REPLACE PROCEDURE expected.study_nl8683(
-	)
-LANGUAGE 'plpgsql'
-AS $BODY$
-DECLARE _sid VARCHAR := 'NL8683';
-_title VARCHAR;
-_oid VARCHAR;
+            fs.people!.Add(new StudyPerson(sd_sid, 51, "Thomas Oomens", null, null, null, null));
+            
+	        fs.features!.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 
-begin
--- delete any existing values
-call expected.clear_study_data(_sid);
+            fs.conditions!.Add(new StudyCondition(sd_sid, "Coronary artery disease", null, null, "B1-BA8", 
+	            "Diseases of coronary artery"));
+            
+            // countries
+            
+            // iec
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
 
--- manual update of values using visual inspection of trial registry
+            string sd_oid = sd_sid + " :: 13 :: Dutch registry web page";
+            string ob_title = display_title + " :: Dutch registry web page";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Dutch registry web page", null, ob_title,
+	            null, 9, 2020, 23, 13, 100132, "Netherlands National Trial Register", 
+	            null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid,  100132, "Netherlands National Trial Register", 
+	            "https://www.onderzoekmetmensen.nl/en/trial/22538", true, 35, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2020 May 26", 2008, 5, 26, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Mar 28", 2022, 3, 28, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
 
-_title = 'EXpansion of stents after Intravascular lithoTripsy versus conventional predilatation in CALCified coronary arteries';
-
-call expected.insert_study_names(sid => _sid, 
-						title =>_title, 
-						brief_desc =>'Interventions: Intravascular lithotripsy or balloon dilatation, followed by stenting with DES in all patients
-Primary outcome(s): Stent expansion measured by OCT
-Study Design: Randomized: No, 
-                        Masking: None, 
-                        Control: Active, 
-                        Group: undefined, 
-                        Type: 2 or more arms, randomized'
-					   );
-
-call expected.insert_study_details(sid => _sid, syear => 2020, smonth => 5, typeid => 11, statusid => 16);
-call expected.insert_study_eligibility(sid => _sid, enrolnum => '40', eligid => 915, minage => null, minageu => null, maxage => null, maxageu => null);
-
-call expected.insert_study_title(sid => _sid, typeid => 15, title => _title, isdefault => true, comms => 'From the Netherlands National Trial Register');
-	
-	
-call expected.insert_study_identifier(sid => _sid, typeid => 11, idvalue => _sid, idorgid => 100132, idorgname => 'Netherlands National Trial Register', iddate => '2020 May 26');
-
-call expected.insert_indiv_contributor(sid => _sid, typeid => 51, full_name => 'Thomas Oomens');
-
-call expected.insert_study_feature(sid => _sid, typeid => 22, valueid  => 205);
-call expected.insert_study_feature(sid => _sid, typeid => 24, valueid  => 500);
-
-call expected.insert_nonmesh_study_topic(sid => _sid, typeid => 13, orivalue => 'Coronary artery disease');
-
--- trial registry entry
-_oid = _sid ||' :: 13 :: Dutch registry web page';
-
-call expected.insert_data_object(sd_oid => _oid, sid => _sid, 
-	title => _title || ' :: Dutch registry web page',
-	pubyear => 2020, obclassid => 23, obtypeid => 13,
-	managingorgid => 100132, managingorgname=> 'Netherlands National Trial Register',
-	acctypeid => 12);
-
-call expected.insert_object_title(sd_oid => _oid, 
-	typeid => 22, title => _title || ' :: Dutch registry web page', isdefault => true);
-	
-call expected.insert_object_instance(sd_oid => _oid, 
-    reporgid => 100132, reporgname => 'Netherlands National Trial Register', 
-	purl => 'https://trialregister.nl/trial/8683',  
-	restypeid => 35);
-	
-call expected.insert_object_date(sd_oid => _oid, typeid => 15, datestring => '2020 May 26', syear => 2020, smonth => 5, sday => 26);
-call expected.insert_object_date(sd_oid => _oid, typeid => 18, datestring => '2022 Mar 28', syear => 2022, smonth => 3, sday => 28);
-
-end;
-$BODY$;
-ALTER PROCEDURE expected.study_nl8683()
-    OWNER TO postgres;
- 
-            */           
+            return fs;
+     
         }
    
         return null;
