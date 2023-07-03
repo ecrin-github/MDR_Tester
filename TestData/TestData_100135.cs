@@ -7,22 +7,7 @@ public class TestData_100135 : TestData_Base
         if (sd_oid == "27056882")
         {
             /*
-            -- PROCEDURE: expected.object_27056882()
-
--- DROP PROCEDURE IF EXISTS expected.object_27056882();
-
-CREATE OR REPLACE PROCEDURE expected.object_27056882(
-	)
-LANGUAGE 'plpgsql'
-AS $BODY$
-DECLARE _sid VARCHAR := '27056882';
-
-begin
--- delete any existing values
-call expected.clear_object_data(_sid);
-
--- manual update of values using visual inspection of trial registry
-
+            
 -- article title
 call expected.insert_object_pubmed_title(sid => _sid, typeid => 19, 
 	title => 'Prognostic Relevance of Left Atrial Dysfunction in Heart Failure With Preserved Ejection Fraction.',
@@ -136,10 +121,6 @@ call expected.insert_object_pub_type(sid => _sid, type_name => 'Randomized Contr
 -- comments
 --call expected.insert_object_comment(sid => _sid, ref_type => '', ref_source => '', pmid => '', pmid_version => '1');
 
-end;
-$BODY$;
-ALTER PROCEDURE expected.object_27056882()
-    OWNER TO postgres;
  
              */
         }
@@ -147,23 +128,8 @@ ALTER PROCEDURE expected.object_27056882()
         if (sd_oid == "32740235")
         {
             /*
-            -- PROCEDURE: expected.object_32740235()
-
--- DROP PROCEDURE IF EXISTS expected.object_32740235();
-
-CREATE OR REPLACE PROCEDURE expected.object_32740235(
-	)
-LANGUAGE 'plpgsql'
-AS $BODY$
-DECLARE _sid VARCHAR := '32740235';
-
-begin
--- delete any existing values
-call expected.clear_object_data(_sid);
-
--- manual update of values using visual inspection of trial registry
-
--- article title
+            
+            -- article title
 call expected.insert_object_pubmed_title(sid => _sid,	typeid => 19, 
 	title => 'Surgical Outcome Results From SWOG S1505: A Randomized Clinical Trial of mFOLFIRINOX Versus Gemcitabine/Nab-paclitaxel for Perioperative Treatment of Resectable Pancreatic Ductal Adenocarcinoma.',
 	isdefault => true);
@@ -292,10 +258,6 @@ call expected.insert_object_pub_type(sid => _sid, type_name => 'Randomized Contr
 -- comments
 call expected.insert_object_comment(sid => _sid, ref_type => 'CommentIn', ref_source => 'Ann Surg. 2020 Sep 1;272(3):487', pmid => '32657915', pmid_version => '1');
 
-end;
-$BODY$;
-ALTER PROCEDURE expected.object_32740235()
-    OWNER TO postgres;
  
             */           
         }
@@ -303,22 +265,7 @@ ALTER PROCEDURE expected.object_32740235()
         if (sd_oid == "32739569")
         {
             /*
-            -- PROCEDURE: expected.object_32739569()
-
--- DROP PROCEDURE IF EXISTS expected.object_32739569();
-
-CREATE OR REPLACE PROCEDURE expected.object_32739569(
-	)
-LANGUAGE 'plpgsql'
-AS $BODY$
-DECLARE _sid VARCHAR := '32739569';
-
-begin
--- delete any existing values
-call expected.clear_object_data(_sid);
-
--- manual update of values using visual inspection of trial registry
-
+           
 -- article title
 call expected.insert_object_pubmed_title(sid => _sid,	typeid => 19, 
 	title => 'Randomized Controlled Trial of Advance Notification Phone Calls vs Text Messages Prior to Mailed Fecal Test Outreach.',
@@ -421,33 +368,13 @@ call expected.insert_object_pub_type(sid => _sid, type_name => 'Randomized Contr
 -- comments
 --call expected.insert_object_comment(sid => _sid, ref_type => '', ref_source => '', pmid => '', pmid_version => '1');
 
-end;
-$BODY$;
-ALTER PROCEDURE expected.object_32739569()
-    OWNER TO postgres;
- 
             */           
         }
         
         if (sd_oid == "16287956")
         {
             /*
-            -- PROCEDURE: expected.object_16287956()
-
--- DROP PROCEDURE IF EXISTS expected.object_16287956();
-
-CREATE OR REPLACE PROCEDURE expected.object_16287956(
-	)
-LANGUAGE 'plpgsql'
-AS $BODY$
-DECLARE _sid VARCHAR := '16287956';
-
-begin
--- delete any existing values
-call expected.clear_object_data(_sid);
-
--- manual update of values using visual inspection of trial registry
-
+           
 -- article title
 call expected.insert_object_pubmed_title(sid => _sid,	typeid => 19, 
 	title => 'Effects of protein, monounsaturated fat, and carbohydrate intake on blood pressure and serum lipids: results of the OmniHeart randomized trial.',
@@ -570,33 +497,13 @@ call expected.insert_object_pub_type(sid => _sid, type_name => 'Randomized Contr
 -- comments
 call expected.insert_object_comment(sid => _sid, ref_type => 'CommentIn', ref_source => 'JAMA. 2005 Nov 16;294(19):2497-8', pmid => '16287963', pmid_version => '1');
 
-end;
-$BODY$;
-ALTER PROCEDURE expected.object_16287956()
-    OWNER TO postgres;
-
              */           
         }
         
-        if (sd_oid == "32739049")
-        {
+     if (sd_oid == "32739049")
+     {
             /*
-             -- PROCEDURE: expected.object_32739049()
-
--- DROP PROCEDURE IF EXISTS expected.object_32739049();
-
-CREATE OR REPLACE PROCEDURE expected.object_32739049(
-	)
-LANGUAGE 'plpgsql'
-AS $BODY$
-DECLARE _sid VARCHAR := '32739049';
-
-begin
--- delete any existing values
-call expected.clear_object_data(_sid);
-
--- manual update of values using visual inspection of trial registry
-
+          
 -- article title
 call expected.insert_object_pubmed_title(sid => _sid,	typeid => 19, 
 	title => 'Safety, Pharmacokinetics, and Pharmacodynamics of the TLR4 Agonist GSK1795091 in Healthy Individuals: Results from a Randomized, Double-blind, Placebo-controlled, Ascending Dose Study.',
@@ -705,13 +612,7 @@ call expected.insert_object_pub_type(sid => _sid, type_name => 'Randomized Contr
 
 -- comments
 --call expected.insert_object_comment(sid => _sid, ref_type => '', ref_source => '', pmid => '', pmid_version => '1');
-
-end;
-$BODY$;
-ALTER PROCEDURE expected.object_32739049()
-    OWNER TO postgres;
-
-             */            
+           */
         }
 
         return null;

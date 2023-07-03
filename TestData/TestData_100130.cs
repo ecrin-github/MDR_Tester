@@ -7,11 +7,45 @@ public class TestData_100130 : TestData_Base
 	public override FullStudy? FetchStudyData(string sd_sid)
 	{
 		{
-			if (sd_sid == "")
+			if (sd_sid == "SLCTR-2008-006")
 			{
 				FullStudy fs = CreateEmptyFullStudy();
+	        
+				// Study
+				
+				string display_title = "...   ...";
+				StringBuilder sb = new StringBuilder("Interventions: ");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("Primary outcome(s): ");  
+				sb.Append("");   
+				sb.Append("");  
+				sb.Append(""); 
+				sb.Append("");
+				sb.Append("");  
+				sb.Append(""); 
+				sb.Append("");
+				sb.Append("Study Design: Clinical trial of a randomized, controlled, parallel, double-blind, two-arm treatment trial");
+				string brief_desc = sb.ToString();
+        
+				fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, , , , , , 900,
+					null, null, null, null, 10);
 
-				// Study 
+				fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100119, 
+					" ...  Clinical Trials Registry", null, "2018 Sep 20", null));
+	        
+				fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
+					"From the ... Clinical Trials Registry"));
+				fs.titles.Add(new StudyTitle(sd_sid, 
+					"... ...", 
+					16, "en", 11, false, "From the ... Clinical Trials Registry"));
 				/*
 				 * *
 				 * "source_id": 100130,
@@ -91,15 +125,70 @@ public class TestData_100130 : TestData_Base
   ]
 				 */
 
+				
+				// Data Objects
+	        
+				// 1) Trial registry entry
+
+				string sd_oid = sd_sid + " :: 13 :: ... registry web page";
+				string ob_title = display_title + " :: ... registry web page";
+				StudyDataObject sdo = CreateEmptyStudyDataObject();
+       
+				sdo.data_object = new DataObject(sd_oid, sd_sid, "... registry web page", null, ob_title,
+					null, 9,  , 23, 13, 100119, "... Clinical Trials Registry",
+					null, "en", 12, null, null, 0, true, true);
+				sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	        
+				sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100119, "... Clinical Trials Registry", 
+					"...", true, 35, null, null, null));
+				sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "...", , , , null, null, null, null));
+				sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "...", , , , null, null, null, null));
+	       
+				fs.data_objects!.Add(sdo);
+
 				return fs;
 
 			}
 
-			if (sd_sid == "")
+			if (sd_sid == "SLCTR-2021-023")
 			{
 				FullStudy fs = CreateEmptyFullStudy();
+	        
+				// Study
+				
+				string display_title = "...   ...";
+				StringBuilder sb = new StringBuilder("Interventions: ");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("");
+				sb.Append("Primary outcome(s): ");  
+				sb.Append("");   
+				sb.Append("");  
+				sb.Append(""); 
+				sb.Append("");
+				sb.Append("");  
+				sb.Append(""); 
+				sb.Append("");
+				sb.Append("Study Design: Clinical trial of a randomized, controlled, parallel, double-blind, two-arm treatment trial");
+				string brief_desc = sb.ToString();
+        
+				fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, , , , , , 900,
+					null, null, null, null, 10);
 
-				// Study 
+				fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100119, 
+					" ...  Clinical Trials Registry", null, "2018 Sep 20", null));
+	        
+				fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
+					"From the ... Clinical Trials Registry"));
+				fs.titles.Add(new StudyTitle(sd_sid, 
+					"... ...", 
+					16, "en", 11, false, "From the ... Clinical Trials Registry"));
 				
 				/*
 				 *
@@ -173,6 +262,27 @@ public class TestData_100130 : TestData_Base
     }
   ]
 				 */
+
+				
+				// Data Objects
+	        
+				// 1) Trial registry entry
+
+				string sd_oid = sd_sid + " :: 13 :: ... registry web page";
+				string ob_title = display_title + " :: ... registry web page";
+				StudyDataObject sdo = CreateEmptyStudyDataObject();
+       
+				sdo.data_object = new DataObject(sd_oid, sd_sid, "... registry web page", null, ob_title,
+					null, 9,  , 23, 13, 100119, "... Clinical Trials Registry",
+					null, "en", 12, null, null, 0, true, true);
+				sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	        
+				sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100119, "... Clinical Trials Registry", 
+					"...", true, 35, null, null, null));
+				sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "...", , , , null, null, null, null));
+				sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "...", , , , null, null, null, null));
+	       
+				fs.data_objects!.Add(sdo);
 
 				return fs;
 			}

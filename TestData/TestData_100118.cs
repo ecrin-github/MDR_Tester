@@ -144,6 +144,85 @@ public class TestData_100118 : TestData_Base
             fs.data_objects!.Add(sdo);
 
         }
+        
+        /*
+         *
+         * 
+  "source_id": 100118,
+  "record_date": "2021-03-08",
+  "sd_sid": "ChiCTR1900022627",
+  "public_title": "Optimal intervention time and risk of the Activating Blood and Removing Stasis Method in acute cerebral hemorrhage patients: a Randomized Placebo-Controlled Trial",
+  "scientific_title": "Optimal intervention time and risk of the Activating Blood and Removing Stasis Method in acute cerebral hemorrhage patients: a Randomized Placebo-Controlled Trial",
+  "remote_url": "http://www.chictr.org.cn/showproj.aspx?proj=38214",
+  "public_contact_givenname": "Wang Jian",
+  "public_contact_familyname": null,
+  "public_contact_email": "jian-w222@163.com",
+  "public_contact_affiliation": "The Affiliated Hospital to Changchun University of Chinese Medicine",
+  "scientific_contact_givenname": "Cui Yabin",
+  "scientific_contact_familyname": null,
+  "scientific_contact_email": "58370183@qq.com",
+  "scientific_contact_affiliation": "The Affiliated Hospital to Changchun University of Chinese Medicine",
+  "study_type": "Interventional",
+  "date_registration": "2019-04-19",
+  "date_enrolment": "2019-05-01",
+  "target_size": "Blood Stasis Removing group:156;Placebo group:156",
+  "study_status": "Recruiting",
+  "primary_sponsor": "The Affiliated Hospital to Changchun University of Chinese Medicine",
+  "secondary_sponsors": null,
+  "source_support": "National clinical research base construction project of the national administration of traditional Chinese medicine",
+  "interventions": "Blood Stasis Removing group:Blood Stasis Removing Granule + routine treatment;Placebo group:Placebo of Blood Stasis Removing Granule + routine treatment",
+  "agemin": "35",
+  "agemin_units": "Other (35)",
+  "agemax": "80",
+  "agemax_units": "Other (80)",
+  "gender": "Both",
+  "inclusion_criteria": "1. Patient diagnosed to be cerebral hemorrhagic stroke and confirmed by CT;\n2. Age 35 to 80 years;\n3. The stroke onset time is within 24-72h;\n4. Patients receive conservative treatment of conventional medicine;\n5. Glasgow Coma Score > 6 points;\n6. The modified Rankin Scale Score before the onset is 0 to 1 point;\n7. Inform-consented",
+  "exclusion_criteria": "1. Confirmed cerebral hemorrhage that is caused by brain tumor, blood disease, brain trauma (or postoperative);\n2. Patients with coma or patients with cerebral hernia at the onset of the cerebral hemorrhage;\n3. Those who cannot take the study drug by orall or nasal feeding because of gastrointestinal bleeding;\n4. Patients need emergency surgery;\n5. Patients with subarachnoid hemorrhage;\n6. Women who are pregnant or lactating;\n7. Patients with severe primary diseases such as cardiovascular, hepatic, renal and hematopoietic systems diseases, and mental diseases. Patients with abnormal (doubled level) conventional coagulation examinations, liver function and kidney function.\n8. Allergic constitution or known allergy to alcohol or ingredients of Chinese medicine BSR. \n9. Hemorrhagic stroke induced by taking anticoagulant drugs;\n10. Patients who participated in other clinical trials in the recent 3 months.",
+  "primary_outcome": "The degree of disability (modified Ranking Scale, mRS)",
+  "secondary_outcomes": "Percentage of hematoma enlargement after taking the drug in patients within 72 hours of onset;Ability of daily life (Barthel Index);Mortality rate due to cerebral hemorrhage;All-cause mortality;National Institute of Health stroke scale (NIHSS);Traditional Chinese Medicine Stroke Syndrome Evaluation Scale;The degree of disability (modified Ranking Scale, mRS)",
+  "bridging_flag": null,
+  "bridged_type": null,
+  "childs": null,
+  "type_enrolment": null,
+  "retrospective_flag": null,
+  "results_actual_enrollment": null,
+  "results_url_link": null,
+  "results_summary": null,
+  "results_date_posted": null,
+  "results_date_first_publication": null,
+  "results_url_protocol": null,
+  "ipd_plan": null,
+  "ipd_description": null,
+  "results_date_completed": null,
+  "results_yes_no": null,
+  "db_name": "chictr",
+  "design_string": "Parallel",
+  "phase_string": "0",
+  "country_list": [
+    "China"
+  ],
+  "study_features": [
+    {
+      "ftype_id": 23,
+      "ftype": "Intervention model",
+      "fvalue_id": 305,
+      "fvalue": "Parallel assignment"
+    },
+    {
+      "ftype_id": 20,
+      "ftype": "Phase",
+      "fvalue_id": 105,
+      "fvalue": "Early phase 1"
+    }
+  ],
+  "condition_list": [
+    {
+      "condition": "Acute Cerebral Hemorrhage",
+      "code": null,
+      "code_system": null
+    }
+  ]
+         */
 
         return null;
     }
