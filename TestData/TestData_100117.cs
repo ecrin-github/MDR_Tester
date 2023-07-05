@@ -58,28 +58,29 @@ public class TestData_100117 : TestData_Base
 	        fs.titles.Add(new StudyTitle(sd_sid, 
 		        "Effect of Neuromuscular Electrostimulation combined with Blood Flow Restriction on muscle thickness and reflex responses in people with spinal cord injury.", 
 		        16, "en", 11, false, "From the Brazilian Clinical Trials Registry"));
-
-	        /*
-  "public_contact_givenname": "Gabriel",
-  "public_contact_familyname": "Skiba",
-  "public_contact_affiliation": "Universidade Federal do Paraná",
-  "scientific_contact_givenname": "Gabriel",
-  "scientific_contact_familyname": "Skiba",
-  "scientific_contact_affiliation": "Universidade Federal do Paraná",
-  "primary_sponsor": "Universidade Federal do Paraná",
-  "secondary_sponsors": "Universidade Federal do Paraná",
-  "source_support": "Universidade Federal do Paraná",
     
-  "inclusion_criteria": "Men volunteers with complete spinal cord injury (ASIA A) and eligible for quadriceps responsiveness.",
-  "exclusion_criteria": "Cauda equina injury; spinal shock; venous thrombosis; autonomic dysreflexia; vascular complications; pressure ulcers; osteoporosis; recent fracture; implants and femur metal pins and two consecutive absences to the training sessions as well.",
-
-	         */
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", "Men volunteers with complete spinal cord injury (ASIA A) and eligible for quadriceps responsiveness."));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 2, "assumed cr", "@", 1, "e.01", "Cauda equina injury;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 2, "assumed cr", "@", 1, "e.02", "spinal shock;"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "assumed cr", "@", 1, "e.03", "venous thrombosis;"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "assumed cr", "@", 1, "e.04", "autonomic dysreflexia;"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "assumed cr", "@", 1, "e.05", "vascular complications;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "assumed cr", "@", 1, "e.06", "pressure ulcers;"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "assumed cr", "@", 1, "e.07", "osteoporosis;"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "assumed cr", "@", 1, "e.08", "recent fracture;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "assumed cr", "@", 1, "e.09", "implants and femur metal pins and two consecutive absences to the training sessions as well."));	
 	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Gabriel", "Skiba", "Gabriel Skiba", null,
+		        "Universidade Federal do Paraná",  105883, "Federal University of Paraná", "https://ror.org/05syd6y78"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 105883, "Federal University of Paraná", "https://ror.org/05syd6y78"));
+            fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 105883, "Federal University of Paraná", "https://ror.org/05syd6y78"));
+            
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Spinal cord injuries", null, null, null, null));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "C10.228. 854.763", null, null, null, null));
 	        
-	        fs.features!.Add(new (sd_sid, 22, 205));  // Randomised
-	        fs.features.Add(new (sd_sid, 23, 305));  // 	  
+	        fs.features!.Add(new StudyFeature(sd_sid, 22, 205));  // Randomised
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));  // 	  
 	        
 	        fs.countries!.Add(new StudyCountry(sd_sid, 3469034, "Brazil", null));
         
@@ -140,47 +141,37 @@ public class TestData_100117 : TestData_Base
 		        "Pain Neuroscience Eucation for the older people with chronic low back pain: randomized controlled trial.", 
 		        16, "en", 11, false, "From the Brazilian Clinical Trials Registry"));
 	        
-            /*
-  "public_contact_givenname": "Mariane",
-  "public_contact_familyname": "Campos",
-  "public_contact_affiliation": "Universidade Federal de São Carlos",
-  "scientific_contact_givenname": "Mariane",
-  "scientific_contact_familyname": "Campos",
-  "scientific_contact_affiliation": "Universidade Federal de São Carlos",
-  
-  "primary_sponsor": "Centro de Ciências Biológicas e da Saúde da Universidade Federal de São Carlos",
-  "secondary_sponsors": "Mariane Marques de Campos",
-  "source_support": "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior",
-  
-  "inclusion_criteria": 
-  "Be 60 years old or over;
-  \nBe a carrier of nonspecific chronic low back pain;
-  \nScore at least the cut grade according to their education in the instrument: Mini Mental State Examination (MMSE);
-  \nScore up to 5 points on the Geriatric Depression Scale instrument (GDS-15)",
-  
-  "exclusion_criteria": 
-  "Older people who underwent physiotherapeutic treatment for pain management in the last six months;
-  \nOlder people who underwent surgical treatment for pain management;
-  \nOlder people with diagnosis of Fibromyalgia;
-  \nInvolvement in regular sports activities that have the same benefits as Pilates;
-  \nActive inflammatory diseases;
-  \nPain related to previous fractures of the spine or lower limbs;
-  \nNeoplasms;
-  \nDeath.",
-  
-             *
-             * 
-             */
-            
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Mariane", "Campos", "Mariane Campos", null,
+		        "Universidade Federal de São Carlos", 101665,
+		        "Universidade Federal de São Carlos", "https://ror.org/00qdc6m37"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Centro de Ciências Biológicas e da Saúde da Universidade Federal de São Carlos", null));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Mariane Marques de Campos", null));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 58, null, "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior", null));
+	        
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "assumed cr", "@", 1, "n.01", "Be 60 years old or over;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "assumed cr", "@", 1, "n.02", "Be a carrier of nonspecific chronic low back pain;"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "assumed cr", "@", 1, "n.03", "Score at least the cut grade according to their education in the instrument: Mini Mental State Examination (MMSE);"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "assumed cr", "@", 1, "n.04", "Score up to 5 points on the Geriatric Depression Scale instrument (GDS-15)"));
+	        
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "assumed cr", "@", 1, "e.01", "Older people who underwent physiotherapeutic treatment for pain management in the last six months;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "assumed cr", "@", 1, "e.02", "Older people who underwent surgical treatment for pain management;"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "assumed cr", "@", 1, "e.03", "Older people with diagnosis of Fibromyalgia;"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "assumed cr", "@", 1, "e.04", "Involvement in regular sports activities that have the same benefits as Pilates;"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "assumed cr", "@", 1, "e.05", "Active inflammatory diseases;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "assumed cr", "@", 1, "e.06", "Pain related to previous fractures of the spine or lower limbs;"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "assumed cr", "@", 1, "e.07", "Neoplasms;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "assumed cr", "@", 1, "e.08", "Death."));	
+           
             fs.conditions!.Add(new StudyCondition(sd_sid, "older people, chronic pain, chronic low back pain, aging", null, null, null, null));
             fs.conditions.Add(new StudyCondition(sd_sid, "C23.888.592.612.274", null, null, null, null));
             fs.conditions.Add(new StudyCondition(sd_sid, "G07.345.124", null, null, null, null));
             fs.conditions.Add(new StudyCondition(sd_sid, "C23.888.592.612.107.400", null, null, null, null));
             fs.conditions.Add(new StudyCondition(sd_sid, "M01.060.116.100", null, null, null, null));
             
-            fs.features!.Add(new (sd_sid, 22, 205));  // Randomised
-            fs.features.Add(new (sd_sid, 23, 305));  // Parallel assignment
-            fs.features.Add(new (sd_sid, 24, 510));  // Double
+            fs.features!.Add(new StudyFeature(sd_sid, 22, 205));  // Randomised
+            fs.features.Add(new StudyFeature(sd_sid, 23, 305));  // Parallel assignment
+            fs.features.Add(new StudyFeature(sd_sid, 24, 510));  // Double
             
             fs.countries!.Add(new StudyCountry(sd_sid, 3469034, "Brazil", null));
             

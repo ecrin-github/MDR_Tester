@@ -29,17 +29,17 @@ public class TestData_100125 : TestData_Base
 		          
 	          fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
 	            "From the Iranian Clinical Trials Registry"));
+	          
+	          fs.people!.Add(new StudyPerson(sd_sid, 56, "Sadrollah Mehrabi", 
+		          "Yasuj university of medical science", null, "Yasuj university of medical science", null));	
+			
+	          fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null,
+		          "Research manager, Yasuj University of Medical Sciences", null));
+	          fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, 
+		          "Research manager, Yasuj University of Medical Sciences", null));
+
 		
 /*
- * 
-  "public_contact_givenname": "Dr Sadrollah Mehrabi",
-  "public_contact_affiliation": "Yasuj university of medical science",
-  "scientific_contact_givenname": "Dr Sadrollah Mehrabi",
-  "scientific_contact_affiliation": "Yasuj University of Medical Sciences",
-  
-  "primary_sponsor": "Research manager, Yasuj University of Medical Sciences",
-  "source_support": "Research manager, Yasuj University of Medical Sciences",
- 
   "inclusion_criteria": 
   "Age more than 18 years, presence of renal or upper ureteral stone, candidate for PCNL (multiple stones, staghorn stones, calyceal diverticule stones, stone which are resistant to ESWL, lower pole renal stone larger than >15 mm and other renal stone larger than 25 mm, upper ureteral stone >20mm, Having informed consent 
   \nAny contraindication for regional anesthesia, presence of coagulopathy, acute infection ore urosepsis, presence of acute renal failure",
@@ -137,16 +137,18 @@ public class TestData_100125 : TestData_Base
           fs.titles.Add(new StudyTitle(sd_sid, 
             "The effect of eight weeks of independent combined training with coffee consumption on blood lipid profile of middle-aged men with non-alcoholic fatty liver in Covid-19 condition", 
             16, "en", 11, false, "From the Iranian Clinical Trials Registry"));
+          
+          fs.people!.Add(new StudyPerson(sd_sid, 51, "Nahid Talebi", 
+	          "Shahed University", 102305, "Shahed University", "https://ror.org/01e8ff003"));	
+          fs.people!.Add(new StudyPerson(sd_sid, 56, "Alireza Taheri Dilatabadi", 
+	          "Shahed University", 102305, "Shahed University", "https://ror.org/01e8ff003"));	
+			
+          fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 102305,
+	          "Shahed University", "https://ror.org/01e8ff003"));
+          fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 102305, 
+	          "Shahed University", "https://ror.org/01e8ff003"));
 /*
  * 
-  "public_contact_givenname": "Alireza Taheri Dilatabadi",
-  "public_contact_affiliation": "Shahed University",
-  "scientific_contact_givenname": "Nahid Talebi",
-  "scientific_contact_affiliation": "Shahed University",
-  
-  "primary_sponsor": "Shahed University",
-  "source_support": "Shahed University",
-  
   "inclusion_criteria": 
   "Middle-aged men 30 to 60 years
   \nGrade 1, 2 and 3 liver disease

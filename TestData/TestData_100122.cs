@@ -30,37 +30,23 @@ public class TestData_100122 : TestData_Base
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100122, 
 	          "Registro Público Cubano de Ensayos Clínicos", null, "2010 Dec 29", null));
-		        
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "IIC RD-EC075", 14, 12, 
+		        "No organisation name provided in source data", null, null, null));
+	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
 	          "From the Cuban Clinical Trials Registry"));
 	        fs.titles.Add(new StudyTitle(sd_sid, 
 	          "Clinical trial, phase II. Evaluation of the antitumoral effect of monoclonal antibody h-R3 combined with radio chemotherapy to treat non-surgical esophagus tumors of epithelial origin.", 
 	          16, "en", 11, false, "From the Cuban Clinical Trials Registry"));
-
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Mayra", "Ramos Suzarte", "Mayra Ramos Suzarte", null, 
+		        "Center of Molecular Immunology(CIM)", null, "Center of Molecular Immunology(CIM)", null));	
+			
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Center of Molecular Immunology(CIM)", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 24, "Reported as government funded, no further details", null));
+	        
 				/*
-  
-  "secondary_ids": [
-    {
-      "source_field": "secondary ids",
-      "sec_id": "IIC RD-EC075",
-      "processed_id": "IIC RD-EC075",
-      "sec_id_source": null,
-      "sec_id_type_id": null,
-      "sec_id_type": null
-    }
-  ],
-}				 * 
-  "public_contact_givenname": "Mayra",
-  "public_contact_familyname": "Ramos Suzarte",
-  "public_contact_affiliation": "Center of Molecular Immunology(CIM)",
-  "scientific_contact_givenname": "Mayra",
-  "scientific_contact_familyname": "Ramos Suzarte",
-  "scientific_contact_affiliation": "Center of Molecular Immunology(CIM)",
-  
-  "primary_sponsor": "Center of Molecular Immunology(CIM)",
-  "secondary_sponsors": "Not applicable",
-  "source_support": "Government funds",
-  
+
   "inclusion_criteria": 
   "1. Patients with non-surgical esophagus tumors of epithelial origin in stages III or IV, located in the following portions of the esophagus: 
   1- Cervical esophagus: it begins at the lower edge of the cricoid cartilage and ends at the thoracic inlet (suprasternal fossa), 18cm from ICS. 
@@ -173,6 +159,8 @@ public class TestData_100122 : TestData_Base
 
 			fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100119,
 				"Registro Público Cubano de Ensayos Clínicos", null, "2021 Nov 12", null));
+			fs.identifiers.Add(new StudyIdentifier(sd_sid, "IFV/COR/16", 14, 12, 
+				"No organisation name provided in source data", null, null, null));
 
 			fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true,
 				"From the Cuban Clinical Trials Registry"));
@@ -180,31 +168,21 @@ public class TestData_100122 : TestData_Base
 				"Exploratory study of the SOBERANA Plus ST vaccine, to evaluate its reactogenicity and immunogenicity in adults from Italy: ";
 			title +=
 				"and subjects without a history of this disease and previously immunized against SARS-CoV-2. (COVID-19) - SOBERANA PLUS TURIN";
-			fs.titles.Add(new StudyTitle(sd_sid, title, 16, "en", 11, false,
+			fs.titles.Add(new StudyTitle(sd_sid, title, 16, "en", 11 , false,
 				"From the Cuban Clinical Trials Registry"));
 
-			// Study 
+			fs.people!.Add(new StudyPerson(sd_sid, 51, "Rolando", "Ochoa Azze", "Rolando Ochoa Azze", null, 
+				"Finlay Vaccine Institute", null, "Finlay Vaccine Institute", null));	
+			fs.people.Add(new StudyPerson(sd_sid, 56, "Yanet", "Climent Ruiz", "Yanet Climent Ruiz", null, 
+				"Finlay Vaccine Institute", null, "Finlay Vaccine Institute", null));
+			
+			fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Finlay Vaccine Institute (IFV)", null));
+			fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, 
+				"Finlay Vaccine Institute; Cuban Fund for Science and Innovation (FONCI) from Ministry of Science, Technology and Environment",
+				null));
+
 /*
- *   "secondary_ids": [
-        {
-          "source_field": "secondary ids",
-          "sec_id": "IFV/COR/16",
-          "processed_id": "IFV/COR/16",
-          "sec_id_source": null,
-          "sec_id_type_id": null,
-          "sec_id_type": null
-        }
-        
-  "public_contact_givenname": "Yanet",
-  "public_contact_familyname": "Climent Ruiz",
-  "public_contact_affiliation": "Finlay Vaccine Institute",
-  
-  "scientific_contact_givenname": "Rolando",
-  "scientific_contact_familyname": "Ochoa Azze",
-  "scientific_contact_affiliation": "Finlay Vaccine Institute",
- 
-  "primary_sponsor": "Finlay Vaccine Institute (IFV)",
-  "source_support": "Finlay Vaccine Institute; Cuban Fund for Science and Innovation (FONCI) from Ministry of Science, Technology and Environment",
+ *      
   
   "inclusion_criteria": 
   "1. The participant understands and agrees to comply with the study procedures and provides written informed consent.

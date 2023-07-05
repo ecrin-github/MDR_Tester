@@ -30,6 +30,8 @@ public class TestData_100128 : TestData_Base
 
               fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100128, 
                 "Pan African Clinical Trials Registry", null, "2011 Mar 29", null));
+              fs.identifiers.Add(new StudyIdentifier(sd_sid, "113681", 14, 12, 
+	              "No organisation name provided in source data", null, null, null));
 	              
               fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
                 "From the Pan African Clinical Trials Registry"));
@@ -37,28 +39,11 @@ public class TestData_100128 : TestData_Base
                 "Immunogenicity of the hepatitis B antigen of the GSK Biologicals¿ candidate malaria vaccine (257049)", 
                 16, "en", 11, false, "From the Pan African Clinical Trials Registry"));
 				
+              fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100163, "GlaxoSmithKline", "https://ror.org/01xsqw823"));
+              fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 100163, "GlaxoSmithKline", "https://ror.org/01xsqw823"));
+              
+              
 				/*
-   				 * 
-  "secondary_ids": [
-     {
-       "source_field": "secondary ids",
-       "sec_id": "113681",
-       "processed_id": "113681",
-       "sec_id_source": null,
-       "sec_id_type_id": null,
-       "sec_id_type": null
-     }
-     
-  "public_contact_givenname": "Clinical Disclosure",
-  "public_contact_familyname": "Advisor",
-  "public_contact_affiliation": "Clinical Disclosure Advisor",
-  
-  "scientific_contact_givenname": "Clinical Disclosure",
-  "scientific_contact_familyname": "Advisor",
-  "scientific_contact_affiliation": "Clinical Disclosure Advisor",
-
-  "primary_sponsor": "GlaxoSmithKline Biologicals",
-  "source_support": "GlaxoSmithKline Biologicals",
   
   "inclusion_criteria": 
   "All subjects must satisfy ALL the following criteria at study entry:
@@ -158,44 +143,34 @@ public class TestData_100128 : TestData_Base
 
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100128, 
               "Pan African Clinical Trials Registry", null, "2022 Oct 20", null));
-	            
+            fs.identifiers.Add(new StudyIdentifier(sd_sid, "22038", 14, 12, 
+	            "No organisation name provided in source data", null, null, null));
+            
             fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
               "From the Pan African Clinical Trials Registry"));
             fs.titles.Add(new StudyTitle(sd_sid, 
               "A pharmacokinetic randomised interventional study to optimise dihydroartemisinin-piperaquine dosing for malaria preventive treatment in Malawian infants", 
               16, "en", 11, false, "From the Pan African Clinical Trials Registry"));
+            
+            fs.people!.Add(new StudyPerson(sd_sid, 51, "Karen", "Irma Barnes", "Karen Irma Barnes", null, 
+	            "Overall Principal Investigator", null, "Overall Principal Investigator", null));	
+            fs.people.Add(new StudyPerson(sd_sid, 56, "Clifford", "Banda", "Clifford Banda", null, 
+	            "Site Principal Investigator", null, "Site Principal Investigator", null));
+            
+            fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 101188, "Liverpool School of Tropical Medicine", 
+	            "https://ror.org/03svjbs84"));
+            fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, 
+	            "National Institute for Health Research and the Wellcome through the Wellcome International Training Fellowship Scheme", 
+	            null));
+            
 				/*
-
- "secondary_ids": [
-     {
-       "source_field": "secondary ids",
-       "sec_id": "22038",
-       "processed_id": "22038",
-       "sec_id_source": null,
-       "sec_id_type_id": null,
-       "sec_id_type": null
-     }
-   ],
  
-  "public_contact_givenname": "Clifford",
-  "public_contact_familyname": "Banda",
-  "public_contact_affiliation": "Site Principal Investigator",
-  "scientific_contact_givenname": "Karen",
-  "scientific_contact_familyname": "Irma Barnes",
-  "scientific_contact_affiliation": "Overall Principal Investigator",
-  
-  "date_registration": "2022-10-20",
-  "primary_sponsor": "Liverpool School of Tropical Medicine",
-  "source_support": "National Institute for Health Research and the Wellcome through the Wellcome International Training Fellowship Scheme",
-  
   "inclusion_criteria": 
-  "Inclusion criteria 
   \n•Infants from 2.5 months (10 weeks) whose parent/guardian has provided informed consent 
   \n•No symptoms of malaria at the time of recruitment
   \n•Parent or guardian willing to adhere to study procedures including infant follow-up",
   
   "exclusion_criteria": 
-  "Exclusion criteria 
   \n•Known allergy or contraindication to any study drugs \n•Known HIV exposure 
   \n•Pre-existing medical history of significant comorbidities that may influence drug exposure, e.g. renal, liver, gastrointestinal or cardiac diseases  
   \n•Severe anaemia (haemoglobin (Hb) <7 g/dL)
@@ -206,9 +181,9 @@ public class TestData_100128 : TestData_Base
             fs.conditions!.Add(new StudyCondition(sd_sid, "Malaria", null, null, null, null));
             fs.conditions.Add(new StudyCondition(sd_sid, "Paediatrics", null, null, null, null));
                 
-            fs.features!.Add(new (sd_sid, 20, 130));  // Phase 3
-            fs.features.Add(new (sd_sid, 22, 205));  //  Randomised
-            fs.features.Add(new (sd_sid, 23, 305));  //  Parallel assignment
+            fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // Phase 3
+            fs.features.Add(new StudyFeature(sd_sid, 22, 205));  //  Randomised
+            fs.features.Add(new StudyFeature(sd_sid, 23, 305));  //  Parallel assignment
 				
             fs.countries!.Add(new StudyCountry(sd_sid, 927384, "Malawi", null));
             

@@ -25,38 +25,30 @@ public class TestData_109108 : TestData_Base
 
 			fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 109108, 
 				"International Traditional Medicine Clinical Trials Registry", null, "2019 Apr 19", null));
-        
+			fs.identifiers!.Add(new StudyIdentifier(sd_sid, "ChiCTR1900022627", 11, 100118, 
+				"Chinese Clinical Trial Register", null, null, null));
+			fs.identifiers!.Add(new StudyIdentifier(sd_sid, "ChiMCTR1900002289", 11, 104545, 
+				"Chinese Medicine Clinical Trials Registry", null, null, null));
+
 			fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
 				"From the Traditional Medicine Clinical Trials Registry"));
 		
+			fs.people!.Add(new StudyPerson(sd_sid, 51, "Cui Yabin", 
+				"The Affiliated Hospital to Changchun University of Chinese Medicine", null, 
+				"The Affiliated Hospital to Changchun University of Chinese Medicine", null));
+			fs.people.Add(new StudyPerson(sd_sid, 56, "Wang Jian", 
+				"The Affiliated Hospital to Changchun University of Chinese Medicine", null, 
+				"The Affiliated Hospital to Changchun University of Chinese Medicine", null));
+            
+			fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, 
+				"The Affiliated Hospital to Changchun University of Chinese Medicine", 
+				null));
+			fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, 
+				"National clinical research base construction project of the national administration of traditional Chinese medicine", 
+				null));
+
 				/*
-
-
-    {
-      "source_field": "secondary ids",
-      "sec_id": "ChiCTR1900022627",
-      "processed_id": "ChiCTR1900022627",
-      "sec_id_source": 100118,
-      "sec_id_type_id": 11,
-      "sec_id_type": "Trial Registry ID"
-    },
-    {
-      "source_field": "secondary ids",
-      "sec_id": "ChiMCTR1900002289",
-      "processed_id": "ChiMCTR1900002289",
-      "sec_id_source": 104545,
-      "sec_id_type_id": 11,
-      "sec_id_type": "Trial Registry ID"
-    }				 *
 				 * 
-  "public_contact_givenname": "Wang Jian",
-  "public_contact_affiliation": "The Affiliated Hospital to Changchun University of Chinese Medicine",
-  "scientific_contact_givenname": "Cui Yabin",
-  "scientific_contact_affiliation": "The Affiliated Hospital to Changchun University of Chinese Medicine",
-
-  "primary_sponsor": "The Affiliated Hospital to Changchun University of Chinese Medicine",
-  "source_support": "National clinical research base construction project of the national administration of traditional Chinese medicine",
-    
   "inclusion_criteria": 
   "1. Patient diagnosed to be cerebral hemorrhagic stroke and confirmed by CT;
   \n2. Age 35 to 80 years;

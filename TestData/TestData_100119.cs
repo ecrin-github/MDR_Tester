@@ -37,22 +37,16 @@ public class TestData_100119 : TestData_Base
             fs.titles.Add(new StudyTitle(sd_sid,
                 "Safety and efficacy of Selumetinib in Korean patients with neurofibromatosis type 1 and plexiform neurofibromas",
                 16, "en", 11, false, "From the South Korean Clinical Trials Registry"));
+            
+            fs.people!.Add(new StudyPerson(sd_sid, 51, "Beom Hee", "Lee", "Beom Hee Lee", null,
+                "Asan Medical Center", 100300,
+                "Asan Medical Center", "https://ror.org/03s5q0090"));
+            
+            fs.organisations!.Add(new StudyOrganisation(sd_sid, 54,  100300, "Asan Medical Center", 
+                "https://ror.org/03s5q0090"));
+            fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "AstraZeneca Korea", null));
 
 /*
- *
- 
-  "public_contact_givenname": "Beom Hee",
-  "public_contact_familyname": "Lee",
-  "public_contact_email": null,
-  "public_contact_affiliation": "Asan Medical Center",
-  "scientific_contact_givenname": "Beom Hee",
-  "scientific_contact_familyname": "Lee",
-  "scientific_contact_email": null,
-  "scientific_contact_affiliation": "Asan Medical Center",
-
-  "primary_sponsor": "Asan Medical Center",
-  "source_support": "AstraZeneca Korea",
-  
   "inclusion_criteria": 
   "For inclusion in the study subjects should fulfil the following criteria based on local regulations:
   \n1. Patients with Neurofibromatosis type I, in whom genetic study was performed for the germline NF1 mutations, and have significant symptoms/comorbidities as well as those with the potential to develop symptoms/comorbidities due to inoperable measurable plexiform neurofibroma (Surgeon’s statement of inoperability should be documented).
@@ -95,10 +89,10 @@ public class TestData_100119 : TestData_Base
 
  
  */
-            fs.features!.Add(new(sd_sid, 20, 115)); // Phase 1/Phase 2
-            fs.features.Add(new(sd_sid, 21, 400)); // Treatment
-            fs.features.Add(new(sd_sid, 22, 210)); // Nonrandomised
-            fs.features.Add(new(sd_sid, 24, 500)); // None (Open Label)
+            fs.features!.Add(new StudyFeature(sd_sid, 20, 115)); // Phase 1/Phase 2
+            fs.features.Add(new StudyFeature(sd_sid, 21, 400)); // Treatment
+            fs.features.Add(new StudyFeature(sd_sid, 22, 210)); // Nonrandomised
+            fs.features.Add(new StudyFeature(sd_sid, 24, 500)); // None (Open Label)
 
             fs.conditions!.Add(new StudyCondition(sd_sid, "Neoplasms", null, null, "2", "Neoplasms"));
 
@@ -163,19 +157,20 @@ public class TestData_100119 : TestData_Base
 
             fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true,
                 "From the South Korean Clinical Trials Registry"));
+            
+            fs.people!.Add(new StudyPerson(sd_sid, 51, "Myung-Ah", "Lee", "Beom Hee Lee", null,
+                "The Catholic University of Korea, Seoul St. Mary's Hospital", 100598,
+                "Catholic University of Korea", "https://ror.org/01fpnj063"));
+            fs.people.Add(new StudyPerson(sd_sid, 56, "Hye jeong", "Kim", "Beom Hee Lee", null,
+                "The Catholic University of Korea, Seoul St. Mary's Hospital", 100598,
+                "Catholic University of Korea", "https://ror.org/01fpnj063"));
+            
+            fs.organisations!.Add(new StudyOrganisation(sd_sid, 54,  100598,
+                "Catholic University of Korea", "https://ror.org/01fpnj063"));
+            fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "Nadianbio", null));
 
 /*
  *
-  "public_contact_givenname": "Hye jeong",
-  "public_contact_familyname": "Kim",
-  "public_contact_affiliation": "The Catholic University of Korea, Seoul St. Mary's Hospital",
-  "scientific_contact_givenname": "Myung-Ah",
-  "scientific_contact_familyname": "Lee",
-  "scientific_contact_affiliation": "The Catholic University of Korea, Seoul St. Mary's Hospital",
-
-  "primary_sponsor": "The Catholic University of Korea, Seoul St. Mary's Hospital",
-  "secondary_sponsors": null,
-  "source_support": "Nadianbio",
   
   "inclusion_criteria": 
   "1) A person who voluntarily agrees to participate in this clinical trial
@@ -222,10 +217,10 @@ public class TestData_100119 : TestData_Base
   
  * 
  */
-            fs.features!.Add(new(sd_sid, 20, 120)); // Phase 2
-            fs.features.Add(new(sd_sid, 21, 415)); // Supportive care
-            fs.features.Add(new(sd_sid, 22, 205)); // Randomised
-            fs.features.Add(new(sd_sid, 23, 305)); // Parallel assignment
+            fs.features!.Add(new StudyFeature(sd_sid, 20, 120)); // Phase 2
+            fs.features.Add(new StudyFeature(sd_sid, 21, 415)); // Supportive care
+            fs.features.Add(new StudyFeature(sd_sid, 22, 205)); // Randomised
+            fs.features.Add(new StudyFeature(sd_sid, 23, 305)); // Parallel assignment
 
             fs.conditions!.Add(new StudyCondition(sd_sid, "Neoplasms", null, null, "2", "Neoplasms"));
 

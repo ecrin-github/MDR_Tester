@@ -50,9 +50,9 @@ public class TestData_100116 : TestData_Base
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "Zespri International", null));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 102166, "University of Otago", "https://ror.org/01jmxt844"));
 	        
-	        fs.features!.Add(new (sd_sid, 22, 205));  // Randomised
-	        fs.features.Add(new (sd_sid, 23, 310));  // Crossover assignment
-	        fs.features.Add(new (sd_sid, 24, 500));  // None (Open Label)
+	        fs.features!.Add(new StudyFeature(sd_sid, 22, 205));  // Randomised
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 310));  // Crossover assignment
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));  // None (Open Label)
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Dysglycaemia", null, null, null, null));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Diet and Nutrition - Other diet and nutrition disorders", null, null, null, null));
@@ -77,8 +77,8 @@ public class TestData_100116 : TestData_Base
 	       sdo.data_object = new DataObject(sd_oid, sd_sid, "Australian / NZ registry web page", null, ob_title,
 		       null, 9, 2016, 23, 13, 100116, "Australian New Zealand Clinical Trials Registry",
 		       null, "en", 12, null, null, 0, true, true);
-	       
 	       sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	       
 	       sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100116, "Australian New Zealand Clinical Trials Registry", 
 		                     "https://anzctr.org.au/ACTRN12616000771459.aspx", true, 35, null, null, null));
 	       sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2016 Jun 14", 2016, 6, 14, null, null, null, null));
@@ -128,7 +128,6 @@ public class TestData_100116 : TestData_Base
 	        
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2021, 126, 11, 14, "50", 900,
 		        18, 17, 65, 17, 10);
-
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
 		        "From the Australian New Zealand Clinical Trials Registry"));
@@ -141,9 +140,9 @@ public class TestData_100116 : TestData_Base
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "PSI CRO Australia Pty Ltd", null));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "Seres Therapeutics, Inc", null));
 	        
-	        fs.features!.Add(new (sd_sid, 20, 110));  // Phase 1
-	        fs.features.Add(new (sd_sid, 21, 400));  // Treatment
-	        fs.features.Add(new (sd_sid, 22, 205));  //  Randomised
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 110));  // Phase 1
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));  // Treatment
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));  //  Randomised
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Ulcerative Colitis", null, null, null, null));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Oral and Gastrointestinal - Other diseases of the mouth, teeth, oesophagus, digestive system including liver and colon", null, null, null, null));
@@ -151,17 +150,17 @@ public class TestData_100116 : TestData_Base
 	        fs.countries!.Add(new StudyCountry(sd_sid, 2077456, "Australia", null));
 	        fs.countries.Add(new StudyCountry(sd_sid, 2186224, "New Zealand", null));
 
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "assumed cr", "@", 1, "n.1", "Documented diagnosis of UC prior to screening endoscopy"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "assumed cr", "@", 1, "n.2", "Active mild-to-moderate UC as determined by a 3-Component Modified Mayo Score"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "assumed cr", "@", 1, "n.3", "Minimum disease extent of 15 cm from the anal verge, confirmed at the screening endoscopy"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "assumed cr", "@", 1, "n.4", "Naïve to UC treatment or with an inadequate response to, loss of response to, or intolerance of, at least one of the following conventional therapies: 5-ASA compounds, corticosteroids or immunomodulators (e.g., 6-MP, AZA, methotrexate)"));
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "assumed cr", "@", 1, "n.01", "Documented diagnosis of UC prior to screening endoscopy"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "assumed cr", "@", 1, "n.02", "Active mild-to-moderate UC as determined by a 3-Component Modified Mayo Score"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "assumed cr", "@", 1, "n.03", "Minimum disease extent of 15 cm from the anal verge, confirmed at the screening endoscopy"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "assumed cr", "@", 1, "n.04", "Naïve to UC treatment or with an inadequate response to, loss of response to, or intolerance of, at least one of the following conventional therapies: 5-ASA compounds, corticosteroids or immunomodulators (e.g., 6-MP, AZA, methotrexate)"));
 	        
-	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "assumed cr", "@", 1, "e.1", "Known history of Crohn’s disease"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "assumed cr", "@", 1, "e.2", "On steroid medication who are unable to have steroids tapered, and be completely off steroids at least 2 weeks prior to screening"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "assumed cr", "@", 1, "e.3", "Unable to stop steroid enemas or suppositories, or 5-ASA enemas or suppositories, at least 2 weeks prior to screening"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "assumed cr", "@", 1, "e.4", "Previously received any investigational or approved biologic therapy"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "assumed cr", "@", 1, "e.5", "Previously received any investigational or approved non-biologic therapy, except for those specifically listed in the Permitted Concomitant Medications (e.g., stable dose of 6-MP, AZA, methotrexate)"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "assumed cr", "@", 1, "e.6", "Major gastrointestinal surgery (not including appendectomy or cholecystectomy) within 2 months prior to screening"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "assumed cr", "@", 1, "e.01", "Known history of Crohn’s disease"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "assumed cr", "@", 1, "e.02", "On steroid medication who are unable to have steroids tapered, and be completely off steroids at least 2 weeks prior to screening"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "assumed cr", "@", 1, "e.03", "Unable to stop steroid enemas or suppositories, or 5-ASA enemas or suppositories, at least 2 weeks prior to screening"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "assumed cr", "@", 1, "e.04", "Previously received any investigational or approved biologic therapy"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "assumed cr", "@", 1, "e.05", "Previously received any investigational or approved non-biologic therapy, except for those specifically listed in the Permitted Concomitant Medications (e.g., stable dose of 6-MP, AZA, methotrexate)"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "assumed cr", "@", 1, "e.06", "Major gastrointestinal surgery (not including appendectomy or cholecystectomy) within 2 months prior to screening"));	 
 		        
 	        // Data Objects
 	        
@@ -174,8 +173,8 @@ public class TestData_100116 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Australian / NZ registry web page", null, ob_title,
 		        null, 9, 2020, 23, 13, 100116, "Australian New Zealand Clinical Trials Registry",
 		        null, "en", 12, null, null, 0, true, true);
-	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	       
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100116, "Australian New Zealand Clinical Trials Registry", 
 		        "https://anzctr.org.au/ACTRN12620001103954.aspx", true, 35, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, "2020 Oct 23", 2020, 10, 23));

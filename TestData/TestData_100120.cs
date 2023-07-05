@@ -88,9 +88,24 @@ public class TestData_100120 : TestData_Base
 	        sb.Append("Am J Clin Nutr. 2010 Oct;92(4):714-22. doi: 10.3945/ajcn.2009.28532. Epub 2010 Sep 8.");
 	        fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "20826623", null, null, null));
 	        
-	        // countries
-            
 	        // iec
+	        /*
+	         *  "EligibilityCriteria":
+	         * "Inclusion criteria:\n
+	         * \nHealthy adults
+	         * \nAged 30 years and older
+	         * \nSystolic blood pressure of 120 to 159 mm Hg or a diastolic blood pressure of 80 to 99 mm Hg.
+	         * \n\nExclusion criteria:
+	         * \n\nDiabetes
+	         * \nActive or prior Cardiovascular disease (CVD)
+	         * \nLDL cholesterol greater than 220 mg/dL (>5.70 mmol/L)
+	         * \nFasting triglycerides greater than 750 mg/dL (>8.48 mmol/L)
+	         * \nWeight more than 350 lb (>159 kg)\nTaking medications that affect blood pressure or blood lipid levels
+	         * \nUnwillingness to stop taking vitamin and mineral supplements
+	         * \nAlcoholic beverage intake of more than 14 drinks per week.",
+	         */
+	        
+	        // No location list
 	        
 	        // Data Objects
 	        
@@ -187,6 +202,58 @@ public class TestData_100120 : TestData_Base
             
             // iec
             
+            /*
+             *"EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nWritten informed consent prior to beginning specific protocol procedures
+             * \nUntreated invasive breast carcinoma eligible for primary definitive surgery (stage I-IIIA)
+             * \nHistologically confirmed invasive breast carcinoma, with all of the following characteristics: primary tumor ≥1 cm in largest diameter, cN0-2, No evidence of distant metastasis (M0)
+             * \nHER2-positive invasive breast cancer by central assessment, defined by ASCO/CAP guidelines\nFemale patients
+             * \nAge ≥18 years
+             * \nECOG performance status of 0 or 1
+             * \nAdequate organ function defined as: Absolute neutrophil count (ANC) ≥1.5 × 109/L, Hemoglobin (Hgb) ≥10 g/dL, Platelets >100 000/mm3, Creatinine ≤1.6 mg/dL, ALT and AST ≤2.5 × ULN, Alkaline phosphatase ≤5 ULN, Total bilirubin ≤1.5 mg/dL, Baseline LVEF ≥50% measured by echocardiography (ECHO) or Multiple Gate Acquisition (MUGA) scan
+             * \nNegative β-HCG pregnancy test (serum) for premenopausal women of reproductive capacity (those who are biologically capable of having children) and for women less than 12 months after the menopause. All subjects who are biologically capable of having children must agree and commit to the use of a reliable method of birth control from 2 weeks before administration of the first dose of investigational product until 28 days after last dose of investigational product
+             * \nAbsence of any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule
+             * \nIn the case of multifocal tumor (defined as the presence of two or more tumor foci in the same quadrant of the breast), the largest lesion must be ≥ 1 cm, and \"target lesion\" must be designated for all subsequent tumor assessments. In all tumor foci should be documented HER2 status as positive
+             * \nAvailability of enough tumor sample or possibility to take a new biopsy for PAM50 analysis
+             * 
+             * \n\nExclusion Criteria:
+             * \n\nStage III inoperable breast cancer or known metastatic disease
+             * \nPatients for whom upfront chemotherapy including taxanes and anthracyclines is clinically judged appropriate as optimal neoadjuvant treatment
+             * \nPrior chemotherapy, radiotherapy or surgery for invasive breast cancer, other than excision of tumor in the contralateral breast, and provided that the patient did not previously receive adjuvant radiotherapy or chemotherapy
+             * \nSubjects with a concurrently active second malignancy, other than adequately treated non-melanoma skin cancers, in situ melanoma or in situ cervical cancer. Subjects with other non-mammary malignancies must have been disease-free for at least 5 years
+             * \nKnown or suspected hypersensitivity reaction to any investigational or therapeutic compound or their incorporated substances
+             * \nConcurrent congestive heart failure or LVEF <50%
+             * \nClinically significant (i.e. active) cardiovascular disease, including cerebrovascular accident (<6 months before enrollment), unstable angina pectoris, myocardial infarction ≤6 months before enrollment, uncontrolled hypertension (systolic >150 mmHg and/or diastolic >100 mmHg) or high-risk uncontrolled arrhythmias
+             * \nUncontrolled diabetes mellitus, active peptic ulcer disease or uncontrolled epilepsy
+             * \nActive uncontrolled infection at the time of enrollment
+             * \nHistory of significant comorbidities that, in the judgment of the investigator, may interfere with the conduction of the study, the evaluation of response, or with informed consent
+             * \nUse of any investigational agent or participation in another therapeutic clinical trial concurrently or in the previous 30 days before the enrollment
+             * \nPatients who are pregnant or breast-feeding
+             * \nWomen of child-bearing potential who are unable or unwilling to use contraceptive measures
+             * \nInability or unwillingness to abide by the study protocol or cooperate fully with the investigator
+             * \nMalabsorption syndrome, disease significantly affecting gastrointestinal function, or resection of the stomach or small bowel. Subjects with ulcerative colitis are also excluded
+             * \nConcurrent neoadjuvant cancer therapy (chemotherapy, radiation therapy, immunotherapy, biologic therapy other than the trial therapies)
+             * \nConcomitant use of CYP3A4 inhibitors or inducers",
+             *
+             *
+                 * 
+               */   
+            
+             fs.countries!.Add(new StudyCountry(sd_sid, 2510769, "Spain", null));
+             
+             fs.sites!.Add(new StudyLocation(sd_sid, null, "Hospital de Torrevieja", null, null, "Torrevieja", 2510769, "Spain", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Clínico Universitario de Santiago de Compostela", null, null, "Santiago de Compostela", 2510769, "Spain", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Universitario Son Espases", null, null, "Palma de Mallorca", 2510769, "Spain", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Universitario de Fuenlabrada", null, null, "Fuenlabrada", 2510769, "Spain", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Vall d'Hebron University Hospital", null, null, "Barcelona", 2510769, "Spain", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Clínic de Barcelona", null, null, "Barcelona", 2510769, "Spain", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Universitario Arnau de Vilanova de Lleida", null, null, "Lleida", 2510769, "Spain", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Universitario 12 de Octubre", null, null, "Madrid", 2510769, "Spain", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Clínico San Carlos", null, null, "Madrid", 2510769, "Spain", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Clínico Universitario de Valencia", null, null, "Valencia", 2510769, "Spain", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Universitario Arnau de Vilanova de Valencia", null, null, "Valencia", 2510769, "Spain", null));
+
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -433,7 +500,58 @@ public class TestData_100120 : TestData_Base
 
 			// countries
             
-			// iec
+			/*
+			 *"EligibilityCriteria":
+			 * "INCLUSION CRITERIA:
+			 * \n\nHeart failure as defined by at least one of symptom (paroxysmal nocturnal dyspnea; orthopnea; or dyspnea on mild or moderate exertion) at the time of screening and at least one sign (any rales post cough; jugular venous pressure(JVP) greater than or equal to 10cm of water(H2O); lower extremity edema; or chest x-ray demonstrating pleural effusion, pulmonary congestion, or cardiomegaly) within 12 months prior to study entry:
+			 * \nleft ventricular ejection fraction greater than or equal to 45% (per local reading); the ejection fraction must have been obtained within 6 months prior to randomization and after any MI or other event that would affect ejection fraction
+			 * \nControlled systolic blood pressure(BP), defined as a target systolic BP less than 140 mm Hg; participants with BP up to and including 160 mm Hg are eligible for enrollment if they are on three or more medications to control BP
+			 * \nSerum potassium less than 5.0 mmol/L prior to randomization\nAt least one hospital admission for which heart failure was a major component of the hospitalization some time within the 12 months prior to study entry OR brain natriuretic peptide (BNP) greater than or equal to 100pg/ml or N-terminal pro-BNP greater than or equal to 360pg/ml within the 60 days prior to study entry
+			 * \nWomen of child-bearing potential must have a negative serum/urine pregnancy test within 72 hours prior to randomization, must not be lactating, and must agree to use an effective method of contraception during the entire course of study participation
+			 * \nWilling to comply with scheduled visits\nInformed consent form signed by the subject prior to participation in the trial
+			 *
+			 * \n\nEXCLUSION CRITERIA:\n\nSevere systemic illness with an expected life expectancy of less than 3 years
+			 * \nChronic pulmonary disease requiring home O2, oral steroid therapy, or hospitalization for exacerbation within 12 months of study entry, or significant chronic pulmonary disease in the opinion of the investigator
+			 * \nKnown infiltrative or hypertrophic obstructive cardiomyopathy or known pericardial constriction
+			 * \nPrimary hemodynamically significant uncorrected valvular heart disease, obstructive or regurgitant, or any valvular disease expected to lead to surgery during the trial
+			 * \nAtrial fibrillation with a resting heart rate greater than 90 bpm
+			 * \nMI in the past 90 days
+			 * \nCoronary artery bypass graft surgery in the past 90 days
+			 * \nPercutaneous coronary intervention in the past 30 days
+			 * \nHeart transplant recipient
+			 * \nCurrently implanted left ventricular assist device
+			 * \nStroke in past 90 days
+			 * \nSystolic BP (SBP) greater than 160 mm Hg
+			 * \nKnown orthostatic hypotension
+			 * \nGastrointestinal disorder that could interfere with study drug absorption\nUse of any aldosterone antagonist or potassium sparing medication in the last 14 days or any known condition that would require the use of an aldosterone antagonist during study participation;
+			 * \nKnown intolerance to aldosterone antagonists
+			 * \nCurrent lithium use
+			 * \nCurrent participation (including prior 30 days) in any other therapeutic trial
+			 * \nAny condition that, in the opinion of the investigator, may prevent the participant from adhering to the trial protocol
+			 * \nHistory of hyperkalemia (serum potassium greater than or equal to 5.5mmol/L) in the past 6 months or serum potassium greater than or equal to 5.0mmol/L within the past 2 weeks
+			 * \nSevere renal dysfunction, defined as an estimated glomerular filtration rate(GFR) less than 30ml/min. Participants with serum creatinine greater than or equal to 2.5mg/dl are also excluded even if their GFR is greater than or equal to 30ml/min
+			 * \nKnown chronic hepatic disease, defined as aspartate aminotransferase(AST) and alanine aminotransferase(ALT) levels greater than 3.0 times the upper limit of normal as read at the local lab.",
+			 *
+  */
+		
+			 fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3865483, "Argentina", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3469034, "Brazil", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 6251999, "Canada", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 614540, "Georgia", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2017370, "Russia", null));
+             
+			 fs.sites!.Add(new StudyLocation(sd_sid, null, "University of Alabama at Birmingham", null, null, "Birmingham", 6252001, "United States", null));
+			 fs.sites.Add(new StudyLocation(sd_sid, null, "Cardiovascular Consultants, Ltd.", null, null, "Glendale", 6252001, "United States", null));
+			 fs.sites.Add(new StudyLocation(sd_sid, null, "Carl T. Hayden VA Medical Center", null, null, "Phoenix", 6252001, "United States", null));
+			 fs.sites.Add(new StudyLocation(sd_sid, null, "Central Arkansas Veterans Healthcare System", null, null, "Little Rock", 6252001, "United States", null));
+			 fs.sites.Add(new StudyLocation(sd_sid, null, "Saint-Petersburg State Healthcare Institution \"City Alexander's Hospital\"", null, null, "Saint Petersburg", 2017370, "Russia", null));
+			 fs.sites.Add(new StudyLocation(sd_sid, null, "Saint-Petersburg State Institution of Health Protection, \"City Hosptial # 15\"", null, null, "Saint Petersburg", 2017370, "Russia", null));
+			 fs.sites.Add(new StudyLocation(sd_sid, null, "Saint-Petersburg State Health Institution \"Pokrovskaya City Hospital\"", null, null, "Saint-Petersburg", 2017370, "Russia", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Federal State Institution", null, null, "Saratov", 2017370, "Russia", null));
+			 fs.sites.Add(new StudyLocation(sd_sid, null, "State Educational institution of Higher Professional Education \"Volgograd State Medical University o", null, null, "Volgograd", 2017370, "Russia", null));
+			 fs.sites.Add(new StudyLocation(sd_sid, null, "State Health Care Institution \"Voronezh Regional Clinical Consultative & Diagnostic Centre\"", null, null, "Voronezh", 2017370, "Russia", null));
+
             
 			// Data Objects
 	        
@@ -532,10 +650,24 @@ public class TestData_100120 : TestData_Base
 	         
 	        fs.studylinks!.Add(new StudyLink(sd_sid, "CovidSurg Cohort Study. Globalsurg", 
 		                        "https://globalsurg.org/covidsurgcohortstudy"));
-
-	        // countries
+	        
+	        fs.countries!.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
+	        
+	        fs.sites!.Add(new StudyLocation(sd_sid, null, "Queen's Hospital", null, null, "Romford", 2635167, "United Kingdom", null));
             
 	        // iec
+	        
+	        /*
+	         *"EligibilityCriteria":
+	         * "Inclusion Criteria:
+	         * \n\nPatients undergoing emergency laparotomy (change made due to heterogeneity of emergency general surgery)
+	         * \n\nExclusion Criteria:
+	         * \n\nInherited or acquired immunodeficiency (which may directly skew NLR)",
+	         *
+	    
+        ]
+	         * 
+	         */
 	        
 	        // Data Objects
 	        
@@ -658,6 +790,31 @@ public class TestData_100120 : TestData_Base
             
 	        // iec
 	        
+	        /*
+	         *  "EligibilityCriteria":
+	         * "Inclusion Criteria:
+	         * \n\nAge 45-75 years\nAt average risk for CRC (\"average risk\" is defined as those patients who do not have any of the following: documented history of CRC, colorectal neoplasms, colorectal polyps, colonic adenomas, family history of CRC among first degree relative [father, mother, sister, brother], or diagnosis of inflammatory bowel disease)
+	         * \nNo record of fecal occult blood test (FOBT)/FIT within the past 12 months or colonoscopy within 10 years, sigmoidoscopy within 5 years, barium enema within 5 years, or computed tomography (CT) colonography within 10 years of the EHR query date
+	         * \nNo record of any CRC diagnosis or total colectomy
+	         * \nNo record of comorbidities or screening contraindications, including dementia, hospice care, assisted living, end-stage renal disease, and other cancers (glioblastoma, pancreatic cancer, lung cancer, esophageal cancer, liver and bile duct cancer, mesothelioma)
+	         * \nHas a complete North Carolina mailing address in the EHR\nActive patient of the clinic (seen within the past 18 months) at the time of randomization\nNo record of a positive (abnormal) FIT result in the first study round (Trial Ages 50-75 only)
+	         * \n\nExclusion Criteria:
+	         * \n\nAge younger than 45 years or older than 75 years
+	         * \nNot at average risk for CRC (\"average risk\" is defined as those patients who do not have any of the following: documented history of CRC, colorectal neoplasms, colorectal polyps, colonic adenomas, family history of CRC among first degree relative [father, mother, sister, brother], or diagnosis of inflammatory bowel disease)
+	         * \nRecord of FOBT/FIT within the past 12 months or colonoscopy within 10 years, sigmoidoscopy within 5 years, barium enema within 5 years, or CT colonography within 10 years of the EHR query date
+	         * \nRecord of any CRC diagnosis or total colectomy
+	         * \nRecord of comorbidities or screening contraindications, including dementia, hospice care, assisted living, end-stage renal disease, and other cancers (glioblastoma, pancreatic cancer, lung cancer, esophageal cancer, liver and bile duct cancer, mesothelioma)
+	         * \nDoes not have a complete North Carolina mailing address in the EHR
+	         * \nNot an active patient of the clinic (not seen within the past 18 months) at the time of randomization
+	         * \nRecord of a positive (abnormal) FIT result reported during the first study round (Trial Ages 50-75)",
+	         *
+	         */
+	        
+	        fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+             
+	        fs.sites!.Add(new StudyLocation(sd_sid, null, "Roanoke Chowan Community Health Center", null, null, "Ahoskie", 6252001, "United States", null));
+	        fs.sites.Add(new StudyLocation(sd_sid, null, "Blue Ridge Health", null, null, "Hendersonville", 6252001, "United States", null));
+	        
 	        // Data Objects
 	        
 	        // 1) Trial registry entry
@@ -753,7 +910,83 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
-	        
+            /*
+             *"EligibilityCriteria": "Key inclusion criteria:
+             * \n\nHistologically confirmed locally advanced stage IIIB or stage IV NSCLC for treatment in the first-line setting
+             * \nKnown PD-L1 status determined by a Novartis designated central laboratory. A newly obtained tissue biopsy or an archival biopsy (block or slides) is required for PD-L1 determination (PD-L1 IHC 22C3 pharmDx assay), prior to study randomization. Note: For the safety run-in part, known PD-L1 status is not required.
+             * \nEastern Cooperative oncology group (ECOG) performance status of 0 or 1.
+             * \nAt least 1 measurable lesion by RECIST 1.1
+             * \n\nKey exclusion criteria:
+             * \n\nPrevious immunotherapy (e.g. anti-PD-1, anti-PD-L1, anti-PD-L2, anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or immune checkpoint pathways).
+             * \nPrior treatment with canakinumab or drugs of a similar mechanism of action (IL-1β inhibitor).
+             * \nSubjects with epidermal growth factor receptor (EGFR) sensitizing mutations (identified in exons 19, 20, or 21), and/or ALK rearrangement by locally approved laboratory testing.
+             * \nPreviously untreated or symptomatic central nervous system (CNS) metastases or lepto-meningeal disease.
+             * \nSubject with suspected or proven immune-compromised state or infections.
+             * \nSubject has prior to starting study drug: received live vaccination ≤3 months, had major surgery ≤4 weeks prior to starting study drug, has thoracic radiotherapy: lung fields ≤ 4 weeks, other anatomic sites ≤ 2 weeks, palliative radiotherapy for bone lesions ≤ 2 weeks.
+             * \n\nOther protocol-defined inclusion/exclusion criteria may apply.",
+             *           
+             */
+            
+             fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3865483, "Argentina", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2077456, "Australia", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2782113, "Austria", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3469034, "Brazil", null));
+             
+             fs.countries.Add(new StudyCountry(sd_sid, 6251999, "Canada", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3895114, "Chile", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1814991, "China", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3686110, "Colombia", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3077311, "Czechia", null));
+             
+             fs.countries.Add(new StudyCountry(sd_sid, 2623032, "Denmark", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 660013, "Finland", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3017382, "France", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 390903, "Greece", null));
+             
+             fs.countries.Add(new StudyCountry(sd_sid, 1819730, "Hong Kong", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 719819, "Hungary", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2629691, "Iceland", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1269750, "India", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3175395, "Italy", null));
+
+             fs.countries.Add(new StudyCountry(sd_sid, 1861060, "Japan", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1835841, "South Korea", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 272103, "Lebanon", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1733045, "Malaysia", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2750405, "Netherlands", null));
+             
+             fs.countries.Add(new StudyCountry(sd_sid, 3144096, "Norway", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1694008, "Philippines", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 798544, "Poland", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2264397, "Portugal", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 798549, "Romania", null));
+             
+             fs.countries.Add(new StudyCountry(sd_sid, 2017370, "Russia", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1880251, "Singapore", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3057568, "Slovakia", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2510769, "Spain", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2661886, "Sweden", null));
+             
+             fs.countries.Add(new StudyCountry(sd_sid, 2658434, "Switzerland", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1668284, "Taiwan", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1605651, "Thailand", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 298795, "Turkey", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1562822, "Vietnam", null));
+             
+             fs.sites!.Add(new StudyLocation(sd_sid, null, "Pacific Shores Medical Group .", null, null, "Long Beach", 6252001, "United States", null));
+			 fs.sites.Add(new StudyLocation(sd_sid, null, "USC Kenneth Norris Comprehensive Cancer Center .", null, null, "Los Angeles", 6252001, "United States", null));
+			 fs.sites.Add(new StudyLocation(sd_sid, null, "Advent Health Cancer Institute", null, null, "Orlando", 6252001, "United States", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Dana Farber Cancer Institute", null, null, "Boston", 6252001, "United States", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Buenos Aires", 3865483, "Argentina", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Melbourne", 2077456, "Australia", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Murdoch", 2077456, "Australia", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Linz", 2782113, "Austria", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Salzburg", 2782113, "Austria", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Sao Paulo", 3469034, "Brazil", null));
+             
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -835,7 +1068,50 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
-	        
+            /*
+             * "EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nSigned Written Informed Consent: patients must be willing and able to give written informed consent, that have to be given before starting of screening procedure.
+             * \nAvailability of autologous tumor tissue fulfilling acceptance criteria prescribed by the \"Product Specification File\".
+             * \nPatients must have histologically or cytologically confirmed RCC (all histology types except for urothelial cancer);
+             * \nPatients must have stage IV disease in progression after at least 1 TKI and/or antiangiogenetic and/or mTOR inhibitors therapy (patients must have finished prior treatments at least 4 weeks before the first IL2 dose)
+             * \nPatients must have at least one measurable lesion, according to the irRC response criteria (see section 8 ), after asportation of tumor tissue for vaccine preparation. The tumor lesions that will be irradiated are excluded for response evaluation.
+             * \nLife expectancy of greater than 3 months.
+             * \nECOG performance status 0-1
+             * \n\nPatients must have organ and marrow function as defined below:
+             * \n\nleukocytes >4000/µL
+             * \nabsolute neutrophil count >1,500/µL\nplatelets >100,000/µL\ntotal bilirubin within normal institutional limits
+             * \nAST(SGOT)/ALT(SGPT) <2.5 X institutional upper limit of normal\ncreatinine < 1.5 mg/dl
+             * \nhaemoglobin >8.0 gm/dl
+             * \nhematocrit <30%
+             * \nECG and echocardiogram within normal institutional limits\nPulmonary function tests within normal institutional limits (to be performed only in patients with lung metastases or history of impaired lung function)
+             * \nNo contraindication for the use of vasopressor agents
+             * \nNegative screening tests for HIV, HBV HCV and syphilis not older than 30 days before performing any of the GMP-regulated activities required (leukapheresis, collection of tumor biopsies to be used for tumor homogenate preparation);
+             * \nMen and women aged > 18 years.
+             * \nWomen of childbearing potential (WOCBP) must be using an adequate method of contraception to avoid pregnancy throughout the study and for up 8 weeks after the study, in order to minimize the risk of pregnancy;
+             * \nPatients must have normal organ and marrow function according to clinical practice.
+             * \n\nExclusion Criteria:
+             * \n\nPatients who have positive tests to HCV, HBV, HIV, or syphilis (specific blood testing must be performed within 30 days before any GMP-regulated activity (leukapheresis and collection of tumor biopsies to be used for tumor homogenate preparation).
+             * \nPatients who did not have prior lines of systemic therapy for advanced disease.
+             * \nParticipation in another clinical trial with any investigational agents within 30 days prior to study screening.
+             * \nUncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements (on physician's judgment).
+             * \nOther known malignant neoplastic diseases in the patient's medical history with a disease-free interval of less than 3 years (except for previously treated basal cell carcinoma and in situ carcinoma of the uterine cervix);
+             * \nPatients who have had chemotherapy or radiotherapy or immunotherapy within 4 weeks (6 weeks for nitrosoureas or mitomycin C) prior to entering the study or those who have not recovered from adverse events due to agents administered more than 4 weeks earlier.
+             * \nPatients with known brain metastases should be excluded from this clinical trial because of their poor prognosis and because they often develop progressive neurologic dysfunction that would confound the evaluation of neurologic and other adverse events.
+             * \nHistory of allergic reactions attributed to compounds of similar chemical or biologic composition to IL-2 or other agents used in the study.
+             * \nAny autoimmune disease which could be exacerbated by IL-2
+             * \nA medical illness requiring chronic treatments with corticosteroids or other immunosuppressive agents
+             * \nA history of significant cardiovascular disease, including myocardial infarction, congestive heart failure, primary cardiac arrhythmias, angina pectoris or cerebrovascular accident
+             * \nHIV-positivity, whether or not symptomatic
+             * \nAny contraindication to undergo leukapheresis as evaluated by transfusionist (e.g. severe anemia, piastrinopenia, oral anticoagulant therapy) or to undergo surgery.",
+             *
+                    
+             */
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 3175395, "Italy", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "UO Immunoterapia e Laboratorio TCS, IRCCS IRST", null, null, "Meldola (FC)", 3175395, "Italy", null));
+            
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -928,6 +1204,17 @@ public class TestData_100120 : TestData_Base
 			// countries
             
             // iec
+            /*
+             *"EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nPersons aged 50-75 years and not up-to-date with colorectal cancer screening
+             * \n\nExclusion Criteria:\n\nPersons having colorectal disease (e.g., ulcerative colitis or colectomy), personal history of colorectal cancer or colorectal disease, end-stage or life threatening diseases or, those known to be under hospice care or living in a skilled nursing facility may be excluded.",
+
+             */
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "AltaMed Health Services", null, null, "Los Angeles", 6252001, "United States", null));
 	        
             // Data Objects
 	        
@@ -1024,6 +1311,21 @@ public class TestData_100120 : TestData_Base
              // countries
                 
              // iec
+             /*
+              * "EligibilityCriteria":
+              * "Inclusion Criteria:
+              * \n\nCases of Pregnancy Induced Hypertension.
+              * \n\nExclusion Criteria:
+              * \n\nCases complicated by malignancy, renal, liver or other secondary manifestations.",
+              *
+              */
+             
+             fs.countries!.Add(new StudyCountry(sd_sid, 1269750, "India", null));
+             
+             fs.sites!.Add(new StudyLocation(sd_sid, null,
+	             "M and J Western Regional Institute of Ophthalmology, B.J.Medical College and Civil Hospital Campus, Ahmedabad-380016.Gujarat. 07922680360 07922680314 Fax:07922680360", 
+	             null, null, "Ahmedabad", 1269750, "India", null));
+             
                 
             // Data Objects
                 
@@ -1109,6 +1411,40 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
+            
+            /*
+             *  "EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nBetween 18 and 50 years of age inclusive, at the time of signing the informed consent.
+             * \nHealthy as determined by the investigator or medically qualified designee based on a medical evaluation including medical history, physical examination, laboratory tests, vital signs and 12-lead ECG. (A subject with a clinically insignificant abnormality or laboratory parameter(s) may be included only if the Investigator documents that the finding is unlikely to represent a safety risk and will not interfere with the study procedures.)
+             * \nBody weight 55-95 kilogram (kg) and body mass index within the range 19-30 kg/meter (m)^2 (inclusive).
+             * \nMale or Female of non-childbearing potential:
+             * \n\nMales: Male subjects with female partners of child bearing potential must comply with the pre specified contraception requirements.
+             * \n\nFemales: A female subject is eligible to participate if she is not pregnant (as confirmed by a negative serum or urine human chorionic gonadotropin test), not lactating, and is either of non-reproductive potential or reproductive potential. If of reproductive potential, then the subject should agree to follow one of the options listed per GSK Modified List of Highly Effective Methods for Avoiding Pregnancy in Females of Reproductive Potential from 30 days prior to the first dose and until 30 days after the last dose of study medication The Investigator is responsible for ensuring that subjects understand how to properly use these methods of contraception
+             * \n\nCapable of giving signed informed consent
+             * \n\nExclusion Criteria:
+             * \n\nHistory of any significant medical condition (e.g. cardiac, pulmonary, metabolic, renal, gastrointestinal, rheumatological, etc.)
+             * \nHistory of frequent (>1 per week) headache or myalgia, asthma, syncope.
+             * \nHistory of liver disease, or known hepatic or biliary abnormalities (with the exception of Gilbert's syndrome).
+             * \nAlanine aminotransferase (ALT) and bilirubin >1.1×upper limit of normal (ULN; isolated bilirubin >1.5×ULN is acceptable if bilirubin is fractionated and direct bilirubin <35%).
+             * \nVital signs:
+             * \n\nSystolic blood pressure (SBP) <90 and >140 milliliter of mercury (mmHg); diastolic BP <50 and >90 mmHg; heart rate (HR) <50 and >90 beats per minute (bpm); temperature >37.5 degree Celsius
+             * \n\nClinically significant ECG abnormality and/or HR < 50 and >90 bpm; PR interval >220 milliseconds (msec); QRS duration >120 msec; and QTcF > 450 msec
+             * \nAnticipated requirement for any prescription medication during the study\nHistory of regular alcohol consumption within 6 months of the study averaging a weekly intake of >14 drinks for males or >7 drinks for females or inability to abstain from alcohol from 1 day prior to the inpatient period of the study until discharge (one drink is equivalent to 8 grams of alcohol: 200 milliliter [mL] of beer, 100 mL of wine or 1 measure (25 mL) of spirits)
+             * \nUrinary cotinine levels indicative of smoking or history or regular use of tobacco or nicotine-containing products within 2 months prior to screening or inability to abstain from smoking during the study\nHistory of sensitivity to any of the study medications, or components thereof or a history of drug or other allergy that, in the opinion of the investigator or Medical Monitor, contraindicates their participation
+             * \nPresence of hepatitis B surface antigen, positive hepatitis C antibody test result at screening or within 3 months prior to first dose of study treatment. Subjects with positive Hepatitis C antibody due to prior resolved disease can be enrolled, only if a confirmatory negative Hepatitis C ribonucleic acid polymerase chain reaction test is obtained.
+             * \nA positive pre-study drug/alcohol screen.\nA positive test for human immunodeficiency antivirus antibody.
+             * \nDonation of blood or blood products in excess of 500 mL within a 56-day period.
+             * \nThe subject has participated in a clinical trial and has received an investigational product within the following time period prior to the first visit (Day -2) in the current study: 30 days, 5 half-lives or twice the duration of the biological effect of the investigational product (whichever is longer).
+             * \nExposure to more than four new chemical entities within 12 months prior to the first visit (Day -2).
+             * \nExposure to GSK1795091 in a previous cohort of this study.\nSubject is unable to refrain from taking non-prescription drugs (including vitamins and dietary or herbal supplements), within 7 days prior to the first dose of study medication until completion of the follow-up visit, unless in the opinion of the investigator and sponsor, the medication will not interfere with the study.
+             * \nSubject is able to understand and communicate in German/or native language of the site. Subject, or close relative of the subject, is the investigator or a sub-investigator, research assistant, pharmacist, study coordinator, or other staff directly involved with the conduct of the study at that site
+             * \nVulnerable subjects (eg subjects kept in detention)",
+             *         
+             */
+            fs.countries!.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "GSK Investigational Site", null, null, "Berlin",2921044, "Germany", null));
 	        
             // Data Objects
 	        
@@ -1226,9 +1562,9 @@ public class TestData_100120 : TestData_Base
 	        fs.relationships!.Add(new StudyRelationship(sd_sid, 24, "NCT02449174"));
 	        fs.relationships!.Add(new StudyRelationship(sd_sid, 24, "NCT02318992"));
 
-            // countries
+            // no location list
             
-            // iec
+            // iec - no IEC (!)
 	        
             // Data Objects
 	        
@@ -1328,7 +1664,44 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
-	        
+            /*
+             *"EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nPatients must have histologically or cytologically proven pancreatic adenocarcinoma; histologies other than adenocarcinoma, or any mixed histologies, will NOT be eligible
+             * \nPatients must have measurable disease in the pancreas; computed tomography (CT) scans or magnetic resonance imaging (MRIs) used to assess measurable disease must have been completed within 28 days prior to registration; all disease must be assessed and documented on the baseline tumor assessment form
+             * \n\nPatients must have resectable primary tumor based on contrast-enhanced CT or MRI (CT or MRI without contrast as part of positron emission tomography [PET]/CT or PET/MRI is NOT acceptable; CT or MRI with contrast as part of PET/CT or PET/MRI is acceptable) of the chest, abdomen, and pelvis, where resectable is defined as:
+             * \n\nNo involvement of the celiac artery, common hepatic artery, and superior mesenteric artery (and, if present, replaced right hepatic artery)
+             * \nNo involvement, or < 180° interface between tumor and vessel wall, of the portal vein and/or superior mesenteric vein; and patent portal vein/splenic vein confluence\nNo evidence of metastatic disease
+             * \nNote: for tumors of the body and tail of the pancreas, involvement of the splenic artery and vein of any degree is considered resectable disease
+             * \nCT scans or MRIs used to assess disease at baseline must be submitted for central review
+             * \nPatients must have surgical consult to verify patient is a surgical candidate within 21 days prior to registration
+             * \nPatients must not have received prior surgery, radiation therapy, chemotherapy, targeted therapy, or any investigational therapy for pancreatic cancer
+             * \nPatients must have a Zubrod performance status of 0-1
+             * \nAbsolute neutrophil count (ANC) >= 1,500/mcL\nPlatelets >= 100,000/mcL\nHemoglobin >= 9 g/dL
+             * \nTotal bilirubin =< 1.5 x institutional upper limit of normal (IULN)\nAspartate aminotransferase (AST) and alanine aminotransferase (ALT) =< 2.5 x IULN
+             * \nSerum albumin >= 3 g/dL
+             * \nSerum creatinine =< IULN within 14 days prior to registration
+             * \nPatients with uncontrolled intercurrent illness including, but not limited to ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements will NOT be eligible
+             * \nNo prior malignancy is allowed except for adequately treated basal (or squamous cell) skin cancer, in situ cervical cancer, in situ breast (ductal or lobular) cancer, or other cancer for which the patient has been disease and treatment-free for two years
+             * \nPatients must not be pregnant or nursing; women/men of reproductive potential must have agreed to use an effective contraceptive method for up to 3 months after the final administered dose of chemotherapy; a woman is considered to be of \"reproductive potential\" if she has had menses at any time in the preceding 12 consecutive months; in addition to routine contraceptive methods, \"effective contraception\" also includes heterosexual celibacy and surgery intended to prevent pregnancy (or with a side-effect of pregnancy prevention) defined as a hysterectomy, bilateral oophorectomy or bilateral tubal ligation; however, if at any point a previously celibate patient chooses to become heterosexually active during the time period for use of contraceptive measures, he/she is responsible for beginning contraceptive measures\nSites must seek additional patient consent for the future use of specimens
+             * \nPatients must be informed of the investigational nature of this study and must sign and give written informed consent in accordance with institutional and federal guidelines
+             * \nAs a part of the OPEN registration process the treating institution's identity is provided in order to ensure that the current (within 365 days) date of institutional review board approval for this study has been entered in the system",
+             
+             */
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "University of Alabama at Birmingham Cancer Center", null, null, "Birmingham", 6252001, "United States", null));
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "University of South Alabama Mitchell Cancer Institute", null, null, "Mobile", 6252001, "United States", null));
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Anchorage Associates in Radiation Medicine", null, null, "Anchorage", 6252001, "United States", null));
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Anchorage Radiation Therapy Center", null, null, "Anchorage", 6252001, "United States", null));
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Alaska Breast Care and Surgery LLC", null, null, "Anchorage", 6252001, "United States", null));
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Alaska Oncology and Hematology LLC", null, null, "Anchorage", 6252001, "United States", null));
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Alaska Regional Hospital", null, null, "Anchorage", 6252001, "United States", null));
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Alaska Women's Cancer Care", null, null, "Anchorage", 6252001, "United States", null)); 
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Anchorage Oncology Centre", null, null, "Anchorage", 6252001, "United States", null));
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Katmai Oncology Group", null, null, "Anchorage", 6252001, "United States", null));
+            
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -1458,7 +1831,33 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
-	        
+            /*
+             * "EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nMale and female subjects 18 years of age or older
+             * \nSexually active female subjects of child-bearing potential must agree to use an effective method of birth control during the treatment and follow-up period
+             * \nRequired to sign an informed consent form
+             * \nSubject\"s attending physician agrees to provide care following FMT
+             * \nAble to follow study procedures and follow-ups.
+             * \nDiagnosed by medical history of ≥ 3 RCDAD bouts in outpatients or ≥ 2 bouts of RCDAD in an inpatient with ≥ 2 positive fecal tests for C. difficile toxin
+             * \nReceived at least one course of adequate antibiotic therapy for CDAD (≥ 10 days of vancomycin, metronidazole or fidaxomicin) after the subjects last bout of CDAD
+             * \n\nExclusion Criteria:
+             * \n\nSubjects with known neutropenia with absolute neutrophil count <0.5 x 109/L
+             * \nEvidence of toxic megacolon, fulminant colitis, gastrointestinal perforation, ileus, abdominal distension, lack of bowel sounds, fever, or hypotension
+             * \nKnown peripheral white blood cell count > 15.0 x 109/L or temperature > 38.0 °C
+             * \nDiarrhea due to definable non-CDAD pathogen
+             * \nPost total colectomy or presence of a colostomy
+             * \nUnable to tolerate FMT via enema for any reason\nRequiring systemic non-C. difficile antibiotic therapy at the time of FMT
+             * \nActively taking Saccharomyces boulardii or other probiotic at the time of FMT
+             * \nNeed for continuing use of oral vancomycin, oral or IV metronidazole, fidaxomicin, rifaximin or nitazoxanide at the time of FMT
+             * \nSevere underlying disease such that the patient is not expected to survive for one or more years or unstable medical condition requiring daily change in treatments",
+
+             */
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "University of Texas Health Science Center at Housotn", null, null, "Houston", 6252001, "United States", null));
+            
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -1567,7 +1966,66 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
-	        
+            /*
+             *"EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nSigned informed consent prior to initiation of any study-mandated procedures.
+             * \nMales or females ≥ 12 years of age (females of child-bearing potential must have been surgically sterilized or use a reliable method of contraception).
+             * \n\nSymptomatic patients with the following types of PAH belonging to World Health Organization (WHO) Pulmonary Hypertension Classification Group I:
+             * \n\nIdiopathic (IPAH)
+             * \nFamilial (FPAH)
+             * \n\nAssociated with PAH (APAH):
+             * \n\nCollagen vascular disease
+             * \nDrugs and toxins
+             * \n\nPatients naïve to treatment with advanced PAH therapies (i.e., endothelin receptor antagonists (ERAs), phosphodiesterase-5 (PDE-5) inhibitors or prostacyclins) with a right heart catheterization (RHC) showing all of the following:
+             * \n\nMean pulmonary arterial pressure (mPAP) ≥ 25 mm Hg
+             * \nPulmonary capillary wedge pressure (PCWP) ≤ 15 mm Hg or left ventricular end diastolic pressure (LVEDP) ≤ 15 mm Hg when PCWP is not accurately obtained
+             * \nPulmonary vascular resistance ≥ 3 Wood units
+             * \n6-MWT distance ≥ 150 meters and < 360 meters.
+             * \n\nExclusion Criteria:
+             * \n\nPatients with Pulmonary Hypertension (PH) belonging to WHO Classification Group II-V.
+             * \nPatients with PAH (WHO PH Classification Group I) other than that listed in the Inclusion Criteria.
+             * \nPregnant and/or nursing.
+             * \nWomen of childbearing potential not using a reliable method of contraception.
+             * \nPatients with known human immunodeficiency virus (HIV) infection.
+             * \nPatients with significant vasoreactivity during right heart catheterization (i.e., a fall in mPAP to < 40 mm Hg with a decrease of ≥ 10 mm Hg and with a normal cardiac index ≥ 2.5 l/min.m^2).
+             * \nPatients with restrictive lung disease (i.e., total lung capacity (TLC) < 60% of normal predicted value).
+             * \nPatients with obstructive lung disease (i.e., forced expiratory volume/ forced vital capacity (FEV1/FVC) < 0.5).
+             * \nPatients with impaired left ventricular function (LVEF <50%) or diastolic dysfunction.
+             * \nPatients with portal hypertension, cirrhosis, moderate to severe liver impairment (Child-Pugh Class B or C), or liver enzymes (Aspartate aminotransferase (AST) and/or alanine aminotransferase (ALT)) > 3.0 times the upper limit of normal range.
+             * \nTreatment with glibenclamide (glyburide) and calcineurin inhibitors (cyclosporine A, tacrolimus) sirolimus, everolimus up to 1 week prior to Baseline (Day 1).
+             * \nPatients currently receiving or predicted to require treatment, during the course of the study, with nitrates, protease inhibitors, or alpha-blockers.
+             * \nPatients with a hemoglobin concentration < 75 % of the lower limit of the normal range or < 8.5 g/dL.
+             * \nPatients currently receiving or predicted to require treatment with a prostanoid during the course of the study.
+             * \nPatients with systolic blood pressure < 85 mm Hg.
+             * \nPatients with body weight < 40 kg.
+             * \nPatients who have received any investigational product within 90 days prior to Baseline.
+             * \nPatients who previously received any advanced therapy for PAH (e.g., ERAs, PDE-5 inhibitors or prostacyclins).
+             * \nPatients with hypersensitivity to sildenafil or any excipients of its formulation.\nPatients with any contraindication to sildenafil treatment (i.e., nitrates).
+             * \nPatients with any recent medical condition limiting the ability to comply with the study requirements (i.e., stroke, myocardial infarction).
+             * \nPatients with unstable PAH whose disease state would prohibit the completion of study procedures, in the opinion of the investigator.
+             * \nPatients unable to complete a MRI scan (e.g., claustrophobia).
+             * \nPatients with permanent cardiac pacemakers, automatic internal cardioverter defibrillators (AICD's), neurostimulators, hearing aides, and other implanted metallic devices that are contraindicated during a MRI study.
+             * \nPatients with conditions that would interfere with proper cardiac gating during MRI, such as atrial fibrillation or multiple premature ventricular contractions (PVCs)/premature atrial contractions (PACs).
+             * \nPatients with conditions that prevent compliance with the protocol or the ability to adhere to therapy.",
+             * "LocationList": {
+             *
+            */
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "University of Alabama Hospital at Birmingham", null, null, "Birmingham", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "University of South Alabama", null, null, "Mobile", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "UCLA - David Geffen School of Medicine", null, null, "Los Angeles", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Lung Health and Sleep Enhancement Center, LLC", null, null, "Newark", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Morton Plant Hospital (Bay Area Chest Physicians, P.A.)", null, null, "Clearwater", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Mayo Clinic Jacksonville", null, null, "Jacksonville", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "University of Miami School of Medicine", null, null, "Miami", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Cleveland Clinic Florida", null, null, "Weston", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Emory University Hospital", null, null, "Atlanta", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Atlanta Institute for Medical Research, Inc.", null, null, "Decatur", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Kentukiana Pulmonary Associates", null, null, "Louisville", 6252001, "United States", null));
+     
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -1673,6 +2131,25 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
+            /*
+             *"EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nPresence of a failing maxillary incisor with neighbouring teeth and harmonic gingival contour;
+             * \nOperated area with appropriate palatal/apical bone to install the implant;
+             * \nA buccal wall defect confirmed by cone beam computed tomography;
+             * \nClinical attachment level > 3 mm;\nGood oral hygiene with visible plaque index < 20%;
+             * \nNo bone loss in the neighbouring teeth;
+             * \nImplant primary stability > 32N\n\nExclusion Criteria:
+             * \n\nHistory of periodontal surgeries in the failing tooth;
+             * \nOcclusal instability;
+             * \nSystemic alterations that could compromise the surgical procedure, such ass smokers, bruxists; drug users; patients with diabetes or pregnants.
+             * \nActive infection involving the gingival margin
+             * \nPatients undergoing radiotherapy in the head and neck area. Patients presented history of bone associated diseases or medication affecting bone metabolism;",
+                     * 
+             */
+            fs.countries!.Add(new StudyCountry(sd_sid, 3469034, "Brazil", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Araraquara Dental School at the São Paulo State University", null, null, "Araraquara", 3469034, "Brazil", null));
 	        
             // Data Objects
 	        
@@ -1792,7 +2269,32 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
-	        
+            /*
+             *"EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nMale or female, ages 18 and older
+             * \nClinical history consistent with asthma
+             * \nFor subjects regularly using inhaled corticosteroids, FEV1 50% of predicted, methacholine PC20 FEV1 16 mg/ml or 12% and 200 ml, improvement in FEV1 after 2 puffs of inhaled albuterol
+             * \nFor subjects not regularly using inhaled corticosteroids, FEV1 40% of predicted, methacholine PC20 FEV1 8 mg/ml or 12% and 200 ml, improvement in FEV1 after 2 puffs of inhaled albuterol
+             * \nGenotype eligibility (determined during screening)
+             * \n\nExclusion Criteria:
+             * \n\nSmoker (total smoking history must be less than 10 pack years)
+             * \nSignificant unstable medical condition other than asthma
+             * \nHistory of life-threatening asthma requiring treatment with intubation and mechanical ventilation in the past 10 years
+             * \nPregnant or lactating",
+             *
+             * 
+             */
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "University of California, San Diego", null, null, "San Diego", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "University of California, San Francisco", null, null, "San Francisco", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "National Jewish Medical & Research Center", null, null, "Denver", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Brigham & Women's Hospital", null, null, "Boston", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Washington University", null, null, "Saint Louis", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Wake Forest University Health Sciences", null, null, "Winston-Salem", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "University of Wisconsin Madison", null, null, "Madison", 6252001, "United States", null));
+          
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -1832,6 +2334,7 @@ public class TestData_100120 : TestData_Base
             return fs;
         }
 
+        
         if (sd_sid == "NCT03050593")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
@@ -1887,9 +2390,23 @@ public class TestData_100120 : TestData_Base
 			sb.Append("J Cardiovasc Magn Reson. 2018 Jan 11;20(1):4. doi: 10.1186/s12968-017-0424-9.");
 			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29321034", null, null, null));
 
-            // countries
+            // No location list
             
             // iec
+            /*
+             * "EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nClinical features of heart failure or prior radiographic evidence in the absence of symptoms And Either ejection fraction > 50% (for HFpEF arm) or ejection fraction < 40% (for HFrEF arm)
+             * \n\nExclusion Criteria:
+             * \n\nMyocardial infarction within the preceding 6 months\nSuspected or confirmed cardiomyopathy (e.g. hypertrophic, infiltrative)
+             * \nSuspected or confirmed constrictive pericarditis
+             * \nSignificant native valve disease (≥ moderate severity)
+             * \nKnown Significant lung disease (documented or FEV1< 30% or FVC < 50%)
+             * \nNon-cardiovascular co-morbidity likely to cause death within 6 months (e.g. malignancy)\nSignificant renal failure (estimated GFR < 30 ml/min/m2)
+             * \nPatient inability to provide informed consent (e.g. dementia)",
+             *
+             * 
+             */
 	        
             // Data Objects
 	        
@@ -1998,6 +2515,16 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
+            /*
+             * "EligibilityCriteria":
+             * "DISEASE CHARACTERISTICS: Biopsy-proven Ewing's sarcoma, atypical Ewing's sarcoma, and peripheral neuroectodermal tumors No soft tissue Ewing's sarcoma or other small cell sarcomas of soft tissue Such patients should be treated on the appropriate national Soft Tissue Sarcoma Protocol Treatment must begin within 3 weeks after diagnostic biopsy Registration must occur within 6 weeks after initiation of treatment
+             * \n\nPATIENT CHARACTERISTICS: Age: Not over 35
+             * \n\nPRIOR CONCURRENT THERAPY: No prior therapy, including primary definitive local therapy",
+             */
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
+	        
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Royal Victoria Infirmary", null, null, "Newcastle-upon-Tyne", 2635167, "United Kingdom", null));
 	        
             // Data Objects
 	        
@@ -2091,7 +2618,35 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
-	        
+            /*
+             *"EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nPatients may be eligible for this study if they:
+             * \n\nAre between the ages of 0 and 20 years (prior to their 21st birthday)
+             * \nAre receiving their first living related (e.g.,kidney from a relative or unrelated donor) or cadaver donor transplant
+             * \nAre willing to practice an acceptable method of birth control during the study, if women able to have children\n\nExclusion Criteria:
+             * \n\nPatients will not be eligible for this study if they:
+             * \n\nHave received multiple organs
+             * \nHave received 2 or more transplants\nHave an active infection (including tuberculosis), or cancer
+             * \nHave used an experimental agent within 4 weeks of transplantation",
+             *
+             * 
+             */
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            fs.countries!.Add(new StudyCountry(sd_sid, 3996063, "Mexico", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "University of Alabama", null, null, "Birmingham", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "UCSD Medical Center", null, null, "San Diego", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Denver Children's Hospital", null, null, "Aurora", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "University of Florida Health Science Center", null, null, "Jacksonville", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Emory Children's Center", null, null, "Atlanta", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Tulane University Medical Center", null, null, "New Orleans", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "University of Maryland Medical Center", null, null, "Baltimore", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Children's Hospital of Boston", null, null, "Boston", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "University of New Mexico Health Science Center", null, null, "Albuquerque", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "The Children's Hospital of Buffalo", null, null, "Buffalo", 6252001, "United States", null));
+   
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -2217,7 +2772,26 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
-	        
+            /*
+             * "EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nGood general and oral health without any known allergy to commercial dental products or cosmetics
+             * \nEvidence of a personally signed and dated informed consent document indicating the subject (or legally acceptable representative) has been informed of all pertinent aspects of the trial
+             * \nWillingness to use the assigned products according to instructions, availability for appointments, and likelihood of completing the clinical trial
+             * \nDental condition appropriate for inclusion in the trial according to protocol-specified parameters and the professional opinion of the investigator
+             * \nAdequate oral hygiene (i.e. brush teeth daily and exhibit no signs of oral neglect
+             * \n\nExclusion Criteria:
+             * \n\nMedical condition or history, or use of drugs or treatments that could possibly compromise the safety of the research subject or the interpretation of results, per protocol or in the opinion of the investigator
+             * \nUse of home-care bleaching, whitening products or professional bleaching treatment within a protocol-specified time period
+             * \nUse of desensitizing agents within a protocol-specified time period
+             * \nParticipation in a dental clinical trial involving oral care products within a protocol-specified time period",
+
+             */
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "BioSci Research America, Inc.", null, null, "Las Vegas", 6252001, "United States", null));
+            
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -2303,6 +2877,50 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
+            /*
+             * "EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nRecipients
+             * \n\nMale and female patients ≥ 18 years of age
+             * \nSexually active male and female patients of child-bearing potential must agree to use an effective method of birth control during the treatment and follow-up period
+             * \nFemale patients of child-bearing potential must have a negative pregnancy test in the 72 hours before the procedure
+             * \nRequired to sign an informed consent form
+             * \nDeemed likely to survive for ≥ 3 months after enrolment
+             * \nDiagnosis of ≥ 3 recurrent CDAD (RCDAD) bouts in outpatients or ≥ 2 bouts of CDAD in an inpatient without other explanation for diarrhea and with ≥ 2 positive fecal tests for C. difficile toxin
+             * \nReferred by subjects attending physician who will provide non-transplant care for the subject and follow up at 1, 7, 14, 30 days after FMT
+             * \nReceived at least one course of adequate antibiotic therapy for CDAD (≥ 10 days of vancomycin at a dose of ≥125 mg four times per day, ≥ 10 days of metronidazole at a dose of 500mg three times per day or fidaxomixin 200mg twice a day for 10 days
+             * \nAnti-Clostridium difficile infection (CDI) antibiotic treatment stopped 2-4 days before the transplantation
+             * \n\nDonors
+             * \n\nAble to provide and sign informed consent
+             * \nAble to complete and sign the donor questionnaire
+             * \nAble to adhere to fecal transplantation stool collection requirements
+             * \n\nExclusion Criteria:
+             * \n\nRecipients
+             * \n\nPatients with neutropenia with absolute neutrophil count <0.5 x 109/L
+             * \nEvidence of toxic megacolon or gastrointestinal perforation on abdominal x-ray
+             * \nPeripheral white blood cell count > 15.0 x 109/L AND temperature > 38.0 °C
+             * \nActive gastroenteritis due to Salmonella, Shigella, E. coli 0157:H7, Yersinia or Campylobacter, and Norovirus
+             * \nPresence of colostomy
+             * \nUnable to tolerate human biotherapy (HBT) for any reason
+             * \nRequiring systemic antibiotic therapy for more than 7 days
+             * \nActively taking Saccharomyces boulardii or other probiotic
+             * \nSevere underlying disease such that the patient is not expected to survive for one or more years or unstable medical condition requiring daily change in treatments
+             * \nProlonged compromised immunity due to cytotoxic chemotherapy or HIV infection
+             * \n\nDonors
+             * \n\nTest positive for any of variables
+             * \nHistory of any type of active cancer or autoimmune disease
+             * \nHistory of risk factors for acquisition of HIV, syphilis, Hepatitis B, Hepatitis C, prion or any neurological disease as determined by the donor questionnaire
+             * \nHistory of gastrointestinal disorder, e.g., inflammatory bowel disease, irritable bowel syndrome, chronic constipation or diarrhea
+             * \nAntibiotic use or any systemic immunosuppressive agents in the 3 months prior to stool donation
+             * \nReceipt of any type of live vaccine within 3 months prior to stool donation
+             * \nCurrent or previous medical or psychosocial condition
+             * \nBody mass index over 30",
+             
+             */
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "University of Texas Health Science Center at Housotn", null, null, "Houston", 6252001, "United States", null));
 	        
             // Data Objects
 	        
@@ -2587,7 +3205,34 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
-	        
+            /*
+             *"EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nMust have BMI >=30 kg/m2 and <50 kg/m2 at screening or BMI >=27 kg/m2 and <50 kg/m2 at screening in the presence of a comorbidity of hypertension and/or dyslipidemia
+             * \nMust have stable weight, ie, change of < =5% in the 3 months before screening
+             * \nMust agree to utilize a highly effective method of birth control
+             * \n\nExclusion Criteria:
+             * \n\nAn established diagnosis of diabetes mellitus\nHas a history of obesity with a known secondary cause (eg, Cushing's disease/syndrome)
+             * \nHas a history of hereditary glucose-galactose malabsorption or primary renal glycosuria
+             * \nMyocardial infarction, unstable angina, revascularization procedure, or cerebrovascular accident within 12 weeks before screening
+             * \nHas an Glycated hemoglobin (HBA1c) greater than or equal (>=) to 65 percent
+             * \nAn average of 3 seated blood pressure (BP) readings of systolic BP >= 160 mm Hg and/or Diastolic BP >= 100 millimeters of mercury at screening"
+            
+             */
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, null, null, null, "Phoenix", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Walnut Creek", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Jacksonville", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Meridian", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Evansville", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Lexington", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Louisville", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "New Orleans", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Milford", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Warwick", 6252001, "United States", null));
+          
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -2682,7 +3327,59 @@ public class TestData_100120 : TestData_Base
             // countries
             
             // iec
-	        
+            /*
+             *"EligibilityCriteria":
+             * "Inclusion Criteria:
+             * \n\nRelapsed osteosarcoma (first, second, third or any relapse, patient has recovered from chemotherapy and any other investigational drug/agent treatment, radiotherapy or surgical procedure).
+             * \nHistological confirmed diagnosis of osteosarcoma at original presentation.
+             * \nTumour at biopsy accessible or resectable site.
+             * \nProgressive disease documented by imaging within 3 months of entry into the trial.
+             * \nAt least one measurable lesion on CT scan (RECIST) performed in past 21 days prior to trial entry.
+             * \nMale or female, age ≥ 16 years to 65 (or ≥18 based on institutional practice for Teenage and Young Adult Cancer patients).
+             * \nLife expectancy of at least 3 months.
+             * \nWHO performance score of 0 - 2.
+             * \nThe patient is willing and able to comply with the protocol and scheduled follow-up visits and examinations.
+             * \nWritten (signed and dated) informed consent.\nCardiac shortening fraction ≥ 28% or ejection fraction ≥ 45%
+             * \nRenal function is adequate for ifosfamide treatment (GFR as per table below, other renal function screening tests as per local practice)
+             * \nHaematological and biochemical indices within the ranges shown below:\n\nLab Test Value required
+             * \n\nHaemoglobin (Hb) ≥ 9 g/dL (Previous transfusion is allowed)
+             * \nAbsolute neutrophil count (ANC) >=1.0 x 10*9/L without growth factor support\nPlatelet count > 80.x 10*9/L (Previous transfusion is allowed)
+             * \nTotal bilirubin <1.5 times the upper limit of normal (ULN) for age (except for Gilbert's syndrome patients)
+             * \nSerum alanine aminotransferase (ALT) and/or Aspartate aminotransferase (AST) <2.5 × ULN for age, <2.5 × ULN for age
+             * \nSerum creatinine Normal range for age
+             * \nGlomerular filtration rate (GFR) (calculated as 51Cr-EDTA/99mTc-DTPA clearance) >40ml/min if deemed resectable (for Arm A), >60ml/min if not deemed resectable (for Arm B or C)
+             * \n\nExclusion Criteria:
+             * \n\nPregnant or breast-feeding woman. Men or women of childbearing potential unless effective methods of contraception are used during study treatment and for at least 7 days after the last mifamurtide dose (see section 5.1 Informed consent - Contraceptive/ Pregnancy counselling).
+             * \nPrevious treatment with mifamurtide or a mifamurtide-like drug* in a clinical trial setting for the treatment of metastatic and/or recurrent osteosarcoma in the six months prior to registration.\nContraindications to lung biopsies.\nHypersensitivity to ifosfamide or any component of the formulation.
+             * \nPreviously diagnosed brain metastases.
+             * \nSignificant active cardiac disease including: uncontrolled high blood pressure (no greater than 2 standard deviations above the mean for age for systolic blood pressure (SBP) and diastolic blood pressure (DBP), unstable angina, congestive heart failure, myocardial infarction within the previous 6 months, or serious cardiac arrhythmias and with a history of pericarditis and myocarditis
+             * \nTreatment with any other investigational agent, or participation in another interventional clinical trial within 21 days prior to enrolment.
+             * \nMajor surgery within 21 days prior to first study biopsy
+             * \nCurrently taking high-dose non-steroidal anti-inflammatory drugs (NSAIDs) or corticosteroid treatment\nConcurrent use of ciclosporin or other calcineurin inhibitors.
+             * \nAny psychological, social or medical condition, physical examination finding or a laboratory abnormality that the Investigator considers would make the patient a poor trial candidate or could interfere with protocol compliance or the interpretation of trial results.
+             * \nAny other active malignancy, with the exception of adequately treated cone-biopsied in situ carcinoma of the cervix uteri and non-melanoma skin lesions.
+             * \n\nPatients who are known to be serologically positive for Hepatitis B, Hepatitis C or HIV.
+             * \n\nmifamurtide-like drugs include GCSF, GMCSF, interferon and other macrophage activating molecules.",
+             *
+             *
+             * 
+             */ 
+
+             fs.countries!.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3175395, "Italy", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2750405, "Netherlands", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3144096, "Norway", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
+             
+             fs.sites!.Add(new StudyLocation(sd_sid, null, "Pediatric Hematology and Oncology, University Hospital Münster", null, null, "Münster", 2921044, "Germany", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Istituti Ortopedici Rizzoli", null, null, "Bologna",  3175395, "Italy", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Department of Clinical Oncology, Leiden University Medical Center", null, null, "Leiden", 2750405, "Netherlands", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Radium Hospital, Oslo University", null, null, "Oslo", 3144096, "Norway", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Leeds Teaching Hospitals NHS Trust", null, null, "Leeds", 2635167, "United Kingdom", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "University College London Hospitals NHS Foundation Trust", null, null, "London", 2635167, "United Kingdom", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Christie Hospital NHS Foundation Trust", null, null, "Manchester", 2635167, "United Kingdom", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Oxford University Hospitals NHS Foundations Trust", null, null, "Oxford", 2635167, "United Kingdom", null));
+         
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -2722,6 +3419,7 @@ public class TestData_100120 : TestData_Base
             return fs;
         }
 
+        
         if (sd_sid == "NCT02609386")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
@@ -2790,6 +3488,71 @@ public class TestData_100120 : TestData_Base
 	        // countries
 
 	        // iec
+	        /*
+	         *"EligibilityCriteria":
+	         * "Inclusion Criteria:
+	         * \n\nPathologically confirmed (histology or cytology) clinical Stage II, III, or IVA squamous cell cancer of the oral cavity (excluding lip). Subjects must be staged using AJCC Cancer Staging Manual Edition 7.0 (appendices 1 and 2).
+	         * \nDisease surgically resectable with curative intent
+	         * \nHematological function: hemoglobin >9 g/dL; lymphocyte count >0.50 x 109/L; neutrophil count >1.5 x 109/L; platelet count >100 x 109/L
+	         * \nHepatic function: serum albumin >3.0 g/dL; aspartate aminotransferase (AST/SGOT) and alanine aminotransferase (ALT/SGPT) <3x the upper limits of normal (ULN); alkaline phosphatase <2x the ULN\nProthrombin time (PT) and partial thromboplastin time (PTT) < 1.4x the ULN
+	         * \nCalculated creatinine clearance > 50 mL/minute (Appendix 4)
+	         * \nAt least 18 years of age\nWilling and able to give informed consent and adhere to protocol therapy
+	         * \nKarnofsky performance status (KPS) >=70%
+	         * \nFemales of childbearing potential (not surgically sterile or less than 12 months post-menopausal) must be able and willing to use a highly effective form of pregnancy prevention from the time of screening, during the study and 30 days after last dose of study regimen. Males with a partner of childbearing potential must use condoms with spermicide from the date of screening to 30 days after their last dose of study regimen
+	         * \nNegative urine/serum pregnancy test, if applicable\n\nExclusion Criteria:
+	         * \n\nPrior surgery, radiation therapy, or chemotherapy other than biopsy or emergency procedure required for supportive care of this oral cavity cancer.
+	         * \n\nAny medical contraindications or previous therapy that would preclude treatment with either IRX 2 Regimen 1 or 2 or the surgery, reconstruction or adjuvant therapy required to treat the oral tumor appropriately
+	         * \n\nLive vaccines should ideally not be administered to any patients undergoing treatment with chemotherapy or immunotherapy, but if need be, they should be administered >4 months prior to the initiation of treatment or >4 months after the completion of all treatment
+	         * \nInactivated vaccines should precede the initiation of any study regimen and/or standard adjuvant therapy by at least 2 weeks, but preferably 4 weeks or longer
+	         * \nClinical status of either subject or tumor such that administration of 21 day neoadjuvant IRX-2 Regimen 1 or 2 before surgery would be medically inappropriate
+	         * \nTumor of the oropharynx
+	         * \n\nTumor involvement of the following sites or any of these signs or symptoms likely to be associated with T4b cancer:
+	         * \n\ninvolvement of pterygopalatine fossa, maxillary sinus, or facial skin;.
+	         * \ngross extension of tumor to the skull base;
+	         * \npterygoid plate erosion;
+	         * \nsphenoid bone or foramen ovale involvement;
+	         * \ndirect extension to involve prevertebral fascia;
+	         * \nextension to superior nasopharynx or Eustachian tube;
+	         * \ndirect extension into the neck with involvement of the deep neck musculature (neck node fixation);
+	         * \nsuspected invasion (encasement) of the common or internal carotid arteries. Encasement will be assessed radiographically and will be defined as tumor surrounding the carotid artery 270º or greater;
+	         * \ndirect extension of neck disease to involve the external skin;
+	         * \ndirect extension to mediastinal structures;
+	         * \nregional metastases to the supraclavicular neck (low level IVB or VB)
+	         * \nAny investigational agent within the previous 30 days.
+	         * \nDaily administration of systemic immunosuppressive therapy or corticosteroids (except in physiological doses for hormone deficiency) during the previous 30 days.
+	         * \nChronic anticoagulation, not including aspirin, but including heparins, warfarin, oral anticoagulation or other platelet function inhibitors, that can not, in the documented opinion of the investigator, safely be interrupted from at least 2 days prior to the initiation of the study regimen until after surgical resection of the tumor.
+	         * \nSymptomatic cardiopulmonary disease (including congestive heart failure and hypertension), coronary artery disease, serious arrhythmia or chronic lung disease. Patients with these conditions who are stable with relatively minor symptoms and who are appropriate candidates for surgical treatment of their tumor need not be excluded
+	         * \nMyocardial infarction within the last 3 months
+	         * \nDistant metastases (M1 disease).
+	         * \nKnown infection with hepatitis B, hepatitis C, or HIV.
+	         * \nSigns or symptoms of systemic bacterial infection (use of antibiotics to treat superficial infection or contamination of tumor shall not, by itself, be considered evidence of infection).
+	         * \nClinically significant gastritis or peptic ulcer disease that would contraindicate the use of indomethacin.
+	         * \nStroke or other symptoms of cerebral vascular insufficiency within the last 3 months.
+	         * \nAllergy to ciprofloxacin (or other quinolones), acetylsalicylic acid, or indomethacin.
+	         * \nPrevious diagnosis of invasive cancer from which the individual is NOT disease-free AND that has required treatment within the past 5 years, except for superficial skin, cervical cancer in-situ, well-differentiated thyroid or early stage prostate or bladder cancer (i.e., treatment with curative intent and long term disease-free expectations).
+	         * \nPrior axillary dissection.
+	         * \nBreastfeeding women.",
+	         *
+	         *
+	         * 
+	         */
+	        
+	         fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3469034, "Brazil", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 6251999, "Canada", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
+
+             fs.sites!.Add(new StudyLocation(sd_sid, null, "Banner University Medical Center", null, null, "Tucson", 6252001, "United States", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "University of Arkansas For Medical Sciences", null, null, "Little Rock", 6252001, "United States", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "USC Norris Comprehensive Cancer Center", null, null, "Los Angeles", 6252001, "United States", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Stanford University Medical Center", null, null, "Stanford", 6252001, "United States", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Emory University - Winship Cancer Center", null, null, "Atlanta", 6252001, "United States", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "University of Kentucky", null, null, "Lexington", 6252001, "United States", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "University of Michigan", null, null, "Ann Arbor", 6252001, "United States", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Nebraska Methodist Hospital", null, null, "Omaha", 6252001, "United States", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Monter Cancer Center - North Shore LIJ", null, null, "New Hyde Park", 6252001, "United States", null));
+             fs.sites.Add(new StudyLocation(sd_sid, null, "Lenox Hill Hospital", null, null, "New York", 6252001, "United States", null));
+	        
 
 	        // Data Objects
 
