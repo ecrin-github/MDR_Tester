@@ -150,17 +150,17 @@ public class TestData_100116 : TestData_Base
 	        fs.countries!.Add(new StudyCountry(sd_sid, 2077456, "Australia", null));
 	        fs.countries.Add(new StudyCountry(sd_sid, 2186224, "New Zealand", null));
 
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "assumed cr", "@", 1, "n.01", "Documented diagnosis of UC prior to screening endoscopy"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "assumed cr", "@", 1, "n.02", "Active mild-to-moderate UC as determined by a 3-Component Modified Mayo Score"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "assumed cr", "@", 1, "n.03", "Minimum disease extent of 15 cm from the anal verge, confirmed at the screening endoscopy"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "assumed cr", "@", 1, "n.04", "Naïve to UC treatment or with an inadequate response to, loss of response to, or intolerance of, at least one of the following conventional therapies: 5-ASA compounds, corticosteroids or immunomodulators (e.g., 6-MP, AZA, methotrexate)"));
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr assumed", "@", 1, "n.01", "Documented diagnosis of UC prior to screening endoscopy"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr assumed", "@", 1, "n.02", "Active mild-to-moderate UC as determined by a 3-Component Modified Mayo Score"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr assumed", "@", 1, "n.03", "Minimum disease extent of 15 cm from the anal verge, confirmed at the screening endoscopy"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr assumed", "@", 1, "n.04", "Naïve to UC treatment or with an inadequate response to, loss of response to, or intolerance of, at least one of the following conventional therapies: 5-ASA compounds, corticosteroids or immunomodulators (e.g., 6-MP, AZA, methotrexate)"));
 	        
-	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "assumed cr", "@", 1, "e.01", "Known history of Crohn’s disease"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "assumed cr", "@", 1, "e.02", "On steroid medication who are unable to have steroids tapered, and be completely off steroids at least 2 weeks prior to screening"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "assumed cr", "@", 1, "e.03", "Unable to stop steroid enemas or suppositories, or 5-ASA enemas or suppositories, at least 2 weeks prior to screening"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "assumed cr", "@", 1, "e.04", "Previously received any investigational or approved biologic therapy"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "assumed cr", "@", 1, "e.05", "Previously received any investigational or approved non-biologic therapy, except for those specifically listed in the Permitted Concomitant Medications (e.g., stable dose of 6-MP, AZA, methotrexate)"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "assumed cr", "@", 1, "e.06", "Major gastrointestinal surgery (not including appendectomy or cholecystectomy) within 2 months prior to screening"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr assumed", "@", 1, "e.01", "Known history of Crohn’s disease"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr assumed", "@", 1, "e.02", "On steroid medication who are unable to have steroids tapered, and be completely off steroids at least 2 weeks prior to screening"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr assumed", "@", 1, "e.03", "Unable to stop steroid enemas or suppositories, or 5-ASA enemas or suppositories, at least 2 weeks prior to screening"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr assumed", "@", 1, "e.04", "Previously received any investigational or approved biologic therapy"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr assumed", "@", 1, "e.05", "Previously received any investigational or approved non-biologic therapy, except for those specifically listed in the Permitted Concomitant Medications (e.g., stable dose of 6-MP, AZA, methotrexate)"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr assumed", "@", 1, "e.06", "Major gastrointestinal surgery (not including appendectomy or cholecystectomy) within 2 months prior to screening"));	 
 		        
 	        // Data Objects
 	        

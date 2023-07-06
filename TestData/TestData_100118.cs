@@ -123,6 +123,8 @@ public class TestData_100118 : TestData_Base
 	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "2.", 1, "e.02", "patients with cognition disorders. "));
 	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "3.", 1, "e.03", "patients who refuse to participate"));
 	        
+	        // Null condition list
+	        
             // Data Objects
 	        
             // 1) Trial registry entry

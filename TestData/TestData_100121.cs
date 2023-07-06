@@ -43,6 +43,12 @@ public class TestData_100121 : TestData_Base
 	        // countries
             
 	        // iec
+	        /*
+	         * "inclusion_criteria": "An observational study in which the patients for the study are selected from antenatal clinic, antenatal ward and â??preeclampsia <br/ >\nand eclampsia roomâ?? in Department of Obstetrics and Gynecology and general ophthalmic OPD in case of ambulatory patients.Cases of Pregnancy Induced Hypertension.",
+  "exclusion_criteria": "Cases complicated by malignancy,renal,liver or other secondary manifestations.",
+ 
+	         */
+	        fs.countries!.Add(new StudyCountry(sd_sid, 1269750, "India", null));
 
 	        // Data Objects
 	        
@@ -140,6 +146,55 @@ public class TestData_100121 : TestData_Base
 	        // countries
             
 	        // iec
+	        /*
+	         * "inclusion_criteria":
+	         * "1-Histologically confirmed locally advanced or metastatic NSCLC
+	         * \n\n2- Measurable disease by RECIST 1.1
+	         * \n\n3-Known PD-L1 status <br/ >\n4- ECOG performance status (PS) 0 or 1",
+  "exclusion_criteria": 
+  "1-Previous immunotherapy or treatment with IL-1Î² inhibitor. 
+  \n2-Subjects with epidermal growth factor receptor (EGFR) sensitizing mutations and/or anaplastic lymphoma kinase (ALK) rearrangement 
+  \n3-History of severe hypersensitivity reaction to monoclonal antibodies, platinum containing drugs, nab-paclitaxel, paclitaxel, pemetrexed or any known excipients of these drugs.",
+    
+  ],
+	         */
+	        
+             fs.countries!.Add(new StudyCountry(sd_sid, 2077456, "Australia", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2782113, "Austria", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1814991, "China", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3077311, "Czechia", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2623032, "Denmark", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 660013, "Finland", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3017382, "France", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 390903, "Greece", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1819730, "Hong Kong", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 719819, "Hungary", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2629691, "Iceland", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1269750, "India", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3175395, "Italy", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1861060, "Japan", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1873107, "North Korea", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1835841, "South Korea", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 272103, "Lebanon", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1733045, "Malaysia", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2750405, "Netherlands", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3144096, "Norway", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1694008, "Philippines", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 798544, "Poland", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2264397, "Portugal", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 798549, "Romania", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2017370, "Russia", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1880251, "Singapore", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 3057568, "Slovakia", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2510769, "Spain", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2661886, "Sweden", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2658434, "Switzerland", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1668284, "Taiwan", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 1605651, "Thailand", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 298795, "Turkey", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
+             fs.countries.Add(new StudyCountry(sd_sid, 953987, "South Africa", null));
 
 	        // Data Objects
 	        

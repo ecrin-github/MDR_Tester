@@ -60,15 +60,15 @@ public class TestData_100117 : TestData_Base
 		        16, "en", 11, false, "From the Brazilian Clinical Trials Registry"));
     
 	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", "Men volunteers with complete spinal cord injury (ASIA A) and eligible for quadriceps responsiveness."));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 2, 2, "assumed cr", "@", 1, "e.01", "Cauda equina injury;"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 3, 2, "assumed cr", "@", 1, "e.02", "spinal shock;"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "assumed cr", "@", 1, "e.03", "venous thrombosis;"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "assumed cr", "@", 1, "e.04", "autonomic dysreflexia;"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "assumed cr", "@", 1, "e.05", "vascular complications;"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "assumed cr", "@", 1, "e.06", "pressure ulcers;"));	 
-	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "assumed cr", "@", 1, "e.07", "osteoporosis;"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "assumed cr", "@", 1, "e.08", "recent fracture;"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "assumed cr", "@", 1, "e.09", "implants and femur metal pins and two consecutive absences to the training sessions as well."));	
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 2, "cr assumed", "@", 1, "e.01", "Cauda equina injury;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 2, "cr assumed", "@", 1, "e.02", "spinal shock;"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr assumed", "@", 1, "e.03", "venous thrombosis;"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr assumed", "@", 1, "e.04", "autonomic dysreflexia;"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr assumed", "@", 1, "e.05", "vascular complications;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr assumed", "@", 1, "e.06", "pressure ulcers;"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr assumed", "@", 1, "e.07", "osteoporosis;"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr assumed", "@", 1, "e.08", "recent fracture;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr assumed", "@", 1, "e.09", "implants and femur metal pins and two consecutive absences to the training sessions as well."));	
 	        
 	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Gabriel", "Skiba", "Gabriel Skiba", null,
 		        "Universidade Federal do Paraná",  105883, "Federal University of Paraná", "https://ror.org/05syd6y78"));
@@ -149,19 +149,19 @@ public class TestData_100117 : TestData_Base
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Mariane Marques de Campos", null));
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 58, null, "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior", null));
 	        
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "assumed cr", "@", 1, "n.01", "Be 60 years old or over;"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "assumed cr", "@", 1, "n.02", "Be a carrier of nonspecific chronic low back pain;"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "assumed cr", "@", 1, "n.03", "Score at least the cut grade according to their education in the instrument: Mini Mental State Examination (MMSE);"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "assumed cr", "@", 1, "n.04", "Score up to 5 points on the Geriatric Depression Scale instrument (GDS-15)"));
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr assumed", "@", 1, "n.01", "Be 60 years old or over;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr assumed", "@", 1, "n.02", "Be a carrier of nonspecific chronic low back pain;"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr assumed", "@", 1, "n.03", "Score at least the cut grade according to their education in the instrument: Mini Mental State Examination (MMSE);"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr assumed", "@", 1, "n.04", "Score up to 5 points on the Geriatric Depression Scale instrument (GDS-15)"));
 	        
-	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "assumed cr", "@", 1, "e.01", "Older people who underwent physiotherapeutic treatment for pain management in the last six months;"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "assumed cr", "@", 1, "e.02", "Older people who underwent surgical treatment for pain management;"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "assumed cr", "@", 1, "e.03", "Older people with diagnosis of Fibromyalgia;"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "assumed cr", "@", 1, "e.04", "Involvement in regular sports activities that have the same benefits as Pilates;"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "assumed cr", "@", 1, "e.05", "Active inflammatory diseases;"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "assumed cr", "@", 1, "e.06", "Pain related to previous fractures of the spine or lower limbs;"));	 
-	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "assumed cr", "@", 1, "e.07", "Neoplasms;"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "assumed cr", "@", 1, "e.08", "Death."));	
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr assumed", "@", 1, "e.01", "Older people who underwent physiotherapeutic treatment for pain management in the last six months;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr assumed", "@", 1, "e.02", "Older people who underwent surgical treatment for pain management;"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr assumed", "@", 1, "e.03", "Older people with diagnosis of Fibromyalgia;"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr assumed", "@", 1, "e.04", "Involvement in regular sports activities that have the same benefits as Pilates;"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr assumed", "@", 1, "e.05", "Active inflammatory diseases;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr assumed", "@", 1, "e.06", "Pain related to previous fractures of the spine or lower limbs;"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr assumed", "@", 1, "e.07", "Neoplasms;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr assumed", "@", 1, "e.08", "Death."));	
            
             fs.conditions!.Add(new StudyCondition(sd_sid, "older people, chronic pain, chronic low back pain, aging", null, null, null, null));
             fs.conditions.Add(new StudyCondition(sd_sid, "C23.888.592.612.274", null, null, null, null));

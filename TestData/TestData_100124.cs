@@ -59,6 +59,12 @@ public class TestData_100124 : TestData_Base
 	        // countries
             
 	        // iec
+	        /***
+	         *"inclusion_criteria": "An observational study in which the patients for the study are selected from antenatal clinic, antenatal ward and preeclampsia and eclampsia room in Department of Obstetrics and Gynecology and general ophthalmic OPD in case of ambulatory patients.Cases of Pregnancy Induced Hypertension.",
+  "exclusion_criteria": "Cases complicated by malignancy,renal,liver or any other secondary manifestations.",
+
+	         */
+	        fs.countries!.Add(new StudyCountry(sd_sid, 1269750, "India", null));
 	        
 	        // Data Objects
 	        
