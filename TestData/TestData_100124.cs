@@ -56,14 +56,9 @@ public class TestData_100124 : TestData_Base
             
             fs.conditions!.Add(new StudyCondition(sd_sid, "Pregnancy Induced Hypertension", null, null, null, null));
             
-	        // countries
-            
-	        // iec
-	        /***
-	         *"inclusion_criteria": "An observational study in which the patients for the study are selected from antenatal clinic, antenatal ward and preeclampsia and eclampsia room in Department of Obstetrics and Gynecology and general ophthalmic OPD in case of ambulatory patients.Cases of Pregnancy Induced Hypertension.",
-  "exclusion_criteria": "Cases complicated by malignancy,renal,liver or any other secondary manifestations.",
-
-	         */
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "none", "none", 0, "n.0A", "An observational study in which the patients for the study are selected from antenatal clinic, antenatal ward and preeclampsia and eclampsia room in Department of Obstetrics and Gynecology and general ophthalmic OPD in case of ambulatory patients.Cases of Pregnancy Induced Hypertension."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 2, "none", "none", 0, "e.0A", "Cases complicated by malignancy,renal,liver or any other secondary manifestations."));	       
+           
 	        fs.countries!.Add(new StudyCountry(sd_sid, 1269750, "India", null));
 	        
 	        // Data Objects
@@ -81,7 +76,7 @@ public class TestData_100124 : TestData_Base
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100124, "Deutschen Register Klinischer Studien", 
 		        "http://www.drks.de/DRKS00011324", true, 35, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2016 Dec 5", 2016, 12, 5, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Mar 7", 2022, 3, 7, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Nov 14", 2022, 11, 14, null, null, null, null));
 	       
 	        fs.data_objects!.Add(sdo);
 
@@ -152,24 +147,19 @@ public class TestData_100124 : TestData_Base
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, 
 		        "Corona-Stiftung im Stifterverband", null));
 	        
-	        /*
-	         
-	  "inclusion_criteria": 
-	  "1. Male or female adult = 18 years of age at time of enrollment
-	  \n2. Acute stroke (ischemic stroke or intracerebral hemorrhage) diagnosed on computed tomography (CT) or magnetic resonance imaging (MRI)
-	  \n3. Time period of inclusion within = 9 days after stroke onset (acute clinic with subsequent referral to stroke rehabilitation care) or = 35 days after stroke onset (in-patient rehabilitation clinic)",
-	  "exclusion_criteria": 
-	  "1. No referral to subsequent stroke rehabilitation care (to neurological early rehabilitation ward or to in-patient rehabilitation clinic)
-	  \n2. Presence of intracranial hemorrhage on imaging other than intracerebral hemorrhage (e.g., subarachnoid hemorrhage)
-	  \n3. History of stroke (listed in pre-existing illnesses before current stroke)
-	  \n4. Participant dependent on invasive ventilation
-	  \n5. Life expectancy = 12 months.
-	  \nBiomarker-cohort-specific exclusion criteria:
-	  \n1. Patients with a primary hemorrhagic stroke
-	  \n2. Presence of MRI – contraindications (e.g., cardiac pacemaker, claustrophobia, ferromagnetic implants, etc.)
-	  \n3. Unable to lay still in MRI scanner for > 30 minutes",
-	  
-	         */
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Male or female adult = 18 years of age at time of enrollment"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Acute stroke (ischemic stroke or intracerebral hemorrhage) diagnosed on computed tomography (CT) or magnetic resonance imaging (MRI)"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Time period of inclusion within = 9 days after stroke onset (acute clinic with subsequent referral to stroke rehabilitation care) or = 35 days after stroke onset (in-patient rehabilitation clinic)"));	    
+	      
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "1.", 1, "e.01", "No referral to subsequent stroke rehabilitation care (to neurological early rehabilitation ward or to in-patient rehabilitation clinic)"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "2", 1, "e.02", "Presence of intracranial hemorrhage on imaging other than intracerebral hemorrhage (e.g., subarachnoid hemorrhage)"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "3", 1, "e.03", "History of stroke (listed in pre-existing illnesses before current stroke)"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "4", 1, "e.04", "Participant dependent on invasive ventilation"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "5", 1, "e.05", "Life expectancy = 12 months."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 302, "cr", "Hdr", 1, "e.06", "Biomarker-cohort-specific exclusion criteria:"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "1", 1, "e.07", "Patients with a primary hemorrhagic stroke"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "1", 1, "e.07", "Presence of MRI – contraindications (e.g., cardiac pacemaker, claustrophobia, ferromagnetic implants, etc.)"));	   
+	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "1", 1, "e.07", "Unable to lay still in MRI scanner for > 30 minutes"));	   
 	        
 	        fs.countries!.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
 	        

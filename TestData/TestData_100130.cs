@@ -39,20 +39,19 @@ public class TestData_100130 : TestData_Base
 				fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "La Jolla Pharmaceutical Company", null));
 				fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, 
 					"La Jolla Pharmaceutical Company, San Diego, California, USA", null));
-				/*
-				 * *
- 
-  "inclusion_criteria": 
-  "Males or females between 12 and 70 years old, inclusive Female patients must be non-pregnant and non-lactating and have a negative urine pregnancy test result prior to enrollment in the study. Female patients of childbearing potential (including peri menopausal women who have had a menstrual period within 1 year) must be using appropriate birth control (defined as a method which results in a low failure rate of less than 1% per year, when used consistently and correctly, for example oral contraceptives, contraceptive patch, implants, injectables, some intrauterine contraceptive devices [IUDs], or sexual abstinence) during the entire duration of the study. Males enrolled in the trial must have no plans to father a child during the course of the trial and agree to use adequate birth control methods Diagnosis of SLE for purposes of this trial utilize the 1996 Revised Criteria for the Classification of SLE as defined by the American College of Rheumatology (ACR) where a diagnosis of SLE is established when = 4 of the 11 criteria are met 1. At least one documented episode of active SLE renal disease within 4 years prior to randomization at study Visit 3 2. Elevated anti-dsDNA antibody concentration at pre-screening Visit 0 (= 10 IU/mL) as measured by the Farr assay at the regional central laboratory 3. Ability to communicate meaningfully with the investigational staff, competence to give written informed consent, and ability to comply with the entire study procedure 4. Duly executed, written, informed consent obtained from the patient, next of kin, or other legal representative",
-  "exclusion_criteria": 
-  Active SLE renal disease in the 3 months prior to Visit 3 An increase in the anti-ds DNA antibody concentration of more than 50% with an incremental increase of at least 50 units in anti-dsDNA antibody concentration by Farr assay between the samples taken at Visit 0 and Visit 1 during the screening period Use of the following therapeutics: Prednisone > 20 mg/day within 1 month prior to Visit 1 ,Any use of the following within 2 months prior to randomization or 1 month prior to Visit 1: alkylating agents (e.g., cyclophosphamide) TNF inhibitors (e.g., etanercept, infliximab) cyclosporine plasmapheresis intravenous immunoglobulin,prosorba column Any use of mycophenolate mofetil that exceeds 1000 mg/day, azathioprine that exceeds100 mg/day, methotrexate that exceeds 10 mg/week , leflunomide that exceeds 10 mg/day , rituximab within 5 months Previous or concurrent medications and other therapies or devices that in the judgement of the Investigator are likely to confound the evaluation of the safety or efficacy of abetimus sodium Patient has received any investigational new drug ordevice within 30 days prior to screening or 5 half-lives of the agent (whichever is longer), or any investigational new drug with a long-term effect Prior participation in study LJP 394-90-14 Exclusionary laboratory values: leukocyte count < 2,000 cells/mm3 , platelet count < 50,000 cells/mm3, hemoglobin < 8.5 gm/dL , serum hepatic transaminases = 3X the upper limit of normal, serum creatinine > 3.5 mg/dL within the 2 months prior to randomization Malignant disease or immunodeficiency syndrome within 5 years, excepting patients with basal cell or squamous cell carcinoma of the skin with complete excision and clean borders Evidence of current abuse of drugs or alcohol History of poor procedural compliance in previous investigational studies History of serious cardiac disease or functional classification New York Heart Association Class III or IV Patient has previously undergone organ transplantation 10 Other medical conditions, including but not limited to diabetic nephropathy, uncontrolled hypertension, history of patient being HIV positive, that are considered by the Investigator to preclude adequate evaluation of drug safety or efficacy. 11 Patient has known hypersensitivity to the class of medications under study or any of the constituents of abetimus sodium. 12 Patients who have any other acute or chronic disease which in the opinion of the Investigator that may influence the outcome of the study may also be excluded",
- 
-				 */
+				
+				fs.iec!.Add(new StudyIEC(sd_sid, 1, 301, "sequence", "hdr", 1, "n.00","Males or females between 12 and 70 years old, inclusive Female patients must be non-pregnant and non-lactating and have a negative urine pregnancy test result prior to enrollment in the study. Female patients of childbearing potential (including peri menopausal women who have had a menstrual period within 1 year) must be using appropriate birth control (defined as a method which results in a low failure rate of less than 1% per year, when used consistently and correctly, for example oral contraceptives, contraceptive patch, implants, injectables, some intrauterine contraceptive devices [IUDs], or sexual abstinence) during the entire duration of the study. Males enrolled in the trial must have no plans to father a child during the course of the trial and agree to use adequate birth control methods Diagnosis of SLE for purposes of this trial utilize the 1996 Revised Criteria for the Classification of SLE as defined by the American College of Rheumatology (ACR) where a diagnosis of SLE is established when = 4 of the 11 criteria are met"));	       
+				fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "sequence", "1.", 1, "n.01", "At least one documented episode of active SLE renal disease within 4 years prior to randomization at study Visit 3"));	    
+				fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "sequence", "2.", 1, "n.02", "Elevated anti-dsDNA antibody concentration at pre-screening Visit 0 (= 10 IU/mL) as measured by the Farr assay at the regional central laboratory"));	    
+				fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "sequence", "3.", 1, "n.03", "Ability to communicate meaningfully with the investigational staff, competence to give written informed consent, and ability to comply with the entire study procedure"));	    
+				fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "sequence", "4.", 1, "n.04", " Duly executed, written, informed consent obtained from the patient, next of kin, or other legal representative"));	 
+				
+				fs.iec.Add(new StudyIEC(sd_sid, 6, 302, "none", "none", 1, "e.0A", "Active SLE renal disease in the 3 months prior to Visit 3 An increase in the anti-ds DNA antibody concentration of more than 50% with an incremental increase of at least 50 units in anti-dsDNA antibody concentration by Farr assay between the samples taken at Visit 0 and Visit 1 during the screening period Use of the following therapeutics: Prednisone > 20 mg/day within 1 month prior to Visit 1 ,Any use of the following within 2 months prior to randomization or 1 month prior to Visit 1: alkylating agents (e.g., cyclophosphamide) TNF inhibitors (e.g., etanercept, infliximab) cyclosporine plasmapheresis intravenous immunoglobulin,prosorba column Any use of mycophenolate mofetil that exceeds 1000 mg/day, azathioprine that exceeds100 mg/day, methotrexate that exceeds 10 mg/week , leflunomide that exceeds 10 mg/day , rituximab within 5 months Previous or concurrent medications and other therapies or devices that in the judgement of the Investigator are likely to confound the evaluation of the safety or efficacy of abetimus sodium Patient has received any investigational new drug ordevice within 30 days prior to screening or 5 half-lives of the agent (whichever is longer), or any investigational new drug with a long-term effect Prior participation in study LJP 394-90-14 Exclusionary laboratory values: leukocyte count < 2,000 cells/mm3 , platelet count < 50,000 cells/mm3, hemoglobin < 8.5 gm/dL , serum hepatic transaminases = 3X the upper limit of normal, serum creatinine > 3.5 mg/dL within the 2 months prior to randomization Malignant disease or immunodeficiency syndrome within 5 years, excepting patients with basal cell or squamous cell carcinoma of the skin with complete excision and clean borders Evidence of current abuse of drugs or alcohol History of poor procedural compliance in previous investigational studies History of serious cardiac disease or functional classification New York Heart Association Class III or IV Patient has previously undergone organ transplantation"));	   
 				
 				fs.features!.Add(new StudyFeature(sd_sid, 20, 1500));  // Not Available
 				fs.features.Add(new StudyFeature(sd_sid, 22, 205));  //  Randomised
 				
-				fs.conditions!.Add(new StudyCondition(sd_sid, "Systemic Lupus Erythematosus", null, null, null, null));
+				fs.conditions!.Add(new StudyCondition(sd_sid, "Systemic Lupus Erythematosus", null, null, "4A40", "Lupus erythematosus"));
 				
 				fs.countries!.Add(new StudyCountry(sd_sid, 3865483, "Argentina", null));
 				fs.countries.Add(new StudyCountry(sd_sid, 630336, "Belarus", null));
@@ -154,19 +153,19 @@ public class TestData_100130 : TestData_Base
 					"Department of Obstetrics and Gynaecology, Faculty of Medicine, Nursing and Health Sciences, Monash University, Clayton, Victoria, Australia", 
 					null));
 				
-				/*
-  "inclusion_criteria": 
-  "•Women with live singleton pregnancies with a cephalic presentation 
-  \n•Women with >37 weeks +0 days  to 42 weeks +0 days  gestation,  with intact membranes requiring IOL
-  \n•Women living within 20km or less (40-minute drive or less) from the hospital, having a telephone, and someone to provide transport to the hospital in an emergency",
-  "exclusion_criteria": 
-  "•Women with high-risk pregnancies (heart disease, hypertension, hyper-glycaemia on metformin or insulin therapy, fetal growth restriction)
-  \n•Less than 18 years of age\n•Major congenital anomaly as per routine anomaly scan
-  \n•Previous caesarean delivery\n•Modified Bishop Score (MBS) > 6
-  \n•Evidence of regular uterine contractions\n•Known hypersensitivity for any of the products for induction/ latex
-  \n•Any contraindications to vaginal birth, i.e. Placenta praevia
-  \n•Evidence of any vaginal or cervical infection",
-				 */
+				fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "•", 1, "n.01", "Women with live singleton pregnancies with a cephalic presentation "));	       
+				fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "•", 1, "n.02", "Women with >37 weeks +0 days  to 42 weeks +0 days  gestation,  with intact membranes requiring IOL"));	    
+				fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "•", 1, "n.03", "Women living within 20km or less (40-minute drive or less) from the hospital, having a telephone, and someone to provide transport to the hospital in an emergency"));	    
+
+				fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "•", 1, "e.01", "Women with high-risk pregnancies (heart disease, hypertension, hyper-glycaemia on metformin or insulin therapy, fetal growth restriction)"));	       
+				fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "•", 1, "e.02", "Less than 18 years of age"));	    
+				fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "•", 1, "e.03", "Major congenital anomaly as per routine anomaly scan"));	 
+				fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "•", 1, "e.04", "Previous caesarean delivery"));
+				fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "•", 1, "e.05", "Modified Bishop Score (MBS) > 6"));
+				fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "•", 1, "e.06", "Evidence of regular uterine contractions"));	  
+				fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "•", 1, "e.07", "Known hypersensitivity for any of the products for induction/ latex"));	
+				fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "•", 1, "e.08", "Any contraindications to vaginal birth, i.e. Placenta praevia"));	    
+				fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "•", 1, "e.09", "Evidence of any vaginal or cervical infection"));	    
 				
 				fs.features!.Add(new StudyFeature(sd_sid, 22, 205));  //  Randomised
 				

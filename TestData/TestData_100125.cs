@@ -8,11 +8,11 @@ public class TestData_100125 : TestData_Base
 	{
 		if (sd_sid == "IRCT138707201323N1")
 		{
-	          FullStudy fs = CreateEmptyFullStudy();
+	        FullStudy fs = CreateEmptyFullStudy();
 		          
-	          // Study
+	        // Study
 					  
-	          string display_title = "Comparison of efficacy and complications of PCNL under General and Spinal anesthesia";
+	        string display_title = "Comparison of efficacy and complications of PCNL under General and Spinal anesthesia";
 	          StringBuilder sb = new StringBuilder("Interventions: Intervention 1: Performing PCNL under spinal anesthesia at the prone position. ");
 	          sb.Append("Intervention 2: Performing PCNL under general anesthesia at the prone position.;Treatment - Surgery;Treatment - Surgery;");
 	          sb.Append("Performing PCNL under spinal anesthesia at the prone position;Performing PCNL under general anesthesia at the prone position");
@@ -21,63 +21,57 @@ public class TestData_100125 : TestData_Base
 	          sb.Append("Study Design: Randomization: Randomized, Blinding: Single blinded, Placebo: Not used, Assignment: Parallel, Purpose: Treatment.");
 	          string brief_desc = sb.ToString();
 	          
-	          fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2008, 2, 11, 21, "1", 900,
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2008, 2, 11, 21, "1", 900,
 	            18, 17, null, null, 10);
 
-	          fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100125, 
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100125, 
 	            "Iranian Registry of Clinical Trials", null, "2009 Dec 20", null));
 		          
-	          fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
 	            "From the Iranian Clinical Trials Registry"));
 	          
-	          fs.people!.Add(new StudyPerson(sd_sid, 56, "Sadrollah Mehrabi", 
+	        fs.people!.Add(new StudyPerson(sd_sid, 56, "Sadrollah Mehrabi", 
 		          "Yasuj university of medical science", null, "Yasuj university of medical science", null));	
 			
-	          fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null,
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null,
 		          "Research manager, Yasuj University of Medical Sciences", null));
-	          fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, 
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, 
 		          "Research manager, Yasuj University of Medical Sciences", null));
 
-		
-/*
-  "inclusion_criteria": 
-  "Age more than 18 years, presence of renal or upper ureteral stone, candidate for PCNL (multiple stones, staghorn stones, calyceal diverticule stones, stone which are resistant to ESWL, lower pole renal stone larger than >15 mm and other renal stone larger than 25 mm, upper ureteral stone >20mm, Having informed consent 
-  \nAny contraindication for regional anesthesia, presence of coagulopathy, acute infection ore urosepsis, presence of acute renal failure",
-  "exclusion_criteria": null,
-  
-  */
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr assumed", "@", 1, "n.01", "Age more than 18 years, presence of renal or upper ureteral stone, candidate for PCNL (multiple stones, staghorn stones, calyceal diverticule stones, stone which are resistant to ESWL, lower pole renal stone larger than 25 mm, upper ureteral stone >20mm, Having informed consent"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr assumed", "@", 1, "n.02", "Any contraindication for regional anesthesia, presence of coagulopathy, acute infection ore urosepsis, presence of acute renal failure"));	    
+	   
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Renal and ureteral stones", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Calculus of kidney with calculus of ureter", null, null, "GB70", "Calculus of upper urinary tract"));
 
-        fs.conditions!.Add(new StudyCondition(sd_sid, "Renal and ureteral stones", null, null, null, null));
-        fs.conditions.Add(new StudyCondition(sd_sid, "Calculus of kidney with calculus of ureter", null, null, null, null));
-
-        fs.features!.Add(new (sd_sid, 21, 400));  // Treatment
-        fs.features.Add(new (sd_sid, 22, 205));  //  Randomised
-        fs.features.Add(new (sd_sid, 23, 305));  //  Parallel assignment
-        fs.features.Add(new (sd_sid, 24, 505));  //  Single
-        
-        fs.countries!.Add(new StudyCountry(sd_sid, 130758, "Iran", null));
-        
-        // Data Objects
+	        fs.features!.Add(new (sd_sid, 21, 400));  // Treatment
+	        fs.features.Add(new (sd_sid, 22, 205));  //  Randomised
+	        fs.features.Add(new (sd_sid, 23, 305));  //  Parallel assignment
+	        fs.features.Add(new (sd_sid, 24, 505));  //  Single
 	        
-        // 1) Trial registry entry
-
-        string sd_oid = sd_sid + " :: 13 :: Iranian registry web page";
-        string ob_title = display_title + " :: Iranian registry web page";
-        StudyDataObject sdo = CreateEmptyStudyDataObject();
-       
-        sdo.data_object = new DataObject(sd_oid, sd_sid, "Iranian registry web page", null, ob_title,
-          null, 9, 2009, 23, 13, 100125, "Iranian Registry of Clinical Trials",
-          null, "en", 12, null, null, 0, true, true);
-        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	        fs.countries!.Add(new StudyCountry(sd_sid, 130758, "Iran", null));
 	        
-        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100125, "Iranian Registry of Clinical Trials", 
-          "http://en.irct.ir/trial/570", true, 35, null, null, null));
-        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2009 Dec 20", 2009, 12, 20, null, null, null, null));
-        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2018 Feb 22", 2018, 2, 22, null, null, null, null));
+	        // Data Objects
+		        
+	        // 1) Trial registry entry
+
+	        string sd_oid = sd_sid + " :: 13 :: Iranian registry web page";
+	        string ob_title = display_title + " :: Iranian registry web page";
+	        StudyDataObject sdo = CreateEmptyStudyDataObject();
 	       
-        fs.data_objects!.Add(sdo);
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Iranian registry web page", null, ob_title,
+	          null, 9, 2009, 23, 13, 100125, "Iranian Registry of Clinical Trials",
+	          null, "en", 12, null, null, 0, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+		        
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100125, "Iranian Registry of Clinical Trials", 
+	          "http://en.irct.ir/trial/570", true, 35, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2009 Dec 20", 2009, 12, 20, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2018 Feb 22", 2018, 2, 22, null, null, null, null));
+		       
+	        fs.data_objects!.Add(sdo);
 
-        return fs;
+	        return fs;
 
 		}
 
@@ -147,28 +141,22 @@ public class TestData_100125 : TestData_Base
 	          "Shahed University", "https://ror.org/01e8ff003"));
           fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 102305, 
 	          "Shahed University", "https://ror.org/01e8ff003"));
-/*
- * 
-  "inclusion_criteria": 
-  "Middle-aged men 30 to 60 years
-  \nGrade 1, 2 and 3 liver disease
-  \nPeople with high blood lipid profiles
-  \nPeople without cardiovascular disease
-  \nPeople without physical disabilities",
-  "exclusion_criteria": 
-  "Men over 60 years old
-  \nPeople with fatty liver disease grade 4
-  \nPeople with physical disabilities
-  \nPeople with heart failure
-  \nPeople with lung disease",
-
-}
- * 
- */
-
-        fs.conditions!.Add(new StudyCondition(sd_sid, "Non-alcoholic fatty liver disease", null, null, null, null));
-        fs.conditions.Add(new StudyCondition(sd_sid, "Fatty (change of) liver, not elsewhere classified", null, null, null, null));
-        fs.conditions.Add(new StudyCondition(sd_sid, "K76.0", null, null, null, null));
+          
+          fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr assumed", "@", 1, "n.01", "Middle-aged men 30 to 60 years"));	       
+          fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr assumed", "@", 1, "n.02", "Grade 1, 2 and 3 liver disease"));	    
+          fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr assumed", "@", 1, "n.03", "People with high blood lipid profiles"));	    
+          fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr assumed", "@", 1, "n.04", "People without cardiovascular disease"));	    
+          fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr assumed", "@", 1, "n.05", "People without physical disabilities"));	    
+	        
+          fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr assumed", "@", 1, "e.01", "Men over 60 years old"));	       
+          fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr assumed", "@", 1, "e.02", "People with fatty liver disease grade 4"));	    
+          fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr assumed", "@", 1, "e.03", "People with physical disabilities"));
+          fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr assumed", "@", 1, "e.04", "People with heart failure"));	    
+          fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr assumed", "@", 1, "e.05", "People with lung disease"));	    
+ 
+        fs.conditions!.Add(new StudyCondition(sd_sid, "Non-alcoholic fatty liver disease", null, null, "DB92", "Non-alcoholic fatty liver disease"));
+        fs.conditions.Add(new StudyCondition(sd_sid, "Fatty (change of) liver, not elsewhere classified", null, null, "DB92", "Non-alcoholic fatty liver disease"));
+        fs.conditions.Add(new StudyCondition(sd_sid, "K76.0", null, null, "DB92", "Non-alcoholic fatty liver disease"));
 
         fs.features!.Add(new (sd_sid, 21, 415));  // Supportive care
         fs.features.Add(new (sd_sid, 22, 205));  //  Randomised

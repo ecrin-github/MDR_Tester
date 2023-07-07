@@ -45,38 +45,33 @@ public class TestData_100122 : TestData_Base
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Center of Molecular Immunology(CIM)", null));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 24, "Reported as government funded, no further details", null));
 	        
-				/*
-
-  "inclusion_criteria": 
-  "1. Patients with non-surgical esophagus tumors of epithelial origin in stages III or IV, located in the following portions of the esophagus: 
-  1- Cervical esophagus: it begins at the lower edge of the cricoid cartilage and ends at the thoracic inlet (suprasternal fossa), 18cm from ICS. 
-  2- Intrathoracic esophagus: 
-  a) Upper thoracic portion: from the thoracic inlet (suprasternal fossa) to the trachea bifurcation, 24cm from ICS. 
-  b) Middle thoracic segment: it is approximately half of the esophagus, between the trachea bifurcation and the esophagus-gastric join, approximately 32 cm from ICS. 
-  2. Patients without any treatment who are eligible for radio chemotherapy treatment at the time of inclusion. 
-  3. Capacity to understand the study and readiness to sign the informed consent document. 
-  4. Patients with measurable lesions, (in, at least, one dimension: greater diameter) with a diameter greater than or equal to 20mm using conventional techniques (CAT, X rays, US) or greater than or equal to 10mm using helical CAT. 
-  5. Age > 18 and < 75 years. 
-  6. General health condition ECOG < 2 (Karnosfsky > 60%). 
-  7. Life expectancy over 6 months. 
-  8. Patients with organs and bone marrow working normally, defined by the following parameters: leucocytes >3,000/ul, hemoglobin >=9 g/L, absolute neutrophil counting >1,500/ul, platelets >100,000/ul, TGP/TGO 60 ml/min/1.73 m2 for patients with creatinine values higher than normal value, as established by the institution. 
-  9. Reproductive-age females should have a negative pregnancy test and should use appropriate contraceptive methods such as intrauterine devices, hormonal contraceptives, barrier method or tubal ligation. Males should use contraceptive methods during treatment. 10. Patients who had received appropriate treatment for skin carcinoma or in situ uterus cancer can also be included.",
-  "exclusion_criteria": 
-  "1. Patients with esophageal tumors in the inferior thoracic portion (distal half of the esophagus, between the tracheal bifurcation and the esophagus-gastric join, approximately 40cm from ICS). 
-  2. Patients on another product under research. 
-  3. Patients with allergy history attributed to chemical or biological compounds similar to TheraCIM h-R3 monoclonal antibody or the chemotherapy used in the study. 
-  4. Patients previously treated with murine monoclonal antibodies (for example, ior egf/r3). 
-  5. Patients with uncontrolled intercurrent diseases, including: active infections, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, and psychiatric or social diseases restricting compliance with clinical trial requirements. 
-  6. Breastfeeding should be interrupted after patients are included in the clinical trial, due to potential and unknown adverse events for infants. 
-  7. Patients with previous malignant neoplasias, except patients who received appropriate treatments for skin carcinoma or in situ uterus carcinoma. 
-  8. Patients with brain metastasis.",
- 
-
-				 */
-					
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "sequence", "1.", 1, "n.01", "Patients with non-surgical esophagus tumors of epithelial origin in stages III or IV, located in the following portions of the esophagus: "));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "sequence", "1-", 2, "n.01.01", "Cervical esophagus: it begins at the lower edge of the cricoid cartilage and ends at the thoracic inlet (suprasternal fossa), 18cm from ICS."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "sequence", "2-", 2, "n.01.01", "Intrathoracic esophagus:"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "sequence", "a)", 3, "n.01.02.01", "Upper thoracic portion: from the thoracic inlet (suprasternal fossa) to the trachea bifurcation, 24cm from ICS."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "sequence", "b)", 3, "n.01.02.02", "Middle thoracic segment: it is approximately half of the esophagus, between the trachea bifurcation and the esophagus-gastric join, approximately 32 cm from ICS."));
+	        fs.iec!.Add(new StudyIEC(sd_sid, 6, 1, "sequence", "2.", 1, "n.02", "Patients without any treatment who are eligible for radio chemotherapy treatment at the time of inclusion."));	  
+	        fs.iec!.Add(new StudyIEC(sd_sid, 7, 1, "sequence", "3.", 1, "n.03", "Capacity to understand the study and readiness to sign the informed consent document."));	  
+	        fs.iec!.Add(new StudyIEC(sd_sid, 8, 1, "sequence", "4.", 1, "n.04", " Patients with measurable lesions, (in, at least, one dimension: greater diameter) with a diameter greater than or equal to 20mm using conventional techniques (CAT, X rays, US) or greater than or equal to 10mm using helical CAT."));	  
+	        fs.iec!.Add(new StudyIEC(sd_sid, 9, 1, "sequence", "5.", 1, "n.05", "Age > 18 and < 75 years."));	  
+	        fs.iec!.Add(new StudyIEC(sd_sid, 10, 1, "sequence", "6.", 1, "n.06", "General health condition ECOG < 2 (Karnosfsky > 60%)."));	  
+	        fs.iec!.Add(new StudyIEC(sd_sid, 11, 1, "sequence", "7.", 1, "n.07", "Life expectancy over 6 months."));	  
+	        fs.iec!.Add(new StudyIEC(sd_sid, 12, 1, "sequence", "8.", 1, "n.08", "Patients with organs and bone marrow working normally, defined by the following parameters: leucocytes >3,000/ul, hemoglobin >=9 g/L, absolute neutrophil counting >1,500/ul, platelets >100,000/ul, TGP/TGO 60 ml/min/1.73 m2 for patients with creatinine values higher than normal value, as established by the institution."));	  
+	        fs.iec!.Add(new StudyIEC(sd_sid, 13, 1, "sequence", "9.", 1, "n.09", "Reproductive-age females should have a negative pregnancy test and should use appropriate contraceptive methods such as intrauterine devices, hormonal contraceptives, barrier method or tubal ligation. Males should use contraceptive methods during treatment. "));	  
+	        fs.iec!.Add(new StudyIEC(sd_sid, 14, 1, "sequence", "10.", 1, "n.10", "Patients who had received appropriate treatment for skin carcinoma or in situ uterus cancer can also be included."));	
+	        
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "sequence", "1.", 1, "e.01", "Patients with esophageal tumors in the inferior thoracic portion (distal half of the esophagus, between the tracheal bifurcation and the esophagus-gastric join, approximately 40cm from ICS)."));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "sequence", "2.", 1, "e.02", "Patients on another product under research."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "sequence", "3.", 1, "e.03", "Patients with allergy history attributed to chemical or biological compounds similar to TheraCIM h-R3 monoclonal antibody or the chemotherapy used in the study."));
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "sequence", "4.", 1, "e.04", "Patients previously treated with murine monoclonal antibodies (for example, ior egf/r3)."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "sequence", "5.", 1, "e.05", "Patients with uncontrolled intercurrent diseases, including: active infections, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, and psychiatric or social diseases restricting compliance with clinical trial requirements."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "sequence", "6.", 1, "e.06", "Breastfeeding should be interrupted after patients are included in the clinical trial, due to potential and unknown adverse events for infants."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "sequence", "7.", 1, "e.07", "Patients with previous malignant neoplasias, except patients who received appropriate treatments for skin carcinoma or in situ uterus carcinoma."));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "sequence", "8.", 1, "e.08", "Patients with brain metastasis."));	
+	
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Non-surgical malignant esophagus tumors", null, null, null, null));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Esophageal Neoplasms", null, null, null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma", null, null, "2", "Neoplasms"));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Biliary Tract Neoplasms", null, null, null, null));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Gastrointestinal Neoplasms", null, null, null, null));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Digestive System Neoplasms", null, null, null, null));
@@ -85,11 +80,11 @@ public class TestData_100122 : TestData_Base
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Digestive System Diseases", null, null, null, null));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Neoplasms, Glandular and Epithelial", null, null, null, null));
         
-	        fs.features!.Add(new (sd_sid, 20, 120));  // Phase 2
-	        fs.features.Add(new (sd_sid, 21, 400));  // Treatment
-	        fs.features.Add(new (sd_sid, 22, 205));  //  Randomised
-	        fs.features.Add(new (sd_sid, 23, 305));  //  Parallel assignment
-	        fs.features.Add(new (sd_sid, 24, 500));  //  None (Open Label)
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // Phase 2
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));  // Treatment
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));  //  Randomised
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));  //  Parallel assignment
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));  //  None (Open Label)
 	        
 	        fs.countries!.Add(new StudyCountry(sd_sid, 3562981, "Cuba", null));
 					
@@ -180,56 +175,47 @@ public class TestData_100122 : TestData_Base
 			fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, 
 				"Finlay Vaccine Institute; Cuban Fund for Science and Innovation (FONCI) from Ministry of Science, Technology and Environment",
 				null));
+			
+			fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "The participant understands and agrees to comply with the study procedures and provides written informed consent."));	       
+			fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Adults, 19 to 59 years of age, at time of consent."));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Subjects with BMI of 18.5 to 34.9 kg/m2."));	    
 
-/*
- *      
-  
-  "inclusion_criteria": 
-  "1. The participant understands and agrees to comply with the study procedures and provides written informed consent.
-  \n2. Adults, 19 to 59 years of age, at time of consent.
-  \n3. Subjects with BMI of 18.5 to 34.9 kg/m2.\n",
-  "exclusion_criteria": 
-  "1. 
-  A) COVID-19 convalescent group: 
-  a) A history of SARS-CoV-2 infection at time of recruitment or medical discharge for COVID-19 during the two months before recruitment; 
-  b) History of severe or asymptomatic COVID-19. 
-  B) Group of healthy individuals immunized with another vaccine: History of COVID-19.   
-  \n2. Acute illness, febrile, 7 days prior to administration of investigational product or at screening. 
-  \n3. Current use of any prescription of non-steroidal anti-inflammatory drugs (NSAIDs) or antimicrobial medications within 7 days prior to vaccination.
-  \n4. Any chronic medical disease or condition that, in the opinion of the clinical investigator, precludes study participation (e.g., subjects with respiratory disease (e.g., chronic obstructive pulmonary disease, asthma), diabetes mellitus, thyroid disease, cardiovascular disease (e.g., congestive heart failure, hypertension, and ischemic heart disease), liver and kidney chronic diseases, neurological conditions or bleeding disorder, psychiatric condition, etc.).
-  \n5. Any primary or secondary immunodeficiency.
-  \n6. Ongoing malignancy or recent diagnosis of malignancy.
-  \n7. A history of alcohol abuse or other recreational drug use within 30 days before the first vaccine administration, except smoking.
-  \n8. Demonstrated inability to comply with the study procedures (Mental problems or disorders).
-  \n9. A history of hypersensitivity or severe allergic reaction (e.g., anaphylaxis, generalized urticarial, angioedema,). 
-  \n10. A history of hypersensitivity to some vaccine component.
-  \n11. Participated in another investigational study involving any investigational product within 3 month prior to the day of enrollment.
-  \n12. 
-  A) COVID-19 convalescent group: 
-  a) Subjects vaccinated with any vaccine against SARS-CoV-2. 
-  B) Group of healthy individuals previously immunized with another vaccine: Subjects are excluded if they were not vaccinated between 3 and 12 months before recruitment.
-  \n13. Received any vaccine within 30 days prior to the day of enrollment.
-  \n14. Received systemic immunosuppressant or immune-modifying drugs, including cytostatic drugs and steroids.
-  \n15. History of transfusion of blood or blood products in the last 3 months.
-  \n16. Difficulties to comply with the schedule of clinical visit or to continue follow up clinical visits.\n17. Splenectomy or splenic dysfunction.
-  \n18. Women of childbearing potential not using safe contraceptive methods during the study
-  \n19. Pregnancy, puerperium, or breastfeeding.
-  \n20. Any abnormality or permanent body art (e.g., tattoo) that would interfere with the observation of local reactions at the injection site (both deltoid region).\n",
-   
-             
- */
-			fs.conditions!.Add(new StudyCondition(sd_sid, "COVID-19", null, null, null, null));
+			fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "seq", "Hdr", 2, "e.01.01", "A) COVID-19 convalescent group: "));	       
+			fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "seq", "a)", 2, "e.01.02", "A history of SARS-CoV-2 infection at time of recruitment or medical discharge for COVID-19 during the two months before recruitment;"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "seq", "Hdr", 2, "e.01.03", "History of severe or asymptomatic COVID-19. B) Group of healthy individuals immunized with another vaccine"));
+			fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "seq", "b)", 2, "e.01.04", "History of COVID-19."));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "2.", 1, "e.02", "Acute illness, febrile, 7 days prior to administration of investigational product or at screening. "));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "3.", 1, "e.03", "Current use of any prescription of non-steroidal anti-inflammatory drugs (NSAIDs) or antimicrobial medications within 7 days prior to vaccination."));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "4.", 1, "e.04", "Any chronic medical disease or condition that, in the opinion of the clinical investigator, precludes study participation (e.g., subjects with respiratory disease (e.g., chronic obstructive pulmonary disease, asthma), diabetes mellitus, thyroid disease, cardiovascular disease (e.g., congestive heart failure, hypertension, and ischemic heart disease), liver and kidney chronic diseases, neurological conditions or bleeding disorder, psychiatric condition, etc.)."));	  
+			fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "5.", 1, "e.05", "Any primary or secondary immunodeficiency."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "6.", 1, "e.06", "Ongoing malignancy or recent diagnosis of malignancy."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "7.", 1, "e.07", "A history of alcohol abuse or other recreational drug use within 30 days before the first vaccine administration, except smoking."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "8.", 1, "e.08", "Demonstrated inability to comply with the study procedures (Mental problems or disorders)."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "9.", 1, "e.09", "A history of hypersensitivity or severe allergic reaction (e.g., anaphylaxis, generalized urticarial, angioedema,)."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "10.", 1, "e.10", "A history of hypersensitivity to some vaccine component."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "11.", 1, "e.11", "Participated in another investigational study involving any investigational product within 3 month prior to the day of enrollment."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr", "12.", 1, "e.12", "A) COVID-19 convalescent group: a) Subjects vaccinated with any vaccine against SARS-CoV-2. B) Group of healthy individuals previously immunized with another vaccine: Subjects are excluded if they were not vaccinated between 3 and 12 months before recruitment."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "cr", "13.", 1, "e.13", "Received any vaccine within 30 days prior to the day of enrollment."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "cr", "14.", 1, "e.14", "Received systemic immunosuppressant or immune-modifying drugs, including cytostatic drugs and steroids."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "cr", "15.", 1, "e.15", "History of transfusion of blood or blood products in the last 3 months."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr", "16.", 1, "e.16", "Difficulties to comply with the schedule of clinical visit or to continue follow up clinical visits."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "17.", 1, "e.17", "Splenectomy or splenic dysfunction."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "18.", 1, "e.18", "Women of childbearing potential not using safe contraceptive methods during the study"));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "19.", 1, "e.19", "Pregnancy, puerperium, or breastfeeding."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "20.", 1, "e.20", "Any abnormality or permanent body art (e.g., tattoo) that would interfere with the observation of local reactions at the injection site (both deltoid region)."));	  
+
+			fs.conditions!.Add(new StudyCondition(sd_sid, "COVID-19", null, null, "RA01", "COVID-19"));
 			fs.conditions.Add(new StudyCondition(sd_sid, "SARS-CoV2", null, null, null, null));
-			fs.conditions.Add(new StudyCondition(sd_sid, "Coronavirus Infections", null, null, null, null));
+			fs.conditions.Add(new StudyCondition(sd_sid, "Coronavirus Infections", null, null, "RA01", "COVID-19"));
 			fs.conditions.Add(new StudyCondition(sd_sid, "SARS Virus", null, null, null, null));
 			fs.conditions.Add(new StudyCondition(sd_sid, "Coronaviridae Infections", null, null, null, null));
 			fs.conditions.Add(new StudyCondition(sd_sid, "Nidovirales Infections", null, null, null, null));
 			fs.conditions.Add(new StudyCondition(sd_sid, "Betacoronavirus", null, null, null, null));
 			fs.conditions.Add(new StudyCondition(sd_sid, "Aftercare", null, null, null, null));
 
-			fs.features!.Add(new(sd_sid, 22, 210)); // Nonrandomised
-			fs.features.Add(new(sd_sid, 23, 305)); // Parallel assignment
-			fs.features.Add(new(sd_sid, 24, 500)); // None (Open Label)
+			fs.features!.Add(new StudyFeature(sd_sid, 22, 210)); // Nonrandomised
+			fs.features.Add(new StudyFeature(sd_sid, 23, 305)); // Parallel assignment
+			fs.features.Add(new StudyFeature(sd_sid, 24, 500)); // None (Open Label)
 
 			fs.countries!.Add(new StudyCountry(sd_sid, 3562981, "Cuba", null));
 

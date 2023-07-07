@@ -210,7 +210,7 @@ public class TestData_100120 : TestData_Base
             fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr assumed", "@", 1, "e.01", "Stage III inoperable breast cancer or known metastatic disease"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr assumed", "@", 1, "e.02", "Patients for whom upfront chemotherapy including taxanes and anthracyclines is clinically judged appropriate as optimal neoadjuvant treatment"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr assumed", "@", 1, "e.03", "Prior chemotherapy, radiotherapy or surgery for invasive breast cancer, other than excision of tumor in the contralateral breast, and provided that the patient did not previously receive adjuvant radiotherapy or chemotherapy"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr assumed", "@", 1, "e.04", "Subjects with a concurrently active second malignancy, other than adequately treated non-melanoma skin cancers, in situ melanoma or in situ cervical cancer. Subjects with other non-mammary malignancies must have been disease-free for at least 5 years));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr assumed", "@", 1, "e.04", "Subjects with a concurrently active second malignancy, other than adequately treated non-melanoma skin cancers, in situ melanoma or in situ cervical cancer. Subjects with other non-mammary malignancies must have been disease-free for at least 5 years"));	  
             fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr assumed", "@", 1, "e.05", "Known or suspected hypersensitivity reaction to any investigational or therapeutic compound or their incorporated substances"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr assumed", "@", 1, "e.06", "Concurrent congestive heart failure or LVEF <50%"));	 
             fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "cr assumed", "@", 1, "e.07", "Clinically significant (i.e. active) cardiovascular disease, including cerebrovascular accident (<6 months before enrollment), unstable angina pectoris, myocardial infarction ≤6 months before enrollment, uncontrolled hypertension (systolic >150 mmHg and/or diastolic >100 mmHg) or high-risk uncontrolled arrhythmias"));	       
@@ -223,7 +223,7 @@ public class TestData_100120 : TestData_Base
             fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr assumed", "@", 1, "e.14", "Inability or unwillingness to abide by the study protocol or cooperate fully with the investigator"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr assumed", "@", 1, "e.15", "Malabsorption syndrome, disease significantly affecting gastrointestinal function, or resection of the stomach or small bowel. Subjects with ulcerative colitis are also excluded"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr assumed", "@", 1, "e.16", "Concurrent neoadjuvant cancer therapy (chemotherapy, radiation therapy, immunotherapy, biologic therapy other than the trial therapies)"));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr assumed", "@", 1, "e.17", "Concomitant use of CYP3A4 inhibitors or inducers));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr assumed", "@", 1, "e.17", "Concomitant use of CYP3A4 inhibitors or inducers"));	       
 
 	        fs.countries!.Add(new StudyCountry(sd_sid, 2510769, "Spain", null));
 	         
@@ -489,30 +489,31 @@ public class TestData_100120 : TestData_Base
 			fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr assumed", "@", 1, "n.04", "Serum potassium less than 5.0 mmol/L prior to randomization"));
 			fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr assumed", "@", 1, "n.05", "At least one hospital admission for which heart failure was a major component of the hospitalization some time within the 12 months prior to study entry OR brain natriuretic peptide (BNP) greater than or equal to 100pg/ml or N-terminal pro-BNP greater than or equal to 360pg/ml within the 60 days prior to study entry"));	    
 			fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr assumed", "@", 1, "n.06", "Women of child-bearing potential must have a negative serum/urine pregnancy test within 72 hours prior to randomization, must not be lactating, and must agree to use an effective method of contraception during the entire course of study participation"));	    
-			fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr assumed", "@", 1, "n.07", "Willing to comply with scheduled visits\nInformed consent form signed by the subject prior to participation in the trial"));
+			fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr assumed", "@", 1, "n.07", "Willing to comply with scheduled visits"));
+			fs.iec.Add(new StudyIEC(sd_sid, 8, 1, "cr assumed", "@", 1, "n.08", "Informed consent form signed by the subject prior to participation in the trial"));
 			
-			fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr assumed", "@", 1, "e.01", "Severe systemic illness with an expected life expectancy of less than 3 years"));	       
-			fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr assumed", "@", 1, "e.02", "hronic pulmonary disease requiring home O2, oral steroid therapy, or hospitalization for exacerbation within 12 months of study entry, or significant chronic pulmonary disease in the opinion of the investigator"));	    
-			fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr assumed", "@", 1, "e.03", "Known infiltrative or hypertrophic obstructive cardiomyopathy or known pericardial constriction"));	    
-			fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr assumed", "@", 1, "e.04", "Primary hemodynamically significant uncorrected valvular heart disease, obstructive or regurgitant, or any valvular disease expected to lead to surgery during the trial"));	  
-			fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr assumed", "@", 1, "e.05", "Atrial fibrillation with a resting heart rate greater than 90 bpm"));	       
-			fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr assumed", "@", 1, "e.06", "MI in the past 90 days"));	 
+			fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr assumed", "@", 1, "e.01", "Severe systemic illness with an expected life expectancy of less than 3 years"));	       
+			fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr assumed", "@", 1, "e.02", "Chronic pulmonary disease requiring home O2, oral steroid therapy, or hospitalization for exacerbation within 12 months of study entry, or significant chronic pulmonary disease in the opinion of the investigator"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr assumed", "@", 1, "e.03", "Known infiltrative or hypertrophic obstructive cardiomyopathy or known pericardial constriction"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr assumed", "@", 1, "e.04", "Primary hemodynamically significant uncorrected valvular heart disease, obstructive or regurgitant, or any valvular disease expected to lead to surgery during the trial"));	  
+			fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr assumed", "@", 1, "e.05", "Atrial fibrillation with a resting heart rate greater than 90 bpm"));	       
+			fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr assumed", "@", 1, "e.06", "MI in the past 90 days"));	 
 			fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr assumed", "@", 1, "e.07", "Coronary artery bypass graft surgery in the past 90 days"));	       
-			fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr assumed", "@", 1, "e.08", "Percutaneous coronary intervention in the past 30 days"));	    
-			fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr assumed", "@", 1, "e.09", "Heart transplant recipient"));	    
-			fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr assumed", "@", 1, "e.10", "Currently implanted left ventricular assist device"));	
-			fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr assumed", "@", 1, "e.11", "Stroke in past 90 days"));	       
-			fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "cr assumed", "@", 1, "e.12", "Systolic BP (SBP) greater than 160 mm Hg"));	 
-			fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "cr assumed", "@", 1, "e.13", "Known orthostatic hypotension"));	       
-			fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "cr assumed", "@", 1, "e.14", "Gastrointestinal disorder that could interfere with study drug absorption"));	    
-			fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr assumed", "@", 1, "e.15", "Use of any aldosterone antagonist or potassium sparing medication in the last 14 days or any known condition that would require the use of an aldosterone antagonist during study participation;"));	    
-			fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr assumed", "@", 1, "e.16", "Known intolerance to aldosterone antagonists"));	  
-			fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr assumed", "@", 1, "e.17", "Current lithium use"));	       
-			fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr assumed", "@", 1, "e.18", "Current participation (including prior 30 days) in any other therapeutic trial"));	 
-			fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr assumed", "@", 1, "e.19", "Any condition that, in the opinion of the investigator, may prevent the participant from adhering to the trial protocol"));	       
-			fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr assumed", "@", 1, "e.20", "History of hyperkalemia (serum potassium greater than or equal to 5.5mmol/L) in the past 6 months or serum potassium greater than or equal to 5.0mmol/L within the past 2 weeks"));	    
-			fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr assumed", "@", 1, "e.21", "Severe renal dysfunction, defined as an estimated glomerular filtration rate(GFR) less than 30ml/min. Participants with serum creatinine greater than or equal to 2.5mg/dl are also excluded even if their GFR is greater than or equal to 30ml/min"));	    
-			fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr assumed", "@", 1, "e.22", "Known chronic hepatic disease, defined as aspartate aminotransferase(AST) and alanine aminotransferase(ALT) levels greater than 3.0 times the upper limit of normal as read at the local lab."));	  
+			fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr assumed", "@", 1, "e.08", "Percutaneous coronary intervention in the past 30 days"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr assumed", "@", 1, "e.09", "Heart transplant recipient"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr assumed", "@", 1, "e.10", "Currently implanted left ventricular assist device"));	
+			fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "cr assumed", "@", 1, "e.11", "Stroke in past 90 days"));	       
+			fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "cr assumed", "@", 1, "e.12", "Systolic BP (SBP) greater than 160 mm Hg"));	 
+			fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "cr assumed", "@", 1, "e.13", "Known orthostatic hypotension"));	       
+			fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr assumed", "@", 1, "e.14", "Gastrointestinal disorder that could interfere with study drug absorption"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr assumed", "@", 1, "e.15", "Use of any aldosterone antagonist or potassium sparing medication in the last 14 days or any known condition that would require the use of an aldosterone antagonist during study participation;"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr assumed", "@", 1, "e.16", "Known intolerance to aldosterone antagonists"));	  
+			fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr assumed", "@", 1, "e.17", "Current lithium use"));	       
+			fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr assumed", "@", 1, "e.18", "Current participation (including prior 30 days) in any other therapeutic trial"));	 
+			fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr assumed", "@", 1, "e.19", "Any condition that, in the opinion of the investigator, may prevent the participant from adhering to the trial protocol"));	       
+			fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr assumed", "@", 1, "e.20", "History of hyperkalemia (serum potassium greater than or equal to 5.5mmol/L) in the past 6 months or serum potassium greater than or equal to 5.0mmol/L within the past 2 weeks"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr assumed", "@", 1, "e.21", "Severe renal dysfunction, defined as an estimated glomerular filtration rate(GFR) less than 30ml/min. Participants with serum creatinine greater than or equal to 2.5mg/dl are also excluded even if their GFR is greater than or equal to 30ml/min"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 30, 2, "cr assumed", "@", 1, "e.22", "Known chronic hepatic disease, defined as aspartate aminotransferase(AST) and alanine aminotransferase(ALT) levels greater than 3.0 times the upper limit of normal as read at the local lab."));	  
 			
 			fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
             fs.countries.Add(new StudyCountry(sd_sid, 3865483, "Argentina", null));
@@ -668,8 +669,7 @@ public class TestData_100120 : TestData_Base
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 		        "https://storage.googleapis.com/ctgov2-large-docs/71/NCT04419571/Prot_SAP_000.pdf", 
 		        true, 11, null, null, null));
-	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2020 Jun 5", 2020, 6, 4, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2020 Jul 23", 2020, 6, 4, null, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2020 Jun 4", 2020, 6, 4, null, null, null, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -790,7 +790,7 @@ public class TestData_100120 : TestData_Base
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 		        "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2020 May 28", 2020, 5, 28, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2021 May 12", 2021, 5, 12, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Dec 7", 2022, 12, 7, null, null, null, null));
 	       
 	        fs.data_objects!.Add(sdo);
 
@@ -955,7 +955,7 @@ public class TestData_100120 : TestData_Base
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2018 Aug 15", 2018, 8, 15, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 May 2 (est.)", 2022, 5, 2, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2023 June 13", 2023, 6, 13, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
 
@@ -1352,7 +1352,7 @@ public class TestData_100120 : TestData_Base
             fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr assumed", "@", 1, "e.04", "Alanine aminotransferase (ALT) and bilirubin >1.1×upper limit of normal (ULN; isolated bilirubin >1.5×ULN is acceptable if bilirubin is fractionated and direct bilirubin <35%)."));	  
             fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr assumed", "@", 1, "e.05", "Vital signs:"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr assumed", "@", 1, "e.06", "Systolic blood pressure (SBP) <90 and >140 milliliter of mercury (mmHg); diastolic BP <50 and >90 mmHg; heart rate (HR) <50 and >90 beats per minute (bpm); temperature >37.5 degree Celsius"));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr assumed", "@", 1, "e.07", "Clinically significant ECG abnormality and/or HR < 50 and >90 bpm; PR interval >220 milliseconds (msec); QRS duration >120 msec; and QTcF > 450 msec));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr assumed", "@", 1, "e.07", "Clinically significant ECG abnormality and/or HR < 50 and >90 bpm; PR interval >220 milliseconds (msec); QRS duration >120 msec; and QTcF > 450 msec"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr assumed", "@", 1, "e.08", "Anticipated requirement for any prescription medication during the study"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr assumed", "@", 1, "e.09", "History of regular alcohol consumption within 6 months of the study averaging a weekly intake of >14 drinks for males or >7 drinks for females or inability to abstain from alcohol from 1 day prior to the inpatient period of the study until discharge (one drink is equivalent to 8 grams of alcohol: 200 milliliter [mL] of beer, 100 mL of wine or 1 measure (25 mL) of spirits)"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr assumed", "@", 1, "e.10", "Urinary cotinine levels indicative of smoking or history or regular use of tobacco or nicotine-containing products within 2 months prior to screening or inability to abstain from smoking during the study"));	  
@@ -1505,7 +1505,7 @@ public class TestData_100120 : TestData_Base
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2018 Dec 26", 2018, 12, 26, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2021 Jan 22 (est.)", 2021, 1, 22, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2023 May 24", 2023, 5, 24, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
 
@@ -1636,7 +1636,7 @@ public class TestData_100120 : TestData_Base
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2015 Sep 29 (est.)", 2015, 9, 29, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2021 Dec 2", 2021, 12, 2, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Oct 19", 2022, 10, 19, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
             
@@ -1653,7 +1653,7 @@ public class TestData_100120 : TestData_Base
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://clinicaltrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2021 Jul 23", 2021, 7, 2, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2021 Dec 2", 2021, 12, 2, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Oct 19", 2022, 10, 19, null, null, null, null));
 
             fs.data_objects!.Add(sdo);
 
@@ -1764,7 +1764,7 @@ public class TestData_100120 : TestData_Base
             fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr assumed", "@", 1, "e.07", "Requiring systemic non-C. difficile antibiotic therapy at the time of FMT"));	  
             fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr assumed", "@", 1, "e.08", "Actively taking Saccharomyces boulardii or other probiotic at the time of FMT"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr assumed", "@", 1, "e.09", "Need for continuing use of oral vancomycin, oral or IV metronidazole, fidaxomicin, rifaximin or nitazoxanide at the time of FMT"));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr assumed", "@", 1, "e.10", "evere underlying disease such that the patient is not expected to survive for one or more years or unstable medical condition requiring daily change in treatments"));	
+            fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr assumed", "@", 1, "e.10", "Severe underlying disease such that the patient is not expected to survive for one or more years or unstable medical condition requiring daily change in treatments"));	
             
             fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
             
@@ -2156,7 +2156,7 @@ public class TestData_100120 : TestData_Base
 	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Beclomethasone", 14, "D000001507", "D000001507", "Beclomethasone"));
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Salmeterol Xinafoate", 14, "D000068299", "D000068299", "Salmeterol Xinafoate"));
 	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Asthma", 14, "D000001249", null, null));
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Asthma", 14, "D000001249", "CA23", "Asthma"));
             
 			sb = new StringBuilder("Wechsler ME, Kunselman SJ, Chinchilli VM, Bleecker E, Boushey HA, Calhoun WJ, Ameredes BT, Castro M, Craig TJ, Denlinger L, Fahy JV, Jarjour N, Kazani S, Kim S, Kraft M, Lazarus SC, Lemanske RF Jr, Markezich A, Martin RJ, Permaul P, Peters SP, Ramsdell J, Sorkness CA, Sutherland ER, Szefler SJ, Walter MJ, Wasserman SI, Israel E; National Heart, Lung and Blood Institute’s Asthma Clinical Research Network. ");
 			sb.Append("Effect of beta2-adrenergic receptor polymorphism on response to longacting beta2 agonist in asthma (LARGE trial): a genotype-stratified, randomised, placebo-controlled, crossover trial. ");
@@ -2173,7 +2173,7 @@ public class TestData_100120 : TestData_Base
 	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr assumed", "@", 1, "n.05", "Genotype eligibility (determined during screening)"));	
 	        
             fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr assumed", "@", 1, "e.01", "Smoker (total smoking history must be less than 10 pack years)"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr assumed", "@", 1, "e.02", "ignificant unstable medical condition other than asthma"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr assumed", "@", 1, "e.02", "Significant unstable medical condition other than asthma"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr assumed", "@", 1, "e.03", "History of life-threatening asthma requiring treatment with intubation and mechanical ventilation in the past 10 years"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr assumed", "@", 1, "e.04", "Pregnant or lactating"));	  
      
@@ -2371,7 +2371,7 @@ public class TestData_100120 : TestData_Base
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Vincristine", 14, "D000014750", "D000014750", "Vincristine"));
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Liposomal doxorubicin", 14, "C000506643", "C000506643", "Liposomal doxorubicin"));
 	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Sarcoma", 14, "D000012509", null, null));
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Sarcoma", 14, "D000012509", "2B5K", "Unspecified malignant soft tissue tumours or sarcomas of bone or articular cartilage of other or unspecified sites"));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Sarcoma, Ewing", 14, "D000012512", null, null));
             
 			sb = new StringBuilder("Sari N, Toğral G, Cetindağ MF, Güngör BS, Ilhan IE. ");
@@ -2494,7 +2494,7 @@ public class TestData_100120 : TestData_Base
             fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr assumed", "@", 1, "n.01", "Patients may be eligible for this study if they:"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr assumed", "@", 1, "n.02", "Are between the ages of 0 and 20 years (prior to their 21st birthday)"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr assumed", "@", 1, "n.03", "Are receiving their first living related (e.g.,kidney from a relative or unrelated donor) or cadaver donor transplant"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr assumed", "@", 1, "n.04", "Are willing to practice an acceptable method of birth control during the study, if women able to have children" +
+            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr assumed", "@", 1, "n.04", "Are willing to practice an acceptable method of birth control during the study, if women able to have children"));
             
             fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr assumed", "@", 1, "e.01", "Patients will not be eligible for this study if they:"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr assumed", "@", 1, "e.02", "Have received multiple organs"));	    
@@ -2729,7 +2729,7 @@ public class TestData_100120 : TestData_Base
 	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Recurrent C. Difficile Associated Diarrhea", null, null, "", ""));
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Recurrent C. Difficile Associated Diarrhea", null, null, null, null));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Diarrhea", 14, "D000003967", null, null));
 
 	        fs.relationships!.Add(new StudyRelationship(sd_sid, 23, "NCT03786900"));
@@ -2759,7 +2759,7 @@ public class TestData_100120 : TestData_Base
 	        fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr assumed", "@", 1, "e.08", "Requiring systemic antibiotic therapy for more than 7 days"));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr assumed", "@", 1, "e.09", "Actively taking Saccharomyces boulardii or other probiotic"));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr assumed", "@", 1, "e.10", "Severe underlying disease such that the patient is not expected to survive for one or more years or unstable medical condition requiring daily change in treatments"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr assumed", "@", 1, "e.11", "rolonged compromised immunity due to cytotoxic chemotherapy or HIV infection"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr assumed", "@", 1, "e.11", "Prolonged compromised immunity due to cytotoxic chemotherapy or HIV infection"));	       
 	        fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr assumed", "@", 1, "e.12", "Donors"));	 
 	        fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr assumed", "@", 1, "e.13", "Test positive for any of variables"));	       
 	        fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr assumed", "@", 1, "e.14", "History of any type of active cancer or autoimmune disease"));	    
@@ -2836,225 +2836,34 @@ public class TestData_100120 : TestData_Base
  
 	        // Study 
 	        
-	        string display_title = "Aldosterone Antagonist Therapy for Adults With Heart Failure and Preserved Systolic Function";
-	        StringBuilder sb = new StringBuilder("The purpose of this study is to evaluate the effectiveness of aldosterone antagonist therapy in reducing cardiovascular ");
-	        sb.Append("mortality, aborted cardiac arrest, and heart failure hospitalization in patients who have heart failure with preserved systolic function."); 
-	        string brief_desc = sb.ToString();
-	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2006, 8, 12, 21, "3445", 900,
-		        50, 17, null, null, 10);
+	        string display_title = "Effects of Co-administration of Canagliflozin 300 mg and Phentermine 15 mg With Placebo in the Treatment of Non-Diabetic Overweight and Obese Participants";
+	        string brief_desc = "The purpose of this study is to compare the effects of canagliflozin and phentermine to those of placebo to promote on a change in body weight over a 26 week period.";
+	       
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2014, 9, 12, 21, "335", 900,
+		        18, 17, 65, 17, 10);
 	        
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
-		        "Clinicaltrials.gov", null, "2004 Oct 15", null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "160", 14, null, 
-		        "HealthCore-NERI", null, null, null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HHSN268200425207C", 13, 100134, 
-		        "National Institutes of Health", "https://ror.org/01cwqze88", null, null));
+		        "Clinicaltrials.gov", null, "2016 Oct 6", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "CR103086", 14, 100773, "Janssen", null, null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "28431754OBE2002", 14, 100773, "Janssen", null, null, null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From Clinicaltrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist (TOPCAT)", 16, "en", 11, false, "From Clinicaltrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "TOPCAT", 14, "en", 11, false, "From Clinicaltrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, 
+		        "A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group Study to Investigate the Safety and Efficacy of the Co-administration of Canagliflozin 300 mg and Phentermine 15 mg Compared With Placebo for the Treatment of Non-diabetic Overweight and Obese Subjects",
+		        16, "en", 11, false, "From Clinicaltrials.gov"));
 	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Sonja M McKinlay", "New England Research Institutes, Inc", 
-		        null, "New England Research Institutes", null));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100773, "Janssen", null));
+	       
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // Phase 2
 	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "HealthCore-NERI", null));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100167, "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26"));
+	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "INVOKANA", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Canagliflozin", 14, "D000068896", "D000068896", "Canagliflozin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Phentermine", 14, "D000010645", "D000010645", "Phentermine"));
+	       
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Obesity", null, null, "5B81", "Obesity"));
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Overweight", 14, "D000050177", "5B80", "Overweight or localised adiposity"));
 
-	        fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
-	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 24, 515));   // 
-
-	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Diastolic Heart Failure", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Preserved Ejection Fraction", null, null, null, null));
-	        
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Spironolactone", 14, "D000013148", "D000013148", "Spironolactone"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Mineralocorticoid Receptor Antagonists", 14, "D000000451", "D000000451", "Mineralocorticoid Receptor Antagonists"));
-	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Heart Failure", 14, "D000006333", "B1-BD1", "Heart failure"));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Heart Diseases", 14, "D000006331", "11", "Diseases of the circulatory system"));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Cardiovascular Diseases", 14, "D000002318", "11", "Diseases of the circulatory system"));
-
-			sb = new StringBuilder("Shah SJ, Heitner JF, Sweitzer NK, Anand IS, Kim HY, Harty B, Boineau R, Clausell N, Desai AS, Diaz R, Fleg JL, Gordeev I, Lewis EF, Markov V, O’Meara E, Kobulia B, Shaburishvili T, Solomon SD, Pitt B, Pfeffer MA, Li R. B");
-			sb.Append("Baseline characteristics of patients in the treatment of preserved cardiac function heart failure with an aldosterone antagonist trial. ");
-			sb.Append("Circ Heart Fail. 2013 Mar;6(2):184-92. doi: 10.1161/CIRCHEARTFAILURE.112.972794. Epub 2012 Dec 20.");
-			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "23258572", null, null, null));
-
-			sb = new StringBuilder("Shah AM, Shah SJ, Anand IS, Sweitzer NK, O’Meara E, Heitner JF, Sopko G, Li G, Assmann SF, McKinlay SM, Pitt B, Pfeffer MA, Solomon SD; TOPCAT Investigators. ");
-			sb.Append("Cardiac structure and function in heart failure with preserved ejection fraction: baseline findings from the echocardiographic study of the Treatment of Preserved Cardiac Function Heart Failure with an Aldosterone Antagonist trial. ");
-			sb.Append("Circ Heart Fail. 2014 Jan;7(1):104-15. doi: 10.1161/CIRCHEARTFAILURE.113.000887. Epub 2013 Nov 18.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "24249049", null, null, null));
-
-			sb = new StringBuilder("Pitt B, Pfeffer MA, Assmann SF, Boineau R, Anand IS, Claggett B, Clausell N, Desai AS, Diaz R, Fleg JL, Gordeev I, Harty B, Heitner JF, Kenwood CT, Lewis EF, O’Meara E, Probstfield JL, Shaburishvili T, Shah SJ, Solomon SD, Sweitzer NK, Yang S, McKinlay SM; TOPCAT Investigators. ");
-			sb.Append("Spironolactone for heart failure with preserved ejection fraction. ");
-			sb.Append("N Engl J Med. 2014 Apr 10;370(15):1383-92. doi: 10.1056/NEJMoa1313731.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "24716680", null, null, null));
-
-			sb = new StringBuilder("Shah AM, Claggett B, Sweitzer NK, Shah SJ, Anand IS, O’Meara E, Desai AS, Heitner JF, Li G, Fang J, Rouleau J, Zile MR, Markov V, Ryabov V, Reis G, Assmann SF, McKinlay SM, Pitt B, Pfeffer MA, Solomon SD. ");
-			sb.Append("Cardiac structure and function and prognosis in heart failure with preserved ejection fraction: findings from the echocardiographic study of the Treatment of Preserved Cardiac Function Heart Failure with an Aldosterone Antagonist (TOPCAT) Trial. ");
-			sb.Append("Circ Heart Fail. 2014 Sep;7(5):740-51. doi: 10.1161/CIRCHEARTFAILURE.114.001583. Epub 2014 Aug 13.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "25122186", null, null, null));
-
-			sb = new StringBuilder("Pfeffer MA, Claggett B, Assmann SF, Boineau R, Anand IS, Clausell N, Desai AS, Diaz R, Fleg JL, Gordeev I, Heitner JF, Lewis EF, O’Meara E, Rouleau JL, Probstfield JL, Shaburishvili T, Shah SJ, Solomon SD, Sweitzer NK, McKinlay SM, Pitt B. ");
-			sb.Append("Regional variation in patients and outcomes in the Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist (TOPCAT) trial. ");
-			sb.Append("Circulation. 2015 Jan 6;131(1):34-42. doi: 10.1161/CIRCULATIONAHA.114.013255. Epub 2014 Nov 18.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "25406305", null, null, null));
-
-			sb = new StringBuilder("Myhre PL, Vaduganathan M, O’Meara E, Claggett BL, de Denus S, Jarolim P, Anand IS, Pitt B, Rouleau JL, Solomon SD, Pfeffer MA, Desai AS. ");
-			sb.Append("Mechanistic Effects of Spironolactone on Cardiovascular and Renal Biomarkers in Heart Failure With Preserved Ejection Fraction: A TOPCAT Biorepository Study. ");
-			sb.Append("Circ Heart Fail. 2020 Jan;13(1):e006638. doi: 10.1161/CIRCHEARTFAILURE.119.006638. Epub 2020 Jan 20.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31957468", null, null, null));
-
-			sb = new StringBuilder("Vardeny O, Claggett B, Vaduganathan M, Beldhuis I, Rouleau J, O’Meara E, Anand IS, Shah SJ, Sweitzer NK, Fang JC, Desai AS, Lewis EF, Pitt B, Pfeffer MA, Solomon SD; TOPCAT Investigators. ");
-			sb.Append("Influence of Age on Efficacy and Safety of Spironolactone in Heart Failure. ");
-			sb.Append("JACC Heart Fail. 2019 Dec;7(12):1022-1028. doi: 10.1016/j.jchf.2019.08.019.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31779923", null, null, null));
-
-			sb = new StringBuilder("Angraal S, Mortazavi BJ, Gupta A, Khera R, Ahmad T, Desai NR, Jacoby DL, Masoudi FA, Spertus JA, Krumholz HM. ");
-			sb.Append("Machine Learning Prediction of Mortality and Hospitalization in Heart Failure With Preserved Ejection Fraction. ");
-			sb.Append("JACC Heart Fail. 2020 Jan;8(1):12-21. doi: 10.1016/j.jchf.2019.06.013. Epub 2019 Oct 9.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31606361", null, null, null));
-
-			sb = new StringBuilder("Beale AL, Nanayakkara S, Kaye DM. I");
-			sb.Append("Impact of Sex on Ventricular-Vascular Stiffness and Long-Term Outcomes in Heart Failure With Preserved Ejection Fraction: TOPCAT Trial Substudy. ");
-			sb.Append("J Am Heart Assoc. 2019 Jul 2;8(13):e012190. doi: 10.1161/JAHA.119.012190. Epub 2019 Jun 22.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31230508", null, null, null));
-
-			sb = new StringBuilder("Selvaraj S, Claggett B, Shah SJ, Anand IS, Rouleau JL, Desai AS, Lewis EF, Vaduganathan M, Wang SY, Pitt B, Sweitzer NK, Pfeffer MA, Solomon SD. ");
-			sb.Append("Utility of the Cardiovascular Physical Examination and Impact of Spironolactone in Heart Failure With Preserved Ejection Fraction. ");
-			sb.Append("Circ Heart Fail. 2019 Jul;12(7):e006125. doi: 10.1161/CIRCHEARTFAILURE.119.006125. Epub 2019 Jun 21.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31220936", null, null, null));
-
-			sb = new StringBuilder("Neefs J, van den Berg NWE, Krul SPJ, Boekholdt SM, de Groot JR. ");
-			sb.Append("Effect of Spironolactone on Atrial Fibrillation in Patients with Heart Failure with Preserved Ejection Fraction: Post-Hoc Analysis of the Randomized, Placebo-Controlled TOPCAT Trial. ");
-			sb.Append("Am J Cardiovasc Drugs. 2020 Feb;20(1):73-80. doi: 10.1007/s40256-019-00353-5.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31214914", null, null, null));
-
-			sb = new StringBuilder("Kristensen SL, Mogensen UM, Jhund PS, Rørth R, Anand IS, Carson PE, Desai AS, Pitt B, Pfeffer MA, Solomon SD, Zile MR, Køber L, McMurray JJV. ");
-			sb.Append("N-Terminal Pro-B-Type Natriuretic Peptide Levels for Risk Prediction in Patients With Heart Failure and Preserved Ejection Fraction According to Atrial Fibrillation Status. ");
-			sb.Append("Circ Heart Fail. 2019 Mar;12(3):e005766. doi: 10.1161/CIRCHEARTFAILURE.118.005766.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30871349", null, null, null));
-
-			sb = new StringBuilder("Merrill M, Sweitzer NK, Lindenfeld J, Kao DP. ");
-			sb.Append("Sex Differences in Outcomes and Responses to Spironolactone in Heart Failure With Preserved Ejection Fraction: A Secondary Analysis of TOPCAT Trial. ");
-			sb.Append("JACC Heart Fail. 2019 Mar;7(3):228-238. doi: 10.1016/j.jchf.2019.01.003.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30819379", null, null, null));
-
-			sb = new StringBuilder("Myhre PL, O’Meara E, Claggett BL, de Denus S, Jarolim P, Anand IS, Beldhuis IE, Fleg JL, Lewis E, Pitt B, Rouleau JL, Solomon SD, Pfeffer MA, Desai AS. ");
-			sb.Append("Cardiac Troponin I and Risk of Cardiac Events in Patients With Heart Failure and Preserved Ejection Fraction. ");
-			sb.Append("Circ Heart Fail. 2018 Nov;11(11):e005312. doi: 10.1161/CIRCHEARTFAILURE.118.005312.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30571192", null, null, null));
-
-			sb = new StringBuilder("Selvaraj S, Claggett B, Shah SJ, Anand I, Rouleau JL, O’Meara E, Desai AS, Lewis EF, Pitt B, Sweitzer NK, Fang JC, Pfeffer MA, Solomon SD. ");
-			sb.Append("Prognostic Value of Albuminuria and Influence of Spironolactone in Heart Failure With Preserved Ejection Fraction. ");
-			sb.Append("Circ Heart Fail. 2018 Nov;11(11):e005288. doi: 10.1161/CIRCHEARTFAILURE.118.005288.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30571191", null, null, null));
-
-			sb = new StringBuilder("Myhre PL, Vaduganathan M, Claggett BL, Anand IS, Sweitzer NK, Fang JC, O’Meara E, Shah SJ, Desai AS, Lewis EF, Rouleau J, Pitt B, Pfeffer MA, Solomon SD. ");
-			sb.Append("Association of Natriuretic Peptides With Cardiovascular Prognosis in Heart Failure With Preserved Ejection Fraction: Secondary Analysis of the TOPCAT Randomized Clinical Trial. ");
-			sb.Append("JAMA Cardiol. 2018 Oct 1;3(10):1000-1005. doi: 10.1001/jamacardio.2018.2568.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30140899", null, null, null));
-
-			sb = new StringBuilder("Cikes M, Claggett B, Shah AM, Desai AS, Lewis EF, Shah SJ, Anand IS, O’Meara E, Rouleau JL, Sweitzer NK, Fang JC, Saksena S, Pitt B, Pfeffer MA, Solomon SD. ");
-			sb.Append("Atrial Fibrillation in Heart Failure With Preserved Ejection Fraction: The TOPCAT Trial. ");
-			sb.Append("JACC Heart Fail. 2018 Aug;6(8):689-697. doi: 10.1016/j.jchf.2018.05.005. Epub 2018 Jul 11.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30007557", null, null, null));
-
-			sb = new StringBuilder("Lewis EF, Claggett B, Shah AM, Liu J, Shah SJ, Anand I, O’Meara E, Sweitzer NK, Rouleau JL, Fang JC, Desai AS, Retta TM, Solomon SD, Heitner JF, Stamos TD, Boineau R, Pitt B, Pfeffer MA. ");
-			sb.Append("Racial Differences in Characteristics and Outcomes of Patients With Heart Failure and Preserved Ejection Fraction in the Treatment of Preserved Cardiac Function Heart Failure Trial. ");
-			sb.Append("Circ Heart Fail. 2018 Mar;11(3):e004457. doi: 10.1161/CIRCHEARTFAILURE.117.004457.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29664406", null, null, null));
-
-			sb = new StringBuilder("Vaduganathan M, Claggett BL, Chatterjee NA, Anand IS, Sweitzer NK, Fang JC, O’Meara E, Shah SJ, Hegde SM, Desai AS, Lewis EF, Rouleau J, Pitt B, Pfeffer MA, Solomon SD. ");
-			sb.Append("Sudden Death in Heart Failure With Preserved Ejection Fraction: A Competing Risks Analysis From the TOPCAT Trial. ");
-			sb.Append("JACC Heart Fail. 2018 Aug;6(8):653-661. doi: 10.1016/j.jchf.2018.02.014. Epub 2018 Mar 4.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29501806", null, null, null));
-
-			sb = new StringBuilder("Rossignol P, Claggett BL, Liu J, Vardeny O, Pitt B, Zannad F, Solomon S. ");
-			sb.Append("Spironolactone and Resistant Hypertension in Heart Failure With Preserved Ejection Fraction. ");
-			sb.Append("Am J Hypertens. 2018 Mar 10;31(4):407-414. doi: 10.1093/ajh/hpx210.'");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29228101", null, null, null));
-
-			sb = new StringBuilder("Selvaraj S, Claggett B, Shah SJ, Anand I, Rouleau JL, Desai AS, Lewis EF, Pitt B, Sweitzer NK, Pfeffer MA, Solomon SD. ");
-			sb.Append("Systolic blood pressure and cardiovascular outcomes in heart failure with preserved ejection fraction: an analysis of the TOPCAT trial. ");
-			sb.Append("Eur J Heart Fail. 2018 Mar;20(3):483-490. doi: 10.1002/ejhf.1060. Epub 2017 Nov 16.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29148144", null, null, null));
-
-			sb = new StringBuilder("Pokharel Y, Khariton Y, Tang Y, Nassif ME, Chan PS, Arnold SV, Jones PG, Spertus JA. ");
-			sb.Append("Association of Serial Kansas City Cardiomyopathy Questionnaire Assessments With Death and Hospitalization in Patients With Heart Failure With Preserved and Reduced Ejection Fraction: A Secondary Analysis of 2 Randomized Clinical Trials. ");
-			sb.Append("JAMA Cardiol. 2017 Dec 1;2(12):1315-1321. doi: 10.1001/jamacardio.2017.3983. Erratum in: JAMA Cardiol. 2018 Feb 1;3(2):181.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29094152", null, null, null));
-
-			sb = new StringBuilder("Hegde SM, Claggett B, Shah AM, Lewis EF, Anand I, Shah SJ, Sweitzer NK, Fang JC, Pitt B, Pfeffer MA, Solomon SD. ");
-			sb.Append("Physical Activity and Prognosis in the TOPCAT Trial (Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist). ");
-			sb.Append("Circulation. 2017 Sep 12;136(11):982-992. doi: 10.1161/CIRCULATIONAHA.117.028002. Epub 2017 Jun 21.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "28637881", null, null, null));
-				
-			sb = new StringBuilder("Anand IS, Claggett B, Liu J, Shah AM, Rector TS, Shah SJ, Desai AS, O’Meara E, Fleg JL, Pfeffer MA, Pitt B, Solomon SD. ");
-			sb.Append("Interaction Between Spironolactone and Natriuretic Peptides in Patients With Heart Failure and Preserved Ejection Fraction: From the TOPCAT Trial. ");
-			sb.Append("JACC Heart Fail. 2017 Apr;5(4):241-252. doi: 10.1016/j.jchf.2016.11.015.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "28359411", null, null, null));
-
-			sb = new StringBuilder("Biering-Sørensen T, Shah SJ, Anand I, Sweitzer N, Claggett B, Liu L, Pitt B, Pfeffer MA, Solomon SD, Shah AM. ");
-			sb.Append("Prognostic importance of left ventricular mechanical dyssynchrony in heart failure with preserved ejection fraction. ");
-			sb.Append("Eur J Heart Fail. 2017 Aug;19(8):1043-1052. doi: 10.1002/ejhf.789. Epub 2017 Mar 21.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "28322009", null, null, null));
-
-			sb = new StringBuilder("Santos AB, Roca GQ, Claggett B, Sweitzer NK, Shah SJ, Anand IS, Fang JC, Zile MR, Pitt B, Solomon SD, Shah AM. ");
-			sb.Append("Prognostic Relevance of Left Atrial Dysfunction in Heart Failure With Preserved Ejection Fraction. ");
-			sb.Append("Circ Heart Fail. 2016 Apr;9(4):e002763. doi: 10.1161/CIRCHEARTFAILURE.115.002763.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "27056882", null, null, null));
-
-			sb = new StringBuilder("Joseph J, Claggett BC, Anand IS, Fleg JL, Huynh T, Desai AS, Solomon SD, O’Meara E, Mckinlay S, Pitt B, Pfeffer MA, Lewis EF. ");
-			sb.Append("QRS Duration Is a Predictor of Adverse Outcomes in Heart Failure With Preserved Ejection Fraction. ");
-			sb.Append("JACC Heart Fail. 2016 Jun;4(6):477-86. doi: 10.1016/j.jchf.2016.02.013. Epub 2016 Mar 30.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "27039126", null, null, null));
-
-			sb = new StringBuilder("Lewis EF, Kim HY, Claggett B, Spertus J, Heitner JF, Assmann SF, Kenwood CT, Solomon SD, Desai AS, Fang JC, McKinlay SA, Pitt BA, Pfeffer MA; TOPCAT Investigators. ");
-			sb.Append("Impact of Spironolactone on Longitudinal Changes in Health-Related Quality of Life in the Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist Trial. ");
-			sb.Append("Circ Heart Fail. 2016 Mar;9(3):e001937. doi: 10.1161/CIRCHEARTFAILURE.114.001937.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "26962133", null, null, null));
-
-			sb = new StringBuilder("Shah AM, Claggett B, Sweitzer NK, Shah SJ, Deswal A, Anand IS, Fleg JL, Pitt B, Pfeffer MA, Solomon SD. ");
-			sb.Append("Prognostic Importance of Changes in Cardiac Structure and Function in Heart Failure With Preserved Ejection Fraction and the Impact of Spironolactone. ");
-			sb.Append("Circ Heart Fail. 2015 Nov;8(6):1052-8. doi: 10.1161/CIRCHEARTFAILURE.115.002249. Epub 2015 Oct 16.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "26475142", null, null, null));
-
-			sb = new StringBuilder("Solomon SD, Claggett B, Lewis EF, Desai A, Anand I, Sweitzer NK, O’Meara E, Shah SJ, McKinlay S, Fleg JL, Sopko G, Pitt B, Pfeffer MA; TOPCAT Investigators. ");
-			sb.Append("Influence of ejection fraction on outcomes and efficacy of spironolactone in patients with heart failure with preserved ejection fraction. ");
-			sb.Append("Eur Heart J. 2016 Feb 1;37(5):455-62. doi: 10.1093/eurheartj/ehv464. Epub 2015 Sep 15.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "26374849", null, null, null));
-
-			sb = new StringBuilder("Shah AM, Claggett B, Sweitzer NK, Shah SJ, Anand IS, Liu L, Pitt B, Pfeffer MA, Solomon SD. ");
-			sb.Append("Prognostic Importance of Impaired Systolic Function in Heart Failure With Preserved Ejection Fraction and the Impact of Spironolactone. ");
-			sb.Append("Circulation. 2015 Aug 4;132(5):402-14. doi: 10.1161/CIRCULATIONAHA.115.015884. Epub 2015 Jun 30.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "26130119", null, null, null));
-				
-			sb = new StringBuilder("Borlaug BA, Lewis GD, McNulty SE, Semigran MJ, LeWinter M, Chen H, Lin G, Deswal A, Margulies KB, Redfield MM. ");
-			sb.Append("Effects of sildenafil on ventricular and vascular function in heart failure with preserved ejection fraction. ");
-			sb.Append("Circ Heart Fail. 2015 May;8(3):533-41. doi: 10.1161/CIRCHEARTFAILURE.114.001915. Epub 2015 Mar 17.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "25782985", null, null, null));
-
-			sb = new StringBuilder("Hamo CE, Heitner JF, Pfeffer MA, Kim HY, Kenwood CT, Assmann SF, Solomon SD, Boineau R, Fleg JL, Spertus JA, Lewis EF. ");
-			sb.Append("Baseline distribution of participants with depression and impaired quality of life in the Treatment of Preserved Cardiac Function Heart Failure with an Aldosterone Antagonist Trial. ");
-			sb.Append("Circ Heart Fail. 2015 Mar;8(2):268-77. doi: 10.1161/CIRCHEARTFAILURE.114.001838. Epub 2015 Feb 3.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "25648577", null, null, null));
-
-			sb = new StringBuilder("Mak GJ, Ledwidge MT, Watson CJ, Phelan DM, Dawkins IR, Murphy NF, Patle AK, Baugh JA, McDonald KM. ");
-			sb.Append("Natural history of markers of collagen turnover in patients with early diastolic dysfunction and impact of eplerenone. ");
-			sb.Append("J Am Coll Cardiol. 2009 Oct 27;54(18):1674-82. doi: 10.1016/j.jacc.2009.08.021.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "19850207", null, null, null));
-
-			fs.studylinks!.Add(new StudyLink(sd_sid, "Link to PubMed Identification (ID) #22137068 publication in the American Heart Journal", "http://www.ahjonline.com/article/S0002-8703%2811%2900688-0/abstract"));
-			fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #23258572 publication in Circulation: Heart Failure", "http://circheartfailure.ahajournals.org/content/6/2/184.long"));
-			fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #24249049 publication in Circulation: Heart Failure", "http://circheartfailure.ahajournals.org/content/7/1/104.long"));
-			fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #24716680 publication in the New England Journal of Medicine", "http://www.nejm.org/doi/full/10.1056/NEJMoa1313731"));
-			fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #25122186 publication in Circulation: Heart Failure", "http://circheartfailure.ahajournals.org/content/7/5/740.long"));
-            fs.studylinks.Add(new StudyLink(sd_sid, "Link to PubMed ID #25406305 publication in Circulation", "http://circ.ahajournals.org/content/early/2014/11/18/CIRCULATIONAHA.114.013255.long"));
-
-            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr assumed", "@", 1, "n.01", "Must have BMI >=30 kg/m2 and <50 kg/m2 at screening or BMI >=27 kg/m2 and <50 kg/m2 at screening in the presence of a comorbidity of hypertension and/or dyslipidemia"));	       
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr assumed", "@", 1, "n.01", "Must have BMI >=30 kg/m2 and <50 kg/m2 at screening or BMI >=27 kg/m2 and <50 kg/m2 at screening in the presence of a comorbidity of hypertension and/or dyslipidemia"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr assumed", "@", 1, "n.02", "Must have stable weight, ie, change of < =5% in the 3 months before screening"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr assumed", "@", 1, "n.03", "Must agree to utilize a highly effective method of birth control"));	    
 	        
@@ -3087,13 +2896,13 @@ public class TestData_100120 : TestData_Base
             StudyDataObject sdo = CreateEmptyStudyDataObject();
 	        
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-	            null, 9, 2004, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	            null, 9, 2014, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2004 Oct 15 (est.)", 2004, 10, 15, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2015 Mar 2 (est.)", 2015, 3, 2, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2014 Sep 14 (est.)", 2014, 9, 14, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2016 Oct 6 (est.)", 2016, 10, 6, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
             
@@ -3104,18 +2913,19 @@ public class TestData_100120 : TestData_Base
             sdo = CreateEmptyStudyDataObject();
 			
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
-	            null, 9, 2015, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	            null, 9, 2016, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://clinicaltrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2015 Mar 2 (est.)", 2015, 3, 2, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2015 Mar 2 (est.)", 2015, 3, 2, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2016 Oct 6 (est.)", 2016, 10, 6, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2016 Oct 6 (est.)", 2016, 10, 6, null, null, null, null));
 
             fs.data_objects!.Add(sdo);
 
             return fs;
         }
+        
         
         if (sd_sid == "NCT02441309")
         {
@@ -3315,7 +3125,7 @@ public class TestData_100120 : TestData_Base
 		    fs.topics.Add(new StudyTopic(sd_sid, 12, "Proton Pump Inhibitors", 14, "D000054328", "D000054328", "Proton Pump Inhibitors"));
 		    
 		    fs.conditions!.Add(new StudyCondition(sd_sid, "Squamous Cell Carcinoma of the Oral Cavity", null, null, "", ""));
-		    fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma", 14, "D000002277", null, null));
+		    fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma", 14, "D000002277", "2", "Neoplasms"));
 		    fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma, Squamous Cell", 14, "D000002294", "2C31", "Squamous cell carcinoma of skin"));
 	        
             sb = new StringBuilder("Wolf GT, Liu S, Bellile E, Sartor M, Rozek L, Thomas D, Nguyen A, Zarins K, McHugh JB; ");
@@ -3388,7 +3198,6 @@ public class TestData_100120 : TestData_Base
             fs.sites.Add(new StudyLocation(sd_sid, null, "Monter Cancer Center - North Shore LIJ", null, null, "New Hyde Park", 6252001, "United States", null));
             fs.sites.Add(new StudyLocation(sd_sid, null, "Lenox Hill Hospital", null, null, "New York", 6252001, "United States", null));
 	        
-
 	        // Data Objects
 
 	        // 1) Trial registry entry
@@ -3405,7 +3214,7 @@ public class TestData_100120 : TestData_Base
 		        "https://clinicaltrials.gov/study/" + sd_sid, true, 39, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2015 Nov 20 (est.)", 2015, 11, 20, null, null,
 		        null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2020 Aug 12", 2020, 8, 12, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2023 May 9", 2023, 5, 9, null, null, null, null));
 
 	        fs.data_objects!.Add(sdo);
 

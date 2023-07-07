@@ -60,8 +60,31 @@ public class TestData_101989 : TestData_Base
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 502));   // 
 
             fs.conditions!.Add(new StudyCondition(sd_sid, "Patients with Non-Small Cell Lung Cancer", null, null, null, null));
-            fs.conditions.Add(new StudyCondition(sd_sid, "NSCLC", null, null, null, null));
-  
+            fs.conditions.Add(new StudyCondition(sd_sid, "NSCLC", null, null, "2C25", "Malignant neoplasms of bronchus or lung"));
+            
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "•", 1, "n.01", "Histologically confirmed locally advanced stage IIIB or stage IV NSCLC for treatment in the first-line setting"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "•", 1, "n.02", "Known PD-L1 status determined by a Novartis designated central laboratory. A newly obtained tissue biopsy or an archival biopsy (block or slides) is required for PD-L1 determination (PD-L1 IHC 22C3 pharmDx assay), prior to study randomization. Note: For the safety run-in part, known PD-L1 status is not required."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "•", 1, "n.03", "Eastern Cooperative oncology group (ECOG) performance status of 0 or 1."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "•", 1, "n.04", "At least 1 measurable lesion by RECIST 1.1"));	    
+	        
+            fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "•", 1, "e.01", "Previous immunotherapy (e.g. anti-PD-1, anti-PD-L1, anti-PD-L2, anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or immune checkpoint pathways)."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "•", 1, "e.02", "Prior treatment with canakinumab or drugs of a similar mechanism of action (IL-1ß inhibitor)."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "•", 1, "e.03", "Subjects with epidermal growth factor receptor (EGFR) sensitizing mutations (identified in exons 19, 20, or 21), and/or ALK rearrangement by locally approved laboratory testing."));
+            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "•", 1, "e.04", "Previously untreated or symptomatic central nervous system (CNS) metastases or lepto-meningeal disease."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "•", 1, "e.05", "Subject with suspected or proven immune-compromised state or infections."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "•", 1, "e.06", "Subject has prior to starting study drug: received live vaccination =3 months, had major surgery =4 weeks prior to starting study drug, has thoracic radiotherapy: lung fields = 4 weeks, other anatomic sites = 2 weeks, palliative radiotherapy for bone lesions = 2 weeks."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "•", 1, "e.07", "Other protocol-defined inclusion/exclusion criteria may apply."));	   
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 272103, "Lebanon", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 6251999, "Canada", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3017382, "France", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2629691, "Iceland", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1861060, "Japan", null));
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2658434, "Switzerland", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2510769, "Spain", null));
+            
 			// Data Objects
 				        
 			// 1) Trial registry entry
@@ -78,7 +101,7 @@ public class TestData_101989 : TestData_Base
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101989, "Lebanon Clinical Trials Registry", 
 				"https://lbctr.moph.gov.lb/Trials/Details/4971", true, 35, null, null, null));
 			sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2022 Jan 4", 2022, 1, 4, null, null, null, null));
-			sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Mar 8", 2022, 3, 8, null, null, null, null));
+			sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2023 Apr 3", 2022, 4, 3, null, null, null, null));
 				       
 			fs.data_objects!.Add(sdo);
 	

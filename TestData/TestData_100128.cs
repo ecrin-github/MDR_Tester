@@ -42,44 +42,40 @@ public class TestData_100128 : TestData_Base
               fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100163, "GlaxoSmithKline", "https://ror.org/01xsqw823"));
               fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 100163, "GlaxoSmithKline", "https://ror.org/01xsqw823"));
               
+              fs.iec!.Add(new StudyIEC(sd_sid, 1, 301, "cr", "none", 1, "n.00", "All subjects must satisfy ALL the following criteria at study entry:"));	
+              fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "¿", 1, "n.01", "A male or female infant aged between 8 and 12 weeks inclusive at the time of first vaccination"));	
+              fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "¿", 1, "n.02", "Signed or thumb-printed informed consent obtained from the parent(s)/Legally Acceptable Representative [LAR(s)] of the child. Where parent(s)/LAR(s) are illiterate, the consent form will be countersigned by an independent witness"));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "¿", 1, "n.03", "Subjects who the investigator believes that their parent(s)/LAR(s) can and will comply with the requirements of the protocol"));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "¿", 1, "n.04", "Healthy subjects as established by medical history and clinical examination before entering into the study"));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "¿", 1, "n.05", "Born to a mother who is Hepatitis B surface antigen (HBsAg) negative"));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "¿", 1, "n.06", "Born to a mother who is Human Immunodeficiency Virus (HIV) negative"));	
+              fs.iec.Add(new StudyIEC(sd_sid, 8, 1, "cr", "¿", 1, "n.07", "Born after a normal gestation period of 36 to 42 weeks inclusive."));	
               
-				/*
-  
-  "inclusion_criteria": 
-  "All subjects must satisfy ALL the following criteria at study entry:
-  \n¿A male or female infant aged between 8 and 12 weeks inclusive at the time of first vaccination
-  \n¿Signed or thumb-printed informed consent obtained from the parent(s)/Legally Acceptable Representative [LAR(s)] of the child. Where parent(s)/LAR(s) are illiterate, the consent form will be countersigned by an independent witness
-  \n¿Subjects who the investigator believes that their parent(s)/LAR(s) can and will comply with the requirements of the protocol
-  \n¿Healthy subjects as established by medical history and clinical examination before entering into the study
-  \n¿Born to a mother who is Hepatitis B surface antigen (HBsAg) negative
-  \n¿Born to a mother who is Human Immunodeficiency Virus (HIV) negative
-  \n¿Born after a normal gestation period of 36 to 42 weeks inclusive.\n",
-  "exclusion_criteria": 
-  "The following criteria should be checked at the time of study entry. If ANY exclusion criterion applies, the subject must not be included in the study:
-  \n¿Child in care\n¿Acute disease and/or fever at the time of enrolment
-  \n¿Serious acute or chronic illness determined by clinical or physical examination and laboratory screening tests
-  \n¿Laboratory screening tests out of range\n¿Previous vaccination with diphtheria, tetanus, pertussis, Haemophilus influenzae type b, Streptococcus pneumoniae, hepatitis B vaccine or rotavirus vaccines.
-  \n¿Planned administration/administration of a licensed vaccine not foreseen by the study protocol within 7 days of the first dose of study vaccine.
-  \n¿Use of a drug or vaccine that is not approved for that indication other than the study vaccines within 30 days preceding the first dose of study vaccine, or planned use during the study period.
-  \n¿Administration of immunoglobulins and/or any blood products in the period between birth and Dose 1 and within the three months preceding planned vaccine administration during the study period.
-  \n¿Chronic administration of immunosuppressants or other immune-modifying drugs in the period between birth and Dose 1.
-  \n¿Concurrently participating in another clinical study at any time during the study period, in which the subject has been or will be exposed to an investigational or a non-investigational product.
-  \n¿Same sex twin\n¿Maternal death\n¿History of allergic reactions or anaphylaxis to previous immunizations.
-  \n¿History of allergic disease or reactions likely to be exacerbated by any component of the vaccine.
-  \n¿Any other findings that the investigator feels would increase the risk of having an adverse outcome from participation in the trial.
-  \n¿Any other findings that the investigator feels would result in data collected being incomplete or of poor quality.
-  \n¿Previous participation in any other malaria vaccine trial.\n",
-  
-  ],
-
-				 */
-                
+              fs.iec.Add(new StudyIEC(sd_sid, 9, 302, "cr", "none", 1, "e.00", "The following criteria should be checked at the time of study entry. If ANY exclusion criterion applies, the subject must not be included in the study:"));	       
+              fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "¿", 1, "e.01", "Child in care"));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "¿", 1, "e.02", "Acute disease and/or fever at the time of enrolment"));
+              fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "¿", 1, "e.03", "Serious acute or chronic illness determined by clinical or physical examination and laboratory screening tests"));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "¿", 1, "e.04", "Laboratory screening tests out of range"));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "¿", 1, "e.05", "Previous vaccination with diphtheria, tetanus, pertussis, Haemophilus influenzae type b, Streptococcus pneumoniae, hepatitis B vaccine or rotavirus vaccines."));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "¿", 1, "e.06", "Planned administration/administration of a licensed vaccine not foreseen by the study protocol within 7 days of the first dose of study vaccine."));	   
+              fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "¿", 1, "e.07", "Use of a drug or vaccine that is not approved for that indication other than the study vaccines within 30 days preceding the first dose of study vaccine, or planned use during the study period."));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "¿", 1, "e.08", "Administration of immunoglobulins and/or any blood products in the period between birth and Dose 1 and within the three months preceding planned vaccine administration during the study period."));
+              fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr", "¿", 1, "e.09", "Chronic administration of immunosuppressants or other immune-modifying drugs in the period between birth and Dose 1."));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "cr", "¿", 1, "e.10", "Concurrently participating in another clinical study at any time during the study period, in which the subject has been or will be exposed to an investigational or a non-investigational product."));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "cr", "¿", 1, "e.11", "Same sex twin"));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "cr", "¿", 1, "e.12", "Maternal death"));	   
+              fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr", "¿", 1, "e.13", "History of allergic reactions or anaphylaxis to previous immunizations."));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "¿", 1, "e.14", "History of allergic disease or reactions likely to be exacerbated by any component of the vaccine."));
+              fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "¿", 1, "e.15", "Any other findings that the investigator feels would increase the risk of having an adverse outcome from participation in the trial."));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "¿", 1, "e.16", "Any other findings that the investigator feels would result in data collected being incomplete or of poor quality."));	    
+              fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "¿", 1, "e.17", "Previous participation in any other malaria vaccine trial."));	    
+   
             fs.features!.Add(new (sd_sid, 22, 205));  //  Randomised
             fs.features.Add(new (sd_sid, 23, 305));  //  Parallel assignment
             
-            fs.conditions!.Add(new StudyCondition(sd_sid, "Malaria", null, null, null, null));
+            fs.conditions!.Add(new StudyCondition(sd_sid, "Malaria", null, null, "B2-1F4", "Malaria"));
             fs.conditions.Add(new StudyCondition(sd_sid, "Paediatrics", null, null, null, null));
-            fs.conditions.Add(new StudyCondition(sd_sid, "Hepatitis B", null, null, null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, "Hepatitis B", null, null, "B1-1E5", "Viral hepatitis"));
             
             fs.countries!.Add(new StudyCountry(sd_sid, 2300660, "Ghana", null));
             fs.countries.Add(new StudyCountry(sd_sid, 2361809, "Burkina Faso", null));
@@ -163,22 +159,18 @@ public class TestData_100128 : TestData_Base
 	            "National Institute for Health Research and the Wellcome through the Wellcome International Training Fellowship Scheme", 
 	            null));
             
-				/*
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "•", 1, "n.01", "Infants from 2.5 months (10 weeks) whose parent/guardian has provided informed consent"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "•", 1, "n.02", "No symptoms of malaria at the time of recruitment"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "•", 1, "n.03", "Parent or guardian willing to adhere to study procedures including infant follow-up"));	    
+	        
+            fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "", "•", 1, "e.01", "Known allergy or contraindication to any study drugs"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "", "•", 1, "e.02", "Known HIV exposure"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "", "•", 1, "e.03", "Pre-existing medical history of significant comorbidities that may influence drug exposure, e.g. renal, liver, gastrointestinal or cardiac diseases"));
+            fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "", "•", 1, "e.04", "Severe anaemia (haemoglobin (Hb) <7 g/dL)"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "", "•", 1, "e.05", "Infant (breastfeeding mother) on medications that are known to have clinically significant interactions with DP"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "", "•", 1, "e.06", "Participation in another clinical trial"));	    
  
-  "inclusion_criteria": 
-  \n•Infants from 2.5 months (10 weeks) whose parent/guardian has provided informed consent 
-  \n•No symptoms of malaria at the time of recruitment
-  \n•Parent or guardian willing to adhere to study procedures including infant follow-up",
-  
-  "exclusion_criteria": 
-  \n•Known allergy or contraindication to any study drugs \n•Known HIV exposure 
-  \n•Pre-existing medical history of significant comorbidities that may influence drug exposure, e.g. renal, liver, gastrointestinal or cardiac diseases  
-  \n•Severe anaemia (haemoglobin (Hb) <7 g/dL)
-  \n•Infant (breastfeeding mother) on medications that are known to have clinically significant interactions with DP
-  \n•Participation in another clinical trial \n",
-   * 
- */
-            fs.conditions!.Add(new StudyCondition(sd_sid, "Malaria", null, null, null, null));
+            fs.conditions!.Add(new StudyCondition(sd_sid, "Malaria", null, null, "B2-1F4", "Malaria"));
             fs.conditions.Add(new StudyCondition(sd_sid, "Paediatrics", null, null, null, null));
                 
             fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // Phase 3

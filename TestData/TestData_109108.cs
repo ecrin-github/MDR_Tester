@@ -47,30 +47,24 @@ public class TestData_109108 : TestData_Base
 				"National clinical research base construction project of the national administration of traditional Chinese medicine", 
 				null));
 
-				/*
-				 * 
-  "inclusion_criteria": 
-  "1. Patient diagnosed to be cerebral hemorrhagic stroke and confirmed by CT;
-  \n2. Age 35 to 80 years;
-  \n3. The stroke onset time is within 24-72h;
-  \n4. Patients receive conservative treatment of conventional medicine;
-  \n5. Glasgow Coma Score > 6 points;
-  \n6. The modified Rankin Scale Score before the onset is 0 to 1 point;
-  \n7. Inform-consented",
-  "exclusion_criteria": 
-  "1. Confirmed cerebral hemorrhage that is caused by brain tumor, blood disease, brain trauma (or postoperative);
-  \n2. Patients with coma or patients with cerebral hernia at the onset of the cerebral hemorrhage;
-  \n3. Those who cannot take the study drug by orall or nasal feeding because of gastrointestinal bleeding;
-  \n4. Patients need emergency surgery;
-  \n5. Patients with subarachnoid hemorrhage;
-  \n6. Women who are pregnant or lactating;
-  \n7. Patients with severe primary diseases such as cardiovascular, hepatic, renal and hematopoietic systems diseases, and mental diseases. Patients with abnormal (doubled level) conventional coagulation examinations, liver function and kidney function.
-  \n8. Allergic constitution or known allergy to alcohol or ingredients of Chinese medicine BSR. 
-  \n9. Hemorrhagic stroke induced by taking anticoagulant drugs;
-  \n10. Patients who participated in other clinical trials in the recent 3 months.",
- 
-  ],
-				 */
+			fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Patient diagnosed to be cerebral hemorrhagic stroke and confirmed by CT;"));	       
+			fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Age 35 to 80 years"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "The stroke onset time is within 24-72h;"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "4.", 1, "n.04", "Patients receive conservative treatment of conventional medicine;"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "5.", 1, "n.05", "Glasgow Coma Score > 6 points;"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "6.", 1, "n.06", "The modified Rankin Scale Score before the onset is 0 to 1 point;"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "7.", 1, "n.07", "Inform-consented"));	    
+			
+			fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "", 1, "e.01", "Confirmed cerebral hemorrhage that is caused by brain tumor, blood disease, brain trauma (or postoperative);"));	       
+			fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "", 1, "e.02", "Patients with coma or patients with cerebral hernia at the onset of the cerebral hemorrhage;"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "", 1, "e.03", "Those who cannot take the study drug by orall or nasal feeding because of gastrointestinal bleeding;"));
+			fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "", 1, "e.04", "Patients need emergency surgery;"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "", 1, "e.05", "Patients with subarachnoid hemorrhage;"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "", 1, "e.06", "Women who are pregnant or lactating;"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "", 1, "e.07", "Patients with severe primary diseases such as cardiovascular, hepatic, renal and hematopoietic systems diseases, and mental diseases. Patients with abnormal (doubled level) conventional coagulation examinations, iver function and kidney function."));	   
+			fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "", 1, "e.08", "Allergic constitution or known allergy to alcohol or ingredients of Chinese medicine BSR."));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "", 1, "e.09", "Hemorrhagic stroke induced by taking anticoagulant drugs;"));	    
+			fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "", 1, "e.10", "Patients who participated in other clinical trials in the recent 3 months."));	   
 				
 			fs.conditions!.Add(new StudyCondition(sd_sid, "Acute Cerebral Hemorrhage", null, null, null, null));
 			

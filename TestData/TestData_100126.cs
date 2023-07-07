@@ -52,14 +52,27 @@ public class TestData_100126 : TestData_Base
 	        
 	        fs.references!.Add(new StudyReference(sd_sid, "http://www.ncbi.nlm.nih.gov/pubmed/20397811", 
 		        "20397811", "2010 results in ", null, ""));
-
-	        // countries
-            
-	        // iec
-	        /*
-     *
-     * 
-     */
+	        
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 301, "cr", "none", 1, "n.00", "Pre-screening criteria:"));	  
+	        fs.iec!.Add(new StudyIEC(sd_sid, 2, 1, "cr", "1.", 1, "n.01", "Diagnosis of COPD: forced expiratory volume in 1 second (FEV1) <50% predicted, FEV1/forced vital capacity (FVC) ratio <70%, total lung capacity (TLC) >80% predicted"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "2.", 1, "n.02", "Smoking history >20 pack years"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "3.", 1, "n.03", "Prior to commencing NIPPV hypercapnic ventilatory failure with daytime PaCO2 >7.5 kPa with normal pH (7.35-7.45) or nocturnal PtcCO2 >9 kPa"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "4.", 1, "n.04", "On NIPPV for at least 3 months with compliance of >4 hours/day"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "5.", 1, "n.05", "Live within 40-mile radius of trust"));	  
+	        fs.iec!.Add(new StudyIEC(sd_sid, 7, 301, "cr", "none", 1, "n.06", "Screening criteria:"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 1, "cr", "1.", 1, "n.07", "Clinically stable - no increase in breathlessness, cough or sputum volume in 4 weeks between initial assessment and entry to trial"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 1, "cr", "2.", 1, "n.08", "PaCO2 within +/-1 kPa of initial assessment"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 1, "cr", "3.", 1, "n.09", "No change in spirometry (<15% or 200 ml) from initial assessment"));
+	        
+	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "1.", 1, "e.01", "Age over 80"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "2.", 1, "e.02", "Other significant respiratory disease (interstitial lung disease, asthma, bronchiectasis, neuromuscular or restrictive chest wall disorders)"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "3.", 1, "e.03", "Significant documented left ventricular dysfunction with Ejection Fraction <40%"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "4,", 1, "e.04", "Obstructive sleep apnoea with an apnoea/hypopnoea index of over 10, which is reversible by continuous positive airway pressure (CPAP)"));	    
+	        
+	        fs.countries!.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
+	        
+	        fs.sites!.Add(new StudyLocation(sd_sid, null, "Papworth Hospital NHS Trust", null, null, "Cambridge", 2635167, "United Kingdom", null));
+	        
 	        // Data Objects
 	        
 	        // 1) Trial registry entry
@@ -124,13 +137,21 @@ public class TestData_100126 : TestData_Base
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Post episiotomy pain after delivery", null, null, null, null));
             
-            // countries
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Primigravida"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Singleton term pregnancy"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Age (20-35 years)"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "4.", 1, "n.04", "Free of medical disorders"));	    
+	        
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "1.", 1, "e.01", "Presence of infection"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "2.", 1, "e.02", "Coagulation abnormalities"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "3.", 1, "e.03", "History of sensitivity to local anesthetics"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "4.", 1, "e.04", "Malpresentation or malposition"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "5.", 1, "e.05", "Previous vaginal operations and or presence of any obstetric complications"));	    
             
-            // iec
-            /*
-     *
-     * 
-     */
+            fs.countries!.Add(new StudyCountry(sd_sid, 357994, "Egypt", null));
+	        
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Ain Shams University", null, null, "Cairo", 357994, "Egypt", null));
+            
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -218,13 +239,16 @@ public class TestData_100126 : TestData_Base
 		    fs.references!.Add(new StudyReference(sd_sid, "http://www.ncbi.nlm.nih.gov/pubmed/18802150", 
 		        "18802150", "5. 2008 results in ", null, ""));
 
-            // countries
+		    fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Biopsy proven Ewing's sarcoma, atypical Ewing's sarcoma or peripheral neuroectodermal tumour"));	       
+		    fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "No previous radiotherapy, chemotherapy or surgery"));	    
+		    fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "No primary definitive local therapy"));	    
+		    fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "4.", 1, "n.04", "Aged < 35 years"));	    
+		    fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "none", "none", 1, "e.0A", "Patients with soft tissue Ewing's sarcoma or other small cell sarcomas are not eligible"));	       
             
-            // iec
-            /*
-     *
-     * 
-     */
+            fs.countries!.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
+	        
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "UKCCCR Register Co-ordinator", null, null, "London", 2635167, "United Kingdom", null));
+            
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -296,13 +320,19 @@ public class TestData_100126 : TestData_Base
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Colorectal cancer'", null, null, "B5-2B9", 
 		        "Malignant neoplasms of large intestine"));
 	        
-            // countries
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Aged between 50 and 75 years"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "At average risk for colorectal cancer (CRC). Average risk defined as those patients who do not have any of the following: history of CRC, colonic adenomas, Lynch syndrome, family history of CRC, or diagnosis of inflammatory bowel disease."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Active patient (seen within the past 18 months) of the community health centers"));	    
+
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "1.", 1, "e.01", "Record of fecal occult blood test (FOBT)/fecal immunochemical test (FIT) within 12 months or colonoscopy within 10 years, sigmoidoscopy within 5 years, barium enema within 5 years, or computed tomography (CT) colonography within 10 years"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "2.", 1, "e.02", "Record of any colorectal cancer diagnosis or total colectomy"));	    
+	      
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
             
-            // iec
-            /*
-     *
-     * 
-     */
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "University of North Carolina Lineberger Comprehensive Cancer Center", null, null, "Chapel Hill", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Roanoke Chowan Community Health Center", null, null, "Ahoskie", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Blue Ridge Health", null, null, "Hendersonville", 6252001, "United States", null));
+            
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -318,7 +348,7 @@ public class TestData_100126 : TestData_Base
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100126, "ISRCTN", 
 	            "https://www.isrctn.com/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2020 Jun 9", 2020, 6, 9, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2021 Dec 16", 2021, 12, 16, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2023 Jan 25", 2023, 1, 25, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
             
@@ -393,13 +423,38 @@ public class TestData_100126 : TestData_Base
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Topic: Cancer; Subtopic: Sarcoma; Disease: Bone", 
 		        null, null, null, null));
             
-            // countries
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Relapsed osteosarcoma (first, second, third or any relapse, patient has recovered from chemotherapy and any other investigational drug/agent treatment, radiotherapy or surgical procedure)."));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Histological confirmed diagnosis of osteosarcoma at original presentation."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Tumour at biopsy accessible or resectable site."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "4.", 1, "n.04", "Progressive disease documented by imaging within 3 months of entry into the trial."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "5.", 1, "n.05", "At least one measurable lesion on CT scan (RECIST) performed in past 21 days prior to trial entry."));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "6.", 1, "n.06", "Male or female, age = 16 years to 65 (or =18 based on institutional practice for Teenage and Young Adult Cancer patients)."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "7.", 1, "n.07", "Life expectancy of at least 3 months."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "8.", 1, "n.08", "WHO performance score of 0 - 2."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "9.", 1, "n.09", "The patient is willing and able to comply with the protocol and scheduled follow-up visits and examinations."));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "10.", 1, "n.10", "Written (signed and dated) informed consent."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "11.", 1, "n.11", "Cardiac shortening fraction = 28% or ejection fraction = 45%"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "12.", 1, "n.12", "Renal function is adequate for ifosfamide treatment (GFR as per table below, other renal function screening tests as per local practice)"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "13.", 1, "n.13", "Haematological and biochemical indices within the ranges detailed in the protocol"));	 
+	        
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "1", 1, "e.01", "Pregnant or breastfeeding woman. Men or women of childbearing potential unless effective methods of contraception are used during study treatment and for at least 7 days after the last mifamurtide dose."));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "2", 1, "e.02", "Previous treatment with mifamurtide or a mifamurtide like drug* in a clinical trial setting for the treatment of metastatic and/or recurrent osteosarcoma in the six months prior to registration."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "3", 1, "e.03", "Contraindications to lung biopsies"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "4", 1, "e.04", "Hypersensitivity to ifosfamide or any component of the formulation."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "5", 1, "e.05", "Previously diagnosed brain metastases."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "6", 1, "e.06", "Significant active cardiac disease including: uncontrolled high blood pressure (no greater than 2 standard deviations above the mean for age for systolic blood pressure (SBP) and diastolic blood pressure (DBP), unstable angina, congestive heart failure, myocardial infarction within the previous 6 months, or serious cardiac arrhythmias and with a history of pericarditis and myocarditis"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "7", 1, "e.07", "Treatment with any other investigational agent, or participation in another interventional clinical trial within 21 days prior to enrolment."));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "8", 1, "e.08", "Major surgery within 21 days prior first study biopsy"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "9", 1, "e.09", "Currently taking of high-dose nonsteroidal antiinflammatory drugs (NSAIDs) or corticosteroid treatment"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "10", 1, "e.10", "Concurrent use of ciclosporin or other calcineurin inhibitors"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "11", 1, "e.11", "Any psychological, social or medical condition, physical examination finding or a laboratory abnormality that the Investigator considers would make the patient a poor trial candidate or could interfere with protocol compliance or the interpretation of trial results."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "12", 1, "e.12", "Any other active malignancy, with the exception of adequately treated conebiopsied in situ carcinoma of the \ncervix uteri and non-melanoma skin lesions."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "13", 1, "e.13", "Patients who are known to be serologically positive for Hepatitis B, Hepatitis C or HIV."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 12, 202, "spp", "*", 1, "e.14", "mifamurtide-like drugs include GMCSF, interferon and other macrophage activating molecules."));	   
             
-            // iec
-            /*
-             *
-             * 
-             */
+            fs.countries!.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
+	        
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Oncology Clinical Trials Office (OCTO)", null, null, "Oxford", 2635167, "United Kingdom", null));
 	        
             // Data Objects
 	        

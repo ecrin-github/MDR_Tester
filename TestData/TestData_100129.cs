@@ -62,11 +62,51 @@ public class TestData_100129 : TestData_Base
 	        
             fs.conditions!.Add(new StudyCondition(sd_sid, "Malignant neoplasm of oropharynx", 
 	            12, "C10", "2B6A", "Malignant neoplasm of oropharynx"));      
-
-            // countries
             
-            // iec
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "", "", 1, "n.01", "Histologically confirmed locally advanced or metastatic NSCLC"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "", "", 1, "n.02", "&#61472;Measurable disease by RECIST 1.1"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "", "", 1, "n.03", "Known PD-L1 status"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "", "", 1, "n.04", "ECOG performance status (PS) 0 or 1"));	    
 	        
+            fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "", "", 1, "e.01", "Previous immunotherapy or treatment with IL-1&#946; inhibitor."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "", "", 1, "e.02", "Subjects with epidermal growth factor receptor (EGFR) sensitizing mutations and/or\nanaplastic lymphoma kinase (ALK) rearrangement"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "", "", 1, "e.03", "History of severe hypersensitivity reaction to monoclonal antibodies, platinum\ncontaining drugs, nab-paclitaxel, paclitaxel, pemetrexed or any known excipients of\nthese drugs."));
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 1814991, "China", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1694008, "Philippines", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1269750, "India", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1861060, "Japan", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 272103, "Lebanon", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1733045, "Malaysia", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1605651, "Thailand", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1668284, "Taiwan", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 298795, "Turkey", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1562822, "Vietnam", null));
+            fs.countries!.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2782113, "Austria", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2623032, "Denmark", null)); 
+            fs.countries.Add(new StudyCountry(sd_sid, 3057568, "Slovakia", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2510769, "Spain", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 660013, "Finland", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3017382, "France", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 390903, "Greece", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 719819, "Hungary", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3175395, "Italy", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 798544, "Poland", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2264397, "Portugal", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));             
+            fs.countries.Add(new StudyCountry(sd_sid, 798549, "Romania", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2017370, "Russia", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2658434, "Switzerland", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3077311, "Czechia", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 953987, "South Africa", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3469034, "Brazil", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3895114, "Chile", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3686110, "Colombia", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3595528, "Guatemala", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3932488, "Peru", null));
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -83,7 +123,7 @@ public class TestData_100129 : TestData_Base
 	            "https://www.ins.gob.pe/ensayosclinicos/rpec/recuperarECPBNuevoEN.asp?numec=015-19", 
 	            true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2019 Sep 18", 2019, 9, 18, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Mar 22", 2022, 3, 22, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2023 Feb 8", 2023, 2, 8, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
 
