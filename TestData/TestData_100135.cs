@@ -6,613 +6,442 @@ public class TestData_100135 : TestData_Base
     {
         if (sd_oid == "27056882")
         {
-            /*
+	        FullDataObject fdb = CreateEmptyFullDataObject();
+
+	        const string art_title =
+		        "Prognostic Relevance of Left Atrial Dysfunction in Heart Failure With Preserved Ejection Fraction.";
+	        const string desc = "Circ Heart Fail. 2016 Apr. 9(4):e002763. doi:10.1161/CIRCHEARTFAILURE.115.002763. pii:e002763.";
+	        const string citation = "Santos A, Roca G, Claggett B et al. Prognostic Relevance of Left Atrial Dysfunction in Heart Failure With Preserved Ejection Fraction. Circ Heart Fail. 2016 Apr. 9(4):e002763. doi:10.1161/CIRCHEARTFAILURE.115.002763. pii:e002763.";
+
+	        fdb.journal_details = new JournalDetails(sd_oid, "Circulation. Heart failure", null, "19413297", 
+		        "101479941", "Circ Heart Fail", 101427, "Wolters Kluwer Health");
+
+	        fdb.data_object = new DataObject(sd_oid, null, art_title, "", citation,
+		        "10.1161/CIRCHEARTFAILURE.115.002763", 1, 2016, 23, 12, 101427, "Wolters Kluwer Health", "https://ror.org/04phyf746",
+		        "en", 11, null, null, 0, false, false);
+	        
+	        fdb.object_descriptions!.Add(new ObjectDescription(sd_oid, 18, null, desc, "en"));
+	        
+	        fdb.object_titles!.Add(new ObjectTitle(sd_oid, art_title, 19, "en", 11, true, null));
+	        
+	        fdb.object_instances!.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
+		        "https://www.ncbi.nlm.nih.gov/pubmed/" + sd_oid, true, 40, null, null, null));
+	        fdb.object_instances!.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
+		        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4826720", true, 36, null, null, null));
+	        
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "2016 Apr 9"));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "CIRCHEARTFAILURE.115.002763", 34, 101427, "Wolters Kluwer Health", "https://ror.org/04phyf746", "2016 Mar 4"));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "e002763", 34, 101427, "Wolters Kluwer Health", "https://ror.org/04phyf746", "2016 Mar 4"));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "PMC4826720", 31, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", null));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "NIHMS768831", 32, 100134, "National Institutes of Health", "https://ror.org/01cwqze88", null));
+	        
+	        fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Angela B S", "Santos", "Angela B S Santos", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Gabriela Querejeta", "Roca", "Gabriela Querejeta Roca", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Brian", "Claggett", "Brian Claggett", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Nancy K", "Sweitzer", "Nancy K Sweitzer", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Sanjiv J", "Shah", "Sanjiv J Shah", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Inder S", "Anand", "Inder S Anand", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "James C", "Fang", "James C Fang", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Michael R", "Zile", "Michael R Zile", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Bertram", "Pitt", "Bertram Pitt", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Scott D", "Solomon", "Scott D Solomon", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Amil M", "Shah", "Amil M Shah", null, null, null, null, null));
+	        
+	        fdb.object_topics!.Add(new ObjectTopic(sd_oid, 11, "atrial strain", null, null, null, null));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "diastolic heart failure", null, null, null, null));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "echocardiography", null, null, null, null));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "prognosis", null, null, null, null));
+	        
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Mineralocorticoid Receptor Antagonists", 14, 
+		        "D000451", "D000451", "Mineralocorticoid Receptor Antagonists"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Aged", 14, "D000368", "D000368", "Aged"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Aged, 80 and over", 14, "D000369", "D000369", "Aged, 80 and over"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Atrial Function, Left", 14, "D016279", "D016279", "Atrial Function, Left"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Diastole", 14, "D003971", "D003971", "Diastole"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Echocardiography, Doppler", 14, "D015150", "D015150", "Echocardiography, Doppler"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Heart Atria", 14, "D006325", "D006325", "Heart Atria"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Heart Failure", 14, "D006333", "D006333", "Heart Failure"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Hospitalization", 14, "D006760", "D006760", "Hospitalization"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Middle Aged", 14, "D008875", "D008875", "Middle Aged"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Risk Factors", 14, "D012307", "D012307", "Risk Factors"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Stress, Mechanical", 14, "D013314", "D013314", "Stress, Mechanical"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Stroke Volume", 14, "D013318", "D013318", "Stroke Volume"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Systole", 14, "D013599", "D013599", "Systole"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Time Factors", 14, "D013997", "D013997", "Time Factors"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Treatment Outcome", 14, "D016896", "D016896", "Treatment Outcome"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Ventricular Dysfunction, Left", 14, "D018487", "D018487", "Ventricular Dysfunction, Left"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Ventricular Function, Left", 14, "D016277", "D016277", "Ventricular Function, Left"));
+   
+	        fdb.object_db_ids!.Add(new ObjectDBLink(sd_oid, 1, "ClinicalTrials.gov", "NCT00094302"));
+
+            fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "2016 Apr", 2016, 4, null));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "2016 Aug 1", 2016, 8, 1));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "2020 Dec 16", 2020, 12, 16));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 17, "2015 Oct 20", 2015, 10, 20));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 11, "2016 Mar 4", 2016, 3, 4));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "2016 Apr 9", 2016, 4, 9));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "2016 Apr 9", 2016, 4, 9));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "2016 Aug 2", 2016, 8, 2));
+
+            fdb.object_pubtypes!.Add(new ObjectPublicationType(sd_oid, "Journal Article"));
+            fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Multicenter Study"));
+            fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Randomized Controlled Trial"));
             
--- article title
-call expected.insert_object_pubmed_title(sid => _sid, typeid => 19, 
-	title => 'Prognostic Relevance of Left Atrial Dysfunction in Heart Failure With Preserved Ejection Fraction.',
-	isdefault => true);
+            fdb.object_comments!.Add(new ObjectComment(sd_oid, null, "", "", "1", null));
 
--- journal details
-call expected.insert_journal_details(sid =>_sid, eissn => '19413297', journal_title => 'Circulation. Heart failure');
-
--- description (journal string)
-call expected.insert_object_description(sid =>_sid, typeid => 18, description_text => 'Circ Heart Fail. 2016 Apr. 9(4):e002763. doi:10.1161/CIRCHEARTFAILURE.115.002763. pii:e002763.'  );
-
--- contributors
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Santos', given_name => 'Angela B S', full_name => 'Angela B S Santos');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Roca', given_name => 'Gabriela Querejeta', full_name => 'Gabriela Querejeta Roca');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Claggett', given_name => 'Brian', full_name => 'Brian Claggett');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Sweitzer', given_name => 'Nancy K', full_name => 'Nancy K Sweitzer');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Shah', given_name => 'Sanjiv J', full_name => 'Sanjiv J Shah');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Anand', given_name => 'Inder S', full_name => 'Inder S Anand');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Fang', given_name => 'James C', full_name => 'James C Fang');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Zile', given_name => 'Michael R', full_name => 'Michael R Zile');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Pitt', given_name => 'Bertram', full_name => 'Bertram Pitt');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Solomon', given_name => 'Scott D', full_name => 'Scott D Solomon');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Shah', given_name => 'Amil M', full_name => 'Amil M Shah');
-
--- topics
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D000451', mvalue => 'Mineralocorticoid Receptor Antagonists');
-
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D000368', mvalue => 'Aged');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D000369', mvalue => 'Aged, 80 and over');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D016279', mvalue => 'Atrial Function, Left');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D003971', mvalue => 'Diastole');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D015150', mvalue => 'Echocardiography, Doppler');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D006325', mvalue => 'Heart Atria');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D006333', mvalue => 'Heart Failure');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D006760', mvalue => 'Hospitalization');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D008875', mvalue => 'Middle Aged');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D012307', mvalue => 'Risk Factors');
-
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D013314', mvalue => 'Stress, Mechanical');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D013318', mvalue => 'Stroke Volume');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D013599', mvalue => 'Systole');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D013997', mvalue => 'Time Factors');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D016896', mvalue => 'Treatment Outcome');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D018487', mvalue => 'Ventricular Dysfunction, Left');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D016277', mvalue => 'Ventricular Function, Left');
-
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'atrial strain');
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'diastolic heart failure');
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'echocardiography');
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'prognosis');
-
--- db links
-call expected.insert_object_db_link(sid => _sid, db_sequence => 1, db_name => 'ClinicalTrials.gov', id_in_db => 'NCT00094302');
-
--- main data object
-
--- if (PMC_present) access_type_id = 11
--- else  access_type_id = 15, access_details = 'Not in PMC - presumed behind pay wall, but to check';
-
-call expected.insert_pubmed_details(sid => _sid, 
-                  title => 'Santos A, Roca G, Claggett B et al. Prognostic Relevance of Left Atrial Dysfunction in Heart Failure With Preserved Ejection Fraction. Circ Heart Fail. 2016 Apr. 9(4):e002763. doi:10.1161/CIRCHEARTFAILURE.115.002763. pii:e002763.', 
-				  vers => '1', doid => '10.1161/CIRCHEARTFAILURE.115.002763', doidsid => 1,
-				  pubyear => 2016, acctypeid => 11);
-
--- instances
--- for PMC:  new ObjectInstance(sdoid, 1, "Full resource", 100133, "National Library of Medicine", "https://www.ncbi.nlm.nih.gov/pmc/articles/" + other_id.ToString(), true, 36, "Web text with download"));	
-
-call expected.insert_object_pubmed_instance(sid => _sid, insttypeid => 3, reporgid => 100133, reporgname => 'National Library of Medicine', 
-	purl => 'https://www.ncbi.nlm.nih.gov/pubmed/' || _sid, accessible => true, restypeid => 40);
-call expected.insert_object_pubmed_instance(sid => _sid, insttypeid => 1, reporgid => 100133, reporgname => 'National Library of Medicine', 
-	purl => 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4826720', accessible => true, restypeid => 36);
-	
-
-	
--- identifiers	
--- pii 34, Publisher article ID
--- 31, PMCID, 100133, "National Library of Medicine"));
--- 32, NIH Manuscript ID, other_id, 100134, "National Institutes of Health"));-- 33, NRCBL, other_id, 100447, "Georgetown University"));
--- 37, PMC Publisher ID-- 38, PM Publisher ID-- 35, Serial Item and Contribution Identifier 
--- 36, Medline UID, other_id, 100133, "National Library of Medicine
-  
-call expected.insert_object_identifier(sid => _sid, typeid => 16, idvalue => _sid, idorgid => 100133, idorgname => 'National Library of Medicine', iddate => '2016 Apr 9');
-call expected.insert_object_identifier(sid => _sid, typeid => 34, idvalue => 'CIRCHEARTFAILURE.115.002763', iddate => '2016 Mar 4');
-call expected.insert_object_identifier(sid => _sid, typeid => 31, idvalue => 'PMC4826720', idorgid => 100133, idorgname => 'National Library of Medicine');
-call expected.insert_object_identifier(sid => _sid, typeid => 32, idvalue => 'NIHMS768831', idorgid => 100134, idorgname => 'National Institutes of Health');
-call expected.insert_object_identifier(sid => _sid, typeid => 34, idvalue => 'e002763', iddate => '2016 Mar 4');
-
--- dates
---12, pub_date--52, Pubmed citation created--53, Pubmed citation_revised--54, Pubmed citation completed
---55, Epublish--17, received--11, accepted
-                               
--- 56, Ppublish-- 57, Revised-- 58, Ahead of print publication
--- 59, Retracted-- 60, Added to eCollection-- 61, Added to PMC
--- 62, Added to Pubmed-- 63, Added to Medline-- 65, Added to entrez
--- 64, PMC embargo release
-
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 12, datestring => '2016 Apr', syear => 2016, smonth => 4 );
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 54, datestring => '2016 Aug 1', syear => 2016, smonth => 8, sday => 1);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 53, datestring => '2020 Dec 16', syear => 2020, smonth => 12, sday => 16);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 17, datestring => '2015 Oct 20', syear => 2015, smonth => 10, sday => 20);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 11, datestring => '2016 Mar 4', syear => 2016, smonth => 3, sday => 4);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 65, datestring => '2016 Apr 9', syear => 2016, smonth => 4, sday => 9);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 62, datestring => '2016 Apr 9', syear => 2016, smonth => 4, sday => 9);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 63, datestring => '2016 Aug 2', syear => 2016, smonth => 8, sday => 2);
-
---pub types	
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Journal Article');
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Multicenter Study');
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Randomized Controlled Trial');
-
--- comments
---call expected.insert_object_comment(sid => _sid, ref_type => '', ref_source => '', pmid => '', pmid_version => '1');
-
- 
-             */
+            return fdb;
         }
         
         if (sd_oid == "32740235")
         {
-            /*
-            
-            -- article title
-call expected.insert_object_pubmed_title(sid => _sid,	typeid => 19, 
-	title => 'Surgical Outcome Results From SWOG S1505: A Randomized Clinical Trial of mFOLFIRINOX Versus Gemcitabine/Nab-paclitaxel for Perioperative Treatment of Resectable Pancreatic Ductal Adenocarcinoma.',
-	isdefault => true);
+	        FullDataObject fdb = CreateEmptyFullDataObject();
+	        
+	        const string art_title =
+		        "Surgical Outcome Results From SWOG S1505: A Randomized Clinical Trial of mFOLFIRINOX Versus Gemcitabine/Nab-paclitaxel for Perioperative Treatment of Resectable Pancreatic Ductal Adenocarcinoma.";
+	        const string desc = "Ann Surg. 2020 Sep 1. 272(3):481-486. doi:10.1097/SLA.0000000000004155.";
+	        const string citation = "Ahmad S, Duong M, Sohal D et al. Surgical Outcome Results From SWOG S1505: A Randomized Clinical Trial of mFOLFIRINOX Versus Gemcitabine/Nab-paclitaxel for Perioperative Treatment of Resectable Pancreatic Ductal Adenocarcinoma. Ann Surg. 2020 Sep 1. 272(3):481-486. doi:10.1097/SLA.0000000000004155.";
 
--- journal details
-call expected.insert_journal_details(sid =>_sid, eissn => '15281140', journal_title => 'Annals of surgery');
+	        fdb.journal_details = new JournalDetails(sd_oid, "Annals of surgery", null, "15281140",
+		         "0372354", "Ann Surg", 101427, "Wolters Kluwer Health");
 
--- description (journal string)
-call expected.insert_object_description(sid =>_sid, typeid => 18, description_text => 'Ann Surg. 2020 Sep 1. 272(3):481-486. doi:10.1097/SLA.0000000000004155.');
+	        fdb.data_object = new DataObject(sd_oid, null, art_title, "1", citation,
+		        "10.1097/SLA.0000000000004155", 1, 2020, 23, 12, 101427, "Wolters Kluwer Health", "https://ror.org/04phyf746",
+		        "en", 11, null, null, 0, false, false);
 
--- contributors
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Ahmad', given_name => 'Syed A', full_name => 'Syed A Ahmad', 
-affiliation => 'University of Cincinnati, Cincinnati, Ohio.',
-orgname => 'University of Cincinnati');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Duong', given_name => 'Mai', full_name => 'Mai Duong', 
-affiliation => 'SWOG Statistical and Data Management Center, Seattle, Washington.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Sohal', given_name => 'Davendra P S', full_name => 'Davendra P S Sohal', 
-affiliation => 'University of Cincinnati, Cincinnati, Ohio.',
-orgname => 'University of Cincinnati');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Gandhi', given_name => 'Namita S', full_name => 'Namita S Gandhi', 
-affiliation => 'Cleveland Clinic, Cleveland, Ohio.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Beg', given_name => 'Muhammad Shaalan', full_name => 'Muhammad Shaalan Beg', 
-affiliation => 'UT Southwestern Medical Center, Dallas, Texas.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Wang-Gillam', given_name => 'Andrea', full_name => 'Andrea Wang-Gillam', 
-affiliation => 'Washington University Siteman Cancer Center, St. Louis, Missouri.',
-orgname => 'Washington University Siteman Cancer Center');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Wade', given_name => 'James L', full_name => 'James L Wade 3rd', 
-affiliation => 'Heartland NCORP/Cancer Care Specialists of Illinois, Decatur, Illinois.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Chiorean', given_name => 'Elena Gabriela', full_name => 'Elena Gabriela Chiorean', 
-affiliation => 'University of Washington, Fred Hutchinson Cancer Research Center, Seattle, Washington.',
-orgname => 'University of Washington');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Guthrie', given_name => 'Katherine A', full_name => 'Katherine A Guthrie', 
-affiliation => 'SWOG Statistical and Data Management Center, Seattle, Washington.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Lowy', given_name => 'Andrew M', full_name => 'Andrew M Lowy', 
-affiliation => 'University of California, San Diego, La Jolla, California.',
-orgname => 'University of California, San Diego');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Philip', given_name => 'Philip A', full_name => 'Philip A Philip', 
-affiliation => 'Wayne State University/Karmanos Cancer Institute, Detroit, Michigan.',
-orgname => 'Wayne State University/Karmanos Cancer Institute');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Hochster', given_name => 'Howard S', full_name => 'Howard S Hochster', 
-affiliation => 'Rutgers Cancer Institute of New Jersey, New Brunswick, New Jersey.', 										  
-orgname => 'Rutgers Cancer Institute of New Jersey');
+	        fdb.object_descriptions!.Add(new ObjectDescription(sd_oid, 18, null, desc, "en"));
+	        
+	        fdb.object_titles!.Add(new ObjectTitle(sd_oid, art_title, 19, "en", 11, true, null));
+	        
+	        fdb.object_instances!.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
+		        "https://www.ncbi.nlm.nih.gov/pubmed/" + sd_oid, true, 40, null, null, null));
+	        fdb.object_instances.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
+		        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7856053", true, 36, null, null, null));
+	        
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "2020 Aug 3"));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "00000658-202009000-00021", 34, 101427, "Wolters Kluwer Health", "https://ror.org/04phyf746", null));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "PMC7856053", 31, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", null));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "NIHMS1647338", 32, 100134, "National Institutes of Health", "https://ror.org/01cwqze88", null));
+	        
+	        fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Syed A", "Ahmad", "Syed A Ahmad", null, "University of Cincinnati, Cincinnati, Ohio.", 100384, "University of Cincinnati", "https://ror.org/01e3m7079"));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Mai", "Duong", "Mai Duong", null, "SWOG Statistical and Data Management Center, Seattle, Washington.", null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Davendra P S", "Sohal", "Davendra P S Sohal", null, "University of Cincinnati, Cincinnati, Ohio.", 100384, "University of Cincinnati", "https://ror.org/01e3m7079"));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Namita S", "Gandhi", "Namita S Gandhi", null, "Cleveland Clinic, Cleveland, Ohio.", null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Muhammad Shaalan", "Beg", "Muhammad Shaalan Beg", null, "UT Southwestern Medical Center, Dallas, Texas.", null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Andrea", "Wang-Gillam", "Andrea Wang-Gillam", null, "Washington University Siteman Cancer Center, St. Louis, Missouri.", null, "Washington University Siteman Cancer Center", null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "James L", "Wade", "James L Wade 3rd", null, "Heartland NCORP/Cancer Care Specialists of Illinois, Decatur, Illinois.", null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Elena Gabriela", "Chiorean", "Elena Gabriela Chiorean", null, 
+		        "University of Washington, Fred Hutchinson Cancer Research Center, Seattle, Washington.", 
+		        100199, "University of Washington", "https://ror.org/00cvxb145"));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Katherine A", "Guthrie", "Katherine A Guthrie", null, "SWOG Statistical and Data Management Center, Seattle, Washington.", null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Andrew M", "Lowy", "Andrew M Lowy", null, 
+		        "University of California, San Diego, La Jolla, California.", 
+		        100238, "University of California, San Diego", "https://ror.org/0168r3w48"));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Philip A", "Philip", "Philip A Philip", null, 
+		        "Wayne State University/Karmanos Cancer Institute, Detroit, Michigan.", 
+		        null, "Wayne State University/Karmanos Cancer Institute", null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Howard S", "Hochster", "Howard S Hochster", null, 
+		        "Rutgers Cancer Institute of New Jersey, New Brunswick, New Jersey.", 
+		        null, "Rutgers Cancer Institute of New Jersey", null));
+	        
+	        
+	        fdb.object_topics!.Add(new ObjectTopic(sd_oid, 0, "Aged", 14, "D000368", "D000368", "Aged"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Antineoplastic Combined Chemotherapy Protocols", 14, "D000971", "D000971", "Antineoplastic Combined Chemotherapy Protocols"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Carcinoma, Pancreatic Ductal", 14, "D021441", "D021441", "Carcinoma, Pancreatic Ductal"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Combined Modality Therapy", 14, "D003131", "D003131", "Combined Modality Therapy"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Middle Aged", 14, "D008875", "D008875", "Middle Aged"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Follow-Up Studies", 14, "D005500", "D005500", "Follow-Up Studies"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Neoplasm Staging", 14, "D009367", "D009367", "Neoplasm Staging"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Pancreatectomy", 14, "D010180", "D010180", "Pancreatectomy"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Pancreatic Neoplasms", 14, "D010190", "D010190", "Pancreatic Neoplasms"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Perioperative Care", 14, "D019990", "D019990", "Perioperative Care"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Prospective Studies", 14, "D011446", "D011446", "Prospective Studies"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Treatment Outcome", 14, "D016896", "D016896", "Treatment Outcome"));
+	        
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "130-nm albumin-bound paclitaxel", 14, "C520255", "C520255", "130-nm albumin-bound paclitaxel"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Albumins", 14, "D000418", "D000418", "Albumins"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Antineoplastic Agents'", 14, "D000970", "D000970", "Antineoplastic Agents'"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Immunosuppressive Agents", 14, "D007166", "D007166", "Immunosuppressive Agents"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "folfirinox", 14, "C000627770", "C000627770", "folfirinox"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Oxaliplatin", 14, "D000077150", "D000077150", "Oxaliplatin"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Deoxycytidine", 14, "D003841", "D003841", "Deoxycytidine"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Irinotecan", 14, "D000077146", "D000077146", "Irinotecan"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "gemcitabine", 14, "C056507", "C056507", "gemcitabine"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Paclitaxel", 14, "D017239", "D017239", "Paclitaxel"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Leucovorin", 14, "D002955", "D002955", "Leucovorin"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Fluorouracil", 14, "D005472", "D005472", "Fluorouracil"));
+	        
+            fdb.object_db_ids!.Add(new ObjectDBLink(sd_oid, 1, "ClinicalTrials.gov", "NCT02562716"));
 
--- topics
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'C520255', mvalue => '130-nm albumin-bound paclitaxel');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D000418', mvalue => 'Albumins');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D000970', mvalue => 'Antineoplastic Agents');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D007166', mvalue => 'Immunosuppressive Agents');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'C000627770', mvalue => 'folfirinox');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D000077150', mvalue => 'Oxaliplatin');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D003841', mvalue => 'Deoxycytidine');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D000077146', mvalue => 'Irinotecan');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'C056507', mvalue => 'gemcitabine');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D017239', mvalue => 'Paclitaxel');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D002955', mvalue => 'Leucovorin');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D005472', mvalue => 'Fluorouracil');
+			fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "2020 Sep 1", 2020, 9, 1));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "2021 Feb 15", 2021, 2, 15));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "2021 Sep 19", 2021, 9, 19));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "2020 Aug 3", 2020, 8, 3));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "2021 Feb 16", 2021, 2, 16));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "2020 Aug 3", 2020, 8, 3));
 
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D000368', mvalue => 'Aged');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D000971', mvalue => 'Antineoplastic Combined Chemotherapy Protocols');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D021441', mvalue => 'Carcinoma, Pancreatic Ductal');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D003131', mvalue => 'Combined Modality Therapy');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D008875', mvalue => 'Middle Aged');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D005500', mvalue => 'Follow-Up Studies');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D009367', mvalue => 'Neoplasm Staging');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D010180', mvalue => 'Pancreatectomy');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D010190', mvalue => 'Pancreatic Neoplasms');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D019990', mvalue => 'Perioperative Care');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D011446', mvalue => 'Prospective Studies');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D016896', mvalue => 'Treatment Outcome');
-
--- db links
-call expected.insert_object_db_link(sid => _sid, db_sequence => 1, db_name => 'ClinicalTrials.gov', id_in_db => 'NCT02562716');
-
--- main data object
--- if (PMC_present) access_type_id = 11
--- else  access_type_id = 15, access_details = 'Not in PMC - presumed behind pay wall, but to check';
-
-call expected.insert_pubmed_details(sid => _sid, 
-                  title => 'Ahmad S, Duong M, Sohal D et al. Surgical Outcome Results From SWOG S1505: A Randomized Clinical Trial of mFOLFIRINOX Versus Gemcitabine/Nab-paclitaxel for Perioperative Treatment of Resectable Pancreatic Ductal Adenocarcinoma. Ann Surg. 2020 Sep 1. 272(3):481-486. doi:10.1097/SLA.0000000000004155.', 
-				  vers => '1', doid => '10.1097/SLA.0000000000004155', doidsid => 1,
-				  pubyear => 2020, acctypeid => 11);
- 
-
--- instances
--- for PMC:  new ObjectInstance(sdoid, 1, "Full resource", 100133, "National Library of Medicine", "https://www.ncbi.nlm.nih.gov/pmc/articles/" + other_id.ToString(), true, 36, "Web text with download"));	
-
-call expected.insert_object_pubmed_instance(sid => _sid, insttypeid => 3, reporgid => 100133, reporgname => 'National Library of Medicine', 
-	purl => 'https://www.ncbi.nlm.nih.gov/pubmed/' || _sid, accessible => true, restypeid => 40);
-call expected.insert_object_pubmed_instance(sid => _sid, insttypeid => 1, reporgid => 100133, reporgname => 'National Library of Medicine', 
-	purl => 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7856053', accessible => true, restypeid => 36);
-	
-	
--- identifiers	
--- pii 34, Publisher article ID
--- 31, PMCID, 100133, "National Library of Medicine"));
--- 32, NIH Manuscript ID, other_id, 100134, "National Institutes of Health"));-- 33, NRCBL, other_id, 100447, "Georgetown University"));
--- 37, PMC Publisher ID-- 38, PM Publisher ID-- 35, Serial Item and Contribution Identifier 
--- 36, Medline UID, other_id, 100133, "National Library of Medicine
-  
-call expected.insert_object_identifier(sid => _sid, typeid => 16, idvalue => _sid, idorgid => 100133, idorgname => 'National Library of Medicine', iddate => '2020 Aug 3');
-call expected.insert_object_identifier(sid => _sid, typeid => 34, idvalue => '00000658-202009000-00021');
-call expected.insert_object_identifier(sid => _sid, typeid => 31, idvalue => 'PMC7856053', idorgid => 100133, idorgname => 'National Library of Medicine');
-call expected.insert_object_identifier(sid => _sid, typeid => 32, idvalue => 'NIHMS1647338', idorgid => 100134, idorgname => 'National Institutes of Health');
-
--- dates
---12, pub_date--52, Pubmed citation created--53, Pubmed citation_revised--54, Pubmed citation completed
---55, Epublish--17, received--11, accepted
-                               
--- 56, Ppublish-- 57, Revised-- 58, Ahead of print publication
--- 59, Retracted-- 60, Added to eCollection-- 61, Added to PMC
--- 62, Added to Pubmed-- 63, Added to Medline-- 65, Added to entrez
--- 64, PMC embargo release
-
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 12, datestring => '2020 Sep 1', syear => 2020, smonth => 9, sday => 1);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 54, datestring => '2021 Feb 15', syear => 2021, smonth => 2, sday => 15);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 53, datestring => '2021 Sep 19', syear => 2021, smonth => 9, sday => 19);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 62, datestring => '2020 Aug 3', syear => 2020, smonth => 8, sday => 3);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 63, datestring => '2021 Feb 16', syear => 2021, smonth => 2, sday => 16);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 65, datestring => '2020 Aug 3', syear => 2020, smonth => 8, sday => 3);
-
---pub types	
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Clinical Trial, Phase II');
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Journal Article');
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Randomized Controlled Trial');
-
--- comments
-call expected.insert_object_comment(sid => _sid, ref_type => 'CommentIn', ref_source => 'Ann Surg. 2020 Sep 1;272(3):487', pmid => '32657915', pmid_version => '1');
-
- 
-            */           
+			fdb.object_pubtypes!.Add(new ObjectPublicationType(sd_oid, "Journal Article"));
+			fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Clinical Trial, Phase II"));
+			fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Randomized Controlled Trial"));
+			            
+			fdb.object_comments!.Add(new ObjectComment(sd_oid, "CommentIn", "Ann Surg. 2020 Sep 1;272(3):487", "32657915", "1", null));
+			
+            return fdb;
         }
 
         if (sd_oid == "32739569")
         {
-            /*
-           
--- article title
-call expected.insert_object_pubmed_title(sid => _sid,	typeid => 19, 
-	title => 'Randomized Controlled Trial of Advance Notification Phone Calls vs Text Messages Prior to Mailed Fecal Test Outreach.',
-	isdefault => true);
+	        FullDataObject fdb = CreateEmptyFullDataObject();
+	        
+	        const string art_title =
+		        "Randomized Controlled Trial of Advance Notification Phone Calls vs Text Messages Prior to Mailed Fecal Test Outreach.";
+	        const string desc = "Clin Gastroenterol Hepatol. 2021 Nov. 19(11):2353-2360.e2. Epub 2020 Jul 30. pii:S1542-3565(20)31063-6. doi:10.1016/j.cgh.2020.07.053.";
+	        const string citation = "Coronado G, Nyongesa D, Petrik A et al. Randomized Controlled Trial of Advance Notification Phone Calls vs Text Messages Prior to Mailed Fecal Test Outreach. Clin Gastroenterol Hepatol. 2021 Nov. 19(11):2353-2360.e2. Epub 2020 Jul 30. pii:S1542-3565(20)31063-6. doi:10.1016/j.cgh.2020.07.053.";
 
--- journal details
-call expected.insert_journal_details(sid =>_sid, eissn => '15427714', journal_title => 'Clinical gastroenterology and hepatology : the official clinical practice journal of the American Gastroenterological Association');
+	        fdb.journal_details = new JournalDetails(sd_oid, "Clinical gastroenterology and hepatology : the official clinical practice journal of the American Gastroenterological Association", null, "15427714", 
+		         "101160775", "Clin Gastroenterol Hepatol", 101422, "Elsevier");
 
--- description (journal string)
-call expected.insert_object_description(sid =>_sid, typeid => 18, description_text => 'Clin Gastroenterol Hepatol. 2021 Nov. 19(11):2353-2360.e2. Epub 2020 Jul 30. pii:S1542-3565(20)31063-6. doi:10.1016/j.cgh.2020.07.053.');
+	        fdb.data_object = new DataObject(sd_oid, null, art_title, "1", citation,
+		        "10.1016/j.cgh.2020.07.053", 1, 2021, 23, 12, 101422, "Elsevier", "https://ror.org/055j8ya05",
+		        "en", 15, "Not in PMC - presumed behind pay wall, but to check", null, 0, false, false);
+	        
+	        fdb.object_descriptions!.Add(new ObjectDescription(sd_oid, 18, null, desc, "en"));
+	        
+	        fdb.object_titles!.Add(new ObjectTitle(sd_oid, art_title, 19, "en", 11, true, null));
+	        
+	        fdb.object_instances!.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
+		        "https://www.ncbi.nlm.nih.gov/pubmed/" + sd_oid, true, 40, null, null, null));
 
--- contributors
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Coronado', given_name => 'Gloria D', full_name => 'Gloria D Coronado', 
-affiliation => 'Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon. Electronic address: gloria.d.coronado@kpchr.org.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Nyongesa', given_name => 'Denis B', full_name => 'Denis B Nyongesa', 
-affiliation => 'Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Petrik', given_name => 'Amanda F', full_name => 'Amanda F Petrik', 
-affiliation => 'Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Thompson', given_name => 'Jamie H', full_name => 'Jamie H Thompson', 
-affiliation => 'Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Escaron', given_name => 'Anne L', full_name => 'Anne L Escaron', 
-affiliation => 'AltaMed Health Services, Los Angeles, California.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Younger', given_name => 'Brittany', full_name => 'Brittany Younger', 
-affiliation => 'AltaMed Health Services, Los Angeles, California.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Harbison', given_name => 'Shelby', full_name => 'Shelby Harbison', 
-affiliation => 'AltaMed Health Services, Los Angeles, California.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Leo', given_name => 'Michael C', full_name => 'Michael C Leo', 
-affiliation => 'Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.');
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "2020 Aug 3"));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "S1542-3565(20)31063-6", 34, 101422, "Elsevier", "https://ror.org/055j8ya05", "2020 Jul 27"));
 
--- topics
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D000368', mvalue => 'Aged');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D055088', mvalue => 'Early Detection of Cancer');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D006801', mvalue => 'Humans');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D008875', mvalue => 'Middle Aged');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D009780', mvalue => 'Occult Blood');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D011177', mvalue => 'Postal Service');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D011446', mvalue => 'Prospective Studies');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D060145', mvalue => 'Text Messaging');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D015179', mvalue => 'Colorectal Neoplasms');
+	        fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Gloria D", "Coronado", "Gloria D Coronado", null, 
+		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon. Electronic address: gloria.d.coronado@kpchr.org.", 
+		        null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Denis B", "Nyongesa", "Denis B Nyongesa", null,
+		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.", null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Amanda F", "Petrik", "Amanda F Petrik", null,
+		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.", null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Jamie H", "Thompson", "Jamie H Thompson", null,
+		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.", null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Anne L", "Escaron", "Anne L Escaron", null,
+		        "AltaMed Health Services, Los Angeles, California.", null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Brittany", "Younger", "Brittany Younger", null,
+		        "AltaMed Health Services, Los Angeles, California.", null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Shelby", "Harbison", "Shelby Harbison", null,
+		        "AltaMed Health Services, Los Angeles, California.", null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Michael C", "Leo", "Michael C Leo", null,
+		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.", null, null, null));
+	        
+	        fdb.object_topics!.Add(new ObjectTopic(sd_oid, 11, "Fecal Testing", null, null, null, null));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Colon Cancer", null, null, null, null));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Prevention", null, null, null, null));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Adherence", null, null, null, null));
+	        
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Aged", 14, "D000368", "D000368", "Aged"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Early Detection of Cancer", 14, "D055088", "D055088", "Early Detection of Cancer"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Humans", 14, "D006801", "D006801", "Humans"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Middle Aged", 14, "D008875", "D008875", "Middle Aged"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Occult Blood", 14, "D009780", "D009780", "Occult Blood"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Postal Service", 14, "D011177", "D011177", "Postal Service"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Prospective Studies", 14, "D011446", "D011446", "Prospective Studies"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Text Messaging", 14, "D060145", "D060145", "Text Messaging"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Colorectal Neoplasms", 14, "D015179", "D015179", "Colorectal Neoplasms"));
+	             
+	        fdb.object_db_ids!.Add(new ObjectDBLink(sd_oid, 1, "ClinicalTrials.gov", "NCT03167125"));
 
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'Fecal Testing');
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'Colon Cancer');
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'Prevention');
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'Adherence');
+			fdb.object_db_ids!.Add(new ObjectDBLink(sd_oid, 1, "ClinicalTrials.gov", "NCT00094302"));
 
--- db links
-call expected.insert_object_db_link(sid => _sid, db_sequence => 1, db_name => 'ClinicalTrials.gov', id_in_db => 'NCT03167125');
+			fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "2021 Nov", 2021, 11, null));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "2021 Nov 10", 2021, 11, 10));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "2021 Nov 10", 2021, 11, 10));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 17, "2020 Jan 6", 2020, 1, 6));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 55, "2020 Jul 30", 2020, 7, 30));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 57, "2020 Jul 21", 2020, 7, 21));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 11, "2020 Jul 27", 2020, 7, 27));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "2020 Aug 3", 2020, 8, 3));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "2021 Nov 11", 2021, 11, 11));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "2020 Aug 3", 2020, 8, 3));
 
--- main data object
--- if (PMC_present) access_type_id = 11
--- else  access_type_id = 15, access_details = 'Not in PMC - presumed behind pay wall, but to check';
+			fdb.object_pubtypes!.Add(new ObjectPublicationType(sd_oid, "Journal Article"));
+			fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Randomized Controlled Trial"));
+			            
+			fdb.object_comments!.Add(new ObjectComment(sd_oid, null, "", "", "1", null));
 
-call expected.insert_pubmed_details(sid => _sid, 
-                  title => 'Coronado G, Nyongesa D, Petrik A et al. Randomized Controlled Trial of Advance Notification Phone Calls vs Text Messages Prior to Mailed Fecal Test Outreach. Clin Gastroenterol Hepatol. 2021 Nov. 19(11):2353-2360.e2. Epub 2020 Jul 30. pii:S1542-3565(20)31063-6. doi:10.1016/j.cgh.2020.07.053.', 
-				  vers => '1', doid => '10.1016/j.cgh.2020.07.053', doidsid => 1,
-				  pubyear => 2021, acctypeid => 15, accdetails => 'Not in PMC - presumed behind pay wall, but to check');
-
--- instances
--- for PMC:  new ObjectInstance(sdoid, 1, "Full resource", 100133, "National Library of Medicine", "https://www.ncbi.nlm.nih.gov/pmc/articles/" + other_id.ToString(), true, 36, "Web text with download"));	
-
-call expected.insert_object_pubmed_instance(sid => _sid, insttypeid => 3, reporgid => 100133, reporgname => 'National Library of Medicine', 
-	purl => 'https://www.ncbi.nlm.nih.gov/pubmed/' || _sid, accessible => true, restypeid => 40);
-	
-
-	
--- identifiers	
--- pii 34, Publisher article ID
--- 31, PMCID, 100133, "National Library of Medicine"));
--- 32, NIH Manuscript ID, other_id, 100134, "National Institutes of Health"));-- 33, NRCBL, other_id, 100447, "Georgetown University"));
--- 37, PMC Publisher ID-- 38, PM Publisher ID-- 35, Serial Item and Contribution Identifier 
--- 36, Medline UID, other_id, 100133, "National Library of Medicine
-  
-call expected.insert_object_identifier(sid => _sid, typeid => 16, idvalue => _sid, idorgid => 100133, idorgname => 'National Library of Medicine', iddate => '2020 Aug 3');
-call expected.insert_object_identifier(sid => _sid, typeid => 34, idvalue => 'S1542-3565(20)31063-6', iddate => '2020 Jul 27');
-
--- dates
---12, pub_date--52, Pubmed citation created--53, Pubmed citation_revised--54, Pubmed citation completed
---55, Epublish--17, received--11, accepted
-                               
--- 56, Ppublish-- 57, Revised-- 58, Ahead of print publication
--- 59, Retracted-- 60, Added to eCollection-- 61, Added to PMC
--- 62, Added to Pubmed-- 63, Added to Medline-- 65, Added to entrez
--- 64, PMC embargo release
-
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 12, datestring => '2021 Nov', syear => 2021, smonth => 11);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 53, datestring => '2021 Nov 10', syear => 2021, smonth => 11, sday => 10);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 54, datestring => '2021 Nov 10', syear => 2021, smonth => 11, sday => 10);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 17, datestring => '2020 Jan 6', syear => 2020, smonth => 1, sday => 6);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 55, datestring => '2020 Jul 30', syear => 2020, smonth => 7, sday => 30);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 57, datestring => '2020 Jul 21', syear => 2020, smonth => 7, sday => 21);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 11, datestring => '2020 Jul 27', syear => 2020, smonth => 7, sday => 27);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 62, datestring => '2020 Aug 3', syear => 2020, smonth => 8, sday => 3);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 63, datestring => '2021 Nov 11', syear => 2021, smonth => 11, sday => 11);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 65, datestring => '2020 Aug 3', syear => 2020, smonth => 8, sday => 3);
-
---pub types	
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Journal Article');
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Randomized Controlled Trial');
-
--- comments
---call expected.insert_object_comment(sid => _sid, ref_type => '', ref_source => '', pmid => '', pmid_version => '1');
-
-            */           
+			return fdb;
+                 
         }
         
         if (sd_oid == "16287956")
         {
-            /*
-           
--- article title
-call expected.insert_object_pubmed_title(sid => _sid,	typeid => 19, 
-	title => 'Effects of protein, monounsaturated fat, and carbohydrate intake on blood pressure and serum lipids: results of the OmniHeart randomized trial.',
-	isdefault => true);
+	        FullDataObject fdb = CreateEmptyFullDataObject();
+	        
+	        const string art_title =
+		        "Effects of protein, monounsaturated fat, and carbohydrate intake on blood pressure and serum lipids: results of the OmniHeart randomized trial.";
+	        const string desc = "JAMA. 2005 Nov 16. 294(19):2455-64.";
+	        const string citation = "Appel L, Sacks F, Carey V et al. Effects of protein, monounsaturated fat, and carbohydrate intake on blood pressure and serum lipids: results of the OmniHeart randomized trial. JAMA. 2005 Nov 16. 294(19):2455-64.";
 
--- journal details
-call expected.insert_journal_details(sid =>_sid, eissn => '15383598', journal_title => 'JAMA');
+	        fdb.journal_details = new JournalDetails(sd_oid, "JAMA", null, "15383598",
+		         "7501160", "JAMA", 101431, "American Medical Association");
 
--- description (journal string)
-call expected.insert_object_description(sid =>_sid, typeid => 18, description_text => 'JAMA. 2005 Nov 16. 294(19):2455-64.');
+	        fdb.data_object = new DataObject(sd_oid, null, art_title, "1", citation,
+		        "10.1001/jama.294.19.2455", 1, 2005, 23, 12, 101431, "American Medical Association", "https://ror.org/03p6gt485",
+		        "en", 15, "Not in PMC - presumed behind pay wall, but to check", null, 0, false, false);
+	        
+	        fdb.object_descriptions!.Add(new ObjectDescription(sd_oid, 18, null, desc, "en"));
+	        
+	        fdb.object_titles!.Add(new ObjectTitle(sd_oid, art_title, 19, "en", 11, true, null));
+	        
+	        fdb.object_instances!.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
+		        "https://www.ncbi.nlm.nih.gov/pubmed/" + sd_oid, true, 40, null, null, null));
+	        
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "2005 Nov 17"));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "294/19/2455", 34,  101431, "American Medical Association", "https://ror.org/03p6gt485", null));
+	        
+	        fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Lawrence J", "Appel", "Lawrence J Appel", null, 
+		        "Welch Center for Prevention, Epidemiology and Clinical Research, Division of General Internal Medicine, Johns Hopkins University School of Medicine, Baltimore, Md 21205-2223, USA. lappel@jhmi.edu", 
+		        null, "Johns Hopkins University School of Medicine", null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Frank M", "Sacks", "Frank M Sacks", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Vincent J", "Carey", "Vincent J Carey", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Eva", "Obarzanek", "Eva Obarzanek", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Janis F", "Swain", "Janis F Swain", null, null, null, null, null));
+	        
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Edgar R", "Miller", "Edgar R Miller", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Paul R", "Conlin", "Paul R Conlin", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Thomas P", "Erlinger", "Thomas P Erlinger", null, null, null, null, null));
+	        
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Bernard A", "Rosner", "Bernard A Rosner", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Nancy M", "Laranjo", "Nancy M Laranjo", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Jeanne", "Charleston", "Jeanne Charleston", null, null, null, null, null));
+	        
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Phyllis", "McCarron", "Phyllis McCarron", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Louise M", "Bishop", "Louise M Bishop", null, null, null, null, null));
+	        
+	        fdb.object_organisations!.Add(new ObjectOrganisation(sd_oid, 11, null, "OmniHeart Collaborative Research Group", null));
+	       
+	        fdb.object_topics!.Add(new ObjectTopic(sd_oid, 0, "Adult", 14, "D000328", "D000328", "Adult"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Blood Pressure", 14, "D001794", "D001794", "Blood Pressure"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Cardiovascular Diseases", 14, "D002318", "D002318", "Cardiovascular Diseases"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Cross-Over Studies", 14, "D018592", "D018592", "Cross-Over Studies"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Diet, Atherogenic", 14, "D004036", "D004036", "Diet, Atherogenic"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Hypertension", 14, "D006973", "D006973", "Hypertension"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Middle Aged", 14, "D008875", "D008875", "Middle Aged"));
+	        
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Cholesterol, LDL", 14, "D008078", "D008078", "Cholesterol, LDL"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Dietary Carbohydrates", 14, "D004040", "D004040", "Dietary Carbohydrates"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Dietary Fats, Unsaturated", 14, "D004042", "D004042", "Dietary Fats, Unsaturated"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Dietary Proteins", 14, "D004044", "D004044", "Dietary Proteins"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Fatty Acids, Monounsaturated", 14, "D005229", "D005229", "Fatty Acids, Monounsaturated"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Lipids", 14, "D008055", "D008055", "Lipids"));
 
--- contributors
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Appel', given_name => 'Lawrence J', full_name => 'Lawrence J Appel', 
-affiliation => 'Welch Center for Prevention, Epidemiology and Clinical Research, Division of General Internal Medicine, Johns Hopkins University School of Medicine, Baltimore, Md 21205-2223, USA. lappel@jhmi.edu',
-orgname => 'Johns Hopkins University School of Medicine');
+	        fdb.object_db_ids!.Add(new ObjectDBLink(sd_oid, 1, "ClinicalTrials.gov", "NCT00051350"));
 
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Sacks', given_name => 'Frank M', full_name => 'Frank M Sacks');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Carey', given_name => 'Vincent J', full_name => 'Vincent J Carey');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Obarzanek', given_name => 'Eva', full_name => 'Eva Obarzanek');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Swain', given_name => 'Janis F', full_name => 'Janis F Swain');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Miller', given_name => 'Edgar R', full_name => 'Edgar R Miller 3rd');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Conlin', given_name => 'Paul R', full_name => 'Paul R Conlin');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Erlinger', given_name => 'Thomas P', full_name => 'Thomas P Erlinger');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Rosner', given_name => 'Bernard A', full_name => 'Bernard A Rosner');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Laranjo', given_name => 'Nancy M', full_name => 'Nancy M Laranjo');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Charleston', given_name => 'Jeanne', full_name => 'Jeanne Charleston');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'McCarron', given_name => 'Phyllis', full_name => 'Phyllis McCarron');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Bishop', given_name => 'Louise M', full_name => 'Louise M Bishop');
-call expected.insert_object_org_contributor(sid =>_sid, typeid => 11, orgname => 'OmniHeart Collaborative Research Group');
+			fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "2005 Nov 16", 2005, 11, 16));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "2005 Nov 22", 2005, 11, 22));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "2016 Oct 17", 2016, 10, 17));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "2005 Nov 17", 2005, 11, 17));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "2005 Dec 13", 2005, 12, 13));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "2005 Nov 17", 2005, 11, 17));
 
---call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => '', given_name => '', full_name => '');
+			fdb.object_pubtypes!.Add(new ObjectPublicationType(sd_oid, "Journal Article"));
+			fdb.object_pubtypes!.Add(new ObjectPublicationType(sd_oid, "Comparative Study"));
+			fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Multicenter Study"));
+			fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Randomized Controlled Trial"));
+			            
+			fdb.object_comments!.Add(new ObjectComment(sd_oid, "CommentIn", "JAMA. 2005 Nov 16;294(19):2497-8", "16287963", "1", null));
 
--- topics
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D008078', mvalue => 'Cholesterol, LDL');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D004040', mvalue => 'Dietary Carbohydrates');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D004042', mvalue => 'Dietary Fats, Unsaturated');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D004044', mvalue => 'Dietary Proteins');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D005229', mvalue => 'Fatty Acids, Monounsaturated');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D008055', mvalue => 'Lipids');
+			return fdb;
+	                
+	    }
+	        
+	    if (sd_oid == "32739049")
+	    {
+		    FullDataObject fdb = CreateEmptyFullDataObject();
+		        
+		    const string art_title =
+			     "Safety, Pharmacokinetics, and Pharmacodynamics of the TLR4 Agonist GSK1795091 in Healthy Individuals: Results from a Randomized, Double-blind, Placebo-controlled, Ascending Dose Study.";
+		    const string desc = "Clin Ther. 2020 Aug. 42(8):1519-1534.e33. Epub 2020 Jul 30. pii:S0149-2918(20)30286-1. doi:10.1016/j.clinthera.2020.05.022.";
+		    const string citation = "Hug B, Matheny C, Burns O et al. Safety, Pharmacokinetics, and Pharmacodynamics of the TLR4 Agonist GSK1795091 in Healthy Individuals: Results from a Randomized, Double-blind, Placebo-controlled, Ascending Dose Study. Clin Ther. 2020 Aug. 42(8):1519-1534.e33. Epub 2020 Jul 30. pii:S0149-2918(20)30286-1. doi:10.1016/j.clinthera.2020.05.022.";
 
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D000328', mvalue => 'Adult');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D001794', mvalue => 'Blood Pressure');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D002318', mvalue => 'Cardiovascular Diseases');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D018592', mvalue => 'Cross-Over Studies');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D004036', mvalue => 'Diet, Atherogenic');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D006973', mvalue => 'Hypertension');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D008875', mvalue => 'Middle Aged');
---call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => '', mvalue => '');
+		    fdb.journal_details = new JournalDetails(sd_oid, "Clinical therapeutics", null, "1879114X", 
+			     "7706726", "Clin Ther", 101422, "Elsevier");
 
---call expected.insert_object_nonmesh_topic(sid => _sid, typeid => , orivalue => '');
+		    fdb.data_object = new DataObject(sd_oid, null, art_title, "1", citation,
+			     "10.1016/j.clinthera.2020.05.022", 1, 2016, 23, 12, 101422, "Elsevier", "https://ror.org/055j8ya05",
+			     "en", 15, "Not in PMC - presumed behind pay wall, but to check", null, 0, false, false);
+		     
+		    fdb.object_descriptions!.Add(new ObjectDescription(sd_oid, 18, null, desc, "en"));
+		        
+		    fdb.object_titles!.Add(new ObjectTitle(sd_oid, art_title, 19, "en", 11, true, null));
+		     
+		    fdb.object_instances!.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
+			     "https://www.ncbi.nlm.nih.gov/pubmed/" + sd_oid, true, 40, null, null, null));
 
--- db links
-call expected.insert_object_db_link(sid => _sid, db_sequence => 1, db_name => 'ClinicalTrials.gov', id_in_db => 'NCT00051350');
+		    fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "2020 Aug 3"));
+		    fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "S0149-2918(20)30286-1", 34, 101422, "Elsevier", "https://ror.org/055j8ya05", "2020 May 22"));
+		     
+		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Bruce A", "Hug", "Bruce A Hug", null, 
+			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA. Electronic address: bruce.a.hug@gsk.com.", null, null, null));
+		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Christopher J", "Matheny", "Christopher J Matheny", null, 
+			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA.", null, null, null));
+		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Olivia", "Burns", "Olivia Burns", null, 
+			    "Global Clinical Sciences & Delivery, GSK, Abbotsford, Victoria, Australia.", null, null, null));
+		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Herbert", "Struemper", "Herbert Struemper", null, 
+			    "Clinical Pharmacology Modeling & Simulation, GSK, Research Triangle Park, NC, USA..", null, null, null));
+		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Xiaowei", "Wang", "Xiaowei Wang", null, 
+			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA.", null, null, null));
+		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Michael L", "Washburn", "Michael L Washburn", null, 
+			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA.", null, null, null));
+		    
+		    fdb.object_topics!.Add(new ObjectTopic(sd_oid, 11, "GSK1795091", null, null, null, null));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Toll-like receptor", null, null, null, null));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "cytokine", null, null, null, null));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "dose-escalation", null, null, null, null));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "pharmacokinetics", null, null, null, null));
+		    
+		    fdb.object_topics!.Add(new ObjectTopic(sd_oid, 0, "Adult", 14, "D000328", "D000328", "Adult"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Area Under Curve", 14, "D019540", "D019540", "Area Under Curve"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Back Pain", 14, "D001416", "D001416", "Back Pain"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Body Temperature", 14, "D001831", "D001831", "Body Temperature"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Dose-Response Relationship, Drug", 14, "D004305", "D004305", "Dose-Response Relationship, Drug"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Double-Blind Method", 14, "D004311", "D004311", "Double-Blind Method"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Headache", 14, "D006261", "D006261", "Headache"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Immunotherapy", 14, "D007167", "D007167", "Immunotherapy"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Infusions, Intravenous", 14, "D007262", "D007262", "Infusions, Intravenous"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Leukocyte Count", 14, "D007958", "D007958", "Leukocyte Count"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Middle Aged", 14, "D008875", "D008875", "Middle Aged"));
+		    
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Antineoplastic Agents", 14, "D000970", "D000970", "Antineoplastic Agents"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Cytokines", 14, "D016207", "D016207", "Cytokines"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Glycolipids", 14, "D006017", "D006017", "Glycolipids"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "TLR4 agonist GSK1795091", 14, "C000712933", "C000712933", "TLR4 agonist GSK1795091"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "TLR4 protein, human", 14, "C495345", "C495345", "TLR4 protein, human"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Toll-Like Receptor 4", 14, "D051197", "D051197", "Toll-Like Receptor 4"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Aspartate Aminotransferases", 14, "D001219", "D001219", "Aspartate Aminotransferases"));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Alanine Transaminase", 14, "D000410", "D000410", "Alanine Transaminase"));
+		    
+            fdb.object_db_ids!.Add(new ObjectDBLink(sd_oid, 1, "ClinicalTrials.gov", "NCT02798978"));
+ 
+			fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "2020 Aug", 2020, 8, null));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "2021 Jan 27", 2021, 1, 27));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "2021 Feb 17", 2021, 2, 17));
 
--- main data object
--- if (PMC_present) access_type_id = 11
--- else  access_type_id = 15, access_details = 'Not in PMC - presumed behind pay wall, but to check';
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 55, "2020 Jul 30", 2020, 7, 30));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 17, "2019 Nov 15", 2019, 11, 15));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 57, "2020 Apr 30", 2020, 4, 30));
 
-call expected.insert_pubmed_details(sid => _sid, 
-                  title => 'Appel L, Sacks F, Carey V et al. Effects of protein, monounsaturated fat, and carbohydrate intake on blood pressure and serum lipids: results of the OmniHeart randomized trial. JAMA. 2005 Nov 16. 294(19):2455-64.', 
-				  vers => '1', doid => '10.1001/jama.294.19.2455', doidsid => 1,
-				  pubyear => 2005, acctypeid => 15, accdetails => 'Not in PMC - presumed behind pay wall, but to check');
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 11, "2020 May 22", 2020, 5, 22));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "2020 May 22", 2020, 5, 22));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "2021 Jan 28", 2021, 1, 28));
 
--- instances
-	
-	
-call expected.insert_object_pubmed_instance(sid => _sid, insttypeid => 3, reporgid => 100133, reporgname => 'National Library of Medicine', 
-	purl => 'https://www.ncbi.nlm.nih.gov/pubmed/' || _sid, accessible => true, restypeid => 40);
-	
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "2020 Aug 3", 2020, 8, 3));
 
-	
--- identifiers	
--- pii 34, Publisher article ID
--- 31, PMCID, 100133, "National Library of Medicine"));
--- new ObjectInstance(sdoid, 1, "Full resource", 100133, "National Library of Medicine", "https://www.ncbi.nlm.nih.gov/pmc/articles/" + other_id.ToString(), true, 36, "Web text with download"));
--- 32, NIH Manuscript ID, other_id, 100134, "National Institutes of Health"));
--- 33, NRCBL, other_id, 100447, "Georgetown University"));
--- 37, PMC Publisher ID
--- 38, PM Publisher ID
--- 35, Serial Item and Contribution Identifier 
--- 36, Medline UID, other_id, 100133, "National Library of Medicine
-  
-call expected.insert_object_identifier(sid => _sid, typeid => 16, idvalue => _sid, idorgid => 100133, idorgname => 'National Library of Medicine', iddate => '2005 Nov 17');
-call expected.insert_object_identifier(sid => _sid, typeid => 34, idvalue => '294/19/2455');
+			fdb.object_pubtypes!.Add(new ObjectPublicationType(sd_oid, "Journal Article"));
+			fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Clinical Trial, Phase I"));
+			fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Randomized Controlled Trial"));
+			            
+			fdb.object_comments!.Add(new ObjectComment(sd_oid, null, "", "", "1", null));
 
--- dates
---12, pub_date
---52, Pubmed citation created
---53, Pubmed citation_revised
---54, Pubmed citation completed
---55, Epublish
---17, received
---11, accepted
-                               
--- 56, Ppublish
--- 57, Revised
--- 58, Ahead of print publication
--- 59, Retracted
--- 60, Added to eCollection
--- 61, Added to PMC
--- 62, Added to Pubmed
--- 63, Added to Medline
--- 65, Added to entrez
--- 64, PMC embargo release
-
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 12, datestring => '2005 Nov 16', syear => 2005, smonth => 11, sday => 16);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 54, datestring => '2005 Nov 22', syear => 2005, smonth => 11, sday => 22);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 53, datestring => '2016 Oct 17', syear => 2016, smonth => 10, sday => 17);
-
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 62, datestring => '2005 Nov 17', syear => 2005, smonth => 11, sday => 17);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 63, datestring => '2005 Dec 13', syear => 2005, smonth => 12, sday => 13);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 65, datestring => '2005 Nov 17', syear => 2005, smonth => 11, sday => 17);
-
---pub types	
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Comparative Study');
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Journal Article');
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Multicenter Study');
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Randomized Controlled Trial');
-
--- comments
-call expected.insert_object_comment(sid => _sid, ref_type => 'CommentIn', ref_source => 'JAMA. 2005 Nov 16;294(19):2497-8', pmid => '16287963', pmid_version => '1');
-
-             */           
-        }
-        
-     if (sd_oid == "32739049")
-     {
-            /*
-          
--- article title
-call expected.insert_object_pubmed_title(sid => _sid,	typeid => 19, 
-	title => 'Safety, Pharmacokinetics, and Pharmacodynamics of the TLR4 Agonist GSK1795091 in Healthy Individuals: Results from a Randomized, Double-blind, Placebo-controlled, Ascending Dose Study.',
-	isdefault => true);
-
--- journal details
-call expected.insert_journal_details(sid =>_sid, eissn => '1879114X', journal_title => 'Clinical therapeutics');
-
--- description (journal string)
-call expected.insert_object_description(sid =>_sid, typeid => 18, description_text => 'Clin Ther. 2020 Aug. 42(8):1519-1534.e33. Epub 2020 Jul 30. pii:S0149-2918(20)30286-1. doi:10.1016/j.clinthera.2020.05.022.');
-
--- contributors
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Hug', given_name => 'Bruce A', full_name => 'Bruce A Hug', 
-affiliation => 'R&D Pharmaceuticals, GSK, Upper Providence, PA, USA. Electronic address: bruce.a.hug@gsk.com.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Matheny', given_name => 'Christopher J', full_name => 'Christopher J Matheny', 
-affiliation => 'R&D Pharmaceuticals, GSK, Upper Providence, PA, USA.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Burns', given_name => 'Olivia', full_name => 'Olivia Burns', 
-affiliation => 'Global Clinical Sciences & Delivery, GSK, Abbotsford, Victoria, Australia.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Struemper', given_name => 'Herbert', full_name => 'Herbert Struemper', 
-affiliation => 'Clinical Pharmacology Modeling & Simulation, GSK, Research Triangle Park, NC, USA.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Wang', given_name => 'Xiaowei', full_name => 'Xiaowei Wang', 
-affiliation => 'R&D Pharmaceuticals, GSK, Upper Providence, PA, USA.');
-call expected.insert_object_indiv_contributor(sid =>_sid, typeid => 11, family_name => 'Washburn', given_name => 'Michael L', full_name => 'Michael L Washburn', 
-affiliation => 'R&D Pharmaceuticals, GSK, Upper Providence, PA, USA.');
-
--- topics
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D000970', mvalue => 'Antineoplastic Agents');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D016207', mvalue => 'Cytokines');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D006017', mvalue => 'Glycolipids');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'C000712933', mvalue => 'TLR4 agonist GSK1795091');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'C495345', mvalue => 'TLR4 protein, human');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D051197', mvalue => 'Toll-Like Receptor 4');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D001219', mvalue => 'Aspartate Aminotransferases');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 12, mcode => 'D000410', mvalue => 'Alanine Transaminase');
-
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D000328', mvalue => 'Adult');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D019540', mvalue => 'Area Under Curve');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D001416', mvalue => 'Back Pain');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D001831', mvalue => 'Body Temperature');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D004305', mvalue => 'Dose-Response Relationship, Drug');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D004311', mvalue => 'Double-Blind Method');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D006261', mvalue => 'Headache');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D007167', mvalue => 'Immunotherapy');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D007262', mvalue => 'Infusions, Intravenous');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D007958', mvalue => 'Leukocyte Count');
-call expected.insert_object_mesh_topic(sid => _sid, typeid => 0, mcode => 'D008875', mvalue => 'Middle Aged');
-
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'GSK1795091');
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'Toll-like receptor');
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'cytokine');
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'dose-escalation');
-call expected.insert_object_nonmesh_topic(sid => _sid, typeid => 11, ctid => 11, orivalue => 'pharmacokinetics');
-
--- db links
-call expected.insert_object_db_link(sid => _sid, db_sequence => 1, db_name => 'ClinicalTrials.gov', id_in_db => 'NCT02798978');
-
--- main data object
--- if (PMC_present) access_type_id = 11
--- else  access_type_id = 15, access_details = 'Not in PMC - presumed behind pay wall, but to check';
-
-call expected.insert_pubmed_details(sid => _sid, 
-                  title => 'Hug B, Matheny C, Burns O et al. Safety, Pharmacokinetics, and Pharmacodynamics of the TLR4 Agonist GSK1795091 in Healthy Individuals: Results from a Randomized, Double-blind, Placebo-controlled, Ascending Dose Study. Clin Ther. 2020 Aug. 42(8):1519-1534.e33. Epub 2020 Jul 30. pii:S0149-2918(20)30286-1. doi:10.1016/j.clinthera.2020.05.022.', 
-				  vers => '1', doid => '10.1016/j.clinthera.2020.05.022', doidsid => 1,
-				  pubyear => 2020, acctypeid => 15, accdetails => 'Not in PMC - presumed behind pay wall, but to check');
-
--- instances
--- for PMC:  new ObjectInstance(sdoid, 1, "Full resource", 100133, "National Library of Medicine", "https://www.ncbi.nlm.nih.gov/pmc/articles/" + other_id.ToString(), true, 36, "Web text with download"));	
-
-call expected.insert_object_pubmed_instance(sid => _sid, insttypeid => 3, reporgid => 100133, reporgname => 'National Library of Medicine', 
-	purl => 'https://www.ncbi.nlm.nih.gov/pubmed/' || _sid, accessible => true, restypeid => 40);
-
--- identifiers	
--- pii 34, Publisher article ID
--- 31, PMCID, 100133, "National Library of Medicine"));
--- 32, NIH Manuscript ID, other_id, 100134, "National Institutes of Health"));-- 33, NRCBL, other_id, 100447, "Georgetown University"));
--- 37, PMC Publisher ID-- 38, PM Publisher ID-- 35, Serial Item and Contribution Identifier 
--- 36, Medline UID, other_id, 100133, "National Library of Medicine
-  
-call expected.insert_object_identifier(sid => _sid, typeid => 16, idvalue => _sid, idorgid => 100133, idorgname => 'National Library of Medicine', iddate=> '2020 Aug 3');
-call expected.insert_object_identifier(sid => _sid, typeid => 34, idvalue => 'S0149-2918(20)30286-1', iddate=> '2020 May 22');
-
--- dates
---12, pub_date--52, Pubmed citation created--53, Pubmed citation_revised--54, Pubmed citation completed
---55, Epublish--17, received--11, accepted
-                               
--- 56, Ppublish-- 57, Revised-- 58, Ahead of print publication
--- 59, Retracted-- 60, Added to eCollection-- 61, Added to PMC
--- 62, Added to Pubmed-- 63, Added to Medline-- 65, Added to entrez
--- 64, PMC embargo release
-
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 12, datestring => '2020 Aug', syear => 2020, smonth => 8);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 54, datestring => '2021 Jan 27', syear => 2021, smonth => 1, sday => 27);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 53, datestring => '2021 Feb 17', syear => 2021, smonth => 2, sday => 17);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 55, datestring => '2020 Jul 30', syear => 2020, smonth => 7, sday => 30);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 17, datestring => '2019 Nov 15', syear => 2019, smonth => 11, sday => 15);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 57, datestring => '2020 Apr 30', syear => 2020, smonth => 4, sday => 30);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 11, datestring => '2020 May 22', syear => 2020, smonth => 5, sday => 22);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 62, datestring => '2020 Aug 3', syear => 2020, smonth => 8, sday => 3);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 63, datestring => '2021 Jan 28', syear => 2021, smonth => 1, sday => 28);
-call expected.insert_object_pubmed_date(sid => _sid, typeid => 65, datestring => '2020 Aug 3', syear => 2020, smonth => 8, sday => 3);
-
---pub types	
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Clinical Trial, Phase I');
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Journal Article');
-call expected.insert_object_pub_type(sid => _sid, type_name => 'Randomized Controlled Trial');
-
--- comments
---call expected.insert_object_comment(sid => _sid, ref_type => '', ref_source => '', pmid => '', pmid_version => '1');
-           */
+			return fdb;
         }
 
         return null;

@@ -53,4 +53,27 @@ public class TestData_Base
         return sdo;
     }
     
+    
+    protected FullDataObject CreateEmptyFullDataObject()
+    {
+        // instantiate the object and set the 
+        // multiple attributes to empty lists 
+
+        FullDataObject fdo = new()
+        {
+            object_instances = new List<ObjectInstance>(),
+            object_titles = new List<ObjectTitle>(),
+            object_dates = new List<ObjectDate>(),
+            object_identifiers = new List<ObjectIdentifier>(),
+            object_topics = new List<ObjectTopic>(),
+            object_pubtypes = new List<ObjectPublicationType>(),
+            object_descriptions = new List<ObjectDescription>(),
+            object_organisations = new List<ObjectOrganisation>(),
+            object_people = new List<ObjectPerson>(),
+            object_comments = new List<ObjectComment>(),
+            object_db_ids = new List<ObjectDBLink>()
+        };
+        return fdo;
+    }
+
 }
