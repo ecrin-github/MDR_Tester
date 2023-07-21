@@ -121,7 +121,7 @@ public class TestData_100117 : TestData_Base
 	        sb.Append("with intervals of 1 or 2 days between them, lasting 30 minutes each, and soon thereafter, 16 Pilates Method classes in the ");
 	        sb.Append("same models of the Control Group, and Pilates classes are taught in groups of 5 people. Both the GC and the GI will ");
 	        sb.Append("consist of 40 people each.;Other;E02.779.474;I02.233.332");
-	        sb.Append("Primary outcome(s): It's expected that all variables in both groups will be improved, but it will be more significant in ");  
+	        sb.Append("Primary outcome(s): It’s expected that all variables in both groups will be improved, but it will be more significant in ");  
 	        sb.Append("the Intervention Group, after the application of Pain Neuroscience Education.\nPresentation of expected outcome: Kinesiophobia\n");   
 	        sb.Append("Presentation of the method used to verify the outcome: Kinesiophobia TAMPA scale\nPresentation of the parameters: it is expected a ");  
 	        sb.Append("reduction of the score in the post-intervention evaluation when compared to the pre-intervention. "); 

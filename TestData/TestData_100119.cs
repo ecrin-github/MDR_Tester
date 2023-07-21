@@ -157,10 +157,10 @@ public class TestData_100119 : TestData_Base
                 "From the South Korean Clinical Trials Registry"));
             
             fs.people!.Add(new StudyPerson(sd_sid, 51, "Myung-Ah", "Lee", "Beom Hee Lee", null,
-                "The Catholic University of Korea, Seoul St. Mary's Hospital", 100598,
+                "The Catholic University of Korea, Seoul St. Mary’s Hospital", 100598,
                 "Catholic University of Korea", "https://ror.org/01fpnj063"));
             fs.people.Add(new StudyPerson(sd_sid, 56, "Hye jeong", "Kim", "Beom Hee Lee", null,
-                "The Catholic University of Korea, Seoul St. Mary's Hospital", 100598,
+                "The Catholic University of Korea, Seoul St. Mary’s Hospital", 100598,
                 "Catholic University of Korea", "https://ror.org/01fpnj063"));
             
             fs.organisations!.Add(new StudyOrganisation(sd_sid, 54,  100598,

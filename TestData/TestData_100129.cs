@@ -37,7 +37,7 @@ public class TestData_100129 : TestData_Base
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100129, 
                 "Registro Peruano de Ensayos Clínicos", null, "2019 Sep 18", null));
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT03631199", 11, 100120, 
-	            "Clinicaltrials.gov", null, null, null));
+	            "ClinicalTrials.gov", null, null, null));
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, "2018-001547-32", 11, 100123, 
 	            "EU Clinical Trials Register", null, null, null));
             

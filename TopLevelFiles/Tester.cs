@@ -32,7 +32,8 @@ public class Tester
                 _loggingHelper.LogCommandLineParameters(opts);
                 _loggingHelper.LogStudyHeader(opts, "For source: " + source.id + ": " + dbName);
                 
-                RunTest(source);
+                int FbLevel = (int)opts.FeedbackLevel!;  // default ensures an integer
+                RunTest(source, FbLevel);
                 
                 _loggingHelper.CloseLog();
             }
@@ -46,7 +47,7 @@ public class Tester
         }
     }
 
-    private void RunTest(Source source)
+    private void RunTest(Source source, int FbLevel)
     {
         // Recreate the TE (test expected) tables.
         // Then obtain a list of the studies or objects marked as for testing
@@ -59,21 +60,35 @@ public class Tester
         
         _loggingHelper.LogHeader("Load expected data");
         TestDataLayer testdl = new TestDataLayer(source, _loggingHelper);
-        IEnumerable<string>? test_sids = testdl.ObtainTestSIDs(source.source_type!);
+        
+        List<string>? test_sids = testdl.ObtainTestSIDs(source.source_type!)?.ToList();
         if (test_sids is not null)
         {
+            bool data_loaded = false;
+            _loggingHelper.LogHeader("Loading data");
             foreach (string s in test_sids)
             {
-                bool res = testdl.LoadData(source.source_type!, source.id, s);
-                string feedback = res
+                data_loaded = testdl.LoadData(source.source_type!, source.id, s, FbLevel);
+                string feedback = data_loaded
                     ? $"Expected Data loaded for {s}"
                     : $"!!! No source data found for {s} !!!";
                 _loggingHelper.LogLine(feedback);
                 _loggingHelper.LogLine("");
-            }
+            } 
 
             // Then compare loaded 'expected' data with the actual data in the ad tables.
             
+            if (data_loaded)
+            {
+                TestReportBuilder repBuilder = new TestReportBuilder(source, _loggingHelper);
+                _loggingHelper.LogHeader("Comparing data");
+                foreach (string s in test_sids)
+                {
+                    repBuilder.CompareData(s, FbLevel);
+                    _loggingHelper.LogLine("");
+                    _loggingHelper.LogLine($"Expected and Actual data compared for {s}");
+                }
+            }
         }
     } 
 }

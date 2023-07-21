@@ -209,7 +209,7 @@ public class TestData_100127 : TestData_Base
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100127, 
                 "Japan Primary Registries Network", null, "2016 Nov 4", null));
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT03076619", 11, 100120, 
-	            "Clinicaltrials.gov", null, null, null));
+	            "ClinicalTrials.gov", null, null, null));
             
             fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From the Japan Primary Registries Network"));
             

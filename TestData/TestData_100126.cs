@@ -205,8 +205,8 @@ public class TestData_100126 : TestData_Base
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100126, 
                 "ISRCTN", null, "2001 Jul 1", null));
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00002516", 11, 100120, 
-	            "Clinicaltrials.gov", null, null, null));
-            fs.identifiers.Add(new StudyIdentifier(sd_sid, "ET 9302'", 14, null, 
+	            "ClinicalTrials.gov", null, null, null));
+            fs.identifiers.Add(new StudyIdentifier(sd_sid, "ET 9302", 14, null, 
                 "Cancer Research UK (CRUK) (UK)", null, null, null));
             
             fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ISRCTN"));
@@ -233,17 +233,17 @@ public class TestData_100126 : TestData_Base
 		    fs.references!.Add(new StudyReference(sd_sid, "http://www.ncbi.nlm.nih.gov/pubmed/12504050", 
 		        "12504050", "2. 2003 results in ", null, ""));
 		    fs.references!.Add(new StudyReference(sd_sid, "http://www.ncbi.nlm.nih.gov/pubmed/16137838", 
-		        "16137838", "3. 2005 results in '", null, ""));
+		        "16137838", "3. 2005 results in ", null, ""));
 		    fs.references!.Add(new StudyReference(sd_sid, "http://www.ncbi.nlm.nih.gov/pubmed/18398583", 
 		        "18398583", "4. 2008 results in ", null, ""));
 		    fs.references!.Add(new StudyReference(sd_sid, "http://www.ncbi.nlm.nih.gov/pubmed/18802150", 
 		        "18802150", "5. 2008 results in ", null, ""));
 
-		    fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Biopsy proven Ewing's sarcoma, atypical Ewing's sarcoma or peripheral neuroectodermal tumour"));	       
+		    fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Biopsy proven Ewing’s sarcoma, atypical Ewing’s sarcoma or peripheral neuroectodermal tumour"));	       
 		    fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "No previous radiotherapy, chemotherapy or surgery"));	    
 		    fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "No primary definitive local therapy"));	    
 		    fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "4.", 1, "n.04", "Aged < 35 years"));	    
-		    fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "none", "none", 1, "e.0A", "Patients with soft tissue Ewing's sarcoma or other small cell sarcomas are not eligible"));	       
+		    fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "none", "none", 1, "e.0A", "Patients with soft tissue Ewing’s sarcoma or other small cell sarcomas are not eligible"));	       
             
             fs.countries!.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
 	        
@@ -296,7 +296,7 @@ public class TestData_100126 : TestData_Base
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100106, 
                 "ISRCTN", null, "2020 Jun 9", null));
             fs.identifiers.Add(new StudyIdentifier(sd_sid, "NCT04406714", 11, 100120, 
-                "Clinicaltrials.gov", null, null, null));
+                "ClinicalTrials.gov", null, null, null));
             
             fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ISRCTN"));
             fs.titles.Add(new StudyTitle(sd_sid,
@@ -304,7 +304,7 @@ public class TestData_100126 : TestData_Base
 	            16, "en", 11, false, "From ISRCTN"));
             fs.titles.Add(new StudyTitle(sd_sid, "SCORE", 14, "en", 11, false, "From ISRCTN"));
             
-            fs.people!.Add(new StudyPerson(sd_sid, 51, null, null, "Daniel Reuland", "0000-0002-7839-6581'", null, null, null, null));
+            fs.people!.Add(new StudyPerson(sd_sid, 51, null, null, "Daniel Reuland", "0000-0002-7839-6581", null, null, null, null));
             fs.people.Add(new StudyPerson(sd_sid, 56, null, null, "Teri Malo", "0000-0002-5620-4841", null, null, null, null));
             fs.people.Add(new StudyPerson(sd_sid, 56, "Alexis Moore", null, null, null, null));
 	        
@@ -317,7 +317,7 @@ public class TestData_100126 : TestData_Base
 	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 525));   // 
 	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Colorectal cancer'", null, null, "B5-2B9", 
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Colorectal cancer", null, null, "B5-2B9", 
 		        "Malignant neoplasms of large intestine"));
 	        
 	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Aged between 50 and 75 years"));	       
@@ -396,7 +396,7 @@ public class TestData_100126 : TestData_Base
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, "2012-000615-84", 11, 100123, 
 	            "EU Clinical Trials Register", null, null, null));
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT02441309", 11, 100120, 
-	            "Clinicaltrials.gov'", null, null, null));
+	            "ClinicalTrials.gov", null, null, null));
             fs.identifiers.Add(new StudyIdentifier(sd_sid, "16801", 14, 100253, 
                 "University of Oxford", "https://ror.org/052gg0110", null, null));
             

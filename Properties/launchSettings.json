@@ -5,7 +5,7 @@
       "commandName": "Project",
       "environmentVariables": {
       },
-      "commandLineArgs": "-s \"100116\" "
+      "commandLineArgs": "-s \"100120\" -f 1 "
     }
   }
 }

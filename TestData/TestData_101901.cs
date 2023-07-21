@@ -40,7 +40,7 @@ public class TestData_101901 : TestData_Base
 		        null, null, null, null, 0);
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT01727258", 11, 100120, 
-		        "Clinicaltrials.gov", null, null, null));
+		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "KOXDHY0008", 14, 100290, 
 		        "Johnson & Johnson", "https://ror.org/03qd7mz70", null, null));
       
@@ -336,7 +336,7 @@ public class TestData_101901 : TestData_Base
 		        null, null, null, null, 0);
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT02243202", 11, 100120, 
-            		        "Clinicaltrials.gov", null, null, null));
+            		        "ClinicalTrials.gov", null, null, null));
             fs.identifiers.Add(new StudyIdentifier(sd_sid, "28431754OBE2002", 14, 100773, 
             		        "Janssen", null, null, null));
                   
@@ -541,7 +541,7 @@ public class TestData_101901 : TestData_Base
 		        null, null, null, null, 0);
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00433329", 11, 100120, 
-		        "Clinicaltrials.gov", null, null, null));
+		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "AC-052-419", 14, 100585, 
 		        "Actelion", "https://ror.org/001yedb91", null, null));
                   

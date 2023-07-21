@@ -40,7 +40,7 @@ public class TestData_101989 : TestData_Base
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 101989, 
 		        "Lebanon Clinical Trials Registry", null, "2022 Jan 4", null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "NCT03631199", 11, 100120,
-		        "Clinicaltrials.gov", null, null, null));
+		        "ClinicalTrials.gov", null, null, null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From the Lebanon Clinical Trials Registry"));
 	        string title = "A Randomized, Double-blind, Placebo-controlled, Phase III Study Evaluating the Efficacy and Safety of Pembrolizumab Plus ";

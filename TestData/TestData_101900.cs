@@ -36,11 +36,11 @@ public class TestData_101900 : TestData_Base
 		        null, null, null, null, 0);
 	        
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00006400", 11, 100120, 
-		        "Clinicaltrials.gov", null, null, null));
+		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00890396", 11, 100120, 
-		        "Clinicaltrials.gov", null, null, null));
+		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT01783990", 11, 100120, 
-		        "Clinicaltrials.gov", null, null, null));
+		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HLB02352022a", 42, 100167, 
 		        "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26", null, null));
 	        
@@ -287,7 +287,7 @@ public class TestData_101900 : TestData_Base
 		        null, null, null, null, 0);
 	        
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00000577", 11, 100120, 
-		        "Clinicaltrials.gov", null, null, null));
+		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HLB00140202a", 42, 100167, 
 		        "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26", null, null));
 	        
@@ -411,7 +411,7 @@ public class TestData_101900 : TestData_Base
 		        null, null, null, null, 0);
 	        
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00094302", 11, 100120, 
-		        "Clinicaltrials.gov", null, null, null));
+		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HLB01341616a", 42, 100167, 
 		        "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26", null, null));
 	        
@@ -470,7 +470,7 @@ public class TestData_101900 : TestData_Base
 			
 			sb = new StringBuilder("Curtis JP, Rathore SS, Wang Y, Krumholz HM. ");
 			sb.Append("The association of 6-minute walk performance and outcomes in stable outpatients with heart failure. ");
-			sb.Append("J Card Fail 2004 Feb;10(1):9-14.'");
+			sb.Append("J Card Fail 2004 Feb;10(1):9-14.");
 			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "14966769", "92f20d8af2e84784a84295a589bb81c1",
 			null, "associated"));	
 			
@@ -628,13 +628,13 @@ public class TestData_101900 : TestData_Base
 
 			sb = new StringBuilder("Sandesara PB, Samman-Tahhan A, Topel M, Venkatesh S, O’Neal WT. ");
 			sb.Append("Effect of Cigarette Smoking on Risk for Adverse Events in Patients With Heart Failure and Preserved Ejection Fraction. ");
-			sb.Append("Am J Cardiol 2018 Aug 1;122(3):400-404. Epub 2018 May 1.'");
+			sb.Append("Am J Cardiol 2018 Aug 1;122(3):400-404. Epub 2018 May 1.");
 			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30201107", "034e1627819845feb1c6eb3c20827d63",
 			null, "associated"));	
 
 			sb = new StringBuilder("Segar MW, Patel KV, Ayers C, Basit M, Tang WHW, Willett D, Berry J, Grodin JL, Pandey A. ");
 			sb.Append("Phenomapping of patients with heart failure with preserved ejection fraction using machine learning-based unsupervised cluster analysis. ");
-			sb.Append("Eur J Heart Fail 2020 Jan;22(1):148-158. Epub 2019 Oct 21.'");
+			sb.Append("Eur J Heart Fail 2020 Jan;22(1):148-158. Epub 2019 Oct 21.");
 			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31637815", "3604b26d6eb74359b567dee9ba6b366c",
 			null, "associated"));	
 
@@ -872,7 +872,7 @@ public class TestData_101900 : TestData_Base
 		        null, null, null, null, 0);
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00200967", 11, 100120, 
-		        "Clinicaltrials.gov", null, null, null));
+		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HLB01021313a", 42, 100167, 
 		        "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26", null, null));
 	        
@@ -997,7 +997,7 @@ public class TestData_101900 : TestData_Base
 		        null, null, 35, 17, 0);
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00051350", 11, 100120, 
-		        "Clinicaltrials.gov", null, null, null));
+		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HLB00831119a", 42, 100167, 
 		        "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26", null, null));
 	        

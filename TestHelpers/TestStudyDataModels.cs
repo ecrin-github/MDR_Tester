@@ -429,7 +429,64 @@ public class StudyIEC
     }
 }
 
+/*
+public class AttsResults
+{
+    public bool result { get; set; }
+    public int num_exp { get; set; }
+    public int num_act { get; set; }
+    public string res_string { get; set; }
+
+    public AttsResults(bool _result, int _numExp, int _numAct, string _resString)
+    {
+        result = _result;
+        num_exp =_numExp;
+        num_act = _numAct;
+        res_string = _resString;
+    }
+}
+*/
+
+public class TableResults
+{
+    public string header { get; set; }
+    public string table_name { get; set; }
+    public bool data_present { get; set; } = false;
+    public int num_exp_recs { get; set; }
+    public int num_act_recs { get; set; }
+    public int num_issues { get; set; }
+    public int fb_level { get; set; }
+    public string result { get; set; } = "";
+    public List<FieldResult> fields{ get; set; }
     
+    public TableResults(string _header, string _table_name, int _fb_level)
+    {
+        header = _header;
+        table_name = _table_name;
+        fb_level = _fb_level;
+        num_issues = 0;
+        fields = new List<FieldResult>();
+    }
+}
+
+public class FieldResult
+{
+    public string field_name { get; set; }
+    public int res { get; set; }
+    public string exp_value { get; set; }
+    public string act_value { get; set; }
+    public bool use_new_line { get; set; }
+
+    public FieldResult(string fieldName, int res, string fieldE, string fieldA, bool _use_new_line)
+    {
+        field_name = fieldName;
+        this.res = res;
+        exp_value = fieldE;
+        act_value = fieldA;
+        use_new_line = _use_new_line;
+    }
+    
+}
 
 
 

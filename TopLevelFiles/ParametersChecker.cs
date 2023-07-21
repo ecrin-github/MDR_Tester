@@ -60,6 +60,19 @@ internal class ParameterChecker
                 }
             }
 
+            if (opts.FeedbackLevel is null)
+            {
+                opts.FeedbackLevel = 1;     // the default
+            }
+            else
+            {
+                if (opts.FeedbackLevel != 0 && opts.FeedbackLevel != 1
+                 &&  opts.FeedbackLevel != 2 && opts.FeedbackLevel != 3)
+                {
+                    opts.FeedbackLevel = 1; // the default for silly values!
+                }
+            }
+
             // If reached here parameters are valid - return opts.
 
             return new ParamsCheckResult(false, false, opts);
@@ -119,6 +132,9 @@ public class Options
     
     [Option('A', "test_all", Required = false, HelpText = "Flag that if present indicates that all relevant sources should be tested.")]
     public bool? TestAll { get; set; }
+    
+    [Option('f', "feedback_level", Required = false, HelpText = "Flag that indicates the level of detail to be provided when presenting the results of data comparisons (0-3)")]
+    public int? FeedbackLevel { get; set; }
 }
 
 

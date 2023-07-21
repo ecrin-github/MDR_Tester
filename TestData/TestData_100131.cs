@@ -27,7 +27,7 @@ public class TestData_100131 : TestData_Base
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "U1111-1189-6165", 11, 100115, 
 		        "International Clinical Trials Registry Platform (WHO)", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "NCT03076619", 11, 100120,
-		        "Clinicaltrials.gov", null, null, null));
+		        "ClinicalTrials.gov", null, null, null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From the Thai Clinical Trials Register"));
 	        

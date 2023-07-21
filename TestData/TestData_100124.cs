@@ -94,7 +94,7 @@ public class TestData_100124 : TestData_Base
 		        "Rehabilitation and Clinical Observation of stroke patients to validate prognostic factors of functional and subjective Recovery after Stroke (RECOVER-S): A registry-based cohort study";
 	        StringBuilder sb = new StringBuilder("Intervention 1: Registry: Patients with acute stroke requiring rehabilitation will be clinically assessed at 7 days after stroke ");
 	        sb.Append("(if included in the acute hospital), and at 28 days, 3, 6, 12, and 24 months after stroke. Routine data and patient-reported outcome measures (PROMS) ");
-	        sb.Append("will be collected. Start date of recruitment 24.10.2022 Intervention 2: Cohort 'Therapy': Patients with acute stroke requiring rehabilitation will be ");
+	        sb.Append("will be collected. Start date of recruitment 24.10.2022 Intervention 2: Cohort ‘Therapy’: Patients with acute stroke requiring rehabilitation will be ");
 	        sb.Append("clinically assessed at 7 days after stroke (if included in the acute hospital) and at 28 days, 3, 6, 12 and 24 months after stroke. ");	        
 	        sb.Append("Routine data and patient-reported outcome measures (PROMS) will be collected, as well as routine data from rehabilitation clinics on the ");
 	        sb.Append("therapy provided. All patients in the cohort study will also participate in the registry (Arm 1) at the same time). Start date of recruitment planned for November 2022.");

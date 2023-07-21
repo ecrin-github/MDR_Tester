@@ -33,7 +33,7 @@ public class TestData_100118 : TestData_Base
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100118, 
 		        "Chinese Clinical Trial Register", null, "2016 Dec 18", null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "NCT03076619", 11, 100120, 
-		        "Clinicaltrials.gov", null, null, null));
+		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "JPRN-UMIN000024722", 11, 100127, 
 		        "Japan Primary Registries Network", null, null, null));
 	        
@@ -66,7 +66,7 @@ public class TestData_100118 : TestData_Base
 	       string ob_title = display_title + " :: Chinese registry web page";
 	       StudyDataObject sdo = CreateEmptyStudyDataObject();
 	       
-	       sdo.data_object = new DataObject(sd_oid, sd_sid, "Chinese registry web page'", null, ob_title,
+	       sdo.data_object = new DataObject(sd_oid, sd_sid, "Chinese registry web page", null, ob_title,
 		       null, 9, 2016, 23, 13, 100118, "Chinese Clinical Trial Register",
 		       null, "en", 12, null, null, 0, true, true);
 	       sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
@@ -133,7 +133,7 @@ public class TestData_100118 : TestData_Base
             string ob_title = display_title + " :: Chinese registry web page";
             StudyDataObject sdo = CreateEmptyStudyDataObject();
             
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "Chinese registry web page'", null, ob_title,
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Chinese registry web page", null, ob_title,
 	            null, 9, 2017, 23, 13, 100118, "Chinese Clinical Trial Register",
 	            null, "en", 12, null, null, 0, true, true);
 	       sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
@@ -219,7 +219,7 @@ public class TestData_100118 : TestData_Base
 	        string ob_title = display_title + " :: Chinese registry web page";
 	        StudyDataObject sdo = CreateEmptyStudyDataObject();
 
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Chinese registry web page'", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Chinese registry web page", null, ob_title,
 		        null, 9, 2019, 23, 13, 100118, "Chinese Clinical Trial Register",
 		        null, "en", 12, null, null, 0, true, true);
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
