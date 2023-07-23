@@ -7,14 +7,14 @@ public class TestData_101901 : TestData_Base
     public override FullStudy? FetchStudyData(string sd_sid)
     {
 	    StringBuilder asb =
-		    new StringBuilder("The YODA Project will require that requestors provide basic information about the Principal Investigator, Key Personnel, ");
+		    new StringBuilder("The YODA Project will require that requesters provide basic information about the Principal Investigator, Key Personnel, ");
 	    asb.Append("and the project Research Proposal, including a scientific abstract and research methods.The YODA Project will review proposals ");
 	    asb.Append("to ensure that: 1) the scientific purpose is clearly described; 2) the data requested will be used to enhance scientific ");
 	    asb.Append("and/or medical knowledge; and 3) the proposed research can be reasonably addressed using the requested data.");
 	    
 	    StringBuilder dsb =
 		    new StringBuilder("Yoda states that “...researchers will be granted access to participant-level study data that are devoid ");
-	    dsb.Append("of personally identifiable information; current best guidelines for de-identification of data will be used.");
+	    dsb.Append("of personally identifiable information; current best guidelines for de-identification of data will be used.”");
 	    
         if (sd_sid == "Y-NCT01727258")
         {
@@ -25,7 +25,7 @@ public class TestData_101901 : TestData_Base
 	        string display_title = "A Test on a New Experimental Mouth Rinse for Relieving Tooth Sensitivity";
 	        string yoda_title =
 		        "Evaluation of an experimental mouth rinse device for relieving dentinal hypersenstivity";
-	        StringBuilder sb = new StringBuilder("This study is for people with sensitive teeth and involves going to the dentist for 4 visits over 6 weeks.");
+	        StringBuilder sb = new StringBuilder("This study is for people with sensitive teeth and involves going to the dentist for 4 visits over 6 weeks. ");
 	        sb.Append("At each visit the dentist will look at the mouth, teeth, tongue and gums of subjects, and check for sensitive teeth.\n\n"); 
 	        sb.Append("During the first 2 weeks, participants will brush their teeth two times a day with the fluoride toothpaste provided.\n\n"); 
 	        sb.Append("Then, if they qualify to continue in the study, participants will be assigned to a treatment group. All the groups will get toothpaste "); 
@@ -36,7 +36,7 @@ public class TestData_101901 : TestData_Base
 	        sb.Append("We will see if the mouthwash helps to reduce tooth sensitivity during the study."); 
 	        string brief_desc = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, null, null, 11, 21, "153", 900,
+	        fs.study = new Study(sd_sid, yoda_title, "en", brief_desc, null, null, null, 11, 21, "153", 900,
 		        null, null, null, null, 0);
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT01727258", 11, 100120, 
@@ -44,7 +44,7 @@ public class TestData_101901 : TestData_Base
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "KOXDHY0008", 14, 100290, 
 		        "Johnson & Johnson", "https://ror.org/03qd7mz70", null, null));
       
-	        fs.titles!.Add(new StudyTitle(sd_sid, yoda_title, 18, "en", 11, false, "From YODA web page"));
+	        fs.titles!.Add(new StudyTitle(sd_sid, yoda_title, 18, "en", 11, true, "From YODA web page"));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100290, "Johnson & Johnson", 
 		        "https://ror.org/03qd7mz70"));
@@ -72,11 +72,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 2) Clinical Study Report
 
-	        sd_oid = sd_sid + " :: 26 :: Clinical Study Report";
-	        ob_title = display_title + " :: Clinical Study Report";
+	        sd_oid = sd_sid + " :: 26 :: Clinical study report";
+	        ob_title = display_title + " :: Clinical study report";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical Study Report", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical study report", null, ob_title,
 		        null, 9, null, 23, 26, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -87,11 +87,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 3) Protocol
 
-	        sd_oid = sd_sid + " :: 11 :: Study Protocol";
-	        ob_title = display_title + "  :: Study Protocol";
+	        sd_oid = sd_sid + " :: 11 :: Study protocol";
+	        ob_title = display_title + " :: Study protocol";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study protocol", null, ob_title,
 		        null, 9, null, 23, 11, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -101,11 +101,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 4) Statistical Analysis Plan
 	        
-	        sd_oid = sd_sid + " :: 22 :: Statistical Analysis Plan";
-	        ob_title = display_title + " :: Statistical Analysis Plan";
+	        sd_oid = sd_sid + " :: 22 :: Statistical analysis plan";
+	        ob_title = display_title + " :: Statistical analysis plan";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical Analysis Plan", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical analysis plan", null, ob_title,
 		        null, 9, null, 23, 22, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -115,7 +115,7 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 5) Data Definition Specification
 	        
-	        sd_oid = sd_sid + " :: 31 :: Data Definition Specification";
+	        sd_oid = sd_sid + " :: 31 :: Data dictionary";
 	        ob_title = display_title + " :: Data dictionary";
 	        sdo = CreateEmptyStudyDataObject();
             
@@ -129,11 +129,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 6) Annotated Case Report Form
 	        
-	        sd_oid = sd_sid + " :: 30 :: Annotated Case Report Form";
-	        ob_title = display_title + " :: Annotated Case Report Form";
+	        sd_oid = sd_sid + " :: 30 :: Annotated data collection forms";
+	        ob_title = display_title + " :: Annotated data collection forms";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Annotated Case Report Form", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Annotated data collection forms", null, ob_title,
 		        null, 9, null, 23, 30, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -143,7 +143,7 @@ public class TestData_101901 : TestData_Base
 
 	        // 7) Collected Datasets
 	        
-	        sd_oid = sd_sid + " :: 80 :: Collected Datasets";
+	        sd_oid = sd_sid + " :: 80 :: Individual participant data";
 	        ob_title = display_title + " :: Individual participant data";
 	        sdo = CreateEmptyStudyDataObject();
             
@@ -153,8 +153,8 @@ public class TestData_101901 : TestData_Base
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 
-	        sdo.dataset_details = new ObjectDataset(sd_oid, null, null, 2, null, null, null, null, null,
-		        dsb.ToString(), null, null, null, null, null, null, null);
+	        sdo.dataset_details = new ObjectDataset(sd_oid, 0, null, 2, null, null, null, null, null,
+		        dsb.ToString(), 0, null, null, null, null, null, null);
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -179,7 +179,7 @@ public class TestData_101901 : TestData_Base
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "30-49", 14, 100290, 
 		        "Johnson & Johnson", "https://ror.org/03qd7mz70", null, null));
       
-	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 18, "en", 11, false, "From YODA web page"));
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 18, "en", 11, true, "From YODA web page"));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100290, "Johnson & Johnson", 
 		        "https://ror.org/03qd7mz70"));
@@ -211,11 +211,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 2) Clinical Study Report
 
-	        sd_oid = sd_sid + " :: 26 :: Clinical Study Report";
-	        ob_title = display_title + " :: Clinical Study Report";
+	        sd_oid = sd_sid + " :: 26 :: Clinical study report";
+	        ob_title = display_title + " :: Clinical study report";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical Study Report", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical study report", null, ob_title,
 		        null, 9, null, 23, 26, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -225,11 +225,11 @@ public class TestData_101901 : TestData_Base
 
 	        // 3) Protocol
 
-	        sd_oid = sd_sid + " :: 11 :: Study Protocol";
-	        ob_title = display_title + "  :: Study Protocol";
+	        sd_oid = sd_sid + " :: 11 :: Study protocol";
+	        ob_title = display_title + " :: Study protocol";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study protocol", null, ob_title,
 		        null, 9, null, 23, 11, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -239,11 +239,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 4) Statistical Analysis Plan
 	        
-	        sd_oid = sd_sid + " :: 22 :: Statistical Analysis Plan";
-	        ob_title = display_title + " :: Statistical Analysis Plan";
+	        sd_oid = sd_sid + " :: 22 :: Statistical analysis plan";
+	        ob_title = display_title + " :: Statistical analysis plan";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical Analysis Plan", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical analysis plan", null, ob_title,
 		        null, 9, null, 23, 22, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -253,11 +253,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 5) CSR Summary
 	        
-	        sd_oid = sd_sid + " :: 79 :: CSR Summary";
-	        ob_title = display_title + " :: CSR Summary";
+	        sd_oid = sd_sid + " :: 79 :: CSR summary";
+	        ob_title = display_title + " :: CSR summary";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CSR Summary", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CSR summary", null, ob_title,
 		        null, 9, null, 23, 79, 101901, "Yoda", null, "en", 11, null, null, 0, true, true);
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
@@ -269,7 +269,7 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 6) Data Definition Specification
 	        
-	        sd_oid = sd_sid + " :: 31 :: Data Definition Specification";
+	        sd_oid = sd_sid + " :: 31 :: Data dictionary";
 	        ob_title = display_title + " :: Data dictionary";
 	        sdo = CreateEmptyStudyDataObject();
             
@@ -285,11 +285,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 7) Annotated Case Report Form
 	        
-	        sd_oid = sd_sid + " :: 30 :: Annotated Case Report Form";
-	        ob_title = display_title + " :: Annotated Case Report Form";
+	        sd_oid = sd_sid + " :: 30 :: Annotated data collection forms";
+	        ob_title = display_title + " :: Annotated data collection forms";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Annotated Case Report Form", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Annotated data collection forms", null, ob_title,
 		        null, 9, null, 23, 30, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -299,7 +299,7 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 8) Collected Datasets
 	        
-	        sd_oid = sd_sid + " :: 80 :: Collected Datasets";
+	        sd_oid = sd_sid + " :: 80 :: Individual participant data";
 	        ob_title = display_title + " :: Individual participant data";
 	        sdo = CreateEmptyStudyDataObject();
             
@@ -309,8 +309,8 @@ public class TestData_101901 : TestData_Base
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 
-	        sdo.dataset_details = new ObjectDataset(sd_oid, null, null, 2, null, null, null, null, null,
-		        dsb.ToString(), null, null, null, null, null, null, null);
+	        sdo.dataset_details = new ObjectDataset(sd_oid, 0, null, 2, null, null, null, null, null,
+		        dsb.ToString(), 0, null, null, null, null, null, null);
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -332,7 +332,7 @@ public class TestData_101901 : TestData_Base
 	        sb.Append("on a change in body weight over a 26 week period."); 
 	        string brief_desc = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, null, null, 11, 21, "335", 900,
+	        fs.study = new Study(sd_sid, yoda_title, "en", brief_desc, null, null, null, 11, 21, "335", 900,
 		        null, null, null, null, 0);
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT02243202", 11, 100120, 
@@ -340,11 +340,11 @@ public class TestData_101901 : TestData_Base
             fs.identifiers.Add(new StudyIdentifier(sd_sid, "28431754OBE2002", 14, 100773, 
             		        "Janssen", null, null, null));
                   
-            fs.titles!.Add(new StudyTitle(sd_sid, yoda_title, 18, "en", 11, false, "From YODA web page"));
+            fs.titles!.Add(new StudyTitle(sd_sid, yoda_title, 18, "en", 11, true, "From YODA web page"));
             	        
             fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100773, "Janssen", null));
                   
-            fs.topics!.Add(new StudyTopic(sd_sid, 12, "Canagliflozin", null, null, null, null));
+            fs.topics!.Add(new StudyTopic(sd_sid, 12, "Canagliflozin", null, null, "D000068896", "Canagliflozin"));
             fs.conditions!.Add(new StudyCondition(sd_sid, "Obesity", null, null, "5B81", "Obesity"));
 
 	        fs.references!.Add(new StudyReference(sd_sid, null, "28289041", null, null, null));
@@ -368,11 +368,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 2) Clinical Study Report
 
-	        sd_oid = sd_sid + " :: 26 :: Clinical Study Report";
-	        ob_title = display_title + " :: Clinical Study Report";
+	        sd_oid = sd_sid + " :: 26 :: Clinical study report";
+	        ob_title = display_title + " :: Clinical study report";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical Study Report", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical study report", null, ob_title,
 		        null, 9, null, 23, 26, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -382,11 +382,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 3) Protocol
 
-	        sd_oid = sd_sid + " :: 11 :: Study Protocol";
-	        ob_title = display_title + "  :: Study Protocol";
+	        sd_oid = sd_sid + " :: 11 :: Study protocol";
+	        ob_title = display_title + " :: Study protocol";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study protocol", null, ob_title,
 		        null, 9, null, 23, 11, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -396,11 +396,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 4) Statistical Analysis Plan
 	        
-	        sd_oid = sd_sid + " :: 22 :: Statistical Analysis Plan";
-	        ob_title = display_title + " :: Statistical Analysis Plan";
+	        sd_oid = sd_sid + " :: 22 :: Statistical analysis plan";
+	        ob_title = display_title + " :: Statistical analysis plan";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical Analysis Plan", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical analysis plan", null, ob_title,
 		        null, 9, null, 23, 22, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -410,7 +410,7 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 5) Collected Datasets
 	        
-	        sd_oid = sd_sid + " :: 80 :: Collected Datasets";
+	        sd_oid = sd_sid + " :: 80 :: Individual participant data";
 	        ob_title = display_title + " :: Individual participant data";
 	        sdo = CreateEmptyStudyDataObject();
             
@@ -420,8 +420,8 @@ public class TestData_101901 : TestData_Base
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 
-	        sdo.dataset_details = new ObjectDataset(sd_oid, null, null, 2, null, null, null, null, null,
-		        dsb.ToString(), null, null, null, null, null, null, null);
+	        sdo.dataset_details = new ObjectDataset(sd_oid, 0, null, 2, null, null, null, null, null,
+		        dsb.ToString(), 0, null, null, null, null, null, null);
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -442,16 +442,16 @@ public class TestData_101901 : TestData_Base
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, null, null, 11, 21, null, 900,
 		        null, null, null, null, 0);
 	        
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "GAL-MVD-301", 14, 100773, "Janssen", null, null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "GAL-MVD-301", 14, 100290, "Johnson & Johnson", "https://ror.org/03qd7mz70", null, null));
       
-	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 18, "en", 11, false, "From YODA web page"));
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 18, "en", 11, true, "From YODA web page"));
 	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100773, "Janssen", null));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100290, "Johnson & Johnson", "https://ror.org/03qd7mz70"));
 
 	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Galantamine", null, null, "D005702", "Galantamine"));
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Alzheimer Disease", null, null, "8A20", 
-		        "Alzheimer Disease"));
+		        "Alzheimer disease"));
 	        
 	        fs.references!.Add(new StudyReference(sd_sid, null, "12875613", null, null, null));
 	        
@@ -474,11 +474,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 2) Clinical Study Report
 
-	        sd_oid = sd_sid + " :: 26 :: Clinical Study Report";
-	        ob_title = display_title + " :: Clinical Study Report";
+	        sd_oid = sd_sid + " :: 26 :: Clinical study report";
+	        ob_title = display_title + " :: Clinical study report";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical Study Report", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical study report", null, ob_title,
 		        null, 9, null, 23, 26, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -489,11 +489,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 3) Protocol
 
-	        sd_oid = sd_sid + " :: 11 :: Study Protocol";
-	        ob_title = display_title + "  :: Study Protocol";
+	        sd_oid = sd_sid + " :: 11 :: Study protocol";
+	        ob_title = display_title + " :: Study protocol";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study protocol", null, ob_title,
 		        null, 9, null, 23, 11, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -503,11 +503,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 4) CSR Summary
 	        
-	        sd_oid = sd_sid + " :: 79 :: CSR Summary";
-	        ob_title = display_title + " :: CSR Summary";
+	        sd_oid = sd_sid + " :: 79 :: CSR summary";
+	        ob_title = display_title + " :: CSR summary";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CSR Summary", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CSR summary", null, ob_title,
 		        null, 9, null, 23, 79, 101901, "Yoda", null, "en", 11, null, null, 0, true, true);
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
@@ -537,7 +537,7 @@ public class TestData_101901 : TestData_Base
 	        sb.Append("the utility of cardiac MRI in assessing improved functional capacity in PAH and exploring its correlation with other parameters.");
 	        string brief_desc = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, null, null, 11, 21, "100", 900,
+	        fs.study = new Study(sd_sid, yoda_title, "en", brief_desc, null, null, null, 11, 21, "100", 900,
 		        null, null, null, null, 0);
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00433329", 11, 100120, 
@@ -545,7 +545,7 @@ public class TestData_101901 : TestData_Base
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "AC-052-419", 14, 100585, 
 		        "Actelion", "https://ror.org/001yedb91", null, null));
                   
-	        fs.titles!.Add(new StudyTitle(sd_sid, yoda_title, 18, "en", 11, false, "From YODA web page"));
+	        fs.titles!.Add(new StudyTitle(sd_sid, yoda_title, 18, "en", 11, true, "From YODA web page"));
             	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100585, "Actelion", "https://ror.org/001yedb91"));
                   
@@ -573,11 +573,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 2) Clinical Study Report
 
-	        sd_oid = sd_sid + " :: 26 :: Clinical Study Report";
-	        ob_title = display_title + " :: Clinical Study Report";
+	        sd_oid = sd_sid + " :: 26 :: Clinical study report";
+	        ob_title = display_title + " :: Clinical study report";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical Study Report", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical study report", null, ob_title,
 		        null, 9, null, 23, 26, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -587,11 +587,11 @@ public class TestData_101901 : TestData_Base
  
 	        // 3) Protocol
 
-	        sd_oid = sd_sid + " :: 11 :: Study Protocol";
-	        ob_title = display_title + "  :: Study Protocol";
+	        sd_oid = sd_sid + " :: 11 :: Study protocol";
+	        ob_title = display_title + " :: Study protocol";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study protocol", null, ob_title,
 		        null, 9, null, 23, 11, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
@@ -601,11 +601,11 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 4) Statistical Analysis Plan
 	        
-	        sd_oid = sd_sid + " :: 22 :: Statistical Analysis Plan";
-	        ob_title = display_title + " :: Statistical Analysis Plan";
+	        sd_oid = sd_sid + " :: 22 :: Statistical analysis plan";
+	        ob_title = display_title + " :: Statistical analysis plan";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical Analysis Plan", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical analysis plan", null, ob_title,
 		        null, 9, null, 23, 22, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       

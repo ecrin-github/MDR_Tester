@@ -101,7 +101,7 @@ public class TestDataLayer
             StoreStudyComponents(fs, fbLevel);
             if (fbLevel < 2)
             {
-                _loggingHelper.LogLine($"All components for Study record {sd_id} added to DB");
+                _loggingHelper.LogLine($"Expected data for all components of Study record {sd_id} added to DB");
             }
         }
         else
@@ -117,7 +117,7 @@ public class TestDataLayer
             StoreObjectComponents(fdo, fbLevel);
             if (fbLevel < 2)
             {
-                _loggingHelper.LogLine($"All components for Object record {sd_id} added to DB");
+                _loggingHelper.LogLine($"Expected data for all components of Data Object record {sd_id} added to DB");
             }
         }
 
@@ -731,8 +731,12 @@ public class TestDataLayer
                     }
                 }
             }
-            string recs = n == 1 ? "record" : "records";
-            _loggingHelper.LogLine($"{n} Data Object {recs} for {sid} added to DB");
+
+            if (fbLevel < 2)
+            {
+                string recs = n == 1 ? "record" : "records";
+                _loggingHelper.LogLine($"{n} Data Object {recs} for {sid} added to DB");
+            }
         }
     }
 

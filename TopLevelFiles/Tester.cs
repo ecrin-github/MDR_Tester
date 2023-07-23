@@ -58,9 +58,7 @@ public class Tester
         ExpectedBuilder eb = new ExpectedBuilder(source, _loggingHelper);
         eb.BuildExpectedTables();
         
-        _loggingHelper.LogHeader("Load expected data");
         TestDataLayer testdl = new TestDataLayer(source, _loggingHelper);
-        
         List<string>? test_sids = testdl.ObtainTestSIDs(source.source_type!)?.ToList();
         if (test_sids is not null)
         {
@@ -69,24 +67,26 @@ public class Tester
             foreach (string s in test_sids)
             {
                 data_loaded = testdl.LoadData(source.source_type!, source.id, s, FbLevel);
-                string feedback = data_loaded
-                    ? $"Expected Data loaded for {s}"
-                    : $"!!! No source data found for {s} !!!";
-                _loggingHelper.LogLine(feedback);
-                _loggingHelper.LogLine("");
+                if (!data_loaded)
+                {
+                    _loggingHelper.LogLine($"!!! No source data found for {s} !!!");
+                }
+
+                if (FbLevel < 2)
+                {
+                    _loggingHelper.LogLine("");
+                }
             } 
 
             // Then compare loaded 'expected' data with the actual data in the ad tables.
             
             if (data_loaded)
             {
-                TestReportBuilder repBuilder = new TestReportBuilder(source, _loggingHelper);
+                TestReportBuilder repBuilder = new TestReportBuilder(source, _loggingHelper, FbLevel);
                 _loggingHelper.LogHeader("Comparing data");
                 foreach (string s in test_sids)
                 {
-                    repBuilder.CompareData(s, FbLevel);
-                    _loggingHelper.LogLine("");
-                    _loggingHelper.LogLine($"Expected and Actual data compared for {s}");
+                    repBuilder.CompareData(s);
                 }
             }
         }

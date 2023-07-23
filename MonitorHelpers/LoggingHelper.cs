@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System.Diagnostics.Eventing.Reader;
+using Microsoft.Extensions.Configuration;
 
 namespace MDR_Tester;
 
@@ -60,6 +61,11 @@ public class LoggingHelper : ILoggingHelper
         Transmit(feedback);
     }
     
+    public void LogBlank()
+    {
+        Transmit("");
+    }
+    
     public void LogHeader(string message)
     {
         string dtPrefix = DateTime.Now.ToShortDateString() + " : " + DateTime.Now.ToShortTimeString() + " :   ";
@@ -68,14 +74,34 @@ public class LoggingHelper : ILoggingHelper
         Transmit("");
     }
 
-    public void LogSDIDHeader(string sdid)
+    public void LogSDIDHeader(string type, string sdid, int fbLevel)
     {
         string dtPrefix = DateTime.Now.ToShortDateString() + " : " + DateTime.Now.ToShortTimeString() + " :   ";
-        Transmit("");        
-        Transmit(dtPrefix + "------------------------------");
-        Transmit(dtPrefix + "ID: " + sdid);
-        Transmit(dtPrefix + "------------------------------");
-        Transmit("");
+        if (fbLevel == 3)
+        {
+            if (type == "Study data object")
+            {
+                Transmit("");
+                Transmit(dtPrefix + "Checking " + type + ", ID: " + sdid);
+                Transmit("-------------------------------------------------------");
+                
+            }
+            else
+            {
+                Transmit("");
+                Transmit("-------------------------------------------------------");
+                Transmit(dtPrefix + "Checking " + type + ", ID: " + sdid);
+                Transmit("-------------------------------------------------------");
+            }
+        }
+        else
+        {
+            Transmit("");
+            Transmit("-------------------------------------------------------");
+            Transmit(dtPrefix + type.ToUpper() + ", ID: " + sdid);
+            Transmit("-------------------------------------------------------");
+            Transmit("");
+        }
     }
     
     
@@ -156,7 +182,17 @@ public class LoggingHelper : ILoggingHelper
                 LogLine("Source_ids are " + string.Join(",", sourceIds));
             }
         }
-        LogLine("");
+
+        string fb_string = opts.FeedbackLevel switch
+        {
+            0 => "Full, all fields reported on",
+            1 => "Errors reported, with table / record summary data",
+            2 => "Errors reported, with condensed table / record summaries",
+            3 => "Errors reporting only",
+            _ => "???",
+        };
+        LogLine($"Feedback level: {opts.FeedbackLevel}: {fb_string}");
+        LogBlank();
     }
 
 

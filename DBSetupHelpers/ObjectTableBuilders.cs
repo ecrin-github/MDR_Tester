@@ -209,7 +209,7 @@ public class ObjectTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.object_comments;
         CREATE TABLE te.object_comments(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_oid                 VARCHAR        NULL
+          , sd_oid                 VARCHAR         NULL
           , ref_type               VARCHAR         NULL 
           , ref_source             VARCHAR         NULL 
           , pmid                   VARCHAR         NULL 

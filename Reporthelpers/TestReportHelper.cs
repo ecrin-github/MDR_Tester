@@ -7,11 +7,13 @@ public class TestReportHelper
 {
     private readonly ILoggingHelper _loggingHelper;
     private readonly string _connString;
+    private readonly int _fbLevel;
 
-    public TestReportHelper(Source source, ILoggingHelper loggingHelper)
+    public TestReportHelper(Source source, ILoggingHelper loggingHelper, int fbLevel)
     {
         _loggingHelper = loggingHelper;
         _connString = source.db_conn!;
+        _fbLevel = fbLevel;
     }
 
     public TableResults CompareAttNumbers(TableResults tr, string where_clause)
@@ -28,25 +30,23 @@ public class TestReportHelper
         {
             tr.data_present = true;
         }
-        
         if (tr.num_exp_recs != tr.num_act_recs)
         {
-            tr.num_issues++;
+            if (!tr.rec_num_mismatch_allowed)   // in some cases mismatch OK
+            {
+                tr.num_issues++;
+            }
         }
-
-        //bool res = expNum == actNum;
-        //string feedback = expNum == actNum ? $" PASS ({expNum})" : $" FAIL (e: {expNum}, a: {actNum}) !!!!!!!!!";
-        //string res_string = $"Table: {tr.table_name}; Record number check: {feedback}";
         return tr;
     }
 
     
-    public TableResults CompareField(TableResults tr, string fieldName, string fieldType, 
-             string where_clause, bool use_new_line = false)
+    public RecordResults CompareField(RecordResults rr, string fieldName, string fieldType, 
+             bool use_new_line = false)
     {
-        using NpgsqlConnection conn = new(_connString);    
-        string exp_sql_string = $"select {fieldName} from te.{tr.table_name} " + where_clause;
-        string act_sql_string = $"select {fieldName} from ad.{tr.table_name} " + where_clause;
+        using NpgsqlConnection conn = new(_connString);   
+        string exp_sql_string = $"select {fieldName} from te.{rr.table_name} {rr.where_clause}";
+        string act_sql_string = $"select {fieldName} from ad.{rr.table_name} {rr.where_clause}";
         string expVal = "", actVal = "";
         switch (fieldType)
         {
@@ -71,63 +71,309 @@ public class TestReportHelper
         }
 
         int res; 
-        //string feedback;
         if (expVal == "null" && actVal == "null")
         {
             res = 0;
-            //feedback = " PASS (both NULL)";
         }
         else
         {
-            //string possNL = use_new_line ? "\n" : "";
-            if (expVal == actVal)
-            {
-                res = 0;
-                //feedback = $" PASS (both: {possNL}{expVal})";
-            }
-            else
-            {
-                res = 1;
-                //feedback = $" FAIL (e: {possNL}{expVal} : a: {possNL}{actVal})";
-            }
+            res = expVal == actVal ? 0 : 1;
         }
-        //string resString = $"{fieldName} => Result: {feedback}";
-        //_loggingHelper.LogLine(resString);
-        tr.fields.Add(new FieldResult(fieldName, res, expVal, actVal, use_new_line));
-        
-        return tr;
+        rr.fields.Add(new FieldResult(fieldName, res, expVal, actVal, use_new_line));
+        rr.num_issues += res;
+        return rr;
     }
+    
     
     public void write_results(TableResults tr)
     {
-        // table header etc. depending on fb level
-        if (tr.data_present)
+        bool rec_num_equal = tr.num_exp_recs == tr.num_act_recs;
+
+        if (_fbLevel == 0)
         {
-            if (tr.num_issues == 0)
+            // write out all comparisons for each field, for each record, in each table
+            // Start with the attribute count (number oof issues not relevant to the feedback
+            // format but no data is presented as such
+            
+            _loggingHelper.LogTableHeader(tr.header);
+            if (tr.num_issues > 0)
             {
-                _loggingHelper.LogLine("no issues");
+                string add_s = tr.num_issues > 1 ? "s" : "";
+                _loggingHelper.LogLine($"!!!!! {tr.num_issues} issue{add_s} found !!!!!"); 
             }
             
+            if (!tr.data_present)
+            {
+                _loggingHelper.LogLine("No data present"); 
+            }
+            else
+            {
+                if (tr.num_exp_recs != -1)    // -1 indicates single study or data object record
+                {
+                    if (rec_num_equal)
+                    {
+                        _loggingHelper.LogLine($"Record number check: PASS ({tr.num_exp_recs} expected and found)");
+                    }
+                    else
+                    {
+                        if (tr.rec_num_mismatch_allowed) // in some cases mismatch OK
+                        {
+                            string check_fb = $"({tr.num_exp_recs} expected, {tr.num_act_recs} found)\n";
+                            check_fb += "but expected may be a deliberate subset of actual, and no error is implied.";
+                            _loggingHelper.LogLine("Record number check: " + check_fb);
+                        }
+                        else
+                        {
+                            _loggingHelper.LogLine($"Record number check: FAIL ({tr.num_exp_recs} expected, {tr.num_act_recs} found) !!!!!");
+                        }
+                    }
+                }
+
+                if (tr.record_results.Any())
+                {
+                    foreach (RecordResults rr in tr.record_results)
+                    {
+                        if (rr.key_field is not null)    // null if a whole study or data object record
+                        {
+                            _loggingHelper.LogLine($"{rr.key_field_header} : {rr.key_field_value}");
+                        }
+
+                        if (rr.fields.Any())
+                        {
+                            foreach (FieldResult ff in rr.fields)
+                            {
+                                if (ff is { exp_value: "null", act_value: "null" })
+                                {
+                                    _loggingHelper.LogLine(
+                                        $"{ff.field_name}: PASS - both NULL");
+                                }
+                                else
+                                {
+                                    if (ff.exp_value == ff.act_value)
+                                    {
+                                        _loggingHelper.LogLine(
+                                            $"{ff.field_name}: PASS: both are: {ff.exp_value}");
+                                    }
+                                    else
+                                    {
+                                        _loggingHelper.LogBlank();
+                                        _loggingHelper.LogLine($"{ff.field_name}: FAIL: !!!!!");
+                                        _loggingHelper.LogLine($"e: {ff.exp_value} ");
+                                        _loggingHelper.LogLine($"a: {ff.act_value}");
+                                        _loggingHelper.LogBlank();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-        else
+
+        if (_fbLevel == 1)
         {
-            // table etc. depending on fb level
-            _loggingHelper.LogLine("No data present");
+            // write out all issues for each record in each table
+            // If there are no issues for a particular record report that on a single line
+            
+            _loggingHelper.LogTableHeader(tr.header);
+            if (tr.num_issues > 0)
+            {
+                string add_s = tr.num_issues > 1 ? "s" : "";
+                _loggingHelper.LogLine($"!!!!! {tr.num_issues} issue{add_s} found !!!!!"); 
+            }
+            
+            if (!tr.data_present)
+            {
+                _loggingHelper.LogLine("No data present");
+            }
+            else
+            {
+                if (tr.num_exp_recs != -1)    // -1 indicates single study or data object record
+                {
+                    if (rec_num_equal)
+                    {
+                        _loggingHelper.LogLine($"Record number check: PASS ({tr.num_exp_recs} expected and found)");
+                    }
+                    else
+                    {
+                        if (tr.rec_num_mismatch_allowed) // in some cases mismatch OK
+                        {
+                            string check_fb = $"({tr.num_exp_recs} expected, {tr.num_act_recs} found)\n";
+                            check_fb += "but expected may be a deliberate subset of actual, and no error is implied.";
+                            _loggingHelper.LogLine("Record number check: " + check_fb);
+                        }
+                        else
+                        {
+                            _loggingHelper.LogLine($"Record number check: FAIL ({tr.num_exp_recs} expected, {tr.num_act_recs} found) !!!!!");
+                        }
+                    }
+                }
+
+                if (tr.record_results.Any())
+                {
+                    foreach (RecordResults rr in tr.record_results)
+                    {
+                        if (rr.key_field is not null) // null if a whole study or data object record
+                        {
+                            _loggingHelper.LogLine($"{rr.key_field_header} : {rr.key_field_value}");
+                        }
+
+                        if (rr.num_issues > 0)
+                        { 
+                            string add_s = rr.num_issues > 1 ? "s" : "";
+                            _loggingHelper.LogLine($"{rr.num_issues} issue{add_s} found:");
+                            
+                            if (rr.fields.Any())
+                            {
+                                foreach (FieldResult ff in rr.fields)
+                                {
+                                    if (ff.res == 1)
+                                    {
+                                        _loggingHelper.LogBlank();
+                                        string possNL = ff.use_new_line ? "\n" : "";
+                                        string feedback = $"{ff.field_name}: FAIL: ";
+                                        feedback += $"{possNL}e: {ff.exp_value} {possNL}a: {ff.act_value}";
+                                        _loggingHelper.LogLine(feedback);
+                                        _loggingHelper.LogBlank();
+                                    } 
+                                }
+                            }
+                        }
+                        else
+                        {
+                            _loggingHelper.LogLine("No issues");
+                        }
+                    }
+                }
+            }
         }
+  
         
-        /*
-        if (issues == 0)
+        if (_fbLevel == 2)
         {
-            _loggingHelper.LogLine("No issues found!");
+            // no data or no issues reported on a single line
+            
+            if (tr.num_exp_recs != -1) // -1 indicates single study or data object record
+            {
+                _loggingHelper.LogBlank();
+            }
+
+            if (!tr.data_present)
+            {
+                string fb = tr.header + ": No data";
+                _loggingHelper.LogLine(fb); 
+            }
+            else
+            {
+                if (tr.num_issues == 0)
+                {
+                    _loggingHelper.LogLine(tr.header + ": No issues found");
+                }
+                else
+                {
+                    string add_s = tr.num_issues > 1 ? "s" : "";
+                    _loggingHelper.LogLine(tr.header + $": !!!!! {tr.num_issues} issue{add_s} found !!!!!");
+                }
+                
+                if (!rec_num_equal)
+                {
+                    if (tr.rec_num_mismatch_allowed) // in some cases mismatch OK
+                    {
+                        string check_fb = $"({tr.num_exp_recs} expected, {tr.num_act_recs} found)\n";
+                        check_fb += "but expected may be a deliberate subset of actual, and no error is implied.";
+                        _loggingHelper.LogLine("Record number check: " + check_fb);
+                    }
+                    else
+                    {
+                        _loggingHelper.LogLine($"Record number check: FAIL ({tr.num_exp_recs} expected, {tr.num_act_recs} found) !!!!!");
+                    }
+                }
+
+                if (tr.record_results.Any())
+                {
+                    foreach (RecordResults rr in tr.record_results)
+                    {
+                        if (rr.key_field is not null) // null if a whole study or data object record
+                        {
+                            string record_header = $"{rr.key_field_header} : {rr.key_field_value}";
+                            if (rr.num_issues > 0)
+                            {
+                                string add_s = rr.num_issues > 1 ? "s" : "";
+                                _loggingHelper.LogLine($"{record_header}: {rr.num_issues} issue{add_s} found:");
+                            }
+                            else
+                            {
+                                _loggingHelper.LogLine(record_header + ": No issues");
+                            }
+                        }
+                        
+                        if (rr.num_issues > 0)
+                        {
+                            if (rr.fields.Any())
+                            {
+                                foreach (FieldResult ff in rr.fields)
+                                {
+                                    if (ff.res == 1)
+                                    {
+                                        string possNL = ff.use_new_line ? "\n" : "";
+                                        string feedback = $"{ff.field_name}: FAIL: {possNL}e: {ff.exp_value} {possNL}a: {ff.act_value}";
+                                        _loggingHelper.LogLine(feedback);
+                                        _loggingHelper.LogBlank();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-        else
+
+        if (_fbLevel == 3)
         {
-            string issue_string = issues == 1 ? "issue" : "issues";
-            _loggingHelper.LogLine($"{issues} {issue_string} found");
+            // Exception reporting only. Tables and records that are fine are ignored.
+
+            if (tr.num_issues > 0)
+            {
+                string add_s = tr.num_issues > 1 ? "s" : "";
+                _loggingHelper.LogLine(tr.header + $": !!!!! {tr.num_issues} issue{add_s} found !!!!!");
+            }
+
+            if (!rec_num_equal)
+            {
+                if (!tr.rec_num_mismatch_allowed) // in some cases mismatch OK
+                {
+                    _loggingHelper.LogLine(
+                        $"Record number check: FAIL ({tr.num_exp_recs} expected, {tr.num_act_recs} found) !!!!!");
+                }
+            }
+
+            if (tr.record_results.Any())
+            {
+                foreach (RecordResults rr in tr.record_results)
+                {
+                    if (rr.num_issues > 0)
+                    {
+                        if (rr.key_field is not null) // null if a whole study or data object record
+                        {
+                            string record_header = $"{rr.key_field_header} : {rr.key_field_value}";
+                            string add_s = rr.num_issues > 1 ? "s" : "";
+                            _loggingHelper.LogLine($"{record_header}: {rr.num_issues} issue{add_s} found:");
+                        }
+
+                        foreach (FieldResult ff in rr.fields.Where(ff => ff.res == 1))
+                        {
+                            string possNL = ff.use_new_line ? "\n" : "";
+                            string feedback = $"{ff.field_name}: FAIL: {possNL}e: {ff.exp_value} {possNL}a: {ff.act_value}";
+                            _loggingHelper.LogLine(feedback);
+                            _loggingHelper.LogBlank();
+                        }
+                    }
+                }
+            }
         }
-        */
     }
 
+    
     public int? GetStudyStartYear(string sd_id)
     {
         using NpgsqlConnection conn = new(_connString);    
@@ -273,5 +519,124 @@ public class TestReportHelper
         return conn.Query<string>(sql_string)?.ToList() ;
     }
     
+    
+    
+    
+    public List<string>? FetchObjectInstanceValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select url from te.object_instances where sd_oid = '{sd_id}'
+               union
+               select url from ad.object_instances where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
+    
+    public List<string>? FetchObjectTitleValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select title_text from te.object_titles where sd_oid = '{sd_id}'
+               union
+               select title_text from ad.object_titles where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
+    
+    public List<string>? FetchObjectDateValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select date_as_string from te.object_dates where sd_oid = '{sd_id}'
+               union
+               select date_as_string from ad.object_dates where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
+    
+    public List<string>? FetchObjectPeopleValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select person_full_name from te.object_people where sd_oid = '{sd_id}'
+               union
+               select person_full_name from ad.object_people where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
+    
+    public List<string>? FetchObjectOrgValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select organisation_name from te.object_organisations where sd_oid = '{sd_id}'
+               union
+               select organisation_name from ad.object_organisations where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
+    
+    public List<string>? FetchObjectTopicValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select original_value from te.object_topics where sd_oid = '{sd_id}'
+               union
+               select original_value from ad.object_topics where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
+    
+    public List<string>? FetchObjectCommentsValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select pmid from te.object_comments where sd_oid = '{sd_id}'
+               union
+               select pmid from ad.object_comments where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
+    
+    public List<string>? FetchObjectDescriptionsValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select description_text from te.object_descriptions where sd_oid = '{sd_id}'
+               union
+               select description_text from ad.object_descriptions where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
+    
+    public List<string>? FetchObjectIdValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select identifier_value from te.object_identifiers where sd_oid = '{sd_id}'
+               union
+               select identifier_value from ad.object_identifiers where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
+    
+    public List<string>? FetchObjectDBLinkValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select id_in_db from te.object_db_links where sd_oid = '{sd_id}'
+               union
+               select id_in_db from ad.object_db_links where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
+    
+    public List<string>? FetchObjectPubTypeValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select type_name from te.object_pub_types where sd_oid = '{sd_id}'
+               union
+               select type_name from ad.object_pub_types where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
+    
+    public List<string>? FetchObjectRelationshipValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select target_sd_oid from te.object_relationships where sd_oid = '{sd_id}'
+               union
+               select target_sd_oid from ad.object_relationships where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
+    
+    public List<string>? FetchObjectRightsValues(string sd_id)
+    {
+        using NpgsqlConnection conn = new(_connString);
+        string sql_string = @$"select rights_name from te.object_rights where sd_oid = '{sd_id}'
+               union
+               select rights_name from ad.object_rights where sd_oid = '{sd_id}'";
+        return conn.Query<string>(sql_string)?.ToList() ;
+    }
     
 }
