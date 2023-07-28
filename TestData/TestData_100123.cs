@@ -52,19 +52,20 @@ public class TestData_100123 : TestData_Base
 	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "2.", 1, "e.02", "Patients who were non-compliant or who demonstrated a major protocol deviation in the core CAIN457A2206 study."));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "3.", 1, "e.03", "Patients who discontinued from the core CAIN457A2206 study before Visit 14 (Week 16)"));
 	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "4.", 1, "e.04", "Female patients who are pregnant or lactating."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "5.", 1, "e.05", "Any active systemic infection within the past 2 weeks including a positive chest X-ray."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "5.", 1, "e.05", "Any active systemic infection within the past 2 weeks including a positive chest X-ray."));	  
 	        fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "6.", 1, "e.06", "Positive human immunodeficient virus (HIV: ELISA and Western blot) test result,Hepatitis B surface antigen (HBsAg) or Hepatitis C test result, where patients have been re-tested."));	
-	        fs.iec.Add(new StudyIEC(sd_sid, 14, 302, "cr", "Hdr", 1, "e.06", "The following Exclusion Criteria as defined in the core trial [CAIN457A2206] will continue to be valid with minor revisions:"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "7.", 1, "e.07", "Positive Purified Protein Derivative (PPD) tuberculin skin test of ≥ 5 mm at baseline, (where patients have been re-tested). A positive PPD test will be defined using the MMWR 2000 guidance, summarized as criteria for tuberculin positivity by risk group. A PPD test should not be done in subjects who had a tuberculosis vaccination in the past. These subjects will be eligible to participate if – according to local guidelines – latent tuberculosis can be excluded. For those study sites using QuantiFeron test a positive test at baseline (where patients have been re-tested) will exclude the subject from the participation in the study. If the result for either PPD or QuantiFeron test is indeterminate the subject will be excluded."));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "8.", 1, "e.08", "For previous use of immunosuppressive agents a wash-out period of at least 1 month or 5 half-lives, whatever is longer, is required. Immunosuppressive agent include but are not limited to cyclosporine, mycophenolate, tacrolimus, and 5-aminosalicylic acid (5-ASA).\nIf on previous treatment with anti-TNF-α therapy (or other biological therapy), thefollowing washout periods will be required for such patients to be eligible to participate in the trial."));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "•", 2, "e.08.01", "Six (6)-months wash out prior to dosing for alefacept, rituxan and raptiva,"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr", "•", 2, "e.08.02", "Three (3)-months washout prior to baseline for adalimumab and certolizumab,"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "cr", "•", 2, "e.08.03", "Two (2)-months washout prior to baseline for etanercept and infliximab."));
-	        fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "cr", "•", 2, "e.08.04", "One (1) month washout prior to baseline for systemic immunosuppressants including, but not limited to azathioprine, cyclosporine and leflunomide.Patients on concomitant prednisone, Methotrexate (MTX) or SSZ can be included,whereby:"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "cr", "•", 2, "e.08.05", "Prednisone should be kept at a stable dose 4 weeks before baseline and throughout the study and not exceed 10 mg/day."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr", "•", 2, "e.08.06", "MTX should be kept at a stable dose 4 weeks before baseline and throughout thestudy and not exceed 25 mg/week."));
-	        fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "•", 2, "e.08.07", "SSZ should be kept at a stable dose 4 weeks before baseline and throughout the study"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "9.", 1, "e.09", "Patients who are on NSAIDS should be kept at a stable dose 4 weeks before baseline and throughout the study."));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 14, 302, "cr", "Hdr", 1, "e.07", "The following Exclusion Criteria as defined in the core trial [CAIN457A2206] will continue to be valid with minor revisions:"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "7.", 1, "e.08", "Positive Purified Protein Derivative (PPD) tuberculin skin test of ≥ 5 mm at baseline, (where patients have been re-tested). A positive PPD test will be defined using the MMWR 2000 guidance, summarized as criteria for tuberculin positivity by risk group. A PPD test should not be done in subjects who had a tuberculosis vaccination in the past. These subjects will be eligible to participate if – according to local guidelines – latent tuberculosis can be excluded. For those study sites using QuantiFeron test a positive test at baseline (where patients have been re-tested) will exclude the subject from the participation in the study. If the result for either PPD or QuantiFeron test is indeterminate the subject will be excluded."));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "8.", 1, "e.09", "For previous use of immunosuppressive agents a wash-out period of at least 1 month or 5 half-lives, whatever is longer, is required. Immunosuppressive agent include but are not limited to cyclosporine, mycophenolate, tacrolimus, and 5-aminosalicylic acid (5-ASA)."));
+	        fs.iec.Add(new StudyIEC(sd_sid, 17, 302, "cr", "Hdr", 1, "e.10", "If on previous treatment with anti-TNF-α therapy (or other biological therapy), thefollowing washout periods will be required for such patients to be eligible to participate in the trial."));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "split", "•", 3, "e.10.01.01", "Six (6)-months wash out prior to dosing for alefacept, rituxan and raptiva,"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "split", "•", 3, "e.10.01.02", "Three (3)-months washout prior to baseline for adalimumab and certolizumab,"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "split", "•", 3, "e.10.01.03", "Two (2)-months washout prior to baseline for etanercept and infliximab."));
+	        fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "split", "•", 3, "e.10.01.04", "One (1) month washout prior to baseline for systemic immunosuppressants including, but not limited to azathioprine, cyclosporine and leflunomide.Patients on concomitant prednisone, Methotrexate (MTX) or SSZ can be included,whereby:"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "split", "•", 3, "e.10.01.05", "Prednisone should be kept at a stable dose 4 weeks before baseline and throughout the study and not exceed 10 mg/day."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "•", 2, "e.10.02", "MTX should be kept at a stable dose 4 weeks before baseline and throughout thestudy and not exceed 25 mg/week."));
+	        fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "•", 2, "e.10.03", "SSZ should be kept at a stable dose 4 weeks before baseline and throughout the study"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "9.", 1, "e.11", "Patients who are on NSAIDS should be kept at a stable dose 4 weeks before baseline and throughout the study."));	 
 	      
 	        fs.countries!.Add(new StudyCountry(sd_sid, 2921044, "Germany", 21));
 	        fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", 21));
@@ -83,7 +84,7 @@ public class TestData_100123 : TestData_Base
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 		        "https://www.clinicaltrialsregister.eu/ctr-search/trial/2009-011622-34/DE", true, 35, null, null, null));
-	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2010 Jan 5", 2010, 1, 5, null, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "5 Jan 2010", 2010, 1, 5, null, null, null, null));
 	       
 	        fs.data_objects!.Add(sdo);
 			
@@ -99,8 +100,8 @@ public class TestData_100123 : TestData_Base
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 		        "https://www.clinicaltrialsregister.eu/ctr-search/trial/2009-011622-34/results", true, 35, null, null, null));
-	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2016 Dec 15", 2016, 12, 15, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2016 Dec 15", 2016, 12, 15, null, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "15 Dec 2016", 2016, 12, 15, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "15 Dec 2016", 2016, 12, 15, null, null, null, null));
 			
 	        fs.data_objects!.Add(sdo);
 	        
@@ -131,8 +132,10 @@ public class TestData_100123 : TestData_Base
 	        // Study 
 	        
 	        string display_title = "Study of efficacy and safety of pembrolizumab plus platinum-based doublet chemotherapy with or without canakinumab in previously untreated locally advanced or metastatic non-squamous and squamous NSCLC subjects";
-	        StringBuilder sb = new StringBuilder("Primary objectives: Safety run-in part: To determine the recommended phase 3 dose regimen (RP3R) of canakinumab in combination with  pembrolizumab plus platinum-based doublet chemotherapy. \n");
-	        sb.Append("Double-blind, randomized, placebo-controlled part: To compare progression free survival (PFS) by local investigator assessment as per RECIST 1.1 and overall survival (OS) between the two treatment arms."); 
+	        StringBuilder sb = new StringBuilder("Main Objective: Safety run-in part: To determine the recommended phase 3 dose regimen (RP3R) of canakinumab in combination with pembrolizumab plus platinum-based doublet chemotherapy. \n");
+	        sb.Append("Double-blind, randomized, placebo-controlled part: To compare progression free survival (PFS) by local investigator assessment as per RECIST 1.1 and overall survival (OS) between the two treatment arms.");
+	        sb.Append("\nPrimary end point(s): Safety run-in part: Incidence of dose limiting toxicities in the first 42 days of study treatment. ");
+	        sb.Append("\nDouble-blind, randomized, placebo-controlled part: PFS based on local investigator assessment as per RECIST 1.1 and OS");
 	        string brief_desc = sb.ToString();
 	        
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2018, 12, 11, 25, null, 900,
@@ -148,23 +151,30 @@ public class TestData_100123 : TestData_Base
 	        title += "chemotherapy with or without canakinumab as first line therapy for locally advanced or metastatic non-squamous and squamous non-small cell lung cancer subjects (CANOPY-1)";
 	        fs.titles.Add(new StudyTitle(sd_sid, title, 16, "en", 11, false, "From the EU CTR"));
 
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100189, "Novartis", "https://ror.org/02f9zrr09"));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 112, 100189, "Novartis", "https://ror.org/02f9zrr09"));
 	        
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
 	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 510));   // 
 	        
-	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "canakinumab", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "pembrolizumab", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "cisplatin", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "carboplatin", null, null, "D000016190", "Carboplatin"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "paclitaxel", null, null, "D000017239", "Paclitaxel"));
+	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "canakinumab", 23, "914613-48-2", "C541220", "canakinumab"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "pembrolizumab", 23, "1374853-91-4", "C582435", "pembrolizumab"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "cisplatin", 23, "15663-27-1", "D002945", "Cisplatin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "carboplatin", 23, "41575-94-4", "D016190", "Carboplatin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "paclitaxel", 23, "33069-62-4", "D017239", "Paclitaxel"));
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "nab-paclitaxel", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "pemetrexed", 23, "137281-23-3", "D000068437", "Pemetrexed"));
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Non-small cell lung cancer", 16, "10061873", 
 		           "2C25", "Malignant neoplasms of bronchus or lung"));
-            
+	        fs.conditions.Add(new StudyCondition(sd_sid, 
+		        "stages AJCC v. 8 IIIB/IIIC (not eligible for definite chemoradiationtherapy) or stage IV (metastatic) non-small cell lung cancer (NSCLC)", 
+		        null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, 
+		        "stages AJCC v. 8 IIIB/IIIC (not eligible for definite chemoradiation therapy) or stage IV (metastatic) non-small cell lung cancer (NSCLC)", 
+		        null, null, null, null));
+	        
 	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Histologically confirmed locally advanced  or metastatic NSCLC"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Measurable disease  by RECIST 1.1"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Known PD-L1 status"));	    
@@ -183,7 +193,7 @@ public class TestData_100123 : TestData_Base
             fs.countries!.Add(new StudyCountry(sd_sid, 2921044, "Germany", 25));
             fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));             
             fs.countries.Add(new StudyCountry(sd_sid, 3017382, "France", 25));
-            fs.countries.Add(new StudyCountry(sd_sid, 3077311, "Czechia", 21));
+            fs.countries.Add(new StudyCountry(sd_sid, 3077311, "Czechia", null));  // in twice in source data - takes the later value for status
             fs.countries.Add(new StudyCountry(sd_sid, 2750405, "Netherlands", 21));
             fs.countries.Add(new StudyCountry(sd_sid, 390903, "Greece", 25));
             fs.countries.Add(new StudyCountry(sd_sid, 2510769, "Spain", 25));
@@ -200,7 +210,7 @@ public class TestData_100123 : TestData_Base
 	        fs.countries.Add(new StudyCountry(sd_sid, 2017370, "Russia", null));
 	        fs.countries.Add(new StudyCountry(sd_sid, 1880251, "Singapore", null));
 	        fs.countries.Add(new StudyCountry(sd_sid, 1819730, "Hong Kong", null));
-	        fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+	        fs.countries.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
 	        fs.countries.Add(new StudyCountry(sd_sid, 1733045, "Malaysia", null));
 	        fs.countries.Add(new StudyCountry(sd_sid, 1605651, "Thailand", null));
 	        fs.countries.Add(new StudyCountry(sd_sid, 1562822, "Vietnam", null));
@@ -236,12 +246,12 @@ public class TestData_100123 : TestData_Base
             StudyDataObject sdo = CreateEmptyStudyDataObject();
             
             sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR registry entry", null, ob_title,
-	            null, 9, 2018, 23, 13, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
+	            null, 9, 2019, 23, 13, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
 	       
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
-	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2018-001547-32/DE", true, 35, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2018 Oct 1", 2018, 10, 1, null, null, null, null));
+	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2018-001547-32/DK", true, 35, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "24 May 2019", 2019, 5, 24, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
 
@@ -258,7 +268,7 @@ public class TestData_100123 : TestData_Base
 	        
 	        string display_title = "EFFICIENCY AND SAFETY OF CLINAVIT PAEDIATRIC AT A WEIGHT DEPENDANT DOSE ADMINISTERED DAILY FOR 5 CONTINUOUS DAYS ON 4 VITAMINS BLOOD LEVEL IN NEONATES AND CHILDREN UP TO 11 YEARS OF AGE ";
 	        display_title += "RECEIVING PARENTERAL NUTRITION. A PROSPECTIVE, MULTICENTRE, RANDOMISED, COMPARATIVE, DOUBLE BLIND PHASE III STUDY IN THERAPEUTIC USE VERSUS SOLUVIT AND VITALIPID INFANT CARRIED OUT IN PARALLEL GROUPS.   EFICACIA Y ...";
-	        StringBuilder sb = new StringBuilder("Primary objectives: Main objective : To confirm that Clinavit Paediatric is an efficient and safe alternative to Soluvit and Vitalipid Infant, the current vitamins cocktail used for ");
+	        StringBuilder sb = new StringBuilder("Main objective : To confirm that Clinavit Paediatric is an efficient and safe alternative to Soluvit and Vitalipid Infant, the current vitamins cocktail used for ");
 	        sb.Append("parenteral nutrition supplementation in neonates, infants and children up to 11 years of age, through the assessment of:·	The blood levels of the most commonly explored vitamins "); 
 	        sb.Append("in literature as surrogate markers of effective intake,·	The vital signs and adverse events occurring within the 5-day treatment period.");
 	        sb.Append("\nPrimary endpoints: Efficiency criteria:Plasma level of 2 oil-soluble vitamins (A and E) and 2 water-soluble ones ");
@@ -332,7 +342,7 @@ public class TestData_100123 : TestData_Base
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2004-001569-16/ES", true, 35, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2006 Jun 30", 2006, 6, 30, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "30 Jun 2006", 2006, 6, 30, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
 
@@ -362,11 +372,11 @@ public class TestData_100123 : TestData_Base
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From the EU CTR"));
 	        fs.titles.Add(new StudyTitle(sd_sid, "A Mechanistic Study Of Mifamurtide (MTP-PE) In Patients With Metastatic And/Or Recurrent Osteosarcoma", 16, "en", 11, false, "From the EU CTR"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "RENALVax-2", 14, "en", 11, false, "From the EU CTR"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "MEMOS", 14, "en", 11, false, "From the EU CTR"));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100253, "University of Oxford", "https://ror.org/052gg0110"));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "Millennium Pharmaceuticals, Inc, a wholly-owned subsidiary of Takeda Pharmaceutical Company Limited", null));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "EU frame grant", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "EU frame grant", null));
 	        
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // 
 	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
@@ -377,8 +387,7 @@ public class TestData_100123 : TestData_Base
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Relapsed or metastatic osteosarcoma", null, null, 
 		        null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Osteosarcoma", 16, "10031291", 
-		        "2B51", "Osteosarcoma, primary site"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Osteosarcoma", 16, "10031291", null, null));
 	        
 	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 301, "seq", "Hdr", 1, "n.01.01", "A patient will be eligible for inclusion in this study if all of the following criteria apply."));	
 	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "seq", "1.", 1, "n.01.02", "Relapsed osteosarcoma (first, second, third or any relapse, patient has recovered from chemotherapy and any other investigational drug/agent treatment, radiotherapy or surgical procedure)."));	       
@@ -401,7 +410,7 @@ public class TestData_100123 : TestData_Base
 	        fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "seq", "3.", 1, "e.01.04", "Contraindications to lung biopsies"));
 	        fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "seq", "4.", 1, "e.01.05", "Hypersensitivity to ifosfamide or any component of the formulation."));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "seq", "5.", 1, "e.01.06", "Previously diagnosed brain metastases."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 21, 302, "seq", "Hdr.", 1, "e.01.07", "Significant active cardiac disease including:"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 21, 302, "seq", "Hdr", 1, "e.01.07", "Significant active cardiac disease including:"));
 	        fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "seq", "6.", 1, "e.01.08",  "uncontrolled high blood pressure (no greater than 2 standard deviations above the mean for age for systolic blood pressure (SBP) and diastolic blood pressure (DBP), unstable angina, congestive heart failure, myocardial infarction within the previous 6 months, or serious cardiac arrhythmias and with a history of pericarditis and myocarditis"));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "seq", "7.", 1, "e.01.09", "Treatment with any other investigational agent, or participation in another interventional clinical trial within 21 days prior to enrolment."));	   
 	        fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "seq", "8.", 1, "e.01.10", "Major surgery within 21 days prior first study biopsy"));	       
@@ -429,7 +438,7 @@ public class TestData_100123 : TestData_Base
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2012-000615-84/IT", true, 35, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2014 Sep 10", 2014, 9, 10, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "10 Sep 2014", 2014, 9, 10, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
             
@@ -445,15 +454,15 @@ public class TestData_100123 : TestData_Base
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2012-000615-84/results", true, 35, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2017 Aug 16", 2017, 8, 16, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2017 Aug 16", 2017, 8, 16, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "16 Aug 2017", 2017, 8, 16, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "16 Aug 2017", 2017, 8, 16, null, null, null, null));
 			
             fs.data_objects!.Add(sdo);
 	        
             // 3) Results Summary
 	        
             sd_oid = sd_sid + " :: 79 :: CSR summary - PDF DL";
-            ob_title = display_title + " :: CSR summary - PDF DL";
+            ob_title = display_title + " :: CSR summary";
             sdo = CreateEmptyStudyDataObject();
 	        
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CSR summary - PDF DL", null, ob_title,
@@ -506,7 +515,7 @@ public class TestData_100123 : TestData_Base
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 	        
 	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Tyverb", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Letrozol", 23, "112809-51-5", "D000077289", "Letrozol"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Letrozol", 23, "112809-51-5", null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Citrato de Tamoxifeno", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Trastuzumab", 23, "180288-69-1", "D000068878", "Trastuzumab"));
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "PACLITAXEL", 23, "33069-62-4", "D017239", "Paclitaxel"));
@@ -514,6 +523,8 @@ public class TestData_100123 : TestData_Base
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "HER-2 positive breast cancer", 16, "10065430", 
 		        null, null));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Untreated invasive breast carcinoma eligible for primary definitive surgery (Stage I-IIIA)",  
+		        null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma de mama invasivo, inicial, y apto para la cirugía definitiva (Fase I-IIIA)",  
 		        null, null, null, null));
 	        
 	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Consentimiento informado por escrito para todos los procedimientos del estudio, de acuerdo con los requerimientos legales locales, antes de iniciar cualquier procedimiento específico del protocolo"));	       
@@ -574,11 +585,63 @@ public class TestData_100123 : TestData_Base
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2013-001036-22/ES", true, 35, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2013 Jul 12", 2013, 7, 12, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "12 Jul 2013", 2013, 7, 12, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+			
+            sd_oid = sd_sid + " :: 28 :: EU CTR results entry";
+            ob_title = display_title + " :: EU CTR results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR results entry", null, ob_title,
+	            null, 9, 2022, 23, 28, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
+	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2013-001036-22/results", true, 35, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "5 May 2022", 2022, 5, 5, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "5 May 2022", 2022, 5, 5, null, null, null, null));
+			
+            fs.data_objects!.Add(sdo);
 
-            return fs;
+            // 3) Results Summary
+	        
+            sd_oid = sd_sid + " :: 79 :: SOLTI-1114_Sinopsys_CSR_ENG";
+            ob_title = display_title + " :: SOLTI-1114_Sinopsys_CSR_ENG";
+            sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "SOLTI-1114_Sinopsys_CSR_ENG", null, ob_title,
+	            null, 9, 2022, 23, 79, null, "SOLTI", null, "en", 11, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
+	            "https://www.clinicaltrialsregister.eu/ctr-search/rest/download/result/attachment/2013-001036-22/1/30154",
+	            true, 11, null, null, null));
+	        
+            fs.data_objects!.Add(sdo);
+            
+            // 4) Results Summary - pfd download
+	        
+            sd_oid = sd_sid + " :: 79 :: CSR summary - PDF DL";
+            ob_title = display_title + " :: CSR summary";
+            sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CSR summary - PDF DL", null, ob_title,
+	            null, 9, 2022, 23, 79, null, "SOLTI", null, 
+	            "en", 11, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
+	            "https://www.clinicaltrialsregister.eu/ctr-search/rest/download/result/zip/pdf/2013-001036-22/1",
+	            true, 11, null, null, null));
+	        
+            fs.data_objects!.Add(sdo);
+
+	        
+            return fs; 
+
         }
 
         
@@ -601,9 +664,6 @@ public class TestData_100123 : TestData_Base
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From the EU CTR"));
 	        fs.titles.Add(new StudyTitle(sd_sid,
-		        "Vaccination with dendritic cells pulsed with autologous tumorhomogenate in combination with HD-IL2 and immunomodulating radiotherapy in metastatic RCC: a phase II trial (RENALVax-2)", 
-		        15, "it", 22, false, "From the EU CTR"));
-	        fs.titles.Add(new StudyTitle(sd_sid,
 		        "Vaccination with dendritic cells pulsed with autologous tumor homogenate in combination with HD-IL2 and immunomodulating radiotherapy in metastatic RCC: a phase II trial (RENALVax-2)", 
 		        16, "en", 11, false, "From the EU CTR"));
 	        fs.titles.Add(new StudyTitle(sd_sid, "RENALVax-2", 14, "en", 11, false, "From the EU CTR"));
@@ -617,40 +677,43 @@ public class TestData_100123 : TestData_Base
 	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "DC-VACCINE_IRSTIRCCS", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "IL2_IRSTIRCCS", 23, "110942-02-4", null, null));
 	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "metastatic renal cancer", null, null, 
-		        null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "carcinoma renale metastatico", null, null, 
-		        null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Metastatic renal cell carcinoma", 16, "10050513", 
-		        null, null));
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Metastatic renal cell carcinoma", 16, "10050513", null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "metastatic renal cancer", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "carcinoma renale metastatico", null, null, null, null));
 	        
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "seq", "Hdr", 1, "n.01.01", "Firma del consenso informato: "));
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 301, "seq", "Hdr", 1, "n.01.01", "Firma del consenso informato:"));
 	        fs.iec!.Add(new StudyIEC(sd_sid, 2, 1, "seq", "1.", 1, "n.01.02", "I pazienti devono essere disposti e capaci a fornire il proprio consenso informato scritto prima di ogni altra procedura di screening prevista per lo studio."));	       
 	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "seq", "2.", 1, "n.01.03", "Disponibilità di materiale tumorale raccolto e conservato secondo le procedure del Laboratorio di Terapia Cellulare Somatica IRST."));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "seq", "3.", 1, "n.01.04", "Diagnosi istologica o citologica confermata di RCC (tutte le istologie tranne carcinoma uroteliale)"));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "seq", "4.", 1, "n.01.05", "Stadio IV, in progressione dopo almeno una linea di terapia con TKI e/o antiangiogenetici e/o inibitori di mTOR (i pazienti dovranno aver terminato i precedenti trattamenti almeno 4 settimane prima della prima dose di IL-2)"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "seq", "5.", 1, "n.01.06", "I pazienti dovranno avere almeno una lesione misurabile, secondo i criteri di risposta irRC (vedere sezione 8), dopo asportazione del tessuto tumorale per la preparazione dei vaccini. Le lesioni tumorali che verranno irradiate sono esclusi dalla valutazione della risposta"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "seq", "5.", 1, "n.01.06", "I pazienti dovranno avere almeno una lesione misurabile, secondo i criteri di risposta irRC (vedere sezione 8), dopo asportazione del tessuto tumorale per la preparazione dei vaccini. Le lesioni tumorali che verranno irradiate sono esclusi dalla valutazione della risposta."));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "seq", "6.", 1, "n.01.07", "Aspettativa di vita superiore a 3 mesi"));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 8, 1, "seq", "7.", 1, "n.01.08", "ECOG performance status 0-1"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 9, 1, "seq", "8.", 1, "n.01.09", "Funzionalità midollare e d’organo definite come:-leucociti>4000/L-neutrofili >1,500/L-piastrine>100,000/L-bilirubina totale nei limiti della norma (nil)- AST(SGOT)/ALT(SGPT) <2.5 X institutional upper limit of normal- creatinina< 1.5 mg/dl- emoglobina >8.0 gm/dl- ematocrito <30%"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 10, 1, "seq", "9.", 1, "n.01.10", "ECG ed ecocardiogramma nella norma"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 11, 1, "seq", "10.", 1, "n.01.11", "Normale funzionalità polmonare"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 12, 1, "seq", "11.", 1, "n.01.12", "Non controindicazioni nell’uso di agenti vasopressori"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 13, 1, "seq", "12.", 1, "n.01.13", "Test per HIV, HBV HCV e sifilide negativi non più vecchi di 30 giorni prima dell’esecuzione di qualunque procedura GCP."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 14, 1, "seq", "13.", 1, "n.01.14", "Uomini e donne di età superiore a 18 anni."));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 301, "seq", "Hdr", 1, "n.01.09", "Funzionalità midollare e d’organo definite come:"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 1, "seq", "-", 2, "n.01.10.01", "leucociti>4000/L-neutrofili >1,500/L-piastrine>100,000/L-bilirubina totale nei limiti della norma (nil)"));
+		    fs.iec.Add(new StudyIEC(sd_sid, 11, 1, "seq", "-", 2, "n.01.10.02", "AST(SGOT)/ALT(SGPT) <2.5 X institutional upper limit of normal"));
+			fs.iec.Add(new StudyIEC(sd_sid, 12, 1, "seq", "-", 2, "n.01.10.03", "creatinina< 1.5 mg/dl"));
+			fs.iec.Add(new StudyIEC(sd_sid, 13, 1, "seq", "-", 2, "n.01.10.04", "emoglobina >8.0 gm/dl"));
+			fs.iec.Add(new StudyIEC(sd_sid, 14, 1, "seq", "-", 2, "n.01.10.05", "ematocrito <30%"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 15, 1, "seq", "9.", 1, "n.01.11", "ECG ed ecocardiogramma nella norma"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 16, 1, "seq", "10.", 1, "n.01.12", "Normale funzionalità polmonare"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 17, 1, "seq", "11.", 1, "n.01.13", "Non controindicazioni nell’uso di agenti vasopressori"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 18, 1, "seq", "12.", 1, "n.01.14", "Test per HIV, HBV HCV e sifilide negativi non più vecchi di 30 giorni prima dell’esecuzione di qualunque procedura GCP."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 19, 1, "seq", "13.", 1, "n.01.15", "Uomini e donne di età superiore a 18 anni."));	  
 	        
-	        fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "seq", "1.", 1, "e.01", "I pazienti che hanno test positivi per HCV, HBV, HIV, o sifilide (test ematici specifici devono essere effettuati entro 30 giorniprima di qualsiasi attività regolamentata dalle GMP)."));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "seq", "2.", 1, "e.02", "I pazienti che non hanno avuto precedenti linee di terapia sistemica per malattia avanzata."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "seq", "3.", 1, "e.03", "Partecipazione ad un altro studio clinico con eventuali farmaci sperimentali nei 30 giorni precedenti allo screening per questo studio."));
-	        fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "seq", "4.", 1, "e.04", "malattia non controllata intercorrente tra cui, ma non solo, l’infezione in corso o attiva, insufficienza cardiaca congestizia sintomatica, angina pectoris instabile, aritmia cardiaca, o malattia psichiatrica / situazioni sociali che limiterebbero la conformitàcon i requisiti di studio (a giudizio del medico)."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "seq", "5.", 1, "e.05", "Altre note patologie neoplastiche maligne nella storia clinica del paziente, con un intervallo libero da malattia di meno di 3 anni (tranne che per il carcinoma a cellule basali e carcinoma in situ della cervice uterina trattati precedentemente);"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "seq", "6.", 1, "e.06", "Precedente chemioterapia, radioterapia o immunoterapia entro 4 settimane (6 settimane per nitrosouree o mitomicina C) prima di entrare nello studio o pazienti che non hanno recuperato da eventi avversi a causa di agenti somministrati più di 4 settimane prima."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "seq", "7.", 1, "e.07", "I pazienti con note metastasi cerebrali dovrebbero essere esclusi da questo studio clinico a causa della loro scarsa prognosi eperché spesso sviluppano una progressiva disfunzione neurologica che confonderebbe la valutazione degli eventi avversi di tiponeurologico e non."));
-	        fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "seq", "1.", 1, "e.08", "Storia di reazioni allergiche attribuite a composti chimici o biologici simili all’IL-2 o ad altri agenti utilizzati nello studio."));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "seq", "2.", 1, "e.09", "Ogni malattia autoimmune che potrebbe essere aggravata da IL-2"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "seq", "3.", 1, "e.10", "Una condizione medica che richiede trattamenti cronici con corticosteroidi o altri farmaci immunosoppressori"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "seq", "4.", 1, "e.11", "Una storia di malattia cardiovascolare significativa, tra cui infarto miocardico, insufficienza cardiaca congestizia, aritmiecardiache primarie, angina pectoris o incidente cerebrovascolare"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "seq", "5.", 1, "e.12", " HIV-positività, anche sintomatica13. Qualsiasi controindicazione a sottoporsi a leucaferesi, come valutato dal transfusionista (ad esempio una grave anemia, piastrinopenia, terapia anticoagulante orale) o a sottoporsi ad un intervento chirurgico."));	
+	        fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "seq", "1.", 1, "e.01.01", "I pazienti che hanno test positivi per HCV, HBV, HIV, o sifilide (test ematici specifici devono essere effettuati entro 30 giorniprima di qualsiasi attività regolamentata dalle GMP)."));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "seq", "2.", 1, "e.01.02", "I pazienti che non hanno avuto precedenti linee di terapia sistemica per malattia avanzata."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "seq", "3.", 1, "e.01.03", "Partecipazione ad un altro studio clinico con eventuali farmaci sperimentali nei 30 giorni precedenti allo screening per questo studio."));
+	        fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "seq", "4.", 1, "e.01.04", "malattia non controllata intercorrente tra cui, ma non solo, l’infezione in corso o attiva, insufficienza cardiaca congestizia sintomatica, angina pectoris instabile, aritmia cardiaca, o malattia psichiatrica / situazioni sociali che limiterebbero la conformitàcon i requisiti di studio (a giudizio del medico)."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "seq", "5.", 1, "e.01.05", "Altre note patologie neoplastiche maligne nella storia clinica del paziente, con un intervallo libero da malattia di meno di 3 anni (tranne che per il carcinoma a cellule basali e carcinoma in situ della cervice uterina trattati precedentemente);"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "seq", "6.", 1, "e.01.06", "Precedente chemioterapia, radioterapia o immunoterapia entro 4 settimane (6 settimane per nitrosouree o mitomicina C) prima di entrare nello studio o pazienti che non hanno recuperato da eventi avversi a causa di agenti somministrati più di 4 settimane prima."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "seq", "7.", 1, "e.01.07", "I pazienti con note metastasi cerebrali dovrebbero essere esclusi da questo studio clinico a causa della loro scarsa prognosi eperché spesso sviluppano una progressiva disfunzione neurologica che confonderebbe la valutazione degli eventi avversi di tiponeurologico e non."));
+	        fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "seq", "8.", 1, "e.01.08", "Storia di reazioni allergiche attribuite a composti chimici o biologici simili all’IL-2 o ad altri agenti utilizzati nello studio."));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "seq", "9.", 1, "e.01.09", "Ogni malattia autoimmune che potrebbe essere aggravata da IL-2"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "seq", "10.", 1, "e.01.10", "Una condizione medica che richiede trattamenti cronici con corticosteroidi o altri farmaci immunosoppressori"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 30, 2, "seq", "11.", 1, "e.01.11", "Una storia di malattia cardiovascolare significativa, tra cui infarto miocardico, insufficienza cardiaca congestizia, aritmiecardiache primarie, angina pectoris o incidente cerebrovascolare"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 31, 2, "seq", "12.", 1, "e.01.12", "HIV-positività, anche sintomatica"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 32, 2, "seq", "13.", 1, "e.01.13", "Qualsiasi controindicazione a sottoporsi a leucaferesi, come valutato dal transfusionista (ad esempio una grave anemia, piastrinopenia, terapia anticoagulante orale) o a sottoporsi ad un intervento chirurgico."));	
             
             fs.countries!.Add(new StudyCountry(sd_sid, 3175395, "Italy", 22));
             
@@ -668,7 +731,7 @@ public class TestData_100123 : TestData_Base
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2015-000556-14/IT", true, 35, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2017 Dec 15", 2017, 12, 15, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "15 Dec 2017", 2017, 12, 15, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
 

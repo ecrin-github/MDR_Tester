@@ -52,7 +52,7 @@ public class TestStudyReporter
         {
             foreach (string id_value in id_values)
             {
-                RecordResults rr = new RecordResults(tr, sd_id, "identifier_value", "Identifier", "string", id_value);
+                RecordResults rr = new RecordResults(tr, sd_id, "Identifier", "identifier_value", "string", id_value);
                 rr = _repHelper.CompareField(rr,"identifier_type_id", "int");
                 rr = _repHelper.CompareField(rr,"source_id", "int");
                 rr = _repHelper.CompareField(rr,"source", "string");
@@ -77,7 +77,7 @@ public class TestStudyReporter
         {
             foreach (string id_value in title_values)
             {
-                RecordResults rr = new RecordResults(tr, sd_id, "title_text", "Title", "string", id_value);
+                RecordResults rr = new RecordResults(tr, sd_id, "Title", "title_text", "string", id_value);
                 rr = _repHelper.CompareField(rr, "title_type_id", "int");
                 rr = _repHelper.CompareField(rr, "lang_code", "string");
                 rr = _repHelper.CompareField(rr, "lang_usage_id", "int");
@@ -103,7 +103,7 @@ public class TestStudyReporter
             {
                 foreach (string id_value in topic_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "original_value", "Topic", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Topic", "original_value", "string", id_value);
                     rr = _repHelper.CompareField(rr, "topic_type_id", "int");
                     rr = _repHelper.CompareField(rr, "original_ct_type_id", "int");
                     rr = _repHelper.CompareField(rr, "original_ct_code", "string");
@@ -129,7 +129,7 @@ public class TestStudyReporter
             {
                 foreach (string id_value in condition_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "original_value", "Condition", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Condition", "original_value", "string", id_value);
                     rr = _repHelper.CompareField(rr, "original_ct_type_id", "int");
                     rr = _repHelper.CompareField(rr, "original_ct_code", "string");
                     rr = _repHelper.CompareField(rr, "icd_code", "string");
@@ -154,7 +154,7 @@ public class TestStudyReporter
             {
                 foreach (string id_value in feature_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "feature_value_id", "Feature Value", "int", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Feature Value", "feature_value_id", "int", id_value);
                     rr = _repHelper.CompareField(rr, "feature_type_id", "int");
                     tr.record_results.Add(rr);
                     tr.num_issues += rr.num_issues;
@@ -176,7 +176,7 @@ public class TestStudyReporter
             {
                 foreach (string id_value in people_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "person_full_name", "Person", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Person", "person_full_name", "string", id_value);
                     rr = _repHelper.CompareField(rr, "contrib_type_id", "int");
                     rr = _repHelper.CompareField(rr, "person_given_name", "string");
                     rr = _repHelper.CompareField(rr, "person_family_name", "string");
@@ -197,7 +197,6 @@ public class TestStudyReporter
     public int compare_table_study_organisations(string sd_id)
     {
         TableResults tr = new TableResults("Study Organisations", "study_organisations", "study", false); 
-        //_loggingHelper.LogTableHeader("Study organisations");
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_sid ='{sd_id}'");
         if (tr.data_present)
         {
@@ -206,7 +205,7 @@ public class TestStudyReporter
             {
                 foreach (string id_value in org_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "organisation_name", "Organisation", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Organisation", "organisation_name", "string", id_value);
                     rr = _repHelper.CompareField(rr, "contrib_type_id", "int");
                     rr = _repHelper.CompareField(rr, "organisation_id", "int");
                     rr = _repHelper.CompareField(rr, "organisation_ror_id", "string");
@@ -222,18 +221,16 @@ public class TestStudyReporter
     public int compare_table_study_references(string sd_id)
     {
         TableResults tr = new TableResults("Study References", "study_references", "study", true); 
-        //_loggingHelper.LogTableHeader("Study references");
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_sid ='{sd_id}'");
         if (tr.data_present)
         {
-            //_loggingHelper.LogLine($"Expected references ({s.num_exp}) may be a subset of actual references({s.num_act})");
-            List<string>? ref_values = _repHelper.FetchStudyReferences(sd_id);
+            List<CitationData>? ref_values = _repHelper.FetchStudyReferences(sd_id);
             if (ref_values?.Any() == true)
             {
-                foreach (string id_value in ref_values)
+                foreach (CitationData id_values in ref_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "citation", "Citation", "string", id_value);
-                    rr = _repHelper.CompareField(rr, "pmid", "string");
+                    RecordResults rr = new RecordResults(tr, sd_id, "PMID / Citation", "pmid", "string", 
+                        id_values.pmid, "citation", "string", id_values.citation);
                     rr = _repHelper.CompareField(rr, "doi", "string");
                     rr = _repHelper.CompareField(rr, "type_id", "int");
                     rr = _repHelper.CompareField(rr, "comments", "string");
@@ -249,17 +246,15 @@ public class TestStudyReporter
     public int compare_table_study_relationships(string sd_id)
     {
         TableResults tr = new TableResults("Study Relationships", "study_relationships", "study", false); 
-        //_loggingHelper.LogTableHeader("Study relationships");
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_sid ='{sd_id}'");
         if (tr.data_present)
         {
-            //_loggingHelper.LogLine(s.res_string);
             List<string>? rel_values = _repHelper.FetchStudyRelationships(sd_id);
             if (rel_values?.Any() == true)
             {
                 foreach (string id_value in rel_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "target_sd_sid", "Target Study", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Target Study", "target_sd_sid", "string", id_value);
                     rr = _repHelper.CompareField(rr, "relationship_type_id", "int");
                     tr.record_results.Add(rr);
                     tr.num_issues += rr.num_issues;
@@ -274,17 +269,15 @@ public class TestStudyReporter
     public int compare_table_study_links(string sd_id)
     {
         TableResults tr = new TableResults("Study Links", "study_links", "study", false); 
-        //_loggingHelper.LogTableHeader("Study links");
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_sid ='{sd_id}'");
         if (tr.data_present)
         {
-            //_loggingHelper.LogLine(s.res_string);
             List<string>? condition_values = _repHelper.FetchStudyLinks(sd_id);
             if (condition_values?.Any() == true)
             {
                 foreach (string id_value in condition_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "link_label", "Link Label", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Link Label", "link_label", "string", id_value);
                     rr = _repHelper.CompareField(rr, "link_url", "string");
                     tr.record_results.Add(rr);
                     tr.num_issues += rr.num_issues;
@@ -299,17 +292,15 @@ public class TestStudyReporter
     public int compare_table_study_countries(string sd_id)
     {
         TableResults tr = new TableResults("Study Countries", "study_countries", "study", false); 
-        //_loggingHelper.LogTableHeader("Study countries");
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_sid ='{sd_id}'");
         if (tr.data_present)
         {
-            //_loggingHelper.LogLine(s.res_string);
             List<string>? country_values = _repHelper.FetchStudyCountries(sd_id);
             if (country_values?.Any() == true)
             {
                 foreach (string id_value in country_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "country_name", "Country", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Country", "country_name", "string", id_value);
                     rr = _repHelper.CompareField(rr, "country_id", "int");
                     rr = _repHelper.CompareField(rr, "status_id", "int");
                     tr.record_results.Add(rr);
@@ -325,17 +316,15 @@ public class TestStudyReporter
     public int compare_table_study_locations(string sd_id)
     {
         TableResults tr = new TableResults("Study Locations", "study_locations", "study", true); 
-        //_loggingHelper.LogTableHeader("Study locations");
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_sid ='{sd_id}'");
         if (tr.data_present)
         {
-            //_loggingHelper.LogLine($"Expected locations ({s.num_exp}) often a subset of actual locations({s.num_act})");
             List<string>? loc_values = _repHelper.FetchStudyLocations(sd_id);
             if (loc_values?.Any() == true)
             {
                 foreach (string id_value in loc_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "facility", "Facility", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Facility", "facility", "string", id_value);
                     rr = _repHelper.CompareField(rr, "facility_org_id", "int");
                     rr = _repHelper.CompareField(rr, "facility_ror_id", "string");
                     rr = _repHelper.CompareField(rr, "city_id", "int");
@@ -356,17 +345,15 @@ public class TestStudyReporter
     public int compare_table_ipd_available(string sd_id)
     {
         TableResults tr = new TableResults("Study IPD Available", "study_ipd_available", "study", false); 
-        //_loggingHelper.LogTableHeader("Study ipd available");
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_sid ='{sd_id}'");
         if (tr.data_present)
         {
-            //_loggingHelper.LogLine(s.res_string);
             List<string>? ipd_values = _repHelper.FetchStudyIPDAvailable(sd_id);
             if (ipd_values?.Any() == true)
             {
                 foreach (string id_value in ipd_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "ipd_id", "IPD ID", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "IPD ID", "ipd_id", "string", id_value);
                     rr = _repHelper.CompareField(rr, "ipd_type", "string");
                     rr = _repHelper.CompareField(rr, "ipd_url", "string");
                     rr = _repHelper.CompareField(rr, "ipd_comment", "string");
@@ -383,18 +370,16 @@ public class TestStudyReporter
     public int compare_table_study_iec(string sd_id)
     {
         TableResults tr = new TableResults("Study IEC", "study_iec", "study", false); 
-        //_loggingHelper.LogTableHeader("Study IEC");
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_sid ='{sd_id}'");
         if (tr.data_present)
         {
-            //_loggingHelper.LogLine(s.res_string);
-            List<string>? iec_values = _repHelper.FetchStudyIEC(sd_id, "study_iec")
-                                       .OrderBy(x => Int32.Parse(x)).ToList();;
+            List<string>? iec_values = _repHelper.FetchStudyIEC(sd_id, "study_iec");
             if (iec_values?.Any() == true)
             {
+                iec_values = iec_values.OrderBy(int.Parse).ToList();
                 foreach (string id_value in iec_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "seq_num", "Seq Num", "int", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Seq Num", "seq_num", "int", id_value);
                     rr = _repHelper.CompareField(rr, "iec_type_id", "int");
                     rr = _repHelper.CompareField(rr, "split_type", "string");
                     rr = _repHelper.CompareField(rr, "leader", "string");
@@ -422,18 +407,16 @@ public class TestStudyReporter
         };
         
         TableResults tr = new TableResults("Study IEC", table_name, "study", false); 
-        //_loggingHelper.LogTableHeader("Study IEC");
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_sid ='{sd_id}'");
         if (tr.data_present)
         {
-            //_loggingHelper.LogLine(s.res_string);
-            List<string>? iec_values = _repHelper.FetchStudyIEC(sd_id, table_name)
-                                       .OrderBy(x => Int32.Parse(x)).ToList();
+            List<string>? iec_values = _repHelper.FetchStudyIEC(sd_id, table_name);
             if (iec_values?.Any() == true)
             {
+                iec_values = iec_values.OrderBy(int.Parse).ToList();
                 foreach (string id_value in iec_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "seq_num", "Seq Num", "int", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Seq Num", "seq_num",  "int", id_value);
                     rr = _repHelper.CompareField(rr, "iec_type_id", "int");
                     rr = _repHelper.CompareField(rr, "split_type", "string");
                     rr = _repHelper.CompareField(rr, "leader", "string");
@@ -469,18 +452,16 @@ public class TestStudyReporter
         };
         
         TableResults tr = new TableResults("Study IEC", table_name, "study", false); 
-        //_loggingHelper.LogTableHeader("Study IEC");
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_sid ='{sd_id}'");
         if (tr.data_present)
         {
-            //_loggingHelper.LogLine(s.res_string);
-            List<string>? iec_values = _repHelper.FetchStudyIEC(sd_id, table_name)
-                                       .OrderBy(x => Int32.Parse(x)).ToList();;
+            List<string>? iec_values = _repHelper.FetchStudyIEC(sd_id, table_name);
             if (iec_values?.Any() == true)
             {
+                iec_values = iec_values.OrderBy(int.Parse).ToList();
                 foreach (string id_value in iec_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "seq_num", "Seq Num", "int", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Seq Num", "seq_num", "int", id_value);
                     rr = _repHelper.CompareField(rr, "iec_type_id", "int");
                     rr = _repHelper.CompareField(rr, "split_type", "string");
                     rr = _repHelper.CompareField(rr, "leader", "string");

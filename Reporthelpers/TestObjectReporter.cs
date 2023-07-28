@@ -12,7 +12,7 @@ public class TestObjectReporter
     public int compare_table_data_objects(string sd_id)
     {
         //_loggingHelper.LogTableHeader("Data Objects");
-        TableResults tr = new TableResults("Data Objects", "data_objects", "object", false)
+        TableResults tr = new TableResults("Data Object details", "data_objects", "object", false)
         {
             data_present = true, num_exp_recs = -1, num_act_recs = -1
         };
@@ -50,7 +50,7 @@ public class TestObjectReporter
         {
             foreach (string id_value in instance_values)
             {
-                RecordResults rr = new RecordResults(tr, sd_id, "url", "Instance", "string", id_value);
+                RecordResults rr = new RecordResults(tr, sd_id, "Instance", "url", "string", id_value);
                 rr = _repHelper.CompareField(rr, "system_id", "int");
                 rr = _repHelper.CompareField(rr, "system", "string");
                 rr = _repHelper.CompareField(rr, "url_accessible", "bool");
@@ -75,7 +75,7 @@ public class TestObjectReporter
         {
             foreach (string id_value in title_values)
             {
-                RecordResults rr = new RecordResults(tr, sd_id, "title_text", "Title", "string", id_value);
+                RecordResults rr = new RecordResults(tr, sd_id, "Title", "title_text", "string", id_value);
                 rr = _repHelper.CompareField(rr, "title_type_id", "int");
                 rr = _repHelper.CompareField(rr, "lang_code", "string");
                 rr = _repHelper.CompareField(rr, "lang_usage_id", "int");
@@ -129,23 +129,24 @@ public class TestObjectReporter
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_oid ='{sd_id}'");
         if (tr.data_present)
         {
-            List<string>? date_values = _repHelper.FetchObjectDateValues(sd_id);
+            List<ObjectDateDets>? date_values = _repHelper.FetchObjectDateValues(sd_id);
             if (date_values?.Any() == true)
             {
-                foreach (string id_value in date_values)
+                foreach (ObjectDateDets date_dets in date_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "date_as_string", "Date", "string", id_value);
-                    rr = _repHelper.CompareField(rr, "date_type_id", "int");
+                    RecordResults rr = new RecordResults(tr, sd_id, "Date", "date_as_string", "string",
+                        date_dets.date_as_string, "date_type_id", "int", date_dets.date_type_id);
                     rr = _repHelper.CompareField(rr, "date_is_range", "bool");
                     rr = _repHelper.CompareField(rr, "start_year", "int");
                     rr = _repHelper.CompareField(rr, "start_month", "int");
                     rr = _repHelper.CompareField(rr, "start_day", "int");
                     rr = _repHelper.CompareField(rr, "end_year", "int");
                     rr = _repHelper.CompareField(rr, "end_month", "int");
-                    rr = _repHelper.CompareField(rr, "end_day", "int");     
+                    rr = _repHelper.CompareField(rr, "end_day", "int");
                     rr = _repHelper.CompareField(rr, "details", "string");
                     tr.record_results.Add(rr);
                     tr.num_issues += rr.num_issues;
+
                 }
             }
         }
@@ -165,7 +166,7 @@ public class TestObjectReporter
             {
                 foreach (string id_value in people_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "person_full_name", "Person", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Person", "person_full_name", "string", id_value);
                     rr = _repHelper.CompareField(rr, "contrib_type_id", "int");
                     rr = _repHelper.CompareField(rr, "person_given_name", "string");
                     rr = _repHelper.CompareField(rr, "person_family_name", "string");
@@ -194,7 +195,7 @@ public class TestObjectReporter
             {
                 foreach (string id_value in org_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "organisation_name", "Organisation", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Organisation", "organisation_name", "string", id_value);
                     rr = _repHelper.CompareField(rr, "contrib_type_id", "int");
                     rr = _repHelper.CompareField(rr, "organisation_id", "int");
                     rr = _repHelper.CompareField(rr, "organisation_ror_id", "string");
@@ -218,7 +219,7 @@ public class TestObjectReporter
             {
                 foreach (string id_value in topic_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "original_value", "Topic", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Topic", "original_value", "string", id_value);
                     rr = _repHelper.CompareField(rr, "topic_type_id", "int");
                     rr = _repHelper.CompareField(rr, "original_ct_type_id", "int");
                     rr = _repHelper.CompareField(rr, "original_ct_code", "string");
@@ -244,7 +245,7 @@ public class TestObjectReporter
             {
                 foreach (string id_value in comments_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "pmid", "Comments", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Comments", "pmid", "string", id_value);
                     rr = _repHelper.CompareField(rr, "ref_type", "string");
                     rr = _repHelper.CompareField(rr, "ref_source", "string");
                     rr = _repHelper.CompareField(rr, "pmid_version", "string");
@@ -269,7 +270,7 @@ public class TestObjectReporter
             {
                 foreach (string id_value in description_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "description_text", "Description", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Description", "description_text", "string", id_value);
                     rr = _repHelper.CompareField(rr, "description_type_id", "int");
                     rr = _repHelper.CompareField(rr, "label", "int");
                     rr = _repHelper.CompareField(rr, "lang_code", "string");
@@ -293,7 +294,7 @@ public class TestObjectReporter
             {
                 foreach (string id_value in id_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "identifier_value", "Identifier", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Identifier", "identifier_value", "string", id_value);
                     rr = _repHelper.CompareField(rr,"identifier_type_id", "int");
                     rr = _repHelper.CompareField(rr,"source_id", "int");
                     rr = _repHelper.CompareField(rr,"source", "string");
@@ -319,7 +320,7 @@ public class TestObjectReporter
             {
                 foreach (string id_value in dblink_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "id_in_db", "DB ID", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "DB ID", "id_in_db", "string", id_value);
                     rr = _repHelper.CompareField(rr, "db_sequence", "int");
                     rr = _repHelper.CompareField(rr, "db_name", "string");
                     tr.record_results.Add(rr);
@@ -342,7 +343,7 @@ public class TestObjectReporter
             {
                 foreach (string id_value in pubtype_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "type_name", "Type", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Type", "type_name", "string", id_value);
                     rr = _repHelper.CompareField(rr, "type_name", "string");
                     tr.record_results.Add(rr);
                     tr.num_issues += rr.num_issues;

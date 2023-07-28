@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.Eventing.Reader;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 
 namespace MDR_Tester;
 

@@ -42,9 +42,9 @@ public class TestReportHelper
 
     
     public RecordResults CompareField(RecordResults rr, string fieldName, string fieldType, 
-             bool use_new_line = false)
+        bool use_new_line = false)
     {
-        using NpgsqlConnection conn = new(_connString);   
+        using NpgsqlConnection conn = new(_connString);
         string exp_sql_string = $"select {fieldName} from te.{rr.table_name} {rr.where_clause}";
         string act_sql_string = $"select {fieldName} from ad.{rr.table_name} {rr.where_clause}";
         string expVal = "", actVal = "";
@@ -135,7 +135,9 @@ public class TestReportHelper
                     {
                         if (rr.key_field is not null)    // null if a whole study or data object record
                         {
-                            _loggingHelper.LogLine($"{rr.key_field_header} : {rr.key_field_value}");
+                            _loggingHelper.LogLine(rr.key_field2 is not null
+                                ? $"{rr.key_field_header} : {rr.key_field_value} :: {rr.key_field2_value}"
+                                : $"{rr.key_field_header} : {rr.key_field_value}");
                         }
 
                         if (rr.fields.Any())
@@ -215,7 +217,9 @@ public class TestReportHelper
                     {
                         if (rr.key_field is not null) // null if a whole study or data object record
                         {
-                            _loggingHelper.LogLine($"{rr.key_field_header} : {rr.key_field_value}");
+                            _loggingHelper.LogLine(rr.key_field2 is not null
+                                ? $"{rr.key_field_header} : {rr.key_field_value} :: {rr.key_field2_value}"
+                                : $"{rr.key_field_header} : {rr.key_field_value}");
                         }
 
                         if (rr.num_issues > 0)
@@ -295,7 +299,11 @@ public class TestReportHelper
                     {
                         if (rr.key_field is not null) // null if a whole study or data object record
                         {
-                            string record_header = $"{rr.key_field_header} : {rr.key_field_value}";
+                            
+                            string record_header = rr.key_field2 is not null
+                                ? $"{rr.key_field_header} : {rr.key_field_value} :: {rr.key_field2_value}"
+                                : $"{rr.key_field_header} : {rr.key_field_value}";
+
                             if (rr.num_issues > 0)
                             {
                                 string add_s = rr.num_issues > 1 ? "s" : "";
@@ -451,12 +459,12 @@ public class TestReportHelper
         return conn.Query<string>(sql_string)?.ToList() ;
     }
     
-    public List<string>? FetchStudyReferences(string sd_id)
+    public List<CitationData>? FetchStudyReferences(string sd_id)
     {
         using NpgsqlConnection conn = new(_connString);
         // expected references tested only, as often only a subset 'expected'
-        string sql_string = @$"select citation from te.study_references where sd_sid = '{sd_id}'";
-        return conn.Query<string>(sql_string)?.ToList() ;
+        string sql_string = @$"select pmid, citation from te.study_references where sd_sid = '{sd_id}'";
+        return conn.Query<CitationData>(sql_string)?.ToList() ;
     }
 
     
@@ -540,13 +548,17 @@ public class TestReportHelper
         return conn.Query<string>(sql_string)?.ToList() ;
     }
     
-    public List<string>? FetchObjectDateValues(string sd_id)
+    public List<ObjectDateDets>? FetchObjectDateValues(string sd_id)
     {
         using NpgsqlConnection conn = new(_connString);
-        string sql_string = @$"select date_as_string from te.object_dates where sd_oid = '{sd_id}'
-               union
-               select date_as_string from ad.object_dates where sd_oid = '{sd_id}'";
-        return conn.Query<string>(sql_string)?.ToList() ;
+        string sql_string = @$"select coalesce(date_as_string, 'null') as date_as_string, 
+                               coalesce(date_type_id::varchar, 'null') as date_type_id
+        from te.object_dates where sd_oid = '{sd_id}'
+        union
+        select coalesce(date_as_string, 'null') as date_as_string, 
+               coalesce(date_type_id::varchar, 'null') as date_type_id
+        from ad.object_dates where sd_oid = '{sd_id}'";
+        return conn.Query<ObjectDateDets>(sql_string)?.ToList() ;
     }
     
     public List<string>? FetchObjectPeopleValues(string sd_id)
@@ -638,5 +650,4 @@ public class TestReportHelper
                select rights_name from ad.object_rights where sd_oid = '{sd_id}'";
         return conn.Query<string>(sql_string)?.ToList() ;
     }
-    
 }

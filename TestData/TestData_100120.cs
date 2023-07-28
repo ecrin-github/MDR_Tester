@@ -759,7 +759,7 @@ public class TestData_100120 : TestData_Base
             sb = new StringBuilder("Malo TL, Correa SY, Moore AA, Ferrari RM, Leeman J, Brenner AT, Wheeler SB, Tan X, Reuland DS; ");
             sb.Append("Scaling Colorectal Cancer Screening Through Outreach, Referral, and Engagement (SCORE) Study Protocol Consortium. Centralized colorectal cancer screening outreach and patient navigation for vulnerable populations in North Carolina: study protocol for the SCORE randomized controlled trial. ");
             sb.Append("Implement Sci Commun. 2021 Oct 7;2(1):113. doi: 10.1186/s43058-021-00194-x.");
-            fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "34620250", null, null, null));
+            fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "34620250", null, null, null));
             
 	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr assumed", "@", 1, "n.01", "Age 45-75 years"));	       
 	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr assumed", "@", 1, "n.02", "At average risk for CRC (\"average risk\" is defined as those patients who do not have any of the following: documented history of CRC, colorectal neoplasms, colorectal polyps, colonic adenomas, family history of CRC among first degree relative [father, mother, sister, brother], or diagnosis of inflammatory bowel disease)"));	    
@@ -2455,7 +2455,7 @@ public class TestData_100120 : TestData_Base
 	        
 	        string display_title = "Steroid Withdrawal in Pediatric Kidney Transplant Recipients";
 	        StringBuilder sb = new StringBuilder("The purpose of this study is to examine the effects of withdrawing steroids on graft rejection and ");
-	        sb.Append("kidney functions in kidney transplant recipients between the ages of 0 and 20 years (prior to their 21st birthday).\n\n"); 
+	        sb.Append("kidney functions in kidney transplant recipients between the ages of 0 and 20 years (prior to their 21st birthday).\n"); 
 	        sb.Append("Graft survival has improved in recent years in children with kidney transplants. One bad side effect of steroid maintenance therapy "); 
 	        sb.Append("has been growth retardation. Doctors believe steroids might be safely withdrawn in patients that are receiving other maintenance therapies. "); 
 	        sb.Append("If steroids are removed, children might catch up in their growth and also might have fewer side effects of other kinds. "); 
