@@ -438,12 +438,11 @@ public class TestData_100126 : TestData_Base
 	            "EU Clinical Trials Register", null, null, null));
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT02441309", 11, 100120, 
 	            "ClinicalTrials.gov", null, null, null));
-            fs.identifiers.Add(new StudyIdentifier(sd_sid, "16801", 14, 100253, 
-                "University of Oxford", "https://ror.org/052gg0110", null, null));
+            fs.identifiers.Add(new StudyIdentifier(sd_sid, "16801", 41, 102002,
+	            "Central Portfolio Management System", null, null, null));
             
             fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ISRCTN"));
-            fs.titles.Add(new StudyTitle(sd_sid, "MEMOS: a Eurosarc Study of Mifamurtide in advanced osteosarcoma", 
-	            14, "en", 11, false, "From ISRCTN"));
+            fs.titles.Add(new StudyTitle(sd_sid, "MEMOS", 14, "en", 11, false, "From ISRCTN"));
             
             fs.people!.Add(new StudyPerson(sd_sid, 51, "Linda","Collins","Linda Collins", null, 
 	            "Oncology Clinical Trials Office (OCTO), Department of Oncology, Old Road Campus, Roosevelt Drive, Headington", 
@@ -459,8 +458,8 @@ public class TestData_100126 : TestData_Base
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
 	        
-	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Mifamurtide", null, null, null, null));
-	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Ifosfamide", null, null, null, null));
+	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Mifamurtide", null, null, "C037144", "mifamurtide"));
+	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Ifosfamide", null, null, "D007069", "Ifosfamide"));
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Sarcoma", null, null, "2B5K", "Unspecified malignant soft tissue tumours or sarcomas of bone or articular cartilage of other or unspecified sites"));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Bone", null, null, null, null));
@@ -492,7 +491,7 @@ public class TestData_100126 : TestData_Base
 	        fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "11.", 1, "e.11", "Any psychological, social or medical condition, physical examination finding or a laboratory abnormality that the Investigator considers would make the patient a poor trial candidate or could interfere with protocol compliance or the interpretation of trial results."));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "12.", 1, "e.12", "Any other active malignancy, with the exception of adequately treated conebiopsied in situ carcinoma of the cervix uteri and non-melanoma skin lesions."));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "13.", 1, "e.13", "Patients who are known to be serologically positive for Hepatitis B, Hepatitis C or HIV."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 27, 202, "spp", "*", 1, "e.14", "mifamurtide-like drugs include GMCSF, interferon and other macrophage activating molecules."));	   
+	        fs.iec.Add(new StudyIEC(sd_sid, 27, 202, "cr", "Spp", 1, "e.14", "* mifamurtide-like drugs include GMCSF, interferon and other macrophage activating molecules."));	   
             
             fs.countries!.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
 	        

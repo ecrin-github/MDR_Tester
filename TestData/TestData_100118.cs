@@ -31,14 +31,14 @@ public class TestData_100118 : TestData_Base
 		                         enrolment, 905, 18, 17, 42, 17, 7);
 	        
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100118, 
-		        "Chinese Clinical Trial Register", null, "2016 Dec 18", null));
+		        "Chinese Clinical Trial Register", null, "18 Dec 2016", null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "NCT03076619", 11, 100120, 
 		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "JPRN-UMIN000024722", 11, 100127, 
 		        "Japan Primary Registries Network", null, null, null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
-		        "From the Chinese Clinical Trials Register"));
+		        "From the Chinese Clinical Trial Register"));
 	        
 	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Rahul Navinchandra Bakhda",
 		        "Ex-Resident, M and J Western Regional Institute of Ophthalmology, Ahmedabad", null,
@@ -55,8 +55,8 @@ public class TestData_100118 : TestData_Base
 
 	        string ic = "An observational study in which the patients for the study are selected from antenatal clinic antenatal ward and preeclampsia and eclampsia ";
 	        ic += "room in Department of Obstetrics and Gynecology and general ophthalmic OPD in case of ambulatory patients.Cases of Pregnancy Induced Hypertension.";
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "none", 0, "n0.A", ic ));
-	        fs.iec!.Add(new StudyIEC(sd_sid, 2, 1002, "none", "none", 0, "e0.A", "Cases complicated by malignancy,renal,liver or any other secondary manifestations."));
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", ic ));
+	        fs.iec!.Add(new StudyIEC(sd_sid, 2, 1002, "none", "All", 0, "e.0A", "Cases complicated by malignancy,renal,liver or any other secondary manifestations."));
 
             // Data Objects
 	        
@@ -73,8 +73,8 @@ public class TestData_100118 : TestData_Base
 	       
 	       sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100118, "Chinese Clinical Trial Register", 
 		       "http://www.chictr.org.cn/showproj.aspx?proj=17318", true, 35, null, null, null));
-	       sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2016 Dec 18", 2016, 12, 18, null, null, null, null));
-	       sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2017 Apr 18", 2017, 4, 18, null, null, null, null));
+	       sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "18 Dec 2016", 2016, 12, 18, null, null, null, null));
+	       sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "18 Apr 2017", 2017, 4, 18, null, null, null, null));
 	       
 	       fs.data_objects!.Add(sdo);
 	       
@@ -99,28 +99,28 @@ public class TestData_100118 : TestData_Base
 		        "1 cohort:5000", 900, 40, 17, null, null, 10);
 	        
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100118, 
-		        "Chinese Clinical Trial Register", null, "2017 Jan 14", null));
+		        "Chinese Clinical Trial Register", null, "14 Jan 2017", null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
-		        "From the Chinese Clinical Trials Register"));
+		        "From the Chinese Clinical Trial Register"));
 
 	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Zijing Zhou",
-		        "Department of Respiratory Medicine, the Second Xiangya Hospital of Central South University", null,
-		        "Second Xiangya Hospital of Central South University", null));
+		        "Department of Respiratory Medicine, the Second Xiangya Hospital of Central South University", 102257,
+		        "Second Xiangya Hospital of Central South University", "https://ror.org/053v2gh09"));
 	        fs.people.Add(new StudyPerson(sd_sid, 56, "Ping Chen",
-		        "Department of Respiratory Medicine, the Second Xiangya Hospital of Central South University", null,
-		        "Second Xiangya Hospital of Central South University", null));
+		        "Department of Respiratory Medicine, the Second Xiangya Hospital of Central South University", 102257,
+		        "Second Xiangya Hospital of Central South University", "https://ror.org/053v2gh09"));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Department of Respiratory Medicine, the Second Xiangya Hospital of Central South University", null));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "the National Key Clinical Specialty Construction Projects, China", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "National Key Clinical Specialty Construction Projects, China", null));
 	        
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 1500));  // Other
 
 	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "patients with a diagnosis of COPD, with a post-bronchodilator ratio of FEV1/FVC < 0.7;"));
 	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "aged > 40 years;"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "2.", 1, "n.03", "can complete mMRC CAT and CCQ without communication barrier."));
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "can complete mMRC CAT and CCQ without communication barrier."));
 	        fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "1.", 1, "e.01", "with sever cardiac, liver and renal diseases;"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "2.", 1, "e.02", "patients with cognition disorders. "));
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "2.", 1, "e.02", "patients with cognition disorders."));
 	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "3.", 1, "e.03", "patients who refuse to participate"));
 	        
 	        // Null condition list
@@ -140,8 +140,8 @@ public class TestData_100118 : TestData_Base
 	       
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100118, "Chinese Clinical Trial Register", 
 	            "http://www.chictr.org.cn/showproj.aspx?proj=17751", true, 35, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2017 Jan 14", 2017, 1, 14, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2017 Apr 18", 2017, 4, 18, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "14 Jan 2017", 2017, 1, 14, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "18 Apr 2017", 2017, 4, 18, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
             
@@ -159,8 +159,8 @@ public class TestData_100118 : TestData_Base
 	        string display_title = "Optimal intervention time and risk of the Activating Blood and Removing Stasis Method in acute cerebral hemorrhage patients: a Randomized Placebo-Controlled Trial";
 	        StringBuilder sb = new StringBuilder();
 	        sb.Append("Interventions: Blood Stasis Removing group:Blood Stasis Removing Granule + routine treatment;Placebo group:Placebo of Blood Stasis Removing Granule + routine treatment");
-	        sb.Append("Primary outcome(s): The degree of disability (modified Ranking Scale, mRS)");
-	        sb.Append("Study Design: Parallel");
+	        sb.Append("\nPrimary outcome(s): The degree of disability (modified Ranking Scale, mRS)");
+	        sb.Append("\nStudy Design: Parallel");
 	        string brief_desc = sb.ToString();
 
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2019, 5, 11, 14,
@@ -168,26 +168,24 @@ public class TestData_100118 : TestData_Base
 		        35, 17, 80, 17, 10);
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100118,
-		        "Chinese Clinical Trial Register", null, "2019 Apr 19", null));
+		        "Chinese Clinical Trial Register", null, "19 Apr 2019", null));
 
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true,
-		        "From the Chinese Clinical Trials Register"));
+		        "From the Chinese Clinical Trial Register"));
 
 	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Cui Yabin",
-		        "Affiliated Hospital to Changchun University of Chinese Medicine", null,
+		        "The Affiliated Hospital to Changchun University of Chinese Medicine", null,
 		        "Affiliated Hospital to Changchun University of Chinese Medicine", null));
 	        fs.people.Add(new StudyPerson(sd_sid, 56, "Wang Jian",
 		        "The Affiliated Hospital to Changchun University of Chinese Medicine", null,
-		        "The Affiliated Hospital to Changchun University of Chinese Medicine", null));
+		        "Affiliated Hospital to Changchun University of Chinese Medicine", null));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Affiliated Hospital to Changchun University of Chinese Medicine", null));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "National clinical research base construction project of the national administration of traditional Chinese medicine", null));
 	        
-	        fs.features!.Add(new StudyFeature(sd_sid, 20, 1500));  // Other
-	        
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Patient diagnosed to be cerebral hemorrhagic stroke and confirmed by CT"));
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Patient diagnosed to be cerebral hemorrhagic stroke and confirmed by CT;"));
 	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Age 35 to 80 years;"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "2.", 1, "n.03", "The stroke onset time is within 24-72h;"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "The stroke onset time is within 24-72h;"));
 	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "4.", 1, "n.04", "Patients receive conservative treatment of conventional medicine;"));
 	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "5.", 1, "n.05", "Glasgow Coma Score > 6 points;"));
 	        fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "6.", 1, "n.06", "The modified Rankin Scale Score before the onset is 0 to 1 point;"));
@@ -226,13 +224,13 @@ public class TestData_100118 : TestData_Base
 
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100118, "Chinese Clinical Trial Register",
 		        "http://www.chictr.org.cn/showproj.aspx?proj=38214", true, 35, null, null, null));
-	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2019 Apr 19", 2019, 4, 19, null, null, null,
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "19 Apr 2019", 2019, 4, 19, null, null, null,
 		        null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2021 Mar 08", 2021, 3, 8, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "8 Mar 2021", 2021, 3, 8, null, null, null, null));
 
 	        fs.data_objects!.Add(sdo);
 
-	        return fs;
+	        return fs; 
         }
 
         return null;

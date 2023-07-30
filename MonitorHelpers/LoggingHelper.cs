@@ -47,7 +47,7 @@ public class LoggingHelper : ILoggingHelper
         string dtString = DateTime.Now.ToString("s", System.Globalization.CultureInfo.InvariantCulture)
             .Replace(":", "").Replace("T", " ");
         
-        string logFileName = "IM Source not set " + dtString + ".log";
+        string logFileName = "TS Source not set " + dtString + ".log";
         _logfilePath = Path.Combine(_logfileStartOfPath!, logFileName);
         _summaryLogfilePath = Path.Combine(_summaryLogfileStartOfPath!, logFileName);
         _sw = new StreamWriter(_logfilePath, true, System.Text.Encoding.UTF8);
@@ -206,10 +206,10 @@ public class LoggingHelper : ILoggingHelper
         
         // Write out the summary file.
         
-        var swSummary = new StreamWriter(_summaryLogfilePath, true, System.Text.Encoding.UTF8);
+        //var swSummary = new StreamWriter(_summaryLogfilePath, true, System.Text.Encoding.UTF8);
         
-        swSummary.Flush();
-        swSummary.Close();
+        //swSummary.Flush();
+        //swSummary.Close();
     }
     
     private void Transmit(string message)

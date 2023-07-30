@@ -245,7 +245,7 @@ public class TestReportHelper
                         }
                         else
                         {
-                            _loggingHelper.LogLine("No issues");
+                            _loggingHelper.LogLine("No issues for this record");
                         }
                     }
                 }
@@ -271,62 +271,72 @@ public class TestReportHelper
             {
                 if (tr.num_issues == 0)
                 {
-                    _loggingHelper.LogLine(tr.header + ": No issues found");
+                    _loggingHelper.LogLine(tr.header + ": No issues found for this table");
                 }
                 else
                 {
                     string add_s = tr.num_issues > 1 ? "s" : "";
                     _loggingHelper.LogLine(tr.header + $": !!!!! {tr.num_issues} issue{add_s} found !!!!!");
-                }
-                
-                if (!rec_num_equal)
-                {
-                    if (tr.rec_num_mismatch_allowed) // in some cases mismatch OK
-                    {
-                        string check_fb = $"({tr.num_exp_recs} expected, {tr.num_act_recs} found)\n";
-                        check_fb += "but expected may be a deliberate subset of actual, and no error is implied.";
-                        _loggingHelper.LogLine("Record number check: " + check_fb);
-                    }
-                    else
-                    {
-                        _loggingHelper.LogLine($"Record number check: FAIL ({tr.num_exp_recs} expected, {tr.num_act_recs} found) !!!!!");
-                    }
-                }
 
-                if (tr.record_results.Any())
-                {
-                    foreach (RecordResults rr in tr.record_results)
+                    if (tr.num_exp_recs != -1)
                     {
-                        if (rr.key_field is not null) // null if a whole study or data object record
+                        if(!rec_num_equal)
                         {
-                            
-                            string record_header = rr.key_field2 is not null
-                                ? $"{rr.key_field_header} : {rr.key_field_value} :: {rr.key_field2_value}"
-                                : $"{rr.key_field_header} : {rr.key_field_value}";
-
-                            if (rr.num_issues > 0)
+                            if (tr.rec_num_mismatch_allowed) // in some cases mismatch OK
                             {
-                                string add_s = rr.num_issues > 1 ? "s" : "";
-                                _loggingHelper.LogLine($"{record_header}: {rr.num_issues} issue{add_s} found:");
+                                string check_fb = $"({tr.num_exp_recs} expected, {tr.num_act_recs} found)\n";
+                                check_fb += "but expected may be a deliberate subset of actual, and no error is implied.";
+                                _loggingHelper.LogLine("Record number check: " + check_fb);
                             }
                             else
                             {
-                                _loggingHelper.LogLine(record_header + ": No issues");
+                                _loggingHelper.LogLine(
+                                    $"Record number check: FAIL ({tr.num_exp_recs} expected, {tr.num_act_recs} found) !!!!!");
                             }
                         }
-                        
-                        if (rr.num_issues > 0)
+                        else
                         {
-                            if (rr.fields.Any())
+                            add_s = tr.num_exp_recs == 1 ? "" : "s";
+                            _loggingHelper.LogLine($"Record number check: PASS ({tr.num_exp_recs} record{add_s})");
+                        }
+                    }
+
+                    if (tr.record_results.Any())
+                    {
+                        foreach (RecordResults rr in tr.record_results)
+                        {
+                            if (rr.key_field is not null) // null if a whole study or data object record
                             {
-                                foreach (FieldResult ff in rr.fields)
+
+                                string record_header = rr.key_field2 is not null
+                                    ? $"{rr.key_field_header} : {rr.key_field_value} :: {rr.key_field2_value}"
+                                    : $"{rr.key_field_header} : {rr.key_field_value}";
+
+                                if (rr.num_issues > 0)
                                 {
-                                    if (ff.res == 1)
+                                    add_s = rr.num_issues > 1 ? "s" : "";
+                                    _loggingHelper.LogLine($"{record_header}: {rr.num_issues} issue{add_s} found:");
+                                }
+                                else
+                                {
+                                    _loggingHelper.LogLine(record_header + ": No issues");
+                                }
+                            }
+
+                            if (rr.num_issues > 0)
+                            {
+                                if (rr.fields.Any())
+                                {
+                                    foreach (FieldResult ff in rr.fields)
                                     {
-                                        string possNL = ff.use_new_line ? "\n" : "";
-                                        string feedback = $"{ff.field_name}: FAIL: {possNL}e: {ff.exp_value} {possNL}a: {ff.act_value}";
-                                        _loggingHelper.LogLine(feedback);
-                                        _loggingHelper.LogBlank();
+                                        if (ff.res == 1)
+                                        {
+                                            string possNL = ff.use_new_line ? "\n" : "";
+                                            string feedback =
+                                                $"{ff.field_name}: FAIL: {possNL}e: {ff.exp_value} {possNL}a: {ff.act_value}";
+                                            _loggingHelper.LogLine(feedback);
+                                            _loggingHelper.LogBlank();
+                                        }
                                     }
                                 }
                             }
