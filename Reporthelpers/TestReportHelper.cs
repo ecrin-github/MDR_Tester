@@ -637,9 +637,9 @@ public class TestReportHelper
     public List<string>? FetchObjectPubTypeValues(string sd_id)
     {
         using NpgsqlConnection conn = new(_connString);
-        string sql_string = @$"select type_name from te.object_pub_types where sd_oid = '{sd_id}'
+        string sql_string = @$"select type_name from te.object_publication_types where sd_oid = '{sd_id}'
                union
-               select type_name from ad.object_pub_types where sd_oid = '{sd_id}'";
+               select type_name from ad.object_publication_types where sd_oid = '{sd_id}'";
         return conn.Query<string>(sql_string)?.ToList() ;
     }
     

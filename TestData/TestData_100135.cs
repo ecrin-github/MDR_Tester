@@ -10,13 +10,13 @@ public class TestData_100135 : TestData_Base
 
 	        const string art_title =
 		        "Prognostic Relevance of Left Atrial Dysfunction in Heart Failure With Preserved Ejection Fraction.";
-	        const string desc = "Circ Heart Fail. 2016 Apr. 9(4):e002763. doi:10.1161/CIRCHEARTFAILURE.115.002763. pii:e002763.";
-	        const string citation = "Santos A, Roca G, Claggett B et al. Prognostic Relevance of Left Atrial Dysfunction in Heart Failure With Preserved Ejection Fraction. Circ Heart Fail. 2016 Apr. 9(4):e002763. doi:10.1161/CIRCHEARTFAILURE.115.002763. pii:e002763.";
+	        const string desc = "Circ Heart Fail. Apr 2016. 9(4):e002763. pii:e002763. doi:10.1161/CIRCHEARTFAILURE.115.002763.";
+	        const string citation = "Santos A, Roca G, Claggett B et al. Prognostic Relevance of Left Atrial Dysfunction in Heart Failure With Preserved Ejection Fraction. Circ Heart Fail. Apr 2016. 9(4):e002763. pii:e002763. doi:10.1161/CIRCHEARTFAILURE.115.002763.";
 
 	        fdb.journal_details = new JournalDetails(sd_oid, "Circulation. Heart failure", null, "19413297", 
 		        "101479941", "Circ Heart Fail", 101427, "Wolters Kluwer Health");
 
-	        fdb.data_object = new DataObject(sd_oid, null, art_title, "", citation,
+	        fdb.data_object = new DataObject(sd_oid, null, art_title, "1", citation,
 		        "10.1161/CIRCHEARTFAILURE.115.002763", 1, 2016, 23, 12, 101427, "Wolters Kluwer Health", "https://ror.org/04phyf746",
 		        "en", 11, null, null, 0, false, false);
 	        
@@ -29,9 +29,9 @@ public class TestData_100135 : TestData_Base
 	        fdb.object_instances!.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
 		        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4826720", true, 36, null, null, null));
 	        
-	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "2016 Apr 9"));
-	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "CIRCHEARTFAILURE.115.002763", 34, 101427, "Wolters Kluwer Health", "https://ror.org/04phyf746", "2016 Mar 4"));
-	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "e002763", 34, 101427, "Wolters Kluwer Health", "https://ror.org/04phyf746", "2016 Mar 4"));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "9 Apr 2016"));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "CIRCHEARTFAILURE.115.002763", 34, 101427, "Wolters Kluwer Health", "https://ror.org/04phyf746", "4 Mar 2016"));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "e002763", 34, 101427, "Wolters Kluwer Health", "https://ror.org/04phyf746", "4 Mar 2016"));
 	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "PMC4826720", 31, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", null));
 	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "NIHMS768831", 32, 100134, "National Institutes of Health", "https://ror.org/01cwqze88", null));
 	        
@@ -48,13 +48,13 @@ public class TestData_100135 : TestData_Base
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Amil M", "Shah", "Amil M Shah", null, null, null, null, null));
 	        
 	        fdb.object_topics!.Add(new ObjectTopic(sd_oid, 11, "atrial strain", null, null, null, null));
-	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "diastolic heart failure", null, null, null, null));
-	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "echocardiography", null, null, null, null));
-	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "prognosis", null, null, null, null));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "diastolic heart failure", null, null, "D054144", "Heart Failure, Diastolic"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "echocardiography", null, null, "D004452", "Echocardiography"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "prognosis", null, null, "D011379", "Prognosis"));
 	        
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Mineralocorticoid Receptor Antagonists", 14, 
 		        "D000451", "D000451", "Mineralocorticoid Receptor Antagonists"));
-	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Aged", 14, "D000368", "D000368", "Aged"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Aged", 14, "D000368", "D000375", "Aging"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Aged, 80 and over", 14, "D000369", "D000369", "Aged, 80 and over"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Atrial Function, Left", 14, "D016279", "D016279", "Atrial Function, Left"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Diastole", 14, "D003971", "D003971", "Diastole"));
@@ -74,20 +74,18 @@ public class TestData_100135 : TestData_Base
    
 	        fdb.object_db_ids!.Add(new ObjectDBLink(sd_oid, 1, "ClinicalTrials.gov", "NCT00094302"));
 
-            fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "2016 Apr", 2016, 4, null));
-            fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "2016 Aug 1", 2016, 8, 1));
-            fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "2020 Dec 16", 2020, 12, 16));
-            fdb.object_dates.Add(new ObjectDate(sd_oid, 17, "2015 Oct 20", 2015, 10, 20));
-            fdb.object_dates.Add(new ObjectDate(sd_oid, 11, "2016 Mar 4", 2016, 3, 4));
-            fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "2016 Apr 9", 2016, 4, 9));
-            fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "2016 Apr 9", 2016, 4, 9));
-            fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "2016 Aug 2", 2016, 8, 2));
+            fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "Apr 2016", 2016, 4, null));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "1 Aug 2016", 2016, 8, 1));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "16 Dec 2020", 2020, 12, 16));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 17, "20 Oct 2015", 2015, 10, 20));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 11, "4 Mar 2016", 2016, 3, 4));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "9 Apr 2016", 2016, 4, 9));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "9 Apr 2016", 2016, 4, 9));
+            fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "2 Aug 2016", 2016, 8, 2));
 
             fdb.object_pubtypes!.Add(new ObjectPublicationType(sd_oid, "Journal Article"));
             fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Multicenter Study"));
             fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Randomized Controlled Trial"));
-            
-            fdb.object_comments!.Add(new ObjectComment(sd_oid, null, "", "", "1", null));
 
             return fdb;
         }
@@ -98,8 +96,8 @@ public class TestData_100135 : TestData_Base
 	        
 	        const string art_title =
 		        "Surgical Outcome Results From SWOG S1505: A Randomized Clinical Trial of mFOLFIRINOX Versus Gemcitabine/Nab-paclitaxel for Perioperative Treatment of Resectable Pancreatic Ductal Adenocarcinoma.";
-	        const string desc = "Ann Surg. 2020 Sep 1. 272(3):481-486. doi:10.1097/SLA.0000000000004155.";
-	        const string citation = "Ahmad S, Duong M, Sohal D et al. Surgical Outcome Results From SWOG S1505: A Randomized Clinical Trial of mFOLFIRINOX Versus Gemcitabine/Nab-paclitaxel for Perioperative Treatment of Resectable Pancreatic Ductal Adenocarcinoma. Ann Surg. 2020 Sep 1. 272(3):481-486. doi:10.1097/SLA.0000000000004155.";
+	        const string desc = "Ann Surg. 1 Sep 2020. 272(3):481-486. doi:10.1097/SLA.0000000000004155.";
+	        const string citation = "Ahmad S, Duong M, Sohal D et al. Surgical Outcome Results From SWOG S1505: A Randomized Clinical Trial of mFOLFIRINOX Versus Gemcitabine/Nab-paclitaxel for Perioperative Treatment of Resectable Pancreatic Ductal Adenocarcinoma. Ann Surg. 1 Sep 2020. 272(3):481-486. doi:10.1097/SLA.0000000000004155.";
 
 	        fdb.journal_details = new JournalDetails(sd_oid, "Annals of surgery", null, "15281140",
 		         "0372354", "Ann Surg", 101427, "Wolters Kluwer Health");
@@ -117,7 +115,7 @@ public class TestData_100135 : TestData_Base
 	        fdb.object_instances.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
 		        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7856053", true, 36, null, null, null));
 	        
-	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "2020 Aug 3"));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "3 Aug 2020"));
 	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "00000658-202009000-00021", 34, 101427, "Wolters Kluwer Health", "https://ror.org/04phyf746", null));
 	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "PMC7856053", 31, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", null));
 	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "NIHMS1647338", 32, 100134, "National Institutes of Health", "https://ror.org/01cwqze88", null));
@@ -141,10 +139,10 @@ public class TestData_100135 : TestData_Base
 		        null, "Wayne State University/Karmanos Cancer Institute", null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Howard S", "Hochster", "Howard S Hochster", null, 
 		        "Rutgers Cancer Institute of New Jersey, New Brunswick, New Jersey.", 
-		        null, "Rutgers Cancer Institute of New Jersey", null));
+		        102296, "Rutgers Cancer Institute of New Jersey", null));
 	        
 	        
-	        fdb.object_topics!.Add(new ObjectTopic(sd_oid, 0, "Aged", 14, "D000368", "D000368", "Aged"));
+	        fdb.object_topics!.Add(new ObjectTopic(sd_oid, 0, "Aged", 14, "D000368", "D000375", "Aging"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Antineoplastic Combined Chemotherapy Protocols", 14, "D000971", "D000971", "Antineoplastic Combined Chemotherapy Protocols"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Carcinoma, Pancreatic Ductal", 14, "D021441", "D021441", "Carcinoma, Pancreatic Ductal"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Combined Modality Therapy", 14, "D003131", "D003131", "Combined Modality Therapy"));
@@ -165,19 +163,19 @@ public class TestData_100135 : TestData_Base
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Oxaliplatin", 14, "D000077150", "D000077150", "Oxaliplatin"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Deoxycytidine", 14, "D003841", "D003841", "Deoxycytidine"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Irinotecan", 14, "D000077146", "D000077146", "Irinotecan"));
-	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "gemcitabine", 14, "C056507", "C056507", "gemcitabine"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Gemcitabine", 14, "D000093542", "C056507", "gemcitabine"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Paclitaxel", 14, "D017239", "D017239", "Paclitaxel"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Leucovorin", 14, "D002955", "D002955", "Leucovorin"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 12, "Fluorouracil", 14, "D005472", "D005472", "Fluorouracil"));
 	        
             fdb.object_db_ids!.Add(new ObjectDBLink(sd_oid, 1, "ClinicalTrials.gov", "NCT02562716"));
 
-			fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "2020 Sep 1", 2020, 9, 1));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "2021 Feb 15", 2021, 2, 15));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "2021 Sep 19", 2021, 9, 19));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "2020 Aug 3", 2020, 8, 3));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "2021 Feb 16", 2021, 2, 16));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "2020 Aug 3", 2020, 8, 3));
+			fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "1 Sep 2020", 2020, 9, 1));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "15 Feb 2021", 2021, 2, 15));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "7 Dec 2022", 2022, 12, 7));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "3 Aug 2020", 2020, 8, 3));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "16 Feb 2021", 2021, 2, 16));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "3 Aug 2020", 2020, 8, 3));
 
 			fdb.object_pubtypes!.Add(new ObjectPublicationType(sd_oid, "Journal Article"));
 			fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Clinical Trial, Phase II"));
@@ -194,15 +192,15 @@ public class TestData_100135 : TestData_Base
 	        
 	        const string art_title =
 		        "Randomized Controlled Trial of Advance Notification Phone Calls vs Text Messages Prior to Mailed Fecal Test Outreach.";
-	        const string desc = "Clin Gastroenterol Hepatol. 2021 Nov. 19(11):2353-2360.e2. Epub 2020 Jul 30. pii:S1542-3565(20)31063-6. doi:10.1016/j.cgh.2020.07.053.";
-	        const string citation = "Coronado G, Nyongesa D, Petrik A et al. Randomized Controlled Trial of Advance Notification Phone Calls vs Text Messages Prior to Mailed Fecal Test Outreach. Clin Gastroenterol Hepatol. 2021 Nov. 19(11):2353-2360.e2. Epub 2020 Jul 30. pii:S1542-3565(20)31063-6. doi:10.1016/j.cgh.2020.07.053.";
+	        const string desc = "Clin Gastroenterol Hepatol. Nov 2021. 19(11):2353-2360.e2. Epub 30 Jul 2020. doi:10.1016/j.cgh.2020.07.053. pii:S1542-3565(20)31063-6.";
+	        const string citation = "Coronado G, Nyongesa D, Petrik A et al. Randomized Controlled Trial of Advance Notification Phone Calls vs Text Messages Prior to Mailed Fecal Test Outreach. Clin Gastroenterol Hepatol. Nov 2021. 19(11):2353-2360.e2. Epub 30 Jul 2020. doi:10.1016/j.cgh.2020.07.053. pii:S1542-3565(20)31063-6.";
 
 	        fdb.journal_details = new JournalDetails(sd_oid, "Clinical gastroenterology and hepatology : the official clinical practice journal of the American Gastroenterological Association", null, "15427714", 
 		         "101160775", "Clin Gastroenterol Hepatol", 101422, "Elsevier");
 
 	        fdb.data_object = new DataObject(sd_oid, null, art_title, "1", citation,
 		        "10.1016/j.cgh.2020.07.053", 1, 2021, 23, 12, 101422, "Elsevier", "https://ror.org/055j8ya05",
-		        "en", 15, "Not in PMC - presumed behind pay wall, but to check", null, 0, false, false);
+		        "en", 11, null, null, 0, false, false);
 	        
 	        fdb.object_descriptions!.Add(new ObjectDescription(sd_oid, 18, null, desc, "en"));
 	        
@@ -210,9 +208,13 @@ public class TestData_100135 : TestData_Base
 	        
 	        fdb.object_instances!.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
 		        "https://www.ncbi.nlm.nih.gov/pubmed/" + sd_oid, true, 40, null, null, null));
+	        fdb.object_instances.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
+		        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9285860", true, 36, null, null, null));
 
-	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "2020 Aug 3"));
-	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "S1542-3565(20)31063-6", 34, 101422, "Elsevier", "https://ror.org/055j8ya05", "2020 Jul 27"));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "3 Aug 2020"));
+	        fdb.object_identifiers.Add(new ObjectIdentifier(sd_oid, "PMC9285860", 31, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", null));
+	        fdb.object_identifiers.Add(new ObjectIdentifier(sd_oid, "S1542-3565(20)31063-6", 34, 101422, "Elsevier", "https://ror.org/055j8ya05", "27 Jul 2020"));
+	        fdb.object_identifiers.Add(new ObjectIdentifier(sd_oid, "NIHMS1617917", 32, 100134, "National Institutes of Health", "https://ror.org/01cwqze88", null));
 
 	        fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Gloria D", "Coronado", "Gloria D Coronado", null, 
 		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon. Electronic address: gloria.d.coronado@kpchr.org.", 
@@ -233,13 +235,12 @@ public class TestData_100135 : TestData_Base
 		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.", null, null, null));
 	        
 	        fdb.object_topics!.Add(new ObjectTopic(sd_oid, 11, "Fecal Testing", null, null, null, null));
-	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Colon Cancer", null, null, null, null));
-	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Prevention", null, null, null, null));
-	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Adherence", null, null, null, null));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Colon Cancer", null, null, "D003110", "Colonic Neoplasms"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Prevention", null, null, "D011322", "Primary Prevention"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Adherence", null, null, "D000074822", "Treatment Adherence and Compliance"));
 	        
-	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Aged", 14, "D000368", "D000368", "Aged"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Aged", 14, "D000368", "D000375", "Aging"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Early Detection of Cancer", 14, "D055088", "D055088", "Early Detection of Cancer"));
-	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Humans", 14, "D006801", "D006801", "Humans"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Middle Aged", 14, "D008875", "D008875", "Middle Aged"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Occult Blood", 14, "D009780", "D009780", "Occult Blood"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Postal Service", 14, "D011177", "D011177", "Postal Service"));
@@ -249,23 +250,19 @@ public class TestData_100135 : TestData_Base
 	             
 	        fdb.object_db_ids!.Add(new ObjectDBLink(sd_oid, 1, "ClinicalTrials.gov", "NCT03167125"));
 
-			fdb.object_db_ids!.Add(new ObjectDBLink(sd_oid, 1, "ClinicalTrials.gov", "NCT00094302"));
-
-			fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "2021 Nov", 2021, 11, null));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "2021 Nov 10", 2021, 11, 10));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "2021 Nov 10", 2021, 11, 10));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 17, "2020 Jan 6", 2020, 1, 6));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 55, "2020 Jul 30", 2020, 7, 30));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 57, "2020 Jul 21", 2020, 7, 21));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 11, "2020 Jul 27", 2020, 7, 27));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "2020 Aug 3", 2020, 8, 3));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "2021 Nov 11", 2021, 11, 11));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "2020 Aug 3", 2020, 8, 3));
+			fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "Nov 2021", 2021, 11, null));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "16 Jul 2022", 2022, 7, 16));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "10 Nov 2021", 2021, 11, 10));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 17, "6 Jan 2020", 2020, 1, 6));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 55, "30 Jul 2020", 2020, 7, 30));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 57, "21 Jul 2020", 2020, 7, 21));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 11, "27 Jul 2020", 2020, 7, 27));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "3 Aug 2020", 2020, 8, 3));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "11 Nov 2021", 2021, 11, 11));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "3 Aug 2020", 2020, 8, 3));
 
 			fdb.object_pubtypes!.Add(new ObjectPublicationType(sd_oid, "Journal Article"));
 			fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Randomized Controlled Trial"));
-			            
-			fdb.object_comments!.Add(new ObjectComment(sd_oid, null, "", "", "1", null));
 
 			return fdb;
                  
@@ -277,8 +274,8 @@ public class TestData_100135 : TestData_Base
 	        
 	        const string art_title =
 		        "Effects of protein, monounsaturated fat, and carbohydrate intake on blood pressure and serum lipids: results of the OmniHeart randomized trial.";
-	        const string desc = "JAMA. 2005 Nov 16. 294(19):2455-64.";
-	        const string citation = "Appel L, Sacks F, Carey V et al. Effects of protein, monounsaturated fat, and carbohydrate intake on blood pressure and serum lipids: results of the OmniHeart randomized trial. JAMA. 2005 Nov 16. 294(19):2455-64.";
+	        const string desc = "JAMA. 16 Nov 2005. 294(19):2455-64.";
+	        const string citation = "Appel L, Sacks F, Carey V et al. Effects of protein, monounsaturated fat, and carbohydrate intake on blood pressure and serum lipids: results of the OmniHeart randomized trial. JAMA. 16 Nov 2005. 294(19):2455-64.";
 
 	        fdb.journal_details = new JournalDetails(sd_oid, "JAMA", null, "15383598",
 		         "7501160", "JAMA", 101431, "American Medical Association");
@@ -294,7 +291,7 @@ public class TestData_100135 : TestData_Base
 	        fdb.object_instances!.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
 		        "https://www.ncbi.nlm.nih.gov/pubmed/" + sd_oid, true, 40, null, null, null));
 	        
-	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "2005 Nov 17"));
+	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "17 Nov 2005"));
 	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "294/19/2455", 34,  101431, "American Medical Association", "https://ror.org/03p6gt485", null));
 	        
 	        fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Lawrence J", "Appel", "Lawrence J Appel", null, 
@@ -305,7 +302,7 @@ public class TestData_100135 : TestData_Base
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Eva", "Obarzanek", "Eva Obarzanek", null, null, null, null, null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Janis F", "Swain", "Janis F Swain", null, null, null, null, null));
 	        
-	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Edgar R", "Miller", "Edgar R Miller", null, null, null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Edgar R", "Miller", "Edgar R Miller 3rd", null, null, null, null, null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Paul R", "Conlin", "Paul R Conlin", null, null, null, null, null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Thomas P", "Erlinger", "Thomas P Erlinger", null, null, null, null, null));
 	        
@@ -319,7 +316,7 @@ public class TestData_100135 : TestData_Base
 	        fdb.object_organisations!.Add(new ObjectOrganisation(sd_oid, 11, null, "OmniHeart Collaborative Research Group", null));
 	       
 	        fdb.object_topics!.Add(new ObjectTopic(sd_oid, 0, "Adult", 14, "D000328", "D000328", "Adult"));
-	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Blood Pressure", 14, "D001794", "D001794", "Blood Pressure"));
+	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Blood Pressure", 14, "D001794", "D001795", "Blood Pressure Determination"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Cardiovascular Diseases", 14, "D002318", "D002318", "Cardiovascular Diseases"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Cross-Over Studies", 14, "D018592", "D018592", "Cross-Over Studies"));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Diet, Atherogenic", 14, "D004036", "D004036", "Diet, Atherogenic"));
@@ -335,12 +332,12 @@ public class TestData_100135 : TestData_Base
 
 	        fdb.object_db_ids!.Add(new ObjectDBLink(sd_oid, 1, "ClinicalTrials.gov", "NCT00051350"));
 
-			fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "2005 Nov 16", 2005, 11, 16));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "2005 Nov 22", 2005, 11, 22));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "2016 Oct 17", 2016, 10, 17));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "2005 Nov 17", 2005, 11, 17));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "2005 Dec 13", 2005, 12, 13));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "2005 Nov 17", 2005, 11, 17));
+			fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "16 Nov 2005", 2005, 11, 16));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "22 Nov 2005", 2005, 11, 22));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "17 Mar 2022", 2022, 3, 17));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "17 Nov 2005", 2005, 11, 17));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "13 Dec 2005", 2005, 12, 13));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "17 Nov 2005", 2005, 11, 17));
 
 			fdb.object_pubtypes!.Add(new ObjectPublicationType(sd_oid, "Journal Article"));
 			fdb.object_pubtypes!.Add(new ObjectPublicationType(sd_oid, "Comparative Study"));
@@ -359,14 +356,14 @@ public class TestData_100135 : TestData_Base
 		        
 		    const string art_title =
 			     "Safety, Pharmacokinetics, and Pharmacodynamics of the TLR4 Agonist GSK1795091 in Healthy Individuals: Results from a Randomized, Double-blind, Placebo-controlled, Ascending Dose Study.";
-		    const string desc = "Clin Ther. 2020 Aug. 42(8):1519-1534.e33. Epub 2020 Jul 30. pii:S0149-2918(20)30286-1. doi:10.1016/j.clinthera.2020.05.022.";
-		    const string citation = "Hug B, Matheny C, Burns O et al. Safety, Pharmacokinetics, and Pharmacodynamics of the TLR4 Agonist GSK1795091 in Healthy Individuals: Results from a Randomized, Double-blind, Placebo-controlled, Ascending Dose Study. Clin Ther. 2020 Aug. 42(8):1519-1534.e33. Epub 2020 Jul 30. pii:S0149-2918(20)30286-1. doi:10.1016/j.clinthera.2020.05.022.";
+		    const string desc = "Clin Ther. Aug 2020. 42(8):1519-1534.e33. Epub 30 Jul 2020. doi:10.1016/j.clinthera.2020.05.022. pii:S0149-2918(20)30286-1.";
+		    const string citation = "Hug B, Matheny C, Burns O et al. Safety, Pharmacokinetics, and Pharmacodynamics of the TLR4 Agonist GSK1795091 in Healthy Individuals: Results from a Randomized, Double-blind, Placebo-controlled, Ascending Dose Study. Clin Ther. Aug 2020. 42(8):1519-1534.e33. Epub 30 Jul 2020. doi:10.1016/j.clinthera.2020.05.022. pii:S0149-2918(20)30286-1.";
 
 		    fdb.journal_details = new JournalDetails(sd_oid, "Clinical therapeutics", null, "1879114X", 
 			     "7706726", "Clin Ther", 101422, "Elsevier");
 
 		    fdb.data_object = new DataObject(sd_oid, null, art_title, "1", citation,
-			     "10.1016/j.clinthera.2020.05.022", 1, 2016, 23, 12, 101422, "Elsevier", "https://ror.org/055j8ya05",
+			     "10.1016/j.clinthera.2020.05.022", 1, 2020, 23, 12, 101422, "Elsevier", "https://ror.org/055j8ya05",
 			     "en", 15, "Not in PMC - presumed behind pay wall, but to check", null, 0, false, false);
 		     
 		    fdb.object_descriptions!.Add(new ObjectDescription(sd_oid, 18, null, desc, "en"));
@@ -376,8 +373,8 @@ public class TestData_100135 : TestData_Base
 		    fdb.object_instances!.Add(new ObjectInstance(sd_oid, 100133, "National Library of Medicine", 
 			     "https://www.ncbi.nlm.nih.gov/pubmed/" + sd_oid, true, 40, null, null, null));
 
-		    fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "2020 Aug 3"));
-		    fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "S0149-2918(20)30286-1", 34, 101422, "Elsevier", "https://ror.org/055j8ya05", "2020 May 22"));
+		    fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, sd_oid, 16, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", "3 Aug 2020"));
+		    fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "S0149-2918(20)30286-1", 34, 101422, "Elsevier", "https://ror.org/055j8ya05", "22 May 2020"));
 		     
 		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Bruce A", "Hug", "Bruce A Hug", null, 
 			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA. Electronic address: bruce.a.hug@gsk.com.", null, null, null));
@@ -386,17 +383,17 @@ public class TestData_100135 : TestData_Base
 		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Olivia", "Burns", "Olivia Burns", null, 
 			    "Global Clinical Sciences & Delivery, GSK, Abbotsford, Victoria, Australia.", null, null, null));
 		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Herbert", "Struemper", "Herbert Struemper", null, 
-			    "Clinical Pharmacology Modeling & Simulation, GSK, Research Triangle Park, NC, USA..", null, null, null));
+			    "Clinical Pharmacology Modeling & Simulation, GSK, Research Triangle Park, NC, USA.", null, null, null));
 		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Xiaowei", "Wang", "Xiaowei Wang", null, 
 			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA.", null, null, null));
 		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Michael L", "Washburn", "Michael L Washburn", null, 
 			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA.", null, null, null));
 		    
 		    fdb.object_topics!.Add(new ObjectTopic(sd_oid, 11, "GSK1795091", null, null, null, null));
-		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Toll-like receptor", null, null, null, null));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Toll-like receptor", null, null, "D051193", "Toll-Like Receptors"));
 		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "cytokine", null, null, null, null));
 		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "dose-escalation", null, null, null, null));
-		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "pharmacokinetics", null, null, null, null));
+		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "pharmacokinetics", null, null, "D010599", "Pharmacokinetics"));
 		    
 		    fdb.object_topics!.Add(new ObjectTopic(sd_oid, 0, "Adult", 14, "D000328", "D000328", "Adult"));
 		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 0, "Area Under Curve", 14, "D019540", "D019540", "Area Under Curve"));
@@ -421,25 +418,20 @@ public class TestData_100135 : TestData_Base
 		    
             fdb.object_db_ids!.Add(new ObjectDBLink(sd_oid, 1, "ClinicalTrials.gov", "NCT02798978"));
  
-			fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "2020 Aug", 2020, 8, null));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "2021 Jan 27", 2021, 1, 27));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "2021 Feb 17", 2021, 2, 17));
-
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 55, "2020 Jul 30", 2020, 7, 30));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 17, "2019 Nov 15", 2019, 11, 15));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 57, "2020 Apr 30", 2020, 4, 30));
-
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 11, "2020 May 22", 2020, 5, 22));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "2020 May 22", 2020, 5, 22));
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "2021 Jan 28", 2021, 1, 28));
-
-			fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "2020 Aug 3", 2020, 8, 3));
+			fdb.object_dates!.Add(new ObjectDate(sd_oid, 12, "Aug 2020", 2020, 8, null));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 54, "27 Jan 2021", 2021, 1, 27));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 53, "17 Feb 2021", 2021, 2, 17));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 55, "30 Jul 2020", 2020, 7, 30));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 17, "15 Nov 2019", 2019, 11, 15));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 57, "30 Apr 2020", 2020, 4, 30));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 11, "22 May 2020", 2020, 5, 22));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 62, "3 Aug 2020", 2020, 8, 3));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 63, "28 Jan 2021", 2021, 1, 28));
+			fdb.object_dates.Add(new ObjectDate(sd_oid, 65, "3 Aug 2020", 2020, 8, 3));
 
 			fdb.object_pubtypes!.Add(new ObjectPublicationType(sd_oid, "Journal Article"));
 			fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Clinical Trial, Phase I"));
 			fdb.object_pubtypes.Add(new ObjectPublicationType(sd_oid, "Randomized Controlled Trial"));
-			            
-			fdb.object_comments!.Add(new ObjectComment(sd_oid, null, "", "", "1", null));
 
 			return fdb;
         }

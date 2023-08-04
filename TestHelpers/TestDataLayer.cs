@@ -883,7 +883,7 @@ public class TestDataLayer
 
                 sqlString = $@"Insert into te.object_identifiers(sd_oid, identifier_value, identifier_type_id, 
                                source_id, source, source_ror_id, identifier_date)
-                               values ({sid}, {i_ident_val}, {i_ident_type}, {i_source_id}, {i_source}, 
+                               values ({oid}, {i_ident_val}, {i_ident_type}, {i_source_id}, {i_source}, 
                                {i_source_ror}, {i_ident_date}) ";
                 ExecuteSQL(sqlString);
                 n++;

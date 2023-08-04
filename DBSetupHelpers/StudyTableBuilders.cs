@@ -25,6 +25,12 @@ public class StudyTableBuilders
         Execute_SQL(sql_string);
     }
 
+    public void EnsureTEschema()
+    {
+        string sql_string = "CREATE SCHEMA IF NOT EXISTS te";
+        Execute_SQL(sql_string);
+    }
+
     public void create_table_studies()
     {
         string sql_string = @"DROP TABLE IF EXISTS te.studies;

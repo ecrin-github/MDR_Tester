@@ -21,6 +21,8 @@ class ExpectedBuilder
 
     public void BuildExpectedTables()
     {
+        _studyBuilder.EnsureTEschema();
+        
         if (_source.has_study_tables is true)
         {
             // these common to all databases
