@@ -438,17 +438,14 @@ public class TestStudyReporter
         int? start_year = _repHelper.GetStudyStartYear(sd_id);
         string table_name = start_year switch
         {
-            <= 2006 => "study_iec_pre06",
+            < 2006 => "study_iec_pre06",
+            >= 2006 and <= 2008 => "study_iec_0608",
+            2009 or 2010 => "study_iec_0910",
+            2011 or 2012 => "study_iec_1112",
+            2013 or 2014 => "study_iec_1314",
+            >= 2015 and <= 2030 => $"study_iec_{start_year - 2000}",
             null => "study_iec_null",
-            _ => start_year switch
-            {
-                >= 2015 and <= 2030 => $"study_iec_{start_year - 2000}",
-                2009 or 2010 => "study_iec_0910",
-                2011 or 2012 => "study_iec_1112",
-                2013 or 2014 => "study_iec_1314",
-                >= 2006 and <= 2008 => "study_iec_0608",
-                _ => "study_iec_null"
-            }
+            _ => "study_iec_null"
         };
         
         TableResults tr = new TableResults("Study IEC", table_name, "study", false); 
