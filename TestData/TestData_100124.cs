@@ -14,7 +14,7 @@ public class TestData_100124 : TestData_Base
 	        
 	        string display_title = "A Clinical Study of Fundus Findings in Toxaemia of Pregnancy(Pregnancy Induced Hypertension)";
 	        StringBuilder sb = new StringBuilder("Intervention 1: An observational study in which the patients for the study are selected from antenatal clinic, antenatal ward and preeclampsia and eclampsia");
-	        sb.Append("room” in Department of Obstetrics and Gynecology and general ophthalmic OPD in case of ambulatory patients during the period of November 2003 to June 2006 randomly."); 
+	        sb.Append("\nroom” in Department of Obstetrics and Gynecology and general ophthalmic OPD in case of ambulatory patients during the period of November 2003 to June 2006 randomly."); 
 	        sb.Append("In every case detail obstetric history, general examination and relevant pathological investigations were carried out. In every case, pupil was dilated with\n"); 
 	        sb.Append("homatropine (2%) eye drops and detailed ophthalmic examination was carried out.Assessment of prognosis as regards to vision and life (mortality) was made.\n"); 
 	        sb.Append("Primary outcome(s): An observational study in which the patients for the study are selected from antenatal clinic, antenatal ward and "); 
@@ -31,10 +31,10 @@ public class TestData_100124 : TestData_Base
 	        string brief_desc = sb.ToString();
 	        
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2003, 11, 12, 21, "300", 905,
-		        18, 17, 42, 17, 10);
+		        18, 17, 42, 17, 7);
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100124, 
-		        "Deutschen Register Klinischer Studien", null, "2016 Dec 5", null));
+		        "Deutschen Register Klinischer Studien", null, "5 Dec 2016", null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "U1111-1189-6165", 11,  100115, 
 		        "International Clinical Trials Registry Platform", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "JPRN-UMIN000024722", 11,  100127, 
@@ -51,13 +51,11 @@ public class TestData_100124 : TestData_Base
 		        "M and J Western Regional Institute of Ophthalmology, Ahmedabad", null));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, 
 		        "M and J Western Regional Institute of Ophthalmology", null));
-
-	        fs.features!.Add(new StudyFeature(sd_sid, 24, 599));   // 
             
             fs.conditions!.Add(new StudyCondition(sd_sid, "Pregnancy Induced Hypertension", null, null, null, null));
             
-            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "none", "none", 0, "n.0A", "An observational study in which the patients for the study are selected from antenatal clinic, antenatal ward and preeclampsia and eclampsia room in Department of Obstetrics and Gynecology and general ophthalmic OPD in case of ambulatory patients.Cases of Pregnancy Induced Hypertension."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 2, 2, "none", "none", 0, "e.0A", "Cases complicated by malignancy,renal,liver or any other secondary manifestations."));	       
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", "An observational study in which the patients for the study are selected from antenatal clinic, antenatal ward and preeclampsia and eclampsia room in Department of Obstetrics and Gynecology and general ophthalmic OPD in case of ambulatory patients.Cases of Pregnancy Induced Hypertension."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 1002, "none", "All", 0, "e.0A", "Cases complicated by malignancy,renal,liver or any other secondary manifestations."));	       
            
 	        fs.countries!.Add(new StudyCountry(sd_sid, 1269750, "India", null));
 	        
@@ -75,8 +73,8 @@ public class TestData_100124 : TestData_Base
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100124, "Deutschen Register Klinischer Studien", 
 		        "http://www.drks.de/DRKS00011324", true, 35, null, null, null));
-	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2016 Dec 5", 2016, 12, 5, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Nov 14", 2022, 11, 14, null, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "5 Dec 2016", 2016, 12, 5, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "14 Nov 2022", 2022, 11, 14, null, null, null, null));
 	       
 	        fs.data_objects!.Add(sdo);
 
@@ -98,7 +96,7 @@ public class TestData_100124 : TestData_Base
 	        sb.Append("clinically assessed at 7 days after stroke (if included in the acute hospital) and at 28 days, 3, 6, 12 and 24 months after stroke. ");	        
 	        sb.Append("Routine data and patient-reported outcome measures (PROMS) will be collected, as well as routine data from rehabilitation clinics on the ");
 	        sb.Append("therapy provided. All patients in the cohort study will also participate in the registry (Arm 1) at the same time). Start date of recruitment planned for November 2022.");
-	        sb.Append("Primary outcome(s): RECOVER-S aims to examine stroke rehabilitation in Germany using a multicentric- and biomarker-based approach ");
+	        sb.Append("\nPrimary outcome(s): RECOVER-S aims to examine stroke rehabilitation in Germany using a multicentric- and biomarker-based approach ");
 	        sb.Append("to provide a reliable depiction on the standard of care in stroke stroke rehabilitation.\nThis registry-based cohort study has the ");
 	        sb.Append("following goals: 1. To evaluate the association between stroke rehabilitation therapies and long-term functional and subjective outcome ");
 	        sb.Append("with regards to timing, intensity, duration, dosing and amount of stroke rehabilitation.\nHypothesis to goal 1: There is an interindividual ");
@@ -106,7 +104,7 @@ public class TestData_100124 : TestData_Base
 	        sb.Append("duration, dosing and amount of stroke rehabiliation. This hypothesis will be tested using the following endpoints:\nPrimary Endpoints:");
 	        sb.Append("\n1. Activities in daily living (assessed by the Barthel-Index) at six months after stroke\n2. Health-related quality ");
 	        sb.Append("of life (assessed by the EQ-5D-5L) at six months after stroke");
-	        sb.Append("Study Design: Allocation: Other;. Masking: Open (masking not used). Control: Other. Assignment: Other. Study design purpose: Prognosis");
+	        sb.Append("\nStudy Design: Allocation: Other;. Masking: Open (masking not used). Control: Other. Assignment: Other. Study design purpose: Prognosis");
 	        string brief_desc = sb.ToString();
 	        sb = new StringBuilder("In case of interest to utilize our IPD (individual participant data) the official (legally responsible) ");
 	        sb.Append("investigator of a research project must apply at the specifically designated committee (Data Use and Access Committee – DUAC). ");
@@ -126,20 +124,19 @@ public class TestData_100124 : TestData_Base
 		        18, 17, null, null, 10);
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100124,
-		        "Deutschen Register Klinischer Studien", null, "2022 Aug 25", null));
+		        "Deutschen Register Klinischer Studien", null, "25 Aug 2022", null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "U1111-1281-7659", 11, 100115,
 		        "International Clinical Trials Registry Platform", null, null, null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "2022-106-BO-ff", 14, 1,
-		        "", null, null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "2022-106-BO-ff", 14, 100241,
+		        "Charité - Universitätsmedizin Berlin", "https://ror.org/001w7jn25", null, null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true,
 		        "From the Deutschen Register Klinischer Studien"));
 	        fs.titles!.Add(new StudyTitle(sd_sid,
 		        "Rehabilitation and Clinical Observation of stroke patients to validate prognostic factors of functional and subjective Recovery after Stroke (RECOVER-S): A registry-based cohort study - RECOVER-S"
-		        , 16, "en", 11, true, "From the Deutschen Register Klinischer Studien"));
+		        , 16, "en", 11, false, "From the Deutschen Register Klinischer Studien"));
 	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Alexander Heinrich", "Nave", "Alexander Heinrich Nave", null,
-		        "Charité Universitätsmedizin Berlin Klinik für Neurologie", 
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Alexander Heinrich Nave", "Charité Universitätsmedizin Berlin Klinik für Neurologie", 
 		        null, "Charité Universitätsmedizin Berlin Klinik für Neurologie", null));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100241,
@@ -152,14 +149,13 @@ public class TestData_100124 : TestData_Base
 	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Time period of inclusion within = 9 days after stroke onset (acute clinic with subsequent referral to stroke rehabilitation care) or = 35 days after stroke onset (in-patient rehabilitation clinic)"));	    
 	      
 	        fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "1.", 1, "e.01", "No referral to subsequent stroke rehabilitation care (to neurological early rehabilitation ward or to in-patient rehabilitation clinic)"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "2", 1, "e.02", "Presence of intracranial hemorrhage on imaging other than intracerebral hemorrhage (e.g., subarachnoid hemorrhage)"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "3", 1, "e.03", "History of stroke (listed in pre-existing illnesses before current stroke)"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "4", 1, "e.04", "Participant dependent on invasive ventilation"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "5", 1, "e.05", "Life expectancy = 12 months."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 9, 302, "cr", "Hdr", 1, "e.06", "Biomarker-cohort-specific exclusion criteria:"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "1", 1, "e.07", "Patients with a primary hemorrhagic stroke"));	 
-	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "1", 1, "e.07", "Presence of MRI – contraindications (e.g., cardiac pacemaker, claustrophobia, ferromagnetic implants, etc.)"));	   
-	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "1", 1, "e.07", "Unable to lay still in MRI scanner for > 30 minutes"));	   
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "2.", 1, "e.02", "Presence of intracranial hemorrhage on imaging other than intracerebral hemorrhage (e.g., subarachnoid hemorrhage)"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "3.", 1, "e.03", "History of stroke (listed in pre-existing illnesses before current stroke)"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "4.", 1, "e.04", "Participant dependent on invasive ventilation"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "5.", 1, "e.05", "Life expectancy = 12 months. Biomarker-cohort-specific"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "1.", 1, "e.06", "Patients with a primary hemorrhagic stroke"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "2.", 1, "e.07", "Presence of MRI – contraindications (e.g., cardiac pacemaker, claustrophobia, ferromagnetic implants, etc.)"));	   
+	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "3.", 1, "e.08", "Unable to lay still in MRI scanner for > 30 minutes"));	   
 	        
 	        fs.countries!.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
 	        
@@ -181,8 +177,8 @@ public class TestData_100124 : TestData_Base
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100124, "Deutschen Register Klinischer Studien",
 		        "http://www.drks.de/DRKS00030023", true, 35, null, null, null));
-	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2022 Aug 25", 2022, 8, 25, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Nov 14", 2022, 11, 14, null, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "25 Aug 2022", 2022, 8, 25, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "14 Nov 2022", 2022, 11, 14, null, null, null, null));
 
 	        fs.data_objects!.Add(sdo);
 

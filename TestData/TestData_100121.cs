@@ -101,7 +101,7 @@ public class TestData_100121 : TestData_Base
 	        sb.Append("2. Time Frame: 18 months from start of randomization part \n"); 
 	        sb.Append("3. Time Frame: 38 months from start of randomization part\n"); 
 	        sb.Append("Study Design: Randomized, Parallel Group, Placebo Controlled Trial\n"); 
-	        sb.Append(" Method of generating randomization sequence:Computer generated randomization  Method of allocation concealment:Centralized  Blinding and masking:Participant and Investigator Blinded"); 
+	        sb.Append(" Method of generating randomization sequence:Computer generated randomization Method of allocation concealment:Centralized Blinding and masking:Participant and Investigator Blinded"); 
 	        string brief_desc = sb.ToString();
 	        
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2019, 6, 11, 15, "627", 915,
@@ -122,11 +122,10 @@ public class TestData_100121 : TestData_Base
 	        title += "chemotherapy with or withoutcanakinumab as first line therapy for locally advanced ormetastatic non-squamous and squamous non-small celllung cancer subjects - CANOPY 1";
 	        fs.titles.Add(new StudyTitle(sd_sid, title, 16, "en", 11, false, "From the Clinical Trials Registry - India"));
 
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Murugananthan K", "Novartis Healthcare Private LTD", 
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Murugananthan K", "Novartis", 
 		        100189, "Novartis", "https://ror.org/02f9zrr09"));
 	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100189, "Novartis", "https://ror.org/02f9zrr09"));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "Novartis Pharma AG, CH-4002 Basel, Switzerland", null));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 112, 100189, "Novartis", "https://ror.org/02f9zrr09"));
     
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
 	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
@@ -134,7 +133,7 @@ public class TestData_100121 : TestData_Base
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 505));   // 
 
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Malignant neoplasm of upper respiratory tract, part unspecified", 
-		        12, "C390", null, null));
+		        12, "C39", "2C29", "Malignant neoplasms of other or ill-defined sites in the respiratory system or intrathoracic organs"));
     
 	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1-", 1, "n.01", "Histologically confirmed locally advanced or metastatic NSCLC"));	       
 	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2-", 1, "n.02", "Measurable disease by RECIST 1.1"));	    
@@ -157,7 +156,6 @@ public class TestData_100121 : TestData_Base
             fs.countries.Add(new StudyCountry(sd_sid, 719819, "Hungary", null));
             fs.countries.Add(new StudyCountry(sd_sid, 2629691, "Iceland", null));
             fs.countries.Add(new StudyCountry(sd_sid, 1269750, "India", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 3175395, "Italy", null));
             fs.countries.Add(new StudyCountry(sd_sid, 1861060, "Japan", null));
             fs.countries.Add(new StudyCountry(sd_sid, 1873107, "North Korea", null));
             fs.countries.Add(new StudyCountry(sd_sid, 1835841, "South Korea", null));

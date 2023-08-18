@@ -132,3 +132,9 @@ public class CitationData
     public string? pmid { get; set; }
     public string? citation { get; set; }
 }
+
+public class IPDData
+{
+    public string? ipd_id { get; set; }
+    public string? ipd_type { get; set; }
+}

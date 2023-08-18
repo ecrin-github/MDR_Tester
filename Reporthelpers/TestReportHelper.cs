@@ -512,18 +512,18 @@ public class TestReportHelper
     {
         using NpgsqlConnection conn = new(_connString);
         // expected locations tested only, as often only a subset 'expected'
-        string sql_string = @$"select facility from te.study_locations where sd_sid = '{sd_id}'";
+        string sql_string = @$"select facility from te.study_locations where sd_sid = '{sd_id}' and facility is not null";
         return conn.Query<string>(sql_string)?.ToList() ;
     }
     
     
-    public List<string>? FetchStudyIPDAvailable(string sd_id)
+    public List<IPDData>? FetchStudyIPDAvailable(string sd_id)
     {
         using NpgsqlConnection conn = new(_connString);
-        string sql_string = @$"select ipd_id from te.study_ipd_available where sd_sid = '{sd_id}'
+        string sql_string = @$"select ipd_id, ipd_type from te.study_ipd_available where sd_sid = '{sd_id}'
                union
-               select ipd_id from ad.study_ipd_available where sd_sid = '{sd_id}'";
-        return conn.Query<string>(sql_string)?.ToList() ;
+               select ipd_id, ipd_type from ad.study_ipd_available where sd_sid = '{sd_id}'";
+        return conn.Query<IPDData>(sql_string)?.ToList() ;
     }
     
     

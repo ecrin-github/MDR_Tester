@@ -174,10 +174,10 @@ public class TestData_100118 : TestData_Base
 		        "From the Chinese Clinical Trial Register"));
 
 	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Cui Yabin",
-		        "The Affiliated Hospital to Changchun University of Chinese Medicine", null,
+		        "Affiliated Hospital to Changchun University of Chinese Medicine", null,
 		        "Affiliated Hospital to Changchun University of Chinese Medicine", null));
 	        fs.people.Add(new StudyPerson(sd_sid, 56, "Wang Jian",
-		        "The Affiliated Hospital to Changchun University of Chinese Medicine", null,
+		        "Affiliated Hospital to Changchun University of Chinese Medicine", null,
 		        "Affiliated Hospital to Changchun University of Chinese Medicine", null));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Affiliated Hospital to Changchun University of Chinese Medicine", null));

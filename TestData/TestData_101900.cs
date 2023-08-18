@@ -445,7 +445,7 @@ public class TestData_101900 : TestData_Base
 	        sb.Append("antagonists improved measures of diastolic function. However, rigorous testing was needed regarding their effect on clinical outcomes in patients with preserved LVEF. Therefore, the TOPCAT "); 
 	        sb.Append("trial was initiated to determine whether treatment with spironolactone, an aldosterone antagonist, would improve clinical outcomes in patients with symptomatic heart failure and a relatively "); 
 	        sb.Append("preserved LVEF.\nSubjects: \nPatients 50 years of age or older were eligible if they had at least one sign and at least one symptom of heart failure on a pre-specified list of clinically defined "); 
-	        sb.Append("signs and symptoms, a LVEF ≥ 45%, controlled systolic blood pressure (&lt; 140 mm Hg or 140-160 mm Hg if subject was being treated with 3 or more medications), and a serum potassium level of less "); 
+	        sb.Append("signs and symptoms, a LVEF ≥ 45%, controlled systolic blood pressure (< 140 mm Hg or 140-160 mm Hg if subject was being treated with 3 or more medications), and a serum potassium level of less "); 
 	        sb.Append("than 5.0 mmol per liter. In addition, eligible patients were stratified by two eligibility categories: (1) history of hospitalization within the previous 12 months, with management of heart "); 
 	        sb.Append("failure a major component of the care provided, or (2) elevated brain natriuretic peptide (BNP) level within 60 days before randomization.\nExclusion criteria included severe systemic illness "); 
 	        sb.Append("with a life expectancy of less than 3 years, severe renal dysfunction, and specific coexisting conditions, medications, or acute events.\nA total of 3445 participants were enrolled, with 1722 "); 
@@ -465,7 +465,7 @@ public class TestData_101900 : TestData_Base
 		        18, "en", 11, true, "From BioLINCC web page"));
 	        fs.titles.Add(new StudyTitle(sd_sid, "TOPCAT", 14, "en", 11, false, "From BioLINCC web page"));
 
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 101993, "HealthCore-NERI", null));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Carelon Research", null));
 
 	        fs.references!.Add(new StudyReference(sd_sid, null, "24716680", 	
 		        "https://www.ncbi.nlm.nih.gov/pubmed/24716680", null, "primary"));
@@ -487,7 +487,7 @@ public class TestData_101900 : TestData_Base
 			sb.Append("Circ Cardiovasc Qual Outcomes 2019 Mar;12(3):e004907.");
 			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30857413", 
 				"https://biolincc.nhlbi.nih.gov/publications/225391cc827e4601a6b6acc26c484527", 12, "associated"));	
-			
+
 			sb = new StringBuilder("Berkowitz SA, Sussman JB, Jonas DE, Basu S. ");
 			sb.Append("Generalizing Intensive Blood Pressure Treatment to Adults With Diabetes Mellitus. ");
 			sb.Append("J Am Coll Cardiol 2018 Sep 11;72(11):1214-1223.");
@@ -1053,11 +1053,11 @@ public class TestData_101900 : TestData_Base
 	        sb.Append("unsaturated fat) that should replace saturated fat was unresolved.\nSubjects: \nThe trial included 164 total subjects recruited from 2 clinical centers: Johns Hopkins Medical Institutions "); 
 	        sb.Append("(Baltimore, MD) and Brigham and Women’s Hospital (Boston, MA). Subjects were generally healthy adults, age ≥30 years with a systolic blood pressure (SBP) 120-159 mm Hg or diastolic blood "); 
 	        sb.Append("pressure (DBP) 80-99 mm Hg. This range includes individuals with prehypertension (systolic, 120-139 mm Hg or diastolic, 80-89 mm Hg) and stage 1 hypertension (systolic, 140-159 mm Hg or "); 
-	        sb.Append("diastolic, 90-99 mm Hg). Exclusion criteria included diabetes, prior or active CVD, LDL-cholesterol &gt;220 mg/dL, fasting triglycerides &gt;750 mg/dL, weight more than 350lb, taking "); 
+	        sb.Append("diastolic, 90-99 mm Hg). Exclusion criteria included diabetes, prior or active CVD, LDL-cholesterol >220 mg/dL, fasting triglycerides >750 mg/dL, weight more than 350lb, taking "); 
 	        sb.Append("medication for reduction of blood pressure lipid levels, unwillingness to stop taking vitamin and "); 
 	        sb.Append("mineral supplements, and alcoholic intake of more than 14 drinks per week. The mean age of the participants was 53.6 years, 45% were women, and 55% were African American."); 
 	        string brief_desc = sb.ToString();
-	        
+
 	        fs.study = new Study(sd_sid, biolincc_title, "en", brief_desc, null, 2002, null, 11, 21, null, 915,
 		        null, null, null, null, 0);
 

@@ -13,17 +13,11 @@ public class TestData_100119 : TestData_Base
             // Study
 
             string display_title = "Safety and efficacy evaluation of Selumetinib in Neurofibromatosis type 1";
-            StringBuilder sb =
-                new StringBuilder(
-                    "Interventions: Drug : The dose of selumetinib administered will be the maximum tolerated dose (20-25 mg/m2/dose q 12 ");
-            sb.Append(
-                "hrs for patients with age = 3 years and =18 years and 50 mg/dose or 25 mg/m2/dose q 12 hrs for patients with age &gt; 18 years). ");
-            sb.Append(
-                "The total duration of treatment will be 2 years of 26 cycles. A cycle of therapy is considered to be 28 days with no rest periods in between cycles");
-            sb.Append(
-                "\nPrimary outcome(s): To evaluate the safety of selumetinib in Korean patients with NF1 and PN and pharmacokinetic analysis");
-            sb.Append(
-                "\nPrimary Purpose : Treatment, Intervention Model : Single Group, Blinding/Masking : Open, Allocation : Non-RCT");
+            StringBuilder sb = new StringBuilder("Interventions: Drug : The dose of selumetinib administered will be the maximum tolerated dose (20-25 mg/m2/dose q 12 ");
+            sb.Append("hrs for patients with age = 3 years and =18 years and 50 mg/dose or 25 mg/m2/dose q 12 hrs for patients with age > 18 years). ");
+            sb.Append("The total duration of treatment will be 2 years of 26 cycles. A cycle of therapy is considered to be 28 days with no rest periods in between cycles");
+            sb.Append("\nPrimary outcome(s): To evaluate the safety of selumetinib in Korean patients with NF1 and PN and pharmacokinetic analysis");
+            sb.Append("\nPrimary Purpose : Treatment, Intervention Model : Single Group, Blinding/Masking : Open, Allocation : Non-RCT");
             string brief_desc = sb.ToString();
 
             fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2019, 5, 11, 14, "90", 900,
@@ -41,9 +35,8 @@ public class TestData_100119 : TestData_Base
             fs.people!.Add(new StudyPerson(sd_sid, 51, "Beom Hee Lee", "Asan Medical Center", 100300,
                 "Asan Medical Center", "https://ror.org/03s5q0090"));
             
-            fs.organisations!.Add(new StudyOrganisation(sd_sid, 54,  100300, "Asan Medical Center", 
-                "https://ror.org/03s5q0090"));
-            fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "AstraZeneca Korea", null));
+            fs.organisations!.Add(new StudyOrganisation(sd_sid, 54,  100300, "Asan Medical Center", "https://ror.org/03s5q0090"));
+            fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 100166, "AstraZeneca", "https://ror.org/04r9x1a08"));
             
             fs.iec!.Add(new StudyIEC(sd_sid, 1, 301, "cr", "Hdr", 0, "n.00", "For inclusion in the study subjects should fulfil the following criteria based on local regulations:"));
             fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "1.", 1, "n.01", "Patients with Neurofibromatosis type I, in whom genetic study was performed for the germline NF1 mutations, and have significant symptoms/comorbidities as well as those with the potential to develop symptoms/comorbidities due to inoperable measurable plexiform neurofibroma (Surgeon’s statement of inoperability should be documented)."));	       
@@ -73,12 +66,12 @@ public class TestData_100119 : TestData_Base
             fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "f.", 2, "e.08.06", "Previous moderate or severe impairment of left ventricular systolic function (Left ventricular ejection fraction <45% on echocardiography or equivalent on multiple gated acquisition scan) even if full recovery has occurred."));	 
             fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "g.", 2, "e.08.07", "Severe valvular heart disease"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr", "h.", 2, "e.08.08", "Baseline Left ventricular ejection fraction below the lower limit of normal or <55% measured by echocardiography or institution’s lower limit of normal for multiple gated acquisition scan"));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr", "i.", 2, "e.08.09", "Atrial fibrillation with a ventricular rate >100 bpm on electrocardiogram  at rest"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr", "i.", 2, "e.08.09", "Atrial fibrillation with a ventricular rate >100 bpm on electrocardiogram at rest"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr", "j.", 2, "e.08.10", "QTcF >450ms or other factors that increase the risk of QT prolongation"));	 
             fs.iec.Add(new StudyIEC(sd_sid, 30, 2, "cr", "9.", 1, "e.09", "Laboratory values as listed below (SI units):"));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 31, 2, "cr", "a.", 2, "e.09.01", "Absolute Neutrophil Count  <1.5x1000,000,000/L (1500 per mm3)"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 31, 2, "cr", "a.", 2, "e.09.01", "Absolute Neutrophil Count <1.5x1000,000,000/L (1500 per mm3)"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 32, 2, "cr", "b.", 2, "e.09.02", "Platelets <100x1000,000,000/L (100,000 per mm3)"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 33, 2, "cr", "c.", 2, "e.09.03", "Hemoglobin  =9.0 g/dL"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 33, 2, "cr", "c.", 2, "e.09.03", "Hemoglobin =9.0 g/dL"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 34, 2, "cr", "d.", 2, "e.09.04", "Serum creatinine =1.5 X upper limit of normal (ULN)"));	  
             fs.iec.Add(new StudyIEC(sd_sid, 35, 2, "cr", "e.", 2, "e.09.05", "Serum bilirubin >1.5 x ULN (Note that this will not apply to patients with confirmed Gilbert’s syndrome (persistent or recurrent hyperbilirubinemia that is predominantly unconjugated in the absence of evidence of hemolysis or hepatic pathology), who may be allowed included in specific studies, at the discretion of the doctor / physician responsible for the treatment.)"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 36, 2, "cr", "f.", 2, "e.09.06", "Alanine aminotransferase or Aspartate aminotransferase > 2.5 x Upper limit of normal for patients with no liver metastasis."));	 
@@ -149,10 +142,10 @@ public class TestData_100119 : TestData_Base
                 "From the Clinical Research Information Service (South Korea)"));
             
             fs.people!.Add(new StudyPerson(sd_sid, 51, "Myung-Ah Lee", 
-                "The Catholic University of Korea, Seoul St Mary’s Hospital", 100598,
+                "Catholic University of Korea, Seoul St Mary’s Hospital", 100598,
                 "Catholic University of Korea", "https://ror.org/01fpnj063"));
             fs.people.Add(new StudyPerson(sd_sid, 56, "Hye jeong Kim", 
-                "The Catholic University of Korea, Seoul St Mary’s Hospital", 100598,
+                "Catholic University of Korea, Seoul St Mary’s Hospital", 100598,
                 "Catholic University of Korea", "https://ror.org/01fpnj063"));
             
             fs.organisations!.Add(new StudyOrganisation(sd_sid, 54,  102134,

@@ -35,7 +35,8 @@ public class TestData_100126 : TestData_Base
             
             fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ISRCTN"));
 
-            fs.people!.Add(new StudyPerson(sd_sid, 51, "Nick", "Oscroft","Nick Oscroft", null, "Papworth Hospital NHS Trust, Papworth Everard", null, null, null));
+            fs.people!.Add(new StudyPerson(sd_sid, 51, "Nick", "Oscroft","Nick Oscroft", null, 
+	            "Papworth Hospital NHS Trust, Papworth Everard", null, "Papworth Hospital NHS Trust", null));
 	        
             fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Papworth Hospital NHS Trust (UK)", null));
             fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null,
@@ -132,7 +133,7 @@ public class TestData_100126 : TestData_Base
 	            16, "en", 11, false, "From ISRCTN"));
             
             fs.people!.Add(new StudyPerson(sd_sid, 56, "Abdelrahman", 
-	            "Abouelhassan", "Abdelrahman Abouelhassan",null, "Hindenburgstrasse 15", null, null, null));
+	            "Abouelhassan", "Abdelrahman Abouelhassan",null, "Hindenburgstrasse 15", null, "Hindenburgstrasse 15", null));
 	        
             fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100328, "Ain Shams University", 
 	            "https://ror.org/00cb9w016"));
@@ -226,8 +227,7 @@ public class TestData_100126 : TestData_Base
             fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "European Community (BIOMED)", null));
             fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 103602, "German Cancer Aid", 
 	            "https://ror.org/01wxdd722"));
-            fs.organisations.Add(new StudyOrganisation(sd_sid, 51, null, 
-	            "UKCCCR Register Co-ordinator, MRC Clinical Trials Unit, 222 Euston Road", null));
+            fs.organisations.Add(new StudyOrganisation(sd_sid, 51, null, "MRC Clinical Trials Unit", null));
 
 	        fs.features!.Add(new StudyFeature(sd_sid, 22, 205));   // 
 	        
@@ -351,9 +351,9 @@ public class TestData_100126 : TestData_Base
 	            16, "en", 11, false, "From ISRCTN"));
             fs.titles.Add(new StudyTitle(sd_sid, "SCORE", 14, "en", 11, false, "From ISRCTN"));
             
-            fs.people!.Add(new StudyPerson(sd_sid, 51, "Daniel", "Reuland", "Daniel Reuland", "0000-0002-7839-6581", "101 E. Weaver St.", null, null, null));
-            fs.people.Add(new StudyPerson(sd_sid, 56, "Teri", "Malo", "Teri Malo", "0000-0002-5620-4841", "101 E. Weaver St.", null, null, null));
-            fs.people.Add(new StudyPerson(sd_sid, 56, "Alexis", "Moore", "Alexis Moore", null, "101 E. Weaver St.", null, null, null));
+            fs.people!.Add(new StudyPerson(sd_sid, 51, "Daniel", "Reuland", "Daniel Reuland", "0000-0002-7839-6581", "101 E Weaver St", null, "101 E Weaver St", null));
+            fs.people.Add(new StudyPerson(sd_sid, 56, "Teri", "Malo", "Teri Malo", "0000-0002-5620-4841", "101 E Weaver St", null, "101 E Weaver St", null));
+            fs.people.Add(new StudyPerson(sd_sid, 56, "Alexis", "Moore", "Alexis Moore", null, "101 E Weaver St", null, "101 E Weaver St", null));
 	        
             fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100482, "UNC Lineberger Comprehensive Cancer Center", null));
             fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 100162, "National Cancer Institute", "https://ror.org/040gcmg81"));
@@ -446,7 +446,7 @@ public class TestData_100126 : TestData_Base
             
             fs.people!.Add(new StudyPerson(sd_sid, 51, "Linda","Collins","Linda Collins", null, 
 	            "Oncology Clinical Trials Office (OCTO), Department of Oncology, Old Road Campus, Roosevelt Drive, Headington", 
-	            null, null, null));
+	            null, "Oncology Clinical Trials Office (OCTO)", null));
 	        
             fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100253, "University of Oxford", 
 	            "https://ror.org/052gg0110"));

@@ -541,14 +541,14 @@ public class TestData_100120 : TestData_Base
             
             fs.sites!.Add(new StudyLocation(sd_sid, null, "University of Alabama Hospital at Birmingham", null, 4049979, "Birmingham", 6252001, "United States", null));
             fs.sites.Add(new StudyLocation(sd_sid, 108796, "University of South Alabama", "https://ror.org/01s7b5y08", 4076598, "Mobile", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "UCLA - David Geffen School of Medicine", null, 5368361, "Los Angeles", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "UCLA, David Geffen School of Medicine", null, 5368361, "Los Angeles", 6252001, "United States", null));
             fs.sites.Add(new StudyLocation(sd_sid, null, "Lung Health and Sleep Enhancement Center, LLC", null, 5164466, "Newark", 6252001, "United States", null));
             fs.sites.Add(new StudyLocation(sd_sid, null, "Morton Plant Hospital (Bay Area Chest Physicians, PA)", null, 4151316, "Clearwater", 6252001, "United States", null));
             fs.sites.Add(new StudyLocation(sd_sid, null, "Mayo Clinic Jacksonville", null, 4160021, "Jacksonville", 6252001, "United States", null));
             fs.sites.Add(new StudyLocation(sd_sid, 109681, "University of Miami Miller School of Medicine", null, 4164138, "Miami", 6252001, "United States", null));
             fs.sites.Add(new StudyLocation(sd_sid, 105475, "Cleveland Clinic Florida", "https://ror.org/0155k7414", 4178003, "Weston", 6252001, "United States", null));
             fs.sites.Add(new StudyLocation(sd_sid, null, "Emory University Hospital", null, 4180439, "Atlanta", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Atlanta Institute for Medical Research, Inc", null, null, "Decatur", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Atlanta Institute for Medical Research, Inc", null, 4058553, "Decatur", 6252001, "United States", null));
             fs.sites.Add(new StudyLocation(sd_sid, null, "Kentukiana Pulmonary Associates", null, 5161347, "Louisville", 6252001, "United States", null));
 
             // Data Objects
@@ -735,8 +735,7 @@ public class TestData_100120 : TestData_Base
 	        
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2006, 8, 11, 21, "3445", 900,
 		        50, 17, null, null, 10);
-	        
-	        
+
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
             		        "ClinicalTrials.gov", null, "15 Oct 2004", null));
             fs.identifiers.Add(new StudyIdentifier(sd_sid, "160", 14, null, 
@@ -822,7 +821,7 @@ public class TestData_100120 : TestData_Base
 			sb.Append("Am J Cardiovasc Drugs. 2020 Feb;20(1):73-80. doi: 10.1007/s40256-019-00353-5.");
 			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31214914", null, 12, null));
 
-			sb = new StringBuilder("Kristensen SL, Mogensen UM, Jhund PS, Rorth R, Anand IS, Carson PE, Desai AS, Pitt B, Pfeffer MA, Solomon SD, Zile MR, Køber L, McMurray JJV. ");
+			sb = new StringBuilder("Kristensen SL, Mogensen UM, Jhund PS, Rorth R, Anand IS, Carson PE, Desai AS, Pitt B, Pfeffer MA, Solomon SD, Zile MR, Kober L, McMurray JJV. ");
 			sb.Append("N-Terminal Pro-B-Type Natriuretic Peptide Levels for Risk Prediction in Patients With Heart Failure and Preserved Ejection Fraction According to Atrial Fibrillation Status. ");
 			sb.Append("Circ Heart Fail. 2019 Mar;12(3):e005766. doi: 10.1161/CIRCHEARTFAILURE.118.005766.");
 			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30871349", null, 12, null));
@@ -952,7 +951,7 @@ public class TestData_100120 : TestData_Base
 			fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "*", 1, "e.04", "Primary hemodynamically significant uncorrected valvular heart disease, obstructive or regurgitant, or any valvular disease expected to lead to surgery during the trial"));	  
 			fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "*", 1, "e.05", "Atrial fibrillation with a resting heart rate greater than 90 bpm"));	       
 			fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "*", 1, "e.06", "MI in the past 90 days"));	 
-			fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "*", 1, "e.07", "Coronary artery bypass graft surgery in the past 90 days"));	       
+			fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "*", 1, "e.07", "Coronary artery bypass graft surgery in the past 90 days"));	       
 			fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "*", 1, "e.08", "Percutaneous coronary intervention in the past 30 days"));	    
 			fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "*", 1, "e.09", "Heart transplant recipient"));	    
 			fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr", "*", 1, "e.10", "Currently implanted left ventricular assist device"));	
@@ -1042,7 +1041,7 @@ public class TestData_100120 : TestData_Base
 	        sb.Append("get toothpaste currently sold on the market, and one group will get a mouthwash with an experimental ingredient to use "); 
 	        sb.Append("as well. Subjects will have an equal chance of being assigned to any one of the three groups.\n"); 
 	        sb.Append("For the next 4 weeks, subjects will use their assigned products according to the directions provided. At Visit 1 subjects "); 
-	        sb.Append("ill be supervised while they brush their teeth to ensure they understand the directions. "); 
+	        sb.Append("will be supervised while they brush their teeth to ensure they understand the directions. "); 
 	        sb.Append("They will also have supervised use of the product at Visit 2.\n"); 
 	        sb.Append("We will see if the mouthwash helps to reduce tooth sensitivity during the study."); 
 	        string brief_desc = sb.ToString();
@@ -1058,8 +1057,8 @@ public class TestData_100120 : TestData_Base
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
 	        fs.titles.Add(new StudyTitle(sd_sid, "Evaluation of an Experimental Mouth Rinse Device for Relieving Dentinal Hypersensitivity", 16, "en", 11, false, "From ClinicalTrials.gov"));
 	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Michael Lynch", "Johnson & Johnson Consumer and Personal Products Worldwide", 
-		        100290, "Johnson & Johnson", "https://ror.org/03qd7mz70"));
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Michael Lynch", "Johnson & Johnson", 100290, 
+		        "Johnson & Johnson", "https://ror.org/03qd7mz70"));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100290, "Johnson & Johnson", "https://ror.org/03qd7mz70"));
 
@@ -1087,7 +1086,7 @@ public class TestData_100120 : TestData_Base
             
             fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
             
-            fs.sites!.Add(new StudyLocation(sd_sid, null, "BioSci Research America, Inc", null, null, "Las Vegas", 6252001, "United States", null));
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "BioSci Research America, Inc", null, 5475433, "Las Vegas", 6252001, "United States", null));
             
             // Data Objects
 	        
@@ -1129,6 +1128,256 @@ public class TestData_100120 : TestData_Base
         }
         
         
+        if (sd_sid == "NCT02243202")
+        {
+	        FullStudy fs = CreateEmptyFullStudy();
+ 
+	        // Study 
+	        
+	        const string display_title = "Effects of Co-administration of Canagliflozin 300 mg and Phentermine 15 mg With Placebo in the Treatment of Non-Diabetic Overweight and Obese Participants";
+	        const string brief_desc = "The purpose of this study is to compare the effects of canagliflozin and phentermine to those of placebo to promote on a change in body weight over a 26 week period.";
+	       
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2014, 9, 11, 21, "335", 900,
+		        18, 17, 65, 17, 10);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "ClinicalTrials.gov", null, "16 Sep 2014", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "CR103086", 14, 100773, "Janssen", null, null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "28431754OBE2002", 90, 100773, "Janssen", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, 
+		        "A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group Study to Investigate the Safety and Efficacy of the Co-administration of Canagliflozin 300 mg and Phentermine 15 mg Compared With Placebo for the Treatment of Non-diabetic Overweight and Obese Subjects",
+		        16, "en", 11, false, "From ClinicalTrials.gov"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100773, "Janssen", null));
+	       
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // Phase 2
+	        fs.features!.Add(new StudyFeature(sd_sid, 21, 400)); 
+	        fs.features!.Add(new StudyFeature(sd_sid, 22, 205)); 
+	        fs.features!.Add(new StudyFeature(sd_sid, 23, 305)); 	        
+	        fs.features!.Add(new StudyFeature(sd_sid, 24, 510)); 
+	        
+	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "INVOKANA", null, null, "D000068896", "Canagliflozin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Canagliflozin", 14, "D000068896", "D000068896", "Canagliflozin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Phentermine", 14, "D000010645", "D010645", "Phentermine"));
+	       
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Obesity", null, null, "5B81", "Obesity"));
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Overweight", 14, "D000050177", "5B80", "Overweight or localised adiposity"));
+
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "*", 1, "n.01", "Must have BMI >=30 kg/m2 and <50 kg/m2 at screening or BMI >=27 kg/m2 and <50 kg/m2 at screening in the presence of a comorbidity of hypertension and/or dyslipidemia"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.02", "Must have stable weight, ie, change of < =5% in the 3 months before screening"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.03", "Must agree to utilize a highly effective method of birth control"));	    
+	        
+            fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "*", 1, "e.01", "An established diagnosis of diabetes mellitus"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "*", 1, "e.02", "Has a history of obesity with a known secondary cause (eg, Cushing’s disease/syndrome)"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "*", 1, "e.03", "Has a history of hereditary glucose-galactose malabsorption or primary renal glycosuria"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "*", 1, "e.04", "Myocardial infarction, unstable angina, revascularization procedure, or cerebrovascular accident within 12 weeks before screening"));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "*", 1, "e.05", "Has an Glycated hemoglobin (HBA1c) greater than or equal (>=) to 65 percent"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.06", "An average of 3 seated blood pressure (BP) readings of systolic BP >= 160 mm Hg and/or Diastolic BP >= 100 millimeters of mercury at screening"));	 
+           
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, null, null, null, "Phoenix", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Walnut Creek", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Jacksonville", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Meridian", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Evansville", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Lexington", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Louisville", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "New Orleans", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Milford", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Warwick", 6252001, "United States", null));
+          
+            // Data Objects
+	        
+            // 1) Trial registry entry
+
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2014, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "17 Sep 2014 (est.)", 2014, 9, 17, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "6 Oct 2016 (est.)", 2016, 10, 6, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+			
+            sd_oid = sd_sid + " :: 28 :: CTG results entry";
+            ob_title = display_title + " :: CTG results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
+	            null, 9, 2016, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "6 Oct 2016 (est.)", 2016, 10, 6, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "6 Oct 2016 (est.)", 2016, 10, 6, null, null, null, null));
+
+            fs.data_objects!.Add(sdo);
+
+            return fs;
+        }
+        
+        
+        if (sd_sid == "NCT02449174")
+        {
+	        FullStudy fs = CreateEmptyFullStudy();
+ 
+	        // Study 
+	        
+	        string display_title = "Fecal Microbiota Transplantation to Treat Recurrent C. Difficile Associated Diarrhea Via Retention Enema or Oral Route";
+	        StringBuilder sb = new StringBuilder("The objective of the study is to investigate the safety of a frozen or lyophilized inoculum administered, ");
+	        sb.Append("respectively, by retention enema or capsules in patients with recurrent C. difficile associated diarrhea (RCDAD).\n"); 
+	        sb.Append("This is a single center, randomized, parallel assignment, open label safety study conducted in subjects with RCDAD. Fifty "); 
+	        sb.Append("subjects will be enrolled in the study and randomized at 1:1 ratio to receive frozen filtered intestinal bacteria via retention "); 
+	        sb.Append("enema or lyophilized donor intestinal bacteria. All subjects will be followed for a total of 3 years after study completion.\n"); 
+	        sb.Append("Donors will be enrolled and screened at the laboratory in the Center for Infectious Diseases at University of Texas School of "); 
+	        sb.Append("Public Health (UT-SPH). The donors will come from a variety of places, including the UT-SPH. "); 
+	        sb.Append("At least 20 donors will be screened to recruit at least 15 qualified donors.\n"); 
+	        sb.Append("Recipients may self-refer but must have a physician who agrees to accept care of the patient following fecal microbiota transplantation (FMT). "); 
+	        sb.Append("Subjects consenting to treatment at Baylor St. Luke’s Medical Center (BSLMC) and the UT-SPH must be willing to self-pay for the FMT in the "); 
+	        sb.Append("amount of $1,500. There will be no insurance accepted. Subjects undergoing retention enema will be treated as outpatients at either at BSLMC, "); 
+	        sb.Append("Kelsey-Seybold Clinic, or at the Memorial Hermann in the Texas Medical Center. All subjects taking capsules with lyophilized intestinal bacteria "); 
+	        sb.Append("will be seen at UT-SPH. Once the procedure is completed, the recipient’s care will be returned to their physician. "); 
+	        sb.Append("At least 75 recipients will be screened to recruit 50 qualified recipients.\n"); 
+	        sb.Append("The primary endpoint is to evaluate the safety of FMT by rectal or oral routes with secondary endpoint related to efficacy prevention of RCDAD. "); 
+	        sb.Append("In order to monitor any health effects for safety, participants will be contacted pre- and 7, 14, 30 days, then monthly basis for the first 90 ");
+	        sb.Append("days after FMT and quarterly till 3 years after FMT. The following procedures will be completed: review recipient diary with the recipient to ");
+	        sb.Append("ensure that the following information is recorded correctly and a fresh stool sample will be collected from recipient, tested for C. difficile ");
+	        sb.Append("toxins and an aliquot (2mL) stored at -80C for microbiome analysis. Recipients will be contacted by phone for their diarrhea status on ");
+	        sb.Append("monthly basis till 90 days after FMT, then on quarterly basis till 3 years after FMT."); 
+	        string brief_desc = sb.ToString();	        
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2015, 3, 11, 21, "69", 900,
+		        18, 17, null, null, 10);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "ClinicalTrials.gov", null, "17 Dec 2014", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HSC-SPH-14-0020", 14, 100275, 
+		        "University of Texas Health Science Center, Houston", "https://ror.org/03gds6c39", null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "A Study of Fecal Microbiota Transplantation (FMT) for the Treatment of Recurrent C. Difficile Associated Diarrhea (RCDAD) Via Retention Enema or Oral Route", 
+		        16, "en", 11, false, "From ClinicalTrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Zhi-Dong Jiang", "University of Texas Health Science Center, Houston", 
+		        100275, "University of Texas Health Science Center, Houston", "https://ror.org/03gds6c39"));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Herbert l DuPont", "University of Texas School of Public Health", 
+		        109702, "University of Texas School of Public Health", null));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100275, "University of Texas Health Science Center, Houston", "https://ror.org/03gds6c39"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Roderick MacDonald Research Fund at Baylor St Luke’s", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 103318, "Kelsey Research Foundation", "https://ror.org/053ndkf46"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null , "Texas Gulf Coast Digestive Diseases Center", null));
+
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 110));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 20, 120));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 505));   // 
+
+            fs.topics!.Add(new StudyTopic(sd_sid, 11, "Fecal Microbiota transplantation", null, null, "D000069467", "Fecal Microbiota Transplantation"));
+            
+            fs.conditions!.Add(new StudyCondition(sd_sid, "C. Difficile", null, null, null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, "Diarrhea", 14, "D000003967", null, null));
+            
+            fs.relationships!.Add(new StudyRelationship(sd_sid, 23, "NCT03786900"));
+
+            sb = new StringBuilder("Jiang ZD, Jenq RR, Ajami NJ, Petrosino JF, Alexander AA, Ke S, Iqbal T, DuPont AW, Muldrew K, Shi Y, Peterson C, Do KA, DuPont HL. ");
+			sb.Append("Safety and preliminary efficacy of orally administered lyophilized fecal microbiota product compared with frozen product given by enema for recurrent Clostridium difficile infection: A randomized clinical trial. ");
+			sb.Append("PLoS One. 2018 Nov 2;13(11):e0205064. doi: 10.1371/journal.pone.0205064. eCollection 2018.");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "30388112", null, 12, null));
+
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "*", 1, "n.01", "Male and female subjects 18 years of age or older"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.02", "Sexually active female subjects of child-bearing potential must agree to use an effective method of birth control during the treatment and follow-up period"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.03", "Required to sign an informed consent form"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "*", 1, "n.04", "Subject\"s attending physician agrees to provide care following FMT"));
+            fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "*", 1, "n.05", "Able to follow study procedures and follow-ups."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "*", 1, "n.06", "Diagnosed by medical history of ≥ 3 RCDAD bouts in outpatients or ≥ 2 bouts of RCDAD in an inpatient with ≥ 2 positive fecal tests for C. difficile toxin"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "*", 1, "n.07", "Received at least one course of adequate antibiotic therapy for CDAD (≥ 10 days of vancomycin, metronidazole or fidaxomicin) after the subjects last bout of CDAD"));
+            
+            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "*", 1, "e.01", "Subjects with known neutropenia with absolute neutrophil count <0.5 x 109/L"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.02", "Evidence of toxic megacolon, fulminant colitis, gastrointestinal perforation, ileus, abdominal distension, lack of bowel sounds, fever, or hypotension"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "*", 1, "e.03", "Known peripheral white blood cell count > 15.0 x 109/L or temperature > 38.0 °C"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "*", 1, "e.04", "Diarrhea due to definable non-CDAD pathogen"));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "*", 1, "e.05", "Post total colectomy or presence of a colostomy"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "*", 1, "e.06", "Unable to tolerate FMT via enema for any reason"));	 
+            fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "*", 1, "e.07", "Requiring systemic non-C. difficile antibiotic therapy at the time of FMT"));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "*", 1, "e.08", "Actively taking Saccharomyces boulardii or other probiotic at the time of FMT"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "*", 1, "e.09", "Need for continuing use of oral vancomycin, oral or IV metronidazole, fidaxomicin, rifaximin or nitazoxanide at the time of FMT"));	 
+            fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "*", 1, "e.10", "Severe underlying disease such that the patient is not expected to survive for one or more years or unstable medical condition requiring daily change in treatments"));	
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "University of Texas Health Science Center at Housotn", null, 4699066, "Houston", 6252001, "United States", null));
+            
+            // Data Objects
+	        
+            // 1) Trial registry entry
+
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "20 May 2015 (est.)", 2015, 5, 20, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "25 Mar 2019", 2019, 3, 25, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+			
+            sd_oid = sd_sid + " :: 28 :: CTG results entry";
+            ob_title = display_title + " :: CTG results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
+	            null, 9, 2019, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "25 Mar 2019", 2019, 3, 25, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "25 Mar 2019", 2019, 3, 25, null, null, null, null));
+
+            fs.data_objects!.Add(sdo);
+            
+            // 3) Study Protocol and Statistical Analysis Plan
+	        
+            sd_oid = sd_sid + " :: 74 :: Study Protocol and Statistical Analysis Plan";
+            ob_title = display_title + " :: Study Protocol and Statistical Analysis Plan";
+            sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol and Statistical Analysis Plan", null, ob_title,
+	            null, 9, 2019, 23, 74, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://storage.googleapis.com/ctgov2-large-docs/74/NCT02449174/Prot_SAP_000.pdf", 
+	            true, 11, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "13 Jul 2017", 2017, 7, 13, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 12, false, "21 Mar 2019", 2019, 3, 21, null, null, null, null));
+            fs.data_objects!.Add(sdo);
+            
+            return fs;
+        }
+        
+        
         if (sd_sid == "NCT02562716")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
@@ -1161,8 +1410,8 @@ public class TestData_100120 : TestData_Base
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
 	        fs.titles.Add(new StudyTitle(sd_sid, "A Randomized Phase II Study of Perioperative mFOLFIRINOX Versus Gemcitabine/Nab-Paclitaxel as Therapy for Resectable Pancreatic Adenocarcinoma", 16, "en", 11, false, "From ClinicalTrials.gov"));
 	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Davendra Sohal", "Southwest Oncology Group", 
-		        100358, "SWOG Cancer Research Network", "https://ror.org/05n6zrm60"));
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Davendra Sohal", "SWOG Cancer Research Network", 
+		        100358, "Southwest Oncology Group", "https://ror.org/05n6zrm60"));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100358, "Southwest Oncology Group",
 		        "https://ror.org/05n6zrm60"));
@@ -1192,7 +1441,7 @@ public class TestData_100120 : TestData_Base
             
 			sb = new StringBuilder("Sohal DPS, Duong M, Ahmad SA, Gandhi NS, Beg MS, Wang-Gillam A, Wade JL 3rd, Chiorean EG, Guthrie KA, Lowy AM, Philip PA, Hochster HS. ");
 			sb.Append("Efficacy of Perioperative Chemotherapy for Resectable Pancreatic Adenocarcinoma: A Phase 2 Randomized Clinical Trial. ");
-			sb.Append("JAMA Oncol. 2021 Mar 1;7(3):421-427. doi: 10.1001/jamaoncol.2020.7328. Erratum in: JAMA Oncol. 2021 Sep 23;:null.");
+			sb.Append("JAMA Oncol. 2021 Mar 1;7(3):421-427. doi: 10.1001/jamaoncol.2020.7328. Erratum In: JAMA Oncol. 2021 Sep 23;:null.");
 			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "33475684", null, 12, null));
 
 			sb = new StringBuilder("Ahmad SA, Duong M, Sohal DPS, Gandhi NS, Beg MS, Wang-Gillam A, Wade JL 3rd, Chiorean EG, Guthrie KA, Lowy AM, Philip PA, Hochster HS. ");
@@ -1269,7 +1518,7 @@ public class TestData_100120 : TestData_Base
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "23 Jul 2021", 2021, 7, 2, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "23 Jul 2021", 2021, 7, 23, null, null, null, null));
             sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "19 Oct 2022", 2022, 10, 19, null, null, null, null));
 
             fs.data_objects!.Add(sdo);
@@ -1294,7 +1543,7 @@ public class TestData_100120 : TestData_Base
                    
         }
         
-
+        
         if (sd_sid == "NCT01973660")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
@@ -1339,15 +1588,15 @@ public class TestData_100120 : TestData_Base
                        
             fs.topics!.Add(new StudyTopic(sd_sid, 11, "Human Epidermal Growth Factor Receptor 2", null, null, null, null));
             fs.topics.Add(new StudyTopic(sd_sid, 11, "HER2", null, null, null, null));
-            fs.topics.Add(new StudyTopic(sd_sid, 11, "HER2 Positive", null, null, null, null));
+            fs.topics.Add(new StudyTopic(sd_sid, 11, "HER2 positive", null, null, null, null));
             fs.topics.Add(new StudyTopic(sd_sid, 11, "PAM50", null, null, null, null));
-            fs.topics.Add(new StudyTopic(sd_sid, 11, "Dual HER2 Blockade", null, null, null, null));
+            fs.topics.Add(new StudyTopic(sd_sid, 11, "Dual HER2 blockade", null, null, null, null));
             fs.topics.Add(new StudyTopic(sd_sid, 11, "Neoadjuvant", null, null, null, null));
             
             fs.topics.Add(new StudyTopic(sd_sid, 12, "Tamoxifen", 14, "D000013629", "D013629", "Tamoxifen"));
             fs.topics.Add(new StudyTopic(sd_sid, 12, "Trastuzumab", 14, "D000068878", "D000068878", "Trastuzumab"));
             fs.topics.Add(new StudyTopic(sd_sid, 12, "Letrozole", 14, "D000077289", "D000077289", "Letrozole"));
-            fs.topics.Add(new StudyTopic(sd_sid, 12, "Lapatinib", 14, "D000077341", "D00077341", "Lapatinib"));
+            fs.topics.Add(new StudyTopic(sd_sid, 12, "Lapatinib", 14, "D000077341", "D000077341", "Lapatinib"));
             fs.topics.Add(new StudyTopic(sd_sid, 12, "Paclitaxel", 14, "D000017239", "D017239", "Paclitaxel"));
             
             fs.conditions!.Add(new StudyCondition(sd_sid, "Breast Neoplasms", 14, "D000001943", "B3-2C6", "Malignant neoplasms of breast"));
@@ -1400,12 +1649,12 @@ public class TestData_100120 : TestData_Base
 	         
 	        fs.sites!.Add(new StudyLocation(sd_sid, null, "Hospital de Torrevieja", null, 2510253, "Torrevieja", 2510769, "Spain", null));
 	        fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Clínico Universitario de Santiago de Compostela", null, 3109642, "Santiago de Compostela", 2510769, "Spain", null));
-	        fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Universitario Son Espases", null, 2512989, "Palma de Mallorca", 2510769, "Spain", null));
+	        fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Universitario Son Espases", null, 2512989, "Palma", 2510769, "Spain", null));
 	        fs.sites.Add(new StudyLocation(sd_sid, 102621, "Hospital Universitario de Fuenlabrada", "https://ror.org/04scbtr44", 3121960, "Fuenlabrada", 2510769, "Spain", null));
-	        fs.sites.Add(new StudyLocation(sd_sid, null, "Vall d’Hebron University Hospital", null, 3128760, "Barcelona", 2510769, "Spain", null));
+	        fs.sites.Add(new StudyLocation(sd_sid, 100715, "Vall d’Hebron Hospital Universitari", "https://ror.org/03ba28x55", 3128760, "Barcelona", 2510769, "Spain", null));
 	        fs.sites.Add(new StudyLocation(sd_sid, 100455, "Hospital Clínic de Barcelona", "https://ror.org/02a2kzf50", 3128760, "Barcelona", 2510769, "Spain", null));
 	        fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Universitario Arnau de Vilanova de Lleida", null, 3118514, "Lleida", 2510769, "Spain", null));
-	        fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Universitario 12 de Octubre", null, 3117735, "Madrid", 2510769, "Spain", null));
+	        fs.sites.Add(new StudyLocation(sd_sid, 106352, "Hospital Universitario 12 De Octubre", "https://ror.org/00qyh5r35", 3117735, "Madrid", 2510769, "Spain", null));
 	        fs.sites.Add(new StudyLocation(sd_sid, 106296, "Hospital Clínico San Carlos", "https://ror.org/04d0ybj29", 3117735, "Madrid", 2510769, "Spain", null));
 	        fs.sites.Add(new StudyLocation(sd_sid, 106297, "Hospital Clínico Universitario de Valencia", "https://ror.org/00hpnj894", 2509954, "Valencia", 2510769, "Spain", null));
 	        fs.sites.Add(new StudyLocation(sd_sid, null, "Hospital Universitario Arnau de Vilanova de Valencia", null, 2509954, "Valencia", 2510769, "Spain", null));
@@ -1433,495 +1682,108 @@ public class TestData_100120 : TestData_Base
         }
         
         
-        if (sd_sid == "NCT04419571")
+        if (sd_sid == "NCT02441309")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
  
 	        // Study 
 	        
-	        string display_title = "Outcomes in Emergency Laparotomies During COVID-19 Pandemic";
-	        StringBuilder sb = new StringBuilder("NLR has previously been observed to correlate with complications in upper GI (1) and colorectal (2) surgery. ");
-	        sb.Append("The investigators sought to assess if a similar correlation can be identified in emergency general surgical patients and if the presence of suspected or confirmed COVID-19 may impact on this.\n\n"); 
-	        sb.Append("Given the heterogeneity of emergency general surgery the investigators therefore plan to perform a retrospective review of patients having "); 
-	        sb.Append("emergency laparotomies only at a single NHS site during COVID-19 pandemic. Assessment of outcomes and Neutrophil:lymphocyte ratio as a predictor of "); 
-	        sb.Append("outcomes will be completed. Outcomes will be completed in line with the recent COVIDSurg study criteria (3). The primary outcome is 30-day mortality. "); 
-	        sb.Append("Secondary outcomes are 7-day mortality, re-operation, length of stay, post-operative respiratory failure, post-operative ARDS (Acute Respiratory "); 
-	        sb.Append("Distress Syndrome), post-operative sepsis and ITU (Intensive Therapy Unit)/HDU (High Dependency Unit) admission."); 
+	        string display_title = "A Eurosarc Study of Mifamurtide in Advanced Osteosarcoma (MEMOS)";
+	        StringBuilder sb = new StringBuilder("This is a Bayesian designed multi-arm, multi-centre, open label phase II study. The target sample ");
+	        sb.Append("size of 40 patients will be recruited from up to 8 EU countries, but this may be revised in light of the interim analysis. "); 
+	        sb.Append("Patients with relapsed or metastatic osteosarcoma will be divided into three treatment groups. They will all either have "); 
+	        sb.Append("surgery or a biopsy before and after six weeks exposure to either Mifamurtide alone, Ifosfamide alone, or Mifamurtide "); 
+	        sb.Append("combined with Ifosfamide. They will then receive further treatment to a maximum of 42 or 36 weeks in "); 
+	        sb.Append("total (depending on Arm), with all patients being able to receive 36 weeks of Mifamurtide treatment."); 
 	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("IPD Sharing (as of July 2020): Yes\nDescription: All collected IPD regardless of inclusion in final publication\n");
-	        sb.Append("Time frame: Data will be available from completion of study for 10 years\n"); 
-	        sb.Append("Access Criteria: On request\n"); 
-	        sb.Append("Information available: Study Protocol, Statistical Analysis Plan (SAP), Clinical Study Report (CSR)"); 
-	        string dss = sb.ToString();
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2020, 3, 12, 21, "94", 900,
-		        18, 17, null, null, 7);
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2014, 10, 11, 22, "8", 900,
+		        16, 17, 65, 17, 10);
 	        
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
-		        "ClinicalTrials.gov", null, "4 Jun 2020", null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "133196", 14, null, 
-		        "Barking, Havering and Redbridge University Hospitals NHS Trust", null, null, null));
+		        "ClinicalTrials.gov", null, "16 Mar 2015", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "OCTO_039", 14, 100253, 
+		        "University of Oxford", "https://ror.org/052gg0110", null, null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "Emergency Laparotomies and Outcomes During the COVID-19 Pandemic - a Retrospective Cohort Study", 16, "en", 11, false, "From ClinicalTrials.gov"));
-	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Nader Habib Bedwani", "Barking, Havering and Redbridge University Hospitals NHS Trust", 
-		        null, "Barking, Havering and Redbridge University Hospitals NHS Trust", null));
-	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Barking, Havering and Redbridge University Hospitals NHS Trust", null));
-	        
-	        fs.features!.Add(new StudyFeature(sd_sid, 30, 600));  // 
-	        fs.features.Add(new StudyFeature(sd_sid, 31, 700));   //  
-	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "COVID-19", 14, "D000086382", "RA01", "COVID-19"));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Emergency General Surgery", null, null, null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Emergencies", 14, "D000004630", null, null));
-
-	        fs.ipd_info!.Add(new AvailableIPD(sd_sid, "285260", "Individual Participant Data Set", 
-		                                      "https://www.myresearchproject.org.uk/", 
-		        "Data collection template available on IRAS (Integrated Research Application System) registration"));
-	        fs.ipd_info.Add(new AvailableIPD(sd_sid, "285260", "Statistical Analysis Plan", 
-		                                      "https://www.myresearchproject.org.uk/", 
-		        "Statistical analysis plan as part of protocol available on IRAS (Integrated Research Application System) registration"));
-	        fs.ipd_info.Add(new AvailableIPD(sd_sid, "285260", "Study Protocol", 
-		                                      "https://www.myresearchproject.org.uk/", 
-		        "Protocol available on IRAS (Integrated Research Application System) registration")); 
-	         
-	        fs.studylinks!.Add(new StudyLink(sd_sid, "CovidSurg Cohort Study. Globalsurg", 
-		                        "https://globalsurg.org/covidsurgcohortstudy"));
-	        
-	        fs.countries!.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
-	        
-	        fs.sites!.Add(new StudyLocation(sd_sid, null, "Queen’s Hospital", null, null, "Romford", 2635167, "United Kingdom", null));
-            
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", "Patients undergoing emergency laparotomy (change made due to heterogeneity of emergency general surgery)"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1002, "none", "All", 0, "e.0A", "Inherited or acquired immunodeficiency (which may directly skew NLR)"));	       
-	        
-	        // Data Objects
-	        
-	        // 1) Trial registry entry
-
-	        string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
-	        string ob_title = display_title + " :: CTG registry entry";
-	        StudyDataObject sdo = CreateEmptyStudyDataObject();
-	        
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-		        null, 9, 2020, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-		        "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
-	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "5 Jun 2020", 2020, 6, 5, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "23 Jul 2020", 2020, 7, 23, null, null, null, null));
-	       
-	        fs.data_objects!.Add(sdo);
-	        
-	        // 2) Study Protocol and Statistical Analysis Plan
-	        
-	        sd_oid = sd_sid + " :: 74 :: Study Protocol and Statistical Analysis Plan";
-	        ob_title = display_title + " :: Study Protocol and Statistical Analysis Plan";
-	        sdo = CreateEmptyStudyDataObject();
-	        
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol and Statistical Analysis Plan", null, ob_title,
-		        null, 9, 2020, 23, 74, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
-	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-		        "https://storage.googleapis.com/ctgov2-large-docs/71/NCT04419571/Prot_SAP_000.pdf", 
-		        true, 11, null, null, null));
-	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "4 Jun 2020", 2020, 6, 4, null, null, null, null));
-	        
-	        fs.data_objects!.Add(sdo);
-	        
-	        return fs;	        
-        }
-        
-        
-        if (sd_sid == "NCT04406714")
-        {
-	        FullStudy fs = CreateEmptyFullStudy();
- 
-	        // Study 
-	        
-	        string display_title = "Scaling CRC Screening Through Outreach, Referral, and Engagement (SCORE)";
-	        StringBuilder sb = new StringBuilder("This study will test the effectiveness of mailing fecal immunochemical tests (FITs) in increasing colorectal cancer (CRC) ");
-	        sb.Append("screening rates in U.S. adults ages 45-75. We are implementing this study in two age groups, 45-49 years and 50-75 years."); 
-	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("IPD Sharing (as of June 2023): Yes\n: Description: As outlined in the Notice of Award, each study site must make its Limited Data Set ");
-	        sb.Append("(LDS) accessible to other sites in the ACCSIS consortium. Information Management Services (IMS) will serve as the "); 
-	        sb.Append("repository and have responsibility for creating a Limited Consolidated Data Set (LCDS) for analytic use of researchers "); 
-	        sb.Append("both within and external to the ACCSIS consortium. Dataset Items in the LDS are defined by the Common Data Elements. ");
-	        sb.Append("There also will be a \"public use data set\" that consists of the Common Data Elements, available to external researchers. "); 
-	        sb.Append("IMS will use a systematic process to remove identifiers. In addition, all data that underlie results in publications "); 
-	        sb.Append("will be available per Cancer Moonshot Notice of Award.\n"); 
-	        sb.Append("Time frame: The IPD sharing time frame has not been defined at this time.\n"); 
-	        sb.Append("Access Criteria: There are 2 classes of dataset requests: public use and special. Requests are submitted via the IMS website. "); 
-	        sb.Append("Requestors electronically sign and submit necessary forms, including an agreement to acknowledge ACCSIS in publications and presentations. "); 
-	        sb.Append("A public use dataset containing common data elements is made available to external researchers by application. IMS responds to public use "); 
-	        sb.Append("dataset applications by sending the requestor one-time access to a data download link. External researchers may also request a more "); 
-	        sb.Append("customized data set. Requestors must submit a brief concept form or ancillary studies form, for preliminary review by the ACCSIS "); 
-	        sb.Append("Steering Committee (SC), before invitation to submit a full proposal. Full proposals receive administrative review by NCI and RTI before "); 
-	        sb.Append("being sent to the SC for review and approval. Requestors report every 6 months and published articles or conference presentations "); 
-	        sb.Append("to RTI. Requestors are encouraged to make articles available through PubMed Central.\n");
-	        sb.Append("Information available: Study Protocol"); 
-	        string dss = sb.ToString();
-	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2020, 7, 11, 15, "4400", 900, 
-		        45, 17, 75, 17, 10);
-	        
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
-		        "ClinicalTrials.gov", null, "22 May 2020", null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "LCCC2056", 14, 100482, 
-		        "UNC Lineberger Comprehensive Cancer Center", null, null, null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "4UH3CA233251-02", 13, 100134, 
-		        "National Institutes of Health", "https://ror.org/01cwqze88" , null,
-		        "https://projectreporter.nih.gov/reporterapi.cfm?PROJECTNUM=4UH3CA233251-02&Fy=all"));
-	        
-	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, 
-		        "Scaling Colorectal Cancer Screening Through Outreach, Referral, and Engagement (SCORE): A State-Level Program to Reduce Colorectal Cancer Burden in Vulnerable Populations", 
+	        fs.titles.Add(new StudyTitle(sd_sid, "A Mechanistic Study Of Mifamurtide (MTP-PE) In Patients With Metastatic And/Or Recurrent Osteosarcoma",
 		        16, "en", 11, false, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "SCORE", 14, "en", 11, false, "From ClinicalTrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "MEMOS", 14, "en", 11, false, "From ClinicalTrials.gov"));
 	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Daniel S Reuland", "University of North Carolina, Chapel Hill", 
-		        100714, "University of North Carolina System", "https://ror.org/0566a8c54"));
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Bass Hassan", "University of Oxford", 
+		        100253, "University of Oxford", "https://ror.org/052gg0110"));
 	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100482, "UNC Lineberger Comprehensive Cancer Center", null));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100162, "National Cancer Institute", "https://ror.org/040gcmg81"));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 101767, "East Carolina University", "https://ror.org/01vx35703"));
-
-		    fs.features!.Add(new StudyFeature(sd_sid, 20, 100));  // 
-		    fs.features.Add(new StudyFeature(sd_sid, 21, 425));   // 
-		    fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
-		    fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
-		    fs.features.Add(new StudyFeature(sd_sid, 24, 505));   // 
-
-	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Cancer Screening", null, null, "D055088", "Early Detection of Cancer"));
-		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Colonoscopy", null, null, "D003113", "Colonoscopy"));
-		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Community Health Centers", null, null, "D003151", "Community Health Centers"));
-		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Implementation Science", null, null, "D000077626", "Implementation Science"));
-		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Patient Navigation", null, null, "D062526", "Patient Navigation"));
-		   
-		    fs.conditions!.Add(new StudyCondition(sd_sid, "Colorectal Neoplasms", 14, "D000015179", "B5-2B9", "Malignant neoplasms of large intestine"));
-		    fs.conditions!.Add(new StudyCondition(sd_sid, "Colorectal Cancer", null, null, "B5-2B9", "Malignant neoplasms of large intestine"));
-		    
-            fs.studylinks!.Add(new StudyLink(sd_sid, "UNC Lineberger Comprehensive Cancer Center Clinical Trials", "https://unclineberger.org/patientcare/clinical-trials"));
-
-            sb = new StringBuilder("Malo TL, Correa SY, Moore AA, Ferrari RM, Leeman J, Brenner AT, Wheeler SB, Tan X, Reuland DS; ");
-            sb.Append("Scaling Colorectal Cancer Screening Through Outreach, Referral, and Engagement (SCORE) Study Protocol Consortium. Centralized colorectal cancer screening outreach and patient navigation for vulnerable populations in North Carolina: study protocol for the SCORE randomized controlled trial. ");
-            sb.Append("Implement Sci Commun. 2021 Oct 7;2(1):113. doi: 10.1186/s43058-021-00194-x.");
-            fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "34620250", null, null, null));
-            
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "*", 1, "n.01", "Age 45-75 years"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.02", "At average risk for CRC (\"average risk\" is defined as those patients who do not have any of the following: documented history of CRC, colorectal neoplasms, colorectal polyps, colonic adenomas, family history of CRC among first degree relative [father, mother, sister, brother], or diagnosis of inflammatory bowel disease)"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.03", "No record of fecal occult blood test (FOBT)/FIT within the past 12 months or colonoscopy within 10 years, sigmoidoscopy within 5 years, barium enema within 5 years, or computed tomography (CT) colonography within 10 years of the EHR query date"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "*", 1, "n.04", "No record of any CRC diagnosis or total colectomy"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "*", 1, "n.05", "No record of comorbidities or screening contraindications, including dementia, hospice care, assisted living, end-stage renal disease, and other cancers (glioblastoma, pancreatic cancer, lung cancer, esophageal cancer, liver and bile duct cancer, mesothelioma)"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "*", 1, "n.06", "Has a complete North Carolina mailing address in the EHR"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "*", 1, "n.07", "Active patient of the clinic (seen within the past 18 months) at the time of randomization"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 8, 1, "cr", "*", 1, "n.08", "No record of a positive (abnormal) FIT result in the first study round (Trial Ages 50-75 only)"));
-	        
-	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.01", "Age younger than 45 years or older than 75 years"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "*", 1, "e.02", "Not at average risk for CRC (\"average risk\" is defined as those patients who do not have any of the following: documented history of CRC, colorectal neoplasms, colorectal polyps, colonic adenomas, family history of CRC among first degree relative [father, mother, sister, brother], or diagnosis of inflammatory bowel disease)"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "*", 1, "e.03", "Record of FOBT/FIT within the past 12 months or colonoscopy within 10 years, sigmoidoscopy within 5 years, barium enema within 5 years, or CT colonography within 10 years of the EHR query date"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "*", 1, "e.04", "Record of any CRC diagnosis or total colectomy"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "*", 1, "e.05", "Record of comorbidities or screening contraindications, including dementia, hospice care, assisted living, end-stage renal disease, and other cancers (glioblastoma, pancreatic cancer, lung cancer, esophageal cancer, liver and bile duct cancer, mesothelioma)"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "*", 1, "e.06", "Does not have a complete North Carolina mailing address in the EHR"));	 
-	        fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "*", 1, "e.07", "Not an active patient of the clinic (not seen within the past 18 months) at the time of randomization"));	 
-	        fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "*", 1, "e.08", "Record of a positive (abnormal) FIT result reported during the first study round (Trial Ages 50-75)"));	 
-	        
-	        fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
-             
-	        fs.sites!.Add(new StudyLocation(sd_sid, null, "Roanoke Chowan Community Health Center", null, null, "Ahoskie", 6252001, "United States", null));
-	        fs.sites.Add(new StudyLocation(sd_sid, null, "Blue Ridge Health", null, null, "Hendersonville", 6252001, "United States", null));
-	        
-	        // Data Objects
-	        
-	        // 1) Trial registry entry
-
-	        string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
-	        string ob_title = display_title + " :: CTG registry entry";
-	        StudyDataObject sdo = CreateEmptyStudyDataObject();
-	        
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-		        null, 9, 2020, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-		        "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
-	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "28 May 2020", 2020, 5, 28, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "7 Dec 2022", 2022, 12, 7, null, null, null, null));
-	       
-	        fs.data_objects!.Add(sdo);
-
-	        return fs;
-        }
-        
-        
-        if (sd_sid == "NCT03631199")
-        {
-	        FullStudy fs = CreateEmptyFullStudy();
- 
-	        // Study 
-	        
-	        string display_title = "Study of Efficacy and Safety of Pembrolizumab Plus Platinum-based Doublet Chemotherapy With or Without Canakinumab in Previously Untreated Locally Advanced or Metastatic Non-squamous and Squamous NSCLC Subjects";
-	        StringBuilder sb = new StringBuilder("This is a phase III study of pembrolizumab plus platinum-based doublet chemotherapy with or without canakinumab in previously ");
-	        sb.Append("untreated locally advanced or metastatic non-squamous and squamous NSCLC subjects.\n\n"); 
-	        sb.Append("The study will assess primarily the safety and tolerability (safety run-in part) of pembrolizumab plus platinum-based doublet chemotherapy with canakinumab "); 
-	        sb.Append("and then the efficacy (double-blind, randomized, placebo controlled part) of pembrolizumab plus platinum-based doublet chemotherapy with or without canakinumab."); 
-	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("IPD Sharing (as of June 2023): Yes\n");
-	        sb.Append("Description: Novartis is committed to sharing with qualified external researchers, access to patient-level ");
-	        sb.Append("data and supporting clinical documents from eligible studies. These requests are reviewed and approved by an independent expert panel "); 
-	        sb.Append("on the basis of scientific merit. All data provided is anonymized to respect the privacy of patients who have "); 
-	        sb.Append("participated in the trial in line with applicable laws and regulations.\n\n"); 
-	        sb.Append("This trial data is currently available according to the process described on www.clinicalstudydatarequest.com."); 
-	        string dss = sb.ToString();
-	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2018, 12, 11, 15, "675", 900,
-		        18, 17, null, null, 10);
-	        
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
-		        "ClinicalTrials.gov", null, "6 Aug 2018", null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "CACZ885U2301", 14, 100189, 
-		        "Novartis", "https://ror.org/02f9zrr09", null, null));
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "2018-001547-32", 11, 100123, 
-		        "EU Clinical Trials Register", null, null, null));
-	        
-	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
-	        string title =
-		        "A Randomized, Double-blind, Placebo-controlled, Phase III Study Evaluating the Efficacy and Safety of Pembrolizumab Plus Platinum-based Doublet Chemotherapy ";
-	        title += "With or Without Canakinumab as First Line Therapy for Locally Advanced or Metastatic Non-squamous and Squamous Non-small Cell Lung Cancer Subjects (CANOPY-1)";
-	        fs.titles.Add(new StudyTitle(sd_sid, title, 16, "en", 11, false, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "CANOPY-1", 14, "en", 11, false, "From ClinicalTrials.gov"));
-	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100189, "Novartis", "https://ror.org/02f9zrr09"));
-	        
-	        fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
-	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 24, 520));   // 
-
-            fs.topics!.Add(new StudyTopic(sd_sid, 11, "ACZ885", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "canakinumab", null, null, "C541220", "canakinumab"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "cisplatin", null, null, "D002945", "Cisplatin"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "nab-paclitaxel", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "NSCLC", null, null, "D002289", "Carcinoma, Non-Small-Cell Lung"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "non-small cell lung cancer", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "squamous", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "non-squamous", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "hsCRP", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "IL-1β", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "PD-L1", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "CANOPY", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "CANOPY-1", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "platinum-based doublet chemotherapy", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "first line therapy", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "locally advanced", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "metastatic", null, null, "D009362", "Neoplasm Metastasis"));
-	        
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Paclitaxel", 14, "D000017239", "D017239", "Paclitaxel"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Albumin-Bound Paclitaxel", 14, "D000068196", "D000068196", "Albumin-Bound Paclitaxel"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Carboplatin", 14, "D000016190", "D016190", "Carboplatin"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Pembrolizumab", 14, "C000582435", "C582435", "pembrolizumab"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Pemetrexed", 14, "D000068437", "D000068437", "Pemetrexed"));	 	        
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Antibodies, Monoclonal", 14, "D000000911", "D000911", "Antibodies, Monoclonal"));
-       
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Lung Neoplasms", 14, "D000008175", "2C25", "Malignant neoplasms of bronchus or lung"));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma, Non-Small-Cell Lung", 14, "D000002289", "2C25", "Malignant neoplasms of bronchus or lung"));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Non-small Cell Lung Cancer", null, null, "2C25", "Malignant neoplasms of bronchus or lung"));
-	        
-            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "*", 1, "n.01", "Histologically confirmed locally advanced stage IIIB or stage IV NSCLC for treatment in the first-line setting"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.02", "Known PD-L1 status determined by a Novartis designated central laboratory. A newly obtained tissue biopsy or an archival biopsy (block or slides) is required for PD-L1 determination (PD-L1 IHC 22C3 pharmDx assay), prior to study randomization. Note: For the safety run-in part, known PD-L1 status is not required."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.03", "Eastern Cooperative oncology group (ECOG) performance status of 0 or 1."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "*", 1, "n.04", "At least 1 measurable lesion by RECIST 1.1"));
-	        
-            fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "*", 1, "e.01", "Previous immunotherapy (e.g. anti-PD-1, anti-PD-L1, anti-PD-L2, anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or immune checkpoint pathways)."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "*", 1, "e.02", "Prior treatment with canakinumab or drugs of a similar mechanism of action (IL-1β inhibitor)."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "*", 1, "e.03", "Subjects with epidermal growth factor receptor (EGFR) sensitizing mutations (identified in exons 19, 20, or 21), and/or ALK rearrangement by locally approved laboratory testing."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "*", 1, "e.04", "Previously untreated or symptomatic central nervous system (CNS) metastases or lepto-meningeal disease."));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.05", "Subject with suspected or proven immune-compromised state or infections."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "*", 1, "e.06", "Subject has prior to starting study drug: received live vaccination ≤3 months, had major surgery ≤4 weeks prior to starting study drug, has thoracic radiotherapy: lung fields ≤ 4 weeks, other anatomic sites ≤ 2 weeks, palliative radiotherapy for bone lesions ≤ 2 weeks."));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "*", 1, "e.07", "Other protocol-defined inclusion/exclusion criteria may apply."));	 
-            
-            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 3865483, "Argentina", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 2077456, "Australia", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 2782113, "Austria", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 3469034, "Brazil", null));
-             
-            fs.countries.Add(new StudyCountry(sd_sid, 6251999, "Canada", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 3895114, "Chile", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 1814991, "China", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 3686110, "Colombia", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 3077311, "Czechia", null));
-             
-            fs.countries.Add(new StudyCountry(sd_sid, 2623032, "Denmark", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 660013, "Finland", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 3017382, "France", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 390903, "Greece", null));
-             
-            fs.countries.Add(new StudyCountry(sd_sid, 1819730, "Hong Kong", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 719819, "Hungary", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 2629691, "Iceland", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 1269750, "India", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 3175395, "Italy", null));
-
-            fs.countries.Add(new StudyCountry(sd_sid, 1861060, "Japan", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 1835841, "South Korea", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 272103, "Lebanon", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 1733045, "Malaysia", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 2750405, "Netherlands", null));
-             
-            fs.countries.Add(new StudyCountry(sd_sid, 3144096, "Norway", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 1694008, "Philippines", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 798544, "Poland", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 2264397, "Portugal", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 798549, "Romania", null));
-             
-            fs.countries.Add(new StudyCountry(sd_sid, 2017370, "Russia", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 1880251, "Singapore", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 3057568, "Slovakia", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 2510769, "Spain", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 2661886, "Sweden", null));
-             
-            fs.countries.Add(new StudyCountry(sd_sid, 2658434, "Switzerland", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 1668284, "Taiwan", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 1605651, "Thailand", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 298795, "Turkey", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 1562822, "Vietnam", null));
-             
-            fs.sites!.Add(new StudyLocation(sd_sid, null, "Pacific Shores Medical Group .", null, null, "Long Beach", 6252001, "United States", null));
-			fs.sites.Add(new StudyLocation(sd_sid, null, "USC Kenneth Norris Comprehensive Cancer Center .", null, null, "Los Angeles", 6252001, "United States", null));
-			fs.sites.Add(new StudyLocation(sd_sid, null, "Advent Health Cancer Institute", null, 4167147, "Orlando", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Dana Farber Cancer Institute", null, 4930956, "Boston", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Buenos Aires", 3865483, "Argentina", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Melbourne", 2077456, "Australia", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Murdoch", 2077456, "Australia", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Linz", 2782113, "Austria", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Salzburg", 2782113, "Austria", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Sao Paulo", 3469034, "Brazil", null));
-             
-            // Data Objects
-	        
-            // 1) Trial registry entry
-
-            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
-            string ob_title = display_title + " :: CTG registry entry";
-            StudyDataObject sdo = CreateEmptyStudyDataObject();
-	        
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-	            null, 9, 2018, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "15 Aug 2018", 2018, 8, 15, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "13 Jun 2023", 2023, 6, 13, null, null, null, null));
-	       
-            fs.data_objects!.Add(sdo);
-
-            return fs;
-        }
-        
-        
-        if (sd_sid == "NCT03226236")
-        {
-	        FullStudy fs = CreateEmptyFullStudy();
- 
-	        // Study 
-	        
-	        string display_title = "Vaccination With Dendritic Cells Pulsed With Autologous Tumor Homogenate in Combination With HD-IL2 and Immunomodulating Radiotherapy in Metastatic RCC";
-	        StringBuilder sb = new StringBuilder("");
-	        sb.Append("Single center, open-label Proof of Principle phase II trial to assess objective response (ORR).\n\n"); 
-	        sb.Append("Three daily doses boost radiotherapy (XRT) at 6-12 Gy to at least 1, and up to a maximum of 5, metastatic fields, will be administrated on days "); 
-	        sb.Append("-4 -3 -2 or -3 -2 -1 before the first and the third cycle of vaccine+IL-2. The first day of administration of vaccine is day +1 and of IL-2 is day +2.\n\n"); 
-	        sb.Append("Treatment vaccine plus IL-2 (dose 18 MIU/m2/day in 500cc by continuous IV infusion for 72 hours) will be administered every 3 weeks up to 6 cycles.\n\n"); 
-	        sb.Append("Total duration of the trial: 36 months\n\n"); 
-	        sb.Append("Enrolment period: 24 months\n"); 
-	        sb.Append("Treatment: maximum of 6 cycles (5 months) per patient\n"); 
-	        sb.Append("Follow-up every three months until patient died (follow-up until PD and only survival contacts and subsequent therapy for metastatic disease after PD)."); 
-	        string brief_desc = sb.ToString();
-	        string dss = "IPD Sharing (as of November 2018): Undecided";
-	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2016, 3, 11, 11, "0", 900,
-		       19, 17, null, null, 10);
-	        
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
-		        "ClinicalTrials.gov", null, "28 Sep 2016", null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "IRST189.03", 14, null, 
-		        "Istituto Scientifico Romagnolo per lo Studio e la cura dei Tumori", null, null, null));
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "2015-000556-14", 11, 100123, 
-		        "EU Clinical Trials Register", null, null, null));
-	        
-	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "Vaccination With Dendritic Cells Pulsed With Autologous Tumor Homogenate in Combination With HD-IL2 and Immunomodulating Radiotherapy in Metastatic RCC: a Phase II Trial (RENALVax-2)",
-		        16, "en", 11, false, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "RENALVax-2", 14, "en", 11, false, "From ClinicalTrials.gov"));
-	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Laura Ridolfi", "UO Immunoterapia e Laboratorio TCS, Istituto Scientifico Romagnolo per lo Studio e la Cura dei Tumori (IRST) Srl IRCCS", 
-		        null, "Istituto Scientifico Romagnolo per lo Studio e la cura dei Tumori", null));
-	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Istituto Scientifico Romagnolo per lo Studio e la cura dei Tumori", null));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100253, "University of Oxford", "https://ror.org/052gg0110"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Millennium: The Takeda Oncology Company", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100442, "National Institute for Health Research", "https://ror.org/0187kwz08"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100707, "Oxford University Hospitals NHS Foundation Trust", "https://ror.org/03h2bh287"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100574, "European Commission", "https://ror.org/00k4n6c32"));
 
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // 
 	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 22, 200));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 23, 300));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 
-            fs.topics!.Add(new StudyTopic(sd_sid, 11, "dendritic cells", null, null, "D003713", "Dendritic Cells"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "autologous tumor homogenate", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "High Dose -IL2", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "immunomodulating radiotherapy", null, null, null, null));
-
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Carcinoma, Renal Cell", 14, "D000002292", "2C90", "Malignant neoplasms of kidney, except renal pelvis"));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Vaccination", null, null, null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Secondary", null, null, null, null));
+	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Metastatic and/or Recurrent Osteosarcoma", null, null, null, null));
 	        
-            fs.iec!.Add(new StudyIEC(sd_sid, 1, 301, "cr", "1.", 0, "n.00", "Signed Written Informed Consent: patients must be willing and able to give written informed consent, that have to be given before starting of screening procedure."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Availability of autologous tumor tissue fulfilling acceptance criteria prescribed by the \"Product Specification File\"."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Patients must have histologically or cytologically confirmed RCC (all histology types except for urothelial cancer);"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "4.", 1, "n.04", "Patients must have stage IV disease in progression after at least 1 TKI and/or antiangiogenetic and/or mTOR inhibitors therapy (patients must have finished prior treatments at least 4 weeks before the first IL2 dose)"));
-            fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "5.", 1, "n.05", "Patients must have at least one measurable lesion, according to the irRC response criteria (see section 8 ), after asportation of tumor tissue for vaccine preparation. The tumor lesions that will be irradiated are excluded for response evaluation."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "6.", 1, "n.06", "Life expectancy of greater than 3 months."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "7.", 1, "n.07", "ECOG performance status 0-1"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 8, 1, "cr", "8.", 1, "n.08", "Patients must have organ and marrow function as defined below:"));
-            fs.iec.Add(new StudyIEC(sd_sid, 9, 1, "cr", "*", 1, "n.09", "leukocytes >4000/µL"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 10, 1, "cr", "*", 1, "n.09.01", "absolute neutrophil count >1,500/µL\nplatelets >100,000/µL"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 11, 1, "cr", "*", 1, "n.09.02", "total bilirubin within normal institutional limits"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 12, 1, "cr", "*", 1, "n.09.03", "AST(SGOT)/ALT(SGPT) <2.5 X institutional upper limit of normal"));
-            fs.iec.Add(new StudyIEC(sd_sid, 13, 1, "cr", "*", 1, "n.09.04", "creatinine < 1.5 mg/dl"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 14, 1, "cr", "*", 1, "n.09.05", "haemoglobin >8.0 gm/dl"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 15, 1, "cr", "*", 1, "n.09.06", "hematocrit <30%"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 16, 1, "cr", "9.", 1, "n.16", "ECG and echocardiogram within normal institutional limits"));
-            fs.iec.Add(new StudyIEC(sd_sid, 17, 1, "cr", "10.", 1, "n.17", "Pulmonary function tests within normal institutional limits (to be performed only in patients with lung metastases or history of impaired lung function)"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 18, 1, "cr", "11.", 1, "n.18", "No contraindication for the use of vasopressor agents"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 19, 1, "cr", "12.", 1, "n.19", "Negative screening tests for HIV, HBV HCV and syphilis not older than 30 days before performing any of the GMP-regulated activities required (leukapheresis, collection of tumor biopsies to be used for tumor homogenate preparation);"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 20, 1, "cr", "13.", 1, "n.20", "Men and women aged > 18 years."));
-            fs.iec.Add(new StudyIEC(sd_sid, 21, 1, "cr", "14.", 1, "n.21", "Women of childbearing potential (WOCBP) must be using an adequate method of contraception to avoid pregnancy throughout the study and for up 8 weeks after the study, in order to minimize the risk of pregnancy;"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 22, 1, "cr", "15.", 1, "n.22", "Men and women aged > 18 years."));	    
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Ifosfamide", 14, "D000007069", "D007069", "Ifosfamide"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Mifamurtide", 14, "C000037144", "C037144", "mifamurtide"));
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Osteosarcoma", 14, "D000012516", null, null));
 
-            fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "1.", 1, "e.01", "Patients who have positive tests to HCV, HBV, HIV, or syphilis (specific blood testing must be performed within 30 days before any GMP-regulated activity (leukapheresis and collection of tumor biopsies to be used for tumor homogenate preparation)."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "2.", 1, "e.02", "Patients who did not have prior lines of systemic therapy for advanced disease."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "3.", 1, "e.03", "Participation in another clinical trial with any investigational agents within 30 days prior to study screening."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "4.", 1, "e.04", "Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements (on physician’s judgment)."));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr", "5.", 1, "e.05", "Other known malignant neoplastic diseases in the patient’s medical history with a disease-free interval of less than 3 years (except for previously treated basal cell carcinoma and in situ carcinoma of the uterine cervix);"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr", "6.", 1, "e.06", "Patients who have had chemotherapy or radiotherapy or immunotherapy within 4 weeks (6 weeks for nitrosoureas or mitomycin C) prior to entering the study or those who have not recovered from adverse events due to agents administered more than 4 weeks earlier."));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr", "7.", 1, "e.07", "Patients with known brain metastases should be excluded from this clinical trial because of their poor prognosis and because they often develop progressive neurologic dysfunction that would confound the evaluation of neurologic and other adverse events."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 30, 2, "cr", "8.", 1, "e.08", "History of allergic reactions attributed to compounds of similar chemical or biologic composition to IL-2 or other agents used in the study."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 31, 2, "cr", "9.", 1, "e.09", "Any autoimmune disease which could be exacerbated by IL-2"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 32, 2, "cr", "10.", 1, "e.10", "A medical illness requiring chronic treatments with corticosteroids or other immunosuppressive agents"));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 33, 2, "cr", "11.", 1, "e.11", "A history of significant cardiovascular disease, including myocardial infarction, congestive heart failure, primary cardiac arrhythmias, angina pectoris or cerebrovascular accident"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 34, 2, "cr", "12.", 1, "e.12", "HIV-positivity, whether or not symptomatic"));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 35, 2, "cr", "13.", 1, "e.13", "Any contraindication to undergo leukapheresis as evaluated by transfusionist (e.g. severe anemia, piastrinopenia, oral anticoagulant therapy) or to undergo surgery."));	 
-           
-            fs.countries!.Add(new StudyCountry(sd_sid, 3175395, "Italy", null));
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Relapsed osteosarcoma (first, second, third or any relapse, patient has recovered from chemotherapy and any other investigational drug/agent treatment, radiotherapy or surgical procedure)."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Histological confirmed diagnosis of osteosarcoma at original presentation."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Tumour at biopsy accessible or resectable site."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "4.", 1, "n.04", "Progressive disease documented by imaging within 3 months of entry into the trial."));
+            fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "5.", 1, "n.05", "At least one measurable lesion on CT scan (RECIST) performed in past 21 days prior to trial entry."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "6.", 1, "n.06", "Male or female, age ≥ 16 years to 65 (or ≥18 based on institutional practice for Teenage and Young Adult Cancer patients)."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "7.", 1, "n.07", "Life expectancy of at least 3 months."));
+            fs.iec.Add(new StudyIEC(sd_sid, 8, 1, "cr", "8.", 1, "n.08", "WHO performance score of 0 - 2."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 9, 1, "cr", "9.", 1, "n.09", "The patient is willing and able to comply with the protocol and scheduled follow-up visits and examinations."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 10, 1, "cr", "10.", 1, "n.10", "Written (signed and dated) informed consent."));
+            fs.iec.Add(new StudyIEC(sd_sid, 11, 1, "cr", "11.", 1, "n.11", "Cardiac shortening fraction ≥ 28% or ejection fraction ≥ 45%"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 12, 1, "cr", "12.", 1, "n.12", "Renal function is adequate for ifosfamide treatment (GFR as per table below, other renal function screening tests as per local practice)"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 13, 1, "cr", "13.", 1, "n.13", "Haematological and biochemical indices within the ranges shown below:"));
+            fs.iec.Add(new StudyIEC(sd_sid, 14, 301, "cr", "Hdr", 1, "n.14", "Lab Test Value required"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 15, 1, "cr", "*", 2, "n.14.01", "Haemoglobin (Hb) ≥ 9 g/dL (Previous transfusion is allowed)"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 16, 1, "cr", "*", 2, "n.14.02", "Absolute neutrophil count (ANC) >=1.0 x 10*9/L without growth factor support"));
+            fs.iec.Add(new StudyIEC(sd_sid, 17, 1, "cr", "*", 2, "n.14.03", "Platelet count > 80.x 10*9/L (Previous transfusion is allowed)"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 18, 1, "cr", "*", 2, "n.14.04", "Total bilirubin <1.5 times the upper limit of normal (ULN) for age (except for Gilbert’s syndrome patients)"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 19, 1, "cr", "*", 2, "n.14.05", "Serum alanine aminotransferase (ALT) and/or Aspartate aminotransferase (AST) <2.5 × ULN for age, <2.5 × ULN for age"));
+            fs.iec.Add(new StudyIEC(sd_sid, 20, 1, "cr", "*", 2, "n.14.06", "Serum creatinine Normal range for age"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 21, 1, "cr", "*", 2, "n.14.07", "Glomerular filtration rate (GFR) (calculated as 51Cr-EDTA/99mTc-DTPA clearance) >40ml/min if deemed resectable (for Arm A), >60ml/min if not deemed resectable (for Arm B or C)"));	    
+  
+            fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr", "1.", 1, "e.01", "Pregnant or breast-feeding woman. Men or women of childbearing potential unless effective methods of contraception are used during study treatment and for at least 7 days after the last mifamurtide dose (see section 5.1 Informed consent - Contraceptive/ Pregnancy counselling)."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "2.", 1, "e.02", "Previous treatment with mifamurtide or a mifamurtide-like drug* in a clinical trial setting for the treatment of metastatic and/or recurrent osteosarcoma in the six months prior to registration."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "3.", 1, "e.03", "Contraindications to lung biopsies."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "4.", 1, "e.04", "Hypersensitivity to ifosfamide or any component of the formulation."));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "5.", 1, "e.05", "Previously diagnosed brain metastases."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr", "6.", 1, "e.06", "Significant active cardiac disease including: uncontrolled high blood pressure (no greater than 2 standard deviations above the mean for age for systolic blood pressure (SBP) and diastolic blood pressure (DBP), unstable angina, congestive heart failure, myocardial infarction within the previous 6 months, or serious cardiac arrhythmias and with a history of pericarditis and myocarditis"));	 
+            fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr", "7.", 1, "e.07", "Treatment with any other investigational agent, or participation in another interventional clinical trial within 21 days prior to enrolment."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr", "8.", 1, "e.08", "Major surgery within 21 days prior to first study biopsy"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 30, 2, "cr", "9.", 1, "e.09", "Currently taking high-dose non-steroidal anti-inflammatory drugs (NSAIDs) or corticosteroid treatment"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 31, 2, "cr", "10.", 1, "e.10", "Concurrent use of ciclosporin or other calcineurin inhibitors."));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 32, 2, "cr", "11.", 1, "e.11", "Any psychological, social or medical condition, physical examination finding or a laboratory abnormality that the Investigator considers would make the patient a poor trial candidate or could interfere with protocol compliance or the interpretation of trial results."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 33, 2, "cr", "12.", 1, "e.12", "Any other active malignancy, with the exception of adequately treated cone-biopsied in situ carcinoma of the cervix uteri and non-melanoma skin lesions."));	 
+            fs.iec.Add(new StudyIEC(sd_sid, 34, 2, "cr", "13.", 1, "e.13", "Patients who are known to be serologically positive for Hepatitis B, Hepatitis C or HIV."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 35, 202, "cr", "Spp", 1, "e.14", "* mifamurtide-like drugs include GCSF, GMCSF, interferon and other macrophage activating molecules."));	 
             
-            fs.sites!.Add(new StudyLocation(sd_sid, null, "UO Immunoterapia e Laboratorio TCS, IRCCS IRST", null, null, "Meldola (FC)", 3175395, "Italy", null));
-            
+            fs.countries!.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3175395, "Italy", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2750405, "Netherlands", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3144096, "Norway", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
+             
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Pediatric Hematology and Oncology, University Hospital Münster", null, 2867543, "Münster", 2921044, "Germany", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Istituti Ortopedici Rizzoli", null, 3181928, "Bologna",  3175395, "Italy", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Department of Clinical Oncology, Leiden University Medical Center", null, 2751773, "Leiden", 2750405, "Netherlands", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Radium Hospital, Oslo University", null, 3143244, "Oslo", 3144096, "Norway", null));
+            fs.sites.Add(new StudyLocation(sd_sid, 101598, "Leeds Teaching Hospitals NHS Trust", "https://ror.org/00v4dac24", 2644688, "Leeds", 2635167, "United Kingdom", null));
+            fs.sites.Add(new StudyLocation(sd_sid, 100799, "University College London Hospitals NHS Foundation Trust", "https://ror.org/042fqyp44", 2643743, "London", 2635167, "United Kingdom", null));
+            fs.sites.Add(new StudyLocation(sd_sid, 101833, "Christie Hospital NHS Foundation Trust", "https://ror.org/03v9efr22", 2643123, "Manchester", 2635167, "United Kingdom", null));
+            fs.sites.Add(new StudyLocation(sd_sid, 100707, "Oxford University Hospitals NHS Foundation Trust", "https://ror.org/03h2bh287", 2640729, "Oxford", 2635167, "United Kingdom", null));
+         
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -1931,20 +1793,140 @@ public class TestData_100120 : TestData_Base
             StudyDataObject sdo = CreateEmptyStudyDataObject();
 	        
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-	            null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	            null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "21 Jul 2017", 2017, 7, 21, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "13 Nov 2018", 2018, 11, 13, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "12 May 2015 (est.)", 2015, 5, 12, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "13 Sep 2019", 2019, 9, 13, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+			
+            sd_oid = sd_sid + " :: 28 :: CTG results entry";
+            ob_title = display_title + " :: CTG results entry";
+            sdo = CreateEmptyStudyDataObject();
+			
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
+	            null, 9, 2019, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "13 Sep 2019", 2019, 9, 13, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "13 Sep 2019", 2019, 9, 13, null, null, null, null));
+
+            fs.data_objects!.Add(sdo);
+
+            return fs;
+        }
+
+        
+        if (sd_sid == "NCT02922075")
+        {
+	        FullStudy fs = CreateEmptyFullStudy();
+ 
+	        // Study 
+	        
+	        string display_title = "Impact of Soft Tissue Grafts on Tissue Alterations After Immediate Tooth Replacement";
+	        StringBuilder sb = new StringBuilder("This study evaluates the impact of soft tissue grafts on soft tissue recession following immediate implant, ");
+	        sb.Append("provisional and bone graft placement in compromised sockets. One third of the patients received a collagen matrix (CM group), "); 
+	        sb.Append("another third received a connective tissue graft removed from the palate (CTG group) and the final third did not receive any soft tissue graft (CTL group)."); 
+	        string brief_desc = sb.ToString();
+	        string dss = "IPD Sharing (as of September 2016): Undecided";
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2013, 2, 11, 21, "24", 900,
+		        18, 17, 70, 17, 10);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "ClinicalTrials.gov", null, "24 Sep 2016", null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "Soft and Hard Tissue Stability After Immediate Tooth Replacement With Implant in Fresh Sockets Grafted With Different Soft Tissue Grafts",
+		        16, "en", 11, false, "From ClinicalTrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Elcio Marcantonio Jr", null, null, null, null));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 101740, "Universidade Estadual Paulista Júlio de Mesquita Filho", "https://ror.org/00987cb86"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100337, "Fundação de Amparo à Pesquisa do Estado de São Paulo", "https://ror.org/02ddkpn78"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100425, "Conselho Nacional de Desenvolvimento Científico e Tecnológico", "https://ror.org/03swz6y49"));
+
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 135));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
+	        
+	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Immediate implant and provisional placement", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Bone graft", null, null, "D016025", "Bone Transplantation"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Connective tissue graft", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Collagen matrix", null, null, null, null));
+	        
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Amoxicillin", 14, "D000000658", "D000658", "Amoxicillin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Chlorhexidine", 14, "D000002710", "D002710", "Chlorhexidine"));
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Tooth Socket", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Dental Implants", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Gingival recession", null, null, "DA0D", "Certain specified disorders of gingiva or edentulous alveolar ridge"));
+	        
+	        
+	        string c1 = "Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets.\n\n";
+	        c1 += "All data can be downloaded from the website, if there are any questions please feel free to contact us.";   
+	        string c2 = "Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets.";
+	        c2 += "All data can be downloaded from the website, if there are any questions please feel free to contact us.";  
+	        
+	        fs.ipd_info!.Add(new AvailableIPD(sd_sid, null, "Individual Participant Data Set", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c1));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Study Protocol", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Statistical Analysis Plan", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Informed Consent Form", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Clinical Study Report", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Analytic Code", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
+            
+	        fs.studylinks!.Add(new StudyLink(sd_sid, "All data can be downloaded from the website, if there are any questions please feel free to contact us",
+		                "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf" ));
+
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "*", 1, "n.01", "Presence of a failing maxillary incisor with neighbouring teeth and harmonic gingival contour;"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.02", "Operated area with appropriate palatal/apical bone to install the implant;"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.03", "A buccal wall defect confirmed by cone beam computed tomography;"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "*", 1, "n.04", "Clinical attachment level > 3 mm;"));
+            fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "*", 1, "n.05", "Good oral hygiene with visible plaque index < 20%;"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "*", 1, "n.06", "No bone loss in the neighbouring teeth;"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "*", 1, "n.07", "Implant primary stability > 32N"));
+	        
+            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "*", 1, "e.01", "History of periodontal surgeries in the failing tooth;"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.02", "Occlusal instability;"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "*", 1, "e.03", "Systemic alterations that could compromise the surgical procedure, such ass smokers, bruxists; drug users; patients with diabetes or pregnants."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "*", 1, "e.04", "Active infection involving the gingival margin"));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "*", 1, "e.05", "Patients undergoing radiotherapy in the head and neck area. Patients presented history of bone associated diseases or medication affecting bone metabolism;"));	       
+ 
+            fs.countries!.Add(new StudyCountry(sd_sid, 3469034, "Brazil", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Araraquara Dental School at the São Paulo State University", null, 3471766, "Araraquara", 3469034, "Brazil", null));
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
+
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2016, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "3 Oct 2016 (est.)", 2016, 10, 3, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "3 Oct 2016 (est.)", 2016, 10, 3, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
 
             return fs;
-              
+             
         }
-       
+      
         
         if (sd_sid == "NCT03167125")
         {
@@ -1955,13 +1937,13 @@ public class TestData_100120 : TestData_Base
 	        string display_title = "Participatory Research to Advance Colon Cancer Prevention";
 	        StringBuilder sb = new StringBuilder("The overall goal of this study is to test strategies to raise rates of colorectal cancer screening among the Latino ");
 	        sb.Append("population in a federally qualified health center that operates multiple clinics. "); 
-	        sb.Append("This intervention study will test automated and live prompts to a direct-mail fecal testing program in two phases.\n\n"); 
+	        sb.Append("This intervention study will test automated and live prompts to a direct-mail fecal testing program in two phases.\n"); 
 	        sb.Append("In Phase I (Years 01 - 02), the investigators will tailor and define intervention components using a community-based participatory research approach called boot camp translation (BCT). "); 
 	        sb.Append("The ultimate design of the intervention will be defined by patient and provider feedback from BCT. The investigators will then conduct a three-arm patient-randomized "); 
 	        sb.Append("comparative effectiveness trial in two pilot clinics to compare 1) automated prompts (i.e., automated phone calls, text messages) to alert and remind patients "); 
-	        sb.Append("to complete screening, 2) live prompts (i.e., live phone calls), and 3) a combination approach of automated plus live prompts.\n\n"); 
+	        sb.Append("to complete screening, 2) live prompts (i.e., live phone calls), and 3) a combination approach of automated plus live prompts.\n"); 
 	        sb.Append("In Phase II (Years 03 - 05), the investigators will spread and test the spread of the adapted intervention to additional clinics within "); 
-	        sb.Append("the partnering health center using a two-arm main trial.\n\n"); 
+	        sb.Append("the partnering health center using a two-arm main trial.\n"); 
 	        sb.Append("Both phases will be guided by an advisory group of clinicians, researchers, policy makers, and patients."); 
 	        string brief_desc = sb.ToString();
 	        string dss = "IPD Sharing (as of April 2022): No";
@@ -1983,7 +1965,7 @@ public class TestData_100120 : TestData_Base
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100335, "Kaiser Permanente", "https://ror.org/00t60zh31"));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100257, "Oregon Health and Science University", "https://ror.org/009avj582"));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "AltaMed Health Services", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "AltaMed Health Services Corporation", null));
 
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 100));  // 
 	        fs.features.Add(new StudyFeature(sd_sid, 21, 420));   // 
@@ -1991,10 +1973,10 @@ public class TestData_100120 : TestData_Base
 	        fs.features.Add(new StudyFeature(sd_sid, 23, 310));   // 
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
             
-            fs.topics!.Add(new StudyTopic(sd_sid, 11, "colorectal cancer screening", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "cancer screening", null, null, "D055088", "Early Detection of Cancer"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "pragmatic trial", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "boot camp translation", null, null, null, null));
+            fs.topics!.Add(new StudyTopic(sd_sid, 11, "Colorectal cancer screening", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Cancer screening", null, null, "D055088", "Early Detection of Cancer"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Pragmatic trial", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Boot camp translation", null, null, null, null));
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Colorectal Neoplasms", 14, "D000015179", "B5-2B9", "Malignant neoplasms of large intestine"));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Colorectal Cancer", null, null, "B5-2B9", "Malignant neoplasms of large intestine"));
@@ -2002,24 +1984,24 @@ public class TestData_100120 : TestData_Base
 			sb = new StringBuilder("Coronado GD, Nyongesa DB, Petrik AF, Thompson JH, Escaron AL, Younger B, Harbison S, Leo MC. ");
 			sb.Append("Randomized Controlled Trial of Advance Notification Phone Calls vs Text Messages Prior to Mailed Fecal Test Outreach. ");
 			sb.Append("Clin Gastroenterol Hepatol. 2021 Nov;19(11):2353-2360.e2. doi: 10.1016/j.cgh.2020.07.053. Epub 2020 Jul 30.");
-			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "32739569", null, null, null));
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "32739569", null, 12, null));
 
 			sb = new StringBuilder("Coronado GD, Thompson JH, Petrik AF, Nyongesa DB, Leo MC, Castillo M, Younger B, Escaron A, Chen A. ");
 			sb.Append("Patient-Refined Messaging for a Mailed Colorectal Cancer Screening Program: Findings from the PROMPT Study. ");
 			sb.Append("J Am Board Fam Med. 2019 May-Jun;32(3):318-328. doi: 10.3122/jabfm.2019.03.180275.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31068396", null, null, null));
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "31068396", null, 12, null));
 
 			sb = new StringBuilder("Thompson JH, Davis MM, Leo MC, Schneider JL, Smith DH, Petrik AF, Castillo M, Younger B, Coronado GD. ");
 			sb.Append("Participatory Research to Advance Colon Cancer Prevention (PROMPT): Study protocol for a pragmatic trial. ");
 			sb.Append("Contemp Clin Trials. 2018 Apr;67:11-15. doi: 10.1016/j.cct.2018.02.001. Epub 2018 Feb 9.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29408304", null, null, null));
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29408304", null, 12, null));
  
 			fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", "Persons aged 50-75 years and not up-to-date with colorectal cancer screening"));	       
 			fs.iec.Add(new StudyIEC(sd_sid, 2,1002, "none", "All", 0, "e.0A", "Persons having colorectal disease (e.g., ulcerative colitis or colectomy), personal history of colorectal cancer or colorectal disease, end-stage or life threatening diseases or, those known to be under hospice care or living in a skilled nursing facility may be excluded."));	       
 			
             fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
             
-            fs.sites!.Add(new StudyLocation(sd_sid, null, "AltaMed Health Services", null, null, "Los Angeles", 6252001, "United States", null));
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "AltaMed Health Services", null, 5368361, "Los Angeles", 6252001, "United States", null));
 	        
             // Data Objects
 	        
@@ -2045,111 +2027,6 @@ public class TestData_100120 : TestData_Base
         }
         
         
-        if (sd_sid == "NCT03076619")
-        {
-	        FullStudy fs = CreateEmptyFullStudy();
- 
-	        // Study 
-	        
-	        string display_title = "A Clinical Study of Fundus Findings in Toxaemia of Pregnancy";
-	        StringBuilder sb = new StringBuilder("Toxemia of pregnancy is a recognized entity for over 2000 years with its known complications ");
-	        sb.Append("and fatality. Nowadays, a most accepted terminology for the following defined syndrome is \"hypertensive disorders "); 
-	        sb.Append("in pregnancy\" given by American College of Obstetrics and Gynecology. It is an important cause of maternal and "); 
-	        sb.Append("fetal morbidity and mortality. Pregnancy induced hypertension (PIH) was classified as gestational hypertension, "); 
-	        sb.Append("preeclampsia, severe preeclampsia and eclampsia. PIH is a hypertensive disorder in pregnancy that occurs after 20 weeks "); 
-	        sb.Append("of pregnancy in the absence of other causes of elevated blood pressure (BP) (BP >140/90 mmHg measured two times with "); 
-	        sb.Append("at least of 4 hour interval) in combination with generalized edema and/or proteinuria (>300 mg per 24 hrs). When there "); 
-	        sb.Append("is significant proteinuria it is termed as preeclampsia; seizure or coma as a consequence of PIH is "); 
-	        sb.Append("termed as eclampsia. Preeclampsia was classified into mild and severe preeclampsia.\n\n"); 
-	        sb.Append("Mild eclampsia—BP >140/90 mmHg, proteinuria+, and/or mild edema of legs, Severe preeclampsia—BP >160/110 mmHg,proteinuria++ or ++++, "); 
-	        sb.Append("headache, cerebral or visual disturbances, epigastric pain, impaired liver function tests and increase in serum creatinine.\n\n"); 
-	        sb.Append("Proteinuria was tested using dipstick method as +=0.3 gm/L, ++=1 gm/L, and +++=3 gm/L.\n\n"); 
-	        sb.Append("The pathological changes of this disease appear to be related to vascular endothelial dysfunction and its consequences (generalized vasospasm and "); 
-	        sb.Append("capillary leak). Ocular involvement is common in PIH.Common symptoms are blurring of vision, photopsia, scotomas and diplopia. Visual symptoms may "); 
-	        sb.Append("be the precursor of seizures.Progression of retinal changes correlates with progression of PIH and also with the fetal mortality due to similar vascular "); 
-	        sb.Append("ischemic changes in placenta.Vasospastic manifestations are reversible and the retinal vessels rapidly return to normal after delivery. Ophthalmoscope "); 
-	        sb.Append("should be rated next to the sphygmomanometer as an instrument of diagnostic importance in cases of PIH. Ophthalmoscopy does not only helps in "); 
-	        sb.Append("diagnosing the disease but repeated observations assist in assessing the severity, progress of disease, response to treatment if any and ultimate outcome or prognosis."); 
-	        string brief_desc = sb.ToString();
-	        string dss = "IPD Sharing (as of March 2017): No";
-	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2003, 11, 12, 21, "300", 905,
-		        18, 17, 42, 17, 10);
-	        
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
-		        "ClinicalTrials.gov", null, "30 Oct 2016", null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "Postgraduation Thesis", 14, null, 
-		        "B J Medical College, Ahmedabad", null, null, null));
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "DRKS00011324", 11, 100124, "Deutschen Register Klinischer Studien", null, null, null));
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "ChiCTR-OOC-16010171", 11, 100118, "Chinese Clinical Trial Register", null, null, null));
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "UMIN000024722", 11, 100156, "University Hospital Medical Information Network CTR", "https://ror.org/05k40gs40", null, null));
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "U1111-1189-6165", 11, 100115, "International Clinical Trials Registry Platform", null, null, null));
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "TCTR20161221005", 11, 100131, "Thai Clinical Trials Register", null, null, null));
-	        
-	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "A Clinical Study of Fundus Findings in Toxaemia of Pregnancy (Pregnancy Induced Hypertension)", 16, "en", 11, false, "From ClinicalTrials.gov"));
-	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Rahul Bakhda", "Ex-Resident,M and J Western Regional Institute of Ophthalmology, BJMedical College and Civil Hospital Campus, Ahmedabad-380016Gujarat 07922680360 07922680314 Fax:07922680360", 
-		        null, "BJMedical College and Civil Hospital Campus", null));
-	        fs.people.Add(new StudyPerson(sd_sid, 51, "Rahul Navinchandra Bakhda", "B J Medical College, Ahmedabad", 
-		        null, "B J Medical College, Ahmedabad", null));
-
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "B J Medical College, Ahmedabad", null));
-            fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "M and J Western Regional Institute of Ophthalmology,Ahmedabad", null));
-
-	        fs.features!.Add(new StudyFeature(sd_sid, 30, 630));  // 
-	        fs.features.Add(new StudyFeature(sd_sid, 31, 715));   //  
-
-            fs.topics!.Add(new StudyTopic(sd_sid, 11, "ophthalmoscopy", null, null, "D009887", "Ophthalmoscopy"));
-            fs.topics.Add(new StudyTopic(sd_sid, 11, "pregnancy induced hypertension", null, null, null, null));
-            
-            fs.conditions!.Add(new StudyCondition(sd_sid, "Toxemia", 14, "D000014115", null, null));
-            fs.conditions.Add(new StudyCondition(sd_sid, "Hypertension, Pregnancy-Induced", 14, "D000046110", null, null));
-            fs.conditions.Add(new StudyCondition(sd_sid, "Pre-Eclampsia", 14, "D000011225", "JA24", "Pre-eclampsia"));
-            fs.conditions.Add(new StudyCondition(sd_sid, "Hypertension", 14, "D000006973", "BA00", "Essential hypertension"));
-            
-			sb = new StringBuilder("Bakhda RN. ");
-			sb.Append("Clinical study of fundus findings in pregnancy induced hypertension. ");
-			sb.Append("J Family Med Prim Care. 2016 Apr-Jun;5(2):424-429. doi: 10.4103/2249-4863.192364.");
-			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "27843854", null, null, null));
-
-            fs.studylinks!.Add(new StudyLink(sd_sid, "Published article", 
-                   "http://www.jfmpc.com/article.asp?issn=2249-4863;year=2016;volume=5;issue=2;spage=424;epage=429;aulast=Bakhda"));
-
-            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", "Cases of Pregnancy Induced Hypertension."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 2, 1002, "none", "All", 0, "e.0A", "Cases complicated by malignancy, renal, liver or other secondary manifestations."));	       
-             
-            fs.countries!.Add(new StudyCountry(sd_sid, 1269750, "India", null));
-             
-            fs.sites!.Add(new StudyLocation(sd_sid, null,
-	             "M and J Western Regional Institute of Ophthalmology, B.J.Medical College and Civil Hospital Campus, Ahmedabad-380016.Gujarat. 07922680360 07922680314 Fax:07922680360", 
-	             null, null, "Ahmedabad", 1269750, "India", null));
-             
-                
-            // Data Objects
-                
-            // 1) Trial registry entry
-    
-            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
-            string ob_title = display_title + " :: CTG registry entry";
-            StudyDataObject sdo = CreateEmptyStudyDataObject();
-            
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-                null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-           
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-                "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "10 Mar 2017", 2017, 3, 10, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "13 Mar 2017", 2017, 3, 13, null, null, null, null));
-           
-            fs.data_objects!.Add(sdo);
-
-            return fs;
-        
-        }
-        
-        
         if (sd_sid == "NCT02798978")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
@@ -2159,20 +2036,20 @@ public class TestData_100120 : TestData_Base
 	        string display_title = "A Phase I, 2-part (Part 1 Being a Single Dose Escalation and Part 2, a Parallel Group) Study of Toll-like Receptor (TLR4) Agonist (GSK1795091) in Healthy Subjects";
 	        StringBuilder sb = new StringBuilder("This study is an ascending dose first-time-in-human study to determine the safety, tolerability, pharmacodynamic (PD), and ");
 	        sb.Append("pharmacokinetics (PK) profile of GSK1795091 in healthy subjects. The results will support the design of future clinical trials "); 
-	        sb.Append("of GSK1795091 administered to subjects with advanced malignancies in combination with immune system modulators.\n\n"); 
+	        sb.Append("of GSK1795091 administered to subjects with advanced malignancies in combination with immune system modulators.\n"); 
 	        sb.Append("Part 1 will be a randomized, double-blind (sponsor-unblinded), placebo-controlled, single center, single dose escalation, sequential group evaluation of "); 
 	        sb.Append("intravenously administered GSK1795091 to evaluate the safety and tolerability in healthy subjects. Part 2 will be an open-label, parallel group evaluation "); 
 	        sb.Append("of 2 doses of GSK1795091 administered, either 1 week apart (Part 2, Cohort 1) or 2 weeks apart (Part 2, Cohort 2). In Part 2, on Day 1, subjects will "); 
 	        sb.Append("receive intravenous GSK1795091 at a dose determined by results from Part 1. The total duration of this study is approximately 10 weeks from screening to the last study visit."); 
 	        string brief_desc = sb.ToString();
 	        sb = new StringBuilder("IPD Sharing (as of November 2020): Yes\n");
-	        sb.Append("Description: (As of November 2020): IPD for this study is available via the Clinical Study Data Request site.\n");
+	        sb.Append("Description: IPD for this study is available via the Clinical Study Data Request site.\n");
 	        sb.Append("Time frame: IPD is available via the Clinical Study Data Request site (copy the URL below to your browser)\n"); 
 	        sb.Append("Access Criteria: Access is provided after a research proposal is submitted and has received approval from the Independent Review "); 
 	        sb.Append("Panel and after a Data Sharing Agreement is in place. Access is provided for an initial period of 12 months but an "); 
 	        sb.Append("extension can be granted, when justified, for up to another 12 months.\n"); 
 	        sb.Append("URL: https://www.clinicalstudydatarequest.com/Posting.aspx?ID=20725\n"); 
-	        sb.Append("Information available: Study Protocol, Statistical Analysis Plan (SAP), Informed Consent Form (ICF), Clinical Study Report (CSR)"); 
+	        sb.Append("Additional information available: Study Protocol, Statistical Analysis Plan, Informed Consent Form, Clinical Study Report"); 
 	        string dss = sb.ToString();
 	        
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2017, 1, 11, 21, "42", 900,
@@ -2200,8 +2077,9 @@ public class TestData_100120 : TestData_Base
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Cancer", null, null, "2", "Neoplasms"));
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Neoplasms", null, null, "2", "Neoplasms"));
 
-            fs.topics!.Add(new StudyTopic(sd_sid, 11, "pharmacokinetics", null, null, "D010599", "Pharmacokinetics"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "safety", null, null, "D012449", "Safety"));
+            fs.topics!.Add(new StudyTopic(sd_sid, 11, "Pharmacokinetics", null, null, "D010599", "Pharmacokinetics"));
+            fs.topics.Add(new StudyTopic(sd_sid, 11, "Pharmacodynamics", null, null, "D010599", "Pharmacokinetics"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Safety", null, null, "D012449", "Safety"));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "TLR4 agonist", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "GSK1795091", null, null, null, null));
     
@@ -2214,35 +2092,35 @@ public class TestData_100120 : TestData_Base
             fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.02", "Healthy as determined by the investigator or medically qualified designee based on a medical evaluation including medical history, physical examination, laboratory tests, vital signs and 12-lead ECG. (A subject with a clinically insignificant abnormality or laboratory parameter(s) may be included only if the Investigator documents that the finding is unlikely to represent a safety risk and will not interfere with the study procedures.)"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.03", "Body weight 55-95 kilogram (kg) and body mass index within the range 19-30 kg/meter (m)^2 (inclusive)."));	    
             fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "*", 1, "n.04", "Male or Female of non-childbearing potential:"));
-            string crit_text = "Males: Male subjects with female partners of child bearing potential must comply with the pre specified contraception requirements.";
-            crit_text += "Females: A female subject is eligible to participate if she is not pregnant (as confirmed by a negative serum or urine human chorionic gonadotropin test), not lactating, ";
+            fs.iec.Add(new StudyIEC(sd_sid, 5, 301, "cr", "Hdr", 1, "n.05", "Males: Male subjects with female partners of child bearing potential must comply with the pre specified contraception requirements."));
+            string crit_text = "Females: A female subject is eligible to participate if she is not pregnant (as confirmed by a negative serum or urine human chorionic gonadotropin test), not lactating, ";
             crit_text += "and is either of non-reproductive potential or reproductive potential. If of reproductive potential, then the subject should agree to follow one of the options listed per GSK Modified ";
             crit_text += "List of Highly Effective Methods for Avoiding Pregnancy in Females of Reproductive Potential from 30 days prior to the first dose and until 30 days after the last dose of study medication ";
             crit_text += "The Investigator is responsible for ensuring that subjects understand how to properly use these methods of contraception";
-            fs.iec!.Add(new StudyIEC(sd_sid, 5, 301, "cr", "hdr", 1, "n.05", crit_text));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 6, 201, "cr", "Spp", 1, "n.07", "* Capable of giving signed informed consent"));	    
+            fs.iec!.Add(new StudyIEC(sd_sid, 6, 301, "cr", "Hdr", 1, "n.06", crit_text));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 7, 201, "cr", "Spp", 1, "n.07", "* Capable of giving signed informed consent"));	    
 	        
-            fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "*", 1, "e.01", "History of any significant medical condition (e.g. cardiac, pulmonary, metabolic, renal, gastrointestinal, rheumatological, etc."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "*", 1, "e.02", "History of frequent (>1 per week) headache or myalgia, asthma, syncope."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.03", "History of liver disease, or known hepatic or biliary abnormalities (with the exception of Gilbert’s syndrome)."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "*", 1, "e.04", "Alanine aminotransferase (ALT) and bilirubin >1.1×upper limit of normal (ULN; isolated bilirubin >1.5×ULN is acceptable if bilirubin is fractionated and direct bilirubin <35%)."));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "*", 1, "e.05", "Vital signs:"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "*", 1, "e.06", "Systolic blood pressure (SBP) <90 and >140 milliliter of mercury (mmHg); diastolic BP <50 and >90 mmHg; heart rate (HR) <50 and >90 beats per minute (bpm); temperature >37.5 degree Celsius"));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "*", 1, "e.07", "Clinically significant ECG abnormality and/or HR < 50 and >90 bpm; PR interval >220 milliseconds (msec); QRS duration >120 msec; and QTcF > 450 msec"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "*", 1, "e.08", "Anticipated requirement for any prescription medication during the study"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "*", 1, "e.09", "History of regular alcohol consumption within 6 months of the study averaging a weekly intake of >14 drinks for males or >7 drinks for females or inability to abstain from alcohol from 1 day prior to the inpatient period of the study until discharge (one drink is equivalent to 8 grams of alcohol: 200 milliliter [mL] of beer, 100 mL of wine or 1 measure (25 mL) of spirits)"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "*", 1, "e.10", "Urinary cotinine levels indicative of smoking or history or regular use of tobacco or nicotine-containing products within 2 months prior to screening or inability to abstain from smoking during the study"));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "*", 1, "e.11", "History of sensitivity to any of the study medications, or components thereof or a history of drug or other allergy that, in the opinion of the investigator or Medical Monitor, contraindicates their participation"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr", "*", 1, "e.12", "Presence of hepatitis B surface antigen, positive hepatitis C antibody test result at screening or within 3 months prior to first dose of study treatment. Subjects with positive Hepatitis C antibody due to prior resolved disease can be enrolled, only if a confirmatory negative Hepatitis C ribonucleic acid polymerase chain reaction test is obtained."));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "cr", "*", 1, "e.13", "A positive pre-study drug/alcohol screen."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "cr", "*", 1, "e.14", "A positive test for human immunodeficiency antivirus antibody."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "cr", "*", 1, "e.15", "Donation of blood or blood products in excess of 500 mL within a 56-day period."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr", "*", 1, "e.16", "The subject has participated in a clinical trial and has received an investigational product within the following time period prior to the first visit (Day -2) in the current study: 30 days, 5 half-lives or twice the duration of the biological effect of the investigational product (whichever is longer)."));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "*", 1, "e.17", "Exposure to more than four new chemical entities within 12 months prior to the first visit (Day -2)."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "*", 1, "e.18", "Exposure to GSK1795091 in a previous cohort of this study."));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "*", 1, "e.19", "Subject is unable to refrain from taking non-prescription drugs (including vitamins and dietary or herbal supplements), within 7 days prior to the first dose of study medication until completion of the follow-up visit, unless in the opinion of the investigator and sponsor, the medication will not interfere with the study."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "*", 1, "e.20", "Subject is able to understand and communicate in German/or native language of the site. Subject, or close relative of the subject, is the investigator or a sub-investigator, research assistant, pharmacist, study coordinator, or other staff directly involved with the conduct of the study at that site"));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr", "*", 1, "e.21", "Vulnerable subjects (eg subjects kept in detention)"));	 
+            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "*", 1, "e.01", "History of any significant medical condition (e.g. cardiac, pulmonary, metabolic, renal, gastrointestinal, rheumatological, etc.)"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.02", "History of frequent (>1 per week) headache or myalgia, asthma, syncope."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "*", 1, "e.03", "History of liver disease, or known hepatic or biliary abnormalities (with the exception of Gilbert’s syndrome)."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "*", 1, "e.04", "Alanine aminotransferase (ALT) and bilirubin >1.1×upper limit of normal (ULN; isolated bilirubin >1.5×ULN is acceptable if bilirubin is fractionated and direct bilirubin <35%)."));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "*", 1, "e.05", "Vital signs:"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 13, 302, "cr", "Hdr", 1, "e.06", "Systolic blood pressure (SBP) <90 and >140 milliliter of mercury (mmHg); diastolic BP <50 and >90 mmHg; heart rate (HR) <50 and >90 beats per minute (bpm); temperature >37.5 degree Celsius"));	 
+            fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "*", 1, "e.07", "Clinically significant ECG abnormality and/or HR < 50 and >90 bpm; PR interval >220 milliseconds (msec); QRS duration >120 msec; and QTcF > 450 msec"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "*", 1, "e.08", "Anticipated requirement for any prescription medication during the study"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "*", 1, "e.09", "History of regular alcohol consumption within 6 months of the study averaging a weekly intake of >14 drinks for males or >7 drinks for females or inability to abstain from alcohol from 1 day prior to the inpatient period of the study until discharge (one drink is equivalent to 8 grams of alcohol: 200 milliliter [mL] of beer, 100 mL of wine or 1 measure (25 mL) of spirits)"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "*", 1, "e.10", "Urinary cotinine levels indicative of smoking or history or regular use of tobacco or nicotine-containing products within 2 months prior to screening or inability to abstain from smoking during the study"));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr", "*", 1, "e.11", "History of sensitivity to any of the study medications, or components thereof or a history of drug or other allergy that, in the opinion of the investigator or Medical Monitor, contraindicates their participation"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "cr", "*", 1, "e.12", "Presence of hepatitis B surface antigen, positive hepatitis C antibody test result at screening or within 3 months prior to first dose of study treatment. Subjects with positive Hepatitis C antibody due to prior resolved disease can be enrolled, only if a confirmatory negative Hepatitis C ribonucleic acid polymerase chain reaction test is obtained."));	 
+            fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "cr", "*", 1, "e.13", "A positive pre-study drug/alcohol screen."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "cr", "*", 1, "e.14", "A positive test for human immunodeficiency antivirus antibody."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr", "*", 1, "e.15", "Donation of blood or blood products in excess of 500 mL within a 56-day period."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "*", 1, "e.16", "The subject has participated in a clinical trial and has received an investigational product within the following time period prior to the first visit (Day -2) in the current study: 30 days, 5 half-lives or twice the duration of the biological effect of the investigational product (whichever is longer)."));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "*", 1, "e.17", "Exposure to more than four new chemical entities within 12 months prior to the first visit (Day -2)."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "*", 1, "e.18", "Exposure to GSK1795091 in a previous cohort of this study."));	 
+            fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "*", 1, "e.19", "Subject is unable to refrain from taking non-prescription drugs (including vitamins and dietary or herbal supplements), within 7 days prior to the first dose of study medication until completion of the follow-up visit, unless in the opinion of the investigator and sponsor, the medication will not interfere with the study."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr", "*", 1, "e.20", "Subject is able to understand and communicate in German/or native language of the site. Subject, or close relative of the subject, is the investigator or a sub-investigator, research assistant, pharmacist, study coordinator, or other staff directly involved with the conduct of the study at that site"));	 
+            fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr", "*", 1, "e.21", "Vulnerable subjects (eg subjects kept in detention)"));	 
            
             fs.countries!.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
             
@@ -2325,47 +2203,259 @@ public class TestData_100120 : TestData_Base
         }
         
         
-        if (sd_sid == "NCT03786900")
+        if (sd_sid == "NCT03076619")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
  
 	        // Study 
 	        
-	        string display_title = "Fecal Microbiota Transplantation (FMT): PRIM-DJ2727";
-	        StringBuilder sb = new StringBuilder("The Fecal Microbiota Transplantation (FMT) product PRIM-DJ2727 is prepared from human stool from a healthy, screened donor.\n\n");
-	        sb.Append("Requestors will contact the study team about the product (PRIM-DJ2727) by email, visit, or phone call. A screening list for donors "); 
-	        sb.Append("will be provided to make sure that the list fits the requestor’s requirements. A basic fee will be requested to recover the cost of "); 
-	        sb.Append("making the product. After an agreement is made, a contract will be signed between the 2 parties. A week before the treatment, requestors "); 
-	        sb.Append("will contact the study team for possible FMT product delivery. Delivery method will be confirmed for delivery by personnel (within 10 "); 
-	        sb.Append("minutes driving distance) or by using FedEx services. Each delivered product will have an approved delivery form signed "); 
-	        sb.Append("and dated by both the person who prepared the delivery and the person who received the package."); 
+	        string display_title = "A Clinical Study of Fundus Findings in Toxaemia of Pregnancy";
+	        StringBuilder sb = new StringBuilder("Toxemia of pregnancy is a recognized entity for over 2000 years with its known complications ");
+	        sb.Append("and fatality. Nowadays, a most accepted terminology for the following defined syndrome is \"hypertensive disorders "); 
+	        sb.Append("in pregnancy\" given by American College of Obstetrics and Gynecology. It is an important cause of maternal and "); 
+	        sb.Append("fetal morbidity and mortality. Pregnancy induced hypertension (PIH) was classified as gestational hypertension, "); 
+	        sb.Append("preeclampsia, severe preeclampsia and eclampsia. PIH is a hypertensive disorder in pregnancy that occurs after 20 weeks "); 
+	        sb.Append("of pregnancy in the absence of other causes of elevated blood pressure (BP) (BP >140/90 mmHg measured two times with "); 
+	        sb.Append("at least of 4 hour interval) in combination with generalized edema and/or proteinuria (>300 mg per 24 hrs). When there "); 
+	        sb.Append("is significant proteinuria it is termed as preeclampsia; seizure or coma as a consequence of PIH is "); 
+	        sb.Append("termed as eclampsia. Preeclampsia was classified into mild and severe preeclampsia.\n"); 
+	        sb.Append("Mild eclampsia-BP >140/90 mmHg, proteinuria+, and/or mild edema of legs, Severe preeclampsia-BP >160/110 mmHg,proteinuria++ or ++++, "); 
+	        sb.Append("headache, cerebral or visual disturbances, epigastric pain, impaired liver function tests and increase in serum creatinine.\n"); 
+	        sb.Append("Proteinuria was tested using dipstick method as +=0.3 gm/L, ++=1 gm/L, and +++=3 gm/L.\n"); 
+	        sb.Append("The pathological changes of this disease appear to be related to vascular endothelial dysfunction and its consequences (generalized vasospasm and "); 
+	        sb.Append("capillary leak). Ocular involvement is common in PIH.Common symptoms are blurring of vision, photopsia, scotomas and diplopia. Visual symptoms may "); 
+	        sb.Append("be the precursor of seizures.Progression of retinal changes correlates with progression of PIH and also with the fetal mortality due to similar vascular "); 
+	        sb.Append("ischemic changes in placenta.Vasospastic manifestations are reversible and the retinal vessels rapidly return to normal after delivery. Ophthalmoscope "); 
+	        sb.Append("should be rated next to the sphygmomanometer as an instrument of diagnostic importance in cases of PIH. Ophthalmoscopy does not only helps in "); 
+	        sb.Append("diagnosing the disease but repeated observations assist in assessing the severity, progress of disease, response to treatment if any and ultimate outcome or prognosis."); 
 	        string brief_desc = sb.ToString();
+	        string dss = "IPD Sharing (as of March 2017): No";
 	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, null, null, 14, 12, null, 915,
-		        null, null, null, null, 7);
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2003, 11, 12, 21, "300", 905,
+		        18, 17, 42, 17, 7);
 	        
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
-		        "ClinicalTrials.gov", null, "11 Dec 2018", null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HSC-SPH-15-0991", 14, 100275, 
-		        "University of Texas Health Science Center, Houston", "https://ror.org/03gds6c39", null, null));
+		        "ClinicalTrials.gov", null, "30 Oct 2016", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "Postgraduation Thesis", 14, null, 
+		        "B J Medical College, Ahmedabad", null, null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "DRKS00011324", 11, 100124, "Deutschen Register Klinischer Studien", null, null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "ChiCTR-OOC-16010171", 11, 100118, "Chinese Clinical Trial Register", null, null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "UMIN000024722", 11, 100156, "University Hospital Medical Information Network CTR", "https://ror.org/05k40gs40", null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "U1111-1189-6165", 11, 100115, "International Clinical Trials Registry Platform", null, null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "TCTR20161221005", 11, 100131, "Thai Clinical Trials Register", null, null, null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "A Clinical Study of Fundus Findings in Toxaemia of Pregnancy (Pregnancy Induced Hypertension)", 16, "en", 11, false, "From ClinicalTrials.gov"));
 	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 70, "Herbert DuPont", "The University of Texas Health Science Center, Houston", 
-		        100275, "University of Texas Health Science Center, Houston", "https://ror.org/03gds6c39"));
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Rahul Bakhda", "Ex-Resident,M and J Western Regional Institute of Ophthalmology, BJMedical College and Civil Hospital Campus, Ahmedabad-380016Gujarat 07922680360 07922680314 Fax:07922680360", 
+		        null, "BJMedical College and Civil Hospital Campus", null));
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Rahul Navinchandra Bakhda", "B J Medical College, Ahmedabad", 
+		        null, "B J Medical College, Ahmedabad", null));
 
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Recurrent Clostridium Difficile Infection", null, null, null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Multidrug-resistant Klebsiella Pneumoniae Urinary Tract Infection", null, null, null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Infections", 14, "D000007239",  "1", "Certain infectious or parasitic diseases"));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Communicable Diseases", 14, "D000003141", "1", "Certain infectious or parasitic diseases"));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Urinary Tract Infections", 14, "D000014552", null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Clostridium Infections", 14, "D000003015", null, null));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "B J Medical College, Ahmedabad", null));
+            fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "M and J Western Regional Institute of Ophthalmology,Ahmedabad", null));
 
-	        fs.relationships!.Add(new StudyRelationship(sd_sid, 24, "NCT02449174"));
-	        fs.relationships!.Add(new StudyRelationship(sd_sid, 24, "NCT02318992"));
+	        fs.features!.Add(new StudyFeature(sd_sid, 30, 630));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 31, 715));   //  
+
+            fs.topics!.Add(new StudyTopic(sd_sid, 11, "Ophthalmoscopy", null, null, "D009887", "Ophthalmoscopy"));
+            fs.topics.Add(new StudyTopic(sd_sid, 11, "Pregnancy induced hypertension", null, null, "D046110", "Hypertension, Pregnancy-Induced"));
+            
+            fs.conditions!.Add(new StudyCondition(sd_sid, "Toxemia", 14, "D000014115", null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, "Hypertension, Pregnancy-Induced", 14, "D000046110", null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, "Pre-Eclampsia", 14, "D000011225", "JA24", "Pre-eclampsia"));
+            fs.conditions.Add(new StudyCondition(sd_sid, "Hypertension", 14, "D000006973", "BA00", "Essential hypertension"));
+            
+			sb = new StringBuilder("Bakhda RN. ");
+			sb.Append("Clinical study of fundus findings in pregnancy induced hypertension. ");
+			sb.Append("J Family Med Prim Care. 2016 Apr-Jun;5(2):424-429. doi: 10.4103/2249-4863.192364.");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "27843854", null, 202, null));
+
+            fs.studylinks!.Add(new StudyLink(sd_sid, "Published article", 
+                   "http://www.jfmpc.com/article.asp?issn=2249-4863;year=2016;volume=5;issue=2;spage=424;epage=429;aulast=Bakhda"));
+
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", "Cases of Pregnancy Induced Hypertension."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 1002, "none", "All", 0, "e.0A", "Cases complicated by malignancy, renal, liver or other secondary manifestations."));	       
+             
+            fs.countries!.Add(new StudyCountry(sd_sid, 1269750, "India", null));
+             
+            fs.sites!.Add(new StudyLocation(sd_sid, null,
+	             "M and J Western Regional Institute of Ophthalmology, BJMedical College and Civil Hospital Campus, Ahmedabad-380016Gujarat 07922680360 07922680314 Fax:07922680360", 
+	             null, 1279233, "Ahmedabad", 1269750, "India", null));
+             
+                
+            // Data Objects
+                
+            // 1) Trial registry entry
+    
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+                null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+           
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+                "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "10 Mar 2017", 2017, 3, 10, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "13 Mar 2017", 2017, 3, 13, null, null, null, null));
+           
+            fs.data_objects!.Add(sdo);
+
+            return fs;
+        
+        }
+            
+        
+        if (sd_sid == "NCT03631199")
+        {
+	        FullStudy fs = CreateEmptyFullStudy();
+ 
+	        // Study 
 	        
-            // no location list, iec - no IEC (!)
+	        string display_title = "Study of Efficacy and Safety of Pembrolizumab Plus Platinum-based Doublet Chemotherapy With or Without Canakinumab in Previously Untreated Locally Advanced or Metastatic Non-squamous and Squamous NSCLC Subjects";
+	        StringBuilder sb = new StringBuilder("This is a phase III study of pembrolizumab plus platinum-based doublet chemotherapy with or without canakinumab in previously ");
+	        sb.Append("untreated locally advanced or metastatic non-squamous and squamous NSCLC subjects.\n"); 
+	        sb.Append("The study will assess primarily the safety and tolerability (safety run-in part) of pembrolizumab plus platinum-based doublet chemotherapy with canakinumab "); 
+	        sb.Append("and then the efficacy (double-blind, randomized, placebo controlled part) of pembrolizumab plus platinum-based doublet chemotherapy with or without canakinumab."); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("IPD Sharing (as of July 2023): Yes\n");
+	        sb.Append("Description: Novartis is committed to sharing with qualified external researchers, access to patient-level ");
+	        sb.Append("data and supporting clinical documents from eligible studies. These requests are reviewed and approved by an independent expert panel "); 
+	        sb.Append("on the basis of scientific merit. All data provided is anonymized to respect the privacy of patients who have "); 
+	        sb.Append("participated in the trial in line with applicable laws and regulations.\n"); 
+	        sb.Append("This trial data is currently available according to the process described on www.clinicalstudydatarequest.com."); 
+	        string dss = sb.ToString();
 	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2018, 12, 11, 15, "675", 900,
+		        18, 17, null, null, 10);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "ClinicalTrials.gov", null, "6 Aug 2018", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "CACZ885U2301", 14, 100189, 
+		        "Novartis", "https://ror.org/02f9zrr09", null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "2018-001547-32", 11, 100123, 
+		        "EU Clinical Trials Register", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
+	        string title =
+		        "A Randomized, Double-blind, Placebo-controlled, Phase III Study Evaluating the Efficacy and Safety of Pembrolizumab Plus Platinum-based Doublet Chemotherapy ";
+	        title += "With or Without Canakinumab as First Line Therapy for Locally Advanced or Metastatic Non-squamous and Squamous Non-small Cell Lung Cancer Subjects (CANOPY-1)";
+	        fs.titles.Add(new StudyTitle(sd_sid, title, 16, "en", 11, false, "From ClinicalTrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "CANOPY-1", 14, "en", 11, false, "From ClinicalTrials.gov"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100189, "Novartis", "https://ror.org/02f9zrr09"));
+	        
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 520));   // 
+
+            fs.topics!.Add(new StudyTopic(sd_sid, 11, "ACZ885", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Canakinumab", null, null, "C541220", "canakinumab"));
+	        
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Nab-paclitaxel", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Non small cell lung cancer", null, null, "D002289", "Carcinoma, Non-Small-Cell Lung"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Squamous", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Non-squamous", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "HsCRP", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "IL-1β", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "PD-L1", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "CANOPY", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "CANOPY-1", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Platinum-based doublet chemotherapy", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "First line therapy", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Locally advanced", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Metastatic", null, null, "D009362", "Neoplasm Metastasis"));
+	        
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Paclitaxel", 14, "D000017239", "D017239", "Paclitaxel"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Albumin-Bound Paclitaxel", 14, "D000068196", "D000068196", "Albumin-Bound Paclitaxel"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Carboplatin", 14, "D000016190", "D016190", "Carboplatin"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Pembrolizumab", 14, "C000582435", "C582435", "pembrolizumab"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Pemetrexed", 14, "D000068437", "D000068437", "Pemetrexed"));	 	        
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Antibodies, Monoclonal", 14, "D000000911", "D000911", "Antibodies, Monoclonal"));
+            fs.topics.Add(new StudyTopic(sd_sid, 12, "Cisplatin", 14, "D000002945", "D002945", "Cisplatin"));
+            
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Lung Neoplasms", 14, "D000008175", "2C25", "Malignant neoplasms of bronchus or lung"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma, Non-Small-Cell Lung", 14, "D000002289", "2C25", "Malignant neoplasms of bronchus or lung"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Non-small Cell Lung Cancer", null, null, "2C25", "Malignant neoplasms of bronchus or lung"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "NSCLC", null, null, "2C25", "Malignant neoplasms of bronchus or lung"));
+	        
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "*", 1, "n.01", "Histologically confirmed locally advanced stage IIIB or stage IV NSCLC for treatment in the first-line setting"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.02", "Known PD-L1 status determined by a Novartis designated central laboratory. A newly obtained tissue biopsy or an archival biopsy (block or slides) is required for PD-L1 determination (PD-L1 IHC 22C3 pharmDx assay), prior to study randomization. Note: For the safety run-in part, known PD-L1 status is not required."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.03", "Eastern Cooperative oncology group (ECOG) performance status of 0 or 1."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "*", 1, "n.04", "At least 1 measurable lesion by RECIST 1.1"));
+	        
+            fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "*", 1, "e.01", "Previous immunotherapy (e.g. anti-PD-1, anti-PD-L1, anti-PD-L2, anti-CTLA-4 antibody, or any other antibody or drug specifically targeting T-cell co-stimulation or immune checkpoint pathways)."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "*", 1, "e.02", "Prior treatment with canakinumab or drugs of a similar mechanism of action (IL-1β inhibitor)."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "*", 1, "e.03", "Subjects with epidermal growth factor receptor (EGFR) sensitizing mutations (identified in exons 19, 20, or 21), and/or ALK rearrangement by locally approved laboratory testing."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "*", 1, "e.04", "Previously untreated or symptomatic central nervous system (CNS) metastases or lepto-meningeal disease."));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.05", "Subject with suspected or proven immune-compromised state or infections."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "*", 1, "e.06", "Subject has prior to starting study drug: received live vaccination ≤3 months, had major surgery ≤4 weeks prior to starting study drug, has thoracic radiotherapy: lung fields ≤ 4 weeks, other anatomic sites ≤ 2 weeks, palliative radiotherapy for bone lesions ≤ 2 weeks."));	 
+            fs.iec.Add(new StudyIEC(sd_sid, 11, 202, "cr", "Spp", 1, "e.07", "Other protocol-defined inclusion/exclusion criteria may apply."));	 
+            
+            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3865483, "Argentina", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2077456, "Australia", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2782113, "Austria", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3469034, "Brazil", null));
+             
+            fs.countries.Add(new StudyCountry(sd_sid, 6251999, "Canada", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3895114, "Chile", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1814991, "China", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3686110, "Colombia", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3077311, "Czechia", null));
+             
+            fs.countries.Add(new StudyCountry(sd_sid, 2623032, "Denmark", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 660013, "Finland", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3017382, "France", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 390903, "Greece", null));
+             
+            fs.countries.Add(new StudyCountry(sd_sid, 1819730, "Hong Kong", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 719819, "Hungary", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2629691, "Iceland", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1269750, "India", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3175395, "Italy", null));
+
+            fs.countries.Add(new StudyCountry(sd_sid, 1861060, "Japan", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1835841, "South Korea", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 272103, "Lebanon", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1733045, "Malaysia", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2750405, "Netherlands", null));
+             
+            fs.countries.Add(new StudyCountry(sd_sid, 3144096, "Norway", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1694008, "Philippines", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 798544, "Poland", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2264397, "Portugal", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 798549, "Romania", null));
+             
+            fs.countries.Add(new StudyCountry(sd_sid, 2017370, "Russia", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1880251, "Singapore", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 3057568, "Slovakia", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2510769, "Spain", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2661886, "Sweden", null));
+             
+            fs.countries.Add(new StudyCountry(sd_sid, 2658434, "Switzerland", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1668284, "Taiwan", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1605651, "Thailand", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 298795, "Turkey", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
+            fs.countries.Add(new StudyCountry(sd_sid, 1562822, "Vietnam", null));
+             
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "Pacific Shores Medical Group", null, 5125086, "Long Beach", 6252001, "United States", null));
+			fs.sites.Add(new StudyLocation(sd_sid, null, "USC Kenneth Norris Comprehensive Cancer Center", null, 5368361, "Los Angeles", 6252001, "United States", null));
+			fs.sites.Add(new StudyLocation(sd_sid, null, "Advent Health Cancer Institute", null, 4167147, "Orlando", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, 100223, "Dana-Farber Cancer Institute", "https://ror.org/02jzgtq86", 4930956, "Boston", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Buenos Aires", 3865483, "Argentina", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Melbourne", 2077456, "Australia", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Murdoch", 2077456, "Australia", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Linz", 2782113, "Austria", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Salzburg", 2782113, "Austria", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Novartis Investigative Site", null, null, "Sao Paulo", 3469034, "Brazil", null));
+             
             // Data Objects
 	        
             // 1) Trial registry entry
@@ -2380,357 +2470,136 @@ public class TestData_100120 : TestData_Base
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "26 Dec 2018", 2018, 12, 26, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "24 May 2023", 2023, 5, 24, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "15 Aug 2018", 2018, 8, 15, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "1 Aug 2023", 2023, 8, 1, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
 
             return fs;
-            
         }
         
         
-        if (sd_sid == "NCT02449174")
+        if (sd_sid == "NCT04406714")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
  
 	        // Study 
 	        
-	        string display_title = "Fecal Microbiota Transplantation to Treat Recurrent C. Difficile Associated Diarrhea Via Retention Enema or Oral Route";
-	        StringBuilder sb = new StringBuilder("The objective of the study is to investigate the safety of a frozen or lyophilized inoculum administered, ");
-	        sb.Append("respectively, by retention enema or capsules in patients with recurrent C. difficile associated diarrhea (RCDAD).\n\n"); 
-	        sb.Append("This is a single center, randomized, parallel assignment, open label safety study conducted in subjects with RCDAD. Fifty "); 
-	        sb.Append("subjects will be enrolled in the study and randomized at 1:1 ratio to receive frozen filtered intestinal bacteria via retention "); 
-	        sb.Append("enema or lyophilized donor intestinal bacteria. All subjects will be followed for a total of 3 years after study completion.\n\n"); 
-	        sb.Append("Donors will be enrolled and screened at the laboratory in the Center for Infectious Diseases at University of Texas School of "); 
-	        sb.Append("Public Health (UT-SPH). The donors will come from a variety of places, including the UT-SPH. "); 
-	        sb.Append("At least 20 donors will be screened to recruit at least 15 qualified donors.\n\n"); 
-	        sb.Append("Recipients may self-refer but must have a physician who agrees to accept care of the patient following fecal microbiota transplantation (FMT). "); 
-	        sb.Append("Subjects consenting to treatment at Baylor St. Luke’s Medical Center (BSLMC) and the UT-SPH must be willing to self-pay for the FMT in the "); 
-	        sb.Append("amount of $1,500. There will be no insurance accepted. Subjects undergoing retention enema will be treated as outpatients at either at BSLMC, "); 
-	        sb.Append("Kelsey-Seybold Clinic, or at the Memorial Hermann in the Texas Medical Center. All subjects taking capsules with lyophilized intestinal bacteria "); 
-	        sb.Append("will be seen at UT-SPH. Once the procedure is completed, the recipient’s care will be returned to their physician. "); 
-	        sb.Append("At least 75 recipients will be screened to recruit 50 qualified recipients.\n\n"); 
-	        sb.Append("The primary endpoint is to evaluate the safety of FMT by rectal or oral routes with secondary endpoint related to efficacy prevention of RCDAD. "); 
-	        sb.Append("In order to monitor any health effects for safety, participants will be contacted pre- and 7, 14, 30 days, then monthly basis for the first 90 ");
-	        sb.Append("days after FMT and quarterly till 3 years after FMT. The following procedures will be completed: review recipient diary with the recipient to ");
-	        sb.Append("ensure that the following information is recorded correctly and a fresh stool sample will be collected from recipient, tested for C. difficile ");
-	        sb.Append("toxins and an aliquot (2mL) stored at -80C for microbiome analysis. Recipients will be contacted by phone for their diarrhea status on ");
-	        sb.Append("monthly basis till 90 days after FMT, then on quarterly basis till 3 years after FMT."); 
-	        string brief_desc = sb.ToString();	        
-	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2015, 3, 11, 21, "69", 900,
-		        18, 17, null, null, 10);
-	        
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
-		        "ClinicalTrials.gov", null, "17 Dec 2014", null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HSC-SPH-14-0020", 14, 100275, 
-		        "University of Texas Health Science Center, Houston", "https://ror.org/03gds6c39", null, null));
-	        
-	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "A Study of Fecal Microbiota Transplantation (FMT) for the Treatment of Recurrent C. Difficile Associated Diarrhea (RCDAD) Via Retention Enema or Oral Route", 
-		        16, "en", 11, false, "From ClinicalTrials.gov"));
-	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Zhi-Dong Jiang", "The University of Texas Health Science Center, Houston", 
-		        null, "University of Texas School of Public Health", null));
-	        fs.people.Add(new StudyPerson(sd_sid, 51, "Herbert l DuPont", "University of Texas School of Public Health", 
-		        null, "University of Texas School of Public Health", null));
-	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "The University of Texas Health Science Center, Houston", null));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Roderick MacDonald Research Fund at Baylor St Luke’s", null));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Kelsey Research Foundation", null));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null , "Texas Gulf Coast Digestive Diseases Center", null));
-
-	        fs.features!.Add(new StudyFeature(sd_sid, 20, 110));  // 
-	        fs.features.Add(new StudyFeature(sd_sid, 20, 120));  // 
-	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 24, 505));   // 
-
-            fs.topics!.Add(new StudyTopic(sd_sid, 11, "Fecal Microbiota transplantation", null, null, "D000069467", "Fecal Microbiota Transplantation"));
-            
-            fs.conditions!.Add(new StudyCondition(sd_sid, "C. Difficile", null, null, null, null));
-            fs.conditions.Add(new StudyCondition(sd_sid, "Diarrhea", 14, "D000003967", null, null));
-            
-            fs.relationships!.Add(new StudyRelationship(sd_sid, 23, "NCT03786900"));
-
-            sb = new StringBuilder("Jiang ZD, Jenq RR, Ajami NJ, Petrosino JF, Alexander AA, Ke S, Iqbal T, DuPont AW, Muldrew K, Shi Y, Peterson C, Do KA, DuPont HL. ");
-			sb.Append("Safety and preliminary efficacy of orally administered lyophilized fecal microbiota product compared with frozen product given by enema for recurrent Clostridium difficile infection: A randomized clinical trial. ");
-			sb.Append("PLoS One. 2018 Nov 2;13(11):e0205064. doi: 10.1371/journal.pone.0205064. eCollection 2018.");
-			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "30388112", null, null, null));
-
-            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "*", 1, "n.01", "Male and female subjects 18 years of age or older"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.02", "Sexually active female subjects of child-bearing potential must agree to use an effective method of birth control during the treatment and follow-up period"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.03", "Required to sign an informed consent form"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "*", 1, "n.04", "Subject\"s attending physician agrees to provide care following FMT"));
-            fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "*", 1, "n.05", "Able to follow study procedures and follow-ups."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "*", 1, "n.06", "Diagnosed by medical history of ≥ 3 RCDAD bouts in outpatients or ≥ 2 bouts of RCDAD in an inpatient with ≥ 2 positive fecal tests for C. difficile toxin"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "*", 1, "n.07", "Received at least one course of adequate antibiotic therapy for CDAD (≥ 10 days of vancomycin, metronidazole or fidaxomicin) after the subjects last bout of CDAD"));
-            
-            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "*", 1, "e.01", "Subjects with known neutropenia with absolute neutrophil count <0.5 x 109/L"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.02", "Evidence of toxic megacolon, fulminant colitis, gastrointestinal perforation, ileus, abdominal distension, lack of bowel sounds, fever, or hypotension"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "*", 1, "e.03", "Known peripheral white blood cell count > 15.0 x 109/L or temperature > 38.0 °C"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "*", 1, "e.04", "Diarrhea due to definable non-CDAD pathogen"));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "*", 1, "e.05", "Post total colectomy or presence of a colostomy"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "*", 1, "e.06", "Unable to tolerate FMT via enema for any reason"));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "*", 1, "e.07", "Requiring systemic non-C. difficile antibiotic therapy at the time of FMT"));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "*", 1, "e.08", "Actively taking Saccharomyces boulardii or other probiotic at the time of FMT"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "*", 1, "e.09", "Need for continuing use of oral vancomycin, oral or IV metronidazole, fidaxomicin, rifaximin or nitazoxanide at the time of FMT"));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "*", 1, "e.10", "Severe underlying disease such that the patient is not expected to survive for one or more years or unstable medical condition requiring daily change in treatments"));	
-            
-            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
-            
-            fs.sites!.Add(new StudyLocation(sd_sid, null, "University of Texas Health Science Center at Housotn", null, 4699066, "Houston", 6252001, "United States", null));
-            
-            // Data Objects
-	        
-            // 1) Trial registry entry
-
-            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
-            string ob_title = display_title + " :: CTG registry entry";
-            StudyDataObject sdo = CreateEmptyStudyDataObject();
-	        
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-	            null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "20 May 2015 (est.)", 2015, 5, 20, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "25 Mar 2019", 2019, 3, 25, null, null, null, null));
-	       
-            fs.data_objects!.Add(sdo);
-            
-            // 2) Trial results entry
-			
-            sd_oid = sd_sid + " :: 28 :: CTG results entry";
-            ob_title = display_title + " :: CTG results entry";
-            sdo = CreateEmptyStudyDataObject();
-			
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
-	            null, 9, 2019, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "25 Mar 2019", 2019, 3, 25, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "25 Mar 2019", 2019, 3, 25, null, null, null, null));
-
-            fs.data_objects!.Add(sdo);
-            
-            // 3) Study Protocol and Statistical Analysis Plan
-	        
-            sd_oid = sd_sid + " :: 74 :: Study Protocol and Statistical Analysis Plan";
-            ob_title = display_title + " :: Study Protocol and Statistical Analysis Plan";
-            sdo = CreateEmptyStudyDataObject();
-	        
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol and Statistical Analysis Plan", null, ob_title,
-	            null, 9, 2019, 23, 74, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-	            "https://storage.googleapis.com/ctgov2-large-docs/74/NCT02449174/Prot_SAP_000.pdf", 
-	            true, 11, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "13 Jul 2017", 2017, 7, 13, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 12, false, "21 Mar 2019", 2019, 3, 21, null, null, null, null));
-            fs.data_objects!.Add(sdo);
-            
-            return fs;
-        }
-        
-        
-        if (sd_sid == "NCT02922075")
-        {
-	        FullStudy fs = CreateEmptyFullStudy();
- 
-	        // Study 
-	        
-	        string display_title = "Impact of Soft Tissue Grafts on Tissue Alterations After Immediate Tooth Replacement";
-	        StringBuilder sb = new StringBuilder("This study evaluates the impact of soft tissue grafts on soft tissue recession following immediate implant, ");
-	        sb.Append("provisional and bone graft placement in compromised sockets. One third of the patients received a collagen matrix (CM group), "); 
-	        sb.Append("another third received a connective tissue graft removed from the palate (CTG group) and the final third did not receive any soft tissue graft (CTL group)."); 
+	        string display_title = "Scaling CRC Screening Through Outreach, Referral, and Engagement (SCORE)";
+	        StringBuilder sb = new StringBuilder("This study will test the effectiveness of mailing fecal immunochemical tests (FITs) in increasing colorectal cancer (CRC) ");
+	        sb.Append("screening rates in U.S. adults ages 45-75. We are implementing this study in two age groups, 45-49 years and 50-75 years."); 
 	        string brief_desc = sb.ToString();
-	        string dss = "IPD Sharing (as of September 2016): Undecided ";
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2013, 2, 11, 21, "24", 900,
-		        18, 17, 70, 17, 10);
+	        sb = new StringBuilder("IPD Sharing (as of June 2023): Yes\nDescription: As outlined in the Notice of Award, each study site must make its Limited Data Set ");
+	        sb.Append("(LDS) accessible to other sites in the ACCSIS consortium. Information Management Services (IMS) will serve as the "); 
+	        sb.Append("repository and have responsibility for creating a Limited Consolidated Data Set (LCDS) for analytic use of researchers "); 
+	        sb.Append("both within and external to the ACCSIS consortium. Dataset Items in the LDS are defined by the Common Data Elements. ");
+	        sb.Append("There also will be a \"public use data set\" that consists of the Common Data Elements, available to external researchers. "); 
+	        sb.Append("IMS will use a systematic process to remove identifiers. In addition, all data that underlie results in publications "); 
+	        sb.Append("will be available per Cancer Moonshot Notice of Award.\n"); 
+	        sb.Append("Time frame: The IPD sharing time frame has not been defined at this time.\n"); 
+	        sb.Append("Access Criteria: There are 2 classes of dataset requests: public use and special. Requests are submitted via the IMS website. "); 
+	        sb.Append("Requestors electronically sign and submit necessary forms, including an agreement to acknowledge ACCSIS in publications and presentations. "); 
+	        sb.Append("A public use dataset containing common data elements is made available to external researchers by application. IMS responds to public use "); 
+	        sb.Append("dataset applications by sending the requestor one-time access to a data download link. External researchers may also request a more "); 
+	        sb.Append("customized data set. Requestors must submit a brief concept form or ancillary studies form, for preliminary review by the ACCSIS "); 
+	        sb.Append("Steering Committee (SC), before invitation to submit a full proposal. Full proposals receive administrative review by NCI and RTI before "); 
+	        sb.Append("being sent to the SC for review and approval. Requestors report every 6 months and published articles or conference presentations "); 
+	        sb.Append("to RTI. Requestors are encouraged to make articles available through PubMed Central.\n");
+	        sb.Append("Additional information available: Study Protocol"); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2020, 7, 11, 15, "4400", 900, 
+		        45, 17, 75, 17, 10);
 	        
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
-		        "ClinicalTrials.gov", null, "24 Sep 2016", null));
+		        "ClinicalTrials.gov", null, "22 May 2020", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "LCCC2056", 14, 100482, 
+		        "UNC Lineberger Comprehensive Cancer Center", null, null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "4UH3CA233251-02", 13, 100134, 
+		        "National Institutes of Health", "https://ror.org/01cwqze88" , null,
+		        "https://reporter.nih.gov/quickSearch/4UH3CA233251-02"));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "Soft and Hard Tissue Stability After Immediate Tooth Replacement With Implant in Fresh Sockets Grafted With Different Soft Tissue Grafts",
+	        fs.titles.Add(new StudyTitle(sd_sid, 
+		        "Scaling Colorectal Cancer Screening Through Outreach, Referral, and Engagement (SCORE): A State-Level Program to Reduce Colorectal Cancer Burden in Vulnerable Populations", 
 		        16, "en", 11, false, "From ClinicalTrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "SCORE", 14, "en", 11, false, "From ClinicalTrials.gov"));
 	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Elcio Marcantonio Jr", null, null, null, null));
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Daniel S Reuland", "University of North Carolina, Chapel Hill", 
+		        100714, "University of North Carolina System", "https://ror.org/0566a8c54"));
 	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 101740, "Universidade Estadual Paulista Júlio de Mesquita Filho", "https://ror.org/00987cb86"));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100337, "Fundação de Amparo à Pesquisa do Estado de São Paulo", null));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Conselho Nacional de Desenvolvimento Científico e Tecnológico", null));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100482, "UNC Lineberger Comprehensive Cancer Center", null));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100162, "National Cancer Institute", "https://ror.org/040gcmg81"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 101767, "East Carolina University", "https://ror.org/01vx35703"));
 
-	        fs.features!.Add(new StudyFeature(sd_sid, 20, 135));  // 
-	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
-	        
-	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "gingival recession", null, null, "D005889", "Gingival Recession"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "immediate implant and provisional placement", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "bone graft", null, null, "D016025", "Bone Transplantation"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "connective tissue graft", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "collagen matrix", null, null, null, null));
-	        
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Amoxicillin", 14, "D000000658", "D000658", "Amoxicillin"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Chlorhexidine", 14, "D000002710", "D002710", "Chlorhexidine"));
-	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Tooth Socket", null, null, null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Dental Implants", null, null, null, null));
+		    fs.features!.Add(new StudyFeature(sd_sid, 20, 100));  // 
+		    fs.features.Add(new StudyFeature(sd_sid, 21, 425));   // 
+		    fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+		    fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+		    fs.features.Add(new StudyFeature(sd_sid, 24, 505));   // 
 
-	        string c1 = "Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets.\n\n";
-	        c1 += "All data can be downloaded from the website, if there are any questions please feel free to contact us.";   
-	        string c2 = "Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets.";
-	        c2 += "All data can be downloaded from the website, if there are any questions please feel free to contact us.";  
-	        
-	        fs.ipd_info!.Add(new AvailableIPD(sd_sid, null, "Individual Participant Data Set", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c1));
-	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Study Protocol", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
-	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Statistical Analysis Plan", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
-	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Informed Consent Form", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
-	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Clinical Study Report", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
-	        fs.ipd_info.Add(new AvailableIPD(sd_sid, null, "Analytic Code", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c2));
+	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Cancer Screening", null, null, "D055088", "Early Detection of Cancer"));
+		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Colonoscopy", null, null, "D003113", "Colonoscopy"));
+		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Community Health Centers", null, null, "D003151", "Community Health Centers"));
+		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Implementation Science", null, null, "D000077626", "Implementation Science"));
+		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Patient Navigation", null, null, "D062526", "Patient Navigation"));
+		   
+		    fs.conditions!.Add(new StudyCondition(sd_sid, "Colorectal Neoplasms", 14, "D000015179", "B5-2B9", "Malignant neoplasms of large intestine"));
+		    fs.conditions!.Add(new StudyCondition(sd_sid, "Colorectal Cancer", null, null, "B5-2B9", "Malignant neoplasms of large intestine"));
+		    
+            fs.studylinks!.Add(new StudyLink(sd_sid, "UNC Lineberger Comprehensive Cancer Center Clinical Trials", "https://unclineberger.org/patientcare/clinical-trials"));
+
+            sb = new StringBuilder("Malo TL, Correa SY, Moore AA, Ferrari RM, Leeman J, Brenner AT, Wheeler SB, Tan X, Reuland DS; ");
+            sb.Append("Scaling Colorectal Cancer Screening Through Outreach, Referral, and Engagement (SCORE) Study Protocol Consortium. Centralized colorectal cancer screening outreach and patient navigation for vulnerable populations in North Carolina: study protocol for the SCORE randomized controlled trial. ");
+            sb.Append("Implement Sci Commun. 2021 Oct 7;2(1):113. doi: 10.1186/s43058-021-00194-x.");
+            fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "34620250", null, 12, null));
             
-	        fs.studylinks!.Add(new StudyLink(sd_sid, "All data can be downloaded from the website, if there are any questions please feel free to contact us",
-		                "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf" ));
-
-            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "*", 1, "n.01", "Presence of a failing maxillary incisor with neighbouring teeth and harmonic gingival contour;"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.02", "Operated area with appropriate palatal/apical bone to install the implant;"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.03", "A buccal wall defect confirmed by cone beam computed tomography;"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "*", 1, "n.04", "Clinical attachment level > 3 mm;"));
-            fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "*", 1, "n.05", "Good oral hygiene with visible plaque index < 20%;"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "*", 1, "n.06", "No bone loss in the neighbouring teeth;"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "*", 1, "n.07", "Implant primary stability > 32N"));
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "*", 1, "n.01", "Age 45-75 years"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.02", "At average risk for CRC (\"average risk\" is defined as those patients who do not have any of the following: documented history of CRC, colorectal neoplasms, colorectal polyps, colonic adenomas, family history of CRC among first degree relative [father, mother, sister, brother], or diagnosis of inflammatory bowel disease)"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.03", "No record of fecal occult blood test (FOBT)/FIT within the past 12 months or colonoscopy within 10 years, sigmoidoscopy within 5 years, barium enema within 5 years, or computed tomography (CT) colonography within 10 years of the EHR query date"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "*", 1, "n.04", "No record of any CRC diagnosis or total colectomy"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "*", 1, "n.05", "No record of comorbidities or screening contraindications, including dementia, hospice care, assisted living, end-stage renal disease, and other cancers (glioblastoma, pancreatic cancer, lung cancer, esophageal cancer, liver and bile duct cancer, mesothelioma)"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "*", 1, "n.06", "Has a complete North Carolina mailing address in the EHR"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "*", 1, "n.07", "Active patient of the clinic (seen within the past 18 months) at the time of randomization"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 1, "cr", "*", 1, "n.08", "No record of a positive (abnormal) FIT result in the first study round (Trial Ages 50-75 only)"));
 	        
-            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "*", 1, "e.01", "History of periodontal surgeries in the failing tooth;"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.02", "Occlusal instability;"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "*", 1, "e.03", "Systemic alterations that could compromise the surgical procedure, such ass smokers, bruxists; drug users; patients with diabetes or pregnants."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "*", 1, "e.04", "Active infection involving the gingival margin"));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "*", 1, "e.05", "Patients undergoing radiotherapy in the head and neck area. Patients presented history of bone associated diseases or medication affecting bone metabolism;"));	       
- 
-            fs.countries!.Add(new StudyCountry(sd_sid, 3469034, "Brazil", null));
-            
-            fs.sites!.Add(new StudyLocation(sd_sid, null, "Araraquara Dental School at the São Paulo State University", null, 3471766, "Araraquara", 3469034, "Brazil", null));
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.01", "Age younger than 45 years or older than 75 years"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 2, "cr", "*", 1, "e.02", "Not at average risk for CRC (\"average risk\" is defined as those patients who do not have any of the following: documented history of CRC, colorectal neoplasms, colorectal polyps, colonic adenomas, family history of CRC among first degree relative [father, mother, sister, brother], or diagnosis of inflammatory bowel disease)"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 11, 2, "cr", "*", 1, "e.03", "Record of FOBT/FIT within the past 12 months or colonoscopy within 10 years, sigmoidoscopy within 5 years, barium enema within 5 years, or CT colonography within 10 years of the EHR query date"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "*", 1, "e.04", "Record of any CRC diagnosis or total colectomy"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "*", 1, "e.05", "Record of comorbidities or screening contraindications, including dementia, hospice care, assisted living, end-stage renal disease, and other cancers (glioblastoma, pancreatic cancer, lung cancer, esophageal cancer, liver and bile duct cancer, mesothelioma)"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "*", 1, "e.06", "Does not have a complete North Carolina mailing address in the EHR"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "*", 1, "e.07", "Not an active patient of the clinic (not seen within the past 18 months) at the time of randomization"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "*", 1, "e.08", "Record of a positive (abnormal) FIT result reported during the first study round (Trial Ages 50-75)"));	 
 	        
-            // Data Objects
-	        
-            // 1) Trial registry entry
-
-            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
-            string ob_title = display_title + " :: CTG registry entry";
-            StudyDataObject sdo = CreateEmptyStudyDataObject();
-	        
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-	            null, 9, 2016, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "3 Oct 2016 (est.)", 2016, 10, 3, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "3 Oct 2016 (est.)", 2016, 10, 3, null, null, null, null));
-	       
-            fs.data_objects!.Add(sdo);
-
-            return fs;
+	        fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
              
+	        fs.sites!.Add(new StudyLocation(sd_sid, null, "Roanoke Chowan Community Health Center", null, null, "Ahoskie", 6252001, "United States", null));
+	        fs.sites.Add(new StudyLocation(sd_sid, null, "Blue Ridge Health", null, null, "Hendersonville", 6252001, "United States", null));
+	        
+	        // Data Objects
+	        
+	        // 1) Trial registry entry
+
+	        string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+	        string ob_title = display_title + " :: CTG registry entry";
+	        StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+		        null, 9, 2020, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+		        "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "28 May 2020", 2020, 5, 28, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "28 Jun 2023", 2023, 6, 28, null, null, null, null));
+	       
+	        fs.data_objects!.Add(sdo);
+
+	        return fs;
         }
-      
         
-        if (sd_sid == "NCT03050593")
-        {
-	        FullStudy fs = CreateEmptyFullStudy();
- 
-	        // Study 
-	        
-	        string display_title = "Developing Imaging And plasMa biOmarkers iN Describing Heart Failure With Preserved Ejection Fraction (DIAMONDHFpEF)";
-	        StringBuilder sb = new StringBuilder("The investigators wish to test a hypothesis that patients with HFpEF have different characteristics on echo, ");
-	        sb.Append("cardiac MRI and plasma protein & chemical profiles compared to HFrEF and healthy volunteers."); 
-	        string brief_desc = sb.ToString();
-	        string dss = "IPD Sharing (as of May 2015): No ";
-
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2013, 2, 12, 21, "280", 900,
-		        18, 17, null, null, 8);
-	        
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
-		        "ClinicalTrials.gov", null, "6 Feb 2017", null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "0328", 14, 100837, 
-		        "University of Leicester", "https://ror.org/04h699437", null, null));
-	        
-	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "Prospective, Observational, Single-centre, Cohort Study Aimed at Developing Imaging and Plasma Biomarkers in Heart Failure With Preserved Ejection Fraction",
-		        16, "en", 11, false, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "DIAMONDHFpEF",
-		        14, "en", 11, false, "From ClinicalTrials.gov"));
-	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54,  100837, "University of Leicester", "https://ror.org/04h699437"));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100442, "National Institute for Health Research", "https://ror.org/0187kwz08"));
-
-	        fs.features!.Add(new StudyFeature(sd_sid, 30, 600));  // 
-	        fs.features.Add(new StudyFeature(sd_sid, 31, 705));   //  
-            fs.features.Add(new StudyFeature(sd_sid, 32, 805));   //
-            
-	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "HFpEF", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 11, "HFrEF", null, null, null, null));
-	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Patients With Heart Failure and Preserved Ejection Fraction - HFpEF", null, null, null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Patients With Heart Failure With Reduced Ejection Fraction - HFrEF", null, null, null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Healthy Controls Group - Age and Sex-matched", null, null, null, null));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "Heart Failure", 14, "D000006333", "B1-BD1", "Heart failure"));
-
-			sb = new StringBuilder("Gulsin GS, Kanagala P, Chan DCS, Cheng ASH, Athithan L, Graham-Brown MPM, Singh A, Yang J, Li Z, Khunti K, Davies MJ, Arnold JR, Squire IB, Ng LL, McCann GP. ");
-			sb.Append("Differential left ventricular and left atrial remodelling in heart failure with preserved ejection fraction patients with and without diabetes. ");
-			sb.Append("Ther Adv Endocrinol Metab. 2019 Jul 5;10:2042018819861593. doi: 10.1177/2042018819861593. eCollection 2019.");
-			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "31308926", null, null, null));
-
-			sb = new StringBuilder("Kanagala P, Cheng ASH, Singh A, Khan JN, Gulsin GS, Patel P, Gupta P, Arnold JR, Squire IB, Ng LL, McCann GP. ");
-			sb.Append("Relationship Between Focal and Diffuse Fibrosis Assessed by CMR and Clinical Outcomes in Heart Failure With Preserved Ejection Fraction. ");
-			sb.Append("JACC Cardiovasc Imaging. 2019 Nov;12(11 Pt 2):2291-2301. doi: 10.1016/j.jcmg.2018.11.031. Epub 2019 Feb 13.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30772227", null, null, null));
-
-			sb = new StringBuilder("Kanagala P, Cheng ASH, Singh A, McAdam J, Marsh AM, Arnold JR, Squire IB, Ng LL, McCann GP. ");
-			sb.Append("Diagnostic and prognostic utility of cardiovascular magnetic resonance imaging in heart failure with preserved ejection fraction - implications for clinical trials. ");
-			sb.Append("J Cardiovasc Magn Reson. 2018 Jan 11;20(1):4. doi: 10.1186/s12968-017-0424-9.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29321034", null, null, null));
-
-            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", "Clinical features of heart failure or prior radiographic evidence in the absence of symptoms And Either ejection fraction > 50% (for HFpEF arm) or ejection fraction < 40% (for HFrEF arm)"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 2, 2, "cr", "*", 1, "e.01", "Myocardial infarction within the preceding 6 months"));
-            fs.iec.Add(new StudyIEC(sd_sid, 3, 2, "cr", "*", 1, "e.01", "Suspected or confirmed cardiomyopathy (e.g. hypertrophic, infiltrative)"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "*", 1, "e.02", "Suspected or confirmed constrictive pericarditis"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "*", 1, "e.03", "Significant native valve disease (≥ moderate severity)"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "*", 1, "e.04", "Known Significant lung disease (documented or FEV1< 30% or FVC < 50%)"));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "*", 1, "e.05", "Non-cardiovascular co-morbidity likely to cause death within 6 months (e.g. malignancy)"));	
-	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "*", 1, "e.06", "Significant renal failure (estimated GFR < 30 ml/min/m2)"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.07", "Patient inability to provide informed consent (e.g. dementia)"));	 
-           
-            // Data Objects
-	        
-            // 1) Trial registry entry
-
-            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
-            string ob_title = display_title + " :: CTG registry entry";
-            StudyDataObject sdo = CreateEmptyStudyDataObject();
-	        
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-	            null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "13 Feb 2017", 2017, 2, 13, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "13 Feb 2017", 2017, 2, 13, null, null, null, null));
-	       
-            fs.data_objects!.Add(sdo);
-
-            return fs;
-        }
-       
-     
+        
         if (sd_sid == "NCT02318992")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
@@ -2755,9 +2624,9 @@ public class TestData_100120 : TestData_Base
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
         
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Herbert L DuPont", "The University of Texas Health Science Center, Houston", 
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Herbert L DuPont", "University of Texas Health Science Center, Houston", 
 		        100275, "University of Texas Health Science Center, Houston", "https://ror.org/03gds6c39"));
-	        fs.people.Add(new StudyPerson(sd_sid, 51, "Zhi-Dong Jiang", "The University of Texas Health Science Center, Houston", 
+	        fs.people.Add(new StudyPerson(sd_sid, 51, "Zhi-Dong Jiang", "University of Texas Health Science Center, Houston", 
 		        100275, "University of Texas Health Science Center, Houston", "https://ror.org/03gds6c39"));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100275, "University of Texas Health Science Center, Houston", "https://ror.org/03gds6c39"));
@@ -2774,41 +2643,41 @@ public class TestData_100120 : TestData_Base
 
 	        fs.relationships!.Add(new StudyRelationship(sd_sid, 23, "NCT03786900"));
 	        
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "*", 1, "n.01", "Recipients"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.02", "Male and female patients ≥ 18 years of age"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.03", "Sexually active male and female patients of child-bearing potential must agree to use an effective method of birth control during the treatment and follow-up period"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "*", 1, "n.04", "Female patients of child-bearing potential must have a negative pregnancy test in the 72 hours before the procedure"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "*", 1, "n.05", "Required to sign an informed consent form"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "*", 1, "n.06", "Deemed likely to survive for ≥ 3 months after enrolment"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "*", 1, "n.07", "Diagnosis of ≥ 3 recurrent CDAD (RCDAD) bouts in outpatients or ≥ 2 bouts of CDAD in an inpatient without other explanation for diarrhea and with ≥ 2 positive fecal tests for C. difficile toxin"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 8, 1, "cr", "*", 1, "n.08", "Referred by subjects attending physician who will provide non-transplant care for the subject and follow up at 1, 7, 14, 30 days after FMT"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 9, 1, "cr", "*", 1, "n.09", "Received at least one course of adequate antibiotic therapy for CDAD (≥ 10 days of vancomycin at a dose of ≥125 mg four times per day, ≥ 10 days of metronidazole at a dose of 500mg three times per day or fidaxomixin 200mg twice a day for 10 days"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 10, 1, "cr", "*", 1, "n.10", "Anti-Clostridium difficile infection (CDI) antibiotic treatment stopped 2-4 days before the transplantation"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 11, 1, "cr", "*", 1, "n.11", "Donors"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 12, 1, "cr", "*", 1, "n.12", "Able to provide and sign informed consent"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 13, 1, "cr", "*", 1, "n.13", "Able to complete and sign the donor questionnaire"));
-	        fs.iec.Add(new StudyIEC(sd_sid, 14, 1, "cr", "*", 1, "n.14", "Able to adhere to fecal transplantation stool collection requirements"));
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 301, "cr", "Hdr", 0, "n.00", "Recipients"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.01", "Male and female patients ≥ 18 years of age"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.02", "Sexually active male and female patients of child-bearing potential must agree to use an effective method of birth control during the treatment and follow-up period"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "*", 1, "n.03", "Female patients of child-bearing potential must have a negative pregnancy test in the 72 hours before the procedure"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "*", 1, "n.04", "Required to sign an informed consent form"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "*", 1, "n.05", "Deemed likely to survive for ≥ 3 months after enrolment"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "*", 1, "n.06", "Diagnosis of ≥ 3 recurrent CDAD (RCDAD) bouts in outpatients or ≥ 2 bouts of CDAD in an inpatient without other explanation for diarrhea and with ≥ 2 positive fecal tests for C. difficile toxin"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 1, "cr", "*", 1, "n.07", "Referred by subjects attending physician who will provide non-transplant care for the subject and follow up at 1, 7, 14, 30 days after FMT"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 1, "cr", "*", 1, "n.08", "Received at least one course of adequate antibiotic therapy for CDAD (≥ 10 days of vancomycin at a dose of ≥125 mg four times per day, ≥ 10 days of metronidazole at a dose of 500mg three times per day or fidaxomixin 200mg twice a day for 10 days"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 10, 1, "cr", "*", 1, "n.09", "Anti-Clostridium difficile infection (CDI) antibiotic treatment stopped 2-4 days before the transplantation"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 11, 301, "cr", "Hdr", 1, "n.10", "Donors"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 12, 1, "cr", "*", 1, "n.11", "Able to provide and sign informed consent"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 13, 1, "cr", "*", 1, "n.12", "Able to complete and sign the donor questionnaire"));
+	        fs.iec.Add(new StudyIEC(sd_sid, 14, 1, "cr", "*", 1, "n.13", "Able to adhere to fecal transplantation stool collection requirements"));
 	        
-	        fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "*", 1, "e.01", "Recipients"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "*", 1, "e.02", "Patients with neutropenia with absolute neutrophil count <0.5 x 109/L"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "*", 1, "e.03", "Evidence of toxic megacolon or gastrointestinal perforation on abdominal x-ray"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr", "*", 1, "e.04", "Peripheral white blood cell count > 15.0 x 109/L AND temperature > 38.0 °C"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "cr", "*", 1, "e.05", "Active gastroenteritis due to Salmonella, Shigella, E. coli 0157:H7, Yersinia or Campylobacter, and Norovirus"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "cr", "*", 1, "e.06", "Presence of colostomy"));	 
-	        fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "cr", "*", 1, "e.07", "Unable to tolerate human biotherapy (HBT) for any reason"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr", "*", 1, "e.08", "Requiring systemic antibiotic therapy for more than 7 days"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "*", 1, "e.09", "Actively taking Saccharomyces boulardii or other probiotic"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "*", 1, "e.10", "Severe underlying disease such that the patient is not expected to survive for one or more years or unstable medical condition requiring daily change in treatments"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "*", 1, "e.11", "Prolonged compromised immunity due to cytotoxic chemotherapy or HIV infection"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "*", 1, "e.12", "Donors"));	 
-	        fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr", "*", 1, "e.13", "Test positive for any of variables"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr", "*", 1, "e.14", "History of any type of active cancer or autoimmune disease"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr", "*", 1, "e.15", "History of risk factors for acquisition of HIV, syphilis, Hepatitis B, Hepatitis C, prion or any neurological disease as determined by the donor questionnaire"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 30, 2, "cr", "*", 1, "e.16", "History of gastrointestinal disorder, e.g., inflammatory bowel disease, irritable bowel syndrome, chronic constipation or diarrhea"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 31, 2, "cr", "*", 1, "e.17", "Antibiotic use or any systemic immunosuppressive agents in the 3 months prior to stool donation"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 32, 2, "cr", "*", 1, "e.18", "Receipt of any type of live vaccine within 3 months prior to stool donation"));	 
-	        fs.iec.Add(new StudyIEC(sd_sid, 33, 2, "cr", "*", 1, "e.19", "Current or previous medical or psychosocial condition"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 34, 2, "cr", "*", 1, "e.20", "Body mass index over 30"));	
+	        fs.iec.Add(new StudyIEC(sd_sid, 15, 302, "cr", "Hdr", 0, "e.00", "Recipients"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "*", 1, "e.01", "Patients with neutropenia with absolute neutrophil count <0.5 x 109/L"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "*", 1, "e.02", "Evidence of toxic megacolon or gastrointestinal perforation on abdominal x-ray"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr", "*", 1, "e.03", "Peripheral white blood cell count > 15.0 x 109/L AND temperature > 38.0 °C"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "cr", "*", 1, "e.04", "Active gastroenteritis due to Salmonella, Shigella, E. coli 0157:H7, Yersinia or Campylobacter, and Norovirus"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "cr", "*", 1, "e.05", "Presence of colostomy"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "cr", "*", 1, "e.06", "Unable to tolerate human biotherapy (HBT) for any reason"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr", "*", 1, "e.07", "Requiring systemic antibiotic therapy for more than 7 days"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "*", 1, "e.08", "Actively taking Saccharomyces boulardii or other probiotic"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "*", 1, "e.09", "Severe underlying disease such that the patient is not expected to survive for one or more years or unstable medical condition requiring daily change in treatments"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "*", 1, "e.10", "Prolonged compromised immunity due to cytotoxic chemotherapy or HIV infection"));	
+	        fs.iec.Add(new StudyIEC(sd_sid, 26, 302, "cr", "Hdr", 1, "e.11", "Donors"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr", "*", 1, "e.12", "Test positive for any of variables"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr", "*", 1, "e.13", "History of any type of active cancer or autoimmune disease"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr", "*", 1, "e.14", "History of risk factors for acquisition of HIV, syphilis, Hepatitis B, Hepatitis C, prion or any neurological disease as determined by the donor questionnaire"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 30, 2, "cr", "*", 1, "e.15", "History of gastrointestinal disorder, e.g., inflammatory bowel disease, irritable bowel syndrome, chronic constipation or diarrhea"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 31, 2, "cr", "*", 1, "e.16", "Antibiotic use or any systemic immunosuppressive agents in the 3 months prior to stool donation"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 32, 2, "cr", "*", 1, "e.17", "Receipt of any type of live vaccine within 3 months prior to stool donation"));	 
+	        fs.iec.Add(new StudyIEC(sd_sid, 33, 2, "cr", "*", 1, "e.18", "Current or previous medical or psychosocial condition"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 34, 2, "cr", "*", 1, "e.19", "Body mass index over 30"));	
            
             fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
             
@@ -2862,257 +2731,14 @@ public class TestData_100120 : TestData_Base
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://storage.googleapis.com/ctgov2-large-docs/92/NCT02318992/Prot_SAP_000.pdf", 
 	            true, 11, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "15 Mar 2017", 2017, 3, 15, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "25 Mar 2019", 2019, 3, 25, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "15 Mar 2017", 2017, 3, 15, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 12, false, "25 Mar 2019", 2019, 3, 25, null, null, null, null));
 	            
             fs.data_objects!.Add(sdo);
             
             return fs;
         }
         
-        
-        if (sd_sid == "NCT02243202")
-        {
-	        FullStudy fs = CreateEmptyFullStudy();
- 
-	        // Study 
-	        
-	        const string display_title = "Effects of Co-administration of Canagliflozin 300 mg and Phentermine 15 mg With Placebo in the Treatment of Non-Diabetic Overweight and Obese Participants";
-	        const string brief_desc = "The purpose of this study is to compare the effects of canagliflozin and phentermine to those of placebo to promote on a change in body weight over a 26 week period.";
-	       
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2014, 9, 11, 21, "335", 900,
-		        18, 17, 65, 17, 10);
-	        
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
-		        "ClinicalTrials.gov", null, "16 Sep 2014", null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "CR103086", 14, 100773, "Janssen", null, null, null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "28431754OBE2002", 90, 100773, "Janssen", null, null, null));
-	        
-	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, 
-		        "A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group Study to Investigate the Safety and Efficacy of the Co-administration of Canagliflozin 300 mg and Phentermine 15 mg Compared With Placebo for the Treatment of Non-diabetic Overweight and Obese Subjects",
-		        16, "en", 11, false, "From ClinicalTrials.gov"));
-	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100773, "Janssen", null));
-	       
-	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // Phase 2
-	        fs.features!.Add(new StudyFeature(sd_sid, 21, 400)); 
-	        fs.features!.Add(new StudyFeature(sd_sid, 22, 205)); 
-	        fs.features!.Add(new StudyFeature(sd_sid, 23, 305)); 	        
-	        fs.features!.Add(new StudyFeature(sd_sid, 24, 510)); 
-	        
-	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "INVOKANA", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Canagliflozin", 14, "D000068896", "D000068896", "Canagliflozin"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Phentermine", 14, "D000010645", "D010645", "Phentermine"));
-	       
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Obesity", null, null, "5B81", "Obesity"));
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Overweight", 14, "D000050177", "5B80", "Overweight or localised adiposity"));
-
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "*", 1, "n.01", "Must have BMI >=30 kg/m2 and <50 kg/m2 at screening or BMI >=27 kg/m2 and <50 kg/m2 at screening in the presence of a comorbidity of hypertension and/or dyslipidemia"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "*", 1, "n.02", "Must have stable weight, ie, change of < =5% in the 3 months before screening"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "*", 1, "n.03", "Must agree to utilize a highly effective method of birth control"));	    
-	        
-            fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "*", 1, "e.01", "An established diagnosis of diabetes mellitus"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "*", 1, "e.02", "Has a history of obesity with a known secondary cause (eg, Cushing’s disease/syndrome)"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "*", 1, "e.03", "Has a history of hereditary glucose-galactose malabsorption or primary renal glycosuria"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "*", 1, "e.04", "Myocardial infarction, unstable angina, revascularization procedure, or cerebrovascular accident within 12 weeks before screening"));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "*", 1, "e.05", "Has an Glycated hemoglobin (HBA1c) greater than or equal (>=) to 65 percent"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.06", "An average of 3 seated blood pressure (BP) readings of systolic BP >= 160 mm Hg and/or Diastolic BP >= 100 millimeters of mercury at screening"));	 
-           
-            fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
-            
-            fs.sites!.Add(new StudyLocation(sd_sid, null, null, null, null, "Phoenix", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Walnut Creek", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Jacksonville", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Meridian", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Evansville", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Lexington", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Louisville", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "New Orleans", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Milford", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, null, null, null, "Warwick", 6252001, "United States", null));
-          
-            // Data Objects
-	        
-            // 1) Trial registry entry
-
-            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
-            string ob_title = display_title + " :: CTG registry entry";
-            StudyDataObject sdo = CreateEmptyStudyDataObject();
-	        
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-	            null, 9, 2014, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "14 Sep 2014 (est.)", 2014, 9, 14, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "6 Oct 2016 (est.)", 2016, 10, 6, null, null, null, null));
-	       
-            fs.data_objects!.Add(sdo);
-            
-            // 2) Trial results entry
-			
-            sd_oid = sd_sid + " :: 28 :: CTG results entry";
-            ob_title = display_title + " :: CTG results entry";
-            sdo = CreateEmptyStudyDataObject();
-			
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
-	            null, 9, 2016, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "6 Oct 2016 (est.)", 2016, 10, 6, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "6 Oct 2016 (est.)", 2016, 10, 6, null, null, null, null));
-
-            fs.data_objects!.Add(sdo);
-
-            return fs;
-        }
-        
-        
-        if (sd_sid == "NCT02441309")
-        {
-	        FullStudy fs = CreateEmptyFullStudy();
- 
-	        // Study 
-	        
-	        string display_title = "A Eurosarc Study of Mifamurtide in Advanced Osteosarcoma (MEMOS)";
-	        StringBuilder sb = new StringBuilder("This is a Bayesian designed multi-arm, multi-centre, open label phase II study. The target sample ");
-	        sb.Append("size of 40 patients will be recruited from up to 8 EU countries, but this may be revised in light of the interim analysis. "); 
-	        sb.Append("Patients with relapsed or metastatic osteosarcoma will be divided into three treatment groups. They will all either have "); 
-	        sb.Append("surgery or a biopsy before and after six weeks exposure to either Mifamurtide alone, Ifosfamide alone, or Mifamurtide "); 
-	        sb.Append("combined with Ifosfamide. They will then receive further treatment to a maximum of 42 or 36 weeks in "); 
-	        sb.Append("total (depending on Arm), with all patients being able to receive 36 weeks of Mifamurtide treatment."); 
-	        string brief_desc = sb.ToString();
-	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2014, 10, 11, 22, "8", 900,
-		        16, 17, 65, 17, 10);
-	        
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
-		        "ClinicalTrials.gov", null, "16 Mar 2015", null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "OCTO_039", 14, 100253, 
-		        "University of Oxford", "https://ror.org/052gg0110", null, null));
-	        
-	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "A Mechanistic Study Of Mifamurtide (MTP-PE) In Patients With Metastatic And/Or Recurrent Osteosarcoma",
-		        16, "en", 11, false, "From ClinicalTrials.gov"));
-	        fs.titles.Add(new StudyTitle(sd_sid, "MEMOS", 14, "en", 11, false, "From ClinicalTrials.gov"));
-	        
-	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Bass Hassan", "University of Oxford", 
-		        100253, "University of Oxford", "https://ror.org/052gg0110"));
-	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100253, "University of Oxford", "https://ror.org/052gg0110"));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Millennium: The Takeda Oncology Company", null));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100442, "National Institute for Health Research", "https://ror.org/0187kwz08"));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100707, "Oxford University Hospitals NHS Trust", "https://ror.org/03h2bh287"));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100574, "European Commission", "https://ror.org/00k4n6c32"));
-
-	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // 
-	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
-
-	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "Metastatic and/or Recurrent Osteosarcoma", null, null, null, null));
-	        
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Ifosfamide", 14, "D000007069", "D007069", "Ifosfamide"));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Mifamurtide", 14, "C000037144", "C037144", "mifamurtide"));
-	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "Osteosarcoma", 14, "D000012516", "2B51", "Osteosarcoma, primary site"));
-
-            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Relapsed osteosarcoma (first, second, third or any relapse, patient has recovered from chemotherapy and any other investigational drug/agent treatment, radiotherapy or surgical procedure)."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Histological confirmed diagnosis of osteosarcoma at original presentation."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Tumour at biopsy accessible or resectable site."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "4.", 1, "n.04", "Progressive disease documented by imaging within 3 months of entry into the trial."));
-            fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "5.", 1, "n.05", "At least one measurable lesion on CT scan (RECIST) performed in past 21 days prior to trial entry."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "6.", 1, "n.06", "Male or female, age ≥ 16 years to 65 (or ≥18 based on institutional practice for Teenage and Young Adult Cancer patients)."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "7.", 1, "n.07", "Life expectancy of at least 3 months."));
-            fs.iec.Add(new StudyIEC(sd_sid, 8, 1, "cr", "8.", 1, "n.08", "WHO performance score of 0 - 2."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 9, 1, "cr", "9.", 1, "n.09", "The patient is willing and able to comply with the protocol and scheduled follow-up visits and examinations."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 10, 1, "cr", "10.", 1, "n.10", "Written (signed and dated) informed consent."));
-            fs.iec.Add(new StudyIEC(sd_sid, 11, 1, "cr", "11.", 1, "n.11", "Cardiac shortening fraction ≥ 28% or ejection fraction ≥ 45%"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 12, 1, "cr", "12.", 1, "n.12", "Renal function is adequate for ifosfamide treatment (GFR as per table below, other renal function screening tests as per local practice)"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 13, 301, "cr", "13.", 1, "n.13", "Haematological and biochemical indices within the ranges shown below:"));
-            fs.iec.Add(new StudyIEC(sd_sid, 14, 1, "cr", "*", 2, "n.13.01", "Lab Test Value required"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 15, 1, "cr", "*", 2, "n.13.02", "Haemoglobin (Hb) ≥ 9 g/dL (Previous transfusion is allowed)"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 16, 1, "cr", "*", 2, "n.13.03", "Absolute neutrophil count (ANC) >=1.0 x 10*9/L without growth factor support"));
-            fs.iec.Add(new StudyIEC(sd_sid, 17, 1, "cr", "*", 2, "n.13.04", "Platelet count > 80.x 10*9/L (Previous transfusion is allowed)"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 18, 1, "cr", "*", 2, "n.13.05", "Total bilirubin <1.5 times the upper limit of normal (ULN) for age (except for Gilbert’s syndrome patients)"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 19, 1, "cr", "*", 2, "n.13.06", "Serum alanine aminotransferase (ALT) and/or Aspartate aminotransferase (AST) <2.5 × ULN for age, <2.5 × ULN for age"));
-            fs.iec.Add(new StudyIEC(sd_sid, 20, 1, "cr", "*", 2, "n.13.07", "Serum creatinine Normal range for age"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 21, 1, "cr", "*", 2, "n.13.08", "Glomerular filtration rate (GFR) (calculated as 51Cr-EDTA/99mTc-DTPA clearance) >40ml/min if deemed resectable (for Arm A), >60ml/min if not deemed resectable (for Arm B or C)"));	    
-  
-            fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr", "1.", 1, "e.01", "Pregnant or breast-feeding woman. Men or women of childbearing potential unless effective methods of contraception are used during study treatment and for at least 7 days after the last mifamurtide dose (see section 5.1 Informed consent - Contraceptive/ Pregnancy counselling)."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "2.", 1, "e.02", "Previous treatment with mifamurtide or a mifamurtide-like drug* in a clinical trial setting for the treatment of metastatic and/or recurrent osteosarcoma in the six months prior to registration."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "3.", 1, "e.03", "Contraindications to lung biopsies."));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "4.", 1, "e.04", "Hypersensitivity to ifosfamide or any component of the formulation."));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "5.", 1, "e.05", "Previously diagnosed brain metastases."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr", "6.", 1, "e.06", "Significant active cardiac disease including: uncontrolled high blood pressure (no greater than 2 standard deviations above the mean for age for systolic blood pressure (SBP) and diastolic blood pressure (DBP), unstable angina, congestive heart failure, myocardial infarction within the previous 6 months, or serious cardiac arrhythmias and with a history of pericarditis and myocarditis"));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr", "7.", 1, "e.07", "Treatment with any other investigational agent, or participation in another interventional clinical trial within 21 days prior to enrolment."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr", "8.", 1, "e.08", "Major surgery within 21 days prior to first study biopsy"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 30, 2, "cr", "9.", 1, "e.09", "Currently taking high-dose non-steroidal anti-inflammatory drugs (NSAIDs) or corticosteroid treatment"));	    
-            fs.iec.Add(new StudyIEC(sd_sid, 31, 2, "cr", "10.", 1, "e.10", "Concurrent use of ciclosporin or other calcineurin inhibitors."));	  
-            fs.iec.Add(new StudyIEC(sd_sid, 32, 2, "cr", "11.", 1, "e.11", "Any psychological, social or medical condition, physical examination finding or a laboratory abnormality that the Investigator considers would make the patient a poor trial candidate or could interfere with protocol compliance or the interpretation of trial results."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 33, 2, "cr", "12.", 1, "e.12", "Any other active malignancy, with the exception of adequately treated cone-biopsied in situ carcinoma of the cervix uteri and non-melanoma skin lesions."));	 
-            fs.iec.Add(new StudyIEC(sd_sid, 34, 2, "cr", "13.", 1, "e.13", "Patients who are known to be serologically positive for Hepatitis B, Hepatitis C or HIV."));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 35, 202, "cr", "Spp", 1, "e.14", "* mifamurtide-like drugs include GCSF, GMCSF, interferon and other macrophage activating molecules."));	 
-            
-            fs.countries!.Add(new StudyCountry(sd_sid, 2921044, "Germany", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 3175395, "Italy", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 2750405, "Netherlands", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 3144096, "Norway", null));
-            fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
-             
-            fs.sites!.Add(new StudyLocation(sd_sid, null, "Pediatric Hematology and Oncology, University Hospital Münster", null, 2867543, "Münster", 2921044, "Germany", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Istituti Ortopedici Rizzoli", null, 3181928, "Bologna",  3175395, "Italy", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Department of Clinical Oncology, Leiden University Medical Center", null, 2751773, "Leiden", 2750405, "Netherlands", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Radium Hospital, Oslo University", null, 3143244, "Oslo", 3144096, "Norway", null));
-            fs.sites.Add(new StudyLocation(sd_sid, 101598, "Leeds Teaching Hospitals NHS Trust", "https://ror.org/00v4dac24", 2644688, "Leeds", 2635167, "United Kingdom", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "University College London Hospitals NHS Foundation Trust", null, null, "London", 2635167, "United Kingdom", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Christie Hospital NHS Foundation Trust", null, null, "Manchester", 2635167, "United Kingdom", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Oxford University Hospitals NHS Foundations Trust", null, 2640729, "Oxford", 2635167, "United Kingdom", null));
-         
-            // Data Objects
-	        
-            // 1) Trial registry entry
-
-            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
-            string ob_title = display_title + " :: CTG registry entry";
-            StudyDataObject sdo = CreateEmptyStudyDataObject();
-	        
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
-	            null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "12 May 2015 (est.)", 2015, 5, 12, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "13 Sep 2019", 2019, 9, 13, null, null, null, null));
-	       
-            fs.data_objects!.Add(sdo);
-            
-            // 2) Trial results entry
-			
-            sd_oid = sd_sid + " :: 28 :: CTG results entry";
-            ob_title = display_title + " :: CTG results entry";
-            sdo = CreateEmptyStudyDataObject();
-			
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
-	            null, 9, 2019, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
-	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "13 Sep 2019", 2019, 9, 13, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "13 Sep 2019", 2019, 9, 13, null, null, null, null));
-
-            fs.data_objects!.Add(sdo);
-
-            return fs;
-        }
-
         
         if (sd_sid == "NCT02609386")
         {
@@ -3156,11 +2782,9 @@ public class TestData_100120 : TestData_Base
 		    fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
 		    fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 
-		    fs.topics!.Add(new StudyTopic(sd_sid, 11, "Head and Neck Neoplasms", null, null, "D006258", "Head and Neck Neoplasms"));
-		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Immunotherapy", null, null, "D007167", "Immunotherapy"));
-		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Cancer", null, null, "D009369", "Neoplasms"));
+		   
+		    fs.topics!.Add(new StudyTopic(sd_sid, 11, "Immunotherapy", null, null, "D007167", "Immunotherapy"));
 		    fs.topics.Add(new StudyTopic(sd_sid, 11, "Oral Cavity", null, null, "D009055", "Mouth"));
-		    
 		    fs.topics.Add(new StudyTopic(sd_sid, 12, "Zinc", 14, "D000015032", "D015032", "Zinc"));
 		    fs.topics.Add(new StudyTopic(sd_sid, 12, "Indomethacin", 14, "D000007213", "D007213", "Indomethacin"));
 		    fs.topics.Add(new StudyTopic(sd_sid, 12, "Cyclophosphamide", 14, "D000003520", "D003520", "Cyclophosphamide"));
@@ -3170,7 +2794,9 @@ public class TestData_100120 : TestData_Base
 		    fs.conditions!.Add(new StudyCondition(sd_sid, "Squamous Cell Carcinoma of the Oral Cavity", null, null, null, null));
 		    fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma", 14, "D000002277", "2", "Neoplasms"));
 		    fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma, Squamous Cell", 14, "D000002294", "2C31", "Squamous cell carcinoma of skin"));
-	        
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Head and Neck Neoplasms", null, null, "B3-2B6", "Malignant neoplasms of lip, oral cavity or pharynx"));
+		    fs.conditions.Add(new StudyCondition(sd_sid, "Cancer", null, null, "2", "Neoplasms"));	         
+	         
             sb = new StringBuilder("Wolf GT, Liu S, Bellile E, Sartor M, Rozek L, Thomas D, Nguyen A, Zarins K, McHugh JB; ");
 			sb.Append("INSPIRE Trial Clinical Investigators. Tumor infiltrating lymphocytes after neoadjuvant IRX-2 immunotherapy in oral squamous cell carcinoma: Interim findings from the INSPIRE trial. ");
 			sb.Append("Oral Oncol. 2020 Jul 29;111:104928. doi: 10.1016/j.oraloncology.2020.104928. Epub 2020 Jul 29.");
@@ -3193,37 +2819,37 @@ public class TestData_100120 : TestData_Base
 	        fs.iec.Add(new StudyIEC(sd_sid, 11, 1, "cr", "11.", 1, "n.11", "Negative urine/serum pregnancy test, if applicable"));
 	        
 	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr", "1.", 1, "e.01", "Prior surgery, radiation therapy, or chemotherapy other than biopsy or emergency procedure required for supportive care of this oral cavity cancer."));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "2,", 1, "e.02", "Any medical contraindications or previous therapy that would preclude treatment with either IRX 2 Regimen 1 or 2 or the surgery, reconstruction or adjuvant therapy required to treat the oral tumor appropriately"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 13, 2, "cr", "2.", 1, "e.02", "Any medical contraindications or previous therapy that would preclude treatment with either IRX 2 Regimen 1 or 2 or the surgery, reconstruction or adjuvant therapy required to treat the oral tumor appropriately"));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 14, 2, "cr", "*", 2, "e.02.01", "Live vaccines should ideally not be administered to any patients undergoing treatment with chemotherapy or immunotherapy, but if need be, they should be administered >4 months prior to the initiation of treatment or >4 months after the completion of all treatment"));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 15, 2, "cr", "*", 2, "e.02.02", "Inactivated vaccines should precede the initiation of any study regimen and/or standard adjuvant therapy by at least 2 weeks, but preferably 4 weeks or longer"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "3.", 1, "e.05", "Clinical status of either subject or tumor such that administration of 21 day neoadjuvant IRX-2 Regimen 1 or 2 before surgery would be medically inappropriate"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "4.", 1, "e.06", "Tumor of the oropharynx"));	
-	        fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr", "5", 1, "e.07", "Tumor involvement of the following sites or any of these signs or symptoms likely to be associated with T4b cancer:"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "cr", "*", 2, "e.07.01", "involvement of pterygopalatine fossa, maxillary sinus, or facial skin;."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "cr", "*", 2, "e.07.02", "gross extension of tumor to the skull base;"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "cr", "*", 2, "e.07.03", "pterygoid plate erosion;"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr", "*", 2, "e.07.04", "sphenoid bone or foramen ovale involvement;"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "*", 2, "e.07.05", "direct extension to involve prevertebral fascia;"));	
-	        fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "*", 2, "e.07.06", "extension to superior nasopharynx or Eustachian tube;"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "*", 2, "e.07.07", "direct extension into the neck with involvement of the deep neck musculature (neck node fixation);"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "*", 2, "e.07.08", "suspected invasion (encasement) of the common or internal carotid arteries. Encasement will be assessed radiographically and will be defined as tumor surrounding the carotid artery 270º or greater;"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr", "*", 2, "e.07.09", "direct extension of neck disease to involve the external skin;"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr", "*", 2, "e.07.10", "direct extension to mediastinal structures;"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr", "*", 2, "e.07.11", "regional metastases to the supraclavicular neck (low level IVB or VB)"));	
-	        fs.iec.Add(new StudyIEC(sd_sid, 30, 2, "cr", "6.", 1, "e.19", "Any investigational agent within the previous 30 days."));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 31, 2, "cr", "7.", 1, "e.20", "Daily administration of systemic immunosuppressive therapy or corticosteroids (except in physiological doses for hormone deficiency) during the previous 30 days."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 32, 2, "cr", "8.", 1, "e.21", "Chronic anticoagulation, not including aspirin, but including heparins, warfarin, oral anticoagulation or other platelet function inhibitors, that can not, in the documented opinion of the investigator, safely be interrupted from at least 2 days prior to the initiation of the study regimen until after surgical resection of the tumor."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 33, 2, "cr", "9.", 1, "e.22", "Symptomatic cardiopulmonary disease (including congestive heart failure and hypertension), coronary artery disease, serious arrhythmia or chronic lung disease. Patients with these conditions who are stable with relatively minor symptoms and who are appropriate candidates for surgical treatment of their tumor need not be excluded"));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 34, 2, "cr", "10.", 1, "e.23", "Myocardial infarction within the last 3 months"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 35, 2, "cr", "11.", 1, "e.24", "Distant metastases (M1 disease)."));	
-	        fs.iec.Add(new StudyIEC(sd_sid, 36, 2, "cr", "12.", 1, "e.25", "Known infection with hepatitis B, hepatitis C, or HIV."));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 37, 2, "cr", "13.", 1, "e.26", "Signs or symptoms of systemic bacterial infection (use of antibiotics to treat superficial infection or contamination of tumor shall not, by itself, be considered evidence of infection)."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 38, 2, "cr", "14.", 1, "e.27", "Clinically significant gastritis or peptic ulcer disease that would contraindicate the use of indomethacin."));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 39, 2, "cr", "15.", 1, "e.28", "Stroke or other symptoms of cerebral vascular insufficiency within the last 3 months."));	  
-	        fs.iec.Add(new StudyIEC(sd_sid, 40, 2, "cr", "16.", 1, "e.29", "Allergy to ciprofloxacin (or other quinolones), acetylsalicylic acid, or indomethacin."));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 41, 2, "cr", "17.", 1, "e.30", "Previous diagnosis of invasive cancer from which the individual is NOT disease-free AND that has required treatment within the past 5 years, except for superficial skin, cervical cancer in-situ, well-differentiated thyroid or early stage prostate or bladder cancer (i.e., treatment with curative intent and long term disease-free expectations)."));	
-	        fs.iec.Add(new StudyIEC(sd_sid, 42, 2, "cr", "18.", 1, "e.31", "Prior axillary dissection."));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 43, 2, "cr", "19.", 1, "e.32", "Breastfeeding women."));	
+	        fs.iec.Add(new StudyIEC(sd_sid, 16, 2, "cr", "3.", 1, "e.03", "Clinical status of either subject or tumor such that administration of 21 day neoadjuvant IRX-2 Regimen 1 or 2 before surgery would be medically inappropriate"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 17, 2, "cr", "4.", 1, "e.04", "Tumor of the oropharynx"));	
+	        fs.iec.Add(new StudyIEC(sd_sid, 18, 2, "cr", "5.", 1, "e.05", "Tumor involvement of the following sites or any of these signs or symptoms likely to be associated with T4b cancer:"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 19, 2, "cr", "*", 2, "e.05.01", "involvement of pterygopalatine fossa, maxillary sinus, or facial skin;."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 20, 2, "cr", "*", 2, "e.05.02", "gross extension of tumor to the skull base;"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 21, 2, "cr", "*", 2, "e.05.03", "pterygoid plate erosion;"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 22, 2, "cr", "*", 2, "e.05.04", "sphenoid bone or foramen ovale involvement;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 23, 2, "cr", "*", 2, "e.05.05", "direct extension to involve prevertebral fascia;"));	
+	        fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "*", 2, "e.05.06", "extension to superior nasopharynx or Eustachian tube;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "*", 2, "e.05.07", "direct extension into the neck with involvement of the deep neck musculature (neck node fixation);"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "*", 2, "e.05.08", "suspected invasion (encasement) of the common or internal carotid arteries. Encasement will be assessed radiographically and will be defined as tumor surrounding the carotid artery 270º or greater;"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr", "*", 2, "e.05.09", "direct extension of neck disease to involve the external skin;"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr", "*", 2, "e.05.10", "direct extension to mediastinal structures;"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr", "*", 2, "e.05.11", "regional metastases to the supraclavicular neck (low level IVB or VB)"));	
+	        fs.iec.Add(new StudyIEC(sd_sid, 30, 2, "cr", "6.", 1, "e.06", "Any investigational agent within the previous 30 days."));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 31, 2, "cr", "7.", 1, "e.07", "Daily administration of systemic immunosuppressive therapy or corticosteroids (except in physiological doses for hormone deficiency) during the previous 30 days."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 32, 2, "cr", "8.", 1, "e.08", "Chronic anticoagulation, not including aspirin, but including heparins, warfarin, oral anticoagulation or other platelet function inhibitors, that can not, in the documented opinion of the investigator, safely be interrupted from at least 2 days prior to the initiation of the study regimen until after surgical resection of the tumor."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 33, 2, "cr", "9.", 1, "e.09", "Symptomatic cardiopulmonary disease (including congestive heart failure and hypertension), coronary artery disease, serious arrhythmia or chronic lung disease. Patients with these conditions who are stable with relatively minor symptoms and who are appropriate candidates for surgical treatment of their tumor need not be excluded"));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 34, 2, "cr", "10.", 1, "e.10", "Myocardial infarction within the last 3 months"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 35, 2, "cr", "11.", 1, "e.11", "Distant metastases (M1 disease)."));	
+	        fs.iec.Add(new StudyIEC(sd_sid, 36, 2, "cr", "12.", 1, "e.12", "Known infection with hepatitis B, hepatitis C, or HIV."));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 37, 2, "cr", "13.", 1, "e.13", "Signs or symptoms of systemic bacterial infection (use of antibiotics to treat superficial infection or contamination of tumor shall not, by itself, be considered evidence of infection)."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 38, 2, "cr", "14.", 1, "e.14", "Clinically significant gastritis or peptic ulcer disease that would contraindicate the use of indomethacin."));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 39, 2, "cr", "15.", 1, "e.15", "Stroke or other symptoms of cerebral vascular insufficiency within the last 3 months."));	  
+	        fs.iec.Add(new StudyIEC(sd_sid, 40, 2, "cr", "16.", 1, "e.16", "Allergy to ciprofloxacin (or other quinolones), acetylsalicylic acid, or indomethacin."));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 41, 2, "cr", "17.", 1, "e.17", "Previous diagnosis of invasive cancer from which the individual is NOT disease-free AND that has required treatment within the past 5 years, except for superficial skin, cervical cancer in-situ, well-differentiated thyroid or early stage prostate or bladder cancer (i.e., treatment with curative intent and long term disease-free expectations)."));	
+	        fs.iec.Add(new StudyIEC(sd_sid, 42, 2, "cr", "18.", 1, "e.18", "Prior axillary dissection."));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 43, 2, "cr", "19.", 1, "e.19", "Breastfeeding women."));	
 	        
 	        fs.countries!.Add(new StudyCountry(sd_sid, 6252001, "United States", null));
             fs.countries.Add(new StudyCountry(sd_sid, 3469034, "Brazil", null));
@@ -3231,16 +2857,16 @@ public class TestData_100120 : TestData_Base
             fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
 
             fs.sites!.Add(new StudyLocation(sd_sid, null, "Banner University Medical Center", null, 5318313, "Tucson", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "University of Arkansas For Medical Sciences", null, null, "Little Rock", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "USC Norris Comprehensive Cancer Center", null, 5368361, "Los Angeles", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Stanford University Medical Center", null, null, "Stanford", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Emory University - Winship Cancer Center", null, 4180439, "Atlanta", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, 100670, "University of Kentucky", "https://ror.org/02k3smh20", 4585000, "Lexington", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, 108657, "University of Arkansas for Medical Sciences", "https://ror.org/00xcryt71", 4119403, "Little Rock", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, 109737, "USC Norris Comprehensive Cancer Center", null, 5368361, "Los Angeles", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, 108246, "Stanford Medicine", "https://ror.org/03mtd9a03", 5398563, "Stanford", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Emory University, Winship Cancer Center", null, 4180439, "Atlanta", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, 100670, "University of Kentucky", "https://ror.org/02k3smh20", 4297983, "Lexington", 6252001, "United States", null));
             fs.sites.Add(new StudyLocation(sd_sid, 100198, "University of Michigan", "https://ror.org/00jmfr291", 4984247, "Ann Arbor", 6252001, "United States", null));
             fs.sites.Add(new StudyLocation(sd_sid, null, "Nebraska Methodist Hospital", null, 5074472, "Omaha", 6252001, "United States", null));
-            fs.sites.Add(new StudyLocation(sd_sid, null, "Monter Cancer Center - North Shore LIJ", null, 5128514, "New Hyde Park", 6252001, "United States", null));
+            fs.sites.Add(new StudyLocation(sd_sid, null, "Monter Cancer Center, North Shore LIJ", null, 5128514, "New Hyde Park", 6252001, "United States", null));
             fs.sites.Add(new StudyLocation(sd_sid, 106893, "Lenox Hill Hospital", "https://ror.org/0231d2y50", 5128581, "New York City", 6252001, "United States", null));
-	        
+
 	        // Data Objects
 
 	        // 1) Trial registry entry
@@ -3264,6 +2890,385 @@ public class TestData_100120 : TestData_Base
 	        return fs;
         }
 
+        
+        if (sd_sid == "NCT04419571")
+        {
+	        FullStudy fs = CreateEmptyFullStudy();
+ 
+	        // Study 
+	        
+	        string display_title = "Outcomes in Emergency Laparotomies During COVID-19 Pandemic";
+	        StringBuilder sb = new StringBuilder("NLR has previously been observed to correlate with complications in upper GI (1) and colorectal (2) surgery. ");
+	        sb.Append("The investigators sought to assess if a similar correlation can be identified in emergency general surgical patients and if the presence of suspected or confirmed COVID-19 may impact on this.\n"); 
+	        sb.Append("Given the heterogeneity of emergency general surgery the investigators therefore plan to perform a retrospective review of patients having "); 
+	        sb.Append("emergency laparotomies only at a single NHS site during COVID-19 pandemic. Assessment of outcomes and Neutrophil:lymphocyte ratio as a predictor of "); 
+	        sb.Append("outcomes will be completed. Outcomes will be completed in line with the recent COVIDSurg study criteria (3). The primary outcome is 30-day mortality. "); 
+	        sb.Append("Secondary outcomes are 7-day mortality, re-operation, length of stay, post-operative respiratory failure, post-operative ARDS (Acute Respiratory "); 
+	        sb.Append("Distress Syndrome), post-operative sepsis and ITU (Intensive Therapy Unit)/HDU (High Dependency Unit) admission."); 
+	        string brief_desc = sb.ToString();
+	        sb = new StringBuilder("IPD Sharing (as of July 2020): Yes\nDescription: All collected IPD regardless of inclusion in final publication\n");
+	        sb.Append("Time frame: Data will be available from completion of study for 10 years\n"); 
+	        sb.Append("Access Criteria: On request\n"); 
+	        sb.Append("Additional information available: Study Protocol, Statistical Analysis Plan, Clinical Study Report"); 
+	        string dss = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2020, 3, 12, 21, "94", 900,
+		        18, 17, null, null, 7);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "ClinicalTrials.gov", null, "4 Jun 2020", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "133196", 14, null, 
+		        "Barking, Havering and Redbridge University Hospitals NHS Trust", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "Emergency Laparotomies and Outcomes During the COVID-19 Pandemic - a Retrospective Cohort Study", 16, "en", 11, false, "From ClinicalTrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Nader Habib Bedwani", "Barking, Havering and Redbridge University Hospitals NHS Trust", 
+		        null, "Barking, Havering and Redbridge University Hospitals NHS Trust", null));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Barking, Havering and Redbridge University Hospitals NHS Trust", null));
+	        
+	        fs.features!.Add(new StudyFeature(sd_sid, 30, 600));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 31, 700));   //  
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "COVID-19", 14, "D000086382", "RA01", "COVID-19"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Emergency General Surgery", null, null, null, null));
+
+	        fs.ipd_info!.Add(new AvailableIPD(sd_sid, "285260", "Individual Participant Data Set", 
+		                                      "https://www.myresearchproject.org.uk/", 
+		        "Data collection template available on IRAS (Integrated Research Application System) registration"));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, "285260", "Statistical Analysis Plan", 
+		                                      "https://www.myresearchproject.org.uk/", 
+		        "Statistical analysis plan as part of protocol available on IRAS (Integrated Research Application System) registration"));
+	        fs.ipd_info.Add(new AvailableIPD(sd_sid, "285260", "Study Protocol", 
+		                                      "https://www.myresearchproject.org.uk/", 
+		        "Protocol available on IRAS (Integrated Research Application System) registration")); 
+	         
+	        fs.studylinks!.Add(new StudyLink(sd_sid, "CovidSurg Cohort Study. Globalsurg", 
+		                        "https://globalsurg.org/covidsurgcohortstudy"));
+	        
+	        fs.countries!.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));
+	        
+	        fs.sites!.Add(new StudyLocation(sd_sid, 109759, "Queen’s Hospital", null, null, "Romford", 2635167, "United Kingdom", null));
+            
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", "Patients undergoing emergency laparotomy (change made due to heterogeneity of emergency general surgery)"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1002, "none", "All", 0, "e.0A", "Inherited or acquired immunodeficiency (which may directly skew NLR)"));	       
+	        
+	        // Data Objects
+	        
+	        // 1) Trial registry entry
+
+	        string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+	        string ob_title = display_title + " :: CTG registry entry";
+	        StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+		        null, 9, 2020, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+		        "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "5 Jun 2020", 2020, 6, 5, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "23 Jul 2020", 2020, 7, 23, null, null, null, null));
+	       
+	        fs.data_objects!.Add(sdo);
+	        
+	        // 2) Study Protocol and Statistical Analysis Plan
+	        
+	        sd_oid = sd_sid + " :: 74 :: Study Protocol and Statistical Analysis Plan";
+	        ob_title = display_title + " :: Study Protocol and Statistical Analysis Plan";
+	        sdo = CreateEmptyStudyDataObject();
+	        
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol and Statistical Analysis Plan", null, ob_title,
+		        null, 9, 2020, 23, 74, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+		        "https://storage.googleapis.com/ctgov2-large-docs/71/NCT04419571/Prot_SAP_000.pdf", 
+		        true, 11, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "4 Jun 2020", 2020, 6, 4, null, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "4 Jun 2020", 2020, 6, 4, null, null, null, null));
+	        fs.data_objects!.Add(sdo);
+	        
+	        return fs;	        
+        }
+        
+        
+        if (sd_sid == "NCT03050593")
+        {
+	        FullStudy fs = CreateEmptyFullStudy();
+ 
+	        // Study 
+	        
+	        string display_title = "Developing Imaging And plasMa biOmarkers iN Describing Heart Failure With Preserved Ejection Fraction (DIAMONDHFpEF)";
+	        StringBuilder sb = new StringBuilder("The investigators wish to test a hypothesis that patients with HFpEF have different characteristics on echo, ");
+	        sb.Append("cardiac MRI and plasma protein & chemical profiles compared to HFrEF and healthy volunteers."); 
+	        string brief_desc = sb.ToString();
+	        string dss = "IPD Sharing (as of May 2015): No";
+
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2013, 2, 12, 21, "280", 900,
+		        18, 17, null, null, 8);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "ClinicalTrials.gov", null, "6 Feb 2017", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "0328", 14, 100837, 
+		        "University of Leicester", "https://ror.org/04h699437", null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "Prospective, Observational, Single-centre, Cohort Study Aimed at Developing Imaging and Plasma Biomarkers in Heart Failure With Preserved Ejection Fraction",
+		        16, "en", 11, false, "From ClinicalTrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "DIAMONDHFpEF",
+		        14, "en", 11, false, "From ClinicalTrials.gov"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54,  100837, "University of Leicester", "https://ror.org/04h699437"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100442, "National Institute for Health Research", "https://ror.org/0187kwz08"));
+
+	        fs.features!.Add(new StudyFeature(sd_sid, 30, 600));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 31, 705));   //  
+            fs.features.Add(new StudyFeature(sd_sid, 32, 805));   //
+            
+	        fs.topics!.Add(new StudyTopic(sd_sid, 11, "HFpEF", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "HFrEF", null, null, null, null));
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Patients With Heart Failure and Preserved Ejection Fraction - HFpEF", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Patients With Heart Failure With Reduced Ejection Fraction - HFrEF", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Healthy Controls Group - Age and Sex-matched", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Heart Failure", 14, "D000006333", "B1-BD1", "Heart failure"));
+
+			sb = new StringBuilder("Gulsin GS, Kanagala P, Chan DCS, Cheng ASH, Athithan L, Graham-Brown MPM, Singh A, Yang J, Li Z, Khunti K, Davies MJ, Arnold JR, Squire IB, Ng LL, McCann GP. ");
+			sb.Append("Differential left ventricular and left atrial remodelling in heart failure with preserved ejection fraction patients with and without diabetes. ");
+			sb.Append("Ther Adv Endocrinol Metab. 2019 Jul 5;10:2042018819861593. doi: 10.1177/2042018819861593. eCollection 2019.");
+			fs.references!.Add(new StudyReference(sd_sid, sb.ToString(), "31308926", null, 12, null));
+
+			sb = new StringBuilder("Kanagala P, Cheng ASH, Singh A, Khan JN, Gulsin GS, Patel P, Gupta P, Arnold JR, Squire IB, Ng LL, McCann GP. ");
+			sb.Append("Relationship Between Focal and Diffuse Fibrosis Assessed by CMR and Clinical Outcomes in Heart Failure With Preserved Ejection Fraction. ");
+			sb.Append("JACC Cardiovasc Imaging. 2019 Nov;12(11 Pt 2):2291-2301. doi: 10.1016/j.jcmg.2018.11.031. Epub 2019 Feb 13.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "30772227", null, 12, null));
+
+			sb = new StringBuilder("Kanagala P, Cheng ASH, Singh A, McAdam J, Marsh AM, Arnold JR, Squire IB, Ng LL, McCann GP. ");
+			sb.Append("Diagnostic and prognostic utility of cardiovascular magnetic resonance imaging in heart failure with preserved ejection fraction - implications for clinical trials. ");
+			sb.Append("J Cardiovasc Magn Reson. 2018 Jan 11;20(1):4. doi: 10.1186/s12968-017-0424-9.");
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), "29321034", null, 12, null));
+
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", "Clinical features of heart failure or prior radiographic evidence in the absence of symptoms And Either ejection fraction > 50% (for HFpEF arm) or ejection fraction < 40% (for HFrEF arm)"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 2, "cr", "*", 1, "e.01", "Myocardial infarction within the preceding 6 months"));
+            fs.iec.Add(new StudyIEC(sd_sid, 3, 2, "cr", "*", 1, "e.02", "Suspected or confirmed cardiomyopathy (e.g. hypertrophic, infiltrative)"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "*", 1, "e.03", "Suspected or confirmed constrictive pericarditis"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "*", 1, "e.04", "Significant native valve disease (≥ moderate severity)"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "*", 1, "e.05", "Known Significant lung disease (documented or FEV1< 30% or FVC < 50%)"));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "*", 1, "e.06", "Non-cardiovascular co-morbidity likely to cause death within 6 months (e.g. malignancy)"));	
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "*", 1, "e.07", "Significant renal failure (estimated GFR < 30 ml/min/m2)"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "*", 1, "e.08", "Patient inability to provide informed consent (e.g. dementia)"));	 
+           
+            // Data Objects
+	        
+            // 1) Trial registry entry
+
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "13 Feb 2017", 2017, 2, 13, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "13 Feb 2017", 2017, 2, 13, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+
+            return fs;
+        }
+       
+        
+        if (sd_sid == "NCT03226236")
+        {
+	        FullStudy fs = CreateEmptyFullStudy();
+ 
+	        // Study 
+	        
+	        string display_title = "Vaccination With Dendritic Cells Pulsed With Autologous Tumor Homogenate in Combination With HD-IL2 and Immunomodulating Radiotherapy in Metastatic RCC";
+	        StringBuilder sb = new StringBuilder("Single center, open-label Proof of Principle phase II trial to assess objective response (ORR).\n");
+	        sb.Append("Three daily doses boost radiotherapy (XRT) at 6-12 Gy to at least 1, and up to a maximum of 5, metastatic fields, will be administrated on days "); 
+	        sb.Append("-4 -3 -2 or -3 -2 -1 before the first and the third cycle of vaccine+IL-2. The first day of administration of vaccine is day +1 and of IL-2 is day +2.\n"); 
+	        sb.Append("Treatment vaccine plus IL-2 (dose 18 MIU/m2/day in 500cc by continuous IV infusion for 72 hours) will be administered every 3 weeks up to 6 cycles.\n"); 
+	        sb.Append("Total duration of the trial: 36 months\n"); 
+	        sb.Append("* Enrolment period: 24 months\n"); 
+	        sb.Append("* Treatment: maximum of 6 cycles (5 months) per patient\n"); 
+	        sb.Append("* Follow-up every three months until patient died (follow-up until PD and only survival contacts and subsequent therapy for metastatic disease after PD)."); 
+	        string brief_desc = sb.ToString();
+	        string dss = "IPD Sharing (as of November 2018): Undecided";
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, dss, 2016, 3, 11, 11, "0", 900,
+		       19, 17, null, null, 10);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "ClinicalTrials.gov", null, "28 Sep 2016", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "IRST189.03", 14, null, 
+		        "Istituto Scientifico Romagnolo per lo Studio e la cura dei Tumori", null, null, null));
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "2015-000556-14", 11, 100123, 
+		        "EU Clinical Trials Register", null, null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "Vaccination With Dendritic Cells Pulsed With Autologous Tumor Homogenate in Combination With HD-IL2 and Immunomodulating Radiotherapy in Metastatic RCC: a Phase II Trial (RENALVax-2)",
+		        16, "en", 11, false, "From ClinicalTrials.gov"));
+	        fs.titles.Add(new StudyTitle(sd_sid, "RENALVax-2", 14, "en", 11, false, "From ClinicalTrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Laura Ridolfi", "UO Immunoterapia e Laboratorio TCS, Istituto Scientifico Romagnolo per lo Studio e la Cura dei Tumori (IRST) Srl IRCCS", 
+		        null, "Istituto Scientifico Romagnolo per lo Studio e la cura dei Tumori", null));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Istituto Scientifico Romagnolo per lo Studio e la cura dei Tumori", null));
+
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 120));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 200));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 300));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
+
+            fs.topics!.Add(new StudyTopic(sd_sid, 11, "Dendritic cells", null, null, "D003713", "Dendritic Cells"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Autologous tumor homogenate", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "High Dose -IL2", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Immunomodulating radiotherapy", null, null, null, null));
+
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Carcinoma, Renal Cell", 14, "D000002292", "2C90", "Malignant neoplasms of kidney, except renal pelvis"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Vaccination", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Secondary", null, null, null, null));
+	        
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Signed Written Informed Consent: patients must be willing and able to give written informed consent, that have to be given before starting of screening procedure."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Availability of autologous tumor tissue fulfilling acceptance criteria prescribed by the \"Product Specification File\"."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Patients must have histologically or cytologically confirmed RCC (all histology types except for urothelial cancer);"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "4.", 1, "n.04", "Patients must have stage IV disease in progression after at least 1 TKI and/or antiangiogenetic and/or mTOR inhibitors therapy (patients must have finished prior treatments at least 4 weeks before the first IL2 dose)"));
+            fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "5.", 1, "n.05", "Patients must have at least one measurable lesion, according to the irRC response criteria (see section 8 ), after asportation of tumor tissue for vaccine preparation. The tumor lesions that will be irradiated are excluded for response evaluation."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 6, 1, "cr", "6.", 1, "n.06", "Life expectancy of greater than 3 months."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 7, 1, "cr", "7.", 1, "n.07", "ECOG performance status 0-1"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 8, 1, "cr", "8.", 1, "n.08", "Patients must have organ and marrow function as defined below:"));
+            fs.iec.Add(new StudyIEC(sd_sid, 9, 1, "cr", "*", 2, "n.08.01", "leukocytes >4000/µL"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 10, 1, "cr", "*", 2, "n.08.02", "absolute neutrophil count >1,500/µL"));	
+            fs.iec.Add(new StudyIEC(sd_sid, 11, 1, "cr", "*", 2, "n.08.03", "platelets >100,000/µL"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 12, 1, "cr", "*", 2, "n.08.04", "total bilirubin within normal institutional limits"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 13, 1, "cr", "*", 2, "n.08.05", "AST(SGOT)/ALT(SGPT) <2.5 X institutional upper limit of normal"));
+            fs.iec.Add(new StudyIEC(sd_sid, 14, 1, "cr", "*", 2, "n.08.06", "creatinine < 1.5 mg/dl"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 15, 1, "cr", "*", 2, "n.08.07", "haemoglobin >8.0 gm/dl"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 16, 1, "cr", "*", 2, "n.08.08", "hematocrit <30%"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 17, 1, "cr", "9.", 1, "n.09", "ECG and echocardiogram within normal institutional limits"));
+            fs.iec.Add(new StudyIEC(sd_sid, 18, 1, "cr", "10.", 1, "n.10", "Pulmonary function tests within normal institutional limits (to be performed only in patients with lung metastases or history of impaired lung function)"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 19, 1, "cr", "11.", 1, "n.11", "No contraindication for the use of vasopressor agents"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 20, 1, "cr", "12.", 1, "n.12", "Negative screening tests for HIV, HBV HCV and syphilis not older than 30 days before performing any of the GMP-regulated activities required (leukapheresis, collection of tumor biopsies to be used for tumor homogenate preparation);"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 21, 1, "cr", "13.", 1, "n.13", "Men and women aged > 18 years."));
+            fs.iec.Add(new StudyIEC(sd_sid, 22, 1, "cr", "14.", 1, "n.14", "Women of childbearing potential (WOCBP) must be using an adequate method of contraception to avoid pregnancy throughout the study and for up 8 weeks after the study, in order to minimize the risk of pregnancy;"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 23, 1, "cr", "15.", 1, "n.15", "Patients must have normal organ and marrow function according to clinical practice."));	    
+
+            fs.iec.Add(new StudyIEC(sd_sid, 24, 2, "cr", "1.", 1, "e.01", "Patients who have positive tests to HCV, HBV, HIV, or syphilis (specific blood testing must be performed within 30 days before any GMP-regulated activity (leukapheresis and collection of tumor biopsies to be used for tumor homogenate preparation)."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 25, 2, "cr", "2.", 1, "e.02", "Patients who did not have prior lines of systemic therapy for advanced disease."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 26, 2, "cr", "3.", 1, "e.03", "Participation in another clinical trial with any investigational agents within 30 days prior to study screening."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 27, 2, "cr", "4.", 1, "e.04", "Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements (on physician’s judgment)."));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 28, 2, "cr", "5.", 1, "e.05", "Other known malignant neoplastic diseases in the patient’s medical history with a disease-free interval of less than 3 years (except for previously treated basal cell carcinoma and in situ carcinoma of the uterine cervix);"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 29, 2, "cr", "6.", 1, "e.06", "Patients who have had chemotherapy or radiotherapy or immunotherapy within 4 weeks (6 weeks for nitrosoureas or mitomycin C) prior to entering the study or those who have not recovered from adverse events due to agents administered more than 4 weeks earlier."));	 
+            fs.iec.Add(new StudyIEC(sd_sid, 30, 2, "cr", "7.", 1, "e.07", "Patients with known brain metastases should be excluded from this clinical trial because of their poor prognosis and because they often develop progressive neurologic dysfunction that would confound the evaluation of neurologic and other adverse events."));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 31, 2, "cr", "8.", 1, "e.08", "History of allergic reactions attributed to compounds of similar chemical or biologic composition to IL-2 or other agents used in the study."));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 32, 2, "cr", "9.", 1, "e.09", "Any autoimmune disease which could be exacerbated by IL-2"));	    
+            fs.iec.Add(new StudyIEC(sd_sid, 33, 2, "cr", "10.", 1, "e.10", "A medical illness requiring chronic treatments with corticosteroids or other immunosuppressive agents"));	  
+            fs.iec.Add(new StudyIEC(sd_sid, 34, 2, "cr", "11.", 1, "e.11", "A history of significant cardiovascular disease, including myocardial infarction, congestive heart failure, primary cardiac arrhythmias, angina pectoris or cerebrovascular accident"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 35, 2, "cr", "12.", 1, "e.12", "HIV-positivity, whether or not symptomatic"));	 
+            fs.iec.Add(new StudyIEC(sd_sid, 36, 2, "cr", "13.", 1, "e.13", "Any contraindication to undergo leukapheresis as evaluated by transfusionist (e.g. severe anemia, piastrinopenia, oral anticoagulant therapy) or to undergo surgery."));	 
+           
+            fs.countries!.Add(new StudyCountry(sd_sid, 3175395, "Italy", null));
+            
+            fs.sites!.Add(new StudyLocation(sd_sid, null, "UO Immunoterapia e Laboratorio TCS, IRCCS IRST", null, null, "Meldola (FC)", 3175395, "Italy", null));
+            
+            // Data Objects
+	        
+            // 1) Trial registry entry
+
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "21 Jul 2017", 2017, 7, 21, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "13 Nov 2018", 2018, 11, 13, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+
+            return fs;
+              
+        }
+       
+        
+        if (sd_sid == "NCT03786900")
+        {
+	        FullStudy fs = CreateEmptyFullStudy();
+ 
+	        // Study 
+	        
+	        
+	        string display_title = "Fecal Microbiota Transplantation (FMT): PRIM-DJ2727";
+	        StringBuilder sb = new StringBuilder("The Fecal Microbiota Transplantation (FMT) product PRIM-DJ2727 is prepared from human stool from a healthy, screened donor.\n");
+	        sb.Append("Requestors will contact the study team about the product (PRIM-DJ2727) by email, visit, or phone call. A screening list for donors "); 
+	        sb.Append("will be provided to make sure that the list fits the requestor’s requirements. A basic fee will be requested to recover the cost of "); 
+	        sb.Append("making the product. After an agreement is made, a contract will be signed between the 2 parties. A week before the treatment, requestors "); 
+	        sb.Append("will contact the study team for possible FMT product delivery. Delivery method will be confirmed for delivery by personnel (within 10 "); 
+	        sb.Append("minutes driving distance) or by using FedEx services. Each delivered product will have an approved delivery form signed "); 
+	        sb.Append("and dated by both the person who prepared the delivery and the person who received the package."); 
+	        string brief_desc = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, null, null, 14, 12, null, 915,
+		        null, null, null, null, 0);
+	        
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
+		        "ClinicalTrials.gov", null, "11 Dec 2018", null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HSC-SPH-15-0991", 14, 100275, 
+		        "University of Texas Health Science Center, Houston", "https://ror.org/03gds6c39", null, null));
+	        
+	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From ClinicalTrials.gov"));
+	        
+	        fs.people!.Add(new StudyPerson(sd_sid, 70, "Herbert DuPont", "University of Texas Health Science Center, Houston", 
+		        100275, "University of Texas Health Science Center, Houston", "https://ror.org/03gds6c39"));
+
+	        fs.conditions!.Add(new StudyCondition(sd_sid, "Recurrent Clostridium Difficile Infection", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Multidrug-resistant Klebsiella Pneumoniae Urinary Tract Infection", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Infections", 14, "D000007239",  "1", "Certain infectious or parasitic diseases"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Communicable Diseases", 14, "D000003141", "1", "Certain infectious or parasitic diseases"));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Urinary Tract Infections", 14, "D000014552", null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, "Clostridium Infections", 14, "D000003015", null, null));
+
+	        fs.relationships!.Add(new StudyRelationship(sd_sid, 24, "NCT02449174"));
+	        fs.relationships!.Add(new StudyRelationship(sd_sid, 24, "NCT02318992"));
+	        
+            // no location list, iec - no IEC (!)
+	        
+            // Data Objects
+	        
+            // 1) Trial registry entry
+
+            string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
+            string ob_title = display_title + " :: CTG registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
+	            null, 9, 2018, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
+	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "26 Dec 2018", 2018, 12, 26, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "24 May 2023", 2023, 5, 24, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+
+            return fs;
+            
+        }
+        
+
+        
+        
         return null;
     }
 }

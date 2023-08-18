@@ -6,6 +6,97 @@ public class TestData_100123 : TestData_Base
 {
     public override FullStudy? FetchStudyData(string sd_sid)
     {
+	    
+        if (sd_sid == "2004-001569-16")
+        {
+	        FullStudy fs = CreateEmptyFullStudy();
+ 
+	        // Study 
+	        
+	        string display_title = "EFFICIENCY AND SAFETY OF CLINAVIT PAEDIATRIC AT A WEIGHT DEPENDANT DOSE ADMINISTERED DAILY FOR 5 CONTINUOUS DAYS ON 4 VITAMINS BLOOD LEVEL IN NEONATES AND CHILDREN UP TO 11 YEARS OF AGE ";
+	        display_title += "RECEIVING PARENTERAL NUTRITION. A PROSPECTIVE, MULTICENTRE, RANDOMISED, COMPARATIVE, DOUBLE BLIND PHASE III STUDY IN THERAPEUTIC USE VERSUS SOLUVIT AND VITALIPID INFANT CARRIED OUT IN PARALLEL GROUPS.   EFICACIA Y ...";
+	        StringBuilder sb = new StringBuilder("Main objective : To confirm that Clinavit Paediatric is an efficient and safe alternative to Soluvit and Vitalipid Infant, the current vitamins cocktail used for ");
+	        sb.Append("parenteral nutrition supplementation in neonates, infants and children up to 11 years of age, through the assessment of:·	The blood levels of the most commonly explored vitamins "); 
+	        sb.Append("in literature as surrogate markers of effective intake,·	The vital signs and adverse events occurring within the 5-day treatment period.");
+	        sb.Append("\nPrimary endpoints: Efficiency criteria:Plasma level of 2 oil-soluble vitamins (A and E) and 2 water-soluble ones ");
+	        sb.Append("(folates and B12) as surrogate markers of effective intake. Blood levels of retinol binding protein and lipids ");
+	        sb.Append("(total cholesterol and triglycerides) as carriers of vitamin A and E respectively and total proteins, as carrier ");
+	        sb.Append("for other vitamins, will be examined in case of abnormal vitamins blood level values.Safety criteria: Vital signs and adverse events");
+	        string brief_desc = sb.ToString();
+	        
+	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2006, 7, 11, 25, null, 900,
+		        0, 14, 11, 17, 7);
+
+	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100123, 
+		        "EU Clinical Trials Register", null, null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "VITPED/P01/04/MU.UK", 14, null, 
+		        "BAXTER SAS R&D Parenteral Nutrition", null, null, null));
+	        
+	        string title = "EFFICIENCY AND SAFETY OF CLINAVIT PAEDIATRIC AT A WEIGHT DEPENDANT DOSE ADMINISTERED DAILY FOR 5 CONTINUOUS DAYS ON 4 VITAMINS BLOOD LEVEL IN NEONATES AND CHILDREN UP TO 11 YEARS OF AGE ";
+	        title += "RECEIVING PARENTERAL NUTRITION. A PROSPECTIVE, MULTICENTRE, RANDOMISED, COMPARATIVE, DOUBLE BLIND PHASE III STUDY IN THERAPEUTIC USE VERSUS SOLUVIT AND VITALIPID INFANT CARRIED OUT IN PARALLEL GROUPS.";
+	        title += "   EFICACIA Y SEGURIDAD DE CLINAVIT PEDIÁTRICO,  A UNA  DOSIS DEPENDIENTE DEL PESO, ADMINISTRADO A DIARIO DURANTE 5 DÍAS CONSECUTIVOS, MEDIDAS ";
+	        title += "POR LA CONCENTRACIÓN SANGUÍNEA DE 4 VITAMINAS EN NEONATOS Y NIÑOS DE HASTA 11 AÑOS DE EDAD TRATADOS CON NUTRICIÓN ";
+	        title +=
+		        "PARENTERAL. ESTUDIO EN FASE III PROSPECTIVO, MULTICÉNTRICO, ALEATORIZADO, COMPARATIVO, ABIERTO Y DE GRUPOS PARALELOS EN USO TERAPÉUTICO FRENTE A SOLUVIT Y VITALIPID INFANT.";
+	        fs.titles!.Add(new StudyTitle(sd_sid, title, 16, "en", 11, true, "From the EU CTR"));
+	        
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "BAXTER SAS R&D Parenteral Nutrition", null));
+	        
+	        fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
+	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
+	        fs.features.Add(new StudyFeature(sd_sid, 24, 510));   // 
+	        
+	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Clinavit Pediatric", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Vitalipid infant", null, null, null, null));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "soluvit", null, null, null, null));
+	        
+	        fs.conditions!.Add(new StudyCondition(sd_sid, 
+		        "No special medical condition but Patient requiring for any underlying pathology at least 5 days of total parenteral nutrition, representing at least 90% of their total energy needs", 
+		        null, null, null, null));
+
+	        sb = new StringBuilder("·In or out patients of both genders,·\tAged up to 11 years of age at the first visit,");
+	        sb.Append("·\tPatient requiring for any underlying pathology at least 5 days of total parenteral nutrition, representing at least 90% of their total energy needs,");
+	        sb.Append("·\tPatient to be supplemented by intravenous vitamins,");
+	        sb.Append("·\tPatient whose parents or legal representative have freely given their written informed consent.");
+	        
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", sb.ToString()));	     
+	        
+	        sb = new StringBuilder("·Known HIV infection,·\tKnown pre-existing hypervitaminosis,");
+	        sb.Append("·\tKnown hypersensitivity to intravenous vitamins, or any excipients of the preparation,");
+	        sb.Append("·Participation in another clinical trial within a month prior to the first visit, ");
+	        sb.Append("·Patient with any underlying pathology at risk of foreseeable drop out before the 6th day,");
+	        sb.Append("·\tPatients requiring treatment by anticonvulsants (barbiturics or phenytoin),");
+	        sb.Append("·Patients requiring an extra supplementation by products containing vitamins, whatever the route,");
+	        sb.Append("·\tPrevious inclusion in this study,");
+	        sb.Append("·\tParents or legal representative’s potential non-cooperation or unwillingness to comply fully with the protocol.");
+	       
+	        fs.iec!.Add(new StudyIEC(sd_sid, 2, 1002, "none", "All", 0, "e.0A", sb.ToString()));
+
+	        fs.countries!.Add(new StudyCountry(sd_sid, 2510769, "Spain", 25));
+            
+            // Data Objects
+	        
+            // 1) Trial registry entry
+
+            string sd_oid = sd_sid + " :: 13 :: EU CTR registry entry";
+            string ob_title = display_title + " :: EU CTR registry entry";
+            StudyDataObject sdo = CreateEmptyStudyDataObject();
+            
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR registry entry", null, ob_title,
+	            null, 9, 2006, 23, 13, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
+	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2004-001569-16/ES", true, 35, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "30 Jun 2006", 2006, 6, 30, null, null, null, null));
+	       
+            fs.data_objects!.Add(sdo);
+
+            return fs;
+        }
+        
+        
         if (sd_sid == "2009-011622-34")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
@@ -175,8 +266,8 @@ public class TestData_100123 : TestData_Base
 		        "stages AJCC v. 8 IIIB/IIIC (not eligible for definite chemoradiation therapy) or stage IV (metastatic) non-small cell lung cancer (NSCLC)", 
 		        null, null, null, null));
 	        
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Histologically confirmed locally advanced  or metastatic NSCLC"));	       
-            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Measurable disease  by RECIST 1.1"));	    
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Histologically confirmed locally advanced or metastatic NSCLC"));	       
+            fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "Measurable disease by RECIST 1.1"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Known PD-L1 status"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "4.", 1, "n.04", "ECOG performance status (PS) ≤ 1."));	    
             fs.iec.Add(new StudyIEC(sd_sid, 5, 1, "cr", "5.", 1, "n.05", "Other protocol-defined inclusion criteria may apply."));	    
@@ -259,96 +350,6 @@ public class TestData_100123 : TestData_Base
             
         }
 
-        
-        if (sd_sid == "2004-001569-16")
-        {
-	        FullStudy fs = CreateEmptyFullStudy();
- 
-	        // Study 
-	        
-	        string display_title = "EFFICIENCY AND SAFETY OF CLINAVIT PAEDIATRIC AT A WEIGHT DEPENDANT DOSE ADMINISTERED DAILY FOR 5 CONTINUOUS DAYS ON 4 VITAMINS BLOOD LEVEL IN NEONATES AND CHILDREN UP TO 11 YEARS OF AGE ";
-	        display_title += "RECEIVING PARENTERAL NUTRITION. A PROSPECTIVE, MULTICENTRE, RANDOMISED, COMPARATIVE, DOUBLE BLIND PHASE III STUDY IN THERAPEUTIC USE VERSUS SOLUVIT AND VITALIPID INFANT CARRIED OUT IN PARALLEL GROUPS.   EFICACIA Y ...";
-	        StringBuilder sb = new StringBuilder("Main objective : To confirm that Clinavit Paediatric is an efficient and safe alternative to Soluvit and Vitalipid Infant, the current vitamins cocktail used for ");
-	        sb.Append("parenteral nutrition supplementation in neonates, infants and children up to 11 years of age, through the assessment of:·	The blood levels of the most commonly explored vitamins "); 
-	        sb.Append("in literature as surrogate markers of effective intake,·	The vital signs and adverse events occurring within the 5-day treatment period.");
-	        sb.Append("\nPrimary endpoints: Efficiency criteria:Plasma level of 2 oil-soluble vitamins (A and E) and 2 water-soluble ones ");
-	        sb.Append("(folates and B12) as surrogate markers of effective intake. Blood levels of retinol binding protein and lipids ");
-	        sb.Append("(total cholesterol and triglycerides) as carriers of vitamin A and E respectively and total proteins, as carrier ");
-	        sb.Append("for other vitamins, will be examined in case of abnormal vitamins blood level values.Safety criteria: Vital signs and adverse events");
-	        string brief_desc = sb.ToString();
-	        
-	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2006, 7, 11, 25, null, 900,
-		        0, 14, 11, 17, 7);
-
-	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100123, 
-		        "EU Clinical Trials Register", null, null, null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "VITPED/P01/04/MU.UK", 14, null, 
-		        "BAXTER SAS R&D Parenteral Nutrition", null, null, null));
-	        
-	        string title = "EFFICIENCY AND SAFETY OF CLINAVIT PAEDIATRIC AT A WEIGHT DEPENDANT DOSE ADMINISTERED DAILY FOR 5 CONTINUOUS DAYS ON 4 VITAMINS BLOOD LEVEL IN NEONATES AND CHILDREN UP TO 11 YEARS OF AGE ";
-	        title += "RECEIVING PARENTERAL NUTRITION. A PROSPECTIVE, MULTICENTRE, RANDOMISED, COMPARATIVE, DOUBLE BLIND PHASE III STUDY IN THERAPEUTIC USE VERSUS SOLUVIT AND VITALIPID INFANT CARRIED OUT IN PARALLEL GROUPS.";
-	        title += "   EFICACIA Y SEGURIDAD DE CLINAVIT PEDIÁTRICO,  A UNA  DOSIS DEPENDIENTE DEL PESO, ADMINISTRADO A DIARIO DURANTE 5 DÍAS CONSECUTIVOS, MEDIDAS ";
-	        title += "POR LA CONCENTRACIÓN SANGUÍNEA DE 4 VITAMINAS EN NEONATOS Y NIÑOS DE HASTA 11 AÑOS DE EDAD TRATADOS CON NUTRICIÓN ";
-	        title +=
-		        "PARENTERAL. ESTUDIO EN FASE III PROSPECTIVO, MULTICÉNTRICO, ALEATORIZADO, COMPARATIVO, ABIERTO Y DE GRUPOS PARALELOS EN USO TERAPÉUTICO FRENTE A SOLUVIT Y VITALIPID INFANT.";
-	        fs.titles!.Add(new StudyTitle(sd_sid, title, 16, "en", 11, true, "From the EU CTR"));
-	        
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "BAXTER SAS R&D Parenteral Nutrition", null));
-	        
-	        fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
-	        fs.features.Add(new StudyFeature(sd_sid, 22, 205));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));   // 
-	        fs.features.Add(new StudyFeature(sd_sid, 24, 510));   // 
-	        
-	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Clinavit Pediatric", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Vitalipid infant", null, null, null, null));
-	        fs.topics.Add(new StudyTopic(sd_sid, 12, "soluvit", null, null, null, null));
-	        
-	        fs.conditions!.Add(new StudyCondition(sd_sid, 
-		        "No special medical condition but Patient requiring for any underlying pathology at least 5 days of total parenteral nutrition, representing at least 90% of their total energy needs", 
-		        null, null, null, null));
-
-	        sb = new StringBuilder("·In or out patients of both genders,·\tAged up to 11 years of age at the first visit,");
-	        sb.Append("·\tPatient requiring for any underlying pathology at least 5 days of total parenteral nutrition, representing at least 90% of their total energy needs,");
-	        sb.Append("·\tPatient to be supplemented by intravenous vitamins,");
-	        sb.Append("·\tPatient whose parents or legal representative have freely given their written informed consent.");
-	        
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1001, "none", "All", 0, "n.0A", sb.ToString()));	     
-	        
-	        sb = new StringBuilder("·Known HIV infection,·\tKnown pre-existing hypervitaminosis,");
-	        sb.Append("·\tKnown hypersensitivity to intravenous vitamins, or any excipients of the preparation,");
-	        sb.Append("·Participation in another clinical trial within a month prior to the first visit, ");
-	        sb.Append("·Patient with any underlying pathology at risk of foreseeable drop out before the 6th day,");
-	        sb.Append("·\tPatients requiring treatment by anticonvulsants (barbiturics or phenytoin),");
-	        sb.Append("·Patients requiring an extra supplementation by products containing vitamins, whatever the route,");
-	        sb.Append("·\tPrevious inclusion in this study,");
-	        sb.Append("·\tParents or legal representative’s potential non-cooperation or unwillingness to comply fully with the protocol.");
-	       
-	        fs.iec!.Add(new StudyIEC(sd_sid, 2, 1002, "none", "All", 0, "e.0A", sb.ToString()));
-
-	        fs.countries!.Add(new StudyCountry(sd_sid, 2510769, "Spain", 25));
-            
-            // Data Objects
-	        
-            // 1) Trial registry entry
-
-            string sd_oid = sd_sid + " :: 13 :: EU CTR registry entry";
-            string ob_title = display_title + " :: EU CTR registry entry";
-            StudyDataObject sdo = CreateEmptyStudyDataObject();
-            
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR registry entry", null, ob_title,
-	            null, 9, 2006, 23, 13, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
-	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2004-001569-16/ES", true, 35, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "30 Jun 2006", 2006, 6, 30, null, null, null, null));
-	       
-            fs.data_objects!.Add(sdo);
-
-            return fs;
-        }
-        
         
         if (sd_sid == "2012-000615-84")
         {

@@ -26,13 +26,13 @@ public class TestData_101901 : TestData_Base
 	        string yoda_title =
 		        "Evaluation of an experimental mouth rinse device for relieving dentinal hypersenstivity";
 	        StringBuilder sb = new StringBuilder("This study is for people with sensitive teeth and involves going to the dentist for 4 visits over 6 weeks. ");
-	        sb.Append("At each visit the dentist will look at the mouth, teeth, tongue and gums of subjects, and check for sensitive teeth.\n\n"); 
-	        sb.Append("During the first 2 weeks, participants will brush their teeth two times a day with the fluoride toothpaste provided.\n\n"); 
+	        sb.Append("At each visit the dentist will look at the mouth, teeth, tongue and gums of subjects, and check for sensitive teeth.\n"); 
+	        sb.Append("During the first 2 weeks, participants will brush their teeth two times a day with the fluoride toothpaste provided.\n"); 
 	        sb.Append("Then, if they qualify to continue in the study, participants will be assigned to a treatment group. All the groups will get toothpaste "); 
 	        sb.Append("currently sold on the market, and one group will get a mouthwash with an experimental ingredient to use as well. Subjects will have an "); 
-	        sb.Append("equal chance of being assigned to any one of the three groups.\n\n"); 
+	        sb.Append("equal chance of being assigned to any one of the three groups.\n"); 
 	        sb.Append("For the next 4 weeks, subjects will use their assigned products according to the directions provided. At Visit 1 subjects will "); 
-	        sb.Append("be supervised while they brush their teeth to ensure they understand the directions. They will also have supervised use of the product at Visit 2.\n\n"); 
+	        sb.Append("be supervised while they brush their teeth to ensure they understand the directions. They will also have supervised use of the product at Visit 2.\n"); 
 	        sb.Append("We will see if the mouthwash helps to reduce tooth sensitivity during the study."); 
 	        string brief_desc = sb.ToString();
 	        
@@ -161,13 +161,14 @@ public class TestData_101901 : TestData_Base
 	        return fs; 
         }
         
+        
         if (sd_sid == "Y-JandJ-30-49")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
  
 	        // Study 
 
-	        string display_title = "A Phase 3, Randomized, Open-Label, Comparative Study of DOXIL/CAELYX® versus Topotecan HCl in Patients with Epithelial ";
+	        string display_title = "A Phase 3, Randomized, Open-Label, Comparative Study of DOXIL/CAELYX versus Topotecan HCl in Patients with Epithelial ";
 	        display_title += "Ovarian Carcinoma Following Failure of First-Line, Platinum-Based Chemotherapy";
 	        StringBuilder sb = new StringBuilder("The primary objective of this study was to compare the efficacy and safety of DOXIL to those of topotecan ");
 	        sb.Append("in subjects with epithelial ovarian carcinoma following failure of first-line, platinum-based chemotherapy."); 
@@ -345,6 +346,8 @@ public class TestData_101901 : TestData_Base
             fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100773, "Janssen", null));
                   
             fs.topics!.Add(new StudyTopic(sd_sid, 12, "Canagliflozin", null, null, "D000068896", "Canagliflozin"));
+            fs.topics.Add(new StudyTopic(sd_sid, 12, "Invokana", null, null, "D000068896", "Canagliflozin"));
+            
             fs.conditions!.Add(new StudyCondition(sd_sid, "Obesity", null, null, "5B81", "Obesity"));
 
 	        fs.references!.Add(new StudyReference(sd_sid, null, "28289041", null, null, null));
@@ -428,6 +431,7 @@ public class TestData_101901 : TestData_Base
 	        return fs; 
         }
         
+        
         if (sd_sid == "Y-JandJ-GAL-MVD-301")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
@@ -449,6 +453,7 @@ public class TestData_101901 : TestData_Base
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100290, "Johnson & Johnson", "https://ror.org/03qd7mz70"));
 
 	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Galantamine", null, null, "D005702", "Galantamine"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Razadyne", null, null, "D005702", "Galantamine"));
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Alzheimer Disease", null, null, "8A20", 
 		        "Alzheimer disease"));
@@ -550,6 +555,8 @@ public class TestData_101901 : TestData_Base
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100585, "Actelion", "https://ror.org/001yedb91"));
                   
 	        fs.topics!.Add(new StudyTopic(sd_sid, 12, "Bosentan", null, null, "D000077300", "Bosentan"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Tracleer", null, null, "D000077300", "Bosentan"));
+	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Hypertension, Pulmonary, Arterial", null, null, "BB01", "Pulmonary hypertension"));
 
 	        fs.references!.Add(new StudyReference(sd_sid, null, "29064349", null, null, null));

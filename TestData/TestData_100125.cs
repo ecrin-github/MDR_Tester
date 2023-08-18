@@ -13,33 +13,30 @@ public class TestData_100125 : TestData_Base
 	        // Study
 					  
 	        string display_title = "Comparison of efficacy and complications of PCNL under General and Spinal anesthesia";
-	          StringBuilder sb = new StringBuilder("Interventions: Intervention 1: Performing PCNL under spinal anesthesia at the prone position. ");
+	          StringBuilder sb = new StringBuilder("Intervention 1: Performing PCNL under spinal anesthesia at the prone position. ");
 	          sb.Append("Intervention 2: Performing PCNL under general anesthesia at the prone position.;Treatment - Surgery;Treatment - Surgery;");
 	          sb.Append("Performing PCNL under spinal anesthesia at the prone position;Performing PCNL under general anesthesia at the prone position");
-	          sb.Append("Primary outcome(s): Success rate of operation. Timepoint: during operation and two week later. ");  
+	          sb.Append("\nPrimary outcome(s): Success rate of operation. Timepoint: during operation and two week later. ");  
 	          sb.Append("Method of measurement: observation by nephroscope and fluroscopy during operation and with sonography and KUB two weeks later.");   
-	          sb.Append("Study Design: Randomization: Randomized, Blinding: Single blinded, Placebo: Not used, Assignment: Parallel, Purpose: Treatment.");
+	          sb.Append("\nStudy Design: Randomization: Randomized, Blinding: Single blinded, Placebo: Not used, Assignment: Parallel, Purpose: Treatment.");
 	          string brief_desc = sb.ToString();
 	          
 	        fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2008, 2, 11, 21, "1", 900,
-	            18, 17, null, null, 10);
+	            18, 17, null, null, 4);
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100125, 
-	            "Iranian Registry of Clinical Trials", null, "2009 Dec 20", null));
+	            "Iranian Registry of Clinical Trials", null, "20 Dec 2009", null));
 		          
 	        fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
-	            "From the Iranian Clinical Trials Registry"));
+	            "From the Iranian Registry of Clinical Trials"));
 	          
-	        fs.people!.Add(new StudyPerson(sd_sid, 56, "Sadrollah Mehrabi", 
-		          "Yasuj university of medical science", null, "Yasuj university of medical science", null));	
+	        fs.people!.Add(new StudyPerson(sd_sid, 51, "Sadrollah Mehrabi", 
+		          "Yasuj University of Medical Sciences", null, "Yasuj University of Medical Sciences", null));	
 			
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null,
-		          "Research manager, Yasuj University of Medical Sciences", null));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, 
-		          "Research manager, Yasuj University of Medical Sciences", null));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 112, null, "Research manager, Yasuj University of Medical Sciences", null));
 
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr assumed", "@", 1, "n.01", "Age more than 18 years, presence of renal or upper ureteral stone, candidate for PCNL (multiple stones, staghorn stones, calyceal diverticule stones, stone which are resistant to ESWL, lower pole renal stone larger than 25 mm, upper ureteral stone >20mm, Having informed consent"));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr assumed", "@", 1, "n.02", "Any contraindication for regional anesthesia, presence of coagulopathy, acute infection ore urosepsis, presence of acute renal failure"));	    
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr pair", "-1-", 1, "n.01", "Age more than 18 years, presence of renal or upper ureteral stone, candidate for PCNL (multiple stones, staghorn stones, calyceal diverticule stones, stone which are resistant to ESWL, lower pole renal stone larger than >15 mm and other renal stone larger than 25 mm, upper ureteral stone >20mm, Having informed consent"));	       
+	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr pair", "-2-", 1, "n.02", "Any contraindication for regional anesthesia, presence of coagulopathy, acute infection ore urosepsis, presence of acute renal failure"));	    
 	   
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Renal and ureteral stones", null, null, null, null));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Calculus of kidney with calculus of ureter", null, null, "GB70", "Calculus of upper urinary tract"));
@@ -66,8 +63,8 @@ public class TestData_100125 : TestData_Base
 		        
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100125, "Iranian Registry of Clinical Trials", 
 	          "http://en.irct.ir/trial/570", true, 35, null, null, null));
-	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2009 Dec 20", 2009, 12, 20, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2018 Feb 22", 2018, 2, 22, null, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "20 Dec 2009", 2009, 12, 20, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "22 Feb 2018", 2018, 2, 22, null, null, null, null));
 		       
 	        fs.data_objects!.Add(sdo);
 
@@ -82,19 +79,19 @@ public class TestData_100125 : TestData_Base
           // Study
 				  
           string display_title = "The effect of combined exercises with the approach of extreme readiness and coffee consumption on liver enzymes and motor function of middle-aged men with non-alcoholic fatty liver";
-          StringBuilder sb = new StringBuilder("Interventions: Intervention 1: Intervention group: Intervention group 1: Combined exercise, training intervention will be done 3 sessions per week for 60 minutes. ");
+          StringBuilder sb = new StringBuilder("Intervention 1: Intervention group: Intervention group 1: Combined exercise, training intervention will be done 3 sessions per week for 60 minutes. ");
           sb.Append("Each session consists of 3 parts of practice, 5 parts. Start the training program by warming up for 10 to 15 minutes. Then the training sections are ");
           sb.Append("performed as follows three times without rest: 1- Balance movement for 15 to 20 seconds 2- Aerobic movement for 20 to 30 seconds and with an intensity ");
-          sb.Append("55 to 65% of the maximum heart rate. Pilates largely avoids high impact, high power output, and heavy muscular and skeletal loading. Pilates largely avoids ");
+          sb.Append("of 55 to 65% of the maximum heart rate. Pilates largely avoids high impact, high power output, and heavy muscular and skeletal loading. Pilates largely avoids ");
           sb.Append("high impact, high power output, and heavy muscular and skeletal loading. Pilates largely avoids high impact, high power output, and heavy muscular and skeletal ");
           sb.Append("loading. Becomes.Subjects rest for 1 to 2 minutes before the start of the next part. Subsequent parts will be performed according to the same procedure and ");
           sb.Append("with various movements on other parts of the body. After finishing 3 parts, cooling is done for 5 minutes. Intervention 2: Intervention group: ");
           sb.Append("Intervention group 2 combined exercises with coffee consumption, combined exercise intervention 3 sessions per week for 60 minutes. Each session consists ");
-          sb.Append("3 parts of practice, 5 parts. Start the training program by warming up for 10 to 15 minutes. Then the training sections are performed in the following way three ");
+          sb.Append("of 3 parts of practice, 5 parts. Start the training program by warming up for 10 to 15 minutes. Then the training sections are performed in the following way three ");
           sb.Append("times without rest: 1- Balance movement for 15 to 20 seconds 2- Aerobic movement for 20 to 30 seconds and with an intensity of 55 to 65% of the maximum heart rate. ");
           sb.Append("Pilates largely avoids high impact, high power output, and heavy muscular and skeletal loading. Pilates largely avoids high impact, high power output, and heavy ");
           sb.Append("muscular and skeletal loading. Pilates largely avoids high impact, high power output, and h");
-          sb.Append("Primary outcome(s): Serum levels of hepatic alanine transaminase and aspartate transaminase enzymes. Timepoint: Measurement three days before the ");  
+          sb.Append("\nPrimary outcome(s): Serum levels of hepatic alanine transaminase and aspartate transaminase enzymes. Timepoint: Measurement three days before the ");  
           sb.Append("start of the study intervention. Method of measurement: Blood test to determine the serum levels of alanine transaminase and aspartate transaminase liver ");   
           sb.Append("enzymes is performed by BT 2500 analyzer and 3000 rpm centrifuge for 5 minutes with Behdad device made in Iran and standard kits of Par Azmoon company.;Liver grade. ");  
           sb.Append("Timepoint: Measurement three days before the start of the study intervention. Method of measurement: Liver grade with ultrasound device from Samsung "); 
@@ -102,7 +99,7 @@ public class TestData_100125 : TestData_Base
           sb.Append("to determine the amount of blood lipid profile is measured by BT 2500 analyzer and 3000 rpm centrifuge in 5 minutes with Behdad device made in Iran and standard ");  
           sb.Append("kits of Par Azmoon company.;Motor function. Timepoint: Measurement three days before the start of the study intervention. Method of measurement: Motor function is "); 
           sb.Append("performed by fitness tests (sit-ups, steps, stork balance, quadratic agility, and Welsh flexibility).");
-          sb.Append("Study Design: Randomization: Randomized, Blinding: Not blinded, Placebo: Not used, Assignment: Factorial, Purpose: Supportive, ");
+          sb.Append("\nStudy Design: Randomization: Randomized, Blinding: Not blinded, Placebo: Not used, Assignment: Factorial, Purpose: Supportive, ");
           sb.Append("Randomization description: Describe how to randomizeRandom assignment to intervention and control groupsIn this study, we used the restricted ");
           sb.Append("randomization method for all study groups with sample size.We will use the same type of random allocation rule. This method represents a large ");
           sb.Append("block for the total sample size, which means that the balance in the number of people assigned to each group will be achieved at the end of the study. ");
@@ -111,12 +108,12 @@ public class TestData_100125 : TestData_Base
           sb.Append("We throw the balls (sheets) into a container and then randomly, the balls (sheets) are taken out of the container without replacement, and t");
           string brief_desc = sb.ToString();
           sb = new StringBuilder("Yes - There is a plan to make this available\n");
-          sb.Append("What will be shared: Information on the main outcomes studied Possibility of subscription Has a transition.  ");
-          sb.Append("When: The data are available after the publication of all the results obtained Will take Community Verified icon  ");
-          sb.Append("To whom: Only for researchers working in academic and scientific institutions  ");
+          sb.Append("What will be shared: Information on the main outcomes studied Possibility of subscription Has a transition. ");
+          sb.Append("When: The data are available after the publication of all the results obtained Will take Community Verified icon ");
+          sb.Append("To whom: Only for researchers working in academic and scientific institutions ");
           sb.Append("Conditions: The study or proposal protocol should be submitted by the Ethics Committee of the institution or university To be approved. ");
-          sb.Append("The rights of authors and their sponsors must be protected Be  Where to obtain: Talireza099@gmail.com or alireza.taheri@shahed.ac.ir  ");
-          sb.Append("How to obtain: This request must be addressed to the Vice Chancellor for Research and Technology of Shahed University of Tehran and will be done with the information of the project manager  Comments:");
+          sb.Append("The rights of authors and their sponsors must be protected Be Where to obtain: Talireza099@gmail.com or alireza.taheri@shahed.ac.ir ");
+          sb.Append("How to obtain: This request must be addressed to the Vice Chancellor for Research and Technology of Shahed University of Tehran and will be done with the information of the project manager Comments:");
           
           string dss = sb.ToString();
           
@@ -124,22 +121,20 @@ public class TestData_100125 : TestData_Base
             30, 17, 60, 17, 10);
 
           fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100125, 
-            "Iranian Registry of Clinical Trials", null, "2021 Jul 22", null));
+            "Iranian Registry of Clinical Trials", null, "22 Jul 2021", null));
 	          
           fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
-            "From the Iranian Clinical Trials Registry"));
+            "From the Iranian Registry of Clinical Trials"));
           fs.titles.Add(new StudyTitle(sd_sid, 
             "The effect of eight weeks of independent combined training with coffee consumption on blood lipid profile of middle-aged men with non-alcoholic fatty liver in Covid-19 condition", 
-            16, "en", 11, false, "From the Iranian Clinical Trials Registry"));
+            16, "en", 11, false, "From the Iranian Registry of Clinical Trials"));
           
           fs.people!.Add(new StudyPerson(sd_sid, 51, "Nahid Talebi", 
 	          "Shahed University", 102305, "Shahed University", "https://ror.org/01e8ff003"));	
           fs.people!.Add(new StudyPerson(sd_sid, 56, "Alireza Taheri Dilatabadi", 
 	          "Shahed University", 102305, "Shahed University", "https://ror.org/01e8ff003"));	
 			
-          fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 102305,
-	          "Shahed University", "https://ror.org/01e8ff003"));
-          fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 102305, 
+          fs.organisations!.Add(new StudyOrganisation(sd_sid, 112, 102305,
 	          "Shahed University", "https://ror.org/01e8ff003"));
           
           fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr assumed", "@", 1, "n.01", "Middle-aged men 30 to 60 years"));	       
@@ -156,7 +151,7 @@ public class TestData_100125 : TestData_Base
  
         fs.conditions!.Add(new StudyCondition(sd_sid, "Non-alcoholic fatty liver disease", null, null, "DB92", "Non-alcoholic fatty liver disease"));
         fs.conditions.Add(new StudyCondition(sd_sid, "Fatty (change of) liver, not elsewhere classified", null, null, "DB92", "Non-alcoholic fatty liver disease"));
-        fs.conditions.Add(new StudyCondition(sd_sid, "K76.0", null, null, "DB92", "Non-alcoholic fatty liver disease"));
+        fs.conditions.Add(new StudyCondition(sd_sid, "K76.0", 12, "K76.0", "DB92", "Non-alcoholic fatty liver disease"));
 
         fs.features!.Add(new (sd_sid, 21, 415));  // Supportive care
         fs.features.Add(new (sd_sid, 22, 205));  //  Randomised
@@ -180,8 +175,8 @@ public class TestData_100125 : TestData_Base
 	        
         sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100125, "Iranian Registry of Clinical Trials", 
           "http://en.irct.ir/trial/56894", true, 35, null, null, null));
-        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2021 Jul 22", 2021, 7, 22, null, null, null, null));
-        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2021 Aug 30", 2021, 8, 30, null, null, null, null));
+        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "22 Jul 2021", 2021, 7, 22, null, null, null, null));
+        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "30 Aug 2021", 2021, 8, 30, null, null, null, null));
 	       
         fs.data_objects!.Add(sdo);
 

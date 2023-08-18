@@ -324,19 +324,21 @@ public class TestStudyReporter
             {
                 foreach (string id_value in loc_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "Facility", "facility", "string", id_value);
-                    rr = _repHelper.CompareField(rr, "facility_org_id", "int");
-                    rr = _repHelper.CompareField(rr, "facility_ror_id", "string");
-                    rr = _repHelper.CompareField(rr, "city_id", "int");
-                    rr = _repHelper.CompareField(rr, "city_name", "string");
-                    rr = _repHelper.CompareField(rr, "country_id", "int");
-                    rr = _repHelper.CompareField(rr, "country_name", "string");
-                    rr = _repHelper.CompareField(rr, "status_id", "int");
-                    tr.record_results.Add(rr);
-                    tr.num_issues += rr.num_issues;
+                    if (!id_value.ToLower().EndsWith(" site"))   // cannot compare multiple 'investigative sites')
+                    {
+                        RecordResults rr = new RecordResults(tr, sd_id, "Facility", "facility", "string", id_value);
+                        rr = _repHelper.CompareField(rr, "facility_org_id", "int");
+                        rr = _repHelper.CompareField(rr, "facility_ror_id", "string");
+                        rr = _repHelper.CompareField(rr, "city_id", "int");
+                        rr = _repHelper.CompareField(rr, "city_name", "string");
+                        rr = _repHelper.CompareField(rr, "country_id", "int");
+                        rr = _repHelper.CompareField(rr, "country_name", "string");
+                        rr = _repHelper.CompareField(rr, "status_id", "int");
+                        tr.record_results.Add(rr);
+                        tr.num_issues += rr.num_issues;
+                    }
                 }
             }
-            
         }
         _repHelper.write_results(tr);
         return tr.num_issues;
@@ -348,24 +350,24 @@ public class TestStudyReporter
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_sid ='{sd_id}'");
         if (tr.data_present)
         {
-            List<string>? ipd_values = _repHelper.FetchStudyIPDAvailable(sd_id);
+            List<IPDData>? ipd_values = _repHelper.FetchStudyIPDAvailable(sd_id);
             if (ipd_values?.Any() == true)
             {
-                foreach (string id_value in ipd_values)
+                foreach (IPDData id_values in ipd_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "IPD ID", "ipd_id", "string", id_value);
-                    rr = _repHelper.CompareField(rr, "ipd_type", "string");
+                    RecordResults rr = new RecordResults(tr, sd_id, "IPD ID / type", "ipd_id", "string", id_values.ipd_id,
+                        "ipd_type", "string", id_values.ipd_type);
                     rr = _repHelper.CompareField(rr, "ipd_url", "string");
                     rr = _repHelper.CompareField(rr, "ipd_comment", "string");
                     tr.record_results.Add(rr);
                     tr.num_issues += rr.num_issues;
                 }
             }
-            
         }
         _repHelper.write_results(tr);
         return tr.num_issues;
     }
+    
     
     public int compare_table_study_iec(string sd_id)
     {

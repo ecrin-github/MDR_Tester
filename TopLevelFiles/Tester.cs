@@ -13,38 +13,30 @@ public class Tester
     
     public void Run(Options opts)
     {
-        try
-        {
-            // Simply test the selected study data for each listed source.
 
-            foreach (int sourceId in opts.SourceIds!)
-            {
-                // Obtain source details, augment with connection string for this database
-                // Open up the logging file for this source and then call the main 
-                // test routine. After initial checks source is guaranteed to be non-null.
-                    
-                Source source = _monDataLayer.FetchSourceParameters(sourceId)!;
-                string dbName = source.database_name!;
-                source.db_conn = _monDataLayer.GetConnectionString(dbName) ;
-                
-                _loggingHelper.OpenLogFile(source.database_name!);
-                _loggingHelper.LogHeader("STARTING TEST");
-                _loggingHelper.LogCommandLineParameters(opts);
-                _loggingHelper.LogStudyHeader(opts, "For source: " + source.id + ": " + dbName);
-                
-                int FbLevel = (int)opts.FeedbackLevel!;  // default ensures an integer
-                RunTest(source, FbLevel);
-                
-                _loggingHelper.CloseLog();
-            }
-        }
+        // Simply test the selected study data for each listed source.
 
-        catch (Exception e)
+        foreach (int sourceId in opts.SourceIds!)
         {
-            _loggingHelper.LogHeader("UNHANDLED EXCEPTION");
-            _loggingHelper.LogCodeError("Importer application aborted", e.Message, e.StackTrace);
+            // Obtain source details, augment with connection string for this database
+            // Open up the logging file for this source and then call the main 
+            // test routine. After initial checks source is guaranteed to be non-null.
+                
+            Source source = _monDataLayer.FetchSourceParameters(sourceId)!;
+            string dbName = source.database_name!;
+            source.db_conn = _monDataLayer.GetConnectionString(dbName) ;
+            
+            _loggingHelper.OpenLogFile(source.database_name!);
+            _loggingHelper.LogHeader("STARTING TEST");
+            _loggingHelper.LogCommandLineParameters(opts);
+            _loggingHelper.LogStudyHeader(opts, "For source: " + source.id + ": " + dbName);
+            
+            int FbLevel = (int)opts.FeedbackLevel!;  // default ensures an integer
+            RunTest(source, FbLevel);
+            
             _loggingHelper.CloseLog();
         }
+
     }
 
     private void RunTest(Source source, int FbLevel)

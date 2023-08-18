@@ -16,19 +16,19 @@ public class TestData_100127 : TestData_Base
             display_title += "phase I study of this drug for recurrent or refractory neuroblastoma";
             StringBuilder sb = new StringBuilder("Interventions: A multicenter, single group assignment, open label, phase I dose-escalation study followed by a phase II study.\n");
             sb.Append("This drug should be orally administered twice a day. It should be repeatedly administered, regarding 28 days as a cycle.Each cycle will "); 
-            sb.Append("be repeated every 28 days.  The data cutoff is carry out at 6 cycles for the phase 1 part and 12 cycles for the phase 2 part.\n"); 
-            sb.Append("Primary outcome(s): [Phase 1 part\n"); 
+            sb.Append("be repeated every 28 days. The data cutoff is carry out at 6 cycles for the phase 1 part and 12 cycles for the phase 2 part.\n"); 
+            sb.Append("Primary outcome(s): [Phase 1 part]\n"); 
             sb.Append("Dose-limiting toxicity\n"); 
             sb.Append("[Phase 2 part]\n"); 
             sb.Append("Response rate evaluated by the Central Evaluation Committee\n"); 
             sb.Append("Study Design: Single arm Non-randomized"); 
             string brief_desc = sb.ToString();
             
-            fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2017, 10, 11, 14, "23", 900,
-                1, 17, 22, 17, 10);
+            fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2017, 10, 11, 15, "23", 900,
+                1, 17, 22, 17, 6);
 
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100127, 
-                "Japan Primary Registries Network", null, "2017 Jul 19", null));
+                "Japan Primary Registries Network", null, "19 Jul 2017", null));
             
             fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From the Japan Primary Registries Network"));
             string title = "A phase I/II study of crizotinib for recurrent or refractory anaplastic lymphoma kinase (ALK)-positive anaplastic large cell ";
@@ -53,12 +53,12 @@ public class TestData_100127 : TestData_Base
             fs.conditions!.Add(new StudyCondition(sd_sid, "Recurrent or refractory anaplastic lymphoma kinase (ALK)-positive anaplastic large cell lymphoma.Recurrent or refractory neuroblastoma", 
 	            null, null, null, null));      
             
-            fs.iec!.Add(new StudyIEC(sd_sid, 1, 302, "cr", "none", 1, "e.00", "[Phase 1/2 parts]"));	  
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 302, "cr", "Hdr", 0, "e.00", "[Phase 1/2 parts]"));	  
             fs.iec!.Add(new StudyIEC(sd_sid, 2, 2, "cr", "1)", 1, "e.01", "Patients with CNS (central nervous system)disease."));	       
             fs.iec.Add(new StudyIEC(sd_sid, 3, 2, "cr", "2)", 1, "e.02", "Primary cutaneous ALCL."));	    
             fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "3)", 1, "e.03", "Pregnant or brest-feeding women."));
             fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "4)", 1, "e.04", "Patients of reproductive potential who have not agreed to use an effective contraception method."));	
-            fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "5)", 1, "e.04", "Patients receiving the following concomitant medications"));	
+            fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "5)", 1, "e.05", "Patients receiving the following concomitant medications"));	
             fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "5-1)", 2, "e.05.01", "Therapeutic corticosteroids for lymphoma"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "5-2)", 2, "e.05.02", "investigational instruments and clinical trial products."));	    
             fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "5-3)", 2, "e.05.03", "Anticancer agents"));	
@@ -86,10 +86,10 @@ public class TestData_100127 : TestData_Base
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100127, "Japan Primary Registries Network", 
-		        "https://upload.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000031711", 
+		        "https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000031711", 
 		        true, 35, null, null, null));
-	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2017 Jul 19", 2017, 7, 19, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Oct 10", 2022, 10, 10, null, null, null, null));
+	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "19 Jul 2017", 2017, 7, 19, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "10 Oct 2022", 2022, 10, 10, null, null, null, null));
 	       
 	        fs.data_objects!.Add(sdo);
 
@@ -113,7 +113,7 @@ public class TestData_100127 : TestData_Base
                 null, null, null, null, 10);
 
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100127, 
-                "Japan Primary Registries Network", null, "2019 Mar 19", null));
+                "Japan Primary Registries Network", null, "19 Mar 2019", null));
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, "JPRN-UMIN000022067", 11, 100127, 
 	            "Japan Primary Registries Network", null, null, null));
             
@@ -125,27 +125,28 @@ public class TestData_100127 : TestData_Base
             fs.people!.Add(new StudyPerson(sd_sid, 51, "Shigeru Yamaguchi", "Hokkaido University Hospital", 
 	            102041, "Hokkaido University Hospital", "https://ror.org/0419drx70"));
             fs.people!.Add(new StudyPerson(sd_sid, 56, "Nozomi Yokota", "Hokkaido University Hospital", 
-	            102041, "Johns Hopkins University", "https://ror.org/0419drx70"));
+	            102041, "Hokkaido University Hospital", "https://ror.org/0419drx70"));
             
             fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Yamaguchi Shigeru", null));
             fs.organisations.Add(new StudyOrganisation(sd_sid, 58, null, "Sumitomo Heavy Industries, Ltd", null));
             fs.organisations.Add(new StudyOrganisation(sd_sid, 58, 103952, "Japan Agency for Medical Research and Development", "https://ror.org/004rtk039"));
 
             fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
+            fs.features!.Add(new StudyFeature(sd_sid, 21, 410));  // 
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 500));   // 
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "glioma", null, null, "2A00", "Primary neoplasms of brain"));      
             
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "(1)", 1, "n.01", "The patients whose doctor plans a biopsy or tumor resection and whose tumor is suspected as primary glioma by board-certified diagnostic radiologists and board-certified neurosurgeons based on clinical manifestations, clinical course and MRI findings."));	       
+	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "(1)", 1, "n.01", "The patients whose doctor plans a biopsy or tumor resection and whose tumor is suspected as primary glioma by board-certified diagnostic radiologists and board-certified neurosurgeons based on clinical manifestations, clinical courses, and MRI findings."));	       
 	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "(2)", 1, "n.02", "The patients who or whose legal representative gave a written informed consent to this study."));	    
 
 	        fs.iec.Add(new StudyIEC(sd_sid, 3, 2, "cr", "(1)", 1, "e.01", "The patients with a history of serious allergic reaction to C-11 methionine or F-18 FDG."));	       
-	        fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "(2)", 1, "e.02", "Pregnant women, breast-feeding women, or women who may be pregnant "));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "(2)", 1, "e.02", "Pregnant women, breast-feeding women, or women who may be pregnant"));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "(3)", 1, "e.03", "The patients who is participating in other trials"));
 	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "(4)", 1, "e.04", "The patients who underwent C-11 methionine PET within 90 days"));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "(5)", 1, "e.05", "The patients whose overall status is not satisfactory for surgical treatment"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "(6)", 1, "e.06", "The patients who cannot undergo contrast-enhanced MRI "));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "(7)", 1, "e.07", "The patients whom investigators judged to be inadequate as candidate"));	   
+	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "(6)", 1, "e.06", "The patients who cannot undergo contrast-enhanced MRI"));	    
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "(7)", 1, "e.07", "The patients whom investigators judged to be inadequate as candidates"));	   
 
 	        fs.countries!.Add(new StudyCountry(sd_sid, 1861060, "Japan", null));
 	        
@@ -164,27 +165,11 @@ public class TestData_100127 : TestData_Base
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100127, "Japan Primary Registries Network", 
 	            "https://jrct.niph.go.jp/latest-detail/jRCTs012180017", 
 	            true, 35, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2019 Mar 19", 2019, 3, 19, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2021 May 17", 2021, 5, 17, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "19 Mar 2019", 2019, 3, 19, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "17 May 2021", 2021, 5, 17, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
-            
-            // 1) CSR Summary
-
-            sd_oid = sd_sid + " :: 79 :: CSR summary";
-            ob_title = display_title + " :: CSR summary";
-            sdo = CreateEmptyStudyDataObject();
-	        
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "CSR summary", null, ob_title,
-	            null, 9, 2019, 23, 79, 100127, "Japan Primary Registries Network", null, "en", 11, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-            sdo.object_instances!.Add(new ObjectInstance(sd_oid, null, null, 
-	            "https://jrct.niph.go.jp/latest-detail/jRCTs012180017", 
-	            true, 35, null, null, null));
-
-            fs.data_objects!.Add(sdo);
-            
+      
             return fs;
         }
 
@@ -195,29 +180,33 @@ public class TestData_100127 : TestData_Base
              
             // Study 
             
-            string display_title = "A Clinical Study of Fundus Findings in Toxaemia of Pregnancy(Pregnancy Induced Hypertension";
+            string display_title = "A Clinical Study of Fundus Findings in Toxaemia of Pregnancy(Pregnancy Induced Hypertension)";
             StringBuilder sb = new StringBuilder("Primary outcome(s): In our study out of three hundred cases of pregnancy induced hypertension there are one hundred and ");
             sb.Append("eighty two cases of mild preeclampsia and seventy six cases of severe preeclampsia and forty two cases of eclampsia. Among these thirty "); 
-            sb.Append("seven cases of mild preeclampsia and seventy five cases  of severe preeclampsia and forty one cases of eclampsia show positive fundus changes."); 
+            sb.Append("seven cases of mild preeclampsia and seventy five cases of severe preeclampsia and forty one cases of eclampsia show positive fundus changes."); 
             sb.Append("The incidence of pre term babies intra uterine death still birth and low birth weight infants is high in mothers having positive fundus changes. "); 
             sb.Append("The perinatal mortality is higher in patients having Grade Two Three and Four hypertensive retinopathy"); 
             string brief_desc = sb.ToString();
             
             fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2003, 11, 12, 21, "300", 905,
-                18, 17, 42, 17, 10);
+                18, 17, 42, 17, 5);
 
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100127, 
-                "Japan Primary Registries Network", null, "2016 Nov 4", null));
+                "Japan Primary Registries Network", null, "4 Nov 2016", null));
             fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT03076619", 11, 100120, 
 	            "ClinicalTrials.gov", null, null, null));
             
+            fs.people!.Add(new StudyPerson(sd_sid, 51, "Rahul Navinchandra Bakhda", 
+	            "Ex-Resident, M and J Western RegionalInstitute of Ophthalmology, Ahmedabad Consultant Ophthalmologist", 
+	            null, "M and J Western RegionalInstitute of Ophthalmology", null));
+            
             fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, "From the Japan Primary Registries Network"));
-            
-            fs.features!.Add(new StudyFeature(sd_sid, 24, 599));
-            
+            fs.titles!.Add(new StudyTitle(sd_sid, "A Clinical Study of Fundus Findings in Toxaemia of Pregnancy(Pregnancy Induced Hypertension) - A Clinical Study of Fundus Findings in Toxaemia of Pregnancy.",
+	            16, "en", 11, false, "From the Japan Primary Registries Network"));
+
             fs.conditions!.Add(new StudyCondition(sd_sid, "Pregnancy Induced Hypertension(PIH)", null, null, null, null));
            
-            fs.iec!.Add(new StudyIEC(sd_sid, 1, 302, "none", "none", 0, "e.0A", "Cases complicated by malignancy,renal,liver or any other secondary manifestations."));	       
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1002, "none", "All", 0, "e.0A", "Cases complicated by malignancy,renal,liver or any other secondary manifestations."));	       
 
             fs.countries!.Add(new StudyCountry(sd_sid, null, "Asia(except Japan)", null));
 	        
@@ -234,10 +223,10 @@ public class TestData_100127 : TestData_Base
 	       
             sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100127, "Japan Primary Registries Network", 
-	            "https://upload.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000028441", 
+	            "https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000028441", 
 	            true, 35, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "2016 Nov 4", 2016, 11, 4, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "2022 Apr 06", 2022, 4, 6, null, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "4 Nov 2016", 2016, 11, 4, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "6 Apr 2022", 2022, 4, 6, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
 
