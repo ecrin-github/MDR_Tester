@@ -66,7 +66,8 @@ public class TestData_101901 : TestData_Base
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
-		        "https://yoda.yale.edu/node/2171", true, 35, null, null, null));
+		        "https://yoda.yale.edu/clinical-trial/nct01727258-evaluation-of-an-experimental-mouth-rinse-device-for-relieving-dentinal-hypersenstivity/", 
+		        true, 35, null, null, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -126,22 +127,8 @@ public class TestData_101901 : TestData_Base
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	       
 	        fs.data_objects!.Add(sdo);
-	        
-	        // 6) Annotated Case Report Form
-	        
-	        sd_oid = sd_sid + " :: 30 :: Annotated data collection forms";
-	        ob_title = display_title + " :: Annotated data collection forms";
-	        sdo = CreateEmptyStudyDataObject();
-            
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Annotated data collection forms", null, ob_title,
-		        null, 9, null, 23, 30, 101901, "Yoda", null, "en", 17, asb.ToString(), 
-		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-	        
-	        fs.data_objects!.Add(sdo);
 
-	        // 7) Collected Datasets
+	        // 6) Collected Datasets
 	        
 	        sd_oid = sd_sid + " :: 80 :: Individual participant data";
 	        ob_title = display_title + " :: Individual participant data";
@@ -206,7 +193,8 @@ public class TestData_101901 : TestData_Base
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
-		        "https://yoda.yale.edu/node/647", true, 35, null, null, null));
+		        "https://yoda.yale.edu/clinical-trial/a-phase-3-randomized-open-label-comparative-study-of-doxil-caelyx-versus-topotecan-hcl-in-patients-with-epithelial-ovarian-carcinoma-following-failure-of-first-line-platinum-based-chemothera/", 
+		        true, 35, null, null, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -254,16 +242,16 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 5) CSR Summary
 	        
-	        sd_oid = sd_sid + " :: 79 :: CSR summary";
-	        ob_title = display_title + " :: CSR summary";
+	        sd_oid = sd_sid + " :: 79 :: Results or CSR summary";
+	        ob_title = display_title + " :: Results or CSR summary";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CSR summary", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Results or CSR summary", null, ob_title,
 		        null, 9, null, 23, 79, 101901, "Yoda", null, "en", 11, null, null, 0, true, true);
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
-		        "https://yoda.yale.edu/sites/default/files/30-49_csr_synopsis.pdf", 
+		        "https://yoda.yale.edu/wp-content/uploads/2023/02/30-49_csr_synopsis.pdf", 
 		        true, 11, null, null, null));
 	        
 	        fs.data_objects!.Add(sdo);
@@ -279,26 +267,12 @@ public class TestData_101901 : TestData_Base
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
-		        "https://yoda.yale.edu/sites/default/files/30-49_data_dictionary.pdf", 
+		        "https://yoda.yale.edu/wp-content/uploads/2023/02/30-49_data_dictionary.pdf", 
 		        true, 11, null, null, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
-	        // 7) Annotated Case Report Form
-	        
-	        sd_oid = sd_sid + " :: 30 :: Annotated data collection forms";
-	        ob_title = display_title + " :: Annotated data collection forms";
-	        sdo = CreateEmptyStudyDataObject();
-            
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Annotated data collection forms", null, ob_title,
-		        null, 9, null, 23, 30, 101901, "Yoda", null, "en", 17, asb.ToString(), 
-		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-	        
-	        fs.data_objects!.Add(sdo);
-	        
-	        // 8) Collected Datasets
+	        // 7) Collected Datasets
 	        
 	        sd_oid = sd_sid + " :: 80 :: Individual participant data";
 	        ob_title = display_title + " :: Individual participant data";
@@ -365,9 +339,11 @@ public class TestData_101901 : TestData_Base
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
-		        "https://yoda.yale.edu/node/4117", true, 35, null, null, null));
+		        "https://yoda.yale.edu/clinical-trial/nct02243202-a-randomized-double-blind-placebo-controlled-parallel-group-study-to-investigate-the-safety-and-efficacy-of-the-co-administration-of-canagliflozin-300-mg-and-phentermine-15-mg-compare/", 
+		        true, 35, null, null, null));
 	        
 	        fs.data_objects!.Add(sdo);
+	        
 	        
 	        // 2) Clinical Study Report
 
@@ -383,6 +359,7 @@ public class TestData_101901 : TestData_Base
 	        
 	        fs.data_objects!.Add(sdo);
 	        
+	        
 	        // 3) Protocol
 
 	        sd_oid = sd_sid + " :: 11 :: Study protocol";
@@ -396,6 +373,7 @@ public class TestData_101901 : TestData_Base
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
+	        
 	        
 	        // 4) Statistical Analysis Plan
 	        
@@ -411,6 +389,7 @@ public class TestData_101901 : TestData_Base
 	        
 	        fs.data_objects!.Add(sdo);
 	        
+	        
 	        // 5) Collected Datasets
 	        
 	        sd_oid = sd_sid + " :: 80 :: Individual participant data";
@@ -425,6 +404,21 @@ public class TestData_101901 : TestData_Base
 
 	        sdo.dataset_details = new ObjectDataset(sd_oid, 0, null, 2, null, null, null, null, null,
 		        dsb.ToString(), 0, null, null, null, null, null, null);
+	        
+	        fs.data_objects!.Add(sdo);
+	        
+	        
+	        // 6) Data Definition Specification
+	        
+	        sd_oid = sd_sid + " :: 31 :: Data dictionary";
+	        ob_title = display_title + " :: Data dictionary";
+	        sdo = CreateEmptyStudyDataObject();
+            
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Data dictionary", null, ob_title,
+		        null, 9, null, 23, 31, 101901, "Yoda", null, "en", 17, asb.ToString(), 
+		        "https://yoda.yale.edu/how-request-data", 0, true, true);
+	       
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -473,7 +467,7 @@ public class TestData_101901 : TestData_Base
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
-		        "https://yoda.yale.edu/node/975", true, 35, null, null, null));
+		        "https://yoda.yale.edu/clinical-trial/a-long-term-comparison-of-galantamine-and-donepezil-in-the-treatment-of-alzheimers-disease/", true, 35, null, null, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -508,16 +502,16 @@ public class TestData_101901 : TestData_Base
 	        
 	        // 4) CSR Summary
 	        
-	        sd_oid = sd_sid + " :: 79 :: CSR summary";
-	        ob_title = display_title + " :: CSR summary";
+	        sd_oid = sd_sid + " :: 79 :: Results or CSR summary";
+	        ob_title = display_title + " :: Results or CSR summary";
 	        sdo = CreateEmptyStudyDataObject();
             
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CSR summary", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Results or CSR summary", null, ob_title,
 		        null, 9, null, 23, 79, 101901, "Yoda", null, "en", 11, null, null, 0, true, true);
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
-		        "https://yoda.yale.edu/sites/default/files/gal-mvd-301_csr_synopsis.pdf", 
+		        "https://yoda.yale.edu/wp-content/uploads/2023/02/gal-mvd-301_csr_synopsis.pdf", 
 		        true, 11, null, null, null));
 	        
 	        fs.data_objects!.Add(sdo);
@@ -574,7 +568,8 @@ public class TestData_101901 : TestData_Base
 	       
 	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
-		        "https://yoda.yale.edu/node/3911", true, 35, null, null, null));
+		        "https://yoda.yale.edu/clinical-trial/nct00433329-compass-3-an-open-label-multi-center-study-employing-a-targeted-6-minute-walk-test-6-mwt-distance-threshold-approach-to-guide-bosentan-based-therapy-and-to-assess-the-utility-of-magn/", 
+		        true, 35, null, null, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        

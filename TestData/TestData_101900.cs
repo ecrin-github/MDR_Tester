@@ -465,7 +465,7 @@ public class TestData_101900 : TestData_Base
 		        18, "en", 11, true, "From BioLINCC web page"));
 	        fs.titles.Add(new StudyTitle(sd_sid, "TOPCAT", 14, "en", 11, false, "From BioLINCC web page"));
 
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Carelon Research", null));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 101993, "Carelon", null));
 
 	        fs.references!.Add(new StudyReference(sd_sid, null, "24716680", 	
 		        "https://www.ncbi.nlm.nih.gov/pubmed/24716680", null, "primary"));
