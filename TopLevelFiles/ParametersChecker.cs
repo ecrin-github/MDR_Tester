@@ -37,25 +37,33 @@ internal class ParameterChecker
 
         try
         {
-            // Some sources must identified, and they all have to be valid.
-            
-            if (opts.TestAll is true)
+            if (opts.TestAggregated is true)
             {
-                opts.SourceIds = _monDataLayer.FetchTestDBList();
+                 // testing aggregated data only
+                 // No other source parameters required
             }
             else
             {
-                if (opts.SourceIds?.Any() is not true)
-                {
-                    throw new ArgumentException("No source id provided");
-                }
+                // Some sources must identified, and they all have to be valid.
 
-                foreach (int sourceId in opts.SourceIds)
+                if (opts.TestAll is true)
                 {
-                    if (!_monDataLayer.SourceIdPresent(sourceId))
+                    opts.SourceIds = _monDataLayer.FetchTestDBList();
+                }
+                else
+                {
+                    if (opts.SourceIds?.Any() is not true)
                     {
-                        throw new ArgumentException("Source argument " + sourceId +
-                                                    " does not correspond to a known source");
+                        throw new ArgumentException("No source id provided");
+                    }
+
+                    foreach (int sourceId in opts.SourceIds)
+                    {
+                        if (!_monDataLayer.SourceIdPresent(sourceId))
+                        {
+                            throw new ArgumentException("Source argument " + sourceId +
+                                                        " does not correspond to a known source");
+                        }
                     }
                 }
             }
@@ -130,8 +138,11 @@ public class Options
     [Option('s', "source_ids", Required = false, Separator = ',', HelpText = "Comma separated list of Integer ids of data sources.")]
     public IEnumerable<int>? SourceIds { get; set; }
     
-    [Option('A', "test_all", Required = false, HelpText = "Flag that if present indicates that all relevant sources should be tested.")]
+    [Option('A', "test_all", Required = false, HelpText = "Flag that if present indicates that all relevant database sources should be tested.")]
     public bool? TestAll { get; set; }
+    
+    [Option('G', "test_aggregated", Required = false, HelpText = "Flag that if present indicates that aggregated data should be tested.")]
+    public bool? TestAggregated { get; set; }
     
     [Option('f', "feedback_level", Required = false, HelpText = "Flag that indicates the level of detail to be provided when presenting the results of data comparisons (0-3)")]
     public int? FeedbackLevel { get; set; }

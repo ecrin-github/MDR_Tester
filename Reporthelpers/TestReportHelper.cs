@@ -451,13 +451,13 @@ public class TestReportHelper
         return conn.Query<string>(sql_string)?.ToList() ;
     }
 
-    public List<string>? FetchStudyConditions(string sd_id)
+    public List<ConditionData>? FetchStudyConditions(string sd_id)
     {
         using NpgsqlConnection conn = new(_connString);
-        string sql_string = @$"select original_value from te.study_conditions where sd_sid = '{sd_id}'
+        string sql_string = @$"select original_value, original_ct_code from te.study_conditions where sd_sid = '{sd_id}'
                union
-               select original_value from ad.study_conditions where sd_sid = '{sd_id}'";
-        return conn.Query<string>(sql_string)?.ToList() ;
+               select original_value, original_ct_code from ad.study_conditions where sd_sid = '{sd_id}'";
+        return conn.Query<ConditionData>(sql_string)?.ToList() ;
     }
 
     public List<string>? FetchStudyFeatures(string sd_id)
@@ -536,7 +536,6 @@ public class TestReportHelper
                order by seq_num";
         return conn.Query<string>(sql_string)?.ToList() ;
     }
-    
     
     
     

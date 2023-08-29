@@ -49,8 +49,8 @@ public class TestData_100118 : TestData_Base
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 1500));  // Other
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Pregnancy Induced Hypertension", null, null, null, null));
-	        fs.conditions!.Add(new StudyCondition(sd_sid, "O13- >", null, null, null, null));
-            
+	        fs.conditions!.Add(new StudyCondition(sd_sid,  null, 12, "O13", "JA23", "Gestational hypertension"));
+
 	        fs.countries!.Add(new StudyCountry(sd_sid, 1269750, "India", null));
 
 	        string ic = "An observational study in which the patients for the study are selected from antenatal clinic antenatal ward and preeclampsia and eclampsia ";

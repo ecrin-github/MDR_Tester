@@ -120,25 +120,25 @@ public class TestData_100135 : TestData_Base
 	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "PMC7856053", 31, 100133, "National Library of Medicine", "https://ror.org/0060t0j89", null));
 	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "NIHMS1647338", 32, 100134, "National Institutes of Health", "https://ror.org/01cwqze88", null));
 	        
-	        fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Syed A", "Ahmad", "Syed A Ahmad", null, "University of Cincinnati, Cincinnati, Ohio.", 100384, "University of Cincinnati", "https://ror.org/01e3m7079"));
-	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Mai", "Duong", "Mai Duong", null, "SWOG Statistical and Data Management Center, Seattle, Washington.", null, null, null));
-	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Davendra P S", "Sohal", "Davendra P S Sohal", null, "University of Cincinnati, Cincinnati, Ohio.", 100384, "University of Cincinnati", "https://ror.org/01e3m7079"));
-	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Namita S", "Gandhi", "Namita S Gandhi", null, "Cleveland Clinic, Cleveland, Ohio.", null, null, null));
-	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Muhammad Shaalan", "Beg", "Muhammad Shaalan Beg", null, "UT Southwestern Medical Center, Dallas, Texas.", null, null, null));
-	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Andrea", "Wang-Gillam", "Andrea Wang-Gillam", null, "Washington University Siteman Cancer Center, St. Louis, Missouri.", null, "Washington University Siteman Cancer Center", null));
-	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "James L", "Wade", "James L Wade 3rd", null, "Heartland NCORP/Cancer Care Specialists of Illinois, Decatur, Illinois.", null, null, null));
+	        fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Syed A", "Ahmad", "Syed A Ahmad", null, "University of Cincinnati, Cincinnati, Ohio", 100384, "University of Cincinnati", "https://ror.org/01e3m7079"));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Mai", "Duong", "Mai Duong", null, "SWOG Statistical and Data Management Center, Seattle, Washington", null, "SWOG Statistical and Data Management Center", null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Davendra P S", "Sohal", "Davendra P S Sohal", null, "University of Cincinnati, Cincinnati, Ohio", 100384, "University of Cincinnati", "https://ror.org/01e3m7079"));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Namita S", "Gandhi", "Namita S Gandhi", null, "Cleveland Clinic, Cleveland, Ohio", 100239, "Cleveland Clinic", "https://ror.org/03xjacd83"));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Muhammad Shaalan", "Beg", "Muhammad Shaalan Beg", null, "UT Southwestern Medical Center, Dallas, Texas", 100243, "University of Texas Southwestern Medical Center", "https://ror.org/00t9vx427"));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Andrea", "Wang-Gillam", "Andrea Wang-Gillam", null, "Washington University Siteman Cancer Center, St Louis, Missouri", null, "Washington University Siteman Cancer Center", null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "James L", "Wade", "James L Wade 3rd", null, "Heartland NCORP/Cancer Care Specialists of Illinois, Decatur, Illinois", null, "Heartland NCORP/Cancer Care Specialists of Illinois, Decatur, Illinois", null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Elena Gabriela", "Chiorean", "Elena Gabriela Chiorean", null, 
-		        "University of Washington, Fred Hutchinson Cancer Research Center, Seattle, Washington.", 
+		        "University of Washington, Fred Hutchinson Cancer Research Center, Seattle, Washington", 
 		        100199, "University of Washington", "https://ror.org/00cvxb145"));
-	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Katherine A", "Guthrie", "Katherine A Guthrie", null, "SWOG Statistical and Data Management Center, Seattle, Washington.", null, null, null));
+	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Katherine A", "Guthrie", "Katherine A Guthrie", null, "SWOG Statistical and Data Management Center, Seattle, Washington", null, "SWOG Statistical and Data Management Center", null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Andrew M", "Lowy", "Andrew M Lowy", null, 
-		        "University of California, San Diego, La Jolla, California.", 
+		        "University of California, San Diego, La Jolla, California", 
 		        100238, "University of California, San Diego", "https://ror.org/0168r3w48"));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Philip A", "Philip", "Philip A Philip", null, 
-		        "Wayne State University/Karmanos Cancer Institute, Detroit, Michigan.", 
+		        "Wayne State University/Karmanos Cancer Institute, Detroit, Michigan", 
 		        null, "Wayne State University/Karmanos Cancer Institute", null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Howard S", "Hochster", "Howard S Hochster", null, 
-		        "Rutgers Cancer Institute of New Jersey, New Brunswick, New Jersey.", 
+		        "Rutgers Cancer Institute of New Jersey, New Brunswick, New Jersey", 
 		        102296, "Rutgers Cancer Institute of New Jersey", null));
 	        
 	        
@@ -217,22 +217,29 @@ public class TestData_100135 : TestData_Base
 	        fdb.object_identifiers.Add(new ObjectIdentifier(sd_oid, "NIHMS1617917", 32, 100134, "National Institutes of Health", "https://ror.org/01cwqze88", null));
 
 	        fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Gloria D", "Coronado", "Gloria D Coronado", null, 
-		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon. Electronic address: gloria.d.coronado@kpchr.org.", 
-		        null, null, null));
+		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon", null, 
+		        "Center for Health Research", null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Denis B", "Nyongesa", "Denis B Nyongesa", null,
-		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.", null, null, null));
+		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon", null, 
+		        "Center for Health Research", null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Amanda F", "Petrik", "Amanda F Petrik", null,
-		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.", null, null, null));
+		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon", null, 
+		        "Center for Health Research", null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Jamie H", "Thompson", "Jamie H Thompson", null,
-		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.", null, null, null));
+		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon", null, 
+		        "Center for Health Research", null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Anne L", "Escaron", "Anne L Escaron", null,
-		        "AltaMed Health Services, Los Angeles, California.", null, null, null));
+		        "AltaMed Health Services, Los Angeles, California", null, 
+		        "AltaMed Health Services, Los Angeles, California", null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Brittany", "Younger", "Brittany Younger", null,
-		        "AltaMed Health Services, Los Angeles, California.", null, null, null));
+		        "AltaMed Health Services, Los Angeles, California", null, 
+		        "AltaMed Health Services, Los Angeles, California", null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Shelby", "Harbison", "Shelby Harbison", null,
-		        "AltaMed Health Services, Los Angeles, California.", null, null, null));
+		        "AltaMed Health Services, Los Angeles, California", null, 
+		        "AltaMed Health Services, Los Angeles, California", null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Michael C", "Leo", "Michael C Leo", null,
-		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon.", null, null, null));
+		        "Center for Health Research, Kaiser Permanente Northwest, Portland, Oregon", null, 
+		        "Center for Health Research", null));
 	        
 	        fdb.object_topics!.Add(new ObjectTopic(sd_oid, 11, "Fecal Testing", null, null, null, null));
 	        fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Colon Cancer", null, null, "D003110", "Colonic Neoplasms"));
@@ -295,8 +302,8 @@ public class TestData_100135 : TestData_Base
 	        fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "294/19/2455", 34,  101431, "American Medical Association", "https://ror.org/03p6gt485", null));
 	        
 	        fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Lawrence J", "Appel", "Lawrence J Appel", null, 
-		        "Welch Center for Prevention, Epidemiology and Clinical Research, Division of General Internal Medicine, Johns Hopkins University School of Medicine, Baltimore, Md 21205-2223, USA. lappel@jhmi.edu", 
-		        null, "Johns Hopkins University School of Medicine", null));
+		        "Welch Center for Prevention, Epidemiology and Clinical Research, Division of General Internal Medicine, Johns Hopkins University School of Medicine, Baltimore, Md 21205-2223, USA", 
+		        109527, "Johns Hopkins School of Medicine", null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Frank M", "Sacks", "Frank M Sacks", null, null, null, null, null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Vincent J", "Carey", "Vincent J Carey", null, null, null, null, null));
 	        fdb.object_people.Add(new ObjectPerson(sd_oid, 11, "Eva", "Obarzanek", "Eva Obarzanek", null, null, null, null, null));
@@ -377,17 +384,23 @@ public class TestData_100135 : TestData_Base
 		    fdb.object_identifiers!.Add(new ObjectIdentifier(sd_oid, "S0149-2918(20)30286-1", 34, 101422, "Elsevier", "https://ror.org/055j8ya05", "22 May 2020"));
 		     
 		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Bruce A", "Hug", "Bruce A Hug", null, 
-			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA. Electronic address: bruce.a.hug@gsk.com.", null, null, null));
+			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA", null, 
+			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA", null));
 		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Christopher J", "Matheny", "Christopher J Matheny", null, 
-			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA.", null, null, null));
+			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA", null, 
+			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA", null));
 		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Olivia", "Burns", "Olivia Burns", null, 
-			    "Global Clinical Sciences & Delivery, GSK, Abbotsford, Victoria, Australia.", null, null, null));
+			    "Global Clinical Sciences & Delivery, GSK, Abbotsford, Victoria, Australia", null, 
+			    "Global Clinical Sciences & Delivery", null));
 		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Herbert", "Struemper", "Herbert Struemper", null, 
-			    "Clinical Pharmacology Modeling & Simulation, GSK, Research Triangle Park, NC, USA.", null, null, null));
+			    "Clinical Pharmacology Modeling & Simulation, GSK, Research Triangle Park, NC, USA", null, 
+			    "Clinical Pharmacology Modeling & Simulation", null));
 		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Xiaowei", "Wang", "Xiaowei Wang", null, 
-			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA.", null, null, null));
+			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA", null, 
+			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA", null));
 		    fdb.object_people!.Add(new ObjectPerson(sd_oid, 11, "Michael L", "Washburn", "Michael L Washburn", null, 
-			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA.", null, null, null));
+			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA", null, 
+			    "R&D Pharmaceuticals, GSK, Upper Providence, PA, USA", null));
 		    
 		    fdb.object_topics!.Add(new ObjectTopic(sd_oid, 11, "GSK1795091", null, null, null, null));
 		    fdb.object_topics.Add(new ObjectTopic(sd_oid, 11, "Toll-like receptor", null, null, "D051193", "Toll-Like Receptors"));

@@ -171,6 +171,7 @@ public class TestData_100127 : TestData_Base
             fs.data_objects!.Add(sdo);
       
             return fs;
+
         }
 
         
@@ -228,6 +229,22 @@ public class TestData_100127 : TestData_Base
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "4 Nov 2016", 2016, 11, 4, null, null, null, null));
             sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "6 Apr 2022", 2022, 4, 6, null, null, null, null));
 	       
+            fs.data_objects!.Add(sdo);
+            
+            // 2) Trial results entry
+
+            sd_oid = sd_sid + " :: 28 :: Results summary";
+            ob_title = display_title + " :: Results summary";
+            sdo = CreateEmptyStudyDataObject();
+	        
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Results summary", null, ob_title,
+	            null, 9, null, 23, 28, 100127, "Japan Primary Registries Network", null, "en", 12, null, null, 0, true, true);
+	       
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+            sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100127, "Japan Primary Registries Network", 
+	            "http://www.jfmpc.com/text.asp?2016/5/2/424/192364", true, 35, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "30 Jun 2006", 2006, 6, 30, null, null, null, null));
+           
             fs.data_objects!.Add(sdo);
 
             return fs;

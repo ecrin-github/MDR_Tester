@@ -738,8 +738,8 @@ public class TestData_100120 : TestData_Base
 
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, sd_sid, 11, 100120, 
             		        "ClinicalTrials.gov", null, "15 Oct 2004", null));
-            fs.identifiers.Add(new StudyIdentifier(sd_sid, "160", 14, null, 
-            		        "Carelon Research", null, null, null));
+            fs.identifiers.Add(new StudyIdentifier(sd_sid, "160", 14, 101993, 
+            		        "Carelon", null, null, null));
             fs.identifiers.Add(new StudyIdentifier(sd_sid, "HHSN268200425207C", 13, 100134, 
             		        "National Institutes of Health", "https://ror.org/01cwqze88", null, null));
             	        
@@ -750,7 +750,7 @@ public class TestData_100120 : TestData_Base
             fs.people!.Add(new StudyPerson(sd_sid, 51, "Sonja M McKinlay", "New England Research Institutes, Inc", 
 	            101843, "New England Research Institutes", "https://ror.org/01655nh08"));	
             
-            fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, null, "Carelon Research", null));
+            fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 101993, "Carelon", null));
             fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100167, "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26"));
 
             fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
@@ -2369,6 +2369,7 @@ public class TestData_100120 : TestData_Base
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "First line therapy", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Locally advanced", null, null, null, null));
 	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Metastatic", null, null, "D009362", "Neoplasm Metastasis"));
+	        fs.topics.Add(new StudyTopic(sd_sid, 11, "Cisplatin", null, null, "D002945", "Cisplatin"));
 	        
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Paclitaxel", 14, "D000017239", "D017239", "Paclitaxel"));
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Albumin-Bound Paclitaxel", 14, "D000068196", "D000068196", "Albumin-Bound Paclitaxel"));
@@ -2376,7 +2377,7 @@ public class TestData_100120 : TestData_Base
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Pembrolizumab", 14, "C000582435", "C582435", "pembrolizumab"));
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Pemetrexed", 14, "D000068437", "D000068437", "Pemetrexed"));	 	        
 	        fs.topics.Add(new StudyTopic(sd_sid, 12, "Antibodies, Monoclonal", 14, "D000000911", "D000911", "Antibodies, Monoclonal"));
-            fs.topics.Add(new StudyTopic(sd_sid, 12, "Cisplatin", 14, "D000002945", "D002945", "Cisplatin"));
+            
             
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Lung Neoplasms", 14, "D000008175", "2C25", "Malignant neoplasms of bronchus or lung"));
 	        fs.conditions.Add(new StudyCondition(sd_sid, "Carcinoma, Non-Small-Cell Lung", 14, "D000002289", "2C25", "Malignant neoplasms of bronchus or lung"));

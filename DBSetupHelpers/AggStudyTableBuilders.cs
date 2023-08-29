@@ -3,13 +3,15 @@ using Npgsql;
 
 namespace MDR_Tester;
 
-public class StudyTableBuilders
+public class AggStudyTableBuilders
 {
     private readonly string _db_conn;
+    private readonly string _iec_conn;
 
-    public StudyTableBuilders(string db_conn)
+    public AggStudyTableBuilders(string db_conn, string iec_conn)
     {
         _db_conn = db_conn;
+        _iec_conn = iec_conn;
     }
 
     public void Execute_SQL(string sql_string)
@@ -18,11 +20,18 @@ public class StudyTableBuilders
         conn.Execute(sql_string);
     }
 
+    public void Execute_IEC_SQL(string sql_string)
+    {
+        using var conn = new NpgsqlConnection(_iec_conn);
+        conn.Execute(sql_string);
+    }
 
-    public void EnsureTEschema()
+    public void EnsureTEschemas()
     {
         string sql_string = "CREATE SCHEMA IF NOT EXISTS te";
         Execute_SQL(sql_string);
+        Execute_IEC_SQL(sql_string);
+
     }
 
     public void create_table_studies()
@@ -30,7 +39,7 @@ public class StudyTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.studies;
         CREATE TABLE te.studies(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , display_title          VARCHAR         NULL
           , title_lang_code        VARCHAR         NULL default 'en'
           , brief_description      VARCHAR         NULL
@@ -58,7 +67,7 @@ public class StudyTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.study_identifiers;
         CREATE TABLE te.study_identifiers(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , identifier_value       VARCHAR         NULL
           , identifier_type_id     INT             NULL
           , source_id              INT             NULL
@@ -78,9 +87,9 @@ public class StudyTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.study_relationships;
         CREATE TABLE te.study_relationships(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , relationship_type_id   INT             NULL
-          , target_sd_sid          VARCHAR         NULL
+          , target_sid             INT             NULL
         );
         CREATE INDEX study_relationships_sid ON te.study_relationships(sd_sid);
         CREATE INDEX study_relationships_target_sid ON te.study_relationships(target_sd_sid);";
@@ -94,7 +103,7 @@ public class StudyTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.study_references;
         CREATE TABLE te.study_references(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , pmid                   VARCHAR         NULL
           , citation               VARCHAR         NULL
           , doi                    VARCHAR         NULL	
@@ -112,7 +121,7 @@ public class StudyTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.study_titles;
         CREATE TABLE te.study_titles(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , title_type_id          INT             NULL
           , title_text             VARCHAR         NULL
           , lang_code              VARCHAR         NOT NULL default 'en'
@@ -131,7 +140,7 @@ public class StudyTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.study_people;
         CREATE TABLE te.study_people(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , contrib_type_id        INT             NULL
           , person_given_name      VARCHAR         NULL
           , person_family_name     VARCHAR         NULL
@@ -153,7 +162,7 @@ public class StudyTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.study_organisations;
         CREATE TABLE te.study_organisations(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , contrib_type_id        INT             NULL
           , organisation_id        INT             NULL
           , organisation_name      VARCHAR         NULL
@@ -170,7 +179,7 @@ public class StudyTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.study_topics;
         CREATE TABLE te.study_topics(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , topic_type_id          INT             NULL
           , original_value         VARCHAR         NULL       
           , original_ct_type_id    INT             NULL
@@ -188,7 +197,7 @@ public class StudyTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.study_conditions;
         CREATE TABLE te.study_conditions(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , original_value         VARCHAR         NULL
           , original_ct_type_id    INT             NULL
           , original_ct_code       VARCHAR         NULL                 
@@ -205,7 +214,7 @@ public class StudyTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.study_features;
         CREATE TABLE te.study_features(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , feature_type_id        INT             NULL
           , feature_value_id       INT             NULL
 
@@ -215,28 +224,13 @@ public class StudyTableBuilders
         Execute_SQL(sql_string);
     }
 
-
-    public void create_table_study_links()
-    {
-        string sql_string = @"DROP TABLE IF EXISTS te.study_links;
-        CREATE TABLE te.study_links(
-            id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
-          , link_label             VARCHAR         NULL
-          , link_url               VARCHAR         NULL
-        );
-        CREATE INDEX study_links_sid ON te.study_links(sd_sid);";
-
-        Execute_SQL(sql_string);
-    }
-
-
+    
     public void create_table_study_locations()
     {
         string sql_string = @"DROP TABLE IF EXISTS te.study_locations;
         CREATE TABLE te.study_locations(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , facility_org_id        INT             NULL
           , facility               VARCHAR         NULL
           , facility_ror_id        VARCHAR         NULL
@@ -257,7 +251,7 @@ public class StudyTableBuilders
         string sql_string = @"DROP TABLE IF EXISTS te.study_countries;
         CREATE TABLE te.study_countries(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , country_id             INT             NULL
           , country_name           VARCHAR         NULL
           , status_id              INT             NULL
@@ -267,29 +261,13 @@ public class StudyTableBuilders
         Execute_SQL(sql_string);
     }
 
-
-    public void create_table_ipd_available()
-    {
-        string sql_string = @"DROP TABLE IF EXISTS te.study_ipd_available;
-        CREATE TABLE te.study_ipd_available(
-            id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
-          , ipd_id                 VARCHAR         NULL
-          , ipd_type               VARCHAR         NULL
-          , ipd_url                VARCHAR         NULL
-          , ipd_comment            VARCHAR         NULL
-        );
-        CREATE INDEX study_ipd_available_sid ON te.study_ipd_available(sd_sid);";
-
-        Execute_SQL(sql_string);
-    }
     
     private void create_iec_table(string table_name)
     {
         string sql_string = $@"DROP TABLE IF EXISTS te.{table_name};
         CREATE TABLE te.{table_name}(
             id                     INT             GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-          , sd_sid                 VARCHAR         NOT NULL
+          , sid                    INT             NOT NULL
           , seq_num                INT             NULL
           , iec_type_id            INT             NULL       
           , split_type             VARCHAR         NULL              
@@ -303,21 +281,9 @@ public class StudyTableBuilders
         );
         CREATE INDEX {table_name}_sid ON te.{table_name}(sd_sid);";
 
-        Execute_SQL(sql_string);
+        Execute_IEC_SQL(sql_string);     // Note different database for IEC test data
     }
     
-    public void create_table_study_iec()
-    {
-        create_iec_table("study_iec");
-    }
-    
-    public void create_table_study_iec_by_year_groups()
-    {
-        create_iec_table("study_iec_upto12");
-        create_iec_table("study_iec_13to19");
-        create_iec_table("study_iec_20on");
-    }
-
     public void create_table_study_iec_by_years()
     {
         create_iec_table("study_iec_null");

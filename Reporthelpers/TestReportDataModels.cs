@@ -68,11 +68,14 @@ public class RecordResults
         key_field = _key_field;
         key_field_type = _key_field_type;
         key_field_value = _key_field_value;
-        where_clause = _key_field_type == "string"
-            ? $" where {table_id_type} ='{record_id}' and {key_field} = '{key_field_value}'"
-            : $" where {table_id_type} ='{record_id}' and {key_field} = {key_field_value}";
         num_issues = 0; 
         fields = new List<FieldResult>();
+        string kfv = _key_field_value == null ? " is null" : $" = '{key_field_value}'";
+        if (_key_field_type != "string")
+        {
+            kfv = kfv.Replace("'", "");
+        }
+        where_clause = $" where {table_id_type} ='{record_id}' and {key_field}{kfv} ";
     }
     
     // used for a few tables, that require an second key field
@@ -92,11 +95,16 @@ public class RecordResults
         key_field2 = _key_field2;
         key_field2_type = _key_field2_type;
         key_field2_value = _key_field2_value;
-        where_clause = (_key_field_type == "string" && _key_field2_type == "string")
-            ? $" where {table_id_type} ='{record_id}' and {key_field} = '{key_field_value}' and {key_field2} = '{key_field2_value}'"
-            : $" where {table_id_type} ='{record_id}' and {key_field} = '{key_field_value}' and {key_field2} = {key_field2_value}";
         num_issues = 0;
         fields = new List<FieldResult>();
+        string kf1v = _key_field_value == null ? " is null" : $" = '{key_field_value}'";
+        string kf2v = _key_field2_value == null ? " is null" : $" = '{key_field2_value}'";
+        if (_key_field2_type != "string")
+        {
+            kf2v = kf2v.Replace("'", "");
+        }
+        where_clause = $" where {table_id_type} ='{record_id}' and {key_field} {kf1v} and {key_field2} {kf2v}";
+            
     }
 }
 
@@ -137,4 +145,10 @@ public class IPDData
 {
     public string? ipd_id { get; set; }
     public string? ipd_type { get; set; }
+}
+
+public class ConditionData
+{
+    public string? original_value { get; set; }
+    public string? original_ct_code { get; set; }
 }

@@ -117,21 +117,21 @@ public class TestStudyReporter
         _repHelper.write_results(tr);
         return tr.num_issues;
     }
-    
+        
     public int compare_table_study_conditions(string sd_id)
     {
         TableResults tr = new TableResults("Study Conditions", "study_conditions", "study", false); 
         tr = _repHelper.CompareAttNumbers(tr, $" where sd_sid ='{sd_id}'");
         if (tr.data_present)
         {
-            List<string>? condition_values = _repHelper.FetchStudyConditions(sd_id);
+            List<ConditionData>? condition_values = _repHelper.FetchStudyConditions(sd_id);
             if (condition_values?.Any() == true)
             {
-                foreach (string id_value in condition_values)
+                foreach (ConditionData id_value in condition_values)
                 {
-                    RecordResults rr = new RecordResults(tr, sd_id, "Condition", "original_value", "string", id_value);
+                    RecordResults rr = new RecordResults(tr, sd_id, "Condition / Condition Code", "original_value", 
+                        "string", id_value.original_value, "original_ct_code","string", id_value.original_ct_code);
                     rr = _repHelper.CompareField(rr, "original_ct_type_id", "int");
-                    rr = _repHelper.CompareField(rr, "original_ct_code", "string");
                     rr = _repHelper.CompareField(rr, "icd_code", "string");
                     rr = _repHelper.CompareField(rr, "icd_name", "string");
                     tr.record_results.Add(rr);
