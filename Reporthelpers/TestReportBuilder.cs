@@ -33,6 +33,7 @@ public class TestReportBuilder
             total_issues += _studyReporter.compare_table_study_titles(sd_id);
 
             // these are database dependent
+            
             if (_source.has_study_topics is true) total_issues += _studyReporter.compare_table_study_topics(sd_id);
             if (_source.has_study_conditions is true) total_issues += _studyReporter.compare_table_study_conditions(sd_id);
             if (_source.has_study_features is true) total_issues += _studyReporter.compare_table_study_features(sd_id);
@@ -87,33 +88,29 @@ public class TestReportBuilder
         }
         else 
         {
-            // PubMed only at the moment
-            
+           // PubMed and BBMRI at the moment 
+           
             _loggingHelper.LogSDIDHeader("Data object", sd_id, _fbLevel);
             int total_issues = 0;
-
             total_issues += _objectReporter.compare_table_data_objects(sd_id);
-            total_issues += _objectReporter.compare_table_object_instances(sd_id);
             total_issues += _objectReporter.compare_table_object_titles(sd_id);
 
             // these are database dependent		
 
             if (_source.has_object_datasets is true) total_issues += _objectReporter.compare_table_object_datasets(sd_id);
             if (_source.has_object_dates is true) total_issues += _objectReporter.compare_table_object_dates(sd_id);
+            if (_source.has_object_instances is true) total_issues += _objectReporter.compare_table_object_instances(sd_id);
+            if (_source.has_object_people is true) total_issues += _objectReporter.compare_table_object_people(sd_id);
+            if (_source.has_object_organisations is true) total_issues += _objectReporter.compare_table_object_organisations(sd_id);
+            if (_source.has_object_topics is true) total_issues += _objectReporter.compare_table_object_topics(sd_id);
+            if (_source.has_object_comments is true) total_issues += _objectReporter.compare_table_object_comments(sd_id);
+            if (_source.has_object_descriptions is true) total_issues += _objectReporter.compare_table_object_descriptions(sd_id);
+            if (_source.has_object_identifiers is true) total_issues += _objectReporter.compare_table_object_identifiers(sd_id);
+            if (_source.has_object_db_links is true) total_issues += _objectReporter.compare_table_object_db_links(sd_id);
+            if (_source.has_object_publication_types is true) total_issues += _objectReporter.compare_table_object_publication_types(sd_id);
+            if (_source.has_journal_details is true) total_issues += _objectReporter.compare_table_journal_details(sd_id);
             if (_source.has_object_relationships is true) total_issues += _objectReporter.compare_table_object_relationships(sd_id);
-            if (_source.has_object_rights is true) total_issues += _objectReporter.compare_table_object_rights(sd_id);
-            if (_source.has_object_pubmed_set is true)
-            {
-                total_issues += _objectReporter.compare_table_object_people(sd_id);
-                total_issues += _objectReporter.compare_table_object_organisations(sd_id);
-                total_issues += _objectReporter.compare_table_object_topics(sd_id);
-                total_issues += _objectReporter.compare_table_object_comments(sd_id);
-                total_issues += _objectReporter.compare_table_object_descriptions(sd_id);
-                total_issues += _objectReporter.compare_table_object_identifiers(sd_id);
-                total_issues += _objectReporter.compare_table_object_db_links(sd_id);
-                total_issues += _objectReporter.compare_table_object_publication_types(sd_id);
-                total_issues += _objectReporter.compare_table_journal_details(sd_id);
-            }
+            if (_source.has_object_rights is true) total_issues += _objectReporter.compare_table_object_rights(sd_id);            
             
             // finally
             
