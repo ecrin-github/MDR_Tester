@@ -61,12 +61,11 @@ public class TestData_100131 : TestData_Base
             
             sdo.data_object = new DataObject(sd_oid, sd_sid, "Thai registry web page", null, ob_title,
 	            null, 9, 2016, 23, 13, 100131, "Thai Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	      
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100131, "Thai Clinical Trials Register", 
 	            "https://www.thaiclinicaltrials.org/show/TCTR20161221005", true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "21 Dec 2016", 2016, 12, 21, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "26 Jun 2023", 2023, 6, 26, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "18 Sep 2023", 2023, 9, 18, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
 

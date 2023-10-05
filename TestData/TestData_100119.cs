@@ -99,8 +99,7 @@ public class TestData_100119 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "South Korean registry web page", null, ob_title,
                 null, 9, 2019, 23, 13, 100119, "Clinical Research Information Service",
                 null, "en", 12, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-
+           
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100119,
                 "Clinical Research Information Service",
                 "http://cris.nih.go.kr/cris/en/search/search_result_st01.jsp?seq=19080", true, 35, null, null, null));
@@ -214,8 +213,7 @@ public class TestData_100119 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "South Korean registry web page", null, ob_title,
                 null, 9, 2022, 23, 13, 100119, "Clinical Research Information Service",
                 null, "en", 12, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-
+            
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100119,
                 "Clinical Research Information Service",
                 "https://cris.nih.go.kr/cris/search/detailSearchEn.do?seq=23046", true, 35, null, null, null));

@@ -76,7 +76,6 @@ public class TestData_100116 : TestData_Base
 	       sdo.data_object = new DataObject(sd_oid, sd_sid, "Australian / NZ registry web page", null, ob_title,
 		       null, 9, 2016, 23, 13, 100116, "Australian New Zealand Clinical Trials Registry",
 		       null, "en", 12, null, null, 0, true, true);
-	       sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	       
 	       sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100116, "Australian New Zealand Clinical Trials Registry", 
 		                     "https://anzctr.org.au/ACTRN12616000771459.aspx", true, 35, null, null, null));
@@ -174,7 +173,6 @@ public class TestData_100116 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Australian / NZ registry web page", null, ob_title,
 		        null, 9, 2020, 23, 13, 100116, "Australian New Zealand Clinical Trials Registry",
 		        null, "en", 12, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	       
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100116, "Australian New Zealand Clinical Trials Registry", 
 		        "https://anzctr.org.au/ACTRN12620001103954.aspx", true, 35, null, null, null));

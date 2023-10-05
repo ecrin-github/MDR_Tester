@@ -49,7 +49,7 @@ public class TestData_100118 : TestData_Base
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 1500));  // Other
 	        
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Pregnancy Induced Hypertension", null, null, null, null));
-	        fs.conditions!.Add(new StudyCondition(sd_sid,  null, 12, "O13", "JA23", "Gestational hypertension"));
+	        fs.conditions.Add(new StudyCondition(sd_sid,  null, 12, "O13", "JA23", "Gestational hypertension"));
 
 	        fs.countries!.Add(new StudyCountry(sd_sid, 1269750, "India", null));
 
@@ -69,8 +69,7 @@ public class TestData_100118 : TestData_Base
 	       sdo.data_object = new DataObject(sd_oid, sd_sid, "Chinese registry web page", null, ob_title,
 		       null, 9, 2016, 23, 13, 100118, "Chinese Clinical Trial Register",
 		       null, "en", 12, null, null, 0, true, true);
-	       sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-	       
+	       	       
 	       sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100118, "Chinese Clinical Trial Register", 
 		       "http://www.chictr.org.cn/showproj.aspx?proj=17318", true, 35, null, null, null));
 	       sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "18 Dec 2016", 2016, 12, 18, null, null, null, null));
@@ -122,11 +121,11 @@ public class TestData_100118 : TestData_Base
 	        fs.iec.Add(new StudyIEC(sd_sid, 4, 2, "cr", "1.", 1, "e.01", "with sever cardiac, liver and renal diseases;"));
 	        fs.iec.Add(new StudyIEC(sd_sid, 5, 2, "cr", "2.", 1, "e.02", "patients with cognition disorders."));
 	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "3.", 1, "e.03", "patients who refuse to participate"));
-	        
-	        // Null condition list
-	        
+
+			fs.conditions!.Add(new StudyCondition(sd_sid, "COPD", null, null, "CA22", "Chronic obstructive pulmonary disease"));
+           
             // Data Objects
-	        
+
             // 1) Trial registry entry
 
             string sd_oid = sd_sid + " :: 13 :: Chinese registry web page";
@@ -136,8 +135,7 @@ public class TestData_100118 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "Chinese registry web page", null, ob_title,
 	            null, 9, 2017, 23, 13, 100118, "Chinese Clinical Trial Register",
 	            null, "en", 12, null, null, 0, true, true);
-	       sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-	       
+	       	       
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100118, "Chinese Clinical Trial Register", 
 	            "http://www.chictr.org.cn/showproj.aspx?proj=17751", true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "14 Jan 2017", 2017, 1, 14, null, null, null, null));
@@ -220,8 +218,7 @@ public class TestData_100118 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Chinese registry web page", null, ob_title,
 		        null, 9, 2019, 23, 13, 100118, "Chinese Clinical Trial Register",
 		        null, "en", 12, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-
+	        
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100118, "Chinese Clinical Trial Register",
 		        "http://www.chictr.org.cn/showproj.aspx?proj=38214", true, 35, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "19 Apr 2019", 2019, 4, 19, null, null, null,

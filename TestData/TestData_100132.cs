@@ -78,8 +78,7 @@ public class TestData_100132 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "Dutch registry web page", null, ob_title,
 	            null, 9, 2008, 23, 13, 100132, "Netherlands National Trial Register", 
 	            null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+
             sdo.object_instances!.Add(new ObjectInstance(sd_oid,  100132, "Netherlands National Trial Register", 
 	            "https://www.onderzoekmetmensen.nl/en/trial/28061", true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "9 Sep 2008", 2008, 9, 9, null, null, null, null));
@@ -158,7 +157,6 @@ public class TestData_100132 : TestData_Base
 	            null, 9, 2020, 23, 13, 100132, "Netherlands National Trial Register", 
 	            null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid,  100132, "Netherlands National Trial Register", 
 	            "https://www.onderzoekmetmensen.nl/en/trial/22538", true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "26 May 2020", 2020, 5, 26, null, null, null, null));

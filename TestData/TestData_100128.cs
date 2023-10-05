@@ -91,7 +91,6 @@ public class TestData_100128 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "Pan African registry web page", null, ob_title,
               null, 9, 2011, 23, 13, 100128, "Pan African Clinical Trial Registry",
               null, "en", 12, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	            
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100128, "Pan African Clinical Trial Registry", 
               "https://pactr.samrc.ac.za/TrialDisplay.aspx?TrialID=284", true, 35, null, null, null));
@@ -189,7 +188,6 @@ public class TestData_100128 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "Pan African registry web page", null, ob_title,
               null, 9, 2022, 23, 13, 100128, "Pan African Clinical Trial Registry",
               null, "en", 12, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	            
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100128, "Pan African Clinical Trial Registry", 
               "https://pactr.samrc.ac.za/TrialDisplay.aspx?TrialID=24089", true, 35, null, null, null));

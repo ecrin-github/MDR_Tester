@@ -54,7 +54,6 @@ public class TestData_100121 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Indian registry web page", null, ob_title,
 		        null, 9, 2017, 23, 13, 100121, "Clinical Trials Registry - India", null, "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100121, "Clinical Trials Registry - India", 
 		        "http://www.ctri.nic.in/Clinicaltrials/pmaindet2.php?trialid=16622", true, 35, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "27 Mar 2017", 2017, 3, 27, null, null, null, null));
@@ -133,9 +132,9 @@ public class TestData_100121 : TestData_Base
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 505));   // 
 
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Malignant neoplasm of upper respiratory tract, part unspecified", 
-		        12, "C39", "2C29", "Malignant neoplasms of other or ill-defined sites in the respiratory system or intrathoracic organs"));
-    
-	        fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1-", 1, "n.01", "Histologically confirmed locally advanced or metastatic NSCLC"));	       
+		        12, "C39.0", "2C29", "Malignant neoplasms of other or ill-defined sites in the respiratory system or intrathoracic organs"));
+          
+            fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1-", 1, "n.01", "Histologically confirmed locally advanced or metastatic NSCLC"));	       
 	        fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2-", 1, "n.02", "Measurable disease by RECIST 1.1"));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3-", 1, "n.03", "Known PD-L1 status"));
 	        fs.iec.Add(new StudyIEC(sd_sid, 4, 1, "cr", "4-", 1, "n.04", "ECOG performance status (PS) 0 or 1"));	    
@@ -190,7 +189,6 @@ public class TestData_100121 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Indian registry web page", null, ob_title,
 		        null, 9, 2019, 23, 13, 100121, "Clinical Trials Registry - India", null, "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100121, "Clinical Trials Registry - India", 
 		        "http://www.ctri.nic.in/Clinicaltrials/pmaindet2.php?trialid=29960", true, 35, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "3 Jun 2019", 2019, 6, 3, null, null, null, null));

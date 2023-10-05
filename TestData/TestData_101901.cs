@@ -6,12 +6,7 @@ public class TestData_101901 : TestData_Base
 {
     public override FullStudy? FetchStudyData(string sd_sid)
     {
-	    StringBuilder asb =
-		    new StringBuilder("The YODA Project will require that requesters provide basic information about the Principal Investigator, Key Personnel, ");
-	    asb.Append("and the project Research Proposal, including a scientific abstract and research methods.The YODA Project will review proposals ");
-	    asb.Append("to ensure that: 1) the scientific purpose is clearly described; 2) the data requested will be used to enhance scientific ");
-	    asb.Append("and/or medical knowledge; and 3) the proposed research can be reasonably addressed using the requested data.");
-	    
+		string asb = "Material provided under managed access. Please follow the link to the yoda site for details of the application process.";
 	    StringBuilder dsb =
 		    new StringBuilder("Yoda states that “...researchers will be granted access to participant-level study data that are devoid ");
 	    dsb.Append("of personally identifiable information; current best guidelines for de-identification of data will be used.”");
@@ -63,8 +58,7 @@ public class TestData_101901 : TestData_Base
             
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Yoda web page", null, ob_title,
 		        null, 9, null, 23, 38, 101901, "Yoda", null, "en", 12, null, null, 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
 		        "https://yoda.yale.edu/clinical-trial/nct01727258-evaluation-of-an-experimental-mouth-rinse-device-for-relieving-dentinal-hypersenstivity/", 
 		        true, 35, null, null, null));
@@ -80,8 +74,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical study report", null, ob_title,
 		        null, 9, null, 23, 26, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -95,8 +87,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study protocol", null, ob_title,
 		        null, 9, null, 23, 11, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -109,8 +99,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical analysis plan", null, ob_title,
 		        null, 9, null, 23, 22, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -124,8 +112,6 @@ public class TestData_101901 : TestData_Base
 		        null, 9, null, 23, 31, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-	       
 	        fs.data_objects!.Add(sdo);
 
 	        // 6) Collected Datasets
@@ -137,8 +123,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
 		        null, 9, null, 14, 80, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 3, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 
 	        sdo.dataset_details = new ObjectDataset(sd_oid, 0, null, 2, null, null, null, null, null,
 		        dsb.ToString(), 0, null, null, null, null, null, null);
@@ -191,7 +175,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Yoda web page", null, ob_title,
 		        null, 9, null, 23, 38, 101901, "Yoda", null, "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
 		        "https://yoda.yale.edu/clinical-trial/a-phase-3-randomized-open-label-comparative-study-of-doxil-caelyx-versus-topotecan-hcl-in-patients-with-epithelial-ovarian-carcinoma-following-failure-of-first-line-platinum-based-chemothera/", 
 		        true, 35, null, null, null));
@@ -208,8 +191,6 @@ public class TestData_101901 : TestData_Base
 		        null, 9, null, 23, 26, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-	        
 	        fs.data_objects!.Add(sdo);
 
 	        // 3) Protocol
@@ -221,9 +202,7 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study protocol", null, ob_title,
 		        null, 9, null, 23, 11, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-	        
+
 	        fs.data_objects!.Add(sdo);
 	        
 	        // 4) Statistical Analysis Plan
@@ -235,8 +214,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical analysis plan", null, ob_title,
 		        null, 9, null, 23, 22, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -248,8 +225,7 @@ public class TestData_101901 : TestData_Base
             
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Results or CSR summary", null, ob_title,
 		        null, 9, null, 23, 79, 101901, "Yoda", null, "en", 11, null, null, 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
 		        "https://yoda.yale.edu/wp-content/uploads/2023/02/30-49_csr_synopsis.pdf", 
 		        true, 11, null, null, null));
@@ -264,8 +240,7 @@ public class TestData_101901 : TestData_Base
             
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Data dictionary", null, ob_title,
 		        null, 9, null, 23, 31, 101901, "Yoda", null, "en", 11, null, null, 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
 		        "https://yoda.yale.edu/wp-content/uploads/2023/02/30-49_data_dictionary.pdf", 
 		        true, 11, null, null, null));
@@ -281,8 +256,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
 		        null, 9, null, 14, 80, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 3, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 
 	        sdo.dataset_details = new ObjectDataset(sd_oid, 0, null, 2, null, null, null, null, null,
 		        dsb.ToString(), 0, null, null, null, null, null, null);
@@ -337,7 +310,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Yoda web page", null, ob_title,
 		        null, 9, null, 23, 38, 101901, "Yoda", null, "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
 		        "https://yoda.yale.edu/clinical-trial/nct02243202-a-randomized-double-blind-placebo-controlled-parallel-group-study-to-investigate-the-safety-and-efficacy-of-the-co-administration-of-canagliflozin-300-mg-and-phentermine-15-mg-compare/", 
 		        true, 35, null, null, null));
@@ -354,8 +326,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical study report", null, ob_title,
 		        null, 9, null, 23, 26, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -369,8 +339,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study protocol", null, ob_title,
 		        null, 9, null, 23, 11, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -384,8 +352,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical analysis plan", null, ob_title,
 		        null, 9, null, 23, 22, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -399,8 +365,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
 		        null, 9, null, 14, 80, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 3, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 
 	        sdo.dataset_details = new ObjectDataset(sd_oid, 0, null, 2, null, null, null, null, null,
 		        dsb.ToString(), 0, null, null, null, null, null, null);
@@ -417,8 +381,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Data dictionary", null, ob_title,
 		        null, 9, null, 23, 31, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -465,7 +427,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Yoda web page", null, ob_title,
 		        null, 9, null, 23, 38, 101901, "Yoda", null, "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
 		        "https://yoda.yale.edu/clinical-trial/a-long-term-comparison-of-galantamine-and-donepezil-in-the-treatment-of-alzheimers-disease/", true, 35, null, null, null));
 	        
@@ -480,8 +441,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical study report", null, ob_title,
 		        null, 9, null, 23, 26, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 
@@ -495,8 +454,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study protocol", null, ob_title,
 		        null, 9, null, 23, 11, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -508,8 +465,7 @@ public class TestData_101901 : TestData_Base
             
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Results or CSR summary", null, ob_title,
 		        null, 9, null, 23, 79, 101901, "Yoda", null, "en", 11, null, null, 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
 		        "https://yoda.yale.edu/wp-content/uploads/2023/02/gal-mvd-301_csr_synopsis.pdf", 
 		        true, 11, null, null, null));
@@ -566,7 +522,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Yoda web page", null, ob_title,
 		        null, 9, null, 23, 38, 101901, "Yoda", null, "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101901, "Yoda", 
 		        "https://yoda.yale.edu/clinical-trial/nct00433329-compass-3-an-open-label-multi-center-study-employing-a-targeted-6-minute-walk-test-6-mwt-distance-threshold-approach-to-guide-bosentan-based-therapy-and-to-assess-the-utility-of-magn/", 
 		        true, 35, null, null, null));
@@ -582,8 +537,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Clinical study report", null, ob_title,
 		        null, 9, null, 23, 26, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
  
@@ -596,8 +549,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study protocol", null, ob_title,
 		        null, 9, null, 23, 11, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        
@@ -610,8 +561,6 @@ public class TestData_101901 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical analysis plan", null, ob_title,
 		        null, 9, null, 23, 22, 101901, "Yoda", null, "en", 17, asb.ToString(), 
 		        "https://yoda.yale.edu/how-request-data", 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        fs.data_objects!.Add(sdo);
 	        

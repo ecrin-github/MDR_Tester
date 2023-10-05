@@ -28,7 +28,7 @@ public class TestData_100129 : TestData_Base
             sb.Append("Peru :Participate on part 2 :\n"); 
             sb.Append("Part 2: Double-blind, randomized, placebo-controlled part\n"); 
             sb.Append("Once the RP3R for canakinumab in combination with pembrolizumab and platinum-based\n"); 
-            sb.Append("doublet chemotherapy is confirmed in the safety run-in part, the double-blind, randomize"); 
+            sb.Append("doublet chemotherapy is confirmed in the safety run-in part, the double-blind, randomized,pla"); 
             string brief_desc = sb.ToString();
             
             fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2019, 9, 11, 21, "0", 915,
@@ -59,8 +59,8 @@ public class TestData_100129 : TestData_Base
 	        fs.features.Add(new StudyFeature(sd_sid, 24, 510));   // 
 	        
             fs.conditions!.Add(new StudyCondition(sd_sid, "Malignant neoplasm of oropharynx", 
-	            12, "C10", "2B6A", "Malignant neoplasms of oropharynx"));      
-            
+	            12, "C10", "2B6A", "Malignant neoplasms of oropharynx"));
+
             fs.iec!.Add(new StudyIEC(sd_sid, 1, 1, "cr", "1.", 1, "n.01", "Histologically confirmed locally advanced or metastatic NSCLC"));	       
             fs.iec.Add(new StudyIEC(sd_sid, 2, 1, "cr", "2.", 1, "n.02", "&#61472;Measurable disease by RECIST 1.1"));	    
             fs.iec.Add(new StudyIEC(sd_sid, 3, 1, "cr", "3.", 1, "n.03", "Known PD-L1 status"));	    
@@ -115,13 +115,12 @@ public class TestData_100129 : TestData_Base
 	        
             sdo.data_object = new DataObject(sd_oid, sd_sid, "Peruvian registry web page", null, ob_title,
 	            null, 9, 2019, 23, 13, 100129, "Registro Peruano de Ensayos Clínicos", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100129, "Registro Peruano de Ensayos Clínicos", 
 	            "https://www.ins.gob.pe/ensayosclinicos/rpec/recuperarECPBNuevoEN.asp?numec=015-19", 
 	            true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "18 Sep 2019", 2019, 9, 18, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "5 Jun 2023", 2023, 6, 5, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "4 Sep 2023", 2023, 9, 4, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
 

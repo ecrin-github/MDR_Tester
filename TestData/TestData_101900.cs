@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MDR_Tester;
 
@@ -6,10 +8,8 @@ public class TestData_101900 : TestData_Base
 {
     public override FullStudy? FetchStudyData(string sd_sid)
     {
-	    StringBuilder asb =
-		    new StringBuilder("Investigators wishing to request materials from studies ... must register (free) on the BioLINCC website. ");
-	    asb.Append("Registered investigators may then request detailed searches and submit an application for data sets and/or biospecimens. (from the BioLINCC website)");
-	    
+		string asb = "Material provided under managed access. Please follow the link to the BioLINCC handbook for details of the application process.";
+
 	    StringBuilder dsb =
 		    new StringBuilder("All BioLINCC data and biospecimens are de-identified. Obvious subject identifiers and data collected solely for ");
 	    dsb.Append("administrative purposes are redacted from datasets, and dates are recoded relative to a specific reference point. ");
@@ -71,16 +71,16 @@ public class TestData_101900 : TestData_Base
 		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT01783990", 11, 100120, 
 		        "ClinicalTrials.gov", null, null, null));
-	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HLB02352023a", 42, 100167, 
-		        "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26", null, null));
+	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HLB02352023a", 42, 100167,
+                "National Heart Lung and Blood Institute", "https://ror.org/012pb6c26", null, null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, 
 		        "Hydroxyurea to Prevent Organ Damage in Children with Sickle Cell Anemia (BABY HUG) Phase III Clinical Trial and Follow-Up Observational Studies I and II", 
 		        18, "en", 11, true, "From BioLINCC web page"));
 	        fs.titles.Add(new StudyTitle(sd_sid, "BABY HUG", 14, "en", 11, false, "From BioLINCC web page"));
 
-	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100167, 
-		        "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26"));
+	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100167,
+                "National Heart Lung and Blood Institute", "https://ror.org/012pb6c26"));
 
 	        fs.references!.Add(new StudyReference(sd_sid, null, "21571150", 
 		        "https://www.ncbi.nlm.nih.gov/pubmed/2157115", null, "primary"));	
@@ -94,10 +94,9 @@ public class TestData_101900 : TestData_Base
 	        StudyDataObject sdo = CreateEmptyStudyDataObject();
             
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "NHLBI web page", null, ob_title,
-		        null, 9, 2023, 23, 38, 100167, "National Heart, Lung, and Blood Institute", 
+		        null, 9, 2023, 23, 38, 100167, "National Heart Lung and Blood Institute", 
 		        "https://ror.org/012pb6c26", "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 		        "https://biolincc.nhlbi.nih.gov/studies/baby_hug/", true, 35, null, null, null));
 	        
@@ -110,11 +109,10 @@ public class TestData_101900 : TestData_Base
 	        sdo = CreateEmptyStudyDataObject();
 	        
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
-		        null, 9, 2023, 14, 80, 100167, "National Heart, Lung, and Blood Institute", 
-		        "https://ror.org/012pb6c26", "en", 17, asb.ToString(), 
+		        null, 9, 2023, 14, 80, 100167, "National Heart Lung and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 17, asb, 
 		        "https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15",
 		        3, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        sdo.dataset_details = new ObjectDataset(sd_oid, 0, null, 2, null, null, null, null, null,
 		        dsb.ToString(), 6, null, null, null, null, null, 
@@ -131,9 +129,9 @@ public class TestData_101900 : TestData_Base
 	        sdo = CreateEmptyStudyDataObject();
 	        
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Data Dictionary", null, ob_title,
-		        null, 9, null, 23, 31, 100167, "National Heart, Lung, and Blood Institute", 
+		        null, 9, null, 23, 31, 100167, "National Heart Lung and Blood Institute", 
 		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Data Dictionary", 21, "en", 11, true, null));
 	        
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 		        "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/data_dictionary/Baby_HUG_2021a.pdf",
@@ -148,9 +146,9 @@ public class TestData_101900 : TestData_Base
 	        sdo = CreateEmptyStudyDataObject();
 	        
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG Follow-up Study II Annotated CRFs", null, ob_title,
-		        null, 9, null, 23, 30, 100167, "National Heart, Lung, and Blood Institute", 
+		        null, 9, null, 23, 30, 100167, "National Heart Lung and Blood Institute", 
 		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, "BABY HUG Follow-up Study II Annotated CRFs", 21, "en", 11, true, null));
 	        
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 		        "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_II_Annotated_CRFs.pdf",
@@ -165,9 +163,9 @@ public class TestData_101900 : TestData_Base
 	        sdo = CreateEmptyStudyDataObject();
 	        
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG Follow-up Study II Manual of Operations", null, ob_title,
-		        null, 9, null, 23, 35, 100167, "National Heart, Lung, and Blood Institute", 
+		        null, 9, null, 23, 35, 100167, "National Heart Lung and Blood Institute", 
 		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, "BABY HUG Follow-up Study II Manual of Operations", 21, "en", 11, true, null));
 	        
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 		        "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_II_Manual_of_Operations.pdf",
@@ -182,9 +180,9 @@ public class TestData_101900 : TestData_Base
 	        sdo = CreateEmptyStudyDataObject();
 	        
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG Follow-up Study II Protocol", null, ob_title,
-		        null, 9, null, 23, 11, 100167, "National Heart, Lung, and Blood Institute", 
+		        null, 9, null, 23, 11, 100167, "National Heart Lung and Blood Institute", 
 		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, "BABY HUG Follow-up Study II Protocol", 21, "en", 11, true, null));
 	        
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 		        "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_II_Protocol.pdf",
@@ -199,9 +197,9 @@ public class TestData_101900 : TestData_Base
             sdo = CreateEmptyStudyDataObject();
             
             sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG Follow-up Study I Annotated CRFs", null, ob_title,
-                null, 9, null, 23, 30, 100167, "National Heart, Lung, and Blood Institute", 
+                null, 9, null, 23, 30, 100167, "National Heart Lung and Blood Institute", 
                 "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "BABY HUG Follow-up Study I Annotated CRFs", 21, "en", 11, true, null));
             
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
                 "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_I_Annotated_CRFs.pdf",
@@ -216,9 +214,9 @@ public class TestData_101900 : TestData_Base
             sdo = CreateEmptyStudyDataObject();
             
             sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG Follow-up Study I Manual of Operations", null, ob_title,
-                null, 9, null, 23, 35, 100167, "National Heart, Lung, and Blood Institute", 
+                null, 9, null, 23, 35, 100167, "National Heart Lung and Blood Institute", 
                 "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "BABY HUG Follow-up Study I Manual of Operations", 21, "en", 11, true, null));
             
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
                 "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_I_Manual_of_Operations.pdf",
@@ -233,9 +231,9 @@ public class TestData_101900 : TestData_Base
             sdo = CreateEmptyStudyDataObject();
             
             sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG Follow-up Study I Protocol", null, ob_title,
-                null, 9, null, 23, 11, 100167, "National Heart, Lung, and Blood Institute", 
+                null, 9, null, 23, 11, 100167, "National Heart Lung and Blood Institute", 
                 "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "BABY HUG Follow-up Study I Protocol", 21, "en", 11, true, null));
             
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
                 "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_Follow-up_Study_I_Protocol.pdf",
@@ -251,9 +249,9 @@ public class TestData_101900 : TestData_Base
             sdo = CreateEmptyStudyDataObject();
             
             sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG RCT Annotated CRFs", null, ob_title,
-                null, 9, null, 23, 30, 100167, "National Heart, Lung, and Blood Institute", 
+                null, 9, null, 23, 30, 100167, "National Heart Lung and Blood Institute", 
                 "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "BABY HUG RCT Annotated CRFs", 21, "en", 11, true, null));
             
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
                 "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_RCT_Annotated_CRFs.pdf",
@@ -268,9 +266,9 @@ public class TestData_101900 : TestData_Base
             sdo = CreateEmptyStudyDataObject();
             
             sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG RCT Manual of Operations", null, ob_title,
-                null, 9, null, 23, 35, 100167, "National Heart, Lung, and Blood Institute", 
+                null, 9, null, 23, 35, 100167, "National Heart Lung and Blood Institute", 
                 "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "BABY HUG RCT Manual of Operations", 21, "en", 11, true, null));
             
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
                 "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_RCT_Manual_of_Operations.pdf",
@@ -285,9 +283,9 @@ public class TestData_101900 : TestData_Base
             sdo = CreateEmptyStudyDataObject();
             
             sdo.data_object = new DataObject(sd_oid, sd_sid, "BABY HUG RCT Protocol", null, ob_title,
-                null, 9, null, 23, 11, 100167, "National Heart, Lung, and Blood Institute", 
+                null, 9, null, 23, 11, 100167, "National Heart Lung and Blood Institute", 
                 "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "BABY HUG RCT Protocol", 21, "en", 11, true, null));
             
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
                 "https://biolincc.nhlbi.nih.gov/media/studies/baby_hug/BABY_HUG_RCT_Protocol.pdf",
@@ -298,6 +296,7 @@ public class TestData_101900 : TestData_Base
             return fs;
         }
         
+
         if (sd_sid == "ACRN-BAGS")
         {
 	        FullStudy fs = CreateEmptyFullStudy();
@@ -319,7 +318,7 @@ public class TestData_101900 : TestData_Base
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00000577", 11, 100120, 
 		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HLB00140202a", 42, 100167, 
-		        "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26", null, null));
+		        "National Heart Lung and Blood Institute", "https://ror.org/012pb6c26", null, null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, 
 		        "Asthma Clinical Research Network (ACRN) Beta Agonist in Mild Asthma Study (BAGS)", 
@@ -341,10 +340,9 @@ public class TestData_101900 : TestData_Base
 	        StudyDataObject sdo = CreateEmptyStudyDataObject();
             
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "NHLBI web page", null, ob_title,
-		        null, 9, 2018, 23, 38, 100167, "National Heart, Lung, and Blood Institute", 
+		        null, 9, 2018, 23, 38, 100167, "National Heart Lung and Blood Institute", 
 		        "https://ror.org/012pb6c26", "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 		        "https://biolincc.nhlbi.nih.gov/studies/bags/", true, 35, null, null, null));
 	        
@@ -357,11 +355,10 @@ public class TestData_101900 : TestData_Base
 	        sdo = CreateEmptyStudyDataObject();
 	        
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
-		        null, 9, 2018, 14, 80, 100167, "National Heart, Lung, and Blood Institute", 
-		        "https://ror.org/012pb6c26", "en", 17, asb.ToString(), 
+		        null, 9, 2018, 14, 80, 100167, "National Heart Lung and Blood Institute", 
+		        "https://ror.org/012pb6c26", "en", 17, asb, 
 		        "https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15",
 		        3, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 	        sdo.dataset_details = new ObjectDataset(sd_oid, 0, null, 2, null, null, null, null, null,
 		        dsb.ToString(), 0, null, null, null, null, null, null);
@@ -377,9 +374,9 @@ public class TestData_101900 : TestData_Base
 	        sdo = CreateEmptyStudyDataObject();
 	        
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Data Dictionary", null, ob_title,
-		        null, 9, null, 23, 31, 100167, "National Heart, Lung, and Blood Institute", 
-		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+		        null, 9, null, 23, 31, 100167, "National Heart Lung and Blood Institute",
+            "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Data Dictionary", 21, "en", 11, true, null));
 	        
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 		        "https://biolincc.nhlbi.nih.gov/media/studies/bags/data_dictionary/ACRN_BAGS.pdf",
@@ -394,9 +391,9 @@ public class TestData_101900 : TestData_Base
 	        sdo = CreateEmptyStudyDataObject();
 	        
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Forms", null, ob_title,
-		        null, 9, null, 23, 86, 100167, "National Heart, Lung, and Blood Institute", 
+		        null, 9, null, 23, 86, 100167, "National Heart Lung and Blood Institute", 
 		        "https://ror.org/012pb6c26", "en", 12, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Forms", 21, "en", 11, true, null));
 	        
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 		        "https://biolincc.nhlbi.nih.gov/studies/bags/Forms/",
@@ -411,9 +408,9 @@ public class TestData_101900 : TestData_Base
 	        sdo = CreateEmptyStudyDataObject();
 	        
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Manual", null, ob_title,
-		        null, 9, null, 23, 36, 100167, "National Heart, Lung, and Blood Institute", 
+		        null, 9, null, 23, 36, 100167, "National Heart Lung and Blood Institute", 
 		        "https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Manual", 21, "en", 11, true, null));
 	        
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 		        "https://biolincc.nhlbi.nih.gov/media/studies/bags/Manual.pdf",
@@ -458,7 +455,7 @@ public class TestData_101900 : TestData_Base
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00094302", 11, 100120, 
 		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HLB01341616a", 42, 100167, 
-		        "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26", null, null));
+		        "National Heart Lung and Blood Institute", "https://ror.org/012pb6c26", null, null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, 
 		        "Treatment of Preserved Cardiac Function Heart Failure With an Aldosterone Antagonist (TOPCAT)", 
@@ -794,10 +791,9 @@ public class TestData_101900 : TestData_Base
 			StudyDataObject sdo = CreateEmptyStudyDataObject();
             
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "NHLBI web page", null, ob_title,
-				null, 9, 2019, 23, 38, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, 2019, 23, 38, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 12, null, null, 0, true, true);
 	       
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/studies/topcat/", true, 35, null, null, null));
 	        
@@ -810,11 +806,10 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
-				null, 9, 2019, 14, 80, 100167, "National Heart, Lung, and Blood Institute", 
-				"https://ror.org/012pb6c26", "en", 17, asb.ToString(), 
+				null, 9, 2019, 14, 80, 100167, "National Heart Lung and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 17, asb, 
 				"https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15",
 				3, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 
 			string res_constraints = "Consent for the use of biospecimens in genetic research is tiered to (1) research related to heart disease, stroke, kidney diseases, ";
 			res_constraints += "other cardiovascular diseases, or risk factors associated with these diseases and (2) research related to any disease, health condition or risk factors. ";
@@ -835,9 +830,9 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Data Dictionary", null, ob_title,
-				null, 9, null, 23, 31, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, null, 23, 31, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Data Dictionary", 21, "en", 11, true, null));
 	        
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/media/studies/topcat/data_dictionary/TOPCAT_v2016b.pdf",
@@ -852,9 +847,9 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Protocols", null, ob_title,
-				null, 9, null, 23, 11, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, null, 23, 11, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Protocols", 21, "en", 11, true, null));
 	        
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/media/studies/topcat/Protocols.pdf",
@@ -869,9 +864,9 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Forms", null, ob_title,
-				null, 9, null, 23, 21, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, null, 23, 21, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Forms", 21, "en", 11, true, null));
 	        
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/media/studies/topcat/Forms.pdf",
@@ -886,9 +881,9 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Manual of Operations", null, ob_title,
-				null, 9, null, 23, 35, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, null, 23, 35, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Manual of Operations", 21, "en", 11, true, null));
 	        
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/media/studies/topcat/Manual_of_Operations.pdf",
@@ -931,7 +926,7 @@ public class TestData_101900 : TestData_Base
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00200967", 11, 100120, 
 		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HLB01021313a", 42, 100167, 
-		        "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26", null, null));
+		        "National Heart Lung and Blood Institute", "https://ror.org/012pb6c26", null, null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, 
 		        "Asthma Clinical Research Network Trial (ACRN) - Long-Acting Beta Agonist Response by Genotype (LARGE)", 
@@ -954,10 +949,9 @@ public class TestData_101900 : TestData_Base
 			StudyDataObject sdo = CreateEmptyStudyDataObject();
             
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "NHLBI web page", null, ob_title,
-				null, 9, 2018, 23, 38, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, 2018, 23, 38, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 12, null, null, 0, true, true);
 	       
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/studies/large/", true, 35, null, null, null));
 	        
@@ -971,11 +965,10 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
-				null, 9, 2018, 14, 80, 100167, "National Heart, Lung, and Blood Institute", 
-				"https://ror.org/012pb6c26", "en", 17, asb.ToString(), 
+				null, 9, 2018, 14, 80, 100167, "National Heart Lung and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 17, asb, 
 				"https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15",
 				3, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 			
 			sdo.dataset_details = new ObjectDataset(sd_oid, 0, null, 2, null, null, null, null, null,
 				dsb.ToString(), 0, null, null, null, null, null, null);
@@ -991,9 +984,9 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Data Dictionary", null, ob_title,
-				null, 9, null, 23, 31, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, null, 23, 31, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Data Dictionary", 21, "en", 11, true, null));
 	        
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/media/studies/large/data_dictionary/ACRN_LARGE_accessible.pdf",
@@ -1008,9 +1001,9 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Protocol", null, ob_title,
-				null, 9, null, 23, 11, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, null, 23, 11, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Protocol", 21, "en", 11, true, null));
 	        
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/media/studies/large/Protocol.pdf",
@@ -1025,9 +1018,9 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Forms", null, ob_title,
-				null, 9, null, 23, 21, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, null, 23, 21, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Forms", 21, "en", 11, true, null));
 	        
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/media/studies/large/Forms.pdf",
@@ -1064,7 +1057,7 @@ public class TestData_101900 : TestData_Base
 	        fs.identifiers!.Add(new StudyIdentifier(sd_sid, "NCT00051350", 11, 100120, 
 		        "ClinicalTrials.gov", null, null, null));
 	        fs.identifiers.Add(new StudyIdentifier(sd_sid, "HLB00831119a", 42, 100167, 
-		        "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26", null, null));
+		        "National Heart Lung and Blood Institute", "https://ror.org/012pb6c26", null, null));
 	        
 	        fs.titles!.Add(new StudyTitle(sd_sid, 
 		        "Optimal Macronutrient Intake Trial to Prevent Heart Disease (OMNI Heart)", 
@@ -1137,10 +1130,9 @@ public class TestData_101900 : TestData_Base
 			StudyDataObject sdo = CreateEmptyStudyDataObject();
             
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "NHLBI web page", null, ob_title,
-				null, 9, 2019, 23, 38, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, 2019, 23, 38, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 12, null, null, 0, true, true);
 	       
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/studies/omniheart/", true, 35, null, null, null));
 	        
@@ -1153,11 +1145,10 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Individual participant data", null, ob_title,
-				null, 9, 2019, 14, 80, 100167, "National Heart, Lung, and Blood Institute", 
-				"https://ror.org/012pb6c26", "en", 17, asb.ToString(), 
+				null, 9, 2019, 14, 80, 100167, "National Heart Lung and Blood Institute", 
+				"https://ror.org/012pb6c26", "en", 17, asb, 
 				"https://biolincc.nhlbi.nih.gov/media/guidelines/handbook.pdf?link_time=2019-12-13_11:33:44.807479#page=15",
 				3, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 			
 			sdo.dataset_details = new ObjectDataset(sd_oid, 0, null, 2, null, null, null, null, null,
 				dsb.ToString(), 6, null, null, null, null, null, 
@@ -1175,9 +1166,9 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Data Dictionary", null, ob_title,
-				null, 9, null, 23, 31, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, null, 23, 31, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Data Dictionary", 21, "en", 11, true, null));
 	        
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/media/studies/omniheart/data_dictionary/OMNI_Heart_2019a.pdf",
@@ -1192,9 +1183,9 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Protocol", null, ob_title,
-				null, 9, null, 23, 11, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, null, 23, 11, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Protocol", 21, "en", 11, true, null));
 	        
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/media/studies/omniheart/Protocol.pdf",
@@ -1209,9 +1200,9 @@ public class TestData_101900 : TestData_Base
 			sdo = CreateEmptyStudyDataObject();
 	        
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "MOP", null, ob_title,
-				null, 9, null, 23, 36, 100167, "National Heart, Lung, and Blood Institute", 
+				null, 9, null, 23, 36, 100167, "National Heart Lung and Blood Institute", 
 				"https://ror.org/012pb6c26", "en", 11, null, null, 0, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+			sdo.object_titles!.Add(new ObjectTitle(sd_oid, "MOP", 21, "en", 11, true, null));
 	        
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101900, "BioLINCC", 
 				"https://biolincc.nhlbi.nih.gov/media/studies/omniheart/MOP.pdf",

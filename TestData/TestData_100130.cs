@@ -112,12 +112,11 @@ public class TestData_100130 : TestData_Base
 				sdo.data_object = new DataObject(sd_oid, sd_sid, "Sri Lankan registry web page", null, ob_title,
 					null, 9, 2008, 23, 13, 100130, "Sri Lanka Clinical Trials Registry",
 					null, "en", 12, null, null, 0, true, true);
-				sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 				sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100130, "Sri Lanka Clinical Trials Registry", 
 					"https://slctr.lk/trials/slctr-2008-006", true, 35, null, null, null));
 				sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "28 Mar 2008", 2008, 3, 28, null, null, null, null));
-				sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "26 Jun 2023", 2023, 6, 26, null, null, null, null));
+				sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "18 Sep 2023", 2023, 9, 18, null, null, null, null));
 	      
 				fs.data_objects!.Add(sdo);
 
@@ -212,12 +211,11 @@ public class TestData_100130 : TestData_Base
 				sdo.data_object = new DataObject(sd_oid, sd_sid, "Sri Lankan registry web page", null, ob_title,
 					null, 9, 2021, 23, 13, 100130, "Sri Lanka Clinical Trials Registry",
 					null, "en", 12, null, null, 0, true, true);
-				sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        
 				sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100130, "Sri Lanka Clinical Trials Registry", 
 					"https://slctr.lk/trials/slctr-2021-023", true, 35, null, null, null));
 				sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "4 Aug 2021", 2021, 8, 4, null, null, null, null));
-				sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "26 Jun 2023", 2023, 6, 26, null, null, null, null));
+				sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "18 Sep 2023", 2023, 9, 18, null, null, null, null));
 	       
 				fs.data_objects!.Add(sdo);
 

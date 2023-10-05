@@ -454,9 +454,9 @@ public class TestReportHelper
     public List<ConditionData>? FetchStudyConditions(string sd_id)
     {
         using NpgsqlConnection conn = new(_connString);
-        string sql_string = @$"select original_value, original_ct_code from te.study_conditions where sd_sid = '{sd_id}'
+        string sql_string = @$"select coalesce(original_value, 'null') as original_value, coalesce(original_ct_code, 'null') as original_ct_code from te.study_conditions where sd_sid = '{sd_id}'
                union
-               select original_value, original_ct_code from ad.study_conditions where sd_sid = '{sd_id}'";
+               select coalesce(original_value, 'null') as original_value, coalesce(original_ct_code, 'null') as original_ct_code from ad.study_conditions where sd_sid = '{sd_id}'";
         return conn.Query<ConditionData>(sql_string)?.ToList() ;
     }
 
@@ -468,12 +468,13 @@ public class TestReportHelper
                select feature_value_id::varchar from ad.study_features where sd_sid = '{sd_id}'";
         return conn.Query<string>(sql_string)?.ToList() ;
     }
+
     
     public List<CitationData>? FetchStudyReferences(string sd_id)
     {
         using NpgsqlConnection conn = new(_connString);
-        // expected references tested only, as often only a subset 'expected'
-        string sql_string = @$"select pmid, citation from te.study_references where sd_sid = '{sd_id}'";
+        // expected references tested only, as often only a subset of 'actual'
+        string sql_string = @$"select coalesce(pmid, 'null') as pmid, coalesce(citation, 'null') as citation from te.study_references where sd_sid = '{sd_id}'";
         return conn.Query<CitationData>(sql_string)?.ToList() ;
     }
 
@@ -520,9 +521,9 @@ public class TestReportHelper
     public List<IPDData>? FetchStudyIPDAvailable(string sd_id)
     {
         using NpgsqlConnection conn = new(_connString);
-        string sql_string = @$"select ipd_id, ipd_type from te.study_ipd_available where sd_sid = '{sd_id}'
+        string sql_string = @$"select coalesce(ipd_id, 'null') as ipd_id, coalesce(ipd_type, 'null') as ipd_type from te.study_ipd_available where sd_sid = '{sd_id}'
                union
-               select ipd_id, ipd_type from ad.study_ipd_available where sd_sid = '{sd_id}'";
+               select coalesce(ipd_id, 'null') as ipd_id, coalesce(ipd_type, 'null') as ipd_type from ad.study_ipd_available where sd_sid = '{sd_id}'";
         return conn.Query<IPDData>(sql_string)?.ToList() ;
     }
     

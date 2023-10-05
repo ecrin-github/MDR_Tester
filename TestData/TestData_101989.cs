@@ -99,11 +99,10 @@ public class TestData_101989 : TestData_Base
 				null, 9, 2023, 23, 13, 101989, "Lebanon Clinical Trial Registry", 
 				null, "en", 12, null, null, 0, true, true);
 				       
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101989, "Lebanon Clinical Trial Registry", 
+		    sdo.object_instances!.Add(new ObjectInstance(sd_oid, 101989, "Lebanon Clinical Trial Registry", 
 				"https://lbctr.moph.gov.lb/Trials/Details/5264", true, 35, null, null, null));
 			sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "27 Feb 2023", 2023, 2, 27, null, null, null, null));
-			sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "3 Apr 2023", 2023, 4, 3, null, null, null, null));
+			sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "28 Aug 2023", 2023, 8, 28, null, null, null, null));
 				       
 			fs.data_objects!.Add(sdo);
 	

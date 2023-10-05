@@ -30,8 +30,8 @@ public class TestData_109108 : TestData_Base
 			fs.identifiers!.Add(new StudyIdentifier(sd_sid, "ChiMCTR1900002289", 11, 104545, 
 				"Chinese Medicine Clinical Trials Registry", null, null, null));
 
-			fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true, 
-				"From the International Traditional Medicine Clinical Trials Registry"));
+			fs.titles!.Add(new StudyTitle(sd_sid, display_title, 15, "en", 11, true,
+                "From the International Traditional Medicine Clinical Trial Registry"));
 		
 			fs.people!.Add(new StudyPerson(sd_sid, 51, "Cui Yabin", 
 				"Affiliated Hospital to Changchun University of Chinese Medicine", null, 
@@ -84,7 +84,6 @@ public class TestData_109108 : TestData_Base
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Traditional Medicine registry web page", null, ob_title,
 				null, 9, 2019, 23, 13, 109108, "International Traditional Medicine Clinical Trial Registry",
 				null, "en", 12, null, null, 0, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
         
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 109108, "International Traditional Medicine Clinical Trial Registry", 
 				"http://itmctr.ccebtcm.org.cn/en-US/Home/ProjectView?pid=b349edbc-f969-4a58-aace-2135a05ccc9b", 

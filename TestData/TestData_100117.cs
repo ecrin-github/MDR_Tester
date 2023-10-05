@@ -71,7 +71,7 @@ public class TestData_100117 : TestData_Base
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 112, 105883, "Federal University of Paraná", "https://ror.org/05syd6y78"));
             
 	        fs.conditions!.Add(new StudyCondition(sd_sid, "Spinal cord injuries", null, null, "B3-NA9", "Injury of spinal cord at thorax level"));
-	        fs.conditions.Add(new StudyCondition(sd_sid, "C10.228. 854.763", null, null, null, null));
+	        fs.conditions.Add(new StudyCondition(sd_sid, null, 30, "C10.228.854.763", null, null));
 	        
 	        fs.features!.Add(new StudyFeature(sd_sid, 22, 205));  // Randomised
 	        fs.features.Add(new StudyFeature(sd_sid, 23, 305));  // 	  
@@ -89,8 +89,7 @@ public class TestData_100117 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Brazilian registry web page", null, ob_title,
 		        null, 9, 2020, 23, 13, 100117, "Registro Brasileiro de Ensaios Clínicos",
 		        null, "en", 12, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-	        
+	        	        
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100117, "Registro Brasileiro de Ensaios Clínicos", 
 		        "http://ensaiosclinicos.gov.br/rg/RBR-386rm8", true, 35, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "31 Oct 2020", 2020, 10, 31, null, null, null, null));
@@ -157,10 +156,10 @@ public class TestData_100117 : TestData_Base
 	        fs.iec.Add(new StudyIEC(sd_sid, 12, 2, "cr assumed", "@", 1, "e.08", "Death."));	
            
             fs.conditions!.Add(new StudyCondition(sd_sid, "older people, chronic pain, chronic low back pain, aging", null, null, null, null));
-            fs.conditions.Add(new StudyCondition(sd_sid, "C23.888.592.612.274", null, null, null, null));
-            fs.conditions.Add(new StudyCondition(sd_sid, "G07.345.124", null, null, null, null));
-            fs.conditions.Add(new StudyCondition(sd_sid, "C23.888.592.612.107.400", null, null, null, null));
-            fs.conditions.Add(new StudyCondition(sd_sid, "M01.060.116.100", null, null, null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, null, 30, "C23.888.592.612.274", null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, null, 30, "G07.345.124", null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, null, 30, "C23.888.592.612.107.400", null, null));
+            fs.conditions.Add(new StudyCondition(sd_sid, null, 30, "M01.060.116.100", null, null));
             
             fs.features!.Add(new StudyFeature(sd_sid, 22, 205));  // Randomised
             fs.features.Add(new StudyFeature(sd_sid, 23, 305));  // Parallel assignment
@@ -179,8 +178,7 @@ public class TestData_100117 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "Brazilian registry web page", null, ob_title,
 	            null, 9, 2018, 23, 13, 100117, "Registro Brasileiro de Ensaios Clínicos",
 	            null, "en", 12, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-	        
+            	        
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100117, "Registro Brasileiro de Ensaios Clínicos", 
 	            "http://ensaiosclinicos.gov.br/rg/RBR-5cqndz", true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "20 Sep 2018", 2018, 9, 20, null, null, null, null));

@@ -59,8 +59,7 @@ public class TestData_100125 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Iranian registry web page", null, ob_title,
 	          null, 9, 2009, 23, 13, 100125, "Iranian Registry of Clinical Trials",
 	          null, "en", 12, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-		        
+	        		        
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100125, "Iranian Registry of Clinical Trials", 
 	          "http://en.irct.ir/trial/570", true, 35, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "20 Dec 2009", 2009, 12, 20, null, null, null, null));
@@ -151,7 +150,7 @@ public class TestData_100125 : TestData_Base
  
         fs.conditions!.Add(new StudyCondition(sd_sid, "Non-alcoholic fatty liver disease", null, null, "DB92", "Non-alcoholic fatty liver disease"));
         fs.conditions.Add(new StudyCondition(sd_sid, "Fatty (change of) liver, not elsewhere classified", null, null, "DB92", "Non-alcoholic fatty liver disease"));
-        fs.conditions.Add(new StudyCondition(sd_sid, "K76.0", 12, "K76.0", "DB92", "Non-alcoholic fatty liver disease"));
+        fs.conditions.Add(new StudyCondition(sd_sid, null, 12, "K76.0", "DB92", "Non-alcoholic fatty liver disease"));
 
         fs.features!.Add(new (sd_sid, 21, 415));  // Supportive care
         fs.features.Add(new (sd_sid, 22, 205));  //  Randomised
@@ -171,8 +170,7 @@ public class TestData_100125 : TestData_Base
         sdo.data_object = new DataObject(sd_oid, sd_sid, "Iranian registry web page", null, ob_title,
           null, 9, 2021, 23, 13, 100125, "Iranian Registry of Clinical Trials",
           null, "en", 12, null, null, 0, true, true);
-        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-	        
+        	        
         sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100125, "Iranian Registry of Clinical Trials", 
           "http://en.irct.ir/trial/56894", true, 35, null, null, null));
         sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "22 Jul 2021", 2021, 7, 22, null, null, null, null));

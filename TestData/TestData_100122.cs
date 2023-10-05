@@ -105,12 +105,11 @@ public class TestData_100122 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Cuban registry web page", null, ob_title,
 	          null, 9, 2010, 23, 13, 100122, "Registro Público Cubano de Ensayos Clínicos",
 	          null, "en", 12, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-		        
+	        		        
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100122, "Registro Público Cubano de Ensayos Clínicos", 
 	          "https://rpcec.sld.cu/en/trials/RPCEC00000014-En", true, 35, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "29 Dec 2010", 2010, 12, 29, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "26 Jun 2023", 2023, 6, 26, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "18 Sep 2023", 2023, 9, 18, null, null, null, null));
 		       
 	        fs.data_objects!.Add(sdo);
 
@@ -222,13 +221,12 @@ public class TestData_100122 : TestData_Base
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "Cuban registry web page", null, ob_title,
 				null, 9, 2021, 23, 13, 100122, "Registro Público Cubano de Ensayos Clínicos",
 				null, "en", 12, null, null, 0, true, true);
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
-
+			
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100122, "Registro Público Cubano de Ensayos Clínicos",
 				"https://rpcec.sld.cu/en/trials/RPCEC00000397-En", true, 35, null, null, null));
 			sdo.object_dates!.Add(
 				new ObjectDate(sd_oid, 15, false, "12 Nov 2021", 2021, 11, 12, null, null, null, null));
-			sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "26 Jun 2023", 2023, 6, 26, null, null, null, null));
+			sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "18 Sep 2023", 2023, 9, 18, null, null, null, null));
 
 			fs.data_objects!.Add(sdo);
 

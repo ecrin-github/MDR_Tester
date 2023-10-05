@@ -7,3 +7,10 @@ riderModule.iml
 
 # settings
 appsettings.json
+/.vs/MDR_Tester/FileContentIndex
+/.vs/MDR_Tester/DesignTimeBuild
+/.vs/MDR_Tester/config
+/.vs/MDR_Tester/v17
+/.vs/ProjectEvaluation
+/.vs
+/Properties/launchSettings.json

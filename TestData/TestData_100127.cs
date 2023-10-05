@@ -84,12 +84,11 @@ public class TestData_100127 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Japanese registry web page", null, ob_title,
 		        null, 9, 2017, 23, 13, 100127, "Japan Primary Registries Network", null, "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100127, "Japan Primary Registries Network", 
 		        "https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000031711", 
 		        true, 35, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "19 Jul 2017", 2017, 7, 19, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "10 Oct 2022", 2022, 10, 10, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "25 Aug 2023", 2023, 8, 25, null, null, null, null));
 	       
 	        fs.data_objects!.Add(sdo);
 
@@ -106,7 +105,7 @@ public class TestData_100127 : TestData_Base
             string display_title = "Usefulness of using C-11 methionine PET in patient which suspected glioma";
             StringBuilder sb = new StringBuilder("Interventions: Usefulness of using C-11 methionine PET\n");
             sb.Append("Primary outcome(s): Positive-predictive value (PPV) in the site of negative contrast-enhanced MRI and positive Met-PET which assume a histopathology diagnosis criteria diagnosis.\n"); 
-            sb.Append("Study Design: single arm study, open(masking not used), no treatment control, single assignment, diagnostic purpose"); 
+            sb.Append("Study Design: single arm study, open(masking not used), no treatment control/standard of care control, single assignment, diagnostic purpose"); 
             string brief_desc = sb.ToString();
             
             fs.study = new Study(sd_sid, display_title, "en", brief_desc, null, 2016, 5, 11, 21, "72", 900,
@@ -146,9 +145,9 @@ public class TestData_100127 : TestData_Base
 	        fs.iec.Add(new StudyIEC(sd_sid, 6, 2, "cr", "(4)", 1, "e.04", "The patients who underwent C-11 methionine PET within 90 days"));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 7, 2, "cr", "(5)", 1, "e.05", "The patients whose overall status is not satisfactory for surgical treatment"));	    
 	        fs.iec.Add(new StudyIEC(sd_sid, 8, 2, "cr", "(6)", 1, "e.06", "The patients who cannot undergo contrast-enhanced MRI"));	    
-	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "(7)", 1, "e.07", "The patients whom investigators judged to be inadequate as candidates"));	   
-
-	        fs.countries!.Add(new StudyCountry(sd_sid, 1861060, "Japan", null));
+	        fs.iec.Add(new StudyIEC(sd_sid, 9, 2, "cr", "(7)", 1, "e.07", "The patients whom investigators judged to be inadequate as candidates"));	
+            
+            // null country list
 	        
             // Data Objects
 	        
@@ -161,12 +160,11 @@ public class TestData_100127 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "Japanese registry web page", null, ob_title,
 	            null, 9, 2019, 23, 13, 100127, "Japan Primary Registries Network", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100127, "Japan Primary Registries Network", 
 	            "https://jrct.niph.go.jp/latest-detail/jRCTs012180017", 
 	            true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "19 Mar 2019", 2019, 3, 19, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "17 May 2021", 2021, 5, 17, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "25 Aug 2023", 2023, 8, 25, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
       
@@ -222,12 +220,11 @@ public class TestData_100127 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "Japanese registry web page", null, ob_title,
 	            null, 9, 2016, 23, 13, 100127, "Japan Primary Registries Network", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100127, "Japan Primary Registries Network", 
 	            "https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000028441", 
 	            true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "4 Nov 2016", 2016, 11, 4, null, null, null, null));
-            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "6 Apr 2022", 2022, 4, 6, null, null, null, null));
+            sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "25 Aug 2023", 2023, 8, 25, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
             
@@ -240,7 +237,6 @@ public class TestData_100127 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "Results summary", null, ob_title,
 	            null, 9, null, 23, 28, 100127, "Japan Primary Registries Network", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100127, "Japan Primary Registries Network", 
 	            "http://www.jfmpc.com/text.asp?2016/5/2/424/192364", true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "30 Jun 2006", 2006, 6, 30, null, null, null, null));

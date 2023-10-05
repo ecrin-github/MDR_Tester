@@ -86,7 +86,6 @@ public class TestData_100123 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR registry entry", null, ob_title,
 	            null, 9, 2006, 23, 13, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2004-001569-16/ES", true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "30 Jun 2006", 2006, 6, 30, null, null, null, null));
@@ -172,7 +171,6 @@ public class TestData_100123 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR registry entry", null, ob_title,
 		        null, 9, 2010, 23, 13, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 		        "https://www.clinicaltrialsregister.eu/ctr-search/trial/2009-011622-34/DE", true, 35, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "5 Jan 2010", 2010, 1, 5, null, null, null, null));
@@ -188,7 +186,6 @@ public class TestData_100123 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR results entry", null, ob_title,
 		        null, 9, 2016, 23, 28, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 		        "https://www.clinicaltrialsregister.eu/ctr-search/trial/2009-011622-34/results", true, 35, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "15 Dec 2016", 2016, 12, 15, null, null, null, null));
@@ -205,7 +202,7 @@ public class TestData_100123 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CAIN457A2206E1.CTR.08Nov2016", null, ob_title,
 		        null, 9, 2016, 23, 79, 100189, "Novartis", "https://ror.org/02f9zrr09", "en", 11, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, "CAIN457A2206E1.CTR.08Nov2016", 21, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 		        "https://www.clinicaltrialsregister.eu/ctr-search/rest/download/result/attachment/2009-011622-34/1/16214",
 		        true, 11, null, null, null));
@@ -284,18 +281,18 @@ public class TestData_100123 : TestData_Base
             fs.countries!.Add(new StudyCountry(sd_sid, 2921044, "Germany", 25));
             fs.countries.Add(new StudyCountry(sd_sid, 2635167, "United Kingdom", null));             
             fs.countries.Add(new StudyCountry(sd_sid, 3017382, "France", 25));
-            fs.countries.Add(new StudyCountry(sd_sid, 3077311, "Czechia", null));  // in twice in source data - takes the later value for status
+            fs.countries.Add(new StudyCountry(sd_sid, 3077311, "Czechia", 21));  
             fs.countries.Add(new StudyCountry(sd_sid, 2750405, "Netherlands", 21));
             fs.countries.Add(new StudyCountry(sd_sid, 390903, "Greece", 25));
             fs.countries.Add(new StudyCountry(sd_sid, 2510769, "Spain", 25));
             fs.countries.Add(new StudyCountry(sd_sid, 2629691, "Iceland", 25));
-            fs.countries.Add(new StudyCountry(sd_sid, 3057568, "Slovakia", 25));
+            fs.countries.Add(new StudyCountry(sd_sid, 3057568, "Slovakia", 21));
             fs.countries.Add(new StudyCountry(sd_sid, 2782113, "Austria", 25));
             fs.countries.Add(new StudyCountry(sd_sid, 2264397, "Portugal", 25));
             fs.countries.Add(new StudyCountry(sd_sid, 2623032, "Denmark", 21));
             fs.countries.Add(new StudyCountry(sd_sid, 660013, "Finland", 21));
             fs.countries.Add(new StudyCountry(sd_sid, 2661886, "Sweden", 25));
-            fs.countries.Add(new StudyCountry(sd_sid, 719819, "Hungary", 25));
+            fs.countries.Add(new StudyCountry(sd_sid, 719819, "Hungary", 21));
             fs.countries.Add(new StudyCountry(sd_sid, 3175395, "Italy", 25));
             fs.countries.Add(new StudyCountry(sd_sid, 798549, "Romania", 25));
 	        fs.countries.Add(new StudyCountry(sd_sid, 2017370, "Russia", null));
@@ -337,12 +334,11 @@ public class TestData_100123 : TestData_Base
             StudyDataObject sdo = CreateEmptyStudyDataObject();
             
             sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR registry entry", null, ob_title,
-	            null, 9, 2019, 23, 13, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
+	            null, 9, 2018, 23, 13, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
-	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2018-001547-32/DK", true, 35, null, null, null));
-            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "24 May 2019", 2019, 5, 24, null, null, null, null));
+	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2018-001547-32/DE", true, 35, null, null, null));
+            sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "1 Oct 2018", 2018, 10, 1, null, null, null, null));
 	       
             fs.data_objects!.Add(sdo);
 
@@ -436,7 +432,6 @@ public class TestData_100123 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR registry entry", null, ob_title,
 	            null, 9, 2014, 23, 13, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2012-000615-84/IT", true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "10 Sep 2014", 2014, 9, 10, null, null, null, null));
@@ -452,7 +447,6 @@ public class TestData_100123 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR results entry", null, ob_title,
 	            null, 9, 2017, 23, 28, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2012-000615-84/results", true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "16 Aug 2017", 2017, 8, 16, null, null, null, null));
@@ -470,7 +464,6 @@ public class TestData_100123 : TestData_Base
 	            null, 9, 2017, 23, 79, 100253, "University of Oxford", "https://ror.org/052gg0110", 
 	            "en", 11, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/rest/download/result/zip/pdf/2012-000615-84/1",
 	            true, 11, null, null, null));
@@ -583,7 +576,6 @@ public class TestData_100123 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR registry entry", null, ob_title,
 	            null, 9, 2013, 23, 13, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2013-001036-22/ES", true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "12 Jul 2013", 2013, 7, 12, null, null, null, null));
@@ -599,7 +591,6 @@ public class TestData_100123 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR results entry", null, ob_title,
 	            null, 9, 2022, 23, 28, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2013-001036-22/results", true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "5 May 2022", 2022, 5, 5, null, null, null, null));
@@ -616,7 +607,7 @@ public class TestData_100123 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "SOLTI-1114_Sinopsys_CSR_ENG", null, ob_title,
 	            null, 9, 2022, 23, 79, null, "SOLTI", null, "en", 11, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "SOLTI-1114_Sinopsys_CSR_ENG", 21, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/rest/download/result/attachment/2013-001036-22/1/30154",
 	            true, 11, null, null, null));
@@ -633,7 +624,6 @@ public class TestData_100123 : TestData_Base
 	            null, 9, 2022, 23, 79, null, "SOLTI", null, 
 	            "en", 11, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/rest/download/result/zip/pdf/2013-001036-22/1",
 	            true, 11, null, null, null));
@@ -729,7 +719,6 @@ public class TestData_100123 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "EU CTR registry entry", null, ob_title,
 	            null, 9, 2017, 23, 13, 100123, "EU Clinical Trials Register", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100123, "EU Clinical Trials Register", 
 	            "https://www.clinicaltrialsregister.eu/ctr-search/trial/2015-000556-14/IT", true, 35, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "15 Dec 2017", 2017, 12, 15, null, null, null, null));

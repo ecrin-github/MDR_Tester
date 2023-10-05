@@ -81,8 +81,7 @@ public class TestData_100126 : TestData_Base
 	        
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "ISRCTN registry entry", null, ob_title,
 		        "10.1186/ISRCTN00075564", 1, 2005, 23, 13, 100126, "ISRCTN", null, "en", 12, null, null, 0, true, true);
-	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100126, "ISRCTN", 
 		        "https://www.isrctn.com/" + sd_sid, true, 39, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "8 Jul 2005", 2005, 7, 8, null, null, null, null));
@@ -172,7 +171,6 @@ public class TestData_100126 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "ISRCTN registry entry", null, ob_title,
 	            "10.1186/ISRCTN16535250", 1, 2021, 23, 13, 100126, "ISRCTN", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100126, "ISRCTN", 
 	            "https://www.isrctn.com/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "24 Jan 2021", 2021, 1, 24, null, null, null, null));
@@ -189,7 +187,7 @@ public class TestData_100126 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "ISRCTN16535250_PROTOCOL", null, ob_title,
 	            null, 9, null, 23, 11, 100126, "ISRCTN", null, "en", 11, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "ISRCTN16535250_PROTOCOL", 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100126, "ISRCTN", 
 	            "https://www.isrctn.com/editorial/retrieveFile/24eb625c-779e-4308-a397-3b6a588edf4f/38799", 
 	            true, 11, null, null, null));
@@ -267,7 +265,6 @@ public class TestData_100126 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "ISRCTN registry entry", null, ob_title,
 	            "10.1186/ISRCTN59589587", 1, 2001, 23, 13, 100126, "ISRCTN", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100126, "ISRCTN", 
 	            "https://www.isrctn.com/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "1 Jul 2001", 2001, 7, 1, null, null, null, null));
@@ -387,7 +384,6 @@ public class TestData_100126 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "ISRCTN registry entry", null, ob_title,
 	            "10.1186/ISRCTN88368130", 1, 2020, 23, 13, 100126, "ISRCTN", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100126, "ISRCTN", 
 	            "https://www.isrctn.com/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "9 Jun 2020", 2020, 6, 9, null, null, null, null));
@@ -404,7 +400,7 @@ public class TestData_100126 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "ISRCTN88368130_PIS", null, ob_title,
 	            null, 9, null, 23, 19, 100126, "ISRCTN", null, "en", 11, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "ISRCTN88368130_PIS", 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100126, "ISRCTN", 
 	            "https://www.isrctn.com/editorial/retrieveFile/51892cf1-c381-43fc-8930-d146ea1a6d83/38390", 
 	            true, 11, null, null, null));
@@ -508,7 +504,6 @@ public class TestData_100126 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "ISRCTN registry entry", null, ob_title,
 	            "10.1186/ISRCTN82138287", 1, 2014, 23, 13, 100126, "ISRCTN", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100126, "ISRCTN", 
 	            "https://www.isrctn.com/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 15, false, "18 Sep 2014", 2014, 9, 18, null, null, null, null));

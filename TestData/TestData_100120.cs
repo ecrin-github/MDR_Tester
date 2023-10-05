@@ -1,4 +1,6 @@
 ﻿using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace MDR_Tester;
 
 public class TestData_100120 : TestData_Base
@@ -112,7 +114,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2001, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "31 Aug 2001 (est.)", 2001, 8, 31, null, null, null, null));
@@ -130,7 +131,7 @@ public class TestData_100120 : TestData_Base
 	            null, ob_title, null, 9, null, 14, 80, 100168, "National Institute of Allergy and Infectious Diseases", 
 	            "https://ror.org/043z4tv69", "en", 11, null, null, 3, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Individual Participant Data Set (SDY133)", 23, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 109505, "Immport", 
 	            "http://www.immport.org/immport-open/public/study/study/displayStudyDetail/SDY133", 
 	            true, 0, null, null, null));
@@ -150,7 +151,7 @@ public class TestData_100120 : TestData_Base
 	            null, 9, null, 23, 11, 100168, "National Institute of Allergy and Infectious Diseases", 
 	            "https://ror.org/043z4tv69", "en", 11, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Study Protocol (SDY133)", 23, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 109505, "Immport", 
 	            "http://www.immport.org/immport-open/public/study/study/displayStudyDetail/SDY133", 
 	            true, 11, null, null, null));
@@ -167,7 +168,7 @@ public class TestData_100120 : TestData_Base
 	            null, ob_title, null, 9, null, 23, 38, 100168, "National Institute of Allergy and Infectious Diseases", 
 	            "https://ror.org/043z4tv69", "en", 11, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Study summary, -design,-demographics, -files et al. (SDY133)", 23, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 109505, "Immport", 
 	            "http://www.immport.org/immport-open/public/study/study/displayStudyDetail/SDY133", 
 	            true, 0, null, null, null));
@@ -251,12 +252,12 @@ public class TestData_100120 : TestData_Base
 			sb = new StringBuilder("Whelan J, McTiernan A, Weston C, et al.: ");
 			sb.Append("Consequences of different approaches to local treatment of Ewing’s sarcoma within an international randomised controlled trial: analysis of EICESS-92. [Abstract] ");
 			sb.Append("J Clin Oncol 24 (Suppl 18): A-9533, 528s, 2006.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), null, null, null, null));
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), null, null, 202, null));
 
 			sb = new StringBuilder("Paulussen M, Craft AW, Lewis I, et al.: ");
 			sb.Append("Ewing tumor of bone - updated report of the European Intergroup Cooperative Ewing’s Sarcoma Study EICESS 92. [Abstract] ");
 			sb.Append("Proceedings of the American Society of Clinical Oncology 21: A-1568, 2002.");
-			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), null, null, null, null));
+			fs.references.Add(new StudyReference(sd_sid, sb.ToString(), null, null, 202, null));
 
 			sb = new StringBuilder("DISEASE CHARACTERISTICS: Biopsy-proven Ewing’s sarcoma, atypical Ewing’s sarcoma, and peripheral neuroectodermal tumors ");
 			sb.Append("No soft tissue Ewing’s sarcoma or other small cell sarcomas of soft tissue Such patients should be treated on the appropriate ");
@@ -279,8 +280,7 @@ public class TestData_100120 : TestData_Base
 	        
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2004, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
-	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
+	                   
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "5 May 2004 (est.)", 2004, 5, 5, null, null, null, null));
@@ -362,7 +362,7 @@ public class TestData_100120 : TestData_Base
 		        100238, "University of California, San Diego", "https://ror.org/0168r3w48"));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100375, "Milton S Hershey Medical Center", "https://ror.org/01h22ap11"));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100167, "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100167, "National Heart Lung and Blood Institute", "https://ror.org/012pb6c26"));
 	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, null, "Asthma Clinical Research Network", null));
 
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
@@ -416,7 +416,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2005, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "20 Sep 2005 (est.)", 2005, 9, 20, null, null, null, null));
@@ -433,7 +432,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
 	            null, 9, 2009, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2 Jun 2009 (est.)", 2009, 6, 2, null, null, null, null));
@@ -562,7 +560,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2007, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "9 Feb 2007 (est.)", 2007, 2, 9, null, null, null, null));
@@ -579,7 +576,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
 	            null, 9, 2013, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "17 May 2013 (est.)", 2013, 5, 17, null, null, null, null));
@@ -620,7 +616,7 @@ public class TestData_100120 : TestData_Base
 		                                   100190, "Johns Hopkins University", "https://ror.org/00za53h95"));
 	        
 	        fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 100190, "Johns Hopkins University", "https://ror.org/00za53h95"));
-	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100167, "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26"));
+	        fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100167, "National Heart Lung and Blood Institute", "https://ror.org/012pb6c26"));
 	        
 	        fs.features!.Add(new StudyFeature(sd_sid, 20, 100));  // 
 	        fs.features.Add(new StudyFeature(sd_sid, 21, 405));   // 
@@ -709,7 +705,6 @@ public class TestData_100120 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 		        null, 9, 2003, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 		        "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "13 Jan 2003 (est.)", 2003, 1, 13, null, null, null, null));
@@ -751,7 +746,7 @@ public class TestData_100120 : TestData_Base
 	            101843, "New England Research Institutes", "https://ror.org/01655nh08"));	
             
             fs.organisations!.Add(new StudyOrganisation(sd_sid, 54, 101993, "Carelon", null));
-            fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100167, "National Heart, Lung, and Blood Institute", "https://ror.org/012pb6c26"));
+            fs.organisations.Add(new StudyOrganisation(sd_sid, 69, 100167, "National Heart Lung and Blood Institute", "https://ror.org/012pb6c26"));
 
             fs.features!.Add(new StudyFeature(sd_sid, 20, 130));  // 
 	        fs.features.Add(new StudyFeature(sd_sid, 21, 400));   // 
@@ -997,7 +992,6 @@ public class TestData_100120 : TestData_Base
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 				null, 9, 2004, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 				"https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
 			sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "15 Oct 2004 (est.)", 2004, 10, 15, null, null, null, null));
@@ -1014,7 +1008,6 @@ public class TestData_100120 : TestData_Base
 			sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
 				null, 9, 2015, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-			sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 			sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 				"https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
 			sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "2 Mar 2015 (est.)", 2015, 3, 2, null, null, null, null));
@@ -1099,7 +1092,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2012, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "15 Nov 2012 (est.)", 2012, 11, 15, null, null, null, null));
@@ -1116,7 +1108,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
 	            null, 9, 2015, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "10 Jun 2015 (est.)", 2015, 6, 10, null, null, null, null));
@@ -1200,7 +1191,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2014, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "17 Sep 2014 (est.)", 2014, 9, 17, null, null, null, null));
@@ -1217,7 +1207,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
 	            null, 9, 2016, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "6 Oct 2016 (est.)", 2016, 10, 6, null, null, null, null));
@@ -1333,7 +1322,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "20 May 2015 (est.)", 2015, 5, 20, null, null, null, null));
@@ -1350,7 +1338,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
 	            null, 9, 2019, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "25 Mar 2019", 2019, 3, 25, null, null, null, null));
@@ -1360,13 +1347,13 @@ public class TestData_100120 : TestData_Base
             
             // 3) Study Protocol and Statistical Analysis Plan
 	        
-            sd_oid = sd_sid + " :: 74 :: Study Protocol and Statistical Analysis Plan";
-            ob_title = display_title + " :: Study Protocol and Statistical Analysis Plan";
+            sd_oid = sd_sid + " :: 74 :: Prot_SAP_000";
+            ob_title = display_title + " :: Prot_SAP_000";
             sdo = CreateEmptyStudyDataObject();
 	        
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol and Statistical Analysis Plan", null, ob_title,
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Prot_SAP_000", null, ob_title,
 	            null, 9, 2019, 23, 74, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Prot_SAP_000", 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://storage.googleapis.com/ctgov2-large-docs/74/NCT02449174/Prot_SAP_000.pdf", 
 	            true, 11, null, null, null));
@@ -1498,7 +1485,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "29 Sep 2015 (est.)", 2015, 9, 29, null, null, null, null));
@@ -1515,7 +1501,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
 	            null, 9, 2021, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "23 Jul 2021", 2021, 7, 23, null, null, null, null));
@@ -1525,13 +1510,13 @@ public class TestData_100120 : TestData_Base
 
             // 3) Study Protocol, Statistical Analysis Plan, and Informed Consent Form
 	        
-            sd_oid = sd_sid + " :: 76 :: Study Protocol, Statistical Analysis Plan, and Informed Consent Form";
-            ob_title = display_title + " :: Study Protocol, Statistical Analysis Plan, and Informed Consent Form";
+            sd_oid = sd_sid + " :: 76 :: Prot_SAP_ICF_000";
+            ob_title = display_title + " :: Prot_SAP_ICF_000";
             sdo = CreateEmptyStudyDataObject();
 	        
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol, Statistical Analysis Plan, and Informed Consent Form", null, ob_title,
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Prot_SAP_ICF_000", null, ob_title,
 	            null, 9, 2021, 23, 76, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Prot_SAP_ICF_000", 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://storage.googleapis.com/ctgov2-large-docs/16/NCT02562716/Prot_SAP_ICF_000.pdf", 
 	            true, 11, null, null, null));
@@ -1670,7 +1655,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2013, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "31 Oct 2013 (est.)", 2013, 10, 31, null, null, null, null));
@@ -1795,7 +1779,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "12 May 2015 (est.)", 2015, 5, 12, null, null, null, null));
@@ -1812,7 +1795,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
 	            null, 9, 2019, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "13 Sep 2019", 2019, 9, 13, null, null, null, null));
@@ -1873,7 +1855,7 @@ public class TestData_100120 : TestData_Base
 	        
 	        string c1 = "Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets.\n\n";
 	        c1 += "All data can be downloaded from the website, if there are any questions please feel free to contact us.";   
-	        string c2 = "Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets.";
+	        string c2 = "Public title: Stability of the architecture of the hard and soft tissue after immediate tooth replacement with implants in fresh grafted sockets. ";
 	        c2 += "All data can be downloaded from the website, if there are any questions please feel free to contact us.";  
 	        
 	        fs.ipd_info!.Add(new AvailableIPD(sd_sid, null, "Individual Participant Data Set", "http://aplicacao.saude.gov.br/plataformabrasil/login.jsf", c1));
@@ -1915,7 +1897,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2016, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "3 Oct 2016 (est.)", 2016, 10, 3, null, null, null, null));
@@ -2014,7 +1995,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "25 May 2017", 2017, 5, 25, null, null, null, null));
@@ -2137,7 +2117,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2016, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "14 Jun 2016 (est.)", 2016, 6, 14, null, null, null, null));
@@ -2154,7 +2133,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
 	            null, 9, 2019, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "10 Jun 2019", 2019, 6, 10, null, null, null, null));
@@ -2164,14 +2142,14 @@ public class TestData_100120 : TestData_Base
             
             // 3) Study Protocol
             
-            sd_oid = sd_sid + " :: 11 :: Study Protocol";
-            ob_title = display_title + " :: Study Protocol";
+            sd_oid = sd_sid + " :: 11 :: Prot_000";
+            ob_title = display_title + " :: Prot_000";
             sdo = CreateEmptyStudyDataObject();
             
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol", null, ob_title,
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Prot_000", null, ob_title,
 	            null, 9, 2018, 23, 11, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Prot_000", 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://storage.googleapis.com/ctgov2-large-docs/78/NCT02798978/Prot_000.pdf", 
 	            true, 11, null, null, null));
@@ -2182,14 +2160,14 @@ public class TestData_100120 : TestData_Base
             
             // 4) Statistical Analysis Plan
             
-            sd_oid = sd_sid + " :: 22 :: Statistical Analysis Plan";
-            ob_title = display_title + " :: Statistical Analysis Plan";
+            sd_oid = sd_sid + " :: 22 :: SAP_001";
+            ob_title = display_title + " :: SAP_001";
             sdo = CreateEmptyStudyDataObject();
             
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "Statistical Analysis Plan", null, ob_title,
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "SAP_001", null, ob_title,
 	            null, 9, 2018, 23, 22, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "SAP_001", 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://storage.googleapis.com/ctgov2-large-docs/78/NCT02798978/SAP_001.pdf", 
 	            true, 11, null, null, null));
@@ -2295,7 +2273,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
                 null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
            
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
                 "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "10 Mar 2017", 2017, 3, 10, null, null, null, null));
@@ -2468,7 +2445,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2018, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "15 Aug 2018", 2018, 8, 15, null, null, null, null));
@@ -2490,7 +2466,7 @@ public class TestData_100120 : TestData_Base
 	        StringBuilder sb = new StringBuilder("This study will test the effectiveness of mailing fecal immunochemical tests (FITs) in increasing colorectal cancer (CRC) ");
 	        sb.Append("screening rates in U.S. adults ages 45-75. We are implementing this study in two age groups, 45-49 years and 50-75 years."); 
 	        string brief_desc = sb.ToString();
-	        sb = new StringBuilder("IPD Sharing (as of June 2023): Yes\nDescription: As outlined in the Notice of Award, each study site must make its Limited Data Set ");
+	        sb = new StringBuilder("IPD Sharing (as of August 2023): Yes\nDescription: As outlined in the Notice of Award, each study site must make its Limited Data Set ");
 	        sb.Append("(LDS) accessible to other sites in the ACCSIS consortium. Information Management Services (IMS) will serve as the "); 
 	        sb.Append("repository and have responsibility for creating a Limited Consolidated Data Set (LCDS) for analytic use of researchers "); 
 	        sb.Append("both within and external to the ACCSIS consortium. Dataset Items in the LDS are defined by the Common Data Elements. ");
@@ -2589,11 +2565,10 @@ public class TestData_100120 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 		        null, 9, 2020, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 		        "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "28 May 2020", 2020, 5, 28, null, null, null, null));
-	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "28 Jun 2023", 2023, 6, 28, null, null, null, null));
+	        sdo.object_dates.Add(new ObjectDate(sd_oid, 18, false, "6 Sep 2023", 2023, 9, 6, null, null, null, null));
 	       
 	        fs.data_objects!.Add(sdo);
 
@@ -2695,7 +2670,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2014, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "18 Dec 2014 (est.)", 2014, 12, 18, null, null, null, null));
@@ -2712,7 +2686,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG results entry", null, ob_title,
 	            null, 9, 2019, 23, 28, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid + "?tab=results", true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "13 May 2019", 2019, 5, 13, null, null, null, null));
@@ -2722,13 +2695,14 @@ public class TestData_100120 : TestData_Base
             
             // 3) Study Protocol and Statistical Analysis Plan
             
-            sd_oid = sd_sid + " :: 74 :: Study Protocol and Statistical Analysis Plan";
-            ob_title = display_title + " :: Study Protocol and Statistical Analysis Plan";
+            sd_oid = sd_sid + " :: 74 :: Prot_SAP_000";
+            ob_title = display_title + " :: Prot_SAP_000";
             sdo = CreateEmptyStudyDataObject();
 	        
-            sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol and Statistical Analysis Plan", null, ob_title,
+            sdo.data_object = new DataObject(sd_oid, sd_sid, "Prot_SAP_000", null, ob_title,
 	            null, 9, 2019, 23, 74, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+
+            sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Prot_SAP_000", 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://storage.googleapis.com/ctgov2-large-docs/92/NCT02318992/Prot_SAP_000.pdf", 
 	            true, 11, null, null, null));
@@ -2879,7 +2853,6 @@ public class TestData_100120 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 		        null, 9, 2015, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov",
 		        "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "20 Nov 2015 (est.)", 2015, 11, 20, null, null,
@@ -2966,7 +2939,6 @@ public class TestData_100120 : TestData_Base
 	        sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 		        null, 9, 2020, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 		        "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
 	        sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "5 Jun 2020", 2020, 6, 5, null, null, null, null));
@@ -2976,13 +2948,14 @@ public class TestData_100120 : TestData_Base
 	        
 	        // 2) Study Protocol and Statistical Analysis Plan
 	        
-	        sd_oid = sd_sid + " :: 74 :: Study Protocol and Statistical Analysis Plan";
-	        ob_title = display_title + " :: Study Protocol and Statistical Analysis Plan";
+	        sd_oid = sd_sid + " :: 74 :: Prot_SAP_000";
+	        ob_title = display_title + " :: Prot_SAP_000";
 	        sdo = CreateEmptyStudyDataObject();
 	        
-	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Study Protocol and Statistical Analysis Plan", null, ob_title,
+	        sdo.data_object = new DataObject(sd_oid, sd_sid, "Prot_SAP_000", null, ob_title,
 		        null, 9, 2020, 23, 74, 100120, "ClinicalTrials.gov", null, "en", 11, null, null, 0, true, true);
-	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 21, "en", 11, true, null));
+
+	        sdo.object_titles!.Add(new ObjectTitle(sd_oid, "Prot_SAP_000", 22, "en", 11, true, null));
 	        sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 		        "https://storage.googleapis.com/ctgov2-large-docs/71/NCT04419571/Prot_SAP_000.pdf", 
 		        true, 11, null, null, null));
@@ -3071,7 +3044,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "13 Feb 2017", 2017, 2, 13, null, null, null, null));
@@ -3189,7 +3161,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2017, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "21 Jul 2017", 2017, 7, 21, null, null, null, null));
@@ -3241,11 +3212,12 @@ public class TestData_100120 : TestData_Base
 
 	        fs.relationships!.Add(new StudyRelationship(sd_sid, 24, "NCT02449174"));
 	        fs.relationships!.Add(new StudyRelationship(sd_sid, 24, "NCT02318992"));
-	        
+            fs.relationships!.Add(new StudyRelationship(sd_sid, 24, "NCT04373473"));
+
             // no location list, iec - no IEC (!)
-	        
+
             // Data Objects
-	        
+
             // 1) Trial registry entry
 
             string sd_oid = sd_sid + " :: 13 :: CTG registry entry";
@@ -3255,7 +3227,6 @@ public class TestData_100120 : TestData_Base
             sdo.data_object = new DataObject(sd_oid, sd_sid, "CTG registry entry", null, ob_title,
 	            null, 9, 2018, 23, 13, 100120, "ClinicalTrials.gov", null, "en", 12, null, null, 0, true, true);
 	       
-            sdo.object_titles!.Add(new ObjectTitle(sd_oid, ob_title, 22, "en", 11, true, null));
             sdo.object_instances!.Add(new ObjectInstance(sd_oid, 100120, "ClinicalTrials.gov", 
 	            "https://ClinicalTrials.gov/study/" + sd_sid, true, 39, null, null, null));
             sdo.object_dates!.Add(new ObjectDate(sd_oid, 12, false, "26 Dec 2018", 2018, 12, 26, null, null, null, null));
@@ -3266,9 +3237,7 @@ public class TestData_100120 : TestData_Base
             return fs;
             
         }
-        
-
-        
+        	       
         
         return null;
     }
