@@ -46,8 +46,7 @@ public class Source
     public bool? has_journal_details { get; }
     public bool? has_object_rights { get; }
     public bool? has_object_relationships { get; }
-    
-    
+ 
 }
 
 
